@@ -4609,6 +4609,15 @@ Notes:
 #define MDL_CACHE                        ((ULONG)0x000001F4L)
 
 //
+// MessageId: MISALIGNED_POINTER_PARAMETER
+//
+// MessageText:
+//
+//  MISALIGNED_POINTER_PARAMETER
+//
+#define MISALIGNED_POINTER_PARAMETER     ((ULONG)0x000001F6L)
+
+//
 // MessageId: XBOX_VMCTRL_CS_TIMEOUT
 //
 // MessageText:

@@ -256,8 +256,17 @@ typedef enum FILE_FLUSH_MODE
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
-#endif /* _WIN32_WINNT >= 0x0400 */
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
+//
+//  CopyFile flag to retain sparse state during copying.
+//
+
+#define COPY_FILE_ENABLE_SPARSE_COPY             0x20000000
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+#endif /* _WIN32_WINNT >= 0x0400 */
 
 #if (_WIN32_WINNT >= 0x0500)
 //

@@ -38684,6 +38684,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define CERTSRV_E_PENDING_CLIENT_RESPONSE _HRESULT_TYPEDEF_(0x80094820L)
 
 //
+// MessageId: CERTSRV_E_SEC_EXT_DIRECTORY_SID_REQUIRED
+//
+// MessageText:
+//
+// The Active Directory SID is unavailable and cannot be added to the custom security extension.
+//
+#define CERTSRV_E_SEC_EXT_DIRECTORY_SID_REQUIRED _HRESULT_TYPEDEF_(0x80094821L)
+
+//
 // The range 0x5000-0x51ff is reserved for XENROLL errors.
 //
 //
@@ -47994,6 +48003,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // TPM command returned too much data.
 //
 #define TPM_E_TOO_MUCH_DATA              _HRESULT_TYPEDEF_(0x80290602L)
+
+//
+// MessageId: TPM_E_TPM_GENERATED_EPS
+//
+// MessageText:
+//
+// Unable to fetch EK Certificate if TPM-generated EPS (after a TPM2_ChangeEPS).
+//
+#define TPM_E_TPM_GENERATED_EPS          _HRESULT_TYPEDEF_(0x80290603L)
 
 //
 // If the application is designed to use TCG defined TPM return codes
