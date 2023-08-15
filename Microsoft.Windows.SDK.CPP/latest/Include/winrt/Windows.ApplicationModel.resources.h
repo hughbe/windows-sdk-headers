@@ -550,8 +550,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceL
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics4 interface starting with version 12.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Resources.IResourceLoader ** Default Interface **
@@ -1148,8 +1148,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CResources_CIResourceL
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics4 interface starting with version 12.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics3 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Resources.IResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Resources.IResourceLoader ** Default Interface **

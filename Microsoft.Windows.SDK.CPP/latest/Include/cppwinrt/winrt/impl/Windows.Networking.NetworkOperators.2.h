@@ -433,7 +433,7 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         NetworkOperatorNotificationEventDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::INetworkOperatorNotificationEventDetails(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) NetworkOperatorTetheringAccessPointConfiguration : winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration,
-        impl::require<NetworkOperatorTetheringAccessPointConfiguration, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration2>
+        impl::require<NetworkOperatorTetheringAccessPointConfiguration, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration2, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3>
     {
         NetworkOperatorTetheringAccessPointConfiguration(std::nullptr_t) noexcept {}
         NetworkOperatorTetheringAccessPointConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration(ptr, take_ownership_from_abi) {}

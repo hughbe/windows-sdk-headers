@@ -1555,6 +1555,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                interface INetworkOperatorTetheringAccessPointConfiguration3;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3 ABI::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringClient_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringClient_FWD_DEFINED__
 namespace ABI {
@@ -6048,6 +6063,16 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace NetworkOperators {
+                typedef enum TetheringWiFiAuthenticationKind : int TetheringWiFiAuthenticationKind;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
                 typedef enum TetheringWiFiBand : int TetheringWiFiBand;
             } /* NetworkOperators */
         } /* Networking */
@@ -7095,6 +7120,30 @@ namespace ABI {
 
 /*
  *
+ * Struct Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                enum TetheringWiFiAuthenticationKind : int
+                {
+                    TetheringWiFiAuthenticationKind_Wpa2 = 0,
+                    TetheringWiFiAuthenticationKind_Wpa3TransitionMode = 1,
+                    TetheringWiFiAuthenticationKind_Wpa3 = 2,
+                };
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Struct Windows.Networking.NetworkOperators.TetheringWiFiBand
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
@@ -7110,6 +7159,9 @@ namespace ABI {
                     TetheringWiFiBand_Auto = 0,
                     TetheringWiFiBand_TwoPointFourGigahertz = 1,
                     TetheringWiFiBand_FiveGigahertz = 2,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+                    TetheringWiFiBand_SixGigahertz = 3,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
                 };
             } /* NetworkOperators */
         } /* Networking */
@@ -11585,6 +11637,53 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkO
 
 /*
  *
+ * Interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3[] = L"Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3";
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                MIDL_INTERFACE("a9bb0081-9eed-5d18-b676-24b74a182b8c")
+                INetworkOperatorTetheringAccessPointConfiguration3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE IsAuthenticationKindSupported(
+                        ABI::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind authenticationKind,
+                        boolean* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE IsAuthenticationKindSupportedAsync(
+                        ABI::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind authenticationKind,
+                        __FIAsyncOperation_1_boolean** operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_AuthenticationKind(
+                        ABI::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_AuthenticationKind(
+                        ABI::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind value
+                        ) = 0;
+                };
+
+                MIDL_CONST_ID IID& IID_INetworkOperatorTetheringAccessPointConfiguration3 = __uuidof(INetworkOperatorTetheringAccessPointConfiguration3);
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringClient
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -13753,6 +13852,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration ** Default Interface **
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2
+ *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13791,9 +13891,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager ** Default Interface **
@@ -14540,6 +14640,12 @@ typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperat
 typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration2 __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration2;
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3 __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3;
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringClient_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringClient_FWD_DEFINED__
@@ -22915,6 +23021,8 @@ typedef enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringOperationS
 
 typedef enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringOperationalState __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringOperationalState;
 
+typedef enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind;
+
 typedef enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiBand __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiBand;
 
 typedef enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CUiccAccessCondition __x_ABI_CWindows_CNetworking_CNetworkOperators_CUiccAccessCondition;
@@ -23510,6 +23618,22 @@ enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringOperationalState
 
 /*
  *
+ * Struct Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind
+{
+    TetheringWiFiAuthenticationKind_Wpa2 = 0,
+    TetheringWiFiAuthenticationKind_Wpa3TransitionMode = 1,
+    TetheringWiFiAuthenticationKind_Wpa3 = 2,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Struct Windows.Networking.NetworkOperators.TetheringWiFiBand
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
@@ -23521,6 +23645,9 @@ enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiBand
     TetheringWiFiBand_Auto = 0,
     TetheringWiFiBand_TwoPointFourGigahertz = 1,
     TetheringWiFiBand_FiveGigahertz = 2,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+    TetheringWiFiBand_SixGigahertz = 3,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
@@ -31647,6 +31774,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkO
 
 /*
  *
+ * Interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3[] = L"Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3";
+typedef struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsAuthenticationKindSupported)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind authenticationKind,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* IsAuthenticationKindSupportedAsync)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind authenticationKind,
+        __FIAsyncOperation_1_boolean** operation);
+    HRESULT (STDMETHODCALLTYPE* get_AuthenticationKind)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind* value);
+    HRESULT (STDMETHODCALLTYPE* put_AuthenticationKind)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3* This,
+        enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CTetheringWiFiAuthenticationKind value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3Vtbl;
+
+interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_IsAuthenticationKindSupported(This, authenticationKind, result) \
+    ((This)->lpVtbl->IsAuthenticationKindSupported(This, authenticationKind, result))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_IsAuthenticationKindSupportedAsync(This, authenticationKind, operation) \
+    ((This)->lpVtbl->IsAuthenticationKindSupportedAsync(This, authenticationKind, operation))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_get_AuthenticationKind(This, value) \
+    ((This)->lpVtbl->get_AuthenticationKind(This, value))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_put_AuthenticationKind(This, value) \
+    ((This)->lpVtbl->put_AuthenticationKind(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringAccessPointConfiguration3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringClient
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -34500,6 +34713,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration ** Default Interface **
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2
+ *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34538,9 +34752,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager ** Default Interface **

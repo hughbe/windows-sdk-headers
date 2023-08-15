@@ -79,6 +79,16 @@ typedef enum _WHEA_ERROR_SOURCE_STATE {
 #define WHEA_ERROR_SOURCE_FLAG_DEFAULTSOURCE             0x80000000
 
 //
+// This flag is added to an error source descriptor to indicate this source
+// is an override, and not a normal error source.
+//
+// Some error sources such as PCI populate the HEST flags into their OS
+// error source flags, so this bit is defined to not conflict with them.
+//
+
+#define WHEA_ERR_SRC_OVERRIDE_FLAG 0x40000000
+
+//
 // The definition of invalid related source comes from the ACPI spec
 //
 

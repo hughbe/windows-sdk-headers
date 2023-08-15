@@ -4260,7 +4260,11 @@ typedef struct _DEVICE_DSM_REPORT_ZONES_DATA {
 
     DWORD Size;
 
+    //
+    // Represents the number of ZoneDescriptors.
+    //
     DWORD ZoneCount;
+
     STORAGE_ZONES_ATTRIBUTES Attributes;
 
     DWORD Reserved0;

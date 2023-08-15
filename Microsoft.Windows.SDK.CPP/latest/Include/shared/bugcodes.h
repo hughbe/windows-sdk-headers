@@ -4645,6 +4645,15 @@ Notes:
 #define INVALID_MINIMAL_PROCESS_STATE    ((ULONG)0x000001F8L)
 
 //
+// MessageId: PREVIOUS_MODE_MISMATCH
+//
+// MessageText:
+//
+//  PREVIOUS_MODE_MISMATCH
+//
+#define PREVIOUS_MODE_MISMATCH           ((ULONG)0x000001F9L)
+
+//
 // MessageId: XBOX_VMCTRL_CS_TIMEOUT
 //
 // MessageText:

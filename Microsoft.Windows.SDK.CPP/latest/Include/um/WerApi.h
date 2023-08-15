@@ -497,6 +497,7 @@ WerReportSubmit(
 //
 #define WER_DUMP_NOHEAP_ONQUEUE 1
 #define WER_DUMP_AUXILIARY      2
+#define WER_DUMP_AUX_PROMOTE    4
 
 //
 // WER dump types

@@ -1198,11 +1198,31 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
     // Request timeout value
     ULONG TimeOutValue;
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
+    union {
+        //
+        // Used to store system failure status information in
+        // SrbStatus failure conditions (e.g. SRB_STATUS_INTERNAL_ERROR).
+        //
+        ULONG SystemStatus;
+
+        //
+        // Used to store high 4 bytes of unique tag if unique tag feature is enabled.
+        //
+        ULONG RequestTagHigh4Bytes;
+
+    } DUMMYUNIONNAME;
+
+#else
+
     //
     // Used to store system failure status information in
     // SrbStatus failure conditions (e.g. SRB_STATUS_INTERNAL_ERROR).
     //
     ULONG SystemStatus;
+
+#endif
 
     //
     // Guard page that should always be zero. Use to guard against misbehaving

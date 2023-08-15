@@ -674,6 +674,13 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         INetworkOperatorTetheringAccessPointConfiguration2(std::nullptr_t = nullptr) noexcept {}
         INetworkOperatorTetheringAccessPointConfiguration2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) INetworkOperatorTetheringAccessPointConfiguration3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<INetworkOperatorTetheringAccessPointConfiguration3>
+    {
+        INetworkOperatorTetheringAccessPointConfiguration3(std::nullptr_t = nullptr) noexcept {}
+        INetworkOperatorTetheringAccessPointConfiguration3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) INetworkOperatorTetheringClient :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<INetworkOperatorTetheringClient>

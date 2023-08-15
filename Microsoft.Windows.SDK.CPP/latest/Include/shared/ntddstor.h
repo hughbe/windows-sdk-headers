@@ -4097,7 +4097,11 @@ typedef struct _DEVICE_DSM_REPORT_ZONES_DATA {
 
     ULONG Size;
 
+    //
+    // Represents the number of ZoneDescriptors.
+    //
     ULONG ZoneCount;
+
     STORAGE_ZONES_ATTRIBUTES Attributes;
 
     ULONG Reserved0;

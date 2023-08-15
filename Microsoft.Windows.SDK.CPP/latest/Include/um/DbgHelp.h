@@ -1702,6 +1702,12 @@ SymSetParentWindow(
     _In_ HWND hwnd
     );
 
+BOOL
+IMAGEAPI
+SymGetParentWindow(
+    _Out_ HWND * pHwnd
+    );
+
 PCHAR
 IMAGEAPI
 SymSetHomeDirectory(

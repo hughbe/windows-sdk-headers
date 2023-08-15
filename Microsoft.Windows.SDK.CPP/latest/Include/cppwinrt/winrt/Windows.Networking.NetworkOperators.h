@@ -2265,6 +2265,28 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration2)->put_Band(static_cast<int32_t>(value)));
     }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3<D>::IsAuthenticationKindSupported(winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const& authenticationKind) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3)->IsAuthenticationKindSupported(static_cast<int32_t>(authenticationKind), &result));
+        return result;
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3<D>::IsAuthenticationKindSupportedAsync(winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const& authenticationKind) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3)->IsAuthenticationKindSupportedAsync(static_cast<int32_t>(authenticationKind), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3<D>::AuthenticationKind() const
+    {
+        winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3)->get_AuthenticationKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_INetworkOperatorTetheringAccessPointConfiguration3<D>::AuthenticationKind(winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3)->put_AuthenticationKind(static_cast<int32_t>(value)));
+    }
     template <typename D> auto consume_Windows_Networking_NetworkOperators_INetworkOperatorTetheringClient<D>::MacAddress() const
     {
         void* value{};
@@ -5949,6 +5971,41 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3> : produce_base<D, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3>
+    {
+        int32_t __stdcall IsAuthenticationKindSupported(int32_t authenticationKind, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsAuthenticationKindSupported(*reinterpret_cast<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const*>(&authenticationKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsAuthenticationKindSupportedAsync(int32_t authenticationKind, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().IsAuthenticationKindSupportedAsync(*reinterpret_cast<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const*>(&authenticationKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AuthenticationKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(this->shim().AuthenticationKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AuthenticationKind(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AuthenticationKind(*reinterpret_cast<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringClient> : produce_base<D, winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringClient>
     {
         int32_t __stdcall get_MacAddress(void** value) noexcept final try
@@ -6726,6 +6783,7 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorNotificationEventDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringAccessPointConfiguration3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringClient> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringClientManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringEntitlementCheck> : winrt::impl::hash_base {};

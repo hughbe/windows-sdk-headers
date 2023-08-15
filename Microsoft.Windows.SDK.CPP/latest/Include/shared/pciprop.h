@@ -553,6 +553,12 @@ DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_OnPostPath, 37);
 
 DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_D3ColdSupport, 38);
 
+//
+// This property contains the virtual channel resource control registers.
+//
+
+DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_VirtualChannelControlRegisters, 39);
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 

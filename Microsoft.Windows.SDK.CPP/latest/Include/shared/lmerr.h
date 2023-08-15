@@ -28,13 +28,6 @@
 #endif
 #include <winapifamily.h>
 
-#ifndef RC_INVOKED
-#pragma push_macro("FEATURE_STAGING_LEGACY_MODE")
-#define FEATURE_STAGING_LEGACY_MODE
-#include "FeatureStaging-Updated-MSRC-GlobalSettings.Legacy.h"
-#pragma pop_macro("FEATURE_STAGING_LEGACY_MODE")
-#endif
-
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
@@ -641,11 +634,7 @@
 #define NERR_DuplicateHostName             (NERR_BASE + 629)   /* The hostname is already taken by another device. */
 #define NERR_HostNameTooLong               (NERR_BASE + 630)   /* The hostname is too long. */
 #define NERR_TooManyHostNames              (NERR_BASE + 631)   /* Too many hostnames specified for the device. */
-#ifndef RC_INVOKED
-#if FEATURE_STAGING_IS_FEATURE_ENABLED(Feature_MSRC71719_39382708)
-#define NERR_AccountReuseBlockedByPolicy   (NERR_BASE + 632)   /* An account with the same name exists in Active Directory. Re-using the account was blocked by security policy.*/
-#endif
-#endif
+// DO NOT USE (NERR_BASE + 632) it is reserved.
 
 /***********WARNING ****************
  *The range 2750-2799 has been     *

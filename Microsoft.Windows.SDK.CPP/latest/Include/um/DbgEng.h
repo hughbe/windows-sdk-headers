@@ -621,6 +621,10 @@ typedef struct _PROCESS_NAME_ENTRY
 // OutBuffer - ULONG for architecture
 #define DEBUG_REQUEST_GET_IMAGE_ARCHITECTURE 39
 
+// InBuffer - HWND for the new parent
+// OutBuffer - HWND for the old parent window
+#define DEBUG_REQUEST_SET_PARENT_HWND 40
+
 //
 // GetSourceFileInformation requests.
 //

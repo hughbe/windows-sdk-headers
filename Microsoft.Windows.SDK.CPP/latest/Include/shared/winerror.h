@@ -50477,6 +50477,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define FVE_E_EXCEED_LIMIT_RP            _HRESULT_TYPEDEF_(0x803100EEL)
 
 //
+// MessageId: FVE_E_NO_BACKUP_ACCOUNT
+//
+// MessageText:
+//
+// There is no backup account information available for the specified recovery password.
+//
+#define FVE_E_NO_BACKUP_ACCOUNT          _HRESULT_TYPEDEF_(0x803100EFL)
+
+//
 // =======================================================
 // Windows Filtering Platform Error Messages
 // =======================================================

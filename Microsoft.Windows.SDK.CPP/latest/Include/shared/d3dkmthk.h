@@ -4034,6 +4034,8 @@ typedef struct _D3DKMT_PRESENT_STATS_DWM2
     D3DKMT_ALIGN64 LARGE_INTEGER VirtualSyncQPCTime;
     D3DKMT_ALIGN64 LARGE_INTEGER VSyncDurationQPCTime;
     UINT                         VSyncMultiplier;
+    UINT                         VirtualPresentRefreshCount;
+    D3DKMT_ALIGN64 LARGE_INTEGER VirtualPresentQPCTime;
 } D3DKMT_PRESENT_STATS_DWM2;
 
 

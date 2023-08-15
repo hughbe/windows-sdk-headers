@@ -1681,8 +1681,10 @@ typedef enum _WHEA_CPU_VENDOR {
 #define WHEA_XPF_MCA_EXTREG_MAX_COUNT            24
 #define WHEA_XPF_MCA_SECTION_VERSION_2           2
 #define WHEA_XPF_MCA_SECTION_VERSION_3           3
-#define WHEA_XPF_MCA_SECTION_VERSION             WHEA_XPF_MCA_SECTION_VERSION_3
+#define WHEA_XPF_MCA_SECTION_VERSION_4           4
+#define WHEA_XPF_MCA_SECTION_VERSION             WHEA_XPF_MCA_SECTION_VERSION_4
 #define WHEA_AMD_EXT_REG_NUM                     10
+#define WHEA_XPF_MCA_EXBANK_COUNT                32
 
 //
 // NOTE: You must update WHEA_AMD_EXT_REG_NUM if you add additional registers
@@ -1758,6 +1760,16 @@ typedef struct _WHEA_XPF_MCA_SECTION {
     //
 
     XPF_RECOVERY_INFO RecoveryInfo;
+
+    //
+    // Version 4 Fields follow.
+    //
+
+    ULONG ExBankCount;
+    ULONG BankNumberEx[WHEA_XPF_MCA_EXBANK_COUNT];
+    MCI_STATUS StatusEx[WHEA_XPF_MCA_EXBANK_COUNT];
+    ULONGLONG AddressEx[WHEA_XPF_MCA_EXBANK_COUNT];
+    ULONGLONG MiscEx[WHEA_XPF_MCA_EXBANK_COUNT];
 } WHEA_XPF_MCA_SECTION, *PWHEA_XPF_MCA_SECTION;
 
 //------------------------------------------------------ WHEA_NMI_ERROR_SECTION
@@ -1844,15 +1856,15 @@ typedef enum _WHEA_RECOVERY_TYPE {
 
 typedef union _WHEA_RECOVERY_ACTION {
     struct {
-        ULONG NoneAttempted : 1;
-        ULONG TerminateProcess : 1;
-        ULONG ForwardedToVm : 1;
-        ULONG MarkPageBad : 1;
-        ULONG PoisonNotPresent :1;
-        ULONG Reserved : 28;
+        UINT64 NoneAttempted : 1;
+        UINT64 TerminateProcess : 1;
+        UINT64 ForwardedToVm : 1;
+        UINT64 MarkPageBad : 1;
+        UINT64 PoisonNotPresent :1;
+        UINT64 Reserved : 59;
     } DUMMYSTRUCTNAME;
 
-    ULONG AsULONG;
+    UINT64 AsUINT64;
 } WHEA_RECOVERY_ACTION, *PWHEA_RECOVERY_ACTION;
 
 typedef enum _WHEA_RECOVERY_FAILURE_REASON {
