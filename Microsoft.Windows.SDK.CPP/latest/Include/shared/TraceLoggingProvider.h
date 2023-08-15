@@ -2098,7 +2098,7 @@ memory.
 
 #if TLG_DEBUG
   // Not for use outside of TraceLoggingProvider.h.
-  #define _tlg_ASSERT(exp, str) ((void)(!(exp) ? (__annotation(L"Debug", L"AssertFail", L"TraceLogging: " _tlg_LSTRINGIZE(exp) L" : " L##str), TLG_RAISEASSERTIONFAILURE(), 0) : 0))
+  #define _tlg_ASSERT(exp, str) ((void)(!(exp) ? (__annotation(L"Debug", L"AssertFail", L"TraceLogging: " _tlg_LSTRINGIZE(exp) L" : " str), TLG_RAISEASSERTIONFAILURE(), 0) : 0))
 #else // TLG_DEBUG
   // Not for use outside of TraceLoggingProvider.h.
   #define _tlg_ASSERT(exp, str) ((void)0)
@@ -4050,8 +4050,8 @@ _tlgNDT(value, __VA_ARGS__) --> "fieldName", L"description", tags, hasTags
 */
 #define _tlgNDT_imp0(value, ...)               #value,      ,     , 0
 #define _tlgNDT_imp1(value, name)              name,        ,     , 0
-#define _tlgNDT_imp2(value, name, desc)        name, L##desc,     , 0
-#define _tlgNDT_imp3(value, name, desc, tags)  name, L##desc, tags, 1
+#define _tlgNDT_imp2(value, name, desc)        name, L"" desc,    , 0
+#define _tlgNDT_imp3(value, name, desc, tags)  name, L"" desc, tags, 1
 #define _tlgNDT_impB(macro, args)              macro args
 #define _tlgNDT_impA(n, args)                  _tlgNDT_impB(_tlg_PASTE2(_tlgNDT_imp, n), args)
 #define _tlgNDT(value, ...)                    _tlgNDT_impA(_tlg_NARGS(__VA_ARGS__), (value, __VA_ARGS__))
@@ -4061,8 +4061,8 @@ _tlgDT: Extracts Name/Description/Tags from varargs of wrapper macro with requir
 _tlgDT(name, __VA_ARGS__) --> "fieldName", L"description", tags, hasTags
 */
 #define _tlgDT_imp0(name, ...)                 name,        ,     , 0
-#define _tlgDT_imp1(name, desc)                name, L##desc,     , 0
-#define _tlgDT_imp2(name, desc, tags)          name, L##desc, tags, 1
+#define _tlgDT_imp1(name, desc)                name, L"" desc,     , 0
+#define _tlgDT_imp2(name, desc, tags)          name, L"" desc, tags, 1
 #define _tlgDT_impB(macro, args)               macro args
 #define _tlgDT_impA(n, args)                   _tlgDT_impB(_tlg_PASTE2(_tlgDT_imp, n), args)
 #define _tlgDT(name, ...)                      _tlgDT_impA(_tlg_NARGS(__VA_ARGS__), (name, __VA_ARGS__))
@@ -4424,7 +4424,7 @@ we can use &dataDescriptor[1].Size as the pointer to the count.
 #define _tlgAnnotes_tlgKeyword(    eventKeyword                                                                 )
 #define _tlgAnnotes_tlgTag(        eventTag                                                                     )
 #define _tlgAnnotes_tlgDesc(       eventDescription                                                             )
-#define _tlgAnnotes_tlgCustomAnnot(key, value                                                                   ) L"|" L##key L"=" value
+#define _tlgAnnotes_tlgCustomAnnot(key, value                                                                   ) L"|" key L"=" value
 
 #define _tlgDescVal(n, args) _tlgApplyArgs(_tlgDescVal, args)
 #define _tlgDescVal_tlgAuto(              value,                                       name, desc, tags, hasTags)
@@ -4580,7 +4580,7 @@ struct _tlgTagEnc<eventTag, 4>
     _tlgDefineProvider_functionWrapperBegin##requiresWrapper(functionPostfix) \
         __annotation( \
             L"_TlgDefineProvider:|" _tlg_LSTRINGIZE(__LINE__) L"|" _tlg_LSTRINGIZE(hProvider) L"|" \
-            L##providerName \
+            providerName \
         ); \
     _tlgDefineProvider_functionWrapperEnd##requiresWrapper
 
