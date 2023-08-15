@@ -1117,6 +1117,20 @@ CfGetPlaceholderRangeInfo (
     _Out_opt_ PDWORD ReturnedLength
     );
 
+STDAPI
+CfGetPlaceholderRangeInfoForHydration(
+    _In_ CF_CONNECTION_KEY ConnectionKey,
+    _In_ CF_TRANSFER_KEY TransferKey,    
+    _In_ LARGE_INTEGER FileId,
+    _In_ CF_PLACEHOLDER_RANGE_INFO_CLASS InfoClass,
+    _In_ LARGE_INTEGER StartingOffset,
+    _In_ LARGE_INTEGER Length,
+    _Out_bytecapcount_(InfoBufferLength) PVOID InfoBuffer,
+    _In_ DWORD InfoBufferLength,
+    _Out_opt_ PDWORD ReturnedLength
+    );
+
+
 #pragma endregion
 
 

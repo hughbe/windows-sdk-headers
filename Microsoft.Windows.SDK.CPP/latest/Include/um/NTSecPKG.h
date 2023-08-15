@@ -1001,6 +1001,25 @@ typedef struct  _SECPKG_TARGETINFO
     PCWSTR  ComputerName;
 } SECPKG_TARGETINFO, *PSECPKG_TARGETINFO;
 
+// Flag values for SECPKG_NTLM_TARGETINFO.Flags field below.
+#define SECPKG_MSVAV_FLAGS_VALID              0x01
+#define SECPKG_MSVAV_TIMESTAMP_VALID          0x02
+
+typedef struct  _SECPKG_NTLM_TARGETINFO
+{
+    // Flags contains zero or SECPKG_MSVAV_* values from above
+    ULONG    Flags;
+
+    LPWSTR   MsvAvNbComputerName;
+    LPWSTR   MsvAvNbDomainName;
+    LPWSTR   MsvAvDnsComputerName;
+    LPWSTR   MsvAvDnsDomainName;
+    LPWSTR   MsvAvDnsTreeName;
+    ULONG    MsvAvFlags;
+    FILETIME MsvAvTimestamp;
+    LPWSTR   MsvAvTargetName;
+} SECPKG_NTLM_TARGETINFO, *PSECPKG_NTLM_TARGETINFO;
+
 #define SECPKG_ATTR_SASL_CONTEXT    0x00010000
 
 typedef struct _SecPkgContext_SaslContext {
@@ -2192,6 +2211,16 @@ typedef NTSTATUS
     );
 
 typedef NTSTATUS
+(NTAPI SpExtractTargetInfoFn) (
+    _In_opt_ PLSA_CLIENT_REQUEST ClientRequest,
+    _In_reads_bytes_(SubmitBufferLength) PVOID ProtocolSubmitBuffer,
+    _In_opt_ PVOID ClientBufferBase,
+    _In_ ULONG SubmitBufferLength,
+    _Result_nullonfailure_ _Outptr_result_bytebuffer_(*pcbTargetInfo) PVOID* ppvTargetInfo,
+    _Out_ ULONG* pcbTargetInfo
+    );
+
+typedef NTSTATUS
 (NTAPI LSA_AP_POST_LOGON_USER) (
     _In_ PSECPKG_POST_LOGON_USER_INFO PostLogonUserInfo
     );
@@ -2278,6 +2307,8 @@ typedef struct _SECPKG_FUNCTION_TABLE {
     PLSA_AP_LOGON_USER_EX3 LogonUserEx3;                                    // SECPKG_INTERFACE_VERSION_10
     PLSA_AP_PRE_LOGON_USER_SURROGATE PreLogonUserSurrogate;                 // SECPKG_INTERFACE_VERSION_10
     PLSA_AP_POST_LOGON_USER_SURROGATE PostLogonUserSurrogate;               // SECPKG_INTERFACE_VERSION_10
+
+    SpExtractTargetInfoFn* ExtractTargetInfo;                               // SECPKG_INTERFACE_VERSION_11
 } SECPKG_FUNCTION_TABLE, *PSECPKG_FUNCTION_TABLE;
 
 //
@@ -2459,6 +2490,7 @@ typedef NTSTATUS
 //      SECPKG_INTERFACE_VERSION_8 indicates all fields through GetRemoteSupplementalCreds are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_9 indicates all fields through GetTbalSupplementalCreds are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_10 indicates all fields through PostLogonUserSurrogate are defined (potentially to NULL)
+//      SECPKG_INTERFACE_VERSION_11 indicates all fields through ExtractTargetInfo are defined (potentially to NULL)
 //
 // * Returned from SpUserModeInitializeFn to indicate the version of the auth package.
 //      SECPKG_INTERFACE_VERSION indicates all fields through ImportContext are defined (potentially to NULL)
@@ -2475,6 +2507,7 @@ typedef NTSTATUS
 #define SECPKG_INTERFACE_VERSION_8  0x00800000
 #define SECPKG_INTERFACE_VERSION_9  0x01000000
 #define SECPKG_INTERFACE_VERSION_10 0x02000000
+#define SECPKG_INTERFACE_VERSION_11 0x04000000
 
 typedef enum _KSEC_CONTEXT_TYPE {
     KSecPaged,

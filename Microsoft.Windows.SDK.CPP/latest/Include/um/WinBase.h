@@ -3514,6 +3514,9 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 #if (NTDDI_VERSION >= NTDDI_WIN10_FE)
     ProcThreadAttributeEnableOptionalXStateFeatures = 27,
 #endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+    ProcThreadAttributeTrustedApp                   = 29,
+#endif
 } PROC_THREAD_ATTRIBUTE_NUM;
 #endif
 
@@ -3977,6 +3980,13 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 
 #endif // NTDDI_WIN10_MN
 
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+#define PROC_THREAD_ATTRIBUTE_TRUSTED_APP \
+    ProcThreadAttributeValue (ProcThreadAttributeTrustedApp, FALSE, TRUE, FALSE)
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion

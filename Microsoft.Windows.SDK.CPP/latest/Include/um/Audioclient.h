@@ -159,6 +159,13 @@ typedef interface IChannelAudioVolume IChannelAudioVolume;
 #endif 	/* __IChannelAudioVolume_FWD_DEFINED__ */
 
 
+#ifndef __IAudioAcousticEchoCancellationControl_FWD_DEFINED__
+#define __IAudioAcousticEchoCancellationControl_FWD_DEFINED__
+typedef interface IAudioAcousticEchoCancellationControl IAudioAcousticEchoCancellationControl;
+
+#endif 	/* __IAudioAcousticEchoCancellationControl_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "wtypes.h"
 #include "unknwn.h"
@@ -2724,12 +2731,104 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)
 #define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)
 #define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
 
 
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0016_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0016_v0_0_s_ifspec;
+
+#ifndef __IAudioAcousticEchoCancellationControl_INTERFACE_DEFINED__
+#define __IAudioAcousticEchoCancellationControl_INTERFACE_DEFINED__
+
+/* interface IAudioAcousticEchoCancellationControl */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioAcousticEchoCancellationControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("f4ae25b5-aaa3-437d-b6b3-dbbe2d0e9549")
+    IAudioAcousticEchoCancellationControl : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE SetEchoCancellationRenderEndpoint( 
+            LPCWSTR endpointId) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioAcousticEchoCancellationControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioAcousticEchoCancellationControl * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioAcousticEchoCancellationControl * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioAcousticEchoCancellationControl * This);
+        
+        DECLSPEC_XFGVIRT(IAudioAcousticEchoCancellationControl, SetEchoCancellationRenderEndpoint)
+        HRESULT ( STDMETHODCALLTYPE *SetEchoCancellationRenderEndpoint )( 
+            IAudioAcousticEchoCancellationControl * This,
+            LPCWSTR endpointId);
+        
+        END_INTERFACE
+    } IAudioAcousticEchoCancellationControlVtbl;
+
+    interface IAudioAcousticEchoCancellationControl
+    {
+        CONST_VTBL struct IAudioAcousticEchoCancellationControlVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioAcousticEchoCancellationControl_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioAcousticEchoCancellationControl_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioAcousticEchoCancellationControl_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioAcousticEchoCancellationControl_SetEchoCancellationRenderEndpoint(This,endpointId)	\
+    ( (This)->lpVtbl -> SetEchoCancellationRenderEndpoint(This,endpointId) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioAcousticEchoCancellationControl_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_audioclient_0000_0017 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0017_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0017_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -16393,6 +16393,28 @@ DEFINE_GUID( GUID_PROCESSOR_LATENCY_HINT_MIN_UNPARK, 0x616cdaa5, 0x695e, 0x4545,
 DEFINE_GUID( GUID_PROCESSOR_LATENCY_HINT_MIN_UNPARK_1, 0x616cdaa5, 0x695e, 0x4545, 0x97, 0xad, 0x97, 0xdc, 0x2d, 0x1b, 0xdd, 0x89);
 
 //
+// Specifies the module unparking policy.
+//
+// {b0deaf6b-59c0-4523-8a45-ca7f40244114}
+//
+DEFINE_GUID( GUID_PROCESSOR_MODULE_PARKING_POLICY, 0xb0deaf6b, 0x59c0, 0x4523, 0x8a, 0x45, 0xca, 0x7f, 0x40, 0x24, 0x41, 0x14);
+
+//
+// Specifies the complex llc unparking policy.
+//
+// {b669a5e9-7b1d-4132-baaa-49190abcfeb6}
+//
+DEFINE_GUID(GUID_PROCESSOR_COMPLEX_PARKING_POLICY, 0xb669a5e9, 0x7b1d, 0x4132, 0xba, 0xaa, 0x49, 0x19, 0xa, 0xbc, 0xfe, 0xb6);
+
+//
+// PO topology(module or complex) parking Policies
+//
+
+#define PARKING_TOPOLOGY_POLICY_DISABLED    0
+#define PARKING_TOPOLOGY_POLICY_ROUNDROBIN  1
+#define PARKING_TOPOLOGY_POLICY_SEQUENTIAL  2
+
+//
 // Specifies whether the core parking engine should distribute processor
 // utility.
 //
@@ -22862,7 +22884,6 @@ typedef struct _PERFORMANCE_DATA {
 #define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_S            0x00000024
 
 // This is a range reserved for future Xbox consoles.
-#define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_00         0x00000024
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_01         0x00000025
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_02         0x00000026
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_03         0x00000027

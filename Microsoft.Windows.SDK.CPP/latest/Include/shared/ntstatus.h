@@ -10753,6 +10753,15 @@ Notes:
 //
 #define STATUS_SESSION_KEY_TOO_SHORT     ((NTSTATUS)0xC0000517L)
 
+//
+// MessageId: STATUS_FS_METADATA_INCONSISTENT
+//
+// MessageText:
+//
+// The file system encountered a metadata file with inconsistent data.
+//
+#define STATUS_FS_METADATA_INCONSISTENT  ((NTSTATUS)0xC0000518L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 

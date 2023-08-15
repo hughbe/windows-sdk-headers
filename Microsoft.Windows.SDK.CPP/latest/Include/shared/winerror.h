@@ -3764,6 +3764,15 @@
 #define ERROR_NOT_SUPPORTED_WITH_CACHED_HANDLE 509L
 
 //
+// MessageId: ERROR_FS_METADATA_INCONSISTENT
+//
+// MessageText:
+//
+// The file system encountered a metadata file with inconsistent data.
+//
+#define ERROR_FS_METADATA_INCONSISTENT   510L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //
@@ -29270,6 +29279,15 @@
 // The application cannot be started for the target user.  Please have the user explicitly install this package.
 //
 #define ERROR_PACKAGE_NOT_REGISTERED_FOR_USER 15669L
+
+//
+// MessageId: ERROR_PACKAGE_NAME_MISMATCH
+//
+// MessageText:
+//
+// The provided package name does not match the expected package name. Check the AppXDeployment-Server event log for details.
+//
+#define ERROR_PACKAGE_NAME_MISMATCH      15670L
 
 //////////////////////////
 //                      //

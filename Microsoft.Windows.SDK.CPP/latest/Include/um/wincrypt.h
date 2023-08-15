@@ -667,6 +667,7 @@ typedef ULONG_PTR HCRYPTHASH;
 #endif //(NTDDI_VERSION >= NTDDI_VISTA)
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 #define PP_DISMISS_PIN_UI_SEC   49
+#define PP_IS_PFX_EPHEMERAL     50
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 // certenrolld_begin -- PROV_RSA_*
@@ -1667,6 +1668,8 @@ typedef struct _CRYPT_ALGORITHM_IDENTIFIER {
 
 #define szOID_TIMESTAMP_TOKEN           "1.2.840.113549.1.9.16.1.4"
 #define szOID_RFC3161_counterSign "1.3.6.1.4.1.311.3.3.1"
+#define szOID_RFC3161v21_counterSign "1.3.6.1.4.1.311.3.3.2"
+#define szOID_RFC3161v21_thumbprints "1.3.6.1.4.1.311.3.3.3"
 
 #define szOID_RSA_SMIMEalg              "1.2.840.113549.1.9.16.3"
 #define szOID_RSA_SMIMEalgESDH          "1.2.840.113549.1.9.16.3.5"

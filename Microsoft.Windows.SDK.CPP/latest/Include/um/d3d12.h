@@ -997,6 +997,8 @@ extern "C"{
 
 #define	D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 15 )
 
+#define	D3D12_PREVIEW_SDK_VERSION	( 700 )
+
 #define	D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 16 )
 
 #define	D3D12_PS_CS_UAV_REGISTER_COMPONENTS	( 1 )
@@ -1128,7 +1130,7 @@ extern "C"{
 
 #define	D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT	( 2 )
 
-#define	D3D12_SDK_VERSION	( 6 )
+#define	D3D12_SDK_VERSION	( 600 )
 
 #define	D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES	( 32 )
 
@@ -2103,7 +2105,8 @@ enum D3D12_FEATURE
         D3D12_FEATURE_D3D12_OPTIONS9	= 37,
         D3D12_FEATURE_D3D12_OPTIONS10	= 39,
         D3D12_FEATURE_D3D12_OPTIONS11	= 40,
-        D3D12_FEATURE_D3D12_OPTIONS12	= 41
+        D3D12_FEATURE_D3D12_OPTIONS12	= 41,
+        D3D12_FEATURE_D3D12_OPTIONS13	= 42
     } 	D3D12_FEATURE;
 
 typedef 
@@ -2568,7 +2571,16 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS12
     {
     _Out_  D3D12_TRI_STATE MSPrimitivesPipelineStatisticIncludesCulledPrimitives;
     _Out_  BOOL EnhancedBarriersSupported;
+    _Out_  BOOL RelaxedFormatCastingSupported;
     } 	D3D12_FEATURE_DATA_D3D12_OPTIONS12;
+
+typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS13
+    {
+    _Out_  BOOL UnrestrictedBufferTextureCopyPitchSupported;
+    _Out_  BOOL UnrestrictedVertexElementAlignmentSupported;
+    _Out_  BOOL InvertedViewportHeightFlipsYSupported;
+    _Out_  BOOL InvertedViewportDepthFlipsZSupported;
+    } 	D3D12_FEATURE_DATA_D3D12_OPTIONS13;
 
 typedef struct D3D12_RESOURCE_ALLOCATION_INFO
     {
