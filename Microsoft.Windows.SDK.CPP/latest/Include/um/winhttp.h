@@ -2398,6 +2398,14 @@ WinHttpFreeProxySettingsEx(
 #define WINHTTP_FEATURE_REQUEST_ANNOTATION                                   73
 #define WINHTTP_FEATURE_DISABLE_PROXY_AUTH_SCHEMES                           74
 #define WINHTTP_FEATURE_REVERT_IMPERSONATION_SERVER_CERT                     75
+#define WINHTTP_FEATURE_DISABLE_GLOBAL_POOLING                               76
+#define WINHTTP_FEATURE_GET_PROXY_SETTINGS_EX                                77
+#define WINHTTP_FEATURE_SESSION_SCH_CRED                                     78
+#define WINHTTP_FEATURE_QUIC_STATS_V2                                        79
+#define WINHTTP_FEATURE_URL_INCLUDE_DEFAULT_PORT                             80
+#define WINHTTP_FEATURE_QUIC_STREAM_STATS                                    81
+#define WINHTTP_FEATURE_USE_LOOKASIDE                                        82
+#define WINHTTP_FEATURE_ERROR_LOG_GUID                                       83
 
 
 

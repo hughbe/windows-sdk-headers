@@ -1519,7 +1519,7 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS15
 typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS16
 {
     [annotation("_Out_")] BOOL DynamicDepthBiasSupported;
-    [annotation("_Out_")] BOOL GPUUploadHeapSupported;
+    [annotation("_Out_")] BOOL Reserved;
 } D3D12_FEATURE_DATA_D3D12_OPTIONS16;
 
 // D3D12_FEATURE_D3D12_OPTIONS17
@@ -1570,7 +1570,6 @@ typedef enum D3D12_HEAP_TYPE
     D3D12_HEAP_TYPE_UPLOAD    = 2,
     D3D12_HEAP_TYPE_READBACK  = 3,
     D3D12_HEAP_TYPE_CUSTOM    = 4,
-    D3D12_HEAP_TYPE_GPU_UPLOAD = 5,
 } D3D12_HEAP_TYPE;
 
 typedef enum D3D12_CPU_PAGE_PROPERTY

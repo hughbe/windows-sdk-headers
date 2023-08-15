@@ -15437,7 +15437,8 @@ typedef struct _STREAM_EXTENT_ENTRY {
 #define CHECKSUM_TYPE_CRC64             (2)
 #define CHECKSUM_TYPE_ECC               (3)
 #define CHECKSUM_TYPE_SHA256            (4)
-#define CHECKSUM_TYPE_FIRST_UNUSED_TYPE (5)
+#define CHECKSUM_TYPE_XXH64             (5)
+#define CHECKSUM_TYPE_FIRST_UNUSED_TYPE (6)
 
 #define FSCTL_INTEGRITY_FLAG_CHECKSUM_ENFORCEMENT_OFF        (1)
 

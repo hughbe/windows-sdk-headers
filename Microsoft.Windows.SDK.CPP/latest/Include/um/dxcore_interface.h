@@ -35,25 +35,13 @@ enum class DXCoreAdapterProperty : uint32_t
     IsHardware = 11,
     IsIntegrated = 12,
     IsDetachable = 13,
-    HardwareIDParts = 14,
-    PhysicalAdapterCount = 15,
-    AdapterEngineCount = 16,
-    AdapterEngineName = 17
+    HardwareIDParts = 14
 };
 
 enum class DXCoreAdapterState : uint32_t
 {
     IsDriverUpdateInProgress = 0,
-    AdapterMemoryBudget = 1,
-    AdapterMemoryUsageBytes = 2,
-    AdapterMemoryUsageByProcessBytes = 3,
-    AdapterEngineRunningTimeMicroseconds = 4,
-    AdapterEngineRunningTimeByProcessMicroseconds = 5,
-    AdapterTemperatureCelsius = 6,
-    AdapterInUseProcessCount = 7,
-    AdapterInUseProcessSet = 8,
-    AdapterEngineFrequencyHertz = 9,
-    AdapterMemoryFrequencyHertz = 10
+    AdapterMemoryBudget = 1
 };
 
 enum class DXCoreSegmentGroup : uint32_t
@@ -106,86 +94,6 @@ struct DXCoreAdapterMemoryBudget
     uint64_t currentUsage;
     uint64_t availableForReservation;
     uint64_t currentReservation;
-};
-
-struct DXCoreAdapterEngineIndex
-{
-    uint32_t physicalAdapterIndex;
-    uint32_t engineIndex;
-};
-
-struct DXCoreEngineQueryInput
-{
-    DXCoreAdapterEngineIndex adapterEngineIndex;
-    uint32_t processId;
-};
-
-struct DXCoreEngineQueryOutput
-{
-    uint64_t runningTime;
-    bool processQuerySucceeded;
-};
-
-enum class DXCoreMemoryType : uint32_t
-{
-    Dedicated = 0,
-    Shared = 1
-};
-
-struct DXCoreMemoryUsage
-{
-    uint64_t committed;
-    uint64_t resident;
-};
-
-struct DXCoreMemoryQueryInput
-{
-    uint32_t physicalAdapterIndex;
-    DXCoreMemoryType memoryType;
-};
-
-struct DXCoreProcessMemoryQueryInput
-{
-    uint32_t physicalAdapterIndex;
-    DXCoreMemoryType memoryType;
-    uint32_t processId;
-};
-
-struct DXCoreProcessMemoryQueryOutput
-{
-    DXCoreMemoryUsage memoryUsage;
-    bool processQuerySucceeded;
-};
-
-struct DXCoreAdapterProcessSetQueryInput
-{    
-    uint32_t arraySize;
-    _Field_size_(arraySize) uint32_t* processIds;
-};
-
-struct DXCoreAdapterProcessSetQueryOutput
-{
-    uint32_t processesWritten;
-    uint32_t processesTotal;
-};
-
-struct DXCoreEngineNamePropertyInput
-{
-    DXCoreAdapterEngineIndex adapterEngineIndex;
-    uint32_t engineNameLength;
-    _Field_size_(engineNameLength) wchar_t *engineName;
-};
-
-struct DXCoreEngineNamePropertyOutput
-{
-    uint32_t engineNameLength;
-};
-
-struct DXCoreFrequencyQueryOutput
-{
-    uint64_t frequency;
-    uint64_t maxFrequency;
-    uint64_t maxOverclockedFrequency;
 };
 
 typedef void (STDMETHODCALLTYPE *PFN_DXCORE_NOTIFICATION_CALLBACK)(
@@ -305,32 +213,6 @@ public:
     {
         return GetFactory(IID_PPV_ARGS(ppvFactory));
     }
-};
-
-/* interface IDXCoreAdapter1 */
-MIDL_INTERFACE("a0783366-cfa3-43be-9d79-55b2da97c63c")
-IDXCoreAdapter1 : public IDXCoreAdapter
-{
-public:
-    virtual HRESULT STDMETHODCALLTYPE GetPropertyWithInput(
-        DXCoreAdapterProperty property,
-        size_t inputPropertyDetailsSize,
-        _In_reads_bytes_opt_(inputPropertyDetailsSize) const void *inputPropertyDetails,
-        size_t outputBufferSize,
-        _Out_writes_bytes_(outputBufferSize) void *outputBuffer) = 0;
-
-    template <class T1, class T2>
-    HRESULT GetPropertyWithInput( 
-            DXCoreAdapterProperty property,
-            _In_reads_bytes_opt_(sizeof(T1)) const T1 *inputPropertyDetails,
-            _Out_writes_bytes_(sizeof(T2)) T2 *outputBuffer)
-        {
-            return GetPropertyWithInput(property,
-                                        sizeof(T1),
-                                        (const void*)inputPropertyDetails,
-                                        sizeof(T2),
-                                        (void*)outputBuffer);
-        }
 };
 
 /* interface IDXCoreAdapterList */

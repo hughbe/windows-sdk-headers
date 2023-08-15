@@ -2873,12 +2873,17 @@ typedef struct _HTTP_QUIC_STREAM_REQUEST_STATS
 
 typedef enum _HTTP_FEATURE_ID
 {
-    HttpFeatureUnknown          = 0,
-    HttpFeatureResponseTrailers = 1,
-    HttpFeatureApiTimings       = 2,
-    HttpFeatureDelegateEx       = 3,
-    HttpFeatureHttp3            = 4,
-    HttpFeatureLast             = 5,
+    HttpFeatureUnknown                         = 0,
+    HttpFeatureResponseTrailers                = 1,
+    HttpFeatureApiTimings                      = 2,
+    HttpFeatureDelegateEx                      = 3,
+    HttpFeatureHttp3                           = 4,
+    HttpFeatureTlsSessionTickets               = 5,
+    HttpFeatureDisableTlsSessionId             = 6,
+    HttpFeatureTlsDualCerts                    = 7,
+    HttpFeatureAutomaticChunkedEncoding        = 8,
+    HttpFeatureDedicatedReqQueueDelegationType = 9,
+    HttpFeatureLast                            = 10,
 
 
     HttpFeaturemax              = 0xFFFFFFFF,

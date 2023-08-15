@@ -1,4 +1,4 @@
-﻿
+
 /*++
 
 Copyright (c) 1996 Microsoft Corporation.  All rights reserved.
@@ -4811,6 +4811,7 @@ typedef enum CLCTL_CODES {
 
     CLCTL_NETNAME_SET_PWD_INFOEX            = CLCTL_EXTERNAL_CODE( 198, CLUS_ACCESS_WRITE, CLUS_NO_MODIFY ),
 
+
     // Control codes 2000 to 2999 are reserved.
 
     CLCTL_STORAGE_GET_AVAILABLE_DISKS_EX2_INT   = CLCTL_EXTERNAL_CODE( 2040, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
@@ -5201,6 +5202,7 @@ typedef enum CLUSCTL_RESOURCE_CODES {
 
     CLUSCTL_RESOURCE_RLUA_SET_PWD_INFOEX =
         CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_SET_PWD_INFOEX ),
+
 
     //
     // Internal resource codes

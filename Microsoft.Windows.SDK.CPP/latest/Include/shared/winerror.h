@@ -3038,11 +3038,8 @@
 //
 // MessageText:
 //
-// The Windows Subsystem for Linux has transitioned to a Microsoft Store application.
-// To perform a one-time update to the latest version, please run `wsl.exe --install`.
-// Any existing distributions and user data will be available after the installation is completed.
-// 
-// Please visit https://aka.ms/wslstoreinfo to learn more.
+// The Windows Subsystem for Linux is not installed. You can install by running 'wsl.exe --install'.
+// For more information please visit https://aka.ms/wslinstall
 //
 #define ERROR_LINUX_SUBSYSTEM_NOT_PRESENT 414L
 
