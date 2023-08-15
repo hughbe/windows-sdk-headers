@@ -22,7 +22,7 @@ Environment:
 
 #pragma once
 
-#if defined(_M_ARM64EC) || ((defined(_M_IX86) || defined(_M_AMD64)) && defined(USE_SOFT_INTRINSICS))
+#if defined(_M_ARM64EC) || ((defined(_M_IX86) || defined(_M_AMD64) || defined(_M_ARM64)) && defined(USE_SOFT_INTRINSICS))
 
 #include <widemath.h>                // 64-bit and 128-bit math helper functions
 
@@ -161,7 +161,7 @@ __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1))) ? 1
 
 // Misc. integer intrinsics not already defined in winnt.h
 
-#if defined(_M_ARM64EC)
+#if defined(_M_ARM64) || defined(_M_ARM64EC)
 
 #define _udiv128(h,l,d,r)               UDIV128((h),(l),(d),(r))
 #define _div128(h,l,d,r)                SDIV128((h),(l),(d),(r))
@@ -232,7 +232,7 @@ __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1))) ? 1
 
 // AES
 
-#if defined(_M_ARM64EC)
+#if defined(_M_ARM64) || defined(_M_ARM64EC)
 
 #define _mm_aesdec_si128(a,b)           __MI128(AESDEC128(__U128(a),__U128(b)))
 #define _mm_aesenc_si128(a,b)           __MI128(AESENC128(__U128(a),__U128(b)))
@@ -376,23 +376,23 @@ __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1))) ? 1
 
 // CVTPD2DQ CVTPS2DQ
 
-#define _mm_cvtps_epi32(a)              __MI128(CVTPS2DQ128(__S128(a), _MM_ROUND_MODE_NEAREST))
-#define _mm_cvttps_epi32(a)             __MI128(CVTPS2DQ128(__S128(a), _MM_ROUND_MODE_TOWARD_ZERO))
-#define _mm_cvtpd_epi32(a)              __MI128(CVTPD2DQ128(__D128(a), _MM_ROUND_MODE_NEAREST))
-#define _mm_cvttpd_epi32(a)             __MI128(CVTPD2DQ128(__D128(a), _MM_ROUND_MODE_TOWARD_ZERO))
+#define _mm_cvtps_epi32(a)              __MI128(CVTPS2DQ128(__S128(a), _MM_FROUND_TO_NEAREST_INT))
+#define _mm_cvttps_epi32(a)             __MI128(CVTPS2DQ128(__S128(a), _MM_FROUND_TO_ZERO))
+#define _mm_cvtpd_epi32(a)              __MI128(CVTPD2DQ128(__D128(a), _MM_FROUND_TO_NEAREST_INT))
+#define _mm_cvttpd_epi32(a)             __MI128(CVTPD2DQ128(__D128(a), _MM_FROUND_TO_ZERO))
 
 // CVTSI2SS CVTSS2SI CVTTSS2SI CVTSD2SI CVTTSD2SI
 
-#define _mm_cvt_ss2si(a)                (int)_CVTSS2SI32(__S128D0(a), _MM_ROUND_MODE_NEAREST)
-#define _mm_cvtt_ss2si(a)               (int)_CVTSS2SI32(__S128D0(a), _MM_ROUND_MODE_TOWARD_ZERO)
+#define _mm_cvt_ss2si(a)                (int)_CVTSS2SI32(__S128D0(a), _MM_FROUND_TO_NEAREST_INT)
+#define _mm_cvtt_ss2si(a)               (int)_CVTSS2SI32(__S128D0(a), _MM_FROUND_TO_ZERO)
 #define _mm_cvt_si2ss(s,a)              __MM128(CVTSI2SS128(__S128(s),(int32_t)(a)))
 #define _mm_cvti64_ss(s,a)              __MM128(CVTSI2SS128(__S128(s),(int64_t)(a)))
-#define _mm_cvtsd_si32(a)               (int)_CVTSD2SI32(__D128Q0(a), _MM_ROUND_MODE_NEAREST)
-#define _mm_cvttsd_si32(a)              (int)_CVTSD2SI32(__D128Q0(a), _MM_ROUND_MODE_TOWARD_ZERO)
-#define _mm_cvtss_si64x(a)              (int64_t)_CVTSD2SI64(CVTSS2SD64(__S128D0(a)), _MM_ROUND_MODE_NEAREST)
-#define _mm_cvttss_si64x(a)             (int64_t)_CVTSD2SI64(CVTSS2SD64(__S128D0(a)), _MM_ROUND_MODE_TOWARD_ZERO)
-#define _mm_cvtsd_si64x(a)              (int64_t)_CVTSD2SI64(__D128Q0(a), _MM_ROUND_MODE_NEAREST)
-#define _mm_cvttsd_si64x(a)             (int64_t)_CVTSD2SI64(__D128Q0(a), _MM_ROUND_MODE_TOWARD_ZERO)
+#define _mm_cvtsd_si32(a)               (int)_CVTSD2SI32(__D128Q0(a), _MM_FROUND_TO_NEAREST_INT)
+#define _mm_cvttsd_si32(a)              (int)_CVTSD2SI32(__D128Q0(a), _MM_FROUND_TO_ZERO)
+#define _mm_cvtss_si64x(a)              (int64_t)_CVTSD2SI64(CVTSS2SD64(__S128D0(a)), _MM_FROUND_TO_NEAREST_INT)
+#define _mm_cvttss_si64x(a)             (int64_t)_CVTSD2SI64(CVTSS2SD64(__S128D0(a)), _MM_FROUND_TO_ZERO)
+#define _mm_cvtsd_si64x(a)              (int64_t)_CVTSD2SI64(__D128Q0(a), _MM_FROUND_TO_NEAREST_INT)
+#define _mm_cvttsd_si64x(a)             (int64_t)_CVTSD2SI64(__D128Q0(a), _MM_FROUND_TO_ZERO)
 
 // CVT other...
 
@@ -990,7 +990,7 @@ __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1))) ? 1
 // X64 non-SIMD operations
 //
 
-#if defined(_M_ARM64EC)
+#if defined(_M_ARM64) || defined(_M_ARM64EC)
 
 __forceinline
 void __aa64_pause(void)
@@ -1278,6 +1278,14 @@ void __stosq(
     {
         *Destination++ = Data;
     }
+}
+
+__forceinline
+void __ud2(
+    void
+)
+{
+    __emit(0);
 }
 
 #define _udiv64(n,d,r)                  _UDIV64((n),(d),(r))

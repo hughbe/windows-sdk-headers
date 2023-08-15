@@ -11001,7 +11001,10 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 #define FSCTL_REFS_CHECKPOINT_VOLUME                CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 287, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-#define FSCTL_LMR_QUERY_INFO                    CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 286, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_LMR_QUERY_INFO                    CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 288, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#define FSCTL_UPGRADE_VOLUME                    CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 289, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif
 //
 // AVIO IOCTLS.
@@ -11127,7 +11130,10 @@ typedef struct {
 
     DWORD DestagesFastTierToSlowTierRate;       // in clusters per second
 
-    LARGE_INTEGER Reserved[9];
+    WORD   MetadataChecksumType;
+
+    BYTE  Reserved0[6];
+    LARGE_INTEGER Reserved[8];
 
 } REFS_VOLUME_DATA_BUFFER, *PREFS_VOLUME_DATA_BUFFER;
 
@@ -15389,13 +15395,14 @@ typedef struct _STREAM_EXTENT_ENTRY {
 //==================== FSCTL_GET_INTEGRITY_INFORMATION / FSCTL_SET_INTEGRITY_INFORMATION ===========================
 //
 
-#define CHECKSUM_TYPE_UNCHANGED        (-1)
+#define CHECKSUM_TYPE_UNCHANGED         (WORD  )0xFFFF
 
 #define CHECKSUM_TYPE_NONE              (0)
 #define CHECKSUM_TYPE_CRC32             (1)
 #define CHECKSUM_TYPE_CRC64             (2)
 #define CHECKSUM_TYPE_ECC               (3)
-#define CHECKSUM_TYPE_FIRST_UNUSED_TYPE (4)
+#define CHECKSUM_TYPE_SHA256            (4)
+#define CHECKSUM_TYPE_FIRST_UNUSED_TYPE (5)
 
 #define FSCTL_INTEGRITY_FLAG_CHECKSUM_ENFORCEMENT_OFF        (1)
 

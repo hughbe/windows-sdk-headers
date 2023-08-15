@@ -176,6 +176,9 @@ class MSFT_Volume : MSFT_StorageObject {
         [In]
         Boolean NoTrim,
 
+        [In]
+        Boolean DeveloperVolume,
+
         [Out, EmbeddedInstance("MSFT_Volume")]
         String FormattedVolume,
 

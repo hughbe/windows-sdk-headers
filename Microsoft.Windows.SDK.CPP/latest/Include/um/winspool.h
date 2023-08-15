@@ -1,3 +1,4 @@
+
 /*++
 
 Copyright (c) 1990-1998  Microsoft Corporation
@@ -573,6 +574,7 @@ typedef PDRIVER_INFO_1A PDRIVER_INFO_1;
 typedef LPDRIVER_INFO_1A LPDRIVER_INFO_1;
 #endif // UNICODE
 
+
 typedef struct _DRIVER_INFO_2A {
     DWORD   cVersion;
     LPSTR     pName;              // QMS 810
@@ -598,6 +600,7 @@ typedef DRIVER_INFO_2A DRIVER_INFO_2;
 typedef PDRIVER_INFO_2A PDRIVER_INFO_2;
 typedef LPDRIVER_INFO_2A LPDRIVER_INFO_2;
 #endif // UNICODE
+
 
 typedef struct _DRIVER_INFO_3A {
     DWORD   cVersion;
@@ -3899,3 +3902,4 @@ GetPrintOutputInfo(
 
 
 #endif // _WINSPOOL_
+

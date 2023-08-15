@@ -10561,6 +10561,42 @@ Notes:
 //
 #define STATUS_PDE_DECRYPTION_UNAVAILABLE ((NTSTATUS)0xC00004D8L)
 
+//
+// MessageId: STATUS_VOLUME_UPGRADE_NOT_NEEDED
+//
+// MessageText:
+//
+// Volume format is up to date already.
+//
+#define STATUS_VOLUME_UPGRADE_NOT_NEEDED ((NTSTATUS)0xC00004D9L)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_PENDING
+//
+// MessageText:
+//
+// Volume upgrade is pending.  A reboot or re-mount of the volume is required.
+//
+#define STATUS_VOLUME_UPGRADE_PENDING    ((NTSTATUS)0xC00004DAL)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_DISABLED
+//
+// MessageText:
+//
+// Volume upgrade is disabled.
+//
+#define STATUS_VOLUME_UPGRADE_DISABLED   ((NTSTATUS)0xC00004DBL)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED
+//
+// MessageText:
+//
+// Volume upgrade is disabled until Windows OS downgrade period has expired.
+//
+#define STATUS_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED ((NTSTATUS)0xC00004DCL)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -19283,6 +19319,15 @@ Notes:
 //
 #define STATUS_FVE_METADATA_FULL         ((NTSTATUS)0xC0210044L)
 
+//
+// MessageId: STATUS_FVE_SUSPEND_PROTECTION_NOT_ALLOWED
+//
+// MessageText:
+//
+// The operation failed because BitLocker Drive Encryption is configured to not allow suspending protection.
+//
+#define STATUS_FVE_SUSPEND_PROTECTION_NOT_ALLOWED ((NTSTATUS)0xC0210045L)
+
 
 //
 // FWP error codes (fwpkclnt.sys)
@@ -26228,7 +26273,7 @@ Notes:
 //
 // MessageText:
 //
-// The user canceled the authentication prompt to a remote server. 
+// The user canceled the authentication prompt to a remote server.
 //
 #define STATUS_NETWORK_AUTHENTICATION_PROMPT_CANCELED ((NTSTATUS)0xC05D0004L)
 

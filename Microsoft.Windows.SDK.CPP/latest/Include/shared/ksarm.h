@@ -503,7 +503,7 @@
 //
 
 #define EtCid 0x2cc
-#define EtPicoContext 0x3a4
+#define EtPicoContext 0x39c
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -980,7 +980,7 @@
 #define PbCopyReadNoWait 0x644
 #define PbCopyReadWait 0x648
 #define PbCopyReadNoWaitMiss 0x64c
-#define PbAlignmentFixupCount 0xd10
+#define PbAlignmentFixupCount 0xd18
 #define PbExceptionDispatchCount 0x934
 #define PbProcessorVendorString 0x508
 #define PbFeatureBits 0x50c
@@ -992,8 +992,8 @@
 #define PbPanicMiniStack 0xfd0
 #define PbCycleCounterHigh 0x970
 #define ThNpxState 0x85
-#define ThUserRoBase 0x3a8
-#define ThUserRwBase 0x3ac
+#define ThUserRoBase 0x3a0
+#define ThUserRwBase 0x3a4
 
 //
 // KTHREAD state

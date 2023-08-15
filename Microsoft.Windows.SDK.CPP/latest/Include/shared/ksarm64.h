@@ -465,7 +465,7 @@
 #define PrInstrumentationCallback 0x390
 #define PrMitigationFlags2 0xa94
 #define KernelProcessObjectLength 0x3f0
-#define ExecutiveProcessObjectLength 0xd00
+#define ExecutiveProcessObjectLength 0xc80
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -502,7 +502,7 @@
 //
 
 #define EtCid 0x4e8
-#define EtPicoContext 0x660
+#define EtPicoContext 0x650
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -883,7 +883,7 @@
 #define PcPrcbLock 0x9a8
 #define PcGroupSetMember 0x10f0
 #define PcFeatureBits 0x1294
-#define PcVirtualApicAssist 0x21a8
+#define PcVirtualApicAssist 0x2228
 #define PcTrappedSecurityDomain 0x15f8
 #define PcEmulatedFaultSyndrome 0x12b0
 #define PcEmulatedAccess 0x12ac
@@ -921,7 +921,7 @@
 #define PcSkipTick 0x1918
 #define PcStartCycles 0x1948
 #define PcSpBase 0x1500
-#define ProcessorControlRegisterLength 0x29e40
+#define ProcessorControlRegisterLength 0x29ec0
 
 //
 // Defines for user shared data
@@ -967,18 +967,18 @@
 #define PbPriorityState 0x30
 #define PbLockQueue 0x800
 #define PbPPLookasideList 0x980
-#define PbPPNPagedLookasideList 0x6800
-#define PbPPPagedLookasideList 0x7400
+#define PbPPNPagedLookasideList 0x6880
+#define PbPPPagedLookasideList 0x7480
 #define PbPacketBarrier 0xa80
 #define PbDeferredReadyListHead 0xa88
 #define PbLookasideIrpFloat 0xad8
-#define PbRequestMailbox 0x9480
+#define PbRequestMailbox 0x9500
 #define PbMailbox 0xb00
 #define PbDpcGate 0xc00
 #define PbWaitListHead 0xc80
 #define PbCcFastMdlReadNoWait 0x1200
 #define PbPowerState 0x1280
-#define PbSpinLockAcquireCount 0x1880
+#define PbSpinLockAcquireCount 0x1900
 #define PbSystemCalls 0xab8
 #define PbReadOperationCount 0xadc
 #define PbWriteOperationCount 0xae0
@@ -1021,11 +1021,11 @@
 #define PbCopyReadNoWait 0xacc
 #define PbCopyReadWait 0xad0
 #define PbCopyReadNoWaitMiss 0xad4
-#define PbAlignmentFixupCount 0x14f0
+#define PbAlignmentFixupCount 0x14f8
 #define PbExceptionDispatchCount 0xfb4
 #define PbProcessorVendorString 0x910
 #define PbFeatureBits 0x914
-#define PbPanicStackBase 0x1958
+#define PbPanicStackBase 0x19d8
 
 //
 // KTHREAD state

@@ -360,7 +360,7 @@ typedef struct
 #pragma region App Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WINBLUE)
 
 // Win32 APIs.
 _Success_(return == ERROR_SUCCESS)
@@ -442,7 +442,7 @@ PssWalkMarkerSeekToBeginning(
     _In_ HPSSWALK WalkMarkerHandle
     );
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN8)
+#endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 

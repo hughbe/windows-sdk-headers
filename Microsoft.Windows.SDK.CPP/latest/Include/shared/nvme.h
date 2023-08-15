@@ -4973,6 +4973,8 @@ typedef struct{
 
 } NVME_ZONE_DESCRIPTOR_EXTENSION, *PNVME_ZONE_DESCRIPTOR_EXTENSION;
 
+#define ZDES_SIZE_MULTIPLIER_IN_BYTES   64
+
 typedef struct {
 
     NVME_ZONE_DESCRIPTOR            ZoneDescriptor;

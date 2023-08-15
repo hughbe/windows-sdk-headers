@@ -446,7 +446,12 @@ typedef struct _D3DKMT_FLIPMODEL_PRESENTHISTORYTOKENFLAGS
             UINT  IndependentFlipDoNotFlip      :  1;   // 0x04000000
             UINT  RequirePairedToken            :  1;   // 0x08000000
             UINT  VariableRefreshOverrideEligible :1;   // 0x10000000
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+            UINT  VailToken                     :  1;   // 0x20000000
+            UINT  Reserved                      :  2;   // 0xC0000000
+#else
             UINT  Reserved                      :  3;   // 0xE0000000
+#endif
 #else
             UINT  Reserved                      : 29;   // 0xFFFFFFF8
 #endif
@@ -1507,7 +1512,12 @@ typedef struct _D3DKMT_CREATEALLOCATIONFLAGS
     UINT    NoKmdAccess                 :  1;    // 0x00100000  // in: KMD is not notified about the allocation
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_0)
     UINT    SharedDisplayable           :  1;    // 0x00200000
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+    UINT    NoImplicitSynchronization   :  1;    // 0x00400000  // in: request that kernel shouldn't do any implicit synchronization for this allocation
+    UINT    Reserved                    :  9;    // 0xFF800000
+#else
     UINT    Reserved                    : 10;    // 0xFFC00000
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
 #else
     UINT    Reserved                    : 11;    // 0xFFE00000
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_0)
@@ -3785,7 +3795,13 @@ typedef struct _D3DKMT_QUERYSTATISTICS_SEGMENT_INFORMATION
         UINT64 PopulatedByReservedDDRByFirmware : 1;
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
         UINT64 SegmentType : 4; // D3DKMT_QUERYSTATISTICS_SEGMENT_TYPE
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+        UINT64 SegmentGroup : 2;
+        UINT64 FullyCPUVisible: 1;
+        UINT64 Reserved : 55;
+#else
         UINT64 Reserved : 58;
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
 #else
         UINT64 Reserved : 62;
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)

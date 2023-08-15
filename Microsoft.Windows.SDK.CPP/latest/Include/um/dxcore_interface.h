@@ -35,13 +35,23 @@ enum class DXCoreAdapterProperty : uint32_t
     IsHardware = 11,
     IsIntegrated = 12,
     IsDetachable = 13,
-    HardwareIDParts = 14
+    HardwareIDParts = 14,
+    PhysicalAdapterCount = 15,
+    AdapterEngineCount = 16,
+    AdapterEngineName = 17
 };
 
 enum class DXCoreAdapterState : uint32_t
 {
     IsDriverUpdateInProgress = 0,
-    AdapterMemoryBudget = 1
+    AdapterMemoryBudget = 1,
+    AdapterEngineRunningTimeMicroseconds = 2,
+    AdapterMemoryUsageBytes = 3,
+    AdapterTemperatureCelsius = 4,
+    AdapterEngineRunningTimeByProcessMicroseconds = 5,
+    AdapterMemoryUsageByProcessBytes = 6,
+    AdapterInUseProcessCount = 7,
+    AdapterInUseProcessSet = 8
 };
 
 enum class DXCoreSegmentGroup : uint32_t
@@ -96,6 +106,55 @@ struct DXCoreAdapterMemoryBudget
     uint64_t currentReservation;
 };
 
+struct DXCoreAdapterEngineIndex
+{
+    uint32_t PhysicalAdapterIndex;
+    uint32_t EngineIndex;
+};
+
+struct DXCoreEngineQueryInput
+{
+    DXCoreAdapterEngineIndex AdapterEngineIndex;
+    HANDLE Process;
+};
+
+enum class DXCoreMemoryType : uint32_t
+{
+    Dedicated = 0,
+    Shared = 1
+};
+
+struct DXCoreMemoryUsage
+{
+    uint64_t Committed;
+    uint64_t Resident;
+};
+
+struct DXCoreMemoryQueryInput
+{
+    uint32_t PhysicalAdapterIndex;
+    DXCoreMemoryType MemoryType;
+};
+
+struct DXCoreProcessMemoryQueryInput
+{
+    uint32_t PhysicalAdapterIndex;
+    DXCoreMemoryType MemoryType;
+    HANDLE Process;
+};
+
+struct DXCoreAdapterProcessSetQueryInput
+{    
+    uint32_t ArraySize;
+    uint32_t* ProcessIds;
+};
+
+struct DXCoreAdapterProcessSetQueryOutput
+{
+    uint32_t ProcessesWritten;
+    uint32_t ProcessesTotal;
+};
+
 typedef void (STDMETHODCALLTYPE *PFN_DXCORE_NOTIFICATION_CALLBACK)(
     DXCoreNotificationType notificationType,
     _In_ IUnknown *object,
@@ -106,6 +165,7 @@ static_assert(sizeof(bool) == 1, "bool assumed as one byte");
 DEFINE_GUID(IID_IDXCoreAdapterFactory, 0x78ee5945, 0xc36e, 0x4b13, 0xa6, 0x69, 0x00, 0x5d, 0xd1, 0x1c, 0x0f, 0x06);
 DEFINE_GUID(IID_IDXCoreAdapterList, 0x526c7776, 0x40e9, 0x459b, 0xb7, 0x11, 0xf3, 0x2a, 0xd7, 0x6d, 0xfc, 0x28);
 DEFINE_GUID(IID_IDXCoreAdapter, 0xf0db4c7f, 0xfe5a, 0x42a2, 0xbd, 0x62, 0xf2, 0xa6, 0xcf, 0x6f, 0xc8, 0x3e);
+DEFINE_GUID(IID_IDXCoreAdapter1, 0xa0783366, 0xcfa3, 0x43be, 0x9d, 0x79, 0x55, 0xb2, 0xda, 0x97, 0xc6, 0x3c);
 DEFINE_GUID(DXCORE_ADAPTER_ATTRIBUTE_D3D11_GRAPHICS, 0x8c47866b, 0x7583, 0x450d, 0xf0, 0xf0, 0x6b, 0xad, 0xa8, 0x95, 0xaf, 0x4b);
 DEFINE_GUID(DXCORE_ADAPTER_ATTRIBUTE_D3D12_GRAPHICS, 0x0c9ece4d, 0x2f6e, 0x4f01, 0x8c, 0x96, 0xe8, 0x9e, 0x33, 0x1b, 0x47, 0xb1);
 DEFINE_GUID(DXCORE_ADAPTER_ATTRIBUTE_D3D12_CORE_COMPUTE, 0x248e2800, 0xa793, 0x4724, 0xab, 0xaa, 0x23, 0xa6, 0xde, 0x1b, 0xe0, 0x90);
@@ -211,6 +271,33 @@ public:
     )
     {
         return GetFactory(IID_PPV_ARGS(ppvFactory));
+    }
+};
+
+/* interface IDXCoreAdapter1 */
+MIDL_INTERFACE("a0783366-cfa3-43be-9d79-55b2da97c63c")
+IDXCoreAdapter1 : public IDXCoreAdapter
+{
+public:
+    virtual HRESULT STDMETHODCALLTYPE GetPropertyWithInput(
+        DXCoreAdapterProperty property,
+        size_t inputPropertyDetailsSize,
+        _In_reads_bytes_opt_(inputPropertyDetailsSize) const void* inputPropertyDetails,
+        size_t outputBufferSize,
+        _Out_writes_bytes_(outputBufferSize) void* outputBuffer) = 0;
+
+    // No sizes provided
+    template <class T1, class T2>
+    HRESULT GetPropertyWithInput(
+        DXCoreAdapterProperty property,
+        _In_reads_bytes_opt_(sizeof(T1)) const T1* inputPropertyDetails,
+        _Out_writes_bytes_(sizeof(T2)) T2* outputBuffer)
+    {
+        return GetPropertyWithInput(property,
+                                    sizeof(T1),
+                                    (void*)inputPropertyDetails,
+                                    sizeof(T2),
+                                    (void*)outputBuffer);
     }
 };
 

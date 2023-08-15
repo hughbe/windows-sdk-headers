@@ -17,6 +17,7 @@
            xmlns:uap11="http://schemas.microsoft.com/appx/manifest/uap/windows10/11"
            xmlns:uap13="http://schemas.microsoft.com/appx/manifest/uap/windows10/13"
            xmlns:uap15="http://schemas.microsoft.com/appx/manifest/uap/windows10/15"
+           xmlns:uap16="http://schemas.microsoft.com/appx/manifest/uap/windows10/16"
            xmlns:wincap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities"
            xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
            xmlns:rescap6="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/6"
@@ -48,6 +49,7 @@
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/11"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/13"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/15"/>
+  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/16"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"/>
@@ -386,6 +388,7 @@
           <xs:attribute ref="previewsecurity:TrustLevel" use="optional"/>
           <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
           <xs:attribute ref="previewsecurity2:RuntimeBehavior" use="optional"/>
+          <xs:attribute ref="uap16:BaseNamedObjectsIsolation" use="optional"/>
         </xs:complexType>
         <xs:unique name="ApplicationContentUrisRule_Match">
           <xs:selector xpath="uap:ApplicationContentUriRules/uap:Rule"/>

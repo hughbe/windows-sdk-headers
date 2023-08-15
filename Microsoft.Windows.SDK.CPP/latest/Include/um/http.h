@@ -2321,6 +2321,7 @@ typedef enum _HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE
     ExParamTypeTlsRestrictions,
     ExParamTypeErrorHeaders,
     ExParamTypeTlsSessionTicketKeys,
+    ExParamTypeCertConfig,
     ExParamTypeMax
 } HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE, *PHTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE;
 
@@ -2386,6 +2387,25 @@ typedef struct _HTTP_TLS_SESSION_TICKET_KEYS_PARAM
 } HTTP_TLS_SESSION_TICKET_KEYS_PARAM, *PHTTP_TLS_SESSION_TICKET_KEYS_PARAM;
 
 //
+// This should really be defined by one of the security header files.
+//
+
+#define HTTP_SSL_CERT_SHA_HASH_LENGTH 20
+#define HTTP_SSL_CERT_STORE_NAME_LENGTH 128
+
+typedef struct _HTTP_CERT_CONFIG_ENTRY
+{
+    BYTE CertHash[HTTP_SSL_CERT_SHA_HASH_LENGTH];
+    WCHAR CertStoreName[HTTP_SSL_CERT_STORE_NAME_LENGTH];
+} HTTP_CERT_CONFIG_ENTRY, *PHTTP_CERT_CONFIG_ENTRY;
+
+typedef struct _HTTP_CERT_CONFIG_PARAM
+{
+    ULONG CertConfigCount;
+    PHTTP_CERT_CONFIG_ENTRY CertConfigs;
+} HTTP_CERT_CONFIG_PARAM, *PHTTP_CERT_CONFIG_PARAM;
+
+//
 // This defines the extended params for the ssl config record.
 //
 
@@ -2415,6 +2435,7 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM_EX
         HTTP_TLS_RESTRICTIONS_PARAM HttpTlsRestrictionsParam;
         HTTP_ERROR_HEADERS_PARAM HttpErrorHeadersParam;
         HTTP_TLS_SESSION_TICKET_KEYS_PARAM HttpTlsSessionTicketKeysParam;
+        HTTP_CERT_CONFIG_PARAM HttpCertConfigParam;
     };
 } HTTP_SERVICE_CONFIG_SSL_PARAM_EX, *PHTTP_SERVICE_CONFIG_SSL_PARAM_EX;
 

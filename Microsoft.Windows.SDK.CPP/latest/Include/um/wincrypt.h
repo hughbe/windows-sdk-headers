@@ -3315,6 +3315,10 @@ CryptDecodeObject(
 #define szOID_NTDS_CA_SECURITY_EXT  "1.3.6.1.4.1.311.25.2"    // OID arc for Microsoft CA custom security extension
 #define szOID_NTDS_OBJECTSID        "1.3.6.1.4.1.311.25.2.1"  // OID for objectSid info
 
+//+-------------------------------------------------------------------------
+//  URI Prefixes for use with the MS Directory Service
+//--------------------------------------------------------------------------
+#define wszURI_NTDS_OBJECTSID_PREFIX L"tag:microsoft.com,2022-09-14:sid:" // URI for objectSid info in the SAN, to be followed by a string SID
 
 //+-------------------------------------------------------------------------
 //  Extension Object Identifiers
@@ -9213,7 +9217,11 @@ typedef const CTL_CONTEXT *PCCTL_CONTEXT;
 #define CERT_NOT_BEFORE_ENHKEY_USAGE_PROP_ID   127
 #define CERT_DISALLOWED_CA_FILETIME_PROP_ID    128
 
-#define CERT_FIRST_RESERVED_PROP_ID            129
+#define CERT_SHA1_SHA256_HASH_PROP_ID          129
+
+#define CERT_FIRST_RESERVED_PROP_ID            130
+
+
 
 #define CERT_LAST_RESERVED_PROP_ID          0x00007FFF
 #define CERT_FIRST_USER_PROP_ID             0x00008000
@@ -9246,6 +9254,7 @@ typedef enum CertKeyType WINCRYPT_DWORD_CPP_ONLY
 #define IS_CERT_HASH_PROP_ID(X)     (CERT_SHA1_HASH_PROP_ID == (X) || \
                                         CERT_MD5_HASH_PROP_ID == (X) || \
                                         CERT_SHA256_HASH_PROP_ID == (X) || \
+                                        CERT_SHA1_SHA256_HASH_PROP_ID == (X) || \
                                         CERT_SIGNATURE_HASH_PROP_ID == (X))
 
 #define IS_PUBKEY_HASH_PROP_ID(X)     (CERT_ISSUER_PUBLIC_KEY_MD5_HASH_PROP_ID == (X) || \
@@ -11008,6 +11017,8 @@ CertFindCertificateInStore(
 #define CERT_COMPARE_HASH_STR       20
 #define CERT_COMPARE_HAS_PRIVATE_KEY 21
 
+#define CERT_COMPARE_SHA256_HASH    22
+#define CERT_COMPARE_SHA1_SHA256_HASH 23
 //+-------------------------------------------------------------------------
 //  dwFindType
 //
@@ -11017,6 +11028,8 @@ CertFindCertificateInStore(
 //--------------------------------------------------------------------------
 #define CERT_FIND_ANY           (CERT_COMPARE_ANY << CERT_COMPARE_SHIFT)
 #define CERT_FIND_SHA1_HASH     (CERT_COMPARE_SHA1_HASH << CERT_COMPARE_SHIFT)
+#define CERT_FIND_SHA256_HASH   (CERT_COMPARE_SHA256_HASH << CERT_COMPARE_SHIFT)
+#define CERT_FIND_SHA1_SHA256_HASH   (CERT_COMPARE_SHA1_SHA256_HASH << CERT_COMPARE_SHIFT)
 #define CERT_FIND_MD5_HASH      (CERT_COMPARE_MD5_HASH << CERT_COMPARE_SHIFT)
 #define CERT_FIND_SIGNATURE_HASH (CERT_COMPARE_SIGNATURE_HASH << CERT_COMPARE_SHIFT)
 #define CERT_FIND_KEY_IDENTIFIER (CERT_COMPARE_KEY_IDENTIFIER << CERT_COMPARE_SHIFT)
@@ -11072,8 +11085,16 @@ CertFindCertificateInStore(
 
 //+-------------------------------------------------------------------------
 //  CERT_FIND_HASH
+//  CERT_FIND_SHA1_HASH
+//  CERT_FIND_SHA256_HASH
+//  CERT_FIND_SHA1_SHA256_HASH
 //
-//  Find a certificate with the specified hash.
+//  Find a certificate with the specified hash. 
+//
+//  For the SHA1_SHA256 case, the hash property is a concatenation 
+//  of both the SHA1 and SHA256 hash for 20+32 bytes. SHA1_SHA256 is applicable 
+//  to the CERT_SYSTEM_STORE_DEFER_READ_FLAG where we first find in the registry 
+//  via the SHA1 thumbprint name and then do a SHA256 confirmation.
 //
 //  pvFindPara points to a CRYPT_HASH_BLOB.
 //--------------------------------------------------------------------------

@@ -558,6 +558,8 @@ typedef struct _SEC_TRAFFIC_SECRETS {
 #define ISC_REQ_DEFERRED_CRED_VALIDATION 0x0000000200000000
 // Prevents the client sending the post_handshake_auth extension in the TLS 1.3 Client Hello.
 #define ISC_REQ_NO_POST_HANDSHAKE_AUTH   0x0000000400000000
+// Request TLS 1.3+ session ticket reuse. Passive observers may be able to track the TLS client across networks.
+#define ISC_REQ_REUSE_SESSION_TICKETS    0x0000000800000000
 
 #define ISC_RET_DELEGATE                0x00000001
 #define ISC_RET_MUTUAL_AUTH             0x00000002
@@ -591,6 +593,7 @@ typedef struct _SEC_TRAFFIC_SECRETS {
 #define ISC_RET_MESSAGES                 0x0000000100000000 // Indicates that the TLS 1.3+ record layer is disabled, and the security context consumes and produces cleartext TLS messages, rather than records.
 #define ISC_RET_DEFERRED_CRED_VALIDATION 0x0000000200000000 // Indicates that SCH_CRED_DEFERRED_CRED_VALIDATION/ISC_REQ_DEFERRED_CRED_VALIDATION request will be honored.
 #define ISC_RET_NO_POST_HANDSHAKE_AUTH   0x0000000400000000 // Indicates that the TLS 1.3 Client Hello will not contain the post_handshake_auth extension.
+#define ISC_RET_REUSE_SESSION_TICKETS    0x0000000800000000 // Indicates that the TLS 1.3+ client may reuse session tickets.
 
 #define ASC_REQ_DELEGATE                0x00000001
 #define ASC_REQ_MUTUAL_AUTH             0x00000002
@@ -620,6 +623,8 @@ typedef struct _SEC_TRAFFIC_SECRETS {
 //      SSP_RET_REAUTHENTICATION        0x08000000  // *INTERNAL*
 #define ASC_REQ_ALLOW_MISSING_BINDINGS  0x10000000
 #define ASC_REQ_MESSAGES                0x0000000100000000 // Disables the TLS 1.3+ record layer and causes the security context to consume and produce cleartext TLS messages, rather than records.
+// Request that the TLS 1.3+ server accept reused session tickets referencing cached TLS sessions.
+#define ASC_REQ_REUSE_SESSION_TICKETS    0x0000000800000000
 
 #define ASC_RET_DELEGATE                0x00000001
 #define ASC_RET_MUTUAL_AUTH             0x00000002
@@ -647,6 +652,7 @@ typedef struct _SEC_TRAFFIC_SECRETS {
 #define ASC_RET_NO_ADDITIONAL_TOKEN     0x02000000  // *INTERNAL*
 //      SSP_RET_REAUTHENTICATION        0x08000000  // *INTERNAL*
 #define ASC_RET_MESSAGES                0x0000000100000000 // Indicates that the TLS 1.3+ record layer is disabled, and the security context consumes and produces cleartext TLS messages, rather than records.
+#define ASC_RET_REUSE_SESSION_TICKETS   0x0000000800000000 // Indicates that the TLS 1.3+ server will allow session ticket reuse.
 
 //
 //  Security Credentials Attributes:

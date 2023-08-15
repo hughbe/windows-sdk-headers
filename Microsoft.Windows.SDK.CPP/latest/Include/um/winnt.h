@@ -4542,6 +4542,8 @@ extern "C" {
 #pragma intrinsic(_ReadWriteBarrier)
 #pragma intrinsic(_WriteBarrier)
 
+#define SpeculationFence() NOP_FUNCTION
+
 FORCEINLINE
 VOID
 YieldProcessor (
@@ -5059,6 +5061,7 @@ ReadPMC (
 {
 
     _MoveToCoprocessor(Counter, CP15_PMSELR);
+    _DataSynchronizationBarrier();
     return (DWORD64)_MoveFromCoprocessor(CP15_PMXEVCNTR);
 }
 
@@ -5710,6 +5713,8 @@ _BitTestAndSet64(__int64 *Base, __int64 Index)
 #pragma intrinsic(_ReadWriteBarrier)
 #pragma intrinsic(_WriteBarrier)
 
+#define SpeculationFence() NOP_FUNCTION
+
 FORCEINLINE
 VOID
 MemoryBarrier (
@@ -6095,13 +6100,41 @@ ReadPMC (
     _In_ DWORD Counter
     )
 {
-    // ARM64_WORKITEM: These can be directly accessed, but
-    // given our usage, it that any benefit? We need to know
-    // the register index at compile time, though atomicity
-    // benefits would still be good if needed, even if we
-    // went with a big switch statement.
-    _WriteStatusReg(ARM64_PMSELR_EL0, Counter);
-    return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTR_EL0);
+
+    switch (Counter) {
+    case  0: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(0));
+    case  1: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(1));
+    case  2: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(2));
+    case  3: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(3));
+    case  4: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(4));
+    case  5: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(5));
+    case  6: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(6));
+    case  7: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(7));
+    case  8: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(8));
+    case  9: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(9));
+    case 10: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(10));
+    case 11: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(11));
+    case 12: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(12));
+    case 13: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(13));
+    case 14: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(14));
+    case 15: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(15));
+    case 16: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(16));
+    case 17: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(17));
+    case 18: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(18));
+    case 19: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(19));
+    case 20: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(20));
+    case 21: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(21));
+    case 22: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(22));
+    case 23: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(23));
+    case 24: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(24));
+    case 25: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(25));
+    case 26: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(26));
+    case 27: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(27));
+    case 28: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(28));
+    case 29: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(29));
+    case 30: return (DWORD64)_ReadStatusReg(ARM64_PMXEVCNTRn_EL0(30));
+    default: return 0;
+    }
 }
 
 //
@@ -8011,6 +8044,19 @@ __writefsdword (
 #pragma intrinsic(__writefsbyte)
 #pragma intrinsic(__writefsword)
 #pragma intrinsic(__writefsdword)
+
+#if !defined(_M_HYBRID_X86_ARM64)
+
+VOID
+_mm_lfence (
+    VOID
+    );
+
+#pragma intrinsic(_mm_lfence)
+
+#define SpeculationFence _mm_lfence
+
+#endif // !defined(_M_HYBRID_x86_ARM64)
 
 VOID
 _ReadWriteBarrier (
@@ -14790,11 +14836,27 @@ typedef struct _SCRUB_DATA_INPUT {
 
     DWORD ObjectId[4];
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+    //
+    // Start scrubbing at byte offset for byte count
+    // Both must be cluster aligned
+    //
+
+    ULONGLONG StartingByteOffset;
+
+    ULONGLONG ByteCount;
+
     //
     // Reserved
     //
 
+    DWORD Reserved[40];
+
+#else
+
     DWORD Reserved[41];
+
+#endif
 
     //
     // Opaque data returned from the previous call to restart the
@@ -14969,9 +15031,29 @@ typedef struct _SCRUB_DATA_OUTPUT {
 
     ULONGLONG TotalNumberOfDataBytesInUse;
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+
+    //
+    //  Next scrub starting offset in bytes
+    //
+
+    ULONGLONG NextStartingByteOffset;
+
+    ULONGLONG ValidDataLength;
+
+#endif
+
+#else
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+
+    ULONGLONG Reserved2[6];
+
 #else
 
     ULONGLONG Reserved2[4];
+
+#endif
 
 #endif
 
@@ -23175,8 +23257,7 @@ RtlSwitchedVVI(
 // fixed-sized portion before all the variable-length strings, binary
 // data and pad bytes.
 //
-// TimeGenerated is the time it was generated at the client.
-// TimeWritten is the time it was put into the log at the server end.
+// TimeGenerated and TimeWritten are the time the event was put into the log at the server end.
 //
 
 typedef struct _EVENTLOGRECORD {
@@ -23189,8 +23270,8 @@ typedef struct _EVENTLOGRECORD {
     WORD   EventType;
     WORD   NumStrings;
     WORD   EventCategory;
-    WORD   ReservedFlags; // For use with paired events (auditing)
-    DWORD  ClosingRecordNumber; // For use with paired events (auditing)
+    WORD   ReservedFlags;
+    DWORD  ClosingRecordNumber; // Reserved
     DWORD  StringOffset;  // Offset from beginning of record
     DWORD  UserSidLength;
     DWORD  UserSidOffset;
@@ -23209,14 +23290,7 @@ typedef struct _EVENTLOGRECORD {
     //
 } EVENTLOGRECORD, *PEVENTLOGRECORD;
 
-//SS: start of changes to support clustering
-//SS: ideally the
 #define MAXLOGICALLOGNAMESIZE   256
-
-#if _MSC_VER >= 1200
-#pragma warning(push)
-#endif
-#pragma warning(disable : 4200) /* nonstandard extension used : zero-sized array in struct/union */
 
 struct _EVENTSFORLOGFILE;
 typedef struct _EVENTSFORLOGFILE EVENTSFORLOGFILE, *PEVENTSFORLOGFILE;
@@ -23226,29 +23300,33 @@ typedef struct _PACKEDEVENTINFO PACKEDEVENTINFO, *PPACKEDEVENTINFO;
 
 #if defined(_MSC_EXTENSIONS)
 
-struct _EVENTSFORLOGFILE
-{
+#pragma warning(push)
+#pragma warning(disable : 4200) /* nonstandard extension used : zero-sized array in struct/union */
+
+struct
+#if (_MSC_VER > 1310) && !defined(MIDL_PASS)
+ __declspec(deprecated("struct EVENTSFORLOGFILE is deprecated and might not work on all platforms. For more info, see MSDN."))
+ #endif
+ _EVENTSFORLOGFILE {
     DWORD           ulSize;
     WCHAR           szLogicalLogFile[MAXLOGICALLOGNAMESIZE];        //name of the logical file-security/application/system
     DWORD           ulNumRecords;
     EVENTLOGRECORD  pEventLogRecords[];
 };
 
-struct _PACKEDEVENTINFO
-{
+struct
+#if (_MSC_VER > 1310) && !defined(MIDL_PASS)
+__declspec(deprecated("struct PACKEDEVENTINFO is deprecated and might not work on all platforms. For more info, see MSDN."))
+#endif
+_PACKEDEVENTINFO {
     DWORD               ulSize;  //total size of the structure
     DWORD               ulNumEventsForLogFile; //number of EventsForLogFile structure that follow
     DWORD               ulOffsets[];           //the offsets from the start of this structure to the EVENTSFORLOGFILE structure
 };
 
-#endif
-
-#if _MSC_VER >= 1200
 #pragma warning(pop)
-#else
-#pragma warning(default : 4200) /* nonstandard extension used : zero-sized array in struct/union */
+
 #endif
-//SS: end of changes to support clustering
 //
 
 // begin_wdm

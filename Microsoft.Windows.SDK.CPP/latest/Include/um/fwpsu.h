@@ -2069,6 +2069,7 @@ typedef enum {
     IpDiscardHopLimitExceeded,
     IpDiscardAddressUnreachable,
     IpDiscardRscPacket,
+    IpDiscardSourceViolation,
     IpDiscardForwardPathMax = 255,
 
     //

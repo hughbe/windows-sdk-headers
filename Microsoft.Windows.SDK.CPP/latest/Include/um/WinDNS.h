@@ -2337,44 +2337,6 @@ typedef DNS_QUERY_COMPLETION_ROUTINE *PDNS_QUERY_COMPLETION_ROUTINE;
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
-
-#if !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
-
-typedef struct _DNS_QUERY_REQUEST
-{
-    _In_        ULONG           Version;
-    _In_opt_    PCWSTR          QueryName;
-    _In_        WORD            QueryType;
-    _In_        ULONG64         QueryOptions;
-    _In_opt_    PDNS_ADDR_ARRAY pDnsServerList;
-    _In_opt_    ULONG           InterfaceIndex;
-    _In_opt_    PDNS_QUERY_COMPLETION_ROUTINE   pQueryCompletionCallback;
-    _In_        PVOID           pQueryContext;
-}
-DNS_QUERY_REQUEST, *PDNS_QUERY_REQUEST;
-
-typedef struct DECLSPEC_ALIGN(8) _DNS_QUERY_CANCEL
-{
-                CHAR            Reserved[32];
-}
-DNS_QUERY_CANCEL, *PDNS_QUERY_CANCEL;
-
-DNS_STATUS
-WINAPI
-DnsQueryEx(
-    _In_        PDNS_QUERY_REQUEST  pQueryRequest,
-    _Inout_     PDNS_QUERY_RESULT   pQueryResults,
-    _Inout_opt_ PDNS_QUERY_CANCEL   pCancelHandle
-    );
-
-DNS_STATUS
-WINAPI
-DnsCancelQuery(
-    _In_        PDNS_QUERY_CANCEL    pCancelHandle
-    );
-
-#define DNS_QUERY_REQUEST_VERSION3  0x3
-
 #define DNS_CUSTOM_SERVER_TYPE_UDP 0x1
 #define DNS_CUSTOM_SERVER_TYPE_DOH 0x2
 #define DNS_CUSTOM_SERVER_TYPE_DOT 0x3
@@ -2429,28 +2391,6 @@ typedef struct _DNS_CUSTOM_SERVER
 
 #pragma warning(pop)
 
-typedef struct _DNS_QUERY_REQUEST3
-{
-    ULONG           Version;
-    PCWSTR          QueryName;
-    WORD            QueryType;
-    ULONG64         QueryOptions;
-    PDNS_ADDR_ARRAY pDnsServerList;
-    ULONG           InterfaceIndex;
-    PDNS_QUERY_COMPLETION_ROUTINE   pQueryCompletionCallback;
-    PVOID           pQueryContext;
-    BOOL            IsNetworkQueryRequired;
-    DWORD           RequiredNetworkIndex;
-    DWORD           cCustomServers;
-
-#ifdef MIDL_PASS
-    [size_is(cCustomServers)]
-#endif
-    _Field_size_(cCustomServers)
-    DNS_CUSTOM_SERVER *pCustomServers;
-}
-DNS_QUERY_REQUEST3, *PDNS_QUERY_REQUEST3;
-
 #define DNS_APP_SETTINGS_VERSION1 0x1
 
 #define DNS_APP_SETTINGS_EXCLUSIVE_SERVERS 0x1
@@ -2481,7 +2421,189 @@ DnsSetApplicationSettings(
     _In_opt_             const DNS_APPLICATION_SETTINGS  *pSettings
     );
 
+#if !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
+
+typedef struct _DNS_QUERY_REQUEST
+{
+    _In_        ULONG           Version;
+    _In_opt_    PCWSTR          QueryName;
+    _In_        WORD            QueryType;
+    _In_        ULONG64         QueryOptions;
+    _In_opt_    PDNS_ADDR_ARRAY pDnsServerList;
+    _In_opt_    ULONG           InterfaceIndex;
+    _In_opt_    PDNS_QUERY_COMPLETION_ROUTINE   pQueryCompletionCallback;
+    _In_        PVOID           pQueryContext;
+}
+DNS_QUERY_REQUEST, *PDNS_QUERY_REQUEST;
+
+typedef struct DECLSPEC_ALIGN(8) _DNS_QUERY_CANCEL
+{
+                CHAR            Reserved[32];
+}
+DNS_QUERY_CANCEL, *PDNS_QUERY_CANCEL;
+
+DNS_STATUS
+WINAPI
+DnsQueryEx(
+    _In_        PDNS_QUERY_REQUEST  pQueryRequest,
+    _Inout_     PDNS_QUERY_RESULT   pQueryResults,
+    _Inout_opt_ PDNS_QUERY_CANCEL   pCancelHandle
+    );
+
+DNS_STATUS
+WINAPI
+DnsCancelQuery(
+    _In_        PDNS_QUERY_CANCEL    pCancelHandle
+    );
+
+#define DNS_QUERY_REQUEST_VERSION3  0x3
+
+typedef struct _DNS_QUERY_REQUEST3
+{
+    ULONG           Version;
+    PCWSTR          QueryName;
+    WORD            QueryType;
+    ULONG64         QueryOptions;
+    PDNS_ADDR_ARRAY pDnsServerList;
+    ULONG           InterfaceIndex;
+    PDNS_QUERY_COMPLETION_ROUTINE   pQueryCompletionCallback;
+    PVOID           pQueryContext;
+    BOOL            IsNetworkQueryRequired;
+    DWORD           RequiredNetworkIndex;
+    DWORD           cCustomServers;
+
+#ifdef MIDL_PASS
+    [size_is(cCustomServers)]
+#endif
+    _Field_size_(cCustomServers)
+    DNS_CUSTOM_SERVER *pCustomServers;
+}
+DNS_QUERY_REQUEST3, *PDNS_QUERY_REQUEST3;
+
 #endif // !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
+//
+//  DnsQueryRaw
+//
+
+#define DNS_PROTOCOL_UNSPECIFIED    0
+#define DNS_PROTOCOL_UDP            1
+#define DNS_PROTOCOL_TCP            2
+#define DNS_PROTOCOL_DOH            3
+#define DNS_PROTOCOL_DOT            4
+
+#define DNS_QUERY_RAW_RESULTS_VERSION1  0x1
+
+#pragma warning(push)
+#pragma warning(disable: 4201) // nameless struct/unions
+
+typedef struct _DNS_QUERY_RAW_RESULT
+{
+    ULONG                                           version;
+    DNS_STATUS                                      queryStatus;
+    ULONG64                                         queryOptions;
+    ULONG64                                         queryRawOptions;
+    ULONG64                                         responseFlags;
+    ULONG                                           queryRawResponseSize;
+#ifdef MIDL_PASS
+    [size_is(queryRawResponseSize)]
+#endif
+    _Field_size_bytes_(queryRawResponseSize) BYTE   *queryRawResponse;
+    PDNS_RECORD                                     queryRecords;
+    ULONG                                           protocol;
+
+    union
+    {
+#if !defined (MIDL_PASS) && defined (_WS2TCPIP_H_)
+        SOCKADDR_INET                               sourceAddr;
+#endif
+        CHAR                                        maxSa[DNS_ADDR_MAX_SOCKADDR_LENGTH];
+    };
+}
+DNS_QUERY_RAW_RESULT;
+
+#pragma warning(pop)
+
+VOID
+WINAPI
+DnsQueryRawResultFree(
+    _Frees_ptr_opt_ DNS_QUERY_RAW_RESULT *queryResults
+);
+
+typedef
+VOID
+(CALLBACK *DNS_QUERY_RAW_COMPLETION_ROUTINE)(
+    _In_        VOID                   *queryContext,
+    _In_        DNS_QUERY_RAW_RESULT   *queryResults
+);
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+#define DNS_QUERY_RAW_REQUEST_VERSION1  0x1
+
+#pragma warning(push)
+#pragma warning(disable: 4201) // nameless struct/unions
+
+typedef struct _DNS_QUERY_RAW_REQUEST
+{
+    ULONG                                               version;
+    ULONG                                               dnsQueryRawSize;
+#ifdef MIDL_PASS
+    [size_is(dnsQueryRawSize)]
+#endif
+    _Field_size_bytes_(dnsQueryRawSize) BYTE            *dnsQueryRaw;
+    ULONG64                                             queryOptions;
+    ULONG                                               interfaceIndex;
+    DNS_QUERY_RAW_COMPLETION_ROUTINE                    queryCompletionCallback;
+    VOID                                                *queryContext;
+    ULONG64                                             queryRawOptions;
+    ULONG                                               customServersSize;
+#ifdef MIDL_PASS
+    [size_is(customServersSize)]
+#endif
+    _Field_size_(customServersSize) DNS_CUSTOM_SERVER   *customServers;
+    ULONG                                               protocol;
+
+    union
+    {
+#if !defined(MIDL_PASS) && defined(_WS2TCPIP_H_)
+        SOCKADDR_INET                                   sourceAddr;
+#endif
+        CHAR                                            maxSa[DNS_ADDR_MAX_SOCKADDR_LENGTH];
+    };
+}
+DNS_QUERY_RAW_REQUEST;
+
+#pragma warning(pop)
+
+typedef struct DECLSPEC_ALIGN(8) _DNS_QUERY_RAW_CANCEL
+{
+    CHAR            reserved[32];
+}
+DNS_QUERY_RAW_CANCEL;
+
+DNS_STATUS
+WINAPI
+DnsQueryRaw(
+    _In_        DNS_QUERY_RAW_REQUEST   *queryRequest,
+    _Inout_     DNS_QUERY_RAW_CANCEL    *cancelHandle
+);
+
+DNS_STATUS
+WINAPI
+DnsCancelQueryRaw(
+    _In_        DNS_QUERY_RAW_CANCEL    *cancelHandle
+);
 
 //
 //  DNS Update API

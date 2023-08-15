@@ -1695,5 +1695,11 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="ST_BaseNamedObjectsIsolation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"/>
+      <xs:enumeration value="package"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
 

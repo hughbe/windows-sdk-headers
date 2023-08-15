@@ -55,7 +55,10 @@ FORCEINLINE bool IS_DO_TRANSIENT_ERROR(HRESULT hr)
 #define DO_E_INTEGRITYCHECKINFO_UNAVAILABLE         _HRESULT_TYPEDEF_(0x80D02017L) // Download job is marked as requiring integrity checking but integrity checking info could not be retrieved
 #define DO_E_FILE_DOWNLOADSINK_UNSPECIFIED          _HRESULT_TYPEDEF_(0x80D02018L) // Unable to start a download because no download sink (either local file or stream interface) was specified
 #define DO_E_FILE_DOWNLOADSINK_ALREADY_SET          _HRESULT_TYPEDEF_(0x80D02019L) // An attempt to set a download sink failed because another type of sink is already set
+#define DO_E_FILE_SIZE_UNKNOWN_HTTP_200             _HRESULT_TYPEDEF_(0x80D0201AL) // Unable to determine file size from HTTP 200 status code
 #define DO_E_FILE_ENCRYPTION_EXPECTED               _HRESULT_TYPEDEF_(0x80D0201BL) // Decryption key was provided but file on CDN does not appear to be encrypted
+#define DO_E_FILE_SIZE_UNKNOWN_HTTP_206             _HRESULT_TYPEDEF_(0x80D0201CL) // Unable to determine file size from HTTP 206 status code
+#define DO_E_FILE_SIZE_UNKNOWN_HTTP_2XX             _HRESULT_TYPEDEF_(0x80D0201DL) // Unable to determine file size from an unexpected HTTP 2xx status code
 
 // IDODownload interface
 
