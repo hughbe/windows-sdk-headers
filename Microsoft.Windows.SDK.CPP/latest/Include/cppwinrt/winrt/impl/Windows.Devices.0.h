@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -90,11 +90,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_ILowLevelDevicesAggregateProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider) AdcControllerProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider) PwmControllerProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider) GpioControllerProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::Provider::II2cControllerProvider) I2cControllerProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider) SpiControllerProvider() const;
+        [[nodiscard]] auto AdcControllerProvider() const;
+        [[nodiscard]] auto PwmControllerProvider() const;
+        [[nodiscard]] auto GpioControllerProvider() const;
+        [[nodiscard]] auto I2cControllerProvider() const;
+        [[nodiscard]] auto SpiControllerProvider() const;
     };
     template <> struct consume<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
     {
@@ -103,7 +103,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_ILowLevelDevicesAggregateProviderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::LowLevelDevicesAggregateProvider) Create(winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider const& adc, winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider const& pwm, winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider const& gpio, winrt::Windows::Devices::I2c::Provider::II2cControllerProvider const& i2c, winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider const& spi) const;
+        auto Create(winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider const& adc, winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider const& pwm, winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider const& gpio, winrt::Windows::Devices::I2c::Provider::II2cControllerProvider const& i2c, winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider const& spi) const;
     };
     template <> struct consume<winrt::Windows::Devices::ILowLevelDevicesAggregateProviderFactory>
     {
@@ -120,8 +120,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_ILowLevelDevicesControllerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::ILowLevelDevicesAggregateProvider) DefaultProvider() const;
-        WINRT_IMPL_AUTO(void) DefaultProvider(winrt::Windows::Devices::ILowLevelDevicesAggregateProvider const& value) const;
+        [[nodiscard]] auto DefaultProvider() const;
+        auto DefaultProvider(winrt::Windows::Devices::ILowLevelDevicesAggregateProvider const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::ILowLevelDevicesControllerStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,21 +7,21 @@
 #ifndef WINRT_Windows_Media_Core_Preview_H
 #define WINRT_Windows_Media_Core_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Media.Core.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Media.2.h"
 #include "winrt/impl/Windows.Media.Core.Preview.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::SoundLevel) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevel() const
+    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevel() const
     {
         winrt::Windows::Media::SoundLevel value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->get_SoundLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->add_SoundLevelChanged(*(void**)(&handler), put_abi(token)));
@@ -31,7 +31,7 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SoundLevelChanged_revoker>(this, SoundLevelChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->remove_SoundLevelChanged(impl::bind_in(token));
     }

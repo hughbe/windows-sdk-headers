@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
@@ -135,7 +134,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_DataProtection_IUserDataAvailabilityStateChangedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Security::DataProtection::IUserDataAvailabilityStateChangedEventArgs>
     {
@@ -144,8 +143,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_DataProtection_IUserDataBufferUnprotectResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) UnprotectedBuffer() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto UnprotectedBuffer() const;
     };
     template <> struct consume<winrt::Windows::Security::DataProtection::IUserDataBufferUnprotectResult>
     {
@@ -154,15 +153,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_DataProtection_IUserDataProtectionManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus>) ProtectStorageItemAsync(winrt::Windows::Storage::IStorageItem const& storageItem, winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>) GetStorageItemProtectionInfoAsync(winrt::Windows::Storage::IStorageItem const& storageItem) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) ProtectBufferAsync(winrt::Windows::Storage::Streams::IBuffer const& unprotectedBuffer, winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>) UnprotectBufferAsync(winrt::Windows::Storage::Streams::IBuffer const& protectedBuffer) const;
-        WINRT_IMPL_AUTO(bool) IsContinuedDataAvailabilityExpected(winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
-        WINRT_IMPL_AUTO(winrt::event_token) DataAvailabilityStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::DataProtection::UserDataProtectionManager, winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs> const& handler) const;
+        auto ProtectStorageItemAsync(winrt::Windows::Storage::IStorageItem const& storageItem, winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
+        auto GetStorageItemProtectionInfoAsync(winrt::Windows::Storage::IStorageItem const& storageItem) const;
+        auto ProtectBufferAsync(winrt::Windows::Storage::Streams::IBuffer const& unprotectedBuffer, winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
+        auto UnprotectBufferAsync(winrt::Windows::Storage::Streams::IBuffer const& protectedBuffer) const;
+        auto IsContinuedDataAvailabilityExpected(winrt::Windows::Security::DataProtection::UserDataAvailability const& availability) const;
+        auto DataAvailabilityStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::DataProtection::UserDataProtectionManager, winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs> const& handler) const;
         using DataAvailabilityStateChanged_revoker = impl::event_revoker<winrt::Windows::Security::DataProtection::IUserDataProtectionManager, &impl::abi_t<winrt::Windows::Security::DataProtection::IUserDataProtectionManager>::remove_DataAvailabilityStateChanged>;
         [[nodiscard]] DataAvailabilityStateChanged_revoker DataAvailabilityStateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::DataProtection::UserDataProtectionManager, winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) DataAvailabilityStateChanged(winrt::event_token const& token) const noexcept;
+        auto DataAvailabilityStateChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Security::DataProtection::IUserDataProtectionManager>
     {
@@ -171,8 +170,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_DataProtection_IUserDataProtectionManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::DataProtection::UserDataProtectionManager) TryGetDefault() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::DataProtection::UserDataProtectionManager) TryGetForUser(winrt::Windows::System::User const& user) const;
+        auto TryGetDefault() const;
+        auto TryGetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Security::DataProtection::IUserDataProtectionManagerStatics>
     {
@@ -181,7 +180,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_DataProtection_IUserDataStorageItemProtectionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::DataProtection::UserDataAvailability) Availability() const;
+        [[nodiscard]] auto Availability() const;
     };
     template <> struct consume<winrt::Windows::Security::DataProtection::IUserDataStorageItemProtectionInfo>
     {

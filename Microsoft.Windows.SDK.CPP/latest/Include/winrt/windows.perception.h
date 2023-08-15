@@ -214,7 +214,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IPerceptionTimestamp = _uuidof(IPerceptionTimestamp);
+            MIDL_CONST_ID IID& IID_IPerceptionTimestamp = __uuidof(IPerceptionTimestamp);
         } /* Perception */
     } /* Windows */
 } /* ABI */
@@ -248,7 +248,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IPerceptionTimestamp2 = _uuidof(IPerceptionTimestamp2);
+            MIDL_CONST_ID IID& IID_IPerceptionTimestamp2 = __uuidof(IPerceptionTimestamp2);
         } /* Perception */
     } /* Windows */
 } /* ABI */
@@ -283,7 +283,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IPerceptionTimestampHelperStatics = _uuidof(IPerceptionTimestampHelperStatics);
+            MIDL_CONST_ID IID& IID_IPerceptionTimestampHelperStatics = __uuidof(IPerceptionTimestampHelperStatics);
         } /* Perception */
     } /* Windows */
 } /* ABI */
@@ -318,7 +318,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IPerceptionTimestampHelperStatics2 = _uuidof(IPerceptionTimestampHelperStatics2);
+            MIDL_CONST_ID IID& IID_IPerceptionTimestampHelperStatics2 = __uuidof(IPerceptionTimestampHelperStatics2);
         } /* Perception */
     } /* Windows */
 } /* ABI */

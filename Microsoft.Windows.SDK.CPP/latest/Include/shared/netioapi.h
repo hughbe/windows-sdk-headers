@@ -3188,6 +3188,8 @@ Return Value:
 #define DNS_SETTING_DOH_PROFILE                   0x2000
 #define DNS_SETTING_ENCRYPTED_DNS_ADAPTER_FLAGS   0x4000
 #define DNS_SETTING_DDR                           0x8000
+#define DNS_SETTING_DOT                           0x10000
+#define DNS_SETTING_DOT_PROFILE                   0x20000
 
 #define DNS_ENABLE_DOH                            0x0001
 #define DNS_DOH_POLICY_NOT_CONFIGURED             0x0004
@@ -3195,15 +3197,20 @@ Return Value:
 #define DNS_DOH_POLICY_AUTO                       0x0010
 #define DNS_DOH_POLICY_REQUIRED                   0x0020
 #define DNS_ENABLE_DDR                            0x0040
+#define DNS_ENABLE_DOT                            0x0080
 
 #define DNS_SERVER_PROPERTY_VERSION1              0x0001
 
 #define DNS_DOH_SERVER_SETTINGS_ENABLE_AUTO       0x0001
 #define DNS_DOH_SERVER_SETTINGS_ENABLE            0x0002
 #define DNS_DOH_SERVER_SETTINGS_FALLBACK_TO_UDP   0x0004
-
 #define DNS_DOH_AUTO_UPGRADE_SERVER               0x0008
 #define DNS_DOH_SERVER_SETTINGS_ENABLE_DDR        0x0010
+
+#define DNS_DOT_SERVER_SETTINGS_ENABLE            0x0001
+#define DNS_DOT_SERVER_SETTINGS_FALLBACK_TO_UDP   0x0002
+#define DNS_DOT_AUTO_UPGRADE_SERVER               0x0004
+#define DNS_DOT_SERVER_SETTINGS_ENABLE_AUTO       0x0008
 
 #define DNS_DDR_ADAPTER_ENABLE_DOH                0x0001
 #define DNS_DDR_ADAPTER_ENABLE_UDP_FALLBACK       0x0002
@@ -3237,21 +3244,35 @@ typedef struct _DNS_DOH_SERVER_SETTINGS
     ULONG64 Flags;
 } DNS_DOH_SERVER_SETTINGS;
 
+typedef struct _DNS_DOT_SERVER_SETTINGS
+{
+#ifdef MIDL_PASS
+    [unique, string] PWSTR Hostname;
+#else
+    PWSTR Hostname;
+#endif
+
+    ULONG64 Flags;
+} DNS_DOT_SERVER_SETTINGS;
+
 typedef enum _DNS_SERVER_PROPERTY_TYPE
 {
     DnsServerInvalidProperty = 0,
     DnsServerDohProperty,
+    DnsServerDotProperty
 } DNS_SERVER_PROPERTY_TYPE;
 
 #ifdef MIDL_PASS
 typedef [switch_type(DNS_SERVER_PROPERTY_TYPE)] union _DNS_SERVER_PROPERTY_TYPES
 {
     [case(DnsServerDohProperty)] [unique] DNS_DOH_SERVER_SETTINGS *DohSettings;
+    [case(DnsServerDotProperty)] [unique] DNS_DOT_SERVER_SETTINGS *DotSettings;
 } DNS_SERVER_PROPERTY_TYPES;
 #else
 typedef union _DNS_SERVER_PROPERTY_TYPES
 {
     DNS_DOH_SERVER_SETTINGS *DohSettings;
+    DNS_DOT_SERVER_SETTINGS *DotSettings;
 } DNS_SERVER_PROPERTY_TYPES;
 #endif
 

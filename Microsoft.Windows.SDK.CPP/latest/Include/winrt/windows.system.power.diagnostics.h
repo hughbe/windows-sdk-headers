@@ -187,7 +187,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE ResetTotalEnergyUsage(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IBackgroundEnergyDiagnosticsStatics = _uuidof(IBackgroundEnergyDiagnosticsStatics);
+                    MIDL_CONST_ID IID& IID_IBackgroundEnergyDiagnosticsStatics = __uuidof(IBackgroundEnergyDiagnosticsStatics);
                 } /* Diagnostics */
             } /* Power */
         } /* System */
@@ -241,7 +241,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE ResetTotalEnergyUsage(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IForegroundEnergyDiagnosticsStatics = _uuidof(IForegroundEnergyDiagnosticsStatics);
+                    MIDL_CONST_ID IID& IID_IForegroundEnergyDiagnosticsStatics = __uuidof(IForegroundEnergyDiagnosticsStatics);
                 } /* Diagnostics */
             } /* Power */
         } /* System */

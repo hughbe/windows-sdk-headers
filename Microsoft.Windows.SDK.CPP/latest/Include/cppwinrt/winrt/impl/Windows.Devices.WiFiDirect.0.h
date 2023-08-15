@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,17 +14,11 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IVectorView;
     template <typename T> struct __declspec(empty_bases) IVector;
-}
-WINRT_EXPORT namespace winrt::Windows::Networking
-{
-    struct EndpointPair;
 }
 WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
@@ -345,13 +339,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) InformationElements() const;
-        WINRT_IMPL_AUTO(void) InformationElements(param::vector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability) ListenStateDiscoverability() const;
-        WINRT_IMPL_AUTO(void) ListenStateDiscoverability(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAutonomousGroupOwnerEnabled() const;
-        WINRT_IMPL_AUTO(void) IsAutonomousGroupOwnerEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings) LegacySettings() const;
+        [[nodiscard]] auto InformationElements() const;
+        auto InformationElements(param::vector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement> const& value) const;
+        [[nodiscard]] auto ListenStateDiscoverability() const;
+        auto ListenStateDiscoverability(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability const& value) const;
+        [[nodiscard]] auto IsAutonomousGroupOwnerEnabled() const;
+        auto IsAutonomousGroupOwnerEnabled(bool value) const;
+        [[nodiscard]] auto LegacySettings() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
     {
@@ -360,7 +354,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisement2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>) SupportedConfigurationMethods() const;
+        [[nodiscard]] auto SupportedConfigurationMethods() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>
     {
@@ -369,14 +363,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisementPublisher
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement) Advertisement() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus) Status() const;
-        WINRT_IMPL_AUTO(winrt::event_token) StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto Advertisement() const;
+        [[nodiscard]] auto Status() const;
+        auto StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
         using StatusChanged_revoker = impl::event_revoker<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher, &impl::abi_t<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>::remove_StatusChanged>;
         [[nodiscard]] StatusChanged_revoker StatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) StatusChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) Start() const;
-        WINRT_IMPL_AUTO(void) Stop() const;
+        auto StatusChanged(winrt::event_token const& token) const noexcept;
+        auto Start() const;
+        auto Stop() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>
     {
@@ -385,8 +379,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisementPublisherStatusChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectError) Error() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto Error() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>
     {
@@ -395,10 +389,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionListener
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ConnectionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
+        auto ConnectionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
         using ConnectionRequested_revoker = impl::event_revoker<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener, &impl::abi_t<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>::remove_ConnectionRequested>;
         [[nodiscard]] ConnectionRequested_revoker ConnectionRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ConnectionRequested(winrt::event_token const& token) const noexcept;
+        auto ConnectionRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>
     {
@@ -407,8 +401,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParameters
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int16_t) GroupOwnerIntent() const;
-        WINRT_IMPL_AUTO(void) GroupOwnerIntent(int16_t value) const;
+        [[nodiscard]] auto GroupOwnerIntent() const;
+        auto GroupOwnerIntent(int16_t value) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>
     {
@@ -417,9 +411,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParameters2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>) PreferenceOrderedConfigurationMethods() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure) PreferredPairingProcedure() const;
-        WINRT_IMPL_AUTO(void) PreferredPairingProcedure(winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure const& value) const;
+        [[nodiscard]] auto PreferenceOrderedConfigurationMethods() const;
+        [[nodiscard]] auto PreferredPairingProcedure() const;
+        auto PreferredPairingProcedure(winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>
     {
@@ -428,7 +422,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParametersStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DevicePairingKinds) GetDevicePairingKinds(winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod const& configurationMethod) const;
+        auto GetDevicePairingKinds(winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod const& configurationMethod) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>
     {
@@ -437,7 +431,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceInformation) DeviceInformation() const;
+        [[nodiscard]] auto DeviceInformation() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>
     {
@@ -446,7 +440,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionRequestedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest) GetConnectionRequest() const;
+        auto GetConnectionRequest() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>
     {
@@ -455,13 +449,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDevice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus) ConnectionStatus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ConnectionStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto ConnectionStatus() const;
+        [[nodiscard]] auto DeviceId() const;
+        auto ConnectionStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ConnectionStatusChanged_revoker = impl::event_revoker<winrt::Windows::Devices::WiFiDirect::IWiFiDirectDevice, &impl::abi_t<winrt::Windows::Devices::WiFiDirect::IWiFiDirectDevice>::remove_ConnectionStatusChanged>;
         [[nodiscard]] ConnectionStatusChanged_revoker ConnectionStatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ConnectionStatusChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::EndpointPair>) GetConnectionEndpointPairs() const;
+        auto ConnectionStatusChanged(winrt::event_token const& token) const noexcept;
+        auto GetConnectionEndpointPairs() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectDevice>
     {
@@ -470,8 +464,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDeviceStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>) FromIdAsync(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>
     {
@@ -480,8 +474,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDeviceStatics2
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType const& type) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>) FromIdAsync(param::hstring const& deviceId, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters const& connectionParameters) const;
+        auto GetDeviceSelector(winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType const& type) const;
+        auto FromIdAsync(param::hstring const& deviceId, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters const& connectionParameters) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>
     {
@@ -490,12 +484,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectInformationElement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Oui() const;
-        WINRT_IMPL_AUTO(void) Oui(winrt::Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) OuiType() const;
-        WINRT_IMPL_AUTO(void) OuiType(uint8_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Value() const;
-        WINRT_IMPL_AUTO(void) Value(winrt::Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] auto Oui() const;
+        auto Oui(winrt::Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] auto OuiType() const;
+        auto OuiType(uint8_t value) const;
+        [[nodiscard]] auto Value() const;
+        auto Value(winrt::Windows::Storage::Streams::IBuffer const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>
     {
@@ -504,8 +498,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectInformationElementStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) CreateFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) CreateFromDeviceInformation(winrt::Windows::Devices::Enumeration::DeviceInformation const& deviceInformation) const;
+        auto CreateFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
+        auto CreateFromDeviceInformation(winrt::Windows::Devices::Enumeration::DeviceInformation const& deviceInformation) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>
     {
@@ -514,12 +508,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectLegacySettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Ssid() const;
-        WINRT_IMPL_AUTO(void) Ssid(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) Passphrase() const;
-        WINRT_IMPL_AUTO(void) Passphrase(winrt::Windows::Security::Credentials::PasswordCredential const& value) const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto IsEnabled(bool value) const;
+        [[nodiscard]] auto Ssid() const;
+        auto Ssid(param::hstring const& value) const;
+        [[nodiscard]] auto Passphrase() const;
+        auto Passphrase(winrt::Windows::Security::Credentials::PasswordCredential const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>
     {

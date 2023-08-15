@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,12 +10,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics::Display::Core
 {
@@ -124,16 +119,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Display_Core_IHdmiDisplayInformation
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>) GetSupportedDisplayModes() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode) GetCurrentDisplayMode() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetDefaultDisplayModeAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption const& hdrOption) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption const& hdrOption, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata const& hdrMetadata) const;
-        WINRT_IMPL_AUTO(winrt::event_token) DisplayModesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation, winrt::Windows::Foundation::IInspectable> const& value) const;
+        auto GetSupportedDisplayModes() const;
+        auto GetCurrentDisplayMode() const;
+        auto SetDefaultDisplayModeAsync() const;
+        auto RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode) const;
+        auto RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption const& hdrOption) const;
+        auto RequestSetCurrentDisplayModeAsync(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption const& hdrOption, winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata const& hdrMetadata) const;
+        auto DisplayModesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation, winrt::Windows::Foundation::IInspectable> const& value) const;
         using DisplayModesChanged_revoker = impl::event_revoker<winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformation, &impl::abi_t<winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformation>::remove_DisplayModesChanged>;
         [[nodiscard]] DisplayModesChanged_revoker DisplayModesChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation, winrt::Windows::Foundation::IInspectable> const& value) const;
-        WINRT_IMPL_AUTO(void) DisplayModesChanged(winrt::event_token const& token) const noexcept;
+        auto DisplayModesChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformation>
     {
@@ -142,7 +137,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Display_Core_IHdmiDisplayInformationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformationStatics>
     {
@@ -151,17 +146,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Display_Core_IHdmiDisplayMode
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ResolutionWidthInRawPixels() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ResolutionHeightInRawPixels() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RefreshRate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) StereoEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) BitsPerPixel() const;
-        WINRT_IMPL_AUTO(bool) IsEqual(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Display::Core::HdmiDisplayColorSpace) ColorSpace() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding) PixelEncoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSdrLuminanceSupported() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSmpte2084Supported() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Is2086MetadataSupported() const;
+        [[nodiscard]] auto ResolutionWidthInRawPixels() const;
+        [[nodiscard]] auto ResolutionHeightInRawPixels() const;
+        [[nodiscard]] auto RefreshRate() const;
+        [[nodiscard]] auto StereoEnabled() const;
+        [[nodiscard]] auto BitsPerPixel() const;
+        auto IsEqual(winrt::Windows::Graphics::Display::Core::HdmiDisplayMode const& mode) const;
+        [[nodiscard]] auto ColorSpace() const;
+        [[nodiscard]] auto PixelEncoding() const;
+        [[nodiscard]] auto IsSdrLuminanceSupported() const;
+        [[nodiscard]] auto IsSmpte2084Supported() const;
+        [[nodiscard]] auto Is2086MetadataSupported() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Display::Core::IHdmiDisplayMode>
     {
@@ -170,7 +165,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Display_Core_IHdmiDisplayMode2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDolbyVisionLowLatencySupported() const;
+        [[nodiscard]] auto IsDolbyVisionLowLatencySupported() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Display::Core::IHdmiDisplayMode2>
     {

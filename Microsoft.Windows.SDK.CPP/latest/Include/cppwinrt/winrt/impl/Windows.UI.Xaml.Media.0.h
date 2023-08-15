@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -21,8 +21,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
     template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Playback
@@ -55,10 +53,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
     struct UIElementWeakCollection;
     struct Window;
     struct XamlRoot;
-}
-WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
-{
-    struct Popup;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Media3D
 {
@@ -2237,16 +2231,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IAcrylicBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::AcrylicBackgroundSource) BackgroundSource() const;
-        WINRT_IMPL_AUTO(void) BackgroundSource(winrt::Windows::UI::Xaml::Media::AcrylicBackgroundSource const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) TintColor() const;
-        WINRT_IMPL_AUTO(void) TintColor(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) TintOpacity() const;
-        WINRT_IMPL_AUTO(void) TintOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) TintTransitionDuration() const;
-        WINRT_IMPL_AUTO(void) TintTransitionDuration(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AlwaysUseFallback() const;
-        WINRT_IMPL_AUTO(void) AlwaysUseFallback(bool value) const;
+        [[nodiscard]] auto BackgroundSource() const;
+        auto BackgroundSource(winrt::Windows::UI::Xaml::Media::AcrylicBackgroundSource const& value) const;
+        [[nodiscard]] auto TintColor() const;
+        auto TintColor(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto TintOpacity() const;
+        auto TintOpacity(double value) const;
+        [[nodiscard]] auto TintTransitionDuration() const;
+        auto TintTransitionDuration(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto AlwaysUseFallback() const;
+        auto AlwaysUseFallback(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IAcrylicBrush>
     {
@@ -2255,8 +2249,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IAcrylicBrush2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) TintLuminosityOpacity() const;
-        WINRT_IMPL_AUTO(void) TintLuminosityOpacity(winrt::Windows::Foundation::IReference<double> const& value) const;
+        [[nodiscard]] auto TintLuminosityOpacity() const;
+        auto TintLuminosityOpacity(winrt::Windows::Foundation::IReference<double> const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IAcrylicBrush2>
     {
@@ -2265,7 +2259,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IAcrylicBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::AcrylicBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IAcrylicBrushFactory>
     {
@@ -2274,11 +2268,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) BackgroundSourceProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TintColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TintOpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TintTransitionDurationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AlwaysUseFallbackProperty() const;
+        [[nodiscard]] auto BackgroundSourceProperty() const;
+        [[nodiscard]] auto TintColorProperty() const;
+        [[nodiscard]] auto TintOpacityProperty() const;
+        [[nodiscard]] auto TintTransitionDurationProperty() const;
+        [[nodiscard]] auto AlwaysUseFallbackProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics>
     {
@@ -2287,7 +2281,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IAcrylicBrushStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TintLuminosityOpacityProperty() const;
+        [[nodiscard]] auto TintLuminosityOpacityProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IAcrylicBrushStatics2>
     {
@@ -2296,16 +2290,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IArcSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point() const;
-        WINRT_IMPL_AUTO(void) Point(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::Size const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLargeArc() const;
-        WINRT_IMPL_AUTO(void) IsLargeArc(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::SweepDirection) SweepDirection() const;
-        WINRT_IMPL_AUTO(void) SweepDirection(winrt::Windows::UI::Xaml::Media::SweepDirection const& value) const;
+        [[nodiscard]] auto Point() const;
+        auto Point(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::Size const& value) const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(double value) const;
+        [[nodiscard]] auto IsLargeArc() const;
+        auto IsLargeArc(bool value) const;
+        [[nodiscard]] auto SweepDirection() const;
+        auto SweepDirection(winrt::Windows::UI::Xaml::Media::SweepDirection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IArcSegment>
     {
@@ -2314,11 +2308,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IArcSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RotationAngleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsLargeArcProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SweepDirectionProperty() const;
+        [[nodiscard]] auto PointProperty() const;
+        [[nodiscard]] auto SizeProperty() const;
+        [[nodiscard]] auto RotationAngleProperty() const;
+        [[nodiscard]] auto IsLargeArcProperty() const;
+        [[nodiscard]] auto SweepDirectionProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IArcSegmentStatics>
     {
@@ -2327,12 +2321,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBezierSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point1() const;
-        WINRT_IMPL_AUTO(void) Point1(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point2() const;
-        WINRT_IMPL_AUTO(void) Point2(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point3() const;
-        WINRT_IMPL_AUTO(void) Point3(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point1() const;
+        auto Point1(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point2() const;
+        auto Point2(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point3() const;
+        auto Point3(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBezierSegment>
     {
@@ -2341,9 +2335,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBezierSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) Point1Property() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) Point2Property() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) Point3Property() const;
+        [[nodiscard]] auto Point1Property() const;
+        [[nodiscard]] auto Point2Property() const;
+        [[nodiscard]] auto Point3Property() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBezierSegmentStatics>
     {
@@ -2360,12 +2354,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Opacity() const;
-        WINRT_IMPL_AUTO(void) Opacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Transform) Transform() const;
-        WINRT_IMPL_AUTO(void) Transform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Transform) RelativeTransform() const;
-        WINRT_IMPL_AUTO(void) RelativeTransform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
+        [[nodiscard]] auto Opacity() const;
+        auto Opacity(double value) const;
+        [[nodiscard]] auto Transform() const;
+        auto Transform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
+        [[nodiscard]] auto RelativeTransform() const;
+        auto RelativeTransform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBrush>
     {
@@ -2374,7 +2368,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBrushFactory>
     {
@@ -2383,7 +2377,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBrushOverrides2
     {
-        WINRT_IMPL_AUTO(void) PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
+        auto PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBrushOverrides2>
     {
@@ -2392,9 +2386,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) OpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TransformProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RelativeTransformProperty() const;
+        [[nodiscard]] auto OpacityProperty() const;
+        [[nodiscard]] auto TransformProperty() const;
+        [[nodiscard]] auto RelativeTransformProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IBrushStatics>
     {
@@ -2411,7 +2405,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ICacheModeFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::CacheMode) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ICacheModeFactory>
     {
@@ -2420,24 +2414,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ICompositeTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterX() const;
-        WINRT_IMPL_AUTO(void) CenterX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterY() const;
-        WINRT_IMPL_AUTO(void) CenterY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ScaleX() const;
-        WINRT_IMPL_AUTO(void) ScaleX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ScaleY() const;
-        WINRT_IMPL_AUTO(void) ScaleY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) SkewX() const;
-        WINRT_IMPL_AUTO(void) SkewX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) SkewY() const;
-        WINRT_IMPL_AUTO(void) SkewY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Rotation() const;
-        WINRT_IMPL_AUTO(void) Rotation(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) TranslateX() const;
-        WINRT_IMPL_AUTO(void) TranslateX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) TranslateY() const;
-        WINRT_IMPL_AUTO(void) TranslateY(double value) const;
+        [[nodiscard]] auto CenterX() const;
+        auto CenterX(double value) const;
+        [[nodiscard]] auto CenterY() const;
+        auto CenterY(double value) const;
+        [[nodiscard]] auto ScaleX() const;
+        auto ScaleX(double value) const;
+        [[nodiscard]] auto ScaleY() const;
+        auto ScaleY(double value) const;
+        [[nodiscard]] auto SkewX() const;
+        auto SkewX(double value) const;
+        [[nodiscard]] auto SkewY() const;
+        auto SkewY(double value) const;
+        [[nodiscard]] auto Rotation() const;
+        auto Rotation(double value) const;
+        [[nodiscard]] auto TranslateX() const;
+        auto TranslateX(double value) const;
+        [[nodiscard]] auto TranslateY() const;
+        auto TranslateY(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ICompositeTransform>
     {
@@ -2446,15 +2440,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ICompositeTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ScaleXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ScaleYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SkewXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SkewYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RotationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TranslateXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TranslateYProperty() const;
+        [[nodiscard]] auto CenterXProperty() const;
+        [[nodiscard]] auto CenterYProperty() const;
+        [[nodiscard]] auto ScaleXProperty() const;
+        [[nodiscard]] auto ScaleYProperty() const;
+        [[nodiscard]] auto SkewXProperty() const;
+        [[nodiscard]] auto SkewYProperty() const;
+        [[nodiscard]] auto RotationProperty() const;
+        [[nodiscard]] auto TranslateXProperty() const;
+        [[nodiscard]] auto TranslateYProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ICompositeTransformStatics>
     {
@@ -2471,14 +2465,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ICompositionTargetStatics
     {
-        WINRT_IMPL_AUTO(winrt::event_token) Rendering(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Rendering(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Rendering_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics, &impl::abi_t<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics>::remove_Rendering>;
         [[nodiscard]] Rendering_revoker Rendering(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Rendering(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SurfaceContentsLost(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Rendering(winrt::event_token const& token) const noexcept;
+        auto SurfaceContentsLost(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using SurfaceContentsLost_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics, &impl::abi_t<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics>::remove_SurfaceContentsLost>;
         [[nodiscard]] SurfaceContentsLost_revoker SurfaceContentsLost(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) SurfaceContentsLost(winrt::event_token const& token) const noexcept;
+        auto SurfaceContentsLost(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics>
     {
@@ -2487,10 +2481,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ICompositionTargetStatics3
     {
-        WINRT_IMPL_AUTO(winrt::event_token) Rendered(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Media::RenderedEventArgs> const& handler) const;
+        auto Rendered(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Media::RenderedEventArgs> const& handler) const;
         using Rendered_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3, &impl::abi_t<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3>::remove_Rendered>;
         [[nodiscard]] Rendered_revoker Rendered(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Media::RenderedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Rendered(winrt::event_token const& token) const noexcept;
+        auto Rendered(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3>
     {
@@ -2499,12 +2493,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IEllipseGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Center() const;
-        WINRT_IMPL_AUTO(void) Center(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RadiusX() const;
-        WINRT_IMPL_AUTO(void) RadiusX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RadiusY() const;
-        WINRT_IMPL_AUTO(void) RadiusY(double value) const;
+        [[nodiscard]] auto Center() const;
+        auto Center(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto RadiusX() const;
+        auto RadiusX(double value) const;
+        [[nodiscard]] auto RadiusY() const;
+        auto RadiusY(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IEllipseGeometry>
     {
@@ -2513,9 +2507,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IEllipseGeometryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RadiusXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RadiusYProperty() const;
+        [[nodiscard]] auto CenterProperty() const;
+        [[nodiscard]] auto RadiusXProperty() const;
+        [[nodiscard]] auto RadiusYProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IEllipseGeometryStatics>
     {
@@ -2524,7 +2518,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IFontFamily
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Source() const;
+        [[nodiscard]] auto Source() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IFontFamily>
     {
@@ -2533,7 +2527,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IFontFamilyFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::FontFamily) CreateInstanceWithName(param::hstring const& familyName, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithName(param::hstring const& familyName, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IFontFamilyFactory>
     {
@@ -2542,7 +2536,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IFontFamilyStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::FontFamily) XamlAutoFontFamily() const;
+        [[nodiscard]] auto XamlAutoFontFamily() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IFontFamilyStatics2>
     {
@@ -2551,10 +2545,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeneralTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GeneralTransform) Inverse() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) TransformPoint(winrt::Windows::Foundation::Point const& point) const;
-        WINRT_IMPL_AUTO(bool) TryTransform(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) TransformBounds(winrt::Windows::Foundation::Rect const& rect) const;
+        [[nodiscard]] auto Inverse() const;
+        auto TransformPoint(winrt::Windows::Foundation::Point const& point) const;
+        auto TryTransform(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
+        auto TransformBounds(winrt::Windows::Foundation::Rect const& rect) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeneralTransform>
     {
@@ -2563,7 +2557,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeneralTransformFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GeneralTransform) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeneralTransformFactory>
     {
@@ -2572,9 +2566,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeneralTransformOverrides
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GeneralTransform) InverseCore() const;
-        WINRT_IMPL_AUTO(bool) TryTransformCore(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) TransformBoundsCore(winrt::Windows::Foundation::Rect const& rect) const;
+        [[nodiscard]] auto InverseCore() const;
+        auto TryTransformCore(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
+        auto TransformBoundsCore(winrt::Windows::Foundation::Rect const& rect) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeneralTransformOverrides>
     {
@@ -2583,9 +2577,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Transform) Transform() const;
-        WINRT_IMPL_AUTO(void) Transform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) Bounds() const;
+        [[nodiscard]] auto Transform() const;
+        auto Transform(winrt::Windows::UI::Xaml::Media::Transform const& value) const;
+        [[nodiscard]] auto Bounds() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeometry>
     {
@@ -2602,10 +2596,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeometryGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::FillRule) FillRule() const;
-        WINRT_IMPL_AUTO(void) FillRule(winrt::Windows::UI::Xaml::Media::FillRule const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GeometryCollection) Children() const;
-        WINRT_IMPL_AUTO(void) Children(winrt::Windows::UI::Xaml::Media::GeometryCollection const& value) const;
+        [[nodiscard]] auto FillRule() const;
+        auto FillRule(winrt::Windows::UI::Xaml::Media::FillRule const& value) const;
+        [[nodiscard]] auto Children() const;
+        auto Children(winrt::Windows::UI::Xaml::Media::GeometryCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeometryGroup>
     {
@@ -2614,8 +2608,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeometryGroupStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FillRuleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ChildrenProperty() const;
+        [[nodiscard]] auto FillRuleProperty() const;
+        [[nodiscard]] auto ChildrenProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeometryGroupStatics>
     {
@@ -2624,9 +2618,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGeometryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Geometry) Empty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) StandardFlatteningTolerance() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TransformProperty() const;
+        [[nodiscard]] auto Empty() const;
+        [[nodiscard]] auto StandardFlatteningTolerance() const;
+        [[nodiscard]] auto TransformProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGeometryStatics>
     {
@@ -2635,14 +2629,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGradientBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GradientSpreadMethod) SpreadMethod() const;
-        WINRT_IMPL_AUTO(void) SpreadMethod(winrt::Windows::UI::Xaml::Media::GradientSpreadMethod const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::BrushMappingMode) MappingMode() const;
-        WINRT_IMPL_AUTO(void) MappingMode(winrt::Windows::UI::Xaml::Media::BrushMappingMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::ColorInterpolationMode) ColorInterpolationMode() const;
-        WINRT_IMPL_AUTO(void) ColorInterpolationMode(winrt::Windows::UI::Xaml::Media::ColorInterpolationMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GradientStopCollection) GradientStops() const;
-        WINRT_IMPL_AUTO(void) GradientStops(winrt::Windows::UI::Xaml::Media::GradientStopCollection const& value) const;
+        [[nodiscard]] auto SpreadMethod() const;
+        auto SpreadMethod(winrt::Windows::UI::Xaml::Media::GradientSpreadMethod const& value) const;
+        [[nodiscard]] auto MappingMode() const;
+        auto MappingMode(winrt::Windows::UI::Xaml::Media::BrushMappingMode const& value) const;
+        [[nodiscard]] auto ColorInterpolationMode() const;
+        auto ColorInterpolationMode(winrt::Windows::UI::Xaml::Media::ColorInterpolationMode const& value) const;
+        [[nodiscard]] auto GradientStops() const;
+        auto GradientStops(winrt::Windows::UI::Xaml::Media::GradientStopCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGradientBrush>
     {
@@ -2651,7 +2645,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGradientBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GradientBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGradientBrushFactory>
     {
@@ -2660,10 +2654,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGradientBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SpreadMethodProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MappingModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorInterpolationModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GradientStopsProperty() const;
+        [[nodiscard]] auto SpreadMethodProperty() const;
+        [[nodiscard]] auto MappingModeProperty() const;
+        [[nodiscard]] auto ColorInterpolationModeProperty() const;
+        [[nodiscard]] auto GradientStopsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGradientBrushStatics>
     {
@@ -2672,10 +2666,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGradientStop
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(double value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGradientStop>
     {
@@ -2684,8 +2678,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IGradientStopStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) OffsetProperty() const;
+        [[nodiscard]] auto ColorProperty() const;
+        [[nodiscard]] auto OffsetProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IGradientStopStatics>
     {
@@ -2694,16 +2688,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IImageBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::ImageSource) ImageSource() const;
-        WINRT_IMPL_AUTO(void) ImageSource(winrt::Windows::UI::Xaml::Media::ImageSource const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ImageFailed(winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler const& handler) const;
+        [[nodiscard]] auto ImageSource() const;
+        auto ImageSource(winrt::Windows::UI::Xaml::Media::ImageSource const& value) const;
+        auto ImageFailed(winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler const& handler) const;
         using ImageFailed_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::IImageBrush, &impl::abi_t<winrt::Windows::UI::Xaml::Media::IImageBrush>::remove_ImageFailed>;
         [[nodiscard]] ImageFailed_revoker ImageFailed(auto_revoke_t, winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) ImageFailed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ImageOpened(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        auto ImageFailed(winrt::event_token const& token) const noexcept;
+        auto ImageOpened(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using ImageOpened_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::IImageBrush, &impl::abi_t<winrt::Windows::UI::Xaml::Media::IImageBrush>::remove_ImageOpened>;
         [[nodiscard]] ImageOpened_revoker ImageOpened(auto_revoke_t, winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) ImageOpened(winrt::event_token const& token) const noexcept;
+        auto ImageOpened(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IImageBrush>
     {
@@ -2712,7 +2706,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IImageBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ImageSourceProperty() const;
+        [[nodiscard]] auto ImageSourceProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IImageBrushStatics>
     {
@@ -2737,10 +2731,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILineGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) StartPoint() const;
-        WINRT_IMPL_AUTO(void) StartPoint(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) EndPoint() const;
-        WINRT_IMPL_AUTO(void) EndPoint(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto StartPoint() const;
+        auto StartPoint(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto EndPoint() const;
+        auto EndPoint(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILineGeometry>
     {
@@ -2749,8 +2743,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILineGeometryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) StartPointProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) EndPointProperty() const;
+        [[nodiscard]] auto StartPointProperty() const;
+        [[nodiscard]] auto EndPointProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILineGeometryStatics>
     {
@@ -2759,8 +2753,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILineSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point() const;
-        WINRT_IMPL_AUTO(void) Point(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point() const;
+        auto Point(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILineSegment>
     {
@@ -2769,7 +2763,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILineSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointProperty() const;
+        [[nodiscard]] auto PointProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILineSegmentStatics>
     {
@@ -2778,10 +2772,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILinearGradientBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) StartPoint() const;
-        WINRT_IMPL_AUTO(void) StartPoint(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) EndPoint() const;
-        WINRT_IMPL_AUTO(void) EndPoint(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto StartPoint() const;
+        auto StartPoint(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto EndPoint() const;
+        auto EndPoint(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILinearGradientBrush>
     {
@@ -2790,7 +2784,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILinearGradientBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LinearGradientBrush) CreateInstanceWithGradientStopCollectionAndAngle(winrt::Windows::UI::Xaml::Media::GradientStopCollection const& gradientStopCollection, double angle) const;
+        auto CreateInstanceWithGradientStopCollectionAndAngle(winrt::Windows::UI::Xaml::Media::GradientStopCollection const& gradientStopCollection, double angle) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILinearGradientBrushFactory>
     {
@@ -2799,8 +2793,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILinearGradientBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) StartPointProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) EndPointProperty() const;
+        [[nodiscard]] auto StartPointProperty() const;
+        [[nodiscard]] auto EndPointProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILinearGradientBrushStatics>
     {
@@ -2809,7 +2803,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILoadedImageSourceLoadCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadStatus) Status() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILoadedImageSourceLoadCompletedEventArgs>
     {
@@ -2818,13 +2812,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILoadedImageSurface
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) DecodedPhysicalSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) DecodedSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) NaturalSize() const;
-        WINRT_IMPL_AUTO(winrt::event_token) LoadCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::LoadedImageSurface, winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs> const& handler) const;
+        [[nodiscard]] auto DecodedPhysicalSize() const;
+        [[nodiscard]] auto DecodedSize() const;
+        [[nodiscard]] auto NaturalSize() const;
+        auto LoadCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::LoadedImageSurface, winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs> const& handler) const;
         using LoadCompleted_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Media::ILoadedImageSurface, &impl::abi_t<winrt::Windows::UI::Xaml::Media::ILoadedImageSurface>::remove_LoadCompleted>;
         [[nodiscard]] LoadCompleted_revoker LoadCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::LoadedImageSurface, winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) LoadCompleted(winrt::event_token const& token) const noexcept;
+        auto LoadCompleted(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILoadedImageSurface>
     {
@@ -2833,10 +2827,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ILoadedImageSurfaceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSurface) StartLoadFromUri(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Size const& desiredMaxSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSurface) StartLoadFromUri(winrt::Windows::Foundation::Uri const& uri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSurface) StartLoadFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Foundation::Size const& desiredMaxSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSurface) StartLoadFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream) const;
+        auto StartLoadFromUri(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Size const& desiredMaxSize) const;
+        auto StartLoadFromUri(winrt::Windows::Foundation::Uri const& uri) const;
+        auto StartLoadFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Foundation::Size const& desiredMaxSize) const;
+        auto StartLoadFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ILoadedImageSurfaceStatics>
     {
@@ -2845,8 +2839,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMatrix3DProjection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D) ProjectionMatrix() const;
-        WINRT_IMPL_AUTO(void) ProjectionMatrix(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& value) const;
+        [[nodiscard]] auto ProjectionMatrix() const;
+        auto ProjectionMatrix(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMatrix3DProjection>
     {
@@ -2855,7 +2849,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMatrix3DProjectionStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ProjectionMatrixProperty() const;
+        [[nodiscard]] auto ProjectionMatrixProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMatrix3DProjectionStatics>
     {
@@ -2872,10 +2866,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMatrixHelperStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Matrix) Identity() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Matrix) FromElements(double m11, double m12, double m21, double m22, double offsetX, double offsetY) const;
-        WINRT_IMPL_AUTO(bool) GetIsIdentity(winrt::Windows::UI::Xaml::Media::Matrix const& target) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Transform(winrt::Windows::UI::Xaml::Media::Matrix const& target, winrt::Windows::Foundation::Point const& point) const;
+        [[nodiscard]] auto Identity() const;
+        auto FromElements(double m11, double m12, double m21, double m22, double offsetX, double offsetY) const;
+        auto GetIsIdentity(winrt::Windows::UI::Xaml::Media::Matrix const& target) const;
+        auto Transform(winrt::Windows::UI::Xaml::Media::Matrix const& target, winrt::Windows::Foundation::Point const& point) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMatrixHelperStatics>
     {
@@ -2884,8 +2878,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMatrixTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Matrix) Matrix() const;
-        WINRT_IMPL_AUTO(void) Matrix(winrt::Windows::UI::Xaml::Media::Matrix const& value) const;
+        [[nodiscard]] auto Matrix() const;
+        auto Matrix(winrt::Windows::UI::Xaml::Media::Matrix const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMatrixTransform>
     {
@@ -2894,7 +2888,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMatrixTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MatrixProperty() const;
+        [[nodiscard]] auto MatrixProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMatrixTransformStatics>
     {
@@ -2903,8 +2897,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IMediaTransportControlsThumbnailRequestedEventArgs
     {
-        WINRT_IMPL_AUTO(void) SetThumbnailImage(winrt::Windows::Storage::Streams::IInputStream const& source) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        auto SetThumbnailImage(winrt::Windows::Storage::Streams::IInputStream const& source) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IMediaTransportControlsThumbnailRequestedEventArgs>
     {
@@ -2913,7 +2907,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPartialMediaFailureDetectedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::FailedMediaStreamKind) StreamKind() const;
+        [[nodiscard]] auto StreamKind() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPartialMediaFailureDetectedEventArgs>
     {
@@ -2922,7 +2916,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPartialMediaFailureDetectedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPartialMediaFailureDetectedEventArgs2>
     {
@@ -2931,14 +2925,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPathFigure
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::PathSegmentCollection) Segments() const;
-        WINRT_IMPL_AUTO(void) Segments(winrt::Windows::UI::Xaml::Media::PathSegmentCollection const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) StartPoint() const;
-        WINRT_IMPL_AUTO(void) StartPoint(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsClosed() const;
-        WINRT_IMPL_AUTO(void) IsClosed(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFilled() const;
-        WINRT_IMPL_AUTO(void) IsFilled(bool value) const;
+        [[nodiscard]] auto Segments() const;
+        auto Segments(winrt::Windows::UI::Xaml::Media::PathSegmentCollection const& value) const;
+        [[nodiscard]] auto StartPoint() const;
+        auto StartPoint(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto IsClosed() const;
+        auto IsClosed(bool value) const;
+        [[nodiscard]] auto IsFilled() const;
+        auto IsFilled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPathFigure>
     {
@@ -2947,10 +2941,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPathFigureStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SegmentsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) StartPointProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsClosedProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsFilledProperty() const;
+        [[nodiscard]] auto SegmentsProperty() const;
+        [[nodiscard]] auto StartPointProperty() const;
+        [[nodiscard]] auto IsClosedProperty() const;
+        [[nodiscard]] auto IsFilledProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPathFigureStatics>
     {
@@ -2959,10 +2953,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPathGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::FillRule) FillRule() const;
-        WINRT_IMPL_AUTO(void) FillRule(winrt::Windows::UI::Xaml::Media::FillRule const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::PathFigureCollection) Figures() const;
-        WINRT_IMPL_AUTO(void) Figures(winrt::Windows::UI::Xaml::Media::PathFigureCollection const& value) const;
+        [[nodiscard]] auto FillRule() const;
+        auto FillRule(winrt::Windows::UI::Xaml::Media::FillRule const& value) const;
+        [[nodiscard]] auto Figures() const;
+        auto Figures(winrt::Windows::UI::Xaml::Media::PathFigureCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPathGeometry>
     {
@@ -2971,8 +2965,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPathGeometryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FillRuleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FiguresProperty() const;
+        [[nodiscard]] auto FillRuleProperty() const;
+        [[nodiscard]] auto FiguresProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPathGeometryStatics>
     {
@@ -2997,31 +2991,31 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPlaneProjection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) LocalOffsetX() const;
-        WINRT_IMPL_AUTO(void) LocalOffsetX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) LocalOffsetY() const;
-        WINRT_IMPL_AUTO(void) LocalOffsetY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) LocalOffsetZ() const;
-        WINRT_IMPL_AUTO(void) LocalOffsetZ(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationX() const;
-        WINRT_IMPL_AUTO(void) RotationX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationY() const;
-        WINRT_IMPL_AUTO(void) RotationY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationZ() const;
-        WINRT_IMPL_AUTO(void) RotationZ(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterOfRotationX() const;
-        WINRT_IMPL_AUTO(void) CenterOfRotationX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterOfRotationY() const;
-        WINRT_IMPL_AUTO(void) CenterOfRotationY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterOfRotationZ() const;
-        WINRT_IMPL_AUTO(void) CenterOfRotationZ(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) GlobalOffsetX() const;
-        WINRT_IMPL_AUTO(void) GlobalOffsetX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) GlobalOffsetY() const;
-        WINRT_IMPL_AUTO(void) GlobalOffsetY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) GlobalOffsetZ() const;
-        WINRT_IMPL_AUTO(void) GlobalOffsetZ(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D) ProjectionMatrix() const;
+        [[nodiscard]] auto LocalOffsetX() const;
+        auto LocalOffsetX(double value) const;
+        [[nodiscard]] auto LocalOffsetY() const;
+        auto LocalOffsetY(double value) const;
+        [[nodiscard]] auto LocalOffsetZ() const;
+        auto LocalOffsetZ(double value) const;
+        [[nodiscard]] auto RotationX() const;
+        auto RotationX(double value) const;
+        [[nodiscard]] auto RotationY() const;
+        auto RotationY(double value) const;
+        [[nodiscard]] auto RotationZ() const;
+        auto RotationZ(double value) const;
+        [[nodiscard]] auto CenterOfRotationX() const;
+        auto CenterOfRotationX(double value) const;
+        [[nodiscard]] auto CenterOfRotationY() const;
+        auto CenterOfRotationY(double value) const;
+        [[nodiscard]] auto CenterOfRotationZ() const;
+        auto CenterOfRotationZ(double value) const;
+        [[nodiscard]] auto GlobalOffsetX() const;
+        auto GlobalOffsetX(double value) const;
+        [[nodiscard]] auto GlobalOffsetY() const;
+        auto GlobalOffsetY(double value) const;
+        [[nodiscard]] auto GlobalOffsetZ() const;
+        auto GlobalOffsetZ(double value) const;
+        [[nodiscard]] auto ProjectionMatrix() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPlaneProjection>
     {
@@ -3030,19 +3024,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPlaneProjectionStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LocalOffsetXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LocalOffsetYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LocalOffsetZProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RotationXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RotationYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RotationZProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterOfRotationXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterOfRotationYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterOfRotationZProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GlobalOffsetXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GlobalOffsetYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GlobalOffsetZProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ProjectionMatrixProperty() const;
+        [[nodiscard]] auto LocalOffsetXProperty() const;
+        [[nodiscard]] auto LocalOffsetYProperty() const;
+        [[nodiscard]] auto LocalOffsetZProperty() const;
+        [[nodiscard]] auto RotationXProperty() const;
+        [[nodiscard]] auto RotationYProperty() const;
+        [[nodiscard]] auto RotationZProperty() const;
+        [[nodiscard]] auto CenterOfRotationXProperty() const;
+        [[nodiscard]] auto CenterOfRotationYProperty() const;
+        [[nodiscard]] auto CenterOfRotationZProperty() const;
+        [[nodiscard]] auto GlobalOffsetXProperty() const;
+        [[nodiscard]] auto GlobalOffsetYProperty() const;
+        [[nodiscard]] auto GlobalOffsetZProperty() const;
+        [[nodiscard]] auto ProjectionMatrixProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPlaneProjectionStatics>
     {
@@ -3051,8 +3045,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyBezierSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::PointCollection) Points() const;
-        WINRT_IMPL_AUTO(void) Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
+        [[nodiscard]] auto Points() const;
+        auto Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyBezierSegment>
     {
@@ -3061,7 +3055,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyBezierSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointsProperty() const;
+        [[nodiscard]] auto PointsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyBezierSegmentStatics>
     {
@@ -3070,8 +3064,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyLineSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::PointCollection) Points() const;
-        WINRT_IMPL_AUTO(void) Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
+        [[nodiscard]] auto Points() const;
+        auto Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyLineSegment>
     {
@@ -3080,7 +3074,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyLineSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointsProperty() const;
+        [[nodiscard]] auto PointsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyLineSegmentStatics>
     {
@@ -3089,8 +3083,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyQuadraticBezierSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::PointCollection) Points() const;
-        WINRT_IMPL_AUTO(void) Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
+        [[nodiscard]] auto Points() const;
+        auto Points(winrt::Windows::UI::Xaml::Media::PointCollection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyQuadraticBezierSegment>
     {
@@ -3099,7 +3093,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IPolyQuadraticBezierSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointsProperty() const;
+        [[nodiscard]] auto PointsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IPolyQuadraticBezierSegmentStatics>
     {
@@ -3116,7 +3110,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IProjectionFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Projection) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IProjectionFactory>
     {
@@ -3125,10 +3119,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IQuadraticBezierSegment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point1() const;
-        WINRT_IMPL_AUTO(void) Point1(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Point2() const;
-        WINRT_IMPL_AUTO(void) Point2(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point1() const;
+        auto Point1(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto Point2() const;
+        auto Point2(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IQuadraticBezierSegment>
     {
@@ -3137,8 +3131,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IQuadraticBezierSegmentStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) Point1Property() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) Point2Property() const;
+        [[nodiscard]] auto Point1Property() const;
+        [[nodiscard]] auto Point2Property() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IQuadraticBezierSegmentStatics>
     {
@@ -3155,8 +3149,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRectangleGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) Rect() const;
-        WINRT_IMPL_AUTO(void) Rect(winrt::Windows::Foundation::Rect const& value) const;
+        [[nodiscard]] auto Rect() const;
+        auto Rect(winrt::Windows::Foundation::Rect const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRectangleGeometry>
     {
@@ -3165,7 +3159,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRectangleGeometryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RectProperty() const;
+        [[nodiscard]] auto RectProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRectangleGeometryStatics>
     {
@@ -3174,7 +3168,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRenderedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) FrameDuration() const;
+        [[nodiscard]] auto FrameDuration() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRenderedEventArgs>
     {
@@ -3183,7 +3177,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRenderingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) RenderingTime() const;
+        [[nodiscard]] auto RenderingTime() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRenderingEventArgs>
     {
@@ -3200,7 +3194,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRevealBackgroundBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRevealBackgroundBrushFactory>
     {
@@ -3217,7 +3211,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRevealBorderBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::RevealBorderBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRevealBorderBrushFactory>
     {
@@ -3226,12 +3220,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRevealBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::ApplicationTheme) TargetTheme() const;
-        WINRT_IMPL_AUTO(void) TargetTheme(winrt::Windows::UI::Xaml::ApplicationTheme const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AlwaysUseFallback() const;
-        WINRT_IMPL_AUTO(void) AlwaysUseFallback(bool value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto TargetTheme() const;
+        auto TargetTheme(winrt::Windows::UI::Xaml::ApplicationTheme const& value) const;
+        [[nodiscard]] auto AlwaysUseFallback() const;
+        auto AlwaysUseFallback(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRevealBrush>
     {
@@ -3240,7 +3234,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRevealBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::RevealBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRevealBrushFactory>
     {
@@ -3249,12 +3243,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRevealBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TargetThemeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AlwaysUseFallbackProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) StateProperty() const;
-        WINRT_IMPL_AUTO(void) SetState(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Xaml::Media::RevealBrushState const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::RevealBrushState) GetState(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        [[nodiscard]] auto ColorProperty() const;
+        [[nodiscard]] auto TargetThemeProperty() const;
+        [[nodiscard]] auto AlwaysUseFallbackProperty() const;
+        [[nodiscard]] auto StateProperty() const;
+        auto SetState(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Xaml::Media::RevealBrushState const& value) const;
+        auto GetState(winrt::Windows::UI::Xaml::UIElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRevealBrushStatics>
     {
@@ -3263,12 +3257,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRotateTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterX() const;
-        WINRT_IMPL_AUTO(void) CenterX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterY() const;
-        WINRT_IMPL_AUTO(void) CenterY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Angle() const;
-        WINRT_IMPL_AUTO(void) Angle(double value) const;
+        [[nodiscard]] auto CenterX() const;
+        auto CenterX(double value) const;
+        [[nodiscard]] auto CenterY() const;
+        auto CenterY(double value) const;
+        [[nodiscard]] auto Angle() const;
+        auto Angle(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRotateTransform>
     {
@@ -3277,9 +3271,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IRotateTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AngleProperty() const;
+        [[nodiscard]] auto CenterXProperty() const;
+        [[nodiscard]] auto CenterYProperty() const;
+        [[nodiscard]] auto AngleProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IRotateTransformStatics>
     {
@@ -3288,14 +3282,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IScaleTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterX() const;
-        WINRT_IMPL_AUTO(void) CenterX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterY() const;
-        WINRT_IMPL_AUTO(void) CenterY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ScaleX() const;
-        WINRT_IMPL_AUTO(void) ScaleX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ScaleY() const;
-        WINRT_IMPL_AUTO(void) ScaleY(double value) const;
+        [[nodiscard]] auto CenterX() const;
+        auto CenterX(double value) const;
+        [[nodiscard]] auto CenterY() const;
+        auto CenterY(double value) const;
+        [[nodiscard]] auto ScaleX() const;
+        auto ScaleX(double value) const;
+        [[nodiscard]] auto ScaleY() const;
+        auto ScaleY(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IScaleTransform>
     {
@@ -3304,10 +3298,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IScaleTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ScaleXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ScaleYProperty() const;
+        [[nodiscard]] auto CenterXProperty() const;
+        [[nodiscard]] auto CenterYProperty() const;
+        [[nodiscard]] auto ScaleXProperty() const;
+        [[nodiscard]] auto ScaleYProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IScaleTransformStatics>
     {
@@ -3332,14 +3326,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ISkewTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterX() const;
-        WINRT_IMPL_AUTO(void) CenterX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterY() const;
-        WINRT_IMPL_AUTO(void) CenterY(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) AngleX() const;
-        WINRT_IMPL_AUTO(void) AngleX(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) AngleY() const;
-        WINRT_IMPL_AUTO(void) AngleY(double value) const;
+        [[nodiscard]] auto CenterX() const;
+        auto CenterX(double value) const;
+        [[nodiscard]] auto CenterY() const;
+        auto CenterY(double value) const;
+        [[nodiscard]] auto AngleX() const;
+        auto AngleX(double value) const;
+        [[nodiscard]] auto AngleY() const;
+        auto AngleY(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ISkewTransform>
     {
@@ -3348,10 +3342,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ISkewTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CenterYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AngleXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AngleYProperty() const;
+        [[nodiscard]] auto CenterXProperty() const;
+        [[nodiscard]] auto CenterYProperty() const;
+        [[nodiscard]] auto AngleXProperty() const;
+        [[nodiscard]] auto AngleYProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ISkewTransformStatics>
     {
@@ -3360,8 +3354,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ISolidColorBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ISolidColorBrush>
     {
@@ -3370,7 +3364,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ISolidColorBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::SolidColorBrush) CreateInstanceWithColor(winrt::Windows::UI::Color const& color) const;
+        auto CreateInstanceWithColor(winrt::Windows::UI::Color const& color) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ISolidColorBrushFactory>
     {
@@ -3379,7 +3373,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ISolidColorBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorProperty() const;
+        [[nodiscard]] auto ColorProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ISolidColorBrushStatics>
     {
@@ -3388,7 +3382,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IThemeShadow
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElementWeakCollection) Receivers() const;
+        [[nodiscard]] auto Receivers() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IThemeShadow>
     {
@@ -3397,7 +3391,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IThemeShadowFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::ThemeShadow) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IThemeShadowFactory>
     {
@@ -3406,12 +3400,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITileBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::AlignmentX) AlignmentX() const;
-        WINRT_IMPL_AUTO(void) AlignmentX(winrt::Windows::UI::Xaml::Media::AlignmentX const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::AlignmentY) AlignmentY() const;
-        WINRT_IMPL_AUTO(void) AlignmentY(winrt::Windows::UI::Xaml::Media::AlignmentY const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Stretch) Stretch() const;
-        WINRT_IMPL_AUTO(void) Stretch(winrt::Windows::UI::Xaml::Media::Stretch const& value) const;
+        [[nodiscard]] auto AlignmentX() const;
+        auto AlignmentX(winrt::Windows::UI::Xaml::Media::AlignmentX const& value) const;
+        [[nodiscard]] auto AlignmentY() const;
+        auto AlignmentY(winrt::Windows::UI::Xaml::Media::AlignmentY const& value) const;
+        [[nodiscard]] auto Stretch() const;
+        auto Stretch(winrt::Windows::UI::Xaml::Media::Stretch const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITileBrush>
     {
@@ -3420,7 +3414,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITileBrushFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::TileBrush) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITileBrushFactory>
     {
@@ -3429,9 +3423,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITileBrushStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AlignmentXProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AlignmentYProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) StretchProperty() const;
+        [[nodiscard]] auto AlignmentXProperty() const;
+        [[nodiscard]] auto AlignmentYProperty() const;
+        [[nodiscard]] auto StretchProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITileBrushStatics>
     {
@@ -3440,12 +3434,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITimelineMarker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Time() const;
-        WINRT_IMPL_AUTO(void) Time(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Type() const;
-        WINRT_IMPL_AUTO(void) Type(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
+        [[nodiscard]] auto Time() const;
+        auto Time(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto Type() const;
+        auto Type(param::hstring const& value) const;
+        [[nodiscard]] auto Text() const;
+        auto Text(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITimelineMarker>
     {
@@ -3454,8 +3448,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITimelineMarkerRoutedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::TimelineMarker) Marker() const;
-        WINRT_IMPL_AUTO(void) Marker(winrt::Windows::UI::Xaml::Media::TimelineMarker const& value) const;
+        [[nodiscard]] auto Marker() const;
+        auto Marker(winrt::Windows::UI::Xaml::Media::TimelineMarker const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITimelineMarkerRoutedEventArgs>
     {
@@ -3464,9 +3458,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITimelineMarkerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TimeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TextProperty() const;
+        [[nodiscard]] auto TimeProperty() const;
+        [[nodiscard]] auto TypeProperty() const;
+        [[nodiscard]] auto TextProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITimelineMarkerStatics>
     {
@@ -3491,9 +3485,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITransformGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::TransformCollection) Children() const;
-        WINRT_IMPL_AUTO(void) Children(winrt::Windows::UI::Xaml::Media::TransformCollection const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Matrix) Value() const;
+        [[nodiscard]] auto Children() const;
+        auto Children(winrt::Windows::UI::Xaml::Media::TransformCollection const& value) const;
+        [[nodiscard]] auto Value() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITransformGroup>
     {
@@ -3502,7 +3496,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITransformGroupStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ChildrenProperty() const;
+        [[nodiscard]] auto ChildrenProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITransformGroupStatics>
     {
@@ -3511,10 +3505,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITranslateTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) X() const;
-        WINRT_IMPL_AUTO(void) X(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Y() const;
-        WINRT_IMPL_AUTO(void) Y(double value) const;
+        [[nodiscard]] auto X() const;
+        auto X(double value) const;
+        [[nodiscard]] auto Y() const;
+        auto Y(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITranslateTransform>
     {
@@ -3523,8 +3517,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_ITranslateTransformStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) XProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) YProperty() const;
+        [[nodiscard]] auto XProperty() const;
+        [[nodiscard]] auto YProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::ITranslateTransformStatics>
     {
@@ -3541,14 +3535,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::UIElement>) FindElementsInHostCoordinates(winrt::Windows::Foundation::Point const& intersectingPoint, winrt::Windows::UI::Xaml::UIElement const& subtree) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::UIElement>) FindElementsInHostCoordinates(winrt::Windows::Foundation::Rect const& intersectingRect, winrt::Windows::UI::Xaml::UIElement const& subtree) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::UIElement>) FindElementsInHostCoordinates(winrt::Windows::Foundation::Point const& intersectingPoint, winrt::Windows::UI::Xaml::UIElement const& subtree, bool includeAllElements) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::UIElement>) FindElementsInHostCoordinates(winrt::Windows::Foundation::Rect const& intersectingRect, winrt::Windows::UI::Xaml::UIElement const& subtree, bool includeAllElements) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyObject) GetChild(winrt::Windows::UI::Xaml::DependencyObject const& reference, int32_t childIndex) const;
-        WINRT_IMPL_AUTO(int32_t) GetChildrenCount(winrt::Windows::UI::Xaml::DependencyObject const& reference) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyObject) GetParent(winrt::Windows::UI::Xaml::DependencyObject const& reference) const;
-        WINRT_IMPL_AUTO(void) DisconnectChildrenRecursive(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto FindElementsInHostCoordinates(winrt::Windows::Foundation::Point const& intersectingPoint, winrt::Windows::UI::Xaml::UIElement const& subtree) const;
+        auto FindElementsInHostCoordinates(winrt::Windows::Foundation::Rect const& intersectingRect, winrt::Windows::UI::Xaml::UIElement const& subtree) const;
+        auto FindElementsInHostCoordinates(winrt::Windows::Foundation::Point const& intersectingPoint, winrt::Windows::UI::Xaml::UIElement const& subtree, bool includeAllElements) const;
+        auto FindElementsInHostCoordinates(winrt::Windows::Foundation::Rect const& intersectingRect, winrt::Windows::UI::Xaml::UIElement const& subtree, bool includeAllElements) const;
+        auto GetChild(winrt::Windows::UI::Xaml::DependencyObject const& reference, int32_t childIndex) const;
+        auto GetChildrenCount(winrt::Windows::UI::Xaml::DependencyObject const& reference) const;
+        auto GetParent(winrt::Windows::UI::Xaml::DependencyObject const& reference) const;
+        auto DisconnectChildrenRecursive(winrt::Windows::UI::Xaml::UIElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics>
     {
@@ -3557,7 +3551,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Xaml::Controls::Primitives::Popup>) GetOpenPopups(winrt::Windows::UI::Xaml::Window const& window) const;
+        auto GetOpenPopups(winrt::Windows::UI::Xaml::Window const& window) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics2>
     {
@@ -3566,7 +3560,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IVisualTreeHelperStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Xaml::Controls::Primitives::Popup>) GetOpenPopupsForXamlRoot(winrt::Windows::UI::Xaml::XamlRoot const& xamlRoot) const;
+        auto GetOpenPopupsForXamlRoot(winrt::Windows::UI::Xaml::XamlRoot const& xamlRoot) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics3>
     {
@@ -3575,8 +3569,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBase
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) FallbackColor() const;
-        WINRT_IMPL_AUTO(void) FallbackColor(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto FallbackColor() const;
+        auto FallbackColor(winrt::Windows::UI::Color const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBase>
     {
@@ -3585,7 +3579,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBaseFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseFactory>
     {
@@ -3594,8 +3588,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBaseOverrides
     {
-        WINRT_IMPL_AUTO(void) OnConnected() const;
-        WINRT_IMPL_AUTO(void) OnDisconnected() const;
+        auto OnConnected() const;
+        auto OnDisconnected() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>
     {
@@ -3604,8 +3598,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBaseProtected
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) CompositionBrush() const;
-        WINRT_IMPL_AUTO(void) CompositionBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto CompositionBrush() const;
+        auto CompositionBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>
     {
@@ -3614,7 +3608,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlCompositionBrushBaseStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FallbackColorProperty() const;
+        [[nodiscard]] auto FallbackColorProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseStatics>
     {
@@ -3631,7 +3625,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlLightFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::XamlLight) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlLightFactory>
     {
@@ -3640,9 +3634,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlLightOverrides
     {
-        WINRT_IMPL_AUTO(hstring) GetId() const;
-        WINRT_IMPL_AUTO(void) OnConnected(winrt::Windows::UI::Xaml::UIElement const& newElement) const;
-        WINRT_IMPL_AUTO(void) OnDisconnected(winrt::Windows::UI::Xaml::UIElement const& oldElement) const;
+        auto GetId() const;
+        auto OnConnected(winrt::Windows::UI::Xaml::UIElement const& newElement) const;
+        auto OnDisconnected(winrt::Windows::UI::Xaml::UIElement const& oldElement) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlLightOverrides>
     {
@@ -3651,8 +3645,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlLightProtected
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionLight) CompositionLight() const;
-        WINRT_IMPL_AUTO(void) CompositionLight(winrt::Windows::UI::Composition::CompositionLight const& value) const;
+        [[nodiscard]] auto CompositionLight() const;
+        auto CompositionLight(winrt::Windows::UI::Composition::CompositionLight const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlLightProtected>
     {
@@ -3661,10 +3655,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Media_IXamlLightStatics
     {
-        WINRT_IMPL_AUTO(void) AddTargetElement(param::hstring const& lightId, winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(void) RemoveTargetElement(param::hstring const& lightId, winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(void) AddTargetBrush(param::hstring const& lightId, winrt::Windows::UI::Xaml::Media::Brush const& brush) const;
-        WINRT_IMPL_AUTO(void) RemoveTargetBrush(param::hstring const& lightId, winrt::Windows::UI::Xaml::Media::Brush const& brush) const;
+        auto AddTargetElement(param::hstring const& lightId, winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto RemoveTargetElement(param::hstring const& lightId, winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto AddTargetBrush(param::hstring const& lightId, winrt::Windows::UI::Xaml::Media::Brush const& brush) const;
+        auto RemoveTargetBrush(param::hstring const& lightId, winrt::Windows::UI::Xaml::Media::Brush const& brush) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Media::IXamlLightStatics>
     {

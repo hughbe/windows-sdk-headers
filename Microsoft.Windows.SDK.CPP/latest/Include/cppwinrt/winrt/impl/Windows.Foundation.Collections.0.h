@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -235,7 +235,7 @@ namespace winrt::impl
     template <typename D, typename T>
     struct consume_Windows_Foundation_Collections_IIterable
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterator<T>) First() const;
+        auto First() const;
 
         auto begin() const;
         auto end() const;
@@ -247,10 +247,10 @@ namespace winrt::impl
     template <typename D, typename T>
     struct consume_Windows_Foundation_Collections_IIterator
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(T) Current() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasCurrent() const;
-        WINRT_IMPL_AUTO(bool) MoveNext() const;
-        WINRT_IMPL_AUTO(uint32_t) GetMany(array_view<T> items) const;
+        [[nodiscard]] auto Current() const;
+        [[nodiscard]] auto HasCurrent() const;
+        auto MoveNext() const;
+        auto GetMany(array_view<T> items) const;
 
         auto& operator++()
         {
@@ -279,8 +279,8 @@ namespace winrt::impl
     template <typename D, typename K, typename V>
     struct consume_Windows_Foundation_Collections_IKeyValuePair
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(K) Key() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(V) Value() const;
+        [[nodiscard]] auto Key() const;
+        [[nodiscard]] auto Value() const;
 
         bool operator==(Windows::Foundation::Collections::IKeyValuePair<K, V> const& other) const
         {
@@ -299,8 +299,8 @@ namespace winrt::impl
     template <typename D, typename K>
     struct consume_Windows_Foundation_Collections_IMapChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::CollectionChange) CollectionChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(K) Key() const;
+        [[nodiscard]] auto CollectionChange() const;
+        [[nodiscard]] auto Key() const;
     };
     template <typename K> struct consume<winrt::Windows::Foundation::Collections::IMapChangedEventArgs<K>>
     {
@@ -309,10 +309,10 @@ namespace winrt::impl
     template <typename D, typename K, typename V>
     struct consume_Windows_Foundation_Collections_IMapView
     {
-        WINRT_IMPL_AUTO(V) Lookup(impl::param_type<K> const& key) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(bool) HasKey(impl::param_type<K> const& key) const;
-        WINRT_IMPL_AUTO(void) Split(winrt::Windows::Foundation::Collections::IMapView<K, V>& first, winrt::Windows::Foundation::Collections::IMapView<K, V>& second) const;
+        auto Lookup(impl::param_type<K> const& key) const;
+        [[nodiscard]] auto Size() const;
+        auto HasKey(impl::param_type<K> const& key) const;
+        auto Split(winrt::Windows::Foundation::Collections::IMapView<K, V>& first, winrt::Windows::Foundation::Collections::IMapView<K, V>& second) const;
 
         auto TryLookup(param_type<K> const& key) const
         {
@@ -343,13 +343,13 @@ namespace winrt::impl
     template <typename D, typename K, typename V>
     struct consume_Windows_Foundation_Collections_IMap
     {
-        WINRT_IMPL_AUTO(V) Lookup(impl::param_type<K> const& key) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(bool) HasKey(impl::param_type<K> const& key) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<K, V>) GetView() const;
-        WINRT_IMPL_AUTO(bool) Insert(impl::param_type<K> const& key, impl::param_type<V> const& value) const;
-        WINRT_IMPL_AUTO(void) Remove(impl::param_type<K> const& key) const;
-        WINRT_IMPL_AUTO(void) Clear() const;
+        auto Lookup(impl::param_type<K> const& key) const;
+        [[nodiscard]] auto Size() const;
+        auto HasKey(impl::param_type<K> const& key) const;
+        auto GetView() const;
+        auto Insert(impl::param_type<K> const& key, impl::param_type<V> const& value) const;
+        auto Remove(impl::param_type<K> const& key) const;
+        auto Clear() const;
 
         auto TryLookup(param_type<K> const& key) const
         {
@@ -385,10 +385,10 @@ namespace winrt::impl
     template <typename D, typename K, typename V>
     struct consume_Windows_Foundation_Collections_IObservableMap
     {
-        WINRT_IMPL_AUTO(winrt::event_token) MapChanged(winrt::Windows::Foundation::Collections::MapChangedEventHandler<K, V> const& vhnd) const;
+        auto MapChanged(winrt::Windows::Foundation::Collections::MapChangedEventHandler<K, V> const& vhnd) const;
         using MapChanged_revoker = impl::event_revoker<winrt::Windows::Foundation::Collections::IObservableMap<K, V>, &impl::abi_t<winrt::Windows::Foundation::Collections::IObservableMap<K, V>>::remove_MapChanged>;
         [[nodiscard]] MapChanged_revoker MapChanged(auto_revoke_t, winrt::Windows::Foundation::Collections::MapChangedEventHandler<K, V> const& vhnd) const;
-        WINRT_IMPL_AUTO(void) MapChanged(winrt::event_token const& token) const noexcept;
+        auto MapChanged(winrt::event_token const& token) const noexcept;
     };
     template <typename K, typename V> struct consume<winrt::Windows::Foundation::Collections::IObservableMap<K, V>>
     {
@@ -397,10 +397,10 @@ namespace winrt::impl
     template <typename D, typename T>
     struct consume_Windows_Foundation_Collections_IObservableVector
     {
-        WINRT_IMPL_AUTO(winrt::event_token) VectorChanged(winrt::Windows::Foundation::Collections::VectorChangedEventHandler<T> const& vhnd) const;
+        auto VectorChanged(winrt::Windows::Foundation::Collections::VectorChangedEventHandler<T> const& vhnd) const;
         using VectorChanged_revoker = impl::event_revoker<winrt::Windows::Foundation::Collections::IObservableVector<T>, &impl::abi_t<winrt::Windows::Foundation::Collections::IObservableVector<T>>::remove_VectorChanged>;
         [[nodiscard]] VectorChanged_revoker VectorChanged(auto_revoke_t, winrt::Windows::Foundation::Collections::VectorChangedEventHandler<T> const& vhnd) const;
-        WINRT_IMPL_AUTO(void) VectorChanged(winrt::event_token const& token) const noexcept;
+        auto VectorChanged(winrt::event_token const& token) const noexcept;
     };
     template <typename T> struct consume<winrt::Windows::Foundation::Collections::IObservableVector<T>>
     {
@@ -417,8 +417,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Foundation_Collections_IVectorChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::CollectionChange) CollectionChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Index() const;
+        [[nodiscard]] auto CollectionChange() const;
+        [[nodiscard]] auto Index() const;
     };
     template <> struct consume<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
     {
@@ -427,10 +427,10 @@ namespace winrt::impl
     template <typename D, typename T>
     struct consume_Windows_Foundation_Collections_IVectorView
     {
-        WINRT_IMPL_AUTO(T) GetAt(uint32_t index) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(bool) IndexOf(impl::param_type<T> const& value, uint32_t& index) const;
-        WINRT_IMPL_AUTO(uint32_t) GetMany(uint32_t startIndex, array_view<T> items) const;
+        auto GetAt(uint32_t index) const;
+        [[nodiscard]] auto Size() const;
+        auto IndexOf(impl::param_type<T> const& value, uint32_t& index) const;
+        auto GetMany(uint32_t startIndex, array_view<T> items) const;
     };
     template <typename T> struct consume<winrt::Windows::Foundation::Collections::IVectorView<T>>
     {
@@ -439,18 +439,18 @@ namespace winrt::impl
     template <typename D, typename T>
     struct consume_Windows_Foundation_Collections_IVector
     {
-        WINRT_IMPL_AUTO(T) GetAt(uint32_t index) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<T>) GetView() const;
-        WINRT_IMPL_AUTO(bool) IndexOf(impl::param_type<T> const& value, uint32_t& index) const;
-        WINRT_IMPL_AUTO(void) SetAt(uint32_t index, impl::param_type<T> const& value) const;
-        WINRT_IMPL_AUTO(void) InsertAt(uint32_t index, impl::param_type<T> const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAt(uint32_t index) const;
-        WINRT_IMPL_AUTO(void) Append(impl::param_type<T> const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAtEnd() const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(uint32_t) GetMany(uint32_t startIndex, array_view<T> items) const;
-        WINRT_IMPL_AUTO(void) ReplaceAll(array_view<T const> items) const;
+        auto GetAt(uint32_t index) const;
+        [[nodiscard]] auto Size() const;
+        auto GetView() const;
+        auto IndexOf(impl::param_type<T> const& value, uint32_t& index) const;
+        auto SetAt(uint32_t index, impl::param_type<T> const& value) const;
+        auto InsertAt(uint32_t index, impl::param_type<T> const& value) const;
+        auto RemoveAt(uint32_t index) const;
+        auto Append(impl::param_type<T> const& value) const;
+        auto RemoveAtEnd() const;
+        auto Clear() const;
+        auto GetMany(uint32_t startIndex, array_view<T> items) const;
+        auto ReplaceAll(array_view<T const> items) const;
     };
     template <typename T> struct consume<winrt::Windows::Foundation::Collections::IVector<T>>
     {

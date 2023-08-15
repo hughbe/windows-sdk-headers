@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_UI_Xaml_Automation_0_H
 #define WINRT_Windows_UI_Xaml_Automation_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVector;
-}
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
     struct DependencyObject;
@@ -1229,11 +1225,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAnnotationPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AnnotationTypeIdProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AnnotationTypeNameProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AuthorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DateTimeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) TargetProperty() const;
+        [[nodiscard]] auto AnnotationTypeIdProperty() const;
+        [[nodiscard]] auto AnnotationTypeNameProperty() const;
+        [[nodiscard]] auto AuthorProperty() const;
+        [[nodiscard]] auto DateTimeProperty() const;
+        [[nodiscard]] auto TargetProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAnnotationPatternIdentifiersStatics>
     {
@@ -1242,10 +1238,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationAnnotation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AnnotationType) Type() const;
-        WINRT_IMPL_AUTO(void) Type(winrt::Windows::UI::Xaml::Automation::AnnotationType const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) Element() const;
-        WINRT_IMPL_AUTO(void) Element(winrt::Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto Type() const;
+        auto Type(winrt::Windows::UI::Xaml::Automation::AnnotationType const& value) const;
+        [[nodiscard]] auto Element() const;
+        auto Element(winrt::Windows::UI::Xaml::UIElement const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationAnnotation>
     {
@@ -1254,8 +1250,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationAnnotationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationAnnotation) CreateInstance(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationAnnotation) CreateWithElementParameter(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type, winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type) const;
+        auto CreateWithElementParameter(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type, winrt::Windows::UI::Xaml::UIElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationAnnotationFactory>
     {
@@ -1264,8 +1260,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationAnnotationStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ElementProperty() const;
+        [[nodiscard]] auto TypeProperty() const;
+        [[nodiscard]] auto ElementProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationAnnotationStatics>
     {
@@ -1282,29 +1278,29 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AcceleratorKeyProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AccessKeyProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AutomationIdProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) BoundingRectangleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ClassNameProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ClickablePointProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ControlTypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HasKeyboardFocusProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HelpTextProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsContentElementProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsControlElementProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsEnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsKeyboardFocusableProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsOffscreenProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsPasswordProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsRequiredForFormProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ItemStatusProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ItemTypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LabeledByProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LocalizedControlTypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) NameProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) OrientationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LiveSettingProperty() const;
+        [[nodiscard]] auto AcceleratorKeyProperty() const;
+        [[nodiscard]] auto AccessKeyProperty() const;
+        [[nodiscard]] auto AutomationIdProperty() const;
+        [[nodiscard]] auto BoundingRectangleProperty() const;
+        [[nodiscard]] auto ClassNameProperty() const;
+        [[nodiscard]] auto ClickablePointProperty() const;
+        [[nodiscard]] auto ControlTypeProperty() const;
+        [[nodiscard]] auto HasKeyboardFocusProperty() const;
+        [[nodiscard]] auto HelpTextProperty() const;
+        [[nodiscard]] auto IsContentElementProperty() const;
+        [[nodiscard]] auto IsControlElementProperty() const;
+        [[nodiscard]] auto IsEnabledProperty() const;
+        [[nodiscard]] auto IsKeyboardFocusableProperty() const;
+        [[nodiscard]] auto IsOffscreenProperty() const;
+        [[nodiscard]] auto IsPasswordProperty() const;
+        [[nodiscard]] auto IsRequiredForFormProperty() const;
+        [[nodiscard]] auto ItemStatusProperty() const;
+        [[nodiscard]] auto ItemTypeProperty() const;
+        [[nodiscard]] auto LabeledByProperty() const;
+        [[nodiscard]] auto LocalizedControlTypeProperty() const;
+        [[nodiscard]] auto NameProperty() const;
+        [[nodiscard]] auto OrientationProperty() const;
+        [[nodiscard]] auto LiveSettingProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics>
     {
@@ -1313,7 +1309,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ControlledPeersProperty() const;
+        [[nodiscard]] auto ControlledPeersProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics2>
     {
@@ -1322,10 +1318,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) PositionInSetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) SizeOfSetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LevelProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) AnnotationsProperty() const;
+        [[nodiscard]] auto PositionInSetProperty() const;
+        [[nodiscard]] auto SizeOfSetProperty() const;
+        [[nodiscard]] auto LevelProperty() const;
+        [[nodiscard]] auto AnnotationsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics3>
     {
@@ -1334,8 +1330,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LandmarkTypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LocalizedLandmarkTypeProperty() const;
+        [[nodiscard]] auto LandmarkTypeProperty() const;
+        [[nodiscard]] auto LocalizedLandmarkTypeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics4>
     {
@@ -1344,12 +1340,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsPeripheralProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsDataValidForFormProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FullDescriptionProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DescribedByProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FlowsToProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FlowsFromProperty() const;
+        [[nodiscard]] auto IsPeripheralProperty() const;
+        [[nodiscard]] auto IsDataValidForFormProperty() const;
+        [[nodiscard]] auto FullDescriptionProperty() const;
+        [[nodiscard]] auto DescribedByProperty() const;
+        [[nodiscard]] auto FlowsToProperty() const;
+        [[nodiscard]] auto FlowsFromProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics5>
     {
@@ -1358,7 +1354,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics6
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CultureProperty() const;
+        [[nodiscard]] auto CultureProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics6>
     {
@@ -1367,7 +1363,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics7
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HeadingLevelProperty() const;
+        [[nodiscard]] auto HeadingLevelProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics7>
     {
@@ -1376,7 +1372,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationElementIdentifiersStatics8
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsDialogProperty() const;
+        [[nodiscard]] auto IsDialogProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationElementIdentifiersStatics8>
     {
@@ -1393,36 +1389,36 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AcceleratorKeyProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetAcceleratorKey(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetAcceleratorKey(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AccessKeyProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetAccessKey(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetAccessKey(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AutomationIdProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetAutomationId(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetAutomationId(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) HelpTextProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetHelpText(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetHelpText(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsRequiredForFormProperty() const;
-        WINRT_IMPL_AUTO(bool) GetIsRequiredForForm(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetIsRequiredForForm(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemStatusProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetItemStatus(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetItemStatus(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemTypeProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetItemType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetItemType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LabeledByProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) GetLabeledBy(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLabeledBy(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::UIElement const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) NameProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetName(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetName(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LiveSettingProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting) GetLiveSetting(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLiveSetting(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting const& value) const;
+        [[nodiscard]] auto AcceleratorKeyProperty() const;
+        auto GetAcceleratorKey(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetAcceleratorKey(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto AccessKeyProperty() const;
+        auto GetAccessKey(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetAccessKey(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto AutomationIdProperty() const;
+        auto GetAutomationId(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetAutomationId(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto HelpTextProperty() const;
+        auto GetHelpText(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetHelpText(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto IsRequiredForFormProperty() const;
+        auto GetIsRequiredForForm(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetIsRequiredForForm(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] auto ItemStatusProperty() const;
+        auto GetItemStatus(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetItemStatus(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto ItemTypeProperty() const;
+        auto GetItemType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetItemType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto LabeledByProperty() const;
+        auto GetLabeledBy(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLabeledBy(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto NameProperty() const;
+        auto GetName(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetName(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto LiveSettingProperty() const;
+        auto GetLiveSetting(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLiveSetting(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics>
     {
@@ -1431,11 +1427,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AccessibilityViewProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AccessibilityView) GetAccessibilityView(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetAccessibilityView(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AccessibilityView const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ControlledPeersProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::UIElement>) GetControlledPeers(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto AccessibilityViewProperty() const;
+        auto GetAccessibilityView(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetAccessibilityView(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AccessibilityView const& value) const;
+        [[nodiscard]] auto ControlledPeersProperty() const;
+        auto GetControlledPeers(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics2>
     {
@@ -1444,17 +1440,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PositionInSetProperty() const;
-        WINRT_IMPL_AUTO(int32_t) GetPositionInSet(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetPositionInSet(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SizeOfSetProperty() const;
-        WINRT_IMPL_AUTO(int32_t) GetSizeOfSet(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetSizeOfSet(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LevelProperty() const;
-        WINRT_IMPL_AUTO(int32_t) GetLevel(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLevel(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AnnotationsProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>) GetAnnotations(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto PositionInSetProperty() const;
+        auto GetPositionInSet(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetPositionInSet(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] auto SizeOfSetProperty() const;
+        auto GetSizeOfSet(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetSizeOfSet(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] auto LevelProperty() const;
+        auto GetLevel(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLevel(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] auto AnnotationsProperty() const;
+        auto GetAnnotations(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics3>
     {
@@ -1463,12 +1459,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LandmarkTypeProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType) GetLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LocalizedLandmarkTypeProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLocalizedLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto LandmarkTypeProperty() const;
+        auto GetLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType const& value) const;
+        [[nodiscard]] auto LocalizedLandmarkTypeProperty() const;
+        auto GetLocalizedLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLocalizedLandmarkType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics4>
     {
@@ -1477,24 +1473,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsPeripheralProperty() const;
-        WINRT_IMPL_AUTO(bool) GetIsPeripheral(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetIsPeripheral(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsDataValidForFormProperty() const;
-        WINRT_IMPL_AUTO(bool) GetIsDataValidForForm(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetIsDataValidForForm(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FullDescriptionProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetFullDescription(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetFullDescription(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LocalizedControlTypeProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedControlType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetLocalizedControlType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DescribedByProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::DependencyObject>) GetDescribedBy(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FlowsToProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::DependencyObject>) GetFlowsTo(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FlowsFromProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::DependencyObject>) GetFlowsFrom(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto IsPeripheralProperty() const;
+        auto GetIsPeripheral(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetIsPeripheral(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] auto IsDataValidForFormProperty() const;
+        auto GetIsDataValidForForm(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetIsDataValidForForm(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] auto FullDescriptionProperty() const;
+        auto GetFullDescription(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetFullDescription(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto LocalizedControlTypeProperty() const;
+        auto GetLocalizedControlType(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetLocalizedControlType(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto DescribedByProperty() const;
+        auto GetDescribedBy(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto FlowsToProperty() const;
+        auto GetFlowsTo(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto FlowsFromProperty() const;
+        auto GetFlowsFrom(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics5>
     {
@@ -1503,9 +1499,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics6
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CultureProperty() const;
-        WINRT_IMPL_AUTO(int32_t) GetCulture(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetCulture(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] auto CultureProperty() const;
+        auto GetCulture(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetCulture(winrt::Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics6>
     {
@@ -1514,9 +1510,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics7
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) HeadingLevelProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel) GetHeadingLevel(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetHeadingLevel(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel const& value) const;
+        [[nodiscard]] auto HeadingLevelProperty() const;
+        auto GetHeadingLevel(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetHeadingLevel(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics7>
     {
@@ -1525,9 +1521,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics8
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsDialogProperty() const;
-        WINRT_IMPL_AUTO(bool) GetIsDialog(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetIsDialog(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] auto IsDialogProperty() const;
+        auto GetIsDialog(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetIsDialog(winrt::Windows::UI::Xaml::DependencyObject const& element, bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8>
     {
@@ -1536,9 +1532,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AutomationControlTypeProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType) GetAutomationControlType(winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(void) SetAutomationControlType(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value) const;
+        [[nodiscard]] auto AutomationControlTypeProperty() const;
+        auto GetAutomationControlType(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto SetAutomationControlType(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>
     {
@@ -1563,7 +1559,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IDockPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DockPositionProperty() const;
+        [[nodiscard]] auto DockPositionProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IDockPatternIdentifiersStatics>
     {
@@ -1580,10 +1576,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IDragPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DropEffectProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DropEffectsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) GrabbedItemsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsGrabbedProperty() const;
+        [[nodiscard]] auto DropEffectProperty() const;
+        [[nodiscard]] auto DropEffectsProperty() const;
+        [[nodiscard]] auto GrabbedItemsProperty() const;
+        [[nodiscard]] auto IsGrabbedProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IDragPatternIdentifiersStatics>
     {
@@ -1600,8 +1596,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IDropTargetPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DropTargetEffectProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) DropTargetEffectsProperty() const;
+        [[nodiscard]] auto DropTargetEffectProperty() const;
+        [[nodiscard]] auto DropTargetEffectsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IDropTargetPatternIdentifiersStatics>
     {
@@ -1618,7 +1614,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IExpandCollapsePatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ExpandCollapseStateProperty() const;
+        [[nodiscard]] auto ExpandCollapseStateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IExpandCollapsePatternIdentifiersStatics>
     {
@@ -1635,11 +1631,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IGridItemPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ColumnProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ColumnSpanProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ContainingGridProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowSpanProperty() const;
+        [[nodiscard]] auto ColumnProperty() const;
+        [[nodiscard]] auto ColumnSpanProperty() const;
+        [[nodiscard]] auto ContainingGridProperty() const;
+        [[nodiscard]] auto RowProperty() const;
+        [[nodiscard]] auto RowSpanProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IGridItemPatternIdentifiersStatics>
     {
@@ -1656,8 +1652,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IGridPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ColumnCountProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowCountProperty() const;
+        [[nodiscard]] auto ColumnCountProperty() const;
+        [[nodiscard]] auto RowCountProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IGridPatternIdentifiersStatics>
     {
@@ -1674,8 +1670,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IMultipleViewPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CurrentViewProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) SupportedViewsProperty() const;
+        [[nodiscard]] auto CurrentViewProperty() const;
+        [[nodiscard]] auto SupportedViewsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IMultipleViewPatternIdentifiersStatics>
     {
@@ -1692,12 +1688,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IRangeValuePatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsReadOnlyProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) LargeChangeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) MaximumProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) MinimumProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) SmallChangeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ValueProperty() const;
+        [[nodiscard]] auto IsReadOnlyProperty() const;
+        [[nodiscard]] auto LargeChangeProperty() const;
+        [[nodiscard]] auto MaximumProperty() const;
+        [[nodiscard]] auto MinimumProperty() const;
+        [[nodiscard]] auto SmallChangeProperty() const;
+        [[nodiscard]] auto ValueProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IRangeValuePatternIdentifiersStatics>
     {
@@ -1714,13 +1710,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IScrollPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HorizontallyScrollableProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HorizontalScrollPercentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) HorizontalViewSizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NoScroll() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) VerticallyScrollableProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) VerticalScrollPercentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) VerticalViewSizeProperty() const;
+        [[nodiscard]] auto HorizontallyScrollableProperty() const;
+        [[nodiscard]] auto HorizontalScrollPercentProperty() const;
+        [[nodiscard]] auto HorizontalViewSizeProperty() const;
+        [[nodiscard]] auto NoScroll() const;
+        [[nodiscard]] auto VerticallyScrollableProperty() const;
+        [[nodiscard]] auto VerticalScrollPercentProperty() const;
+        [[nodiscard]] auto VerticalViewSizeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IScrollPatternIdentifiersStatics>
     {
@@ -1737,8 +1733,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ISelectionItemPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsSelectedProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) SelectionContainerProperty() const;
+        [[nodiscard]] auto IsSelectedProperty() const;
+        [[nodiscard]] auto SelectionContainerProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ISelectionItemPatternIdentifiersStatics>
     {
@@ -1755,9 +1751,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ISelectionPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanSelectMultipleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsSelectionRequiredProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) SelectionProperty() const;
+        [[nodiscard]] auto CanSelectMultipleProperty() const;
+        [[nodiscard]] auto IsSelectionRequiredProperty() const;
+        [[nodiscard]] auto SelectionProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ISelectionPatternIdentifiersStatics>
     {
@@ -1774,7 +1770,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ISpreadsheetItemPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FormulaProperty() const;
+        [[nodiscard]] auto FormulaProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ISpreadsheetItemPatternIdentifiersStatics>
     {
@@ -1791,13 +1787,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IStylesPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ExtendedPropertiesProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FillColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FillPatternColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) FillPatternStyleProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ShapeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) StyleIdProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) StyleNameProperty() const;
+        [[nodiscard]] auto ExtendedPropertiesProperty() const;
+        [[nodiscard]] auto FillColorProperty() const;
+        [[nodiscard]] auto FillPatternColorProperty() const;
+        [[nodiscard]] auto FillPatternStyleProperty() const;
+        [[nodiscard]] auto ShapeProperty() const;
+        [[nodiscard]] auto StyleIdProperty() const;
+        [[nodiscard]] auto StyleNameProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IStylesPatternIdentifiersStatics>
     {
@@ -1814,8 +1810,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ITableItemPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ColumnHeaderItemsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowHeaderItemsProperty() const;
+        [[nodiscard]] auto ColumnHeaderItemsProperty() const;
+        [[nodiscard]] auto RowHeaderItemsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ITableItemPatternIdentifiersStatics>
     {
@@ -1832,9 +1828,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ITablePatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ColumnHeadersProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowHeadersProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) RowOrColumnMajorProperty() const;
+        [[nodiscard]] auto ColumnHeadersProperty() const;
+        [[nodiscard]] auto RowHeadersProperty() const;
+        [[nodiscard]] auto RowOrColumnMajorProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ITablePatternIdentifiersStatics>
     {
@@ -1851,7 +1847,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ITogglePatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ToggleStateProperty() const;
+        [[nodiscard]] auto ToggleStateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ITogglePatternIdentifiersStatics>
     {
@@ -1868,10 +1864,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ITransformPattern2IdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanZoomProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ZoomLevelProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) MaxZoomProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) MinZoomProperty() const;
+        [[nodiscard]] auto CanZoomProperty() const;
+        [[nodiscard]] auto ZoomLevelProperty() const;
+        [[nodiscard]] auto MaxZoomProperty() const;
+        [[nodiscard]] auto MinZoomProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ITransformPattern2IdentifiersStatics>
     {
@@ -1888,9 +1884,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_ITransformPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanMoveProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanResizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanRotateProperty() const;
+        [[nodiscard]] auto CanMoveProperty() const;
+        [[nodiscard]] auto CanResizeProperty() const;
+        [[nodiscard]] auto CanRotateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::ITransformPatternIdentifiersStatics>
     {
@@ -1907,8 +1903,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IValuePatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsReadOnlyProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) ValueProperty() const;
+        [[nodiscard]] auto IsReadOnlyProperty() const;
+        [[nodiscard]] auto ValueProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IValuePatternIdentifiersStatics>
     {
@@ -1925,12 +1921,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IWindowPatternIdentifiersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanMaximizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) CanMinimizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsModalProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) IsTopmostProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) WindowInteractionStateProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AutomationProperty) WindowVisualStateProperty() const;
+        [[nodiscard]] auto CanMaximizeProperty() const;
+        [[nodiscard]] auto CanMinimizeProperty() const;
+        [[nodiscard]] auto IsModalProperty() const;
+        [[nodiscard]] auto IsTopmostProperty() const;
+        [[nodiscard]] auto WindowInteractionStateProperty() const;
+        [[nodiscard]] auto WindowVisualStateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::IWindowPatternIdentifiersStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -410,7 +410,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using ITextElementOverrides = winrt::Windows::UI::Xaml::Documents::ITextElementOverrides;
-        WINRT_IMPL_AUTO(void) OnDisconnectVisualChildren() const;
+        auto OnDisconnectVisualChildren() const;
     };
 }
 #endif

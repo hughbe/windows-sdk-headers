@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -51,7 +51,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Core_IApplicationDataManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationData) CreateForPackageFamily(param::hstring const& packageFamilyName) const;
+        auto CreateForPackageFamily(param::hstring const& packageFamilyName) const;
     };
     template <> struct consume<winrt::Windows::Management::Core::IApplicationDataManagerStatics>
     {

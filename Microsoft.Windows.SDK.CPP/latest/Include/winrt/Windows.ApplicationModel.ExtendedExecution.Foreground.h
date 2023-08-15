@@ -390,7 +390,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IExtendedExecutionForegroundRevokedEventArgs = _uuidof(IExtendedExecutionForegroundRevokedEventArgs);
+                    MIDL_CONST_ID IID& IID_IExtendedExecutionForegroundRevokedEventArgs = __uuidof(IExtendedExecutionForegroundRevokedEventArgs);
                 } /* Foreground */
             } /* ExtendedExecution */
         } /* ApplicationModel */
@@ -450,7 +450,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IExtendedExecutionForegroundSession = _uuidof(IExtendedExecutionForegroundSession);
+                    MIDL_CONST_ID IID& IID_IExtendedExecutionForegroundSession = __uuidof(IExtendedExecutionForegroundSession);
                 } /* Foreground */
             } /* ExtendedExecution */
         } /* ApplicationModel */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -33,8 +33,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Preview_IGameControllerProviderInfoStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetParentProviderId(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
-        WINRT_IMPL_AUTO(hstring) GetProviderId(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
+        auto GetParentProviderId(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
+        auto GetProviderId(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Preview::IGameControllerProviderInfoStatics>
     {

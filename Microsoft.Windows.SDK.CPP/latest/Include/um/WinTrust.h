@@ -113,6 +113,7 @@ typedef struct _WINTRUST_DATA
 #                       define      WTD_CHOICE_BLOB         3
 #                       define      WTD_CHOICE_SIGNER       4
 #                       define      WTD_CHOICE_CERT         5
+#                       define      WTD_CHOICE_DETACHED_SIG 6
     union
     {
         struct WINTRUST_FILE_INFO_      *pFile;         // individual file
@@ -120,6 +121,7 @@ typedef struct _WINTRUST_DATA
         struct WINTRUST_BLOB_INFO_      *pBlob;         // memory blob
         struct WINTRUST_SGNR_INFO_      *pSgnr;         // signer structure only
         struct WINTRUST_CERT_INFO_      *pCert;
+        struct WINTRUST_DETACHED_SIG_INFO_ *pDetachedSig;
     };
 
     DWORD           dwStateAction;                      // optional (Catalog File Processing)
@@ -224,6 +226,51 @@ typedef struct WINTRUST_FILE_INFO_
     GUID            *pgKnownSubject;            // optional: fill if the subject type is known.
 
 } WINTRUST_FILE_INFO, *PWINTRUST_FILE_INFO;
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// WINTRUST_DETACHED_SIG_INFO Structure and substructures
+//----------------------------------------------------------------------------
+//  Used when calling WinVerifyTrust against a PKCS7 detached signature and its associated content
+//  
+//
+
+//
+// Structure for verification using file handles
+//
+
+typedef struct WINTRUST_DETACHED_SIG_HANDLES_
+{
+    HANDLE hContentFile;
+    HANDLE hSignatureFile;
+} WINTRUST_DETACHED_SIG_FILE_HANDLES, *PWINTRUST_DETACHED_SIG_FILE_HANDLES;
+
+//
+// Structure for verification using in-memory blobs
+//
+
+typedef struct WINTRUST_DETACHED_SIG_BLOBS_
+{
+    LARGE_INTEGER       cbContentObject;
+    BYTE *              pbContentObject;
+    DWORD               cbSignatureObject;
+    BYTE *              pbSignatureObject;
+} WINTRUST_DETACHED_SIG_BLOBS, *PWINTRUST_DETACHED_SIG_BLOBS;
+
+typedef struct WINTRUST_DETACHED_SIG_INFO_
+{
+    DWORD           cbStruct;                   // = sizeof(WINTRUST_DETACHEDSIG_INFO)
+
+    DWORD 	      dwUnionChoice;
+#                       define      WINTRUST_DETACHED_SIG_CHOICE_HANDLE         1
+#                       define      WINTRUST_DETACHED_SIG_CHOICE_BLOB           2
+    union
+    {
+        struct WINTRUST_DETACHED_SIG_HANDLES_ *pDetachedSigHandles;
+        struct WINTRUST_DETACHED_SIG_BLOBS_ *pDetachedSigBlobs;
+    };
+} WINTRUST_DETACHED_SIG_INFO, *PWINTRUST_DETACHED_SIG_INFO;
+
 
 //Typedef to avoid new inclusion of mscat.h
 typedef HANDLE HCATADMIN;

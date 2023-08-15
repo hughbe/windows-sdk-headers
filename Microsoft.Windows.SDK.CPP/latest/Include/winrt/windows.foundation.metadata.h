@@ -223,7 +223,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IApiInformationStatics = _uuidof(IApiInformationStatics);
+                MIDL_CONST_ID IID& IID_IApiInformationStatics = __uuidof(IApiInformationStatics);
             } /* Metadata */
         } /* Foundation */
     } /* Windows */

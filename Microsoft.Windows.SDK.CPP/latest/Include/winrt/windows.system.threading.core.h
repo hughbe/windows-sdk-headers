@@ -301,7 +301,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISignalHandler = _uuidof(ISignalHandler);
+                    MIDL_CONST_ID IID& IID_ISignalHandler = __uuidof(ISignalHandler);
                 } /* Core */
             } /* Threading */
         } /* System */
@@ -339,7 +339,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPreallocatedWorkItem = _uuidof(IPreallocatedWorkItem);
+                    MIDL_CONST_ID IID& IID_IPreallocatedWorkItem = __uuidof(IPreallocatedWorkItem);
                 } /* Core */
             } /* Threading */
         } /* System */
@@ -389,7 +389,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPreallocatedWorkItemFactory = _uuidof(IPreallocatedWorkItemFactory);
+                    MIDL_CONST_ID IID& IID_IPreallocatedWorkItemFactory = __uuidof(IPreallocatedWorkItemFactory);
                 } /* Core */
             } /* Threading */
         } /* System */
@@ -426,7 +426,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Terminate(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISignalNotifier = _uuidof(ISignalNotifier);
+                    MIDL_CONST_ID IID& IID_ISignalNotifier = __uuidof(ISignalNotifier);
                 } /* Core */
             } /* Threading */
         } /* System */
@@ -483,7 +483,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISignalNotifierStatics = _uuidof(ISignalNotifierStatics);
+                    MIDL_CONST_ID IID& IID_ISignalNotifierStatics = __uuidof(ISignalNotifierStatics);
                 } /* Core */
             } /* Threading */
         } /* System */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,7 +14,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Management
 {
@@ -121,19 +120,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_IMdmAlert
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Data() const;
-        WINRT_IMPL_AUTO(void) Data(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::MdmAlertDataType) Format() const;
-        WINRT_IMPL_AUTO(void) Format(winrt::Windows::Management::MdmAlertDataType const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::MdmAlertMark) Mark() const;
-        WINRT_IMPL_AUTO(void) Mark(winrt::Windows::Management::MdmAlertMark const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Source() const;
-        WINRT_IMPL_AUTO(void) Source(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Target() const;
-        WINRT_IMPL_AUTO(void) Target(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Type() const;
-        WINRT_IMPL_AUTO(void) Type(param::hstring const& value) const;
+        [[nodiscard]] auto Data() const;
+        auto Data(param::hstring const& value) const;
+        [[nodiscard]] auto Format() const;
+        auto Format(winrt::Windows::Management::MdmAlertDataType const& value) const;
+        [[nodiscard]] auto Mark() const;
+        auto Mark(winrt::Windows::Management::MdmAlertMark const& value) const;
+        [[nodiscard]] auto Source() const;
+        auto Source(param::hstring const& value) const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto Target() const;
+        auto Target(param::hstring const& value) const;
+        [[nodiscard]] auto Type() const;
+        auto Type(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Management::IMdmAlert>
     {
@@ -142,14 +141,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_IMdmSession
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::MdmAlert>) Alerts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::MdmSessionState) State() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AttachAsync() const;
-        WINRT_IMPL_AUTO(void) Delete() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StartAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StartAsync(param::async_iterable<winrt::Windows::Management::MdmAlert> const& alerts) const;
+        [[nodiscard]] auto Alerts() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto State() const;
+        auto AttachAsync() const;
+        auto Delete() const;
+        auto StartAsync() const;
+        auto StartAsync(param::async_iterable<winrt::Windows::Management::MdmAlert> const& alerts) const;
     };
     template <> struct consume<winrt::Windows::Management::IMdmSession>
     {
@@ -158,10 +157,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_IMdmSessionManagerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) SessionIds() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Management::MdmSession) TryCreateSession() const;
-        WINRT_IMPL_AUTO(void) DeleteSessionById(param::hstring const& sessionId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Management::MdmSession) GetSessionById(param::hstring const& sessionId) const;
+        [[nodiscard]] auto SessionIds() const;
+        auto TryCreateSession() const;
+        auto DeleteSessionById(param::hstring const& sessionId) const;
+        auto GetSessionById(param::hstring const& sessionId) const;
     };
     template <> struct consume<winrt::Windows::Management::IMdmSessionManagerStatics>
     {

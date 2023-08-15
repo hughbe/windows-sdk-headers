@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,13 +9,11 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -99,14 +97,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CapabilityName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>) RequestAccessAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus) CheckAccess() const;
-        WINRT_IMPL_AUTO(winrt::event_token) AccessChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto CapabilityName() const;
+        [[nodiscard]] auto User() const;
+        auto RequestAccessAsync() const;
+        auto CheckAccess() const;
+        auto AccessChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> const& handler) const;
         using AccessChanged_revoker = impl::event_revoker<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability, &impl::abi_t<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability>::remove_AccessChanged>;
         [[nodiscard]] AccessChanged_revoker AccessChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) AccessChanged(winrt::event_token const& token) const noexcept;
+        auto AccessChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability>
     {
@@ -115,8 +113,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayMessage() const;
-        WINRT_IMPL_AUTO(void) DisplayMessage(param::hstring const& value) const;
+        [[nodiscard]] auto DisplayMessage() const;
+        auto DisplayMessage(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2>
     {
@@ -133,10 +131,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>) RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>) RequestAccessForCapabilitiesForUserAsync(winrt::Windows::System::User const& user, param::async_iterable<hstring> const& capabilityNames) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability) Create(param::hstring const& capabilityName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability) CreateWithProcessIdForUser(winrt::Windows::System::User const& user, param::hstring const& capabilityName, uint32_t pid) const;
+        auto RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames) const;
+        auto RequestAccessForCapabilitiesForUserAsync(winrt::Windows::System::User const& user, param::async_iterable<hstring> const& capabilityNames) const;
+        auto Create(param::hstring const& capabilityName) const;
+        auto CreateWithProcessIdForUser(winrt::Windows::System::User const& user, param::hstring const& capabilityName, uint32_t pid) const;
     };
     template <> struct consume<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>
     {

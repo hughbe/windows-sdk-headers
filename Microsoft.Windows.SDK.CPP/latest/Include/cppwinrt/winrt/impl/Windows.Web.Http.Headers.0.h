@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Uri;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Networking
 {
@@ -1042,16 +1038,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCacheDirectiveHeaderValueCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) MaxAge() const;
-        WINRT_IMPL_AUTO(void) MaxAge(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) MaxStale() const;
-        WINRT_IMPL_AUTO(void) MaxStale(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) MinFresh() const;
-        WINRT_IMPL_AUTO(void) MinFresh(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) SharedMaxAge() const;
-        WINRT_IMPL_AUTO(void) SharedMaxAge(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        [[nodiscard]] auto MaxAge() const;
+        auto MaxAge(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
+        [[nodiscard]] auto MaxStale() const;
+        auto MaxStale(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
+        [[nodiscard]] auto MinFresh() const;
+        auto MinFresh(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
+        [[nodiscard]] auto SharedMaxAge() const;
+        auto SharedMaxAge(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection>
     {
@@ -1060,9 +1056,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Scheme() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Token() const;
+        [[nodiscard]] auto Parameters() const;
+        [[nodiscard]] auto Scheme() const;
+        [[nodiscard]] auto Token() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpChallengeHeaderValue>
     {
@@ -1071,8 +1067,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpChallengeHeaderValueCollection>
     {
@@ -1081,8 +1077,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue) CreateFromScheme(param::hstring const& scheme) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue) CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const;
+        auto CreateFromScheme(param::hstring const& scheme) const;
+        auto CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpChallengeHeaderValueFactory>
     {
@@ -1091,8 +1087,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpChallengeHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue& challengeHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue& challengeHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics>
     {
@@ -1101,7 +1097,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Token() const;
+        [[nodiscard]] auto Token() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue>
     {
@@ -1110,8 +1106,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueCollection>
     {
@@ -1120,7 +1116,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue) Create(param::hstring const& token) const;
+        auto Create(param::hstring const& token) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueFactory>
     {
@@ -1129,8 +1125,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpConnectionOptionHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue& connectionOptionHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue& connectionOptionHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValueStatics>
     {
@@ -1139,7 +1135,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContentCoding() const;
+        [[nodiscard]] auto ContentCoding() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingHeaderValue>
     {
@@ -1148,8 +1144,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueCollection>
     {
@@ -1158,7 +1154,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue) Create(param::hstring const& contentCoding) const;
+        auto Create(param::hstring const& contentCoding) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueFactory>
     {
@@ -1167,8 +1163,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue& contentCodingHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue& contentCodingHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingHeaderValueStatics>
     {
@@ -1177,8 +1173,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContentCoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) Quality() const;
+        [[nodiscard]] auto ContentCoding() const;
+        [[nodiscard]] auto Quality() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue>
     {
@@ -1187,8 +1183,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueCollection>
     {
@@ -1197,8 +1193,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue) CreateFromValue(param::hstring const& contentCoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue) CreateFromValueWithQuality(param::hstring const& contentCoding, double quality) const;
+        auto CreateFromValue(param::hstring const& contentCoding) const;
+        auto CreateFromValueWithQuality(param::hstring const& contentCoding, double quality) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory>
     {
@@ -1207,8 +1203,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentCodingWithQualityHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue& contentCodingWithQualityHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue& contentCodingWithQualityHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueStatics>
     {
@@ -1217,17 +1213,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DispositionType() const;
-        WINRT_IMPL_AUTO(void) DispositionType(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FileName() const;
-        WINRT_IMPL_AUTO(void) FileName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FileNameStar() const;
-        WINRT_IMPL_AUTO(void) FileNameStar(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::IReference<uint64_t> const& value) const;
+        [[nodiscard]] auto DispositionType() const;
+        auto DispositionType(param::hstring const& value) const;
+        [[nodiscard]] auto FileName() const;
+        auto FileName(param::hstring const& value) const;
+        [[nodiscard]] auto FileNameStar() const;
+        auto FileNameStar(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        auto Name(param::hstring const& value) const;
+        [[nodiscard]] auto Parameters() const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::IReference<uint64_t> const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue>
     {
@@ -1236,7 +1232,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue) Create(param::hstring const& dispositionType) const;
+        auto Create(param::hstring const& dispositionType) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory>
     {
@@ -1245,8 +1241,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentDispositionHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue& contentDispositionHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue& contentDispositionHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueStatics>
     {
@@ -1255,26 +1251,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentHeaderCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue) ContentDisposition() const;
-        WINRT_IMPL_AUTO(void) ContentDisposition(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection) ContentEncoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection) ContentLanguage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) ContentLength() const;
-        WINRT_IMPL_AUTO(void) ContentLength(winrt::Windows::Foundation::IReference<uint64_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) ContentLocation() const;
-        WINRT_IMPL_AUTO(void) ContentLocation(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) ContentMD5() const;
-        WINRT_IMPL_AUTO(void) ContentMD5(winrt::Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue) ContentRange() const;
-        WINRT_IMPL_AUTO(void) ContentRange(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue) ContentType() const;
-        WINRT_IMPL_AUTO(void) ContentType(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Expires() const;
-        WINRT_IMPL_AUTO(void) Expires(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) LastModified() const;
-        WINRT_IMPL_AUTO(void) LastModified(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        WINRT_IMPL_AUTO(void) Append(param::hstring const& name, param::hstring const& value) const;
-        WINRT_IMPL_AUTO(bool) TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
+        [[nodiscard]] auto ContentDisposition() const;
+        auto ContentDisposition(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue const& value) const;
+        [[nodiscard]] auto ContentEncoding() const;
+        [[nodiscard]] auto ContentLanguage() const;
+        [[nodiscard]] auto ContentLength() const;
+        auto ContentLength(winrt::Windows::Foundation::IReference<uint64_t> const& value) const;
+        [[nodiscard]] auto ContentLocation() const;
+        auto ContentLocation(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto ContentMD5() const;
+        auto ContentMD5(winrt::Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] auto ContentRange() const;
+        auto ContentRange(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue const& value) const;
+        [[nodiscard]] auto ContentType() const;
+        auto ContentType(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue const& value) const;
+        [[nodiscard]] auto Expires() const;
+        auto Expires(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto LastModified() const;
+        auto LastModified(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        auto Append(param::hstring const& name, param::hstring const& value) const;
+        auto TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentHeaderCollection>
     {
@@ -1283,11 +1279,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) FirstBytePosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) LastBytePosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) Length() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Unit() const;
-        WINRT_IMPL_AUTO(void) Unit(param::hstring const& value) const;
+        [[nodiscard]] auto FirstBytePosition() const;
+        [[nodiscard]] auto LastBytePosition() const;
+        [[nodiscard]] auto Length() const;
+        [[nodiscard]] auto Unit() const;
+        auto Unit(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentRangeHeaderValue>
     {
@@ -1296,9 +1292,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue) CreateFromLength(uint64_t length) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue) CreateFromRange(uint64_t from, uint64_t to) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue) CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length) const;
+        auto CreateFromLength(uint64_t length) const;
+        auto CreateFromRange(uint64_t from, uint64_t to) const;
+        auto CreateFromRangeWithLength(uint64_t from, uint64_t to, uint64_t length) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentRangeHeaderValueFactory>
     {
@@ -1307,8 +1303,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpContentRangeHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue& contentRangeHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue& contentRangeHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpContentRangeHeaderValueStatics>
     {
@@ -1317,9 +1313,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
-        WINRT_IMPL_AUTO(void) Value(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Value() const;
+        auto Value(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCookiePairHeaderValue>
     {
@@ -1328,8 +1324,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueCollection>
     {
@@ -1338,8 +1334,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue) CreateFromName(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue) CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
+        auto CreateFromName(param::hstring const& name) const;
+        auto CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueFactory>
     {
@@ -1348,8 +1344,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCookiePairHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue& cookiePairHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue& cookiePairHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCookiePairHeaderValueStatics>
     {
@@ -1358,9 +1354,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Scheme() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Token() const;
+        [[nodiscard]] auto Parameters() const;
+        [[nodiscard]] auto Scheme() const;
+        [[nodiscard]] auto Token() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCredentialsHeaderValue>
     {
@@ -1369,8 +1365,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue) CreateFromScheme(param::hstring const& scheme) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue) CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const;
+        auto CreateFromScheme(param::hstring const& scheme) const;
+        auto CreateFromSchemeWithToken(param::hstring const& scheme, param::hstring const& token) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCredentialsHeaderValueFactory>
     {
@@ -1379,8 +1375,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpCredentialsHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue& credentialsHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue& credentialsHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpCredentialsHeaderValueStatics>
     {
@@ -1389,8 +1385,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpDateOrDeltaHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Date() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) Delta() const;
+        [[nodiscard]] auto Date() const;
+        [[nodiscard]] auto Delta() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValue>
     {
@@ -1399,8 +1395,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpDateOrDeltaHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue& dateOrDeltaHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue& dateOrDeltaHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpDateOrDeltaHeaderValueStatics>
     {
@@ -1409,10 +1405,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
-        WINRT_IMPL_AUTO(void) Value(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Value() const;
+        auto Value(param::hstring const& value) const;
+        [[nodiscard]] auto Parameters() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpExpectationHeaderValue>
     {
@@ -1421,8 +1417,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpExpectationHeaderValueCollection>
     {
@@ -1431,8 +1427,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue) CreateFromName(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue) CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
+        auto CreateFromName(param::hstring const& name) const;
+        auto CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpExpectationHeaderValueFactory>
     {
@@ -1441,8 +1437,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpExpectationHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue& expectationHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue& expectationHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpExpectationHeaderValueStatics>
     {
@@ -1451,8 +1447,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpLanguageHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpLanguageHeaderValueCollection>
     {
@@ -1461,8 +1457,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LanguageRange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) Quality() const;
+        [[nodiscard]] auto LanguageRange() const;
+        [[nodiscard]] auto Quality() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue>
     {
@@ -1471,8 +1467,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueCollection>
     {
@@ -1481,8 +1477,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue) CreateFromLanguageRange(param::hstring const& languageRange) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue) CreateFromLanguageRangeWithQuality(param::hstring const& languageRange, double quality) const;
+        auto CreateFromLanguageRange(param::hstring const& languageRange) const;
+        auto CreateFromLanguageRangeWithQuality(param::hstring const& languageRange, double quality) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueFactory>
     {
@@ -1491,8 +1487,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpLanguageRangeWithQualityHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue& languageRangeWithQualityHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue& languageRangeWithQualityHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValueStatics>
     {
@@ -1501,11 +1497,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CharSet() const;
-        WINRT_IMPL_AUTO(void) CharSet(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MediaType() const;
-        WINRT_IMPL_AUTO(void) MediaType(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
+        [[nodiscard]] auto CharSet() const;
+        auto CharSet(param::hstring const& value) const;
+        [[nodiscard]] auto MediaType() const;
+        auto MediaType(param::hstring const& value) const;
+        [[nodiscard]] auto Parameters() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue>
     {
@@ -1514,7 +1510,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue) Create(param::hstring const& mediaType) const;
+        auto Create(param::hstring const& mediaType) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueFactory>
     {
@@ -1523,8 +1519,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue& mediaTypeHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue& mediaTypeHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeHeaderValueStatics>
     {
@@ -1533,13 +1529,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CharSet() const;
-        WINRT_IMPL_AUTO(void) CharSet(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MediaType() const;
-        WINRT_IMPL_AUTO(void) MediaType(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) Quality() const;
-        WINRT_IMPL_AUTO(void) Quality(winrt::Windows::Foundation::IReference<double> const& value) const;
+        [[nodiscard]] auto CharSet() const;
+        auto CharSet(param::hstring const& value) const;
+        [[nodiscard]] auto MediaType() const;
+        auto MediaType(param::hstring const& value) const;
+        [[nodiscard]] auto Parameters() const;
+        [[nodiscard]] auto Quality() const;
+        auto Quality(winrt::Windows::Foundation::IReference<double> const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue>
     {
@@ -1548,8 +1544,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueCollection>
     {
@@ -1558,8 +1554,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue) CreateFromMediaType(param::hstring const& mediaType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue) CreateFromMediaTypeWithQuality(param::hstring const& mediaType, double quality) const;
+        auto CreateFromMediaType(param::hstring const& mediaType) const;
+        auto CreateFromMediaTypeWithQuality(param::hstring const& mediaType, double quality) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueFactory>
     {
@@ -1568,8 +1564,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMediaTypeWithQualityHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue& mediaTypeWithQualityHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue& mediaTypeWithQualityHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValueStatics>
     {
@@ -1578,8 +1574,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpMethodHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpMethodHeaderValueCollection>
     {
@@ -1588,9 +1584,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
-        WINRT_IMPL_AUTO(void) Value(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Value() const;
+        auto Value(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpNameValueHeaderValue>
     {
@@ -1599,8 +1595,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue) CreateFromName(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue) CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
+        auto CreateFromName(param::hstring const& name) const;
+        auto CreateFromNameWithValue(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpNameValueHeaderValueFactory>
     {
@@ -1609,8 +1605,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpNameValueHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue& nameValueHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue& nameValueHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpNameValueHeaderValueStatics>
     {
@@ -1619,8 +1615,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Version() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Version() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductHeaderValue>
     {
@@ -1629,8 +1625,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue) CreateFromName(param::hstring const& productName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue) CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const;
+        auto CreateFromName(param::hstring const& productName) const;
+        auto CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductHeaderValueFactory>
     {
@@ -1639,8 +1635,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpProductHeaderValue& productHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpProductHeaderValue& productHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductHeaderValueStatics>
     {
@@ -1649,8 +1645,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue) Product() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Comment() const;
+        [[nodiscard]] auto Product() const;
+        [[nodiscard]] auto Comment() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductInfoHeaderValue>
     {
@@ -1659,8 +1655,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueCollection>
     {
@@ -1669,8 +1665,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue) CreateFromComment(param::hstring const& productComment) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue) CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const;
+        auto CreateFromComment(param::hstring const& productComment) const;
+        auto CreateFromNameWithVersion(param::hstring const& productName, param::hstring const& productVersion) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueFactory>
     {
@@ -1679,8 +1675,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpProductInfoHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue& productInfoHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue& productInfoHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpProductInfoHeaderValueStatics>
     {
@@ -1689,35 +1685,35 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpRequestHeaderCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection) Accept() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection) AcceptEncoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection) AcceptLanguage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue) Authorization() const;
-        WINRT_IMPL_AUTO(void) Authorization(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection) CacheControl() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection) Connection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection) Cookie() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Date() const;
-        WINRT_IMPL_AUTO(void) Date(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection) Expect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) From() const;
-        WINRT_IMPL_AUTO(void) From(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) Host() const;
-        WINRT_IMPL_AUTO(void) Host(winrt::Windows::Networking::HostName const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) IfModifiedSince() const;
-        WINRT_IMPL_AUTO(void) IfModifiedSince(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) IfUnmodifiedSince() const;
-        WINRT_IMPL_AUTO(void) IfUnmodifiedSince(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) MaxForwards() const;
-        WINRT_IMPL_AUTO(void) MaxForwards(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue) ProxyAuthorization() const;
-        WINRT_IMPL_AUTO(void) ProxyAuthorization(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Referer() const;
-        WINRT_IMPL_AUTO(void) Referer(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection) TransferEncoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection) UserAgent() const;
-        WINRT_IMPL_AUTO(void) Append(param::hstring const& name, param::hstring const& value) const;
-        WINRT_IMPL_AUTO(bool) TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
+        [[nodiscard]] auto Accept() const;
+        [[nodiscard]] auto AcceptEncoding() const;
+        [[nodiscard]] auto AcceptLanguage() const;
+        [[nodiscard]] auto Authorization() const;
+        auto Authorization(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue const& value) const;
+        [[nodiscard]] auto CacheControl() const;
+        [[nodiscard]] auto Connection() const;
+        [[nodiscard]] auto Cookie() const;
+        [[nodiscard]] auto Date() const;
+        auto Date(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto Expect() const;
+        [[nodiscard]] auto From() const;
+        auto From(param::hstring const& value) const;
+        [[nodiscard]] auto Host() const;
+        auto Host(winrt::Windows::Networking::HostName const& value) const;
+        [[nodiscard]] auto IfModifiedSince() const;
+        auto IfModifiedSince(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto IfUnmodifiedSince() const;
+        auto IfUnmodifiedSince(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto MaxForwards() const;
+        auto MaxForwards(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] auto ProxyAuthorization() const;
+        auto ProxyAuthorization(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue const& value) const;
+        [[nodiscard]] auto Referer() const;
+        auto Referer(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto TransferEncoding() const;
+        [[nodiscard]] auto UserAgent() const;
+        auto Append(param::hstring const& name, param::hstring const& value) const;
+        auto TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpRequestHeaderCollection>
     {
@@ -1726,22 +1722,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpResponseHeaderCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) Age() const;
-        WINRT_IMPL_AUTO(void) Age(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection) Allow() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection) CacheControl() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection) Connection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Date() const;
-        WINRT_IMPL_AUTO(void) Date(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Location() const;
-        WINRT_IMPL_AUTO(void) Location(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection) ProxyAuthenticate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue) RetryAfter() const;
-        WINRT_IMPL_AUTO(void) RetryAfter(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection) TransferEncoding() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection) WwwAuthenticate() const;
-        WINRT_IMPL_AUTO(void) Append(param::hstring const& name, param::hstring const& value) const;
-        WINRT_IMPL_AUTO(bool) TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
+        [[nodiscard]] auto Age() const;
+        auto Age(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const;
+        [[nodiscard]] auto Allow() const;
+        [[nodiscard]] auto CacheControl() const;
+        [[nodiscard]] auto Connection() const;
+        [[nodiscard]] auto Date() const;
+        auto Date(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto Location() const;
+        auto Location(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto ProxyAuthenticate() const;
+        [[nodiscard]] auto RetryAfter() const;
+        auto RetryAfter(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue const& value) const;
+        [[nodiscard]] auto TransferEncoding() const;
+        [[nodiscard]] auto WwwAuthenticate() const;
+        auto Append(param::hstring const& name, param::hstring const& value) const;
+        auto TryAppendWithoutValidation(param::hstring const& name, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpResponseHeaderCollection>
     {
@@ -1750,8 +1746,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>) Parameters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
+        [[nodiscard]] auto Parameters() const;
+        [[nodiscard]] auto Value() const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue>
     {
@@ -1760,8 +1756,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueCollection
     {
-        WINRT_IMPL_AUTO(void) ParseAdd(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParseAdd(param::hstring const& input) const;
+        auto ParseAdd(param::hstring const& input) const;
+        auto TryParseAdd(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueCollection>
     {
@@ -1770,7 +1766,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue) Create(param::hstring const& input) const;
+        auto Create(param::hstring const& input) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory>
     {
@@ -1779,8 +1775,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_Http_Headers_IHttpTransferCodingHeaderValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue) Parse(param::hstring const& input) const;
-        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue& transferCodingHeaderValue) const;
+        auto Parse(param::hstring const& input) const;
+        auto TryParse(param::hstring const& input, winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue& transferCodingHeaderValue) const;
     };
     template <> struct consume<winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueStatics>
     {

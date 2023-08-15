@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -49,9 +49,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Holographic_IHolographicKeyboard
     {
-        WINRT_IMPL_AUTO(void) SetPlacementOverride(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& topCenterPosition, winrt::Windows::Foundation::Numerics::quaternion const& orientation) const;
-        WINRT_IMPL_AUTO(void) SetPlacementOverride(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& topCenterPosition, winrt::Windows::Foundation::Numerics::quaternion const& orientation, winrt::Windows::Foundation::Numerics::float2 const& maxSize) const;
-        WINRT_IMPL_AUTO(void) ResetPlacementOverride() const;
+        auto SetPlacementOverride(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& topCenterPosition, winrt::Windows::Foundation::Numerics::quaternion const& orientation) const;
+        auto SetPlacementOverride(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& topCenterPosition, winrt::Windows::Foundation::Numerics::quaternion const& orientation, winrt::Windows::Foundation::Numerics::float2 const& maxSize) const;
+        auto ResetPlacementOverride() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Holographic::IHolographicKeyboard>
     {
@@ -60,7 +60,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Holographic_IHolographicKeyboardStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Holographic::HolographicKeyboard) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Holographic::IHolographicKeyboardStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,13 +10,8 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
 {
@@ -367,17 +362,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiAdapter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkAdapter) NetworkAdapter() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ScanAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiNetworkReport) NetworkReport() const;
-        WINRT_IMPL_AUTO(winrt::event_token) AvailableNetworksChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFi::WiFiAdapter, winrt::Windows::Foundation::IInspectable> const& args) const;
+        [[nodiscard]] auto NetworkAdapter() const;
+        auto ScanAsync() const;
+        [[nodiscard]] auto NetworkReport() const;
+        auto AvailableNetworksChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFi::WiFiAdapter, winrt::Windows::Foundation::IInspectable> const& args) const;
         using AvailableNetworksChanged_revoker = impl::event_revoker<winrt::Windows::Devices::WiFi::IWiFiAdapter, &impl::abi_t<winrt::Windows::Devices::WiFi::IWiFiAdapter>::remove_AvailableNetworksChanged>;
         [[nodiscard]] AvailableNetworksChanged_revoker AvailableNetworksChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFi::WiFiAdapter, winrt::Windows::Foundation::IInspectable> const& args) const;
-        WINRT_IMPL_AUTO(void) AvailableNetworksChanged(winrt::event_token const& eventCookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiConnectionResult>) ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiConnectionResult>) ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiConnectionResult>) ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, param::hstring const& ssid) const;
-        WINRT_IMPL_AUTO(void) Disconnect() const;
+        auto AvailableNetworksChanged(winrt::event_token const& eventCookie) const noexcept;
+        auto ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind) const;
+        auto ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential) const;
+        auto ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, param::hstring const& ssid) const;
+        auto Disconnect() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiAdapter>
     {
@@ -386,8 +381,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiAdapter2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>) GetWpsConfigurationAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiConnectionResult>) ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, param::hstring const& ssid, winrt::Windows::Devices::WiFi::WiFiConnectionMethod const& connectionMethod) const;
+        auto GetWpsConfigurationAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork) const;
+        auto ConnectAsync(winrt::Windows::Devices::WiFi::WiFiAvailableNetwork const& availableNetwork, winrt::Windows::Devices::WiFi::WiFiReconnectionKind const& reconnectionKind, winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, param::hstring const& ssid, winrt::Windows::Devices::WiFi::WiFiConnectionMethod const& connectionMethod) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiAdapter2>
     {
@@ -396,10 +391,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiAdapterStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::WiFi::WiFiAdapter>>) FindAllAdaptersAsync() const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiAdapter>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiAccessStatus>) RequestAccessAsync() const;
+        auto FindAllAdaptersAsync() const;
+        auto GetDeviceSelector() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
+        auto RequestAccessAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiAdapterStatics>
     {
@@ -408,17 +403,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiAvailableNetwork
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Uptime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Ssid() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Bssid() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ChannelCenterFrequencyInKilohertz() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NetworkRssiInDecibelMilliwatts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) SignalBars() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiNetworkKind) NetworkKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiPhyKind) PhyKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkSecuritySettings) SecuritySettings() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) BeaconInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWiFiDirect() const;
+        [[nodiscard]] auto Uptime() const;
+        [[nodiscard]] auto Ssid() const;
+        [[nodiscard]] auto Bssid() const;
+        [[nodiscard]] auto ChannelCenterFrequencyInKilohertz() const;
+        [[nodiscard]] auto NetworkRssiInDecibelMilliwatts() const;
+        [[nodiscard]] auto SignalBars() const;
+        [[nodiscard]] auto NetworkKind() const;
+        [[nodiscard]] auto PhyKind() const;
+        [[nodiscard]] auto SecuritySettings() const;
+        [[nodiscard]] auto BeaconInterval() const;
+        [[nodiscard]] auto IsWiFiDirect() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiAvailableNetwork>
     {
@@ -427,7 +422,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiConnectionResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiConnectionStatus) ConnectionStatus() const;
+        [[nodiscard]] auto ConnectionStatus() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiConnectionResult>
     {
@@ -436,8 +431,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiNetworkReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>) AvailableNetworks() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto AvailableNetworks() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiNetworkReport>
     {
@@ -446,10 +441,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiOnDemandHotspotConnectTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork) RequestedNetwork() const;
-        WINRT_IMPL_AUTO(void) ReportError(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus const& status) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>) ConnectAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult) Connect() const;
+        [[nodiscard]] auto RequestedNetwork() const;
+        auto ReportError(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus const& status) const;
+        auto ConnectAsync() const;
+        auto Connect() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectTriggerDetails>
     {
@@ -458,7 +453,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiOnDemandHotspotConnectionResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus) Status() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectionResult>
     {
@@ -467,9 +462,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiOnDemandHotspotNetwork
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties) GetProperties() const;
-        WINRT_IMPL_AUTO(void) UpdateProperties(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties const& newProperties) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
+        auto GetProperties() const;
+        auto UpdateProperties(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties const& newProperties) const;
+        [[nodiscard]] auto Id() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetwork>
     {
@@ -478,20 +473,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiOnDemandHotspotNetworkProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotAvailability) Availability() const;
-        WINRT_IMPL_AUTO(void) Availability(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotAvailability const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) RemainingBatteryPercent() const;
-        WINRT_IMPL_AUTO(void) RemainingBatteryPercent(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars>) CellularBars() const;
-        WINRT_IMPL_AUTO(void) CellularBars(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMetered() const;
-        WINRT_IMPL_AUTO(void) IsMetered(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Ssid() const;
-        WINRT_IMPL_AUTO(void) Ssid(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) Password() const;
-        WINRT_IMPL_AUTO(void) Password(winrt::Windows::Security::Credentials::PasswordCredential const& value) const;
+        [[nodiscard]] auto DisplayName() const;
+        auto DisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto Availability() const;
+        auto Availability(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotAvailability const& value) const;
+        [[nodiscard]] auto RemainingBatteryPercent() const;
+        auto RemainingBatteryPercent(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] auto CellularBars() const;
+        auto CellularBars(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars> const& value) const;
+        [[nodiscard]] auto IsMetered() const;
+        auto IsMetered(bool value) const;
+        [[nodiscard]] auto Ssid() const;
+        auto Ssid(param::hstring const& value) const;
+        [[nodiscard]] auto Password() const;
+        auto Password(winrt::Windows::Security::Credentials::PasswordCredential const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetworkProperties>
     {
@@ -500,7 +495,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiOnDemandHotspotNetworkStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork) GetOrCreateById(winrt::guid const& networkId) const;
+        auto GetOrCreateById(winrt::guid const& networkId) const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetworkStatics>
     {
@@ -509,8 +504,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFi_IWiFiWpsConfigurationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::WiFi::WiFiWpsConfigurationStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::WiFi::WiFiWpsKind>) SupportedWpsKinds() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto SupportedWpsKinds() const;
     };
     template <> struct consume<winrt::Windows::Devices::WiFi::IWiFiWpsConfigurationResult>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -20,7 +20,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct HResult;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
@@ -29,9 +28,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
     template <typename K, typename V> struct __declspec(empty_bases) IKeyValuePair;
-    template <typename K, typename V> struct __declspec(empty_bases) IMap;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::System
@@ -1330,8 +1326,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IAdaptiveNotificationContent
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::AdaptiveNotificationContentKind) Kind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, hstring>) Hints() const;
+        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] auto Hints() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
     {
@@ -1340,10 +1336,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IAdaptiveNotificationText
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        WINRT_IMPL_AUTO(void) Language(param::hstring const& value) const;
+        [[nodiscard]] auto Text() const;
+        auto Text(param::hstring const& value) const;
+        [[nodiscard]] auto Language() const;
+        auto Language(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IAdaptiveNotificationText>
     {
@@ -1352,9 +1348,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
+        [[nodiscard]] auto Content() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeNotification>
     {
@@ -1363,7 +1359,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeNotification) CreateBadgeNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
+        auto CreateBadgeNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeNotificationFactory>
     {
@@ -1372,10 +1368,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeUpdateManagerForUser
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForApplication() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForApplication(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForSecondaryTile(param::hstring const& tileId) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        auto CreateBadgeUpdaterForApplication() const;
+        auto CreateBadgeUpdaterForApplication(param::hstring const& applicationId) const;
+        auto CreateBadgeUpdaterForSecondaryTile(param::hstring const& tileId) const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeUpdateManagerForUser>
     {
@@ -1384,10 +1380,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeUpdateManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForApplication() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForApplication(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForSecondaryTile(param::hstring const& tileId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetTemplateContent(winrt::Windows::UI::Notifications::BadgeTemplateType const& type) const;
+        auto CreateBadgeUpdaterForApplication() const;
+        auto CreateBadgeUpdaterForApplication(param::hstring const& applicationId) const;
+        auto CreateBadgeUpdaterForSecondaryTile(param::hstring const& tileId) const;
+        auto GetTemplateContent(winrt::Windows::UI::Notifications::BadgeTemplateType const& type) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeUpdateManagerStatics>
     {
@@ -1396,7 +1392,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeUpdateManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeUpdateManagerStatics2>
     {
@@ -1405,11 +1401,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IBadgeUpdater
     {
-        WINRT_IMPL_AUTO(void) Update(winrt::Windows::UI::Notifications::BadgeNotification const& notification) const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& badgeContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& badgeContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StopPeriodicUpdate() const;
+        auto Update(winrt::Windows::UI::Notifications::BadgeNotification const& notification) const;
+        auto Clear() const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& badgeContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& badgeContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StopPeriodicUpdate() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IBadgeUpdater>
     {
@@ -1418,12 +1414,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IKnownAdaptiveNotificationHintsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Style() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Wrap() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MaxLines() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MinLines() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TextStacking() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Align() const;
+        [[nodiscard]] auto Style() const;
+        [[nodiscard]] auto Wrap() const;
+        [[nodiscard]] auto MaxLines() const;
+        [[nodiscard]] auto MinLines() const;
+        [[nodiscard]] auto TextStacking() const;
+        [[nodiscard]] auto Align() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IKnownAdaptiveNotificationHintsStatics>
     {
@@ -1432,25 +1428,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IKnownAdaptiveNotificationTextStylesStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Caption() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Body() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Base() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subtitle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subheader() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Header() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TitleNumeral() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SubheaderNumeral() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderNumeral() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CaptionSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) BodySubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) BaseSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SubtitleSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TitleSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SubheaderSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SubheaderNumeralSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderSubtle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderNumeralSubtle() const;
+        [[nodiscard]] auto Caption() const;
+        [[nodiscard]] auto Body() const;
+        [[nodiscard]] auto Base() const;
+        [[nodiscard]] auto Subtitle() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Subheader() const;
+        [[nodiscard]] auto Header() const;
+        [[nodiscard]] auto TitleNumeral() const;
+        [[nodiscard]] auto SubheaderNumeral() const;
+        [[nodiscard]] auto HeaderNumeral() const;
+        [[nodiscard]] auto CaptionSubtle() const;
+        [[nodiscard]] auto BodySubtle() const;
+        [[nodiscard]] auto BaseSubtle() const;
+        [[nodiscard]] auto SubtitleSubtle() const;
+        [[nodiscard]] auto TitleSubtle() const;
+        [[nodiscard]] auto SubheaderSubtle() const;
+        [[nodiscard]] auto SubheaderNumeralSubtle() const;
+        [[nodiscard]] auto HeaderSubtle() const;
+        [[nodiscard]] auto HeaderNumeralSubtle() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IKnownAdaptiveNotificationTextStylesStatics>
     {
@@ -1459,7 +1455,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IKnownNotificationBindingsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ToastGeneric() const;
+        [[nodiscard]] auto ToastGeneric() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IKnownNotificationBindingsStatics>
     {
@@ -1468,10 +1464,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_INotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationVisual) Visual() const;
-        WINRT_IMPL_AUTO(void) Visual(winrt::Windows::UI::Notifications::NotificationVisual const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto Visual() const;
+        auto Visual(winrt::Windows::UI::Notifications::NotificationVisual const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::INotification>
     {
@@ -1480,12 +1476,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_INotificationBinding
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Template() const;
-        WINRT_IMPL_AUTO(void) Template(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        WINRT_IMPL_AUTO(void) Language(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, hstring>) Hints() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::AdaptiveNotificationText>) GetTextElements() const;
+        [[nodiscard]] auto Template() const;
+        auto Template(param::hstring const& value) const;
+        [[nodiscard]] auto Language() const;
+        auto Language(param::hstring const& value) const;
+        [[nodiscard]] auto Hints() const;
+        auto GetTextElements() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::INotificationBinding>
     {
@@ -1494,9 +1490,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_INotificationData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, hstring>) Values() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) SequenceNumber() const;
-        WINRT_IMPL_AUTO(void) SequenceNumber(uint32_t value) const;
+        [[nodiscard]] auto Values() const;
+        [[nodiscard]] auto SequenceNumber() const;
+        auto SequenceNumber(uint32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::INotificationData>
     {
@@ -1505,8 +1501,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_INotificationDataFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationData) CreateNotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues, uint32_t sequenceNumber) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationData) CreateNotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues) const;
+        auto CreateNotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues, uint32_t sequenceNumber) const;
+        auto CreateNotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::INotificationDataFactory>
     {
@@ -1515,10 +1511,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_INotificationVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        WINRT_IMPL_AUTO(void) Language(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Notifications::NotificationBinding>) Bindings() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationBinding) GetBinding(param::hstring const& templateName) const;
+        [[nodiscard]] auto Language() const;
+        auto Language(param::hstring const& value) const;
+        [[nodiscard]] auto Bindings() const;
+        auto GetBinding(param::hstring const& templateName) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::INotificationVisual>
     {
@@ -1527,14 +1523,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledTileNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) DeliveryTime() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
-        WINRT_IMPL_AUTO(void) Tag(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Tag() const;
-        WINRT_IMPL_AUTO(void) Id(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        [[nodiscard]] auto Content() const;
+        [[nodiscard]] auto DeliveryTime() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
+        auto Tag(param::hstring const& value) const;
+        [[nodiscard]] auto Tag() const;
+        auto Id(param::hstring const& value) const;
+        [[nodiscard]] auto Id() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledTileNotification>
     {
@@ -1543,7 +1539,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledTileNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ScheduledTileNotification) CreateScheduledTileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime) const;
+        auto CreateScheduledTileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledTileNotificationFactory>
     {
@@ -1552,12 +1548,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) DeliveryTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) SnoozeInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaximumSnoozeCount() const;
-        WINRT_IMPL_AUTO(void) Id(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        [[nodiscard]] auto Content() const;
+        [[nodiscard]] auto DeliveryTime() const;
+        [[nodiscard]] auto SnoozeInterval() const;
+        [[nodiscard]] auto MaximumSnoozeCount() const;
+        auto Id(param::hstring const& value) const;
+        [[nodiscard]] auto Id() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotification>
     {
@@ -1566,12 +1562,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotification2
     {
-        WINRT_IMPL_AUTO(void) Tag(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Tag() const;
-        WINRT_IMPL_AUTO(void) Group(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Group() const;
-        WINRT_IMPL_AUTO(void) SuppressPopup(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SuppressPopup() const;
+        auto Tag(param::hstring const& value) const;
+        [[nodiscard]] auto Tag() const;
+        auto Group(param::hstring const& value) const;
+        [[nodiscard]] auto Group() const;
+        auto SuppressPopup(bool value) const;
+        [[nodiscard]] auto SuppressPopup() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotification2>
     {
@@ -1580,10 +1576,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotification3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationMirroring) NotificationMirroring() const;
-        WINRT_IMPL_AUTO(void) NotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
-        WINRT_IMPL_AUTO(void) RemoteId(param::hstring const& value) const;
+        [[nodiscard]] auto NotificationMirroring() const;
+        auto NotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
+        [[nodiscard]] auto RemoteId() const;
+        auto RemoteId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotification3>
     {
@@ -1592,8 +1588,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotification4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotification4>
     {
@@ -1602,8 +1598,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ScheduledToastNotification) CreateScheduledToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ScheduledToastNotification) CreateScheduledToastNotificationRecurring(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime, winrt::Windows::Foundation::TimeSpan const& snoozeInterval, uint32_t maximumSnoozeCount) const;
+        auto CreateScheduledToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime) const;
+        auto CreateScheduledToastNotificationRecurring(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime, winrt::Windows::Foundation::TimeSpan const& snoozeInterval, uint32_t maximumSnoozeCount) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotificationFactory>
     {
@@ -1612,10 +1608,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IScheduledToastNotificationShowingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Cancel() const;
-        WINRT_IMPL_AUTO(void) Cancel(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ScheduledToastNotification) ScheduledToastNotification() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Cancel() const;
+        auto Cancel(bool value) const;
+        [[nodiscard]] auto ScheduledToastNotification() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs>
     {
@@ -1624,7 +1620,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IShownTileNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
+        [[nodiscard]] auto Arguments() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IShownTileNotification>
     {
@@ -1633,9 +1629,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileFlyoutNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
+        [[nodiscard]] auto Content() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileFlyoutNotification>
     {
@@ -1644,7 +1640,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileFlyoutNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileFlyoutNotification) CreateTileFlyoutNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
+        auto CreateTileFlyoutNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileFlyoutNotificationFactory>
     {
@@ -1653,10 +1649,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileFlyoutUpdateManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileFlyoutUpdater) CreateTileFlyoutUpdaterForApplication() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileFlyoutUpdater) CreateTileFlyoutUpdaterForApplication(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileFlyoutUpdater) CreateTileFlyoutUpdaterForSecondaryTile(param::hstring const& tileId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetTemplateContent(winrt::Windows::UI::Notifications::TileFlyoutTemplateType const& type) const;
+        auto CreateTileFlyoutUpdaterForApplication() const;
+        auto CreateTileFlyoutUpdaterForApplication(param::hstring const& applicationId) const;
+        auto CreateTileFlyoutUpdaterForSecondaryTile(param::hstring const& tileId) const;
+        auto GetTemplateContent(winrt::Windows::UI::Notifications::TileFlyoutTemplateType const& type) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileFlyoutUpdateManagerStatics>
     {
@@ -1665,12 +1661,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileFlyoutUpdater
     {
-        WINRT_IMPL_AUTO(void) Update(winrt::Windows::UI::Notifications::TileFlyoutNotification const& notification) const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileFlyoutContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileFlyoutContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StopPeriodicUpdate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationSetting) Setting() const;
+        auto Update(winrt::Windows::UI::Notifications::TileFlyoutNotification const& notification) const;
+        auto Clear() const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileFlyoutContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileFlyoutContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StopPeriodicUpdate() const;
+        [[nodiscard]] auto Setting() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileFlyoutUpdater>
     {
@@ -1679,11 +1675,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
-        WINRT_IMPL_AUTO(void) Tag(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Tag() const;
+        [[nodiscard]] auto Content() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
+        auto Tag(param::hstring const& value) const;
+        [[nodiscard]] auto Tag() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileNotification>
     {
@@ -1692,7 +1688,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileNotification) CreateTileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
+        auto CreateTileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileNotificationFactory>
     {
@@ -1701,10 +1697,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileUpdateManagerForUser
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForApplicationForUser() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForApplication(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForSecondaryTile(param::hstring const& tileId) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        auto CreateTileUpdaterForApplicationForUser() const;
+        auto CreateTileUpdaterForApplication(param::hstring const& applicationId) const;
+        auto CreateTileUpdaterForSecondaryTile(param::hstring const& tileId) const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileUpdateManagerForUser>
     {
@@ -1713,10 +1709,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileUpdateManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForApplication() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForApplication(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForSecondaryTile(param::hstring const& tileId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetTemplateContent(winrt::Windows::UI::Notifications::TileTemplateType const& type) const;
+        auto CreateTileUpdaterForApplication() const;
+        auto CreateTileUpdaterForApplication(param::hstring const& applicationId) const;
+        auto CreateTileUpdaterForSecondaryTile(param::hstring const& tileId) const;
+        auto GetTemplateContent(winrt::Windows::UI::Notifications::TileTemplateType const& type) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileUpdateManagerStatics>
     {
@@ -1725,7 +1721,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileUpdateManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileUpdateManagerForUser) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileUpdateManagerStatics2>
     {
@@ -1734,18 +1730,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileUpdater
     {
-        WINRT_IMPL_AUTO(void) Update(winrt::Windows::UI::Notifications::TileNotification const& notification) const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(void) EnableNotificationQueue(bool enable) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationSetting) Setting() const;
-        WINRT_IMPL_AUTO(void) AddToSchedule(winrt::Windows::UI::Notifications::ScheduledTileNotification const& scheduledTile) const;
-        WINRT_IMPL_AUTO(void) RemoveFromSchedule(winrt::Windows::UI::Notifications::ScheduledTileNotification const& scheduledTile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ScheduledTileNotification>) GetScheduledTileNotifications() const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StopPeriodicUpdate() const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdateBatch(param::iterable<winrt::Windows::Foundation::Uri> const& tileContents, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
-        WINRT_IMPL_AUTO(void) StartPeriodicUpdateBatch(param::iterable<winrt::Windows::Foundation::Uri> const& tileContents, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto Update(winrt::Windows::UI::Notifications::TileNotification const& notification) const;
+        auto Clear() const;
+        auto EnableNotificationQueue(bool enable) const;
+        [[nodiscard]] auto Setting() const;
+        auto AddToSchedule(winrt::Windows::UI::Notifications::ScheduledTileNotification const& scheduledTile) const;
+        auto RemoveFromSchedule(winrt::Windows::UI::Notifications::ScheduledTileNotification const& scheduledTile) const;
+        auto GetScheduledTileNotifications() const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileContent, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StartPeriodicUpdate(winrt::Windows::Foundation::Uri const& tileContent, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StopPeriodicUpdate() const;
+        auto StartPeriodicUpdateBatch(param::iterable<winrt::Windows::Foundation::Uri> const& tileContents, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
+        auto StartPeriodicUpdateBatch(param::iterable<winrt::Windows::Foundation::Uri> const& tileContents, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence const& requestedInterval) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileUpdater>
     {
@@ -1754,9 +1750,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_ITileUpdater2
     {
-        WINRT_IMPL_AUTO(void) EnableNotificationQueueForSquare150x150(bool enable) const;
-        WINRT_IMPL_AUTO(void) EnableNotificationQueueForWide310x150(bool enable) const;
-        WINRT_IMPL_AUTO(void) EnableNotificationQueueForSquare310x310(bool enable) const;
+        auto EnableNotificationQueueForSquare150x150(bool enable) const;
+        auto EnableNotificationQueueForWide310x150(bool enable) const;
+        auto EnableNotificationQueueForSquare310x310(bool enable) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::ITileUpdater2>
     {
@@ -1765,7 +1761,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
+        [[nodiscard]] auto Arguments() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastActivatedEventArgs>
     {
@@ -1774,7 +1770,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastActivatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) UserInput() const;
+        [[nodiscard]] auto UserInput() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastActivatedEventArgs2>
     {
@@ -1783,13 +1779,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LaunchArgs() const;
-        WINRT_IMPL_AUTO(void) LaunchArgs(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Icon() const;
-        WINRT_IMPL_AUTO(void) Icon(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto DisplayName() const;
+        auto DisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto LaunchArgs() const;
+        auto LaunchArgs(param::hstring const& value) const;
+        [[nodiscard]] auto Icon() const;
+        auto Icon(winrt::Windows::Foundation::Uri const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastCollection>
     {
@@ -1798,7 +1794,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastCollectionFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastCollection) CreateInstance(param::hstring const& collectionId, param::hstring const& displayName, param::hstring const& launchArgs, winrt::Windows::Foundation::Uri const& iconUri) const;
+        auto CreateInstance(param::hstring const& collectionId, param::hstring const& displayName, param::hstring const& launchArgs, winrt::Windows::Foundation::Uri const& iconUri) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastCollectionFactory>
     {
@@ -1807,13 +1803,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastCollectionManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveToastCollectionAsync(winrt::Windows::UI::Notifications::ToastCollection const& collection) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ToastCollection>>) FindAllToastCollectionsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Notifications::ToastCollection>) GetToastCollectionAsync(param::hstring const& collectionId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RemoveToastCollectionAsync(param::hstring const& collectionId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RemoveAllToastCollectionsAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppId() const;
+        auto SaveToastCollectionAsync(winrt::Windows::UI::Notifications::ToastCollection const& collection) const;
+        auto FindAllToastCollectionsAsync() const;
+        auto GetToastCollectionAsync(param::hstring const& collectionId) const;
+        auto RemoveToastCollectionAsync(param::hstring const& collectionId) const;
+        auto RemoveAllToastCollectionsAsync() const;
+        [[nodiscard]] auto User() const;
+        [[nodiscard]] auto AppId() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastCollectionManager>
     {
@@ -1822,7 +1818,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastDismissedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastDismissalReason) Reason() const;
+        [[nodiscard]] auto Reason() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastDismissedEventArgs>
     {
@@ -1831,7 +1827,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastFailedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ErrorCode() const;
+        [[nodiscard]] auto ErrorCode() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastFailedEventArgs>
     {
@@ -1840,21 +1836,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) Content() const;
-        WINRT_IMPL_AUTO(void) ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ExpirationTime() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastDismissedEventArgs> const& handler) const;
+        [[nodiscard]] auto Content() const;
+        auto ExpirationTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ExpirationTime() const;
+        auto Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastDismissedEventArgs> const& handler) const;
         using Dismissed_revoker = impl::event_revoker<winrt::Windows::UI::Notifications::IToastNotification, &impl::abi_t<winrt::Windows::UI::Notifications::IToastNotification>::remove_Dismissed>;
         [[nodiscard]] Dismissed_revoker Dismissed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastDismissedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Dismissed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Dismissed(winrt::event_token const& token) const noexcept;
+        auto Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Activated_revoker = impl::event_revoker<winrt::Windows::UI::Notifications::IToastNotification, &impl::abi_t<winrt::Windows::UI::Notifications::IToastNotification>::remove_Activated>;
         [[nodiscard]] Activated_revoker Activated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Activated(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Failed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastFailedEventArgs> const& handler) const;
+        auto Activated(winrt::event_token const& token) const noexcept;
+        auto Failed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastFailedEventArgs> const& handler) const;
         using Failed_revoker = impl::event_revoker<winrt::Windows::UI::Notifications::IToastNotification, &impl::abi_t<winrt::Windows::UI::Notifications::IToastNotification>::remove_Failed>;
         [[nodiscard]] Failed_revoker Failed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastFailedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Failed(winrt::event_token const& token) const noexcept;
+        auto Failed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotification>
     {
@@ -1863,12 +1859,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotification2
     {
-        WINRT_IMPL_AUTO(void) Tag(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Tag() const;
-        WINRT_IMPL_AUTO(void) Group(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Group() const;
-        WINRT_IMPL_AUTO(void) SuppressPopup(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SuppressPopup() const;
+        auto Tag(param::hstring const& value) const;
+        [[nodiscard]] auto Tag() const;
+        auto Group(param::hstring const& value) const;
+        [[nodiscard]] auto Group() const;
+        auto SuppressPopup(bool value) const;
+        [[nodiscard]] auto SuppressPopup() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotification2>
     {
@@ -1877,10 +1873,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotification3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationMirroring) NotificationMirroring() const;
-        WINRT_IMPL_AUTO(void) NotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
-        WINRT_IMPL_AUTO(void) RemoteId(param::hstring const& value) const;
+        [[nodiscard]] auto NotificationMirroring() const;
+        auto NotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
+        [[nodiscard]] auto RemoteId() const;
+        auto RemoteId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotification3>
     {
@@ -1889,10 +1885,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotification4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationData) Data() const;
-        WINRT_IMPL_AUTO(void) Data(winrt::Windows::UI::Notifications::NotificationData const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationPriority) Priority() const;
-        WINRT_IMPL_AUTO(void) Priority(winrt::Windows::UI::Notifications::ToastNotificationPriority const& value) const;
+        [[nodiscard]] auto Data() const;
+        auto Data(winrt::Windows::UI::Notifications::NotificationData const& value) const;
+        [[nodiscard]] auto Priority() const;
+        auto Priority(winrt::Windows::UI::Notifications::ToastNotificationPriority const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotification4>
     {
@@ -1901,8 +1897,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotification6
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ExpiresOnReboot() const;
-        WINRT_IMPL_AUTO(void) ExpiresOnReboot(bool value) const;
+        [[nodiscard]] auto ExpiresOnReboot() const;
+        auto ExpiresOnReboot(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotification6>
     {
@@ -1911,8 +1907,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationActionTriggerDetail
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Argument() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) UserInput() const;
+        [[nodiscard]] auto Argument() const;
+        [[nodiscard]] auto UserInput() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail>
     {
@@ -1921,7 +1917,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotification) CreateToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
+        auto CreateToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationFactory>
     {
@@ -1930,13 +1926,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationHistory
     {
-        WINRT_IMPL_AUTO(void) RemoveGroup(param::hstring const& group) const;
-        WINRT_IMPL_AUTO(void) RemoveGroup(param::hstring const& group, param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(void) Remove(param::hstring const& tag, param::hstring const& group, param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(void) Remove(param::hstring const& tag, param::hstring const& group) const;
-        WINRT_IMPL_AUTO(void) Remove(param::hstring const& tag) const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(void) Clear(param::hstring const& applicationId) const;
+        auto RemoveGroup(param::hstring const& group) const;
+        auto RemoveGroup(param::hstring const& group, param::hstring const& applicationId) const;
+        auto Remove(param::hstring const& tag, param::hstring const& group, param::hstring const& applicationId) const;
+        auto Remove(param::hstring const& tag, param::hstring const& group) const;
+        auto Remove(param::hstring const& tag) const;
+        auto Clear() const;
+        auto Clear(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationHistory>
     {
@@ -1945,8 +1941,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationHistory2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ToastNotification>) GetHistory() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ToastNotification>) GetHistory(param::hstring const& applicationId) const;
+        auto GetHistory() const;
+        auto GetHistory(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationHistory2>
     {
@@ -1955,7 +1951,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationHistoryChangedTriggerDetail
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastHistoryChangedType) ChangeType() const;
+        [[nodiscard]] auto ChangeType() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail>
     {
@@ -1964,7 +1960,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationHistoryChangedTriggerDetail2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CollectionId() const;
+        [[nodiscard]] auto CollectionId() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2>
     {
@@ -1973,10 +1969,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerForUser
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotifier) CreateToastNotifier() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotifier) CreateToastNotifier(param::hstring const& applicationId) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationHistory) History() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        auto CreateToastNotifier() const;
+        auto CreateToastNotifier(param::hstring const& applicationId) const;
+        [[nodiscard]] auto History() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser>
     {
@@ -1985,10 +1981,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerForUser2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Notifications::ToastNotifier>) GetToastNotifierForToastCollectionIdAsync(param::hstring const& collectionId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Notifications::ToastNotificationHistory>) GetHistoryForToastCollectionIdAsync(param::hstring const& collectionId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastCollectionManager) GetToastCollectionManager() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastCollectionManager) GetToastCollectionManager(param::hstring const& appId) const;
+        auto GetToastNotifierForToastCollectionIdAsync(param::hstring const& collectionId) const;
+        auto GetHistoryForToastCollectionIdAsync(param::hstring const& collectionId) const;
+        auto GetToastCollectionManager() const;
+        auto GetToastCollectionManager(param::hstring const& appId) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>
     {
@@ -1997,11 +1993,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerForUser3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationMode) NotificationMode() const;
-        WINRT_IMPL_AUTO(winrt::event_token) NotificationModeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto NotificationMode() const;
+        auto NotificationModeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using NotificationModeChanged_revoker = impl::event_revoker<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3, &impl::abi_t<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>::remove_NotificationModeChanged>;
         [[nodiscard]] NotificationModeChanged_revoker NotificationModeChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) NotificationModeChanged(winrt::event_token const& token) const noexcept;
+        auto NotificationModeChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>
     {
@@ -2010,9 +2006,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotifier) CreateToastNotifier() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotifier) CreateToastNotifier(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetTemplateContent(winrt::Windows::UI::Notifications::ToastTemplateType const& type) const;
+        auto CreateToastNotifier() const;
+        auto CreateToastNotifier(param::hstring const& applicationId) const;
+        auto GetTemplateContent(winrt::Windows::UI::Notifications::ToastTemplateType const& type) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics>
     {
@@ -2021,7 +2017,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationHistory) History() const;
+        [[nodiscard]] auto History() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics2>
     {
@@ -2030,8 +2026,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerStatics4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationManagerForUser) GetForUser(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(void) ConfigureNotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
+        auto ConfigureNotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics4>
     {
@@ -2040,7 +2036,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotificationManagerStatics5
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationManagerForUser) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics5>
     {
@@ -2049,12 +2045,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotifier
     {
-        WINRT_IMPL_AUTO(void) Show(winrt::Windows::UI::Notifications::ToastNotification const& notification) const;
-        WINRT_IMPL_AUTO(void) Hide(winrt::Windows::UI::Notifications::ToastNotification const& notification) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationSetting) Setting() const;
-        WINRT_IMPL_AUTO(void) AddToSchedule(winrt::Windows::UI::Notifications::ScheduledToastNotification const& scheduledToast) const;
-        WINRT_IMPL_AUTO(void) RemoveFromSchedule(winrt::Windows::UI::Notifications::ScheduledToastNotification const& scheduledToast) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ScheduledToastNotification>) GetScheduledToastNotifications() const;
+        auto Show(winrt::Windows::UI::Notifications::ToastNotification const& notification) const;
+        auto Hide(winrt::Windows::UI::Notifications::ToastNotification const& notification) const;
+        [[nodiscard]] auto Setting() const;
+        auto AddToSchedule(winrt::Windows::UI::Notifications::ScheduledToastNotification const& scheduledToast) const;
+        auto RemoveFromSchedule(winrt::Windows::UI::Notifications::ScheduledToastNotification const& scheduledToast) const;
+        auto GetScheduledToastNotifications() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotifier>
     {
@@ -2063,8 +2059,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotifier2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationUpdateResult) Update(winrt::Windows::UI::Notifications::NotificationData const& data, param::hstring const& tag, param::hstring const& group) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::NotificationUpdateResult) Update(winrt::Windows::UI::Notifications::NotificationData const& data, param::hstring const& tag) const;
+        auto Update(winrt::Windows::UI::Notifications::NotificationData const& data, param::hstring const& tag, param::hstring const& group) const;
+        auto Update(winrt::Windows::UI::Notifications::NotificationData const& data, param::hstring const& tag) const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotifier2>
     {
@@ -2073,10 +2069,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IToastNotifier3
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ScheduledToastNotificationShowing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotifier, winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs> const& handler) const;
+        auto ScheduledToastNotificationShowing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotifier, winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs> const& handler) const;
         using ScheduledToastNotificationShowing_revoker = impl::event_revoker<winrt::Windows::UI::Notifications::IToastNotifier3, &impl::abi_t<winrt::Windows::UI::Notifications::IToastNotifier3>::remove_ScheduledToastNotificationShowing>;
         [[nodiscard]] ScheduledToastNotificationShowing_revoker ScheduledToastNotificationShowing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotifier, winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScheduledToastNotificationShowing(winrt::event_token const& token) const noexcept;
+        auto ScheduledToastNotificationShowing(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IToastNotifier3>
     {
@@ -2085,10 +2081,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IUserNotification
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::Notification) Notification() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) AppInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) CreationTime() const;
+        [[nodiscard]] auto Notification() const;
+        [[nodiscard]] auto AppInfo() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto CreationTime() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IUserNotification>
     {
@@ -2097,8 +2093,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Notifications_IUserNotificationChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::UserNotificationChangedKind) ChangeKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) UserNotificationId() const;
+        [[nodiscard]] auto ChangeKind() const;
+        [[nodiscard]] auto UserNotificationId() const;
     };
     template <> struct consume<winrt::Windows::UI::Notifications::IUserNotificationChangedEventArgs>
     {

@@ -407,7 +407,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IVariablePhotoCapturedEventArgs = _uuidof(IVariablePhotoCapturedEventArgs);
+                    MIDL_CONST_ID IID& IID_IVariablePhotoCapturedEventArgs = __uuidof(IVariablePhotoCapturedEventArgs);
                 } /* Core */
             } /* Capture */
         } /* Media */
@@ -465,7 +465,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IVariablePhotoSequenceCapture = _uuidof(IVariablePhotoSequenceCapture);
+                    MIDL_CONST_ID IID& IID_IVariablePhotoSequenceCapture = __uuidof(IVariablePhotoSequenceCapture);
                 } /* Core */
             } /* Capture */
         } /* Media */
@@ -503,7 +503,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IVariablePhotoSequenceCapture2 = _uuidof(IVariablePhotoSequenceCapture2);
+                    MIDL_CONST_ID IID& IID_IVariablePhotoSequenceCapture2 = __uuidof(IVariablePhotoSequenceCapture2);
                 } /* Core */
             } /* Capture */
         } /* Media */

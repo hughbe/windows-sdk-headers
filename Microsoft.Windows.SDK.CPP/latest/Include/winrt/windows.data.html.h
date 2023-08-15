@@ -152,7 +152,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHtmlUtilities = _uuidof(IHtmlUtilities);
+                MIDL_CONST_ID IID& IID_IHtmlUtilities = __uuidof(IHtmlUtilities);
             } /* Html */
         } /* Data */
     } /* Windows */

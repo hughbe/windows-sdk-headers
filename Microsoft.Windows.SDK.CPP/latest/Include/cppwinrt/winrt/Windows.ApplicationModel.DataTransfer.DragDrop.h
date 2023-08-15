@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_DataTransfer_DragDrop_H
 #define WINRT_Windows_ApplicationModel_DataTransfer_DragDrop_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.ApplicationModel.DataTransfer.h"
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.DragDrop.2.h"
 namespace winrt::impl

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -39,11 +39,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SoundLevel) SoundLevel() const;
-        WINRT_IMPL_AUTO(winrt::event_token) SoundLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto SoundLevel() const;
+        auto SoundLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using SoundLevelChanged_revoker = impl::event_revoker<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics, &impl::abi_t<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics>::remove_SoundLevelChanged>;
         [[nodiscard]] SoundLevelChanged_revoker SoundLevelChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) SoundLevelChanged(winrt::event_token const& token) const noexcept;
+        auto SoundLevelChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics>
     {

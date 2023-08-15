@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -68,8 +68,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialController) Controller() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Core::CoreDispatcher) Dispatcher() const;
+        [[nodiscard]] auto Controller() const;
+        [[nodiscard]] auto Dispatcher() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource>
     {
@@ -78,7 +78,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) DispatcherQueue() const;
+        [[nodiscard]] auto DispatcherQueue() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2>
     {
@@ -87,7 +87,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSourceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource) CreateForView(winrt::Windows::ApplicationModel::Core::CoreApplicationView const& view) const;
+        auto CreateForView(winrt::Windows::ApplicationModel::Core::CoreApplicationView const& view) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics>
     {

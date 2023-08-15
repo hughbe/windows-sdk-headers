@@ -474,7 +474,7 @@ PrUserTime equ 00380H
 PrInstrumentationCallback equ 003D8H
 PrMitigationFlags2 equ 009D4H
 KernelProcessObjectLength equ 00438H
-ExecutiveProcessObjectLength equ 00B80H
+ExecutiveProcessObjectLength equ 00C00H
 Win32BatchFlushCallout equ 00007H
 
 ;
@@ -511,7 +511,7 @@ QueueObjectLength equ 00040H
 ;
 
 EtCid equ 004C8H
-EtPicoContext equ 00630H
+EtPicoContext equ 00640H
 
 ThType equ 00000H
 ThSize equ 00002H
@@ -579,7 +579,7 @@ ThWin32Thread equ 001C8H
 ThStackBase equ 00038H
 ThLegoData equ 002D0H
 KernelThreadObjectLength equ 00480H
-ExecutiveThreadObjectLength equ 00900H
+ExecutiveThreadObjectLength equ 009D8H
 
 
 ;
@@ -699,7 +699,7 @@ TeInstrumentation equ 016B8H
 TeGdiBatchCount equ 01740H
 TeGuaranteedStackBytes equ 01748H
 TeFlsData equ 017C8H
-ThreadEnvironmentBlockLength equ 01850H
+ThreadEnvironmentBlockLength equ 01858H
 CmThreadEnvironmentBlockOffset equ 02000H
 TLS_MINIMUM_AVAILABLE equ 00040H
 TLS_EXPANSION_SLOTS equ 00400H
@@ -784,12 +784,6 @@ XctxArea equ 00010H
 XcfgEnabledFeatures equ 00000H
 XcfgEnabledVolatileFeatures equ 00008H
 XcfgEnabledSupervisorFeatures equ 00218H
-
-;
-;  GETSETCONTEXT structure offset definitions
-;
-
-GetSetCtxContextPtr equ 00078H
 XSAVE_ALIGN equ 00040H
 
 ;
@@ -1323,9 +1317,6 @@ FALSE equ 00000H
 TRUE equ 00001H
 NMI_BLOCKING_MASK equ 00004H
 KERNEL_MCA_EXCEPTION_STACK_SIZE equ 02000H
-IST_STACK_SIZE equ 06000H
-ISR_STACK_SIZE equ 06000H
-EXCEPTION_STACK_SIZE equ 06000H
 EXCEPTION_EXECUTE_FAULT equ 00008H
 KCACHE_ERRATA_MONITOR_FLAGS equ 00003H
 
@@ -1360,8 +1351,6 @@ FAST_FAIL_CONTROL_INVALID_RETURN_ADDRESS equ 00039H
 BASE_PRIORITY_THRESHOLD equ 00008H
 EVENT_INCREMENT equ 00001H
 LOW_REALTIME_PRIORITY equ 00010H
-KERNEL_LARGE_STACK_COMMIT equ 06000H
-KERNEL_LARGE_STACK_SIZE equ 012000H
 DOUBLE_FAULT_STACK_SIZE equ 02000H
 KI_KERNEL_SHADOW_STACK_SIZE_WITH_GUARD_PAGES equ 03000H
 BREAKPOINT_BREAK equ 00000H
@@ -1922,9 +1911,9 @@ ThExtendedFeatureDisableMask equ 00428H
 ;  ETHREAD
 ;
 
-ThSetContextState equ 00668H
-ThUserFsBase equ 00638H
-ThUserGsBase equ 00640H
+ThSetContextState equ 00678H
+ThUserFsBase equ 00648H
+ThUserGsBase equ 00650H
 PICO_SYSTEM_CALL equ 00008H
 
 ;

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -56,8 +56,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Collation_ICharacterGrouping
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) First() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Label() const;
+        [[nodiscard]] auto First() const;
+        [[nodiscard]] auto Label() const;
     };
     template <> struct consume<winrt::Windows::Globalization::Collation::ICharacterGrouping>
     {
@@ -66,7 +66,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Collation_ICharacterGroupings
     {
-        WINRT_IMPL_AUTO(hstring) Lookup(param::hstring const& text) const;
+        auto Lookup(param::hstring const& text) const;
     };
     template <> struct consume<winrt::Windows::Globalization::Collation::ICharacterGroupings>
     {
@@ -75,7 +75,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Collation_ICharacterGroupingsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Globalization::Collation::CharacterGroupings) Create(param::hstring const& language) const;
+        auto Create(param::hstring const& language) const;
     };
     template <> struct consume<winrt::Windows::Globalization::Collation::ICharacterGroupingsFactory>
     {

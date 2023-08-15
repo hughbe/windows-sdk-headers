@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,14 +8,12 @@
 #define WINRT_Windows_UI_Input_Inking_Analysis_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Point;
     struct Rect;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
 {
@@ -274,7 +272,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkBullet
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
+        [[nodiscard]] auto RecognizedText() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet>
     {
@@ -283,9 +281,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind) DrawingKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Center() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Point>) Points() const;
+        [[nodiscard]] auto DrawingKind() const;
+        [[nodiscard]] auto Center() const;
+        [[nodiscard]] auto Points() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing>
     {
@@ -294,8 +292,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) TextAlternates() const;
+        [[nodiscard]] auto RecognizedText() const;
+        [[nodiscard]] auto TextAlternates() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord>
     {
@@ -304,8 +302,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) IndentLevel() const;
+        [[nodiscard]] auto RecognizedText() const;
+        [[nodiscard]] auto IndentLevel() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine>
     {
@@ -314,7 +312,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisListItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
+        [[nodiscard]] auto RecognizedText() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem>
     {
@@ -323,13 +321,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind) Kind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) BoundingRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Point>) RotatedBoundingRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>) Children() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode) Parent() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<uint32_t>) GetStrokeIds() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] auto BoundingRect() const;
+        [[nodiscard]] auto RotatedBoundingRect() const;
+        [[nodiscard]] auto Children() const;
+        [[nodiscard]] auto Parent() const;
+        auto GetStrokeIds() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>
     {
@@ -338,7 +336,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisParagraph
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
+        [[nodiscard]] auto RecognizedText() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph>
     {
@@ -347,7 +345,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus) Status() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult>
     {
@@ -356,8 +354,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>) FindNodes(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind const& nodeKind) const;
+        [[nodiscard]] auto RecognizedText() const;
+        auto FindNodes(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind const& nodeKind) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot>
     {
@@ -366,7 +364,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisWritingRegion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RecognizedText() const;
+        [[nodiscard]] auto RecognizedText() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion>
     {
@@ -375,16 +373,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot) AnalysisRoot() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAnalyzing() const;
-        WINRT_IMPL_AUTO(void) AddDataForStroke(winrt::Windows::UI::Input::Inking::InkStroke const& stroke) const;
-        WINRT_IMPL_AUTO(void) AddDataForStrokes(param::iterable<winrt::Windows::UI::Input::Inking::InkStroke> const& strokes) const;
-        WINRT_IMPL_AUTO(void) ClearDataForAllStrokes() const;
-        WINRT_IMPL_AUTO(void) RemoveDataForStroke(uint32_t strokeId) const;
-        WINRT_IMPL_AUTO(void) RemoveDataForStrokes(param::iterable<uint32_t> const& strokeIds) const;
-        WINRT_IMPL_AUTO(void) ReplaceDataForStroke(winrt::Windows::UI::Input::Inking::InkStroke const& stroke) const;
-        WINRT_IMPL_AUTO(void) SetStrokeDataKind(uint32_t strokeId, winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind const& strokeKind) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult>) AnalyzeAsync() const;
+        [[nodiscard]] auto AnalysisRoot() const;
+        [[nodiscard]] auto IsAnalyzing() const;
+        auto AddDataForStroke(winrt::Windows::UI::Input::Inking::InkStroke const& stroke) const;
+        auto AddDataForStrokes(param::iterable<winrt::Windows::UI::Input::Inking::InkStroke> const& strokes) const;
+        auto ClearDataForAllStrokes() const;
+        auto RemoveDataForStroke(uint32_t strokeId) const;
+        auto RemoveDataForStrokes(param::iterable<uint32_t> const& strokeIds) const;
+        auto ReplaceDataForStroke(winrt::Windows::UI::Input::Inking::InkStroke const& stroke) const;
+        auto SetStrokeDataKind(uint32_t strokeId, winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind const& strokeKind) const;
+        auto AnalyzeAsync() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzer>
     {
@@ -393,7 +391,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer) CreateAnalyzer() const;
+        auto CreateAnalyzer() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>
     {

@@ -524,7 +524,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IUserNotificationListener = _uuidof(IUserNotificationListener);
+                    MIDL_CONST_ID IID& IID_IUserNotificationListener = __uuidof(IUserNotificationListener);
                 } /* Management */
             } /* Notifications */
         } /* UI */
@@ -562,7 +562,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IUserNotificationListenerStatics = _uuidof(IUserNotificationListenerStatics);
+                    MIDL_CONST_ID IID& IID_IUserNotificationListenerStatics = __uuidof(IUserNotificationListenerStatics);
                 } /* Management */
             } /* Notifications */
         } /* UI */

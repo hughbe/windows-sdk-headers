@@ -488,7 +488,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneCallBlockedTriggerDetails = _uuidof(IPhoneCallBlockedTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneCallBlockedTriggerDetails = __uuidof(IPhoneCallBlockedTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */
@@ -540,7 +540,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneCallOriginDataRequestTriggerDetails = _uuidof(IPhoneCallOriginDataRequestTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneCallOriginDataRequestTriggerDetails = __uuidof(IPhoneCallOriginDataRequestTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */
@@ -615,7 +615,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneIncomingCallDismissedTriggerDetails = _uuidof(IPhoneIncomingCallDismissedTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneIncomingCallDismissedTriggerDetails = __uuidof(IPhoneIncomingCallDismissedTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */
@@ -656,7 +656,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneIncomingCallNotificationTriggerDetails = _uuidof(IPhoneIncomingCallNotificationTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneIncomingCallNotificationTriggerDetails = __uuidof(IPhoneIncomingCallNotificationTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */
@@ -702,7 +702,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneLineChangedTriggerDetails = _uuidof(IPhoneLineChangedTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneLineChangedTriggerDetails = __uuidof(IPhoneLineChangedTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */
@@ -748,7 +748,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPhoneNewVoicemailMessageTriggerDetails = _uuidof(IPhoneNewVoicemailMessageTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPhoneNewVoicemailMessageTriggerDetails = __uuidof(IPhoneNewVoicemailMessageTriggerDetails);
                 } /* Background */
             } /* Calls */
         } /* ApplicationModel */

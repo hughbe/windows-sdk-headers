@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,13 +10,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -369,8 +366,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IAnalyticsInfoStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::AnalyticsVersionInfo) VersionInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceForm() const;
+        [[nodiscard]] auto VersionInfo() const;
+        [[nodiscard]] auto DeviceForm() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IAnalyticsInfoStatics>
     {
@@ -379,7 +376,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IAnalyticsInfoStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>>) GetSystemPropertiesAsync(param::async_iterable<hstring> const& attributeNames) const;
+        auto GetSystemPropertiesAsync(param::async_iterable<hstring> const& attributeNames) const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IAnalyticsInfoStatics2>
     {
@@ -388,8 +385,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IAnalyticsVersionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceFamily() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceFamilyVersion() const;
+        [[nodiscard]] auto DeviceFamily() const;
+        [[nodiscard]] auto DeviceFamilyVersion() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IAnalyticsVersionInfo>
     {
@@ -398,7 +395,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IAnalyticsVersionInfo2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProductName() const;
+        [[nodiscard]] auto ProductName() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IAnalyticsVersionInfo2>
     {
@@ -407,7 +404,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IAppApplicabilityStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::Profile::UnsupportedAppRequirement>) GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities) const;
+        auto GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities) const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IAppApplicabilityStatics>
     {
@@ -416,7 +413,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IEducationSettingsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEducationEnvironment() const;
+        [[nodiscard]] auto IsEducationEnvironment() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IEducationSettingsStatics>
     {
@@ -425,7 +422,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IHardwareIdentificationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Profile::HardwareToken) GetPackageSpecificToken(winrt::Windows::Storage::Streams::IBuffer const& nonce) const;
+        auto GetPackageSpecificToken(winrt::Windows::Storage::Streams::IBuffer const& nonce) const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IHardwareIdentificationStatics>
     {
@@ -434,9 +431,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IHardwareToken
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Signature() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Certificate() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Signature() const;
+        [[nodiscard]] auto Certificate() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IHardwareToken>
     {
@@ -445,28 +442,28 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IKnownRetailInfoPropertiesStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RetailAccessCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ManufacturerName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ModelName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayModelName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Price() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) IsFeatured() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FormFactor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ScreenSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Weight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) BatteryLifeDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProcessorDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Memory() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StorageDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) GraphicsDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FrontCameraDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RearCameraDescription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HasNfc() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HasSdSlot() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HasOpticalDrive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) IsOfficeInstalled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WindowsEdition() const;
+        [[nodiscard]] auto RetailAccessCode() const;
+        [[nodiscard]] auto ManufacturerName() const;
+        [[nodiscard]] auto ModelName() const;
+        [[nodiscard]] auto DisplayModelName() const;
+        [[nodiscard]] auto Price() const;
+        [[nodiscard]] auto IsFeatured() const;
+        [[nodiscard]] auto FormFactor() const;
+        [[nodiscard]] auto ScreenSize() const;
+        [[nodiscard]] auto Weight() const;
+        [[nodiscard]] auto DisplayDescription() const;
+        [[nodiscard]] auto BatteryLifeDescription() const;
+        [[nodiscard]] auto ProcessorDescription() const;
+        [[nodiscard]] auto Memory() const;
+        [[nodiscard]] auto StorageDescription() const;
+        [[nodiscard]] auto GraphicsDescription() const;
+        [[nodiscard]] auto FrontCameraDescription() const;
+        [[nodiscard]] auto RearCameraDescription() const;
+        [[nodiscard]] auto HasNfc() const;
+        [[nodiscard]] auto HasSdSlot() const;
+        [[nodiscard]] auto HasOpticalDrive() const;
+        [[nodiscard]] auto IsOfficeInstalled() const;
+        [[nodiscard]] auto WindowsEdition() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IKnownRetailInfoPropertiesStatics>
     {
@@ -475,12 +472,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IPlatformDiagnosticsAndUsageDataSettingsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::PlatformDataCollectionLevel) CollectionLevel() const;
-        WINRT_IMPL_AUTO(winrt::event_token) CollectionLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto CollectionLevel() const;
+        auto CollectionLevelChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using CollectionLevelChanged_revoker = impl::event_revoker<winrt::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics, &impl::abi_t<winrt::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics>::remove_CollectionLevelChanged>;
         [[nodiscard]] CollectionLevelChanged_revoker CollectionLevelChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) CollectionLevelChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(bool) CanCollectDiagnostics(winrt::Windows::System::Profile::PlatformDataCollectionLevel const& level) const;
+        auto CollectionLevelChanged(winrt::event_token const& token) const noexcept;
+        auto CanCollectDiagnostics(winrt::Windows::System::Profile::PlatformDataCollectionLevel const& level) const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics>
     {
@@ -489,8 +486,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IRetailInfoStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDemoModeEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) Properties() const;
+        [[nodiscard]] auto IsDemoModeEnabled() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IRetailInfoStatics>
     {
@@ -499,7 +496,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISharedModeSettingsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        [[nodiscard]] auto IsEnabled() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISharedModeSettingsStatics>
     {
@@ -508,7 +505,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISharedModeSettingsStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldAvoidLocalStorage() const;
+        [[nodiscard]] auto ShouldAvoidLocalStorage() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISharedModeSettingsStatics2>
     {
@@ -517,11 +514,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISmartAppControlPolicyStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::System::Profile::ISmartAppControlPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::ISmartAppControlPolicyStatics>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
+        auto Changed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISmartAppControlPolicyStatics>
     {
@@ -530,8 +527,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISystemIdentificationInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemIdentificationSource) Source() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Source() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISystemIdentificationInfo>
     {
@@ -540,8 +537,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISystemIdentificationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemIdentificationInfo) GetSystemIdForPublisher() const;
-        WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemIdentificationInfo) GetSystemIdForUser(winrt::Windows::System::User const& user) const;
+        auto GetSystemIdForPublisher() const;
+        auto GetSystemIdForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISystemIdentificationStatics>
     {
@@ -550,11 +547,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_ISystemSetupInfoStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemOutOfBoxExperienceState) OutOfBoxExperienceState() const;
-        WINRT_IMPL_AUTO(winrt::event_token) OutOfBoxExperienceStateChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto OutOfBoxExperienceState() const;
+        auto OutOfBoxExperienceStateChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using OutOfBoxExperienceStateChanged_revoker = impl::event_revoker<winrt::Windows::System::Profile::ISystemSetupInfoStatics, &impl::abi_t<winrt::Windows::System::Profile::ISystemSetupInfoStatics>::remove_OutOfBoxExperienceStateChanged>;
         [[nodiscard]] OutOfBoxExperienceStateChanged_revoker OutOfBoxExperienceStateChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) OutOfBoxExperienceStateChanged(winrt::event_token const& token) const noexcept;
+        auto OutOfBoxExperienceStateChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::System::Profile::ISystemSetupInfoStatics>
     {
@@ -563,8 +560,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IUnsupportedAppRequirement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Requirement() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::UnsupportedAppRequirementReasons) Reasons() const;
+        [[nodiscard]] auto Requirement() const;
+        [[nodiscard]] auto Reasons() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::IUnsupportedAppRequirement>
     {
@@ -573,14 +570,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_IWindowsIntegrityPolicyStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabledForTrial() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanDisable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisableSupported() const;
-        WINRT_IMPL_AUTO(winrt::event_token) PolicyChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto IsEnabled() const;
+        [[nodiscard]] auto IsEnabledForTrial() const;
+        [[nodiscard]] auto CanDisable() const;
+        [[nodiscard]] auto IsDisableSupported() const;
+        auto PolicyChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using PolicyChanged_revoker = impl::event_revoker<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics>::remove_PolicyChanged>;
         [[nodiscard]] PolicyChanged_revoker PolicyChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) PolicyChanged(winrt::event_token const& token) const noexcept;
+        auto PolicyChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics>
     {

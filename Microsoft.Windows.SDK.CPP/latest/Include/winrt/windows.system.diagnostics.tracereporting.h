@@ -739,7 +739,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPlatformDiagnosticActionsStatics = _uuidof(IPlatformDiagnosticActionsStatics);
+                    MIDL_CONST_ID IID& IID_IPlatformDiagnosticActionsStatics = __uuidof(IPlatformDiagnosticActionsStatics);
                 } /* TraceReporting */
             } /* Diagnostics */
         } /* System */
@@ -792,7 +792,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPlatformDiagnosticTraceInfo = _uuidof(IPlatformDiagnosticTraceInfo);
+                    MIDL_CONST_ID IID& IID_IPlatformDiagnosticTraceInfo = __uuidof(IPlatformDiagnosticTraceInfo);
                 } /* TraceReporting */
             } /* Diagnostics */
         } /* System */
@@ -833,7 +833,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPlatformDiagnosticTraceRuntimeInfo = _uuidof(IPlatformDiagnosticTraceRuntimeInfo);
+                    MIDL_CONST_ID IID& IID_IPlatformDiagnosticTraceRuntimeInfo = __uuidof(IPlatformDiagnosticTraceRuntimeInfo);
                 } /* TraceReporting */
             } /* Diagnostics */
         } /* System */

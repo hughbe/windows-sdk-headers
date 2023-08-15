@@ -48,6 +48,7 @@ typedef enum WHV_CAPABILITY_CODE
     WHvCapabilityCodeProcessorFrequencyCap           = 0x00001007,
     WHvCapabilityCodeSyntheticProcessorFeaturesBanks = 0x00001008,
     WHvCapabilityCodeProcessorPerfmonFeatures        = 0x00001009,
+    WHvCapabilityCodePhysicalAddressWidth            = 0x0000100A,
 } WHV_CAPABILITY_CODE;
 
 //
@@ -381,7 +382,14 @@ typedef union WHV_SYNTHETIC_PROCESSOR_FEATURES
         // HvCallRetargetDeviceInterrupt is supported.
         UINT64 RetargetDeviceInterrupt:1;
 
-        UINT64 Reserved:33;
+#if defined(_AMD64_)
+        // HvCallRestorePartitionTime is supported.
+        UINT64 RestoreTime:1;
+#else
+        UINT64 ReservedZ26:1;
+#endif
+
+        UINT64 Reserved:32;
     };
 
     UINT64 AsUINT64;
@@ -419,7 +427,6 @@ typedef enum WHV_PARTITION_PROPERTY_CODE
     WHvPartitionPropertyCodeExtendedVmExits         = 0x00000001,
     WHvPartitionPropertyCodeExceptionExitBitmap     = 0x00000002,
     WHvPartitionPropertyCodeSeparateSecurityDomain  = 0x00000003,
-    // Nested virtualization support is experimental and not supported.
     WHvPartitionPropertyCodeNestedVirtualization    = 0x00000004,
     WHvPartitionPropertyCodeX64MsrExitBitmap        = 0x00000005,
     WHvPartitionPropertyCodePrimaryNumaNode         = 0x00000006,
@@ -447,6 +454,7 @@ typedef enum WHV_PARTITION_PROPERTY_CODE
     WHvPartitionPropertyCodeProcessorPerfmonFeatures        = 0x0000100E,
     WHvPartitionPropertyCodeMsrActionList                   = 0x0000100F,
     WHvPartitionPropertyCodeUnimplementedMsrAction          = 0x00001010,
+    WHvPartitionPropertyCodePhysicalAddressWidth            = 0x00001011,
 
     WHvPartitionPropertyCodeProcessorCount          = 0x00001fff
 } WHV_PARTITION_PROPERTY_CODE;
@@ -630,6 +638,7 @@ typedef union WHV_CAPABILITY
     WHV_CAPABILITY_PROCESSOR_FREQUENCY_CAP ProcessorFrequencyCap;
     WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
     WHV_SCHEDULER_FEATURES SchedulerFeatures;
+    UINT32 PhysicalAddressWidth;
 } WHV_CAPABILITY;
 
 //
@@ -770,6 +779,7 @@ typedef union WHV_PARTITION_PROPERTY
     BOOL AllowDeviceAssignment;
     WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
     BOOL DisableSmt;
+    UINT32 PhysicalAddressWidth;
 } WHV_PARTITION_PROPERTY;
 
 //
@@ -1137,21 +1147,28 @@ typedef enum WHV_REGISTER_NAME
     WHvRegisterSimp                = 0x00004013,
     WHvRegisterEom                 = 0x00004014,
 
-    // Synthetic processor feature registers
+    // Hypervisor defined registers
     WHvRegisterVpRuntime           = 0x00005000,
     WHvX64RegisterHypercall        = 0x00005001,
     WHvRegisterGuestOsId           = 0x00005002,
     WHvRegisterVpAssistPage        = 0x00005013,
     WHvRegisterReferenceTsc        = 0x00005017,
     WHvRegisterReferenceTscSequence = 0x0000501A,
+    WHvX64RegisterNestedGuestState  = 0x00005050,
+    WHvX64RegisterNestedCurrentVmGpa = 0x00005051,
+    WHvX64RegisterNestedVmxInvEpt   = 0x00005052,
+    WHvX64RegisterNestedVmxInvVpid  = 0x00005053,
 
     // Interrupt / Event Registers
     WHvRegisterPendingInterruption = 0x80000000,
     WHvRegisterInterruptState      = 0x80000001,
     WHvRegisterPendingEvent        = 0x80000002,
+    WHvRegisterPendingEvent1       = 0x80000003,
     WHvX64RegisterDeliverabilityNotifications = 0x80000004,
     WHvRegisterInternalActivityState = 0x80000005,
     WHvX64RegisterPendingDebugException = 0x80000006,
+    WHvRegisterPendingEvent2       = 0x80000007,
+    WHvRegisterPendingEvent3       = 0x80000008,
 
 } WHV_REGISTER_NAME;
 
@@ -2009,6 +2026,7 @@ typedef enum WHV_VIRTUAL_PROCESSOR_STATE_TYPE
 
     WHvVirtualProcessorStateTypeInterruptControllerState2 = 0x00001000,
     WHvVirtualProcessorStateTypeXsaveState                = 0x00001001,
+    WHvVirtualProcessorStateTypeNestedState               = 0x00001002,
 } WHV_VIRTUAL_PROCESSOR_STATE_TYPE;
 
 //

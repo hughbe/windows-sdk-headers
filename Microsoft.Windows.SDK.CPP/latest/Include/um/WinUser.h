@@ -1925,10 +1925,6 @@ typedef struct tagMSG {
 #define GWLP_ID             (-12)
 
 /*
- * Used in _GetWindowLongPtr to return internal state of user32 edit control
- */
-
-/*
  * Class field offsets for GetClassLong()
  */
 #define GCL_MENUNAME        (-8)

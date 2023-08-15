@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -75,11 +75,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Fonts_ILanguageFont
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FontFamily() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::FontWeight) FontWeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::FontStretch) FontStretch() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::FontStyle) FontStyle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ScaleFactor() const;
+        [[nodiscard]] auto FontFamily() const;
+        [[nodiscard]] auto FontWeight() const;
+        [[nodiscard]] auto FontStretch() const;
+        [[nodiscard]] auto FontStyle() const;
+        [[nodiscard]] auto ScaleFactor() const;
     };
     template <> struct consume<winrt::Windows::Globalization::Fonts::ILanguageFont>
     {
@@ -88,17 +88,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Fonts_ILanguageFontGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) UITextFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) UIHeadingFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) UITitleFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) UICaptionFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) UINotificationHeadingFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) TraditionalDocumentFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) ModernDocumentFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) DocumentHeadingFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) FixedWidthTextFont() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) DocumentAlternate1Font() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFont) DocumentAlternate2Font() const;
+        [[nodiscard]] auto UITextFont() const;
+        [[nodiscard]] auto UIHeadingFont() const;
+        [[nodiscard]] auto UITitleFont() const;
+        [[nodiscard]] auto UICaptionFont() const;
+        [[nodiscard]] auto UINotificationHeadingFont() const;
+        [[nodiscard]] auto TraditionalDocumentFont() const;
+        [[nodiscard]] auto ModernDocumentFont() const;
+        [[nodiscard]] auto DocumentHeadingFont() const;
+        [[nodiscard]] auto FixedWidthTextFont() const;
+        [[nodiscard]] auto DocumentAlternate1Font() const;
+        [[nodiscard]] auto DocumentAlternate2Font() const;
     };
     template <> struct consume<winrt::Windows::Globalization::Fonts::ILanguageFontGroup>
     {
@@ -107,7 +107,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Globalization_Fonts_ILanguageFontGroupFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Globalization::Fonts::LanguageFontGroup) CreateLanguageFontGroup(param::hstring const& languageTag) const;
+        auto CreateLanguageFontGroup(param::hstring const& languageTag) const;
     };
     template <> struct consume<winrt::Windows::Globalization::Fonts::ILanguageFontGroupFactory>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -53,8 +53,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Accessibility_IScreenReaderPositionChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ScreenPositionInRawPixels() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReadingText() const;
+        [[nodiscard]] auto ScreenPositionInRawPixels() const;
+        [[nodiscard]] auto IsReadingText() const;
     };
     template <> struct consume<winrt::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs>
     {
@@ -63,11 +63,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Accessibility_IScreenReaderService
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs) CurrentScreenReaderPosition() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ScreenReaderPositionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Accessibility::ScreenReaderService, winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto CurrentScreenReaderPosition() const;
+        auto ScreenReaderPositionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Accessibility::ScreenReaderService, winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> const& handler) const;
         using ScreenReaderPositionChanged_revoker = impl::event_revoker<winrt::Windows::UI::Accessibility::IScreenReaderService, &impl::abi_t<winrt::Windows::UI::Accessibility::IScreenReaderService>::remove_ScreenReaderPositionChanged>;
         [[nodiscard]] ScreenReaderPositionChanged_revoker ScreenReaderPositionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Accessibility::ScreenReaderService, winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScreenReaderPositionChanged(winrt::event_token const& token) const noexcept;
+        auto ScreenReaderPositionChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Accessibility::IScreenReaderService>
     {

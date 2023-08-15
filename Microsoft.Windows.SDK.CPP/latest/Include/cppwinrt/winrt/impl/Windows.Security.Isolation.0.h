@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,14 +10,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct HResult;
     struct IAsyncAction;
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
     template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Security::Isolation
 {
@@ -662,17 +659,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>) StartProcessSilentlyAsync(param::hstring const& hostExePath, param::hstring const& arguments, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator const& activator) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>) StartProcessSilentlyAsync(param::hstring const& hostExePath, param::hstring const& arguments, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator const& activator, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>) ShareFolderAsync(param::hstring const& hostFolder, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions const& requestOptions) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>) ShareFolderAsync(param::hstring const& hostFolder, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions const& requestOptions, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>) LaunchFileWithUIAsync(param::hstring const& appExePath, param::hstring const& argumentsTemplate, param::hstring const& filePath) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>) LaunchFileWithUIAsync(param::hstring const& appExePath, param::hstring const& argumentsTemplate, param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) TerminateAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) TerminateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
-        WINRT_IMPL_AUTO(void) RegisterMessageReceiver(winrt::guid const& receiverId, winrt::Windows::Security::Isolation::MessageReceivedCallback const& messageReceivedCallback) const;
-        WINRT_IMPL_AUTO(void) UnregisterMessageReceiver(winrt::guid const& receiverId) const;
+        [[nodiscard]] auto Id() const;
+        auto StartProcessSilentlyAsync(param::hstring const& hostExePath, param::hstring const& arguments, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator const& activator) const;
+        auto StartProcessSilentlyAsync(param::hstring const& hostExePath, param::hstring const& arguments, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator const& activator, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto ShareFolderAsync(param::hstring const& hostFolder, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions const& requestOptions) const;
+        auto ShareFolderAsync(param::hstring const& hostFolder, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions const& requestOptions, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto LaunchFileWithUIAsync(param::hstring const& appExePath, param::hstring const& argumentsTemplate, param::hstring const& filePath) const;
+        auto LaunchFileWithUIAsync(param::hstring const& appExePath, param::hstring const& argumentsTemplate, param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto TerminateAsync() const;
+        auto TerminateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto RegisterMessageReceiver(winrt::guid const& receiverId, winrt::Windows::Security::Isolation::MessageReceivedCallback const& messageReceivedCallback) const;
+        auto UnregisterMessageReceiver(winrt::guid const& receiverId) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment>
     {
@@ -681,8 +678,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>) PostMessageToReceiverAsync(winrt::guid const& receiverId, param::async_iterable<winrt::Windows::Foundation::IInspectable> const& message) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>) PostMessageToReceiverAsync(winrt::guid const& receiverId, param::async_iterable<winrt::Windows::Foundation::IInspectable> const& message, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto PostMessageToReceiverAsync(winrt::guid const& receiverId, param::async_iterable<winrt::Windows::Foundation::IInspectable> const& message) const;
+        auto PostMessageToReceiverAsync(winrt::guid const& receiverId, param::async_iterable<winrt::Windows::Foundation::IInspectable> const& message, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2>
     {
@@ -691,9 +688,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo) GetUserInfo() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>) ShareFileAsync(param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>) ShareFileAsync(param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions const& options, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto GetUserInfo() const;
+        auto ShareFileAsync(param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions const& options) const;
+        auto ShareFileAsync(param::hstring const& filePath, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions const& options, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3>
     {
@@ -702,7 +699,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment4
     {
-        WINRT_IMPL_AUTO(void) ChangePriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& Priority) const;
+        auto ChangePriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& Priority) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>
     {
@@ -711,9 +708,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment) Environment() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Environment() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>
     {
@@ -722,7 +719,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult2
     {
-        WINRT_IMPL_AUTO(void) ChangeCreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& priority) const;
+        auto ChangeCreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& priority) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>
     {
@@ -731,10 +728,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>) CreateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>) CreateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions const& options, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment) GetById(param::hstring const& environmentId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>) FindByOwnerId(param::hstring const& environmentOwnerId) const;
+        auto CreateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions const& options) const;
+        auto CreateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions const& options, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters const& telemetryParameters) const;
+        auto GetById(param::hstring const& environmentId) const;
+        auto FindByOwnerId(param::hstring const& environmentOwnerId) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory>
     {
@@ -743,9 +740,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentFile
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HostPath() const;
-        WINRT_IMPL_AUTO(void) Close() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto HostPath() const;
+        auto Close() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile>
     {
@@ -754,8 +751,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentFile2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) GuestPath() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReadOnly() const;
+        [[nodiscard]] auto GuestPath() const;
+        [[nodiscard]] auto IsReadOnly() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile2>
     {
@@ -764,8 +761,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentHostStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReady() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError>) HostErrors() const;
+        [[nodiscard]] auto IsReady() const;
+        [[nodiscard]] auto HostErrors() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentHostStatics>
     {
@@ -774,9 +771,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentLaunchFileResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile) File() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto File() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentLaunchFileResult>
     {
@@ -785,23 +782,23 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnvironmentOwnerId() const;
-        WINRT_IMPL_AUTO(void) EnvironmentOwnerId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats) AllowedClipboardFormats() const;
-        WINRT_IMPL_AUTO(void) AllowedClipboardFormats(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections) ClipboardCopyPasteDirections() const;
-        WINRT_IMPL_AUTO(void) ClipboardCopyPasteDirections(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters) AvailablePrinters() const;
-        WINRT_IMPL_AUTO(void) AvailablePrinters(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SharedHostFolderPath() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SharedFolderNameInEnvironment() const;
-        WINRT_IMPL_AUTO(void) ShareHostFolderForUntrustedItems(param::hstring const& SharedHostFolderPath, param::hstring const& ShareFolderNameInEnvironment) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) PersistUserProfile() const;
-        WINRT_IMPL_AUTO(void) PersistUserProfile(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowGraphicsHardwareAcceleration() const;
-        WINRT_IMPL_AUTO(void) AllowGraphicsHardwareAcceleration(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowCameraAndMicrophoneAccess() const;
-        WINRT_IMPL_AUTO(void) AllowCameraAndMicrophoneAccess(bool value) const;
+        [[nodiscard]] auto EnvironmentOwnerId() const;
+        auto EnvironmentOwnerId(param::hstring const& value) const;
+        [[nodiscard]] auto AllowedClipboardFormats() const;
+        auto AllowedClipboardFormats(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
+        [[nodiscard]] auto ClipboardCopyPasteDirections() const;
+        auto ClipboardCopyPasteDirections(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections const& value) const;
+        [[nodiscard]] auto AvailablePrinters() const;
+        auto AvailablePrinters(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters const& value) const;
+        [[nodiscard]] auto SharedHostFolderPath() const;
+        [[nodiscard]] auto SharedFolderNameInEnvironment() const;
+        auto ShareHostFolderForUntrustedItems(param::hstring const& SharedHostFolderPath, param::hstring const& ShareFolderNameInEnvironment) const;
+        [[nodiscard]] auto PersistUserProfile() const;
+        auto PersistUserProfile(bool value) const;
+        [[nodiscard]] auto AllowGraphicsHardwareAcceleration() const;
+        auto AllowGraphicsHardwareAcceleration(bool value) const;
+        [[nodiscard]] auto AllowCameraAndMicrophoneAccess() const;
+        auto AllowCameraAndMicrophoneAccess(bool value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions>
     {
@@ -810,8 +807,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WindowAnnotationOverride() const;
-        WINRT_IMPL_AUTO(void) WindowAnnotationOverride(param::hstring const& value) const;
+        [[nodiscard]] auto WindowAnnotationOverride() const;
+        auto WindowAnnotationOverride(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions2>
     {
@@ -820,12 +817,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats) AllowedClipboardFormatsToEnvironment() const;
-        WINRT_IMPL_AUTO(void) AllowedClipboardFormatsToEnvironment(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats) AllowedClipboardFormatsToHost() const;
-        WINRT_IMPL_AUTO(void) AllowedClipboardFormatsToHost(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority) CreationPriority() const;
-        WINRT_IMPL_AUTO(void) CreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& value) const;
+        [[nodiscard]] auto AllowedClipboardFormatsToEnvironment() const;
+        auto AllowedClipboardFormatsToEnvironment(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
+        [[nodiscard]] auto AllowedClipboardFormatsToHost() const;
+        auto AllowedClipboardFormatsToHost(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const;
+        [[nodiscard]] auto CreationPriority() const;
+        auto CreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3>
     {
@@ -834,10 +831,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOwnerRegistrationData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ShareableFolders() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ProcessesRunnableAsSystem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ProcessesRunnableAsUser() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ActivationFileExtensions() const;
+        [[nodiscard]] auto ShareableFolders() const;
+        [[nodiscard]] auto ProcessesRunnableAsSystem() const;
+        [[nodiscard]] auto ProcessesRunnableAsUser() const;
+        [[nodiscard]] auto ActivationFileExtensions() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationData>
     {
@@ -846,8 +843,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOwnerRegistrationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationResult>
     {
@@ -856,8 +853,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOwnerRegistrationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult) Register(param::hstring const& ownerName, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData const& ownerRegistrationData) const;
-        WINRT_IMPL_AUTO(void) Unregister(param::hstring const& ownerName) const;
+        auto Register(param::hstring const& ownerName, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData const& ownerRegistrationData) const;
+        auto Unregister(param::hstring const& ownerName) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationStatics>
     {
@@ -866,8 +863,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentPostMessageResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentPostMessageResult>
     {
@@ -876,11 +873,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentProcess
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcessState) State() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ExitCode() const;
-        WINRT_IMPL_AUTO(void) WaitForExit() const;
-        WINRT_IMPL_AUTO(void) WaitForExitWithTimeout(uint32_t timeoutMilliseconds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WaitForExitAsync() const;
+        [[nodiscard]] auto State() const;
+        [[nodiscard]] auto ExitCode() const;
+        auto WaitForExit() const;
+        auto WaitForExitWithTimeout(uint32_t timeoutMilliseconds) const;
+        auto WaitForExitAsync() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentProcess>
     {
@@ -889,8 +886,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentShareFileRequestOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowWrite() const;
-        WINRT_IMPL_AUTO(void) AllowWrite(bool value) const;
+        [[nodiscard]] auto AllowWrite() const;
+        auto AllowWrite(bool value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentShareFileRequestOptions>
     {
@@ -899,9 +896,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentShareFileResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile) File() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto File() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentShareFileResult>
     {
@@ -910,8 +907,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentShareFolderRequestOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowWrite() const;
-        WINRT_IMPL_AUTO(void) AllowWrite(bool value) const;
+        [[nodiscard]] auto AllowWrite() const;
+        auto AllowWrite(bool value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentShareFolderRequestOptions>
     {
@@ -920,8 +917,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentShareFolderResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentShareFolderResult>
     {
@@ -930,9 +927,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentStartProcessResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess) Process() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Process() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentStartProcessResult>
     {
@@ -941,8 +938,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentTelemetryParameters
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) CorrelationId() const;
-        WINRT_IMPL_AUTO(void) CorrelationId(winrt::guid const& value) const;
+        [[nodiscard]] auto CorrelationId() const;
+        auto CorrelationId(winrt::guid const& value) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentTelemetryParameters>
     {
@@ -951,9 +948,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentUserInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnvironmentUserSid() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnvironmentUserName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryWaitForSignInAsync() const;
+        [[nodiscard]] auto EnvironmentUserSid() const;
+        [[nodiscard]] auto EnvironmentUserName() const;
+        auto TryWaitForSignInAsync() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentUserInfo>
     {
@@ -962,7 +959,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentUserInfo2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<bool, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress>) TryWaitForSignInWithProgressAsync() const;
+        auto TryWaitForSignInWithProgressAsync() const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentUserInfo2>
     {
@@ -971,8 +968,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsHostMessengerStatics
     {
-        WINRT_IMPL_AUTO(void) PostMessageToReceiver(winrt::guid const& receiverId, param::vector_view<winrt::Windows::Foundation::IInspectable> const& message) const;
-        WINRT_IMPL_AUTO(winrt::guid) GetFileId(param::hstring const& filePath) const;
+        auto PostMessageToReceiver(winrt::guid const& receiverId, param::vector_view<winrt::Windows::Foundation::IInspectable> const& message) const;
+        auto GetFileId(param::hstring const& filePath) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsHostMessengerStatics>
     {
@@ -981,8 +978,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsHostMessengerStatics2
     {
-        WINRT_IMPL_AUTO(void) RegisterHostMessageReceiver(winrt::guid const& receiverId, winrt::Windows::Security::Isolation::HostMessageReceivedCallback const& hostMessageReceivedCallback) const;
-        WINRT_IMPL_AUTO(void) UnregisterHostMessageReceiver(winrt::guid const& receiverId) const;
+        auto RegisterHostMessageReceiver(winrt::guid const& receiverId, winrt::Windows::Security::Isolation::HostMessageReceivedCallback const& hostMessageReceivedCallback) const;
+        auto UnregisterHostMessageReceiver(winrt::guid const& receiverId) const;
     };
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsHostMessengerStatics2>
     {

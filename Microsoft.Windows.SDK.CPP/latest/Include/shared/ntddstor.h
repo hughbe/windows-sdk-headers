@@ -2022,11 +2022,11 @@ typedef union _STORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE {
 
     struct {
 
-        ULONG RetainAsynEvent : 1;
-
-        ULONG LogSpecificField : 4;
-
-        ULONG Reserved : 27;
+        ULONG RetainAsynEvent   :  1;
+        ULONG LogSpecificField  :  4;
+        ULONG Reserved0         :  3;
+        ULONG UUIDIndex         :  7;
+        ULONG Reserved          : 17;
 
     } DUMMYSTRUCTNAME;
 

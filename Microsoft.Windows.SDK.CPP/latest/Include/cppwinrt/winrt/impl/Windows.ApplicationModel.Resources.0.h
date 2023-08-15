@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -106,7 +106,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoader
     {
-        WINRT_IMPL_AUTO(hstring) GetString(param::hstring const& resource) const;
+        auto GetString(param::hstring const& resource) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoader>
     {
@@ -115,7 +115,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoader2
     {
-        WINRT_IMPL_AUTO(hstring) GetStringForUri(winrt::Windows::Foundation::Uri const& uri) const;
+        auto GetStringForUri(winrt::Windows::Foundation::Uri const& uri) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoader2>
     {
@@ -124,7 +124,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoaderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) CreateResourceLoaderByName(param::hstring const& name) const;
+        auto CreateResourceLoaderByName(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoaderFactory>
     {
@@ -133,7 +133,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoaderStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetStringForReference(winrt::Windows::Foundation::Uri const& uri) const;
+        auto GetStringForReference(winrt::Windows::Foundation::Uri const& uri) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics>
     {
@@ -142,10 +142,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoaderStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) GetForCurrentView() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) GetForCurrentView(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) GetForViewIndependentUse() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) GetForViewIndependentUse(param::hstring const& name) const;
+        auto GetForCurrentView() const;
+        auto GetForCurrentView(param::hstring const& name) const;
+        auto GetForViewIndependentUse() const;
+        auto GetForViewIndependentUse(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics2>
     {
@@ -154,7 +154,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoaderStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::ResourceLoader) GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
+        auto GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics3>
     {
@@ -163,7 +163,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_IResourceLoaderStatics4
     {
-        WINRT_IMPL_AUTO(hstring) GetDefaultPriPath(param::hstring const& packageFullName) const;
+        auto GetDefaultPriPath(param::hstring const& packageFullName) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::IResourceLoaderStatics4>
     {

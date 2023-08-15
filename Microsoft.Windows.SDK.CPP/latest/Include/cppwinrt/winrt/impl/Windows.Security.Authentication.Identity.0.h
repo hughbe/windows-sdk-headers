@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,14 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Security_Authentication_Identity_0_H
 #define WINRT_Windows_Security_Authentication_Identity_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-}
 WINRT_EXPORT namespace winrt::Windows::Security::Authentication::Identity
 {
     struct IEnterpriseKeyCredentialRegistrationInfo;
@@ -67,11 +59,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_IEnterpriseKeyCredentialRegistrationInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TenantId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TenantName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subject() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) KeyId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) KeyName() const;
+        [[nodiscard]] auto TenantId() const;
+        [[nodiscard]] auto TenantName() const;
+        [[nodiscard]] auto Subject() const;
+        [[nodiscard]] auto KeyId() const;
+        [[nodiscard]] auto KeyName() const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationInfo>
     {
@@ -80,7 +72,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_IEnterpriseKeyCredentialRegistrationManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>>) GetRegistrationsAsync() const;
+        auto GetRegistrationsAsync() const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationManager>
     {
@@ -89,7 +81,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_IEnterpriseKeyCredentialRegistrationManagerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager) Current() const;
+        [[nodiscard]] auto Current() const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Identity::IEnterpriseKeyCredentialRegistrationManagerStatics>
     {

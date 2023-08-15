@@ -464,7 +464,7 @@
 #define PrInstrumentationCallback 0x390
 #define PrMitigationFlags2 0xa94
 #define KernelProcessObjectLength 0x3f0
-#define ExecutiveProcessObjectLength 0xc80
+#define ExecutiveProcessObjectLength 0xd00
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -501,7 +501,7 @@
 //
 
 #define EtCid 0x4e8
-#define EtPicoContext 0x650
+#define EtPicoContext 0x660
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -569,7 +569,7 @@
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
 #define KernelThreadObjectLength 0x4a0
-#define ExecutiveThreadObjectLength 0x920
+#define ExecutiveThreadObjectLength 0x9f8
 
 
 //
@@ -727,7 +727,7 @@
 #define TeGuaranteedStackBytes 0x1748
 #define TeChpeV2CpuAreaInfo 0x1788
 #define TeFlsData 0x17c8
-#define ThreadEnvironmentBlockLength 0x1850
+#define ThreadEnvironmentBlockLength 0x1858
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
 #define TLS_EXPANSION_SLOTS 0x400
@@ -853,11 +853,15 @@
 // Processor Control Region Structure Offset Definitions
 //
 
-#define PCR_BTI_MITIGATION_VBAR_MASK 0xf
-#define PCR_BTI_MITIGATION_CSWAP_HVC 0x10
-#define PCR_BTI_MITIGATION_CSWAP_SMC 0x20
-#define PCR_BTI_MITIGATION_CSWAP_HVC_BIT 0x4
-#define PCR_BTI_MITIGATION_CSWAP_SMC_BIT 0x5
+#define PCR_BTI_MITIGATION_NONE 0x0
+#define PCR_BTI_MITIGATION_TRAP_HVC 0x1
+#define PCR_BTI_MITIGATION_TRAP_SMC 0x2
+#define PCR_BTI_MITIGATION_CSWAP_HVC 0x4
+#define PCR_BTI_MITIGATION_CSWAP_SMC 0x8
+#define PCR_BTI_MITIGATION_TRAP_HVC_BIT 0x0
+#define PCR_BTI_MITIGATION_TRAP_SMC_BIT 0x1
+#define PCR_BTI_MITIGATION_CSWAP_HVC_BIT 0x2
+#define PCR_BTI_MITIGATION_CSWAP_SMC_BIT 0x3
 #define ARM64_ASID_KVA_SHADOW 0x8000
 #define PSCI_FUNCTION_CODE_SMCCC_ARCH_WORKAROUND_1 0x80008000
 #define PcSelf 0x18
@@ -867,7 +871,6 @@
 #define PcStallScaleFactor 0x40
 #define PcBtiMitigation 0x4c
 #define PcSsbMitigationFlags 0x4d
-#define PcBhbMitigation 0x4e
 #define PcPanicStorage 0x50
 #define PcHalReserved 0x88
 #define PcPrcb 0x980
@@ -882,7 +885,7 @@
 #define PcPrcbLock 0x9a8
 #define PcGroupSetMember 0x10e0
 #define PcFeatureBits 0x1214
-#define PcVirtualApicAssist 0x21a8
+#define PcVirtualApicAssist 0x2128
 #define PcTrappedSecurityDomain 0x1578
 #define PcEmulatedFaultSyndrome 0x1230
 #define PcEmulatedAccess 0x122c
@@ -920,7 +923,7 @@
 #define PcSkipTick 0x1898
 #define PcStartCycles 0x18c8
 #define PcSpBase 0x1480
-#define ProcessorControlRegisterLength 0x29e40
+#define ProcessorControlRegisterLength 0x29dc0
 
 //
 // Defines for user shared data
@@ -966,18 +969,18 @@
 #define PbPriorityState 0x30
 #define PbLockQueue 0x780
 #define PbPPLookasideList 0x900
-#define PbPPNPagedLookasideList 0x6800
-#define PbPPPagedLookasideList 0x7400
+#define PbPPNPagedLookasideList 0x6780
+#define PbPPPagedLookasideList 0x7380
 #define PbPacketBarrier 0xa00
 #define PbDeferredReadyListHead 0xa08
 #define PbLookasideIrpFloat 0xa58
-#define PbRequestMailbox 0x9480
+#define PbRequestMailbox 0x9400
 #define PbMailbox 0xa80
 #define PbDpcGate 0xb80
 #define PbWaitListHead 0xc00
 #define PbCcFastMdlReadNoWait 0x1180
 #define PbPowerState 0x1200
-#define PbSpinLockAcquireCount 0x1880
+#define PbSpinLockAcquireCount 0x1800
 #define PbSystemCalls 0xa38
 #define PbReadOperationCount 0xa5c
 #define PbWriteOperationCount 0xa60
@@ -1020,11 +1023,11 @@
 #define PbCopyReadNoWait 0xa4c
 #define PbCopyReadWait 0xa50
 #define PbCopyReadNoWaitMiss 0xa54
-#define PbAlignmentFixupCount 0x1478
+#define PbAlignmentFixupCount 0x1470
 #define PbExceptionDispatchCount 0xf34
 #define PbProcessorVendorString 0x890
 #define PbFeatureBits 0x894
-#define PbPanicStackBase 0x1958
+#define PbPanicStackBase 0x18d8
 
 //
 // KTHREAD state
@@ -1549,8 +1552,6 @@
 #define FAST_FAIL_CONTROL_INVALID_RETURN_ADDRESS 0x39
 #define BASE_PRIORITY_THRESHOLD 0x8
 #define LOW_REALTIME_PRIORITY 0x10
-#define KERNEL_LARGE_STACK_COMMIT 0x8000
-#define KERNEL_LARGE_STACK_SIZE 0x12000
 #define DOUBLE_FAULT_STACK_SIZE 0x8000
 #define BREAKPOINT_BREAK 0x0
 #define BREAKPOINT_HW_BREAK 0x7

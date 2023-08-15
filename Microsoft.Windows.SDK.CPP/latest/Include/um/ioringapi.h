@@ -51,6 +51,15 @@ DEFINE_ENUM_FLAG_OPERATORS( IORING_CREATE_REQUIRED_FLAGS )
 typedef enum IORING_CREATE_ADVISORY_FLAGS
 {
     IORING_CREATE_ADVISORY_FLAGS_NONE = 0,
+
+    // Requests the IORING implementation to skip parameter checks in the builder APIs.
+    // Ordinarily the builder APIs perform checks to catch programming errors as early as possible.
+    // This flag is used to disable that if the implementation understands it (as an advisory flag
+    // it has no effect on an implementation that doesn't understand it so it is safe to use on all
+    // versions). Normally, this is used in RELEASE builds to eliminate the redundant checks. Errors
+    // from invalid parameters are still checked in the kernel and any errors appear in the completion
+    // queue entries for the operation.
+    IORING_CREATE_SKIP_BUILDER_PARAM_CHECKS = 0x00000001,
 } IORING_CREATE_ADVISORY_FLAGS;
 DEFINE_ENUM_FLAG_OPERATORS( IORING_CREATE_ADVISORY_FLAGS )
 

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Devices_Pwm_Provider_0_H
 #define WINRT_Windows_Devices_Pwm_Provider_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-}
 WINRT_EXPORT namespace winrt::Windows::Devices::Pwm::Provider
 {
     struct IPwmControllerProvider;
@@ -49,16 +45,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PinCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ActualFrequency() const;
-        WINRT_IMPL_AUTO(double) SetDesiredFrequency(double frequency) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxFrequency() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MinFrequency() const;
-        WINRT_IMPL_AUTO(void) AcquirePin(int32_t pin) const;
-        WINRT_IMPL_AUTO(void) ReleasePin(int32_t pin) const;
-        WINRT_IMPL_AUTO(void) EnablePin(int32_t pin) const;
-        WINRT_IMPL_AUTO(void) DisablePin(int32_t pin) const;
-        WINRT_IMPL_AUTO(void) SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const;
+        [[nodiscard]] auto PinCount() const;
+        [[nodiscard]] auto ActualFrequency() const;
+        auto SetDesiredFrequency(double frequency) const;
+        [[nodiscard]] auto MaxFrequency() const;
+        [[nodiscard]] auto MinFrequency() const;
+        auto AcquirePin(int32_t pin) const;
+        auto ReleasePin(int32_t pin) const;
+        auto EnablePin(int32_t pin) const;
+        auto DisablePin(int32_t pin) const;
+        auto SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>
     {
@@ -67,7 +63,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_Provider_IPwmProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>) GetControllers() const;
+        auto GetControllers() const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>
     {

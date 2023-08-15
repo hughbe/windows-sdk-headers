@@ -617,12 +617,6 @@ library NETWORKLIST
         [source]           interface INetworkCostManagerEvents;
         [source]           interface INetworkConnectionCostEvents;
                            interface IPropertyBag;
-        interface INetwork;
-        interface INetwork2;
-        interface IEnumNetworks;
-        interface INetworkConnection;
-        interface INetworkConnection2;
-        interface IEnumNetworkConnections;
     }
 }
 

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics
@@ -25,10 +24,6 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX::Direct3D11
 {
     struct IDirect3DDevice;
     struct IDirect3DSurface;
-}
-WINRT_EXPORT namespace winrt::Windows::Security::Authorization::AppCapabilityAccess
-{
-    enum class AppCapabilityAccessStatus : int32_t;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -236,9 +231,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface) Surface() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) SystemRelativeTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::SizeInt32) ContentSize() const;
+        [[nodiscard]] auto Surface() const;
+        [[nodiscard]] auto SystemRelativeTime() const;
+        [[nodiscard]] auto ContentSize() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame>
     {
@@ -247,14 +242,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFramePool
     {
-        WINRT_IMPL_AUTO(void) Recreate(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame) TryGetNextFrame() const;
-        WINRT_IMPL_AUTO(winrt::event_token) FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Recreate(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
+        auto TryGetNextFrame() const;
+        auto FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using FrameArrived_revoker = impl::event_revoker<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool, &impl::abi_t<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool>::remove_FrameArrived>;
         [[nodiscard]] FrameArrived_revoker FrameArrived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) FrameArrived(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::GraphicsCaptureSession) CreateCaptureSession(winrt::Windows::Graphics::Capture::GraphicsCaptureItem const& item) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) DispatcherQueue() const;
+        auto FrameArrived(winrt::event_token const& token) const noexcept;
+        auto CreateCaptureSession(winrt::Windows::Graphics::Capture::GraphicsCaptureItem const& item) const;
+        [[nodiscard]] auto DispatcherQueue() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool>
     {
@@ -263,7 +258,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFramePoolStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool) Create(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
+        auto Create(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics>
     {
@@ -272,7 +267,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFramePoolStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool) CreateFreeThreaded(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
+        auto CreateFreeThreaded(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, int32_t numberOfBuffers, winrt::Windows::Graphics::SizeInt32 const& size) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2>
     {
@@ -281,7 +276,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureAccessStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>) RequestAccessAsync(winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind const& request) const;
+        auto RequestAccessAsync(winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind const& request) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureAccessStatics>
     {
@@ -290,12 +285,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::SizeInt32) Size() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::GraphicsCaptureItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto Size() const;
+        auto Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::GraphicsCaptureItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Closed_revoker = impl::event_revoker<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem, &impl::abi_t<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>::remove_Closed>;
         [[nodiscard]] Closed_revoker Closed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Capture::GraphicsCaptureItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closed(winrt::event_token const& token) const noexcept;
+        auto Closed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>
     {
@@ -304,7 +299,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureItemStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::GraphicsCaptureItem) CreateFromVisual(winrt::Windows::UI::Composition::Visual const& visual) const;
+        auto CreateFromVisual(winrt::Windows::UI::Composition::Visual const& visual) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureItemStatics>
     {
@@ -313,8 +308,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureItemStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::GraphicsCaptureItem) TryCreateFromWindowId(winrt::Windows::UI::WindowId const& windowId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Capture::GraphicsCaptureItem) TryCreateFromDisplayId(winrt::Windows::Graphics::DisplayId const& displayId) const;
+        auto TryCreateFromWindowId(winrt::Windows::UI::WindowId const& windowId) const;
+        auto TryCreateFromDisplayId(winrt::Windows::Graphics::DisplayId const& displayId) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureItemStatics2>
     {
@@ -323,7 +318,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCapturePicker
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>) PickSingleItemAsync() const;
+        auto PickSingleItemAsync() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCapturePicker>
     {
@@ -332,7 +327,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureSession
     {
-        WINRT_IMPL_AUTO(void) StartCapture() const;
+        auto StartCapture() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession>
     {
@@ -341,8 +336,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureSession2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCursorCaptureEnabled() const;
-        WINRT_IMPL_AUTO(void) IsCursorCaptureEnabled(bool value) const;
+        [[nodiscard]] auto IsCursorCaptureEnabled() const;
+        auto IsCursorCaptureEnabled(bool value) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession2>
     {
@@ -351,8 +346,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureSession3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBorderRequired() const;
-        WINRT_IMPL_AUTO(void) IsBorderRequired(bool value) const;
+        [[nodiscard]] auto IsBorderRequired() const;
+        auto IsBorderRequired(bool value) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession3>
     {
@@ -361,7 +356,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureSessionStatics
     {
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics>
     {

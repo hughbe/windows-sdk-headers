@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -111,16 +111,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Foundation_Metadata_IApiInformationStatics
     {
-        WINRT_IMPL_AUTO(bool) IsTypePresent(param::hstring const& typeName) const;
-        WINRT_IMPL_AUTO(bool) IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName) const;
-        WINRT_IMPL_AUTO(bool) IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount) const;
-        WINRT_IMPL_AUTO(bool) IsEventPresent(param::hstring const& typeName, param::hstring const& eventName) const;
-        WINRT_IMPL_AUTO(bool) IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
-        WINRT_IMPL_AUTO(bool) IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
-        WINRT_IMPL_AUTO(bool) IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
-        WINRT_IMPL_AUTO(bool) IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName) const;
-        WINRT_IMPL_AUTO(bool) IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion) const;
-        WINRT_IMPL_AUTO(bool) IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion) const;
+        auto IsTypePresent(param::hstring const& typeName) const;
+        auto IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName) const;
+        auto IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount) const;
+        auto IsEventPresent(param::hstring const& typeName, param::hstring const& eventName) const;
+        auto IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
+        auto IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
+        auto IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const;
+        auto IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName) const;
+        auto IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion) const;
+        auto IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion) const;
     };
     template <> struct consume<winrt::Windows::Foundation::Metadata::IApiInformationStatics>
     {

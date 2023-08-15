@@ -391,7 +391,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundEnergyManagerStatics = _uuidof(IBackgroundEnergyManagerStatics);
+                MIDL_CONST_ID IID& IID_IBackgroundEnergyManagerStatics = __uuidof(IBackgroundEnergyManagerStatics);
             } /* Power */
         } /* System */
     } /* Windows */
@@ -489,7 +489,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IForegroundEnergyManagerStatics = _uuidof(IForegroundEnergyManagerStatics);
+                MIDL_CONST_ID IID& IID_IForegroundEnergyManagerStatics = __uuidof(IForegroundEnergyManagerStatics);
             } /* Power */
         } /* System */
     } /* Windows */
@@ -572,7 +572,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPowerManagerStatics = _uuidof(IPowerManagerStatics);
+                MIDL_CONST_ID IID& IID_IPowerManagerStatics = __uuidof(IPowerManagerStatics);
             } /* Power */
         } /* System */
     } /* Windows */

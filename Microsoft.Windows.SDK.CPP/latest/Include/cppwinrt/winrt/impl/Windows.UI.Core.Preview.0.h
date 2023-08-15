@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -101,7 +101,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_Preview_ICoreAppWindowPreviewStatics
     {
-        WINRT_IMPL_AUTO(int32_t) GetIdFromWindow(winrt::Windows::UI::WindowManagement::AppWindow const& window) const;
+        auto GetIdFromWindow(winrt::Windows::UI::WindowManagement::AppWindow const& window) const;
     };
     template <> struct consume<winrt::Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics>
     {
@@ -110,9 +110,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_Preview_ISystemNavigationCloseRequestedPreviewEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::UI::Core::Preview::ISystemNavigationCloseRequestedPreviewEventArgs>
     {
@@ -121,10 +121,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_Preview_ISystemNavigationManagerPreview
     {
-        WINRT_IMPL_AUTO(winrt::event_token) CloseRequested(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs> const& handler) const;
+        auto CloseRequested(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs> const& handler) const;
         using CloseRequested_revoker = impl::event_revoker<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreview, &impl::abi_t<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreview>::remove_CloseRequested>;
         [[nodiscard]] CloseRequested_revoker CloseRequested(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) CloseRequested(winrt::event_token const& token) const noexcept;
+        auto CloseRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreview>
     {
@@ -133,7 +133,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_Preview_ISystemNavigationManagerPreviewStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Core::Preview::ISystemNavigationManagerPreviewStatics>
     {

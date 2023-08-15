@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -55,7 +55,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_Preview_IWindowManagementPreviewStatics
     {
-        WINRT_IMPL_AUTO(void) SetPreferredMinSize(winrt::Windows::UI::WindowManagement::AppWindow const& window, winrt::Windows::Foundation::Size const& preferredFrameMinSize) const;
+        auto SetPreferredMinSize(winrt::Windows::UI::WindowManagement::AppWindow const& window, winrt::Windows::Foundation::Size const& preferredFrameMinSize) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::Preview::IWindowManagementPreviewStatics>
     {

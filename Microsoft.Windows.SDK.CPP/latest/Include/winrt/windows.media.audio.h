@@ -3357,7 +3357,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioDeviceInputNode = _uuidof(IAudioDeviceInputNode);
+                MIDL_CONST_ID IID& IID_IAudioDeviceInputNode = __uuidof(IAudioDeviceInputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3397,7 +3397,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioDeviceOutputNode = _uuidof(IAudioDeviceOutputNode);
+                MIDL_CONST_ID IID& IID_IAudioDeviceOutputNode = __uuidof(IAudioDeviceOutputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3478,7 +3478,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioFileInputNode = _uuidof(IAudioFileInputNode);
+                MIDL_CONST_ID IID& IID_IAudioFileInputNode = __uuidof(IAudioFileInputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3524,7 +3524,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioFileOutputNode = _uuidof(IAudioFileOutputNode);
+                MIDL_CONST_ID IID& IID_IAudioFileOutputNode = __uuidof(IAudioFileOutputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3560,7 +3560,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioFrameCompletedEventArgs = _uuidof(IAudioFrameCompletedEventArgs);
+                MIDL_CONST_ID IID& IID_IAudioFrameCompletedEventArgs = __uuidof(IAudioFrameCompletedEventArgs);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3625,7 +3625,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioFrameInputNode = _uuidof(IAudioFrameInputNode);
+                MIDL_CONST_ID IID& IID_IAudioFrameInputNode = __uuidof(IAudioFrameInputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3665,7 +3665,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioFrameOutputNode = _uuidof(IAudioFrameOutputNode);
+                MIDL_CONST_ID IID& IID_IAudioFrameOutputNode = __uuidof(IAudioFrameOutputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3795,7 +3795,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraph = _uuidof(IAudioGraph);
+                MIDL_CONST_ID IID& IID_IAudioGraph = __uuidof(IAudioGraph);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3857,7 +3857,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraph2 = _uuidof(IAudioGraph2);
+                MIDL_CONST_ID IID& IID_IAudioGraph2 = __uuidof(IAudioGraph2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3899,7 +3899,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraph3 = _uuidof(IAudioGraph3);
+                MIDL_CONST_ID IID& IID_IAudioGraph3 = __uuidof(IAudioGraph3);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -3941,7 +3941,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphConnection = _uuidof(IAudioGraphConnection);
+                MIDL_CONST_ID IID& IID_IAudioGraphConnection = __uuidof(IAudioGraphConnection);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4010,7 +4010,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphSettings = _uuidof(IAudioGraphSettings);
+                MIDL_CONST_ID IID& IID_IAudioGraphSettings = __uuidof(IAudioGraphSettings);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4049,7 +4049,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphSettings2 = _uuidof(IAudioGraphSettings2);
+                MIDL_CONST_ID IID& IID_IAudioGraphSettings2 = __uuidof(IAudioGraphSettings2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4086,7 +4086,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphSettingsFactory = _uuidof(IAudioGraphSettingsFactory);
+                MIDL_CONST_ID IID& IID_IAudioGraphSettingsFactory = __uuidof(IAudioGraphSettingsFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4123,7 +4123,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphStatics = _uuidof(IAudioGraphStatics);
+                MIDL_CONST_ID IID& IID_IAudioGraphStatics = __uuidof(IAudioGraphStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4159,7 +4159,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioGraphUnrecoverableErrorOccurredEventArgs = _uuidof(IAudioGraphUnrecoverableErrorOccurredEventArgs);
+                MIDL_CONST_ID IID& IID_IAudioGraphUnrecoverableErrorOccurredEventArgs = __uuidof(IAudioGraphUnrecoverableErrorOccurredEventArgs);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4207,7 +4207,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioInputNode = _uuidof(IAudioInputNode);
+                MIDL_CONST_ID IID& IID_IAudioInputNode = __uuidof(IAudioInputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4246,7 +4246,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioInputNode2 = _uuidof(IAudioInputNode2);
+                MIDL_CONST_ID IID& IID_IAudioInputNode2 = __uuidof(IAudioInputNode2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4307,7 +4307,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNode = _uuidof(IAudioNode);
+                MIDL_CONST_ID IID& IID_IAudioNode = __uuidof(IAudioNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4385,7 +4385,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitter = _uuidof(IAudioNodeEmitter);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitter = __uuidof(IAudioNodeEmitter);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4424,7 +4424,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitter2 = _uuidof(IAudioNodeEmitter2);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitter2 = __uuidof(IAudioNodeEmitter2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4466,7 +4466,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterConeProperties = _uuidof(IAudioNodeEmitterConeProperties);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterConeProperties = __uuidof(IAudioNodeEmitterConeProperties);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4511,7 +4511,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterDecayModel = _uuidof(IAudioNodeEmitterDecayModel);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterDecayModel = __uuidof(IAudioNodeEmitterDecayModel);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4556,7 +4556,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterDecayModelStatics = _uuidof(IAudioNodeEmitterDecayModelStatics);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterDecayModelStatics = __uuidof(IAudioNodeEmitterDecayModelStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4595,7 +4595,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterFactory = _uuidof(IAudioNodeEmitterFactory);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterFactory = __uuidof(IAudioNodeEmitterFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4634,7 +4634,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterNaturalDecayModelProperties = _uuidof(IAudioNodeEmitterNaturalDecayModelProperties);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterNaturalDecayModelProperties = __uuidof(IAudioNodeEmitterNaturalDecayModelProperties);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4673,7 +4673,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterShape = _uuidof(IAudioNodeEmitterShape);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterShape = __uuidof(IAudioNodeEmitterShape);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4715,7 +4715,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeEmitterShapeStatics = _uuidof(IAudioNodeEmitterShapeStatics);
+                MIDL_CONST_ID IID& IID_IAudioNodeEmitterShapeStatics = __uuidof(IAudioNodeEmitterShapeStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4772,7 +4772,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeListener = _uuidof(IAudioNodeListener);
+                MIDL_CONST_ID IID& IID_IAudioNodeListener = __uuidof(IAudioNodeListener);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4813,7 +4813,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioNodeWithListener = _uuidof(IAudioNodeWithListener);
+                MIDL_CONST_ID IID& IID_IAudioNodeWithListener = __uuidof(IAudioNodeWithListener);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4869,7 +4869,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioPlaybackConnection = _uuidof(IAudioPlaybackConnection);
+                MIDL_CONST_ID IID& IID_IAudioPlaybackConnection = __uuidof(IAudioPlaybackConnection);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4908,7 +4908,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioPlaybackConnectionOpenResult = _uuidof(IAudioPlaybackConnectionOpenResult);
+                MIDL_CONST_ID IID& IID_IAudioPlaybackConnectionOpenResult = __uuidof(IAudioPlaybackConnectionOpenResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4948,7 +4948,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioPlaybackConnectionStatics = _uuidof(IAudioPlaybackConnectionStatics);
+                MIDL_CONST_ID IID& IID_IAudioPlaybackConnectionStatics = __uuidof(IAudioPlaybackConnectionStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -4991,7 +4991,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioStateMonitor = _uuidof(IAudioStateMonitor);
+                MIDL_CONST_ID IID& IID_IAudioStateMonitor = __uuidof(IAudioStateMonitor);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5058,7 +5058,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioStateMonitorStatics = _uuidof(IAudioStateMonitorStatics);
+                MIDL_CONST_ID IID& IID_IAudioStateMonitorStatics = __uuidof(IAudioStateMonitorStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5097,7 +5097,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioDeviceInputNodeResult = _uuidof(ICreateAudioDeviceInputNodeResult);
+                MIDL_CONST_ID IID& IID_ICreateAudioDeviceInputNodeResult = __uuidof(ICreateAudioDeviceInputNodeResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5133,7 +5133,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioDeviceInputNodeResult2 = _uuidof(ICreateAudioDeviceInputNodeResult2);
+                MIDL_CONST_ID IID& IID_ICreateAudioDeviceInputNodeResult2 = __uuidof(ICreateAudioDeviceInputNodeResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5172,7 +5172,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioDeviceOutputNodeResult = _uuidof(ICreateAudioDeviceOutputNodeResult);
+                MIDL_CONST_ID IID& IID_ICreateAudioDeviceOutputNodeResult = __uuidof(ICreateAudioDeviceOutputNodeResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5208,7 +5208,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioDeviceOutputNodeResult2 = _uuidof(ICreateAudioDeviceOutputNodeResult2);
+                MIDL_CONST_ID IID& IID_ICreateAudioDeviceOutputNodeResult2 = __uuidof(ICreateAudioDeviceOutputNodeResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5247,7 +5247,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioFileInputNodeResult = _uuidof(ICreateAudioFileInputNodeResult);
+                MIDL_CONST_ID IID& IID_ICreateAudioFileInputNodeResult = __uuidof(ICreateAudioFileInputNodeResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5283,7 +5283,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioFileInputNodeResult2 = _uuidof(ICreateAudioFileInputNodeResult2);
+                MIDL_CONST_ID IID& IID_ICreateAudioFileInputNodeResult2 = __uuidof(ICreateAudioFileInputNodeResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5322,7 +5322,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioFileOutputNodeResult = _uuidof(ICreateAudioFileOutputNodeResult);
+                MIDL_CONST_ID IID& IID_ICreateAudioFileOutputNodeResult = __uuidof(ICreateAudioFileOutputNodeResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5358,7 +5358,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioFileOutputNodeResult2 = _uuidof(ICreateAudioFileOutputNodeResult2);
+                MIDL_CONST_ID IID& IID_ICreateAudioFileOutputNodeResult2 = __uuidof(ICreateAudioFileOutputNodeResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5397,7 +5397,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioGraphResult = _uuidof(ICreateAudioGraphResult);
+                MIDL_CONST_ID IID& IID_ICreateAudioGraphResult = __uuidof(ICreateAudioGraphResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5433,7 +5433,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateAudioGraphResult2 = _uuidof(ICreateAudioGraphResult2);
+                MIDL_CONST_ID IID& IID_ICreateAudioGraphResult2 = __uuidof(ICreateAudioGraphResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5472,7 +5472,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateMediaSourceAudioInputNodeResult = _uuidof(ICreateMediaSourceAudioInputNodeResult);
+                MIDL_CONST_ID IID& IID_ICreateMediaSourceAudioInputNodeResult = __uuidof(ICreateMediaSourceAudioInputNodeResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5508,7 +5508,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateMediaSourceAudioInputNodeResult2 = _uuidof(ICreateMediaSourceAudioInputNodeResult2);
+                MIDL_CONST_ID IID& IID_ICreateMediaSourceAudioInputNodeResult2 = __uuidof(ICreateMediaSourceAudioInputNodeResult2);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5562,7 +5562,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEchoEffectDefinition = _uuidof(IEchoEffectDefinition);
+                MIDL_CONST_ID IID& IID_IEchoEffectDefinition = __uuidof(IEchoEffectDefinition);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5599,7 +5599,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEchoEffectDefinitionFactory = _uuidof(IEchoEffectDefinitionFactory);
+                MIDL_CONST_ID IID& IID_IEchoEffectDefinitionFactory = __uuidof(IEchoEffectDefinitionFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5650,7 +5650,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEqualizerBand = _uuidof(IEqualizerBand);
+                MIDL_CONST_ID IID& IID_IEqualizerBand = __uuidof(IEqualizerBand);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5689,7 +5689,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEqualizerEffectDefinition = _uuidof(IEqualizerEffectDefinition);
+                MIDL_CONST_ID IID& IID_IEqualizerEffectDefinition = __uuidof(IEqualizerEffectDefinition);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5726,7 +5726,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEqualizerEffectDefinitionFactory = _uuidof(IEqualizerEffectDefinitionFactory);
+                MIDL_CONST_ID IID& IID_IEqualizerEffectDefinitionFactory = __uuidof(IEqualizerEffectDefinitionFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5762,7 +5762,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFrameInputNodeQuantumStartedEventArgs = _uuidof(IFrameInputNodeQuantumStartedEventArgs);
+                MIDL_CONST_ID IID& IID_IFrameInputNodeQuantumStartedEventArgs = __uuidof(IFrameInputNodeQuantumStartedEventArgs);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5810,7 +5810,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILimiterEffectDefinition = _uuidof(ILimiterEffectDefinition);
+                MIDL_CONST_ID IID& IID_ILimiterEffectDefinition = __uuidof(ILimiterEffectDefinition);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5847,7 +5847,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILimiterEffectDefinitionFactory = _uuidof(ILimiterEffectDefinitionFactory);
+                MIDL_CONST_ID IID& IID_ILimiterEffectDefinitionFactory = __uuidof(ILimiterEffectDefinitionFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -5929,7 +5929,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaSourceAudioInputNode = _uuidof(IMediaSourceAudioInputNode);
+                MIDL_CONST_ID IID& IID_IMediaSourceAudioInputNode = __uuidof(IMediaSourceAudioInputNode);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6103,7 +6103,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IReverbEffectDefinition = _uuidof(IReverbEffectDefinition);
+                MIDL_CONST_ID IID& IID_IReverbEffectDefinition = __uuidof(IReverbEffectDefinition);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6140,7 +6140,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IReverbEffectDefinitionFactory = _uuidof(IReverbEffectDefinitionFactory);
+                MIDL_CONST_ID IID& IID_IReverbEffectDefinitionFactory = __uuidof(IReverbEffectDefinitionFactory);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6176,7 +6176,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISetDefaultSpatialAudioFormatResult = _uuidof(ISetDefaultSpatialAudioFormatResult);
+                MIDL_CONST_ID IID& IID_ISetDefaultSpatialAudioFormatResult = __uuidof(ISetDefaultSpatialAudioFormatResult);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6236,7 +6236,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioDeviceConfiguration = _uuidof(ISpatialAudioDeviceConfiguration);
+                MIDL_CONST_ID IID& IID_ISpatialAudioDeviceConfiguration = __uuidof(ISpatialAudioDeviceConfiguration);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6273,7 +6273,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioDeviceConfigurationStatics = _uuidof(ISpatialAudioDeviceConfigurationStatics);
+                MIDL_CONST_ID IID& IID_ISpatialAudioDeviceConfigurationStatics = __uuidof(ISpatialAudioDeviceConfigurationStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6320,7 +6320,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioFormatConfiguration = _uuidof(ISpatialAudioFormatConfiguration);
+                MIDL_CONST_ID IID& IID_ISpatialAudioFormatConfiguration = __uuidof(ISpatialAudioFormatConfiguration);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6356,7 +6356,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioFormatConfigurationStatics = _uuidof(ISpatialAudioFormatConfigurationStatics);
+                MIDL_CONST_ID IID& IID_ISpatialAudioFormatConfigurationStatics = __uuidof(ISpatialAudioFormatConfigurationStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6407,7 +6407,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioFormatSubtypeStatics = _uuidof(ISpatialAudioFormatSubtypeStatics);
+                MIDL_CONST_ID IID& IID_ISpatialAudioFormatSubtypeStatics = __uuidof(ISpatialAudioFormatSubtypeStatics);
             } /* Audio */
         } /* Media */
     } /* Windows */
@@ -6443,7 +6443,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISpatialAudioFormatSubtypeStatics2 = _uuidof(ISpatialAudioFormatSubtypeStatics2);
+                MIDL_CONST_ID IID& IID_ISpatialAudioFormatSubtypeStatics2 = __uuidof(ISpatialAudioFormatSubtypeStatics2);
             } /* Audio */
         } /* Media */
     } /* Windows */

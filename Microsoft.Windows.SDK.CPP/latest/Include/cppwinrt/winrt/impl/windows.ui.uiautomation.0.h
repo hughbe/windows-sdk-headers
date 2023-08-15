@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -77,9 +77,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_UIAutomation_IAutomationConnection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRemoteSystem() const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppUserModelId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExecutableFileName() const;
+        [[nodiscard]] auto IsRemoteSystem() const noexcept;
+        [[nodiscard]] auto AppUserModelId() const;
+        [[nodiscard]] auto ExecutableFileName() const;
     };
     template <> struct consume<winrt::Windows::UI::UIAutomation::IAutomationConnection>
     {
@@ -88,7 +88,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_UIAutomation_IAutomationConnectionBoundObject
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::AutomationConnection) Connection() const;
+        [[nodiscard]] auto Connection() const;
     };
     template <> struct consume<winrt::Windows::UI::UIAutomation::IAutomationConnectionBoundObject>
     {
@@ -97,9 +97,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_UIAutomation_IAutomationElement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRemoteSystem() const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppUserModelId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExecutableFileName() const;
+        [[nodiscard]] auto IsRemoteSystem() const noexcept;
+        [[nodiscard]] auto AppUserModelId() const;
+        [[nodiscard]] auto ExecutableFileName() const;
     };
     template <> struct consume<winrt::Windows::UI::UIAutomation::IAutomationElement>
     {

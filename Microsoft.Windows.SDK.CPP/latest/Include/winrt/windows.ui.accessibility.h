@@ -226,7 +226,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IScreenReaderPositionChangedEventArgs = _uuidof(IScreenReaderPositionChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IScreenReaderPositionChangedEventArgs = __uuidof(IScreenReaderPositionChangedEventArgs);
             } /* Accessibility */
         } /* UI */
     } /* Windows */
@@ -269,7 +269,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IScreenReaderService = _uuidof(IScreenReaderService);
+                MIDL_CONST_ID IID& IID_IScreenReaderService = __uuidof(IScreenReaderService);
             } /* Accessibility */
         } /* UI */
     } /* Windows */

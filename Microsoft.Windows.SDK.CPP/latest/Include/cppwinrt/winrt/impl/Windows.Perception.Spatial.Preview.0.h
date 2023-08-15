@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -69,9 +69,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Preview_ISpatialGraphInteropFrameOfReferencePreview
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CoordinateSystem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) NodeId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float4x4) CoordinateSystemToNodeTransform() const;
+        [[nodiscard]] auto CoordinateSystem() const;
+        [[nodiscard]] auto NodeId() const;
+        [[nodiscard]] auto CoordinateSystemToNodeTransform() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Preview::ISpatialGraphInteropFrameOfReferencePreview>
     {
@@ -80,10 +80,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Preview_ISpatialGraphInteropPreviewStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CreateCoordinateSystemForNode(winrt::guid const& nodeId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CreateCoordinateSystemForNode(winrt::guid const& nodeId, winrt::Windows::Foundation::Numerics::float3 const& relativePosition) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CreateCoordinateSystemForNode(winrt::guid const& nodeId, winrt::Windows::Foundation::Numerics::float3 const& relativePosition, winrt::Windows::Foundation::Numerics::quaternion const& relativeOrientation) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialLocator) CreateLocatorForNode(winrt::guid const& nodeId) const;
+        auto CreateCoordinateSystemForNode(winrt::guid const& nodeId) const;
+        auto CreateCoordinateSystemForNode(winrt::guid const& nodeId, winrt::Windows::Foundation::Numerics::float3 const& relativePosition) const;
+        auto CreateCoordinateSystemForNode(winrt::guid const& nodeId, winrt::Windows::Foundation::Numerics::float3 const& relativePosition, winrt::Windows::Foundation::Numerics::quaternion const& relativeOrientation) const;
+        auto CreateLocatorForNode(winrt::guid const& nodeId) const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Preview::ISpatialGraphInteropPreviewStatics>
     {
@@ -92,9 +92,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Preview_ISpatialGraphInteropPreviewStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview) TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview) TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& relativePosition) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview) TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& relativePosition, winrt::Windows::Foundation::Numerics::quaternion const& relativeOrientation) const;
+        auto TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
+        auto TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& relativePosition) const;
+        auto TryCreateFrameOfReference(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, winrt::Windows::Foundation::Numerics::float3 const& relativePosition, winrt::Windows::Foundation::Numerics::quaternion const& relativeOrientation) const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Preview::ISpatialGraphInteropPreviewStatics2>
     {

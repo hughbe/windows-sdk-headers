@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,10 +15,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct Rect;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Input
 {
@@ -350,7 +346,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IKeyboardCapabilities
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) KeyboardPresent() const;
+        [[nodiscard]] auto KeyboardPresent() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IKeyboardCapabilities>
     {
@@ -359,11 +355,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IMouseCapabilities
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MousePresent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) VerticalWheelPresent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) HorizontalWheelPresent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SwapButtons() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) NumberOfButtons() const;
+        [[nodiscard]] auto MousePresent() const;
+        [[nodiscard]] auto VerticalWheelPresent() const;
+        [[nodiscard]] auto HorizontalWheelPresent() const;
+        [[nodiscard]] auto SwapButtons() const;
+        [[nodiscard]] auto NumberOfButtons() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IMouseCapabilities>
     {
@@ -372,10 +368,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IMouseDevice
     {
-        WINRT_IMPL_AUTO(winrt::event_token) MouseMoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::MouseDevice, winrt::Windows::Devices::Input::MouseEventArgs> const& handler) const;
+        auto MouseMoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::MouseDevice, winrt::Windows::Devices::Input::MouseEventArgs> const& handler) const;
         using MouseMoved_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IMouseDevice, &impl::abi_t<winrt::Windows::Devices::Input::IMouseDevice>::remove_MouseMoved>;
         [[nodiscard]] MouseMoved_revoker MouseMoved(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::MouseDevice, winrt::Windows::Devices::Input::MouseEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) MouseMoved(winrt::event_token const& cookie) const noexcept;
+        auto MouseMoved(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IMouseDevice>
     {
@@ -384,7 +380,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IMouseDeviceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::MouseDevice) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IMouseDeviceStatics>
     {
@@ -393,7 +389,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IMouseEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::MouseDelta) MouseDelta() const;
+        [[nodiscard]] auto MouseDelta() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IMouseEventArgs>
     {
@@ -402,23 +398,23 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenButtonListener
     {
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
-        WINRT_IMPL_AUTO(winrt::event_token) IsSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto IsSupported() const;
+        auto IsSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using IsSupportedChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenButtonListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenButtonListener>::remove_IsSupportedChanged>;
         [[nodiscard]] IsSupportedChanged_revoker IsSupportedChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) IsSupportedChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) TailButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs> const& handler) const;
+        auto IsSupportedChanged(winrt::event_token const& token) const noexcept;
+        auto TailButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs> const& handler) const;
         using TailButtonClicked_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenButtonListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenButtonListener>::remove_TailButtonClicked>;
         [[nodiscard]] TailButtonClicked_revoker TailButtonClicked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) TailButtonClicked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) TailButtonDoubleClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs> const& handler) const;
+        auto TailButtonClicked(winrt::event_token const& token) const noexcept;
+        auto TailButtonDoubleClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs> const& handler) const;
         using TailButtonDoubleClicked_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenButtonListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenButtonListener>::remove_TailButtonDoubleClicked>;
         [[nodiscard]] TailButtonDoubleClicked_revoker TailButtonDoubleClicked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) TailButtonDoubleClicked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) TailButtonLongPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs> const& handler) const;
+        auto TailButtonDoubleClicked(winrt::event_token const& token) const noexcept;
+        auto TailButtonLongPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs> const& handler) const;
         using TailButtonLongPressed_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenButtonListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenButtonListener>::remove_TailButtonLongPressed>;
         [[nodiscard]] TailButtonLongPressed_revoker TailButtonLongPressed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) TailButtonLongPressed(winrt::event_token const& token) const noexcept;
+        auto TailButtonLongPressed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenButtonListener>
     {
@@ -427,7 +423,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenButtonListenerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PenButtonListener) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenButtonListenerStatics>
     {
@@ -436,7 +432,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDevice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) PenId() const;
+        [[nodiscard]] auto PenId() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenDevice>
     {
@@ -445,7 +441,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDevice2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenDevice2>
     {
@@ -454,7 +450,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDeviceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PenDevice) GetFromPointerId(uint32_t pointerId) const;
+        auto GetFromPointerId(uint32_t pointerId) const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenDeviceStatics>
     {
@@ -463,19 +459,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDockListener
     {
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
-        WINRT_IMPL_AUTO(winrt::event_token) IsSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto IsSupported() const;
+        auto IsSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using IsSupportedChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenDockListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenDockListener>::remove_IsSupportedChanged>;
         [[nodiscard]] IsSupportedChanged_revoker IsSupportedChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) IsSupportedChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Docked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenDockedEventArgs> const& handler) const;
+        auto IsSupportedChanged(winrt::event_token const& token) const noexcept;
+        auto Docked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenDockedEventArgs> const& handler) const;
         using Docked_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenDockListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenDockListener>::remove_Docked>;
         [[nodiscard]] Docked_revoker Docked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenDockedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Docked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Undocked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenUndockedEventArgs> const& handler) const;
+        auto Docked(winrt::event_token const& token) const noexcept;
+        auto Undocked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenUndockedEventArgs> const& handler) const;
         using Undocked_revoker = impl::event_revoker<winrt::Windows::Devices::Input::IPenDockListener, &impl::abi_t<winrt::Windows::Devices::Input::IPenDockListener>::remove_Undocked>;
         [[nodiscard]] Undocked_revoker Undocked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenUndockedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Undocked(winrt::event_token const& token) const noexcept;
+        auto Undocked(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenDockListener>
     {
@@ -484,7 +480,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDockListenerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PenDockListener) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPenDockListenerStatics>
     {
@@ -533,12 +529,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPointerDevice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIntegrated() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxContacts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) PhysicalDeviceRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ScreenRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Input::PointerDeviceUsage>) SupportedUsages() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto IsIntegrated() const;
+        [[nodiscard]] auto MaxContacts() const;
+        [[nodiscard]] auto PhysicalDeviceRect() const;
+        [[nodiscard]] auto ScreenRect() const;
+        [[nodiscard]] auto SupportedUsages() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPointerDevice>
     {
@@ -547,7 +543,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPointerDevice2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxPointersWithZDistance() const;
+        [[nodiscard]] auto MaxPointersWithZDistance() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPointerDevice2>
     {
@@ -556,8 +552,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_IPointerDeviceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDevice) GetPointerDevice(uint32_t pointerId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Input::PointerDevice>) GetPointerDevices() const;
+        auto GetPointerDevice(uint32_t pointerId) const;
+        auto GetPointerDevices() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::IPointerDeviceStatics>
     {
@@ -566,8 +562,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_ITouchCapabilities
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TouchPresent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Contacts() const;
+        [[nodiscard]] auto TouchPresent() const;
+        [[nodiscard]] auto Contacts() const;
     };
     template <> struct consume<winrt::Windows::Devices::Input::ITouchCapabilities>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,13 +14,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Gpio
 {
@@ -241,13 +235,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioChangeCounter
     {
-        WINRT_IMPL_AUTO(void) Polarity(winrt::Windows::Devices::Gpio::GpioChangePolarity const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangePolarity) Polarity() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsStarted() const;
-        WINRT_IMPL_AUTO(void) Start() const;
-        WINRT_IMPL_AUTO(void) Stop() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeCount) Read() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeCount) Reset() const;
+        auto Polarity(winrt::Windows::Devices::Gpio::GpioChangePolarity const& value) const;
+        [[nodiscard]] auto Polarity() const;
+        [[nodiscard]] auto IsStarted() const;
+        auto Start() const;
+        auto Stop() const;
+        auto Read() const;
+        auto Reset() const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioChangeCounter>
     {
@@ -256,7 +250,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioChangeCounterFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeCounter) Create(winrt::Windows::Devices::Gpio::GpioPin const& pin) const;
+        auto Create(winrt::Windows::Devices::Gpio::GpioPin const& pin) const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioChangeCounterFactory>
     {
@@ -265,20 +259,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioChangeReader
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Capacity() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Length() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEmpty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOverflowed() const;
-        WINRT_IMPL_AUTO(void) Polarity(winrt::Windows::Devices::Gpio::GpioChangePolarity const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangePolarity) Polarity() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsStarted() const;
-        WINRT_IMPL_AUTO(void) Start() const;
-        WINRT_IMPL_AUTO(void) Stop() const;
-        WINRT_IMPL_AUTO(void) Clear() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeRecord) GetNextItem() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeRecord) PeekNextItem() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::Gpio::GpioChangeRecord>) GetAllItems() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WaitForItemsAsync(int32_t count) const;
+        [[nodiscard]] auto Capacity() const;
+        [[nodiscard]] auto Length() const;
+        [[nodiscard]] auto IsEmpty() const;
+        [[nodiscard]] auto IsOverflowed() const;
+        auto Polarity(winrt::Windows::Devices::Gpio::GpioChangePolarity const& value) const;
+        [[nodiscard]] auto Polarity() const;
+        [[nodiscard]] auto IsStarted() const;
+        auto Start() const;
+        auto Stop() const;
+        auto Clear() const;
+        auto GetNextItem() const;
+        auto PeekNextItem() const;
+        auto GetAllItems() const;
+        auto WaitForItemsAsync(int32_t count) const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioChangeReader>
     {
@@ -287,8 +281,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioChangeReaderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeReader) Create(winrt::Windows::Devices::Gpio::GpioPin const& pin) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioChangeReader) CreateWithCapacity(winrt::Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity) const;
+        auto Create(winrt::Windows::Devices::Gpio::GpioPin const& pin) const;
+        auto CreateWithCapacity(winrt::Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity) const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioChangeReaderFactory>
     {
@@ -297,10 +291,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PinCount() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioPin) OpenPin(int32_t pinNumber) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioPin) OpenPin(int32_t pinNumber, winrt::Windows::Devices::Gpio::GpioSharingMode const& sharingMode) const;
-        WINRT_IMPL_AUTO(bool) TryOpenPin(int32_t pinNumber, winrt::Windows::Devices::Gpio::GpioSharingMode const& sharingMode, winrt::Windows::Devices::Gpio::GpioPin& pin, winrt::Windows::Devices::Gpio::GpioOpenStatus& openStatus) const;
+        [[nodiscard]] auto PinCount() const;
+        auto OpenPin(int32_t pinNumber) const;
+        auto OpenPin(int32_t pinNumber, winrt::Windows::Devices::Gpio::GpioSharingMode const& sharingMode) const;
+        auto TryOpenPin(int32_t pinNumber, winrt::Windows::Devices::Gpio::GpioSharingMode const& sharingMode, winrt::Windows::Devices::Gpio::GpioPin& pin, winrt::Windows::Devices::Gpio::GpioOpenStatus& openStatus) const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioController>
     {
@@ -309,7 +303,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioControllerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioController) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioControllerStatics>
     {
@@ -318,8 +312,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioControllerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Gpio::GpioController>>) GetControllersAsync(winrt::Windows::Devices::Gpio::Provider::IGpioProvider const& provider) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Gpio::GpioController>) GetDefaultAsync() const;
+        auto GetControllersAsync(winrt::Windows::Devices::Gpio::Provider::IGpioProvider const& provider) const;
+        auto GetDefaultAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioControllerStatics2>
     {
@@ -328,19 +322,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioPin
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ValueChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::GpioPin, winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs> const& handler) const;
+        auto ValueChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::GpioPin, winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs> const& handler) const;
         using ValueChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Gpio::IGpioPin, &impl::abi_t<winrt::Windows::Devices::Gpio::IGpioPin>::remove_ValueChanged>;
         [[nodiscard]] ValueChanged_revoker ValueChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::GpioPin, winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ValueChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) DebounceTimeout() const;
-        WINRT_IMPL_AUTO(void) DebounceTimeout(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PinNumber() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioSharingMode) SharingMode() const;
-        WINRT_IMPL_AUTO(bool) IsDriveModeSupported(winrt::Windows::Devices::Gpio::GpioPinDriveMode const& driveMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioPinDriveMode) GetDriveMode() const;
-        WINRT_IMPL_AUTO(void) SetDriveMode(winrt::Windows::Devices::Gpio::GpioPinDriveMode const& value) const;
-        WINRT_IMPL_AUTO(void) Write(winrt::Windows::Devices::Gpio::GpioPinValue const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioPinValue) Read() const;
+        auto ValueChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto DebounceTimeout() const;
+        auto DebounceTimeout(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto PinNumber() const;
+        [[nodiscard]] auto SharingMode() const;
+        auto IsDriveModeSupported(winrt::Windows::Devices::Gpio::GpioPinDriveMode const& driveMode) const;
+        auto GetDriveMode() const;
+        auto SetDriveMode(winrt::Windows::Devices::Gpio::GpioPinDriveMode const& value) const;
+        auto Write(winrt::Windows::Devices::Gpio::GpioPinValue const& value) const;
+        auto Read() const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioPin>
     {
@@ -349,7 +343,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Gpio_IGpioPinValueChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Gpio::GpioPinEdge) Edge() const;
+        [[nodiscard]] auto Edge() const;
     };
     template <> struct consume<winrt::Windows::Devices::Gpio::IGpioPinValueChangedEventArgs>
     {

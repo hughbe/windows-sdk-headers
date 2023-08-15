@@ -428,7 +428,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdfDocument = _uuidof(IPdfDocument);
+                MIDL_CONST_ID IID& IID_IPdfDocument = __uuidof(IPdfDocument);
             } /* Pdf */
         } /* Data */
     } /* Windows */
@@ -479,7 +479,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdfDocumentStatics = _uuidof(IPdfDocumentStatics);
+                MIDL_CONST_ID IID& IID_IPdfDocumentStatics = __uuidof(IPdfDocumentStatics);
             } /* Pdf */
         } /* Data */
     } /* Windows */
@@ -539,7 +539,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdfPage = _uuidof(IPdfPage);
+                MIDL_CONST_ID IID& IID_IPdfPage = __uuidof(IPdfPage);
             } /* Pdf */
         } /* Data */
     } /* Windows */
@@ -587,7 +587,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdfPageDimensions = _uuidof(IPdfPageDimensions);
+                MIDL_CONST_ID IID& IID_IPdfPageDimensions = __uuidof(IPdfPageDimensions);
             } /* Pdf */
         } /* Data */
     } /* Windows */
@@ -656,7 +656,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdfPageRenderOptions = _uuidof(IPdfPageRenderOptions);
+                MIDL_CONST_ID IID& IID_IPdfPageRenderOptions = __uuidof(IPdfPageRenderOptions);
             } /* Pdf */
         } /* Data */
     } /* Windows */

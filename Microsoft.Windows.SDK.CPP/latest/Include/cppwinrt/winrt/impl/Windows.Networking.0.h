@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -116,14 +116,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_IEndpointPair
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) LocalHostName() const;
-        WINRT_IMPL_AUTO(void) LocalHostName(winrt::Windows::Networking::HostName const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalServiceName() const;
-        WINRT_IMPL_AUTO(void) LocalServiceName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) RemoteHostName() const;
-        WINRT_IMPL_AUTO(void) RemoteHostName(winrt::Windows::Networking::HostName const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteServiceName() const;
-        WINRT_IMPL_AUTO(void) RemoteServiceName(param::hstring const& value) const;
+        [[nodiscard]] auto LocalHostName() const;
+        auto LocalHostName(winrt::Windows::Networking::HostName const& value) const;
+        [[nodiscard]] auto LocalServiceName() const;
+        auto LocalServiceName(param::hstring const& value) const;
+        [[nodiscard]] auto RemoteHostName() const;
+        auto RemoteHostName(winrt::Windows::Networking::HostName const& value) const;
+        [[nodiscard]] auto RemoteServiceName() const;
+        auto RemoteServiceName(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::IEndpointPair>
     {
@@ -132,7 +132,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_IEndpointPairFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::EndpointPair) CreateEndpointPair(winrt::Windows::Networking::HostName const& localHostName, param::hstring const& localServiceName, winrt::Windows::Networking::HostName const& remoteHostName, param::hstring const& remoteServiceName) const;
+        auto CreateEndpointPair(winrt::Windows::Networking::HostName const& localHostName, param::hstring const& localServiceName, winrt::Windows::Networking::HostName const& remoteHostName, param::hstring const& remoteServiceName) const;
     };
     template <> struct consume<winrt::Windows::Networking::IEndpointPairFactory>
     {
@@ -141,12 +141,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_IHostName
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::IPInformation) IPInformation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RawName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CanonicalName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostNameType) Type() const;
-        WINRT_IMPL_AUTO(bool) IsEqual(winrt::Windows::Networking::HostName const& hostName) const;
+        [[nodiscard]] auto IPInformation() const;
+        [[nodiscard]] auto RawName() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto CanonicalName() const;
+        [[nodiscard]] auto Type() const;
+        auto IsEqual(winrt::Windows::Networking::HostName const& hostName) const;
     };
     template <> struct consume<winrt::Windows::Networking::IHostName>
     {
@@ -155,7 +155,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_IHostNameFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) CreateHostName(param::hstring const& hostName) const;
+        auto CreateHostName(param::hstring const& hostName) const;
     };
     template <> struct consume<winrt::Windows::Networking::IHostNameFactory>
     {
@@ -164,7 +164,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_IHostNameStatics
     {
-        WINRT_IMPL_AUTO(int32_t) Compare(param::hstring const& value1, param::hstring const& value2) const;
+        auto Compare(param::hstring const& value1, param::hstring const& value2) const;
     };
     template <> struct consume<winrt::Windows::Networking::IHostNameStatics>
     {

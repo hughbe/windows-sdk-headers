@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Rect;
     struct Size;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
@@ -411,7 +410,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesignerAppExitedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ExitCode() const;
+        [[nodiscard]] auto ExitCode() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesignerAppExitedEventArgs>
     {
@@ -420,13 +419,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesignerAppManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppUserModelId() const;
-        WINRT_IMPL_AUTO(winrt::event_token) DesignerAppExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager, winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs> const& handler) const;
+        [[nodiscard]] auto AppUserModelId() const;
+        auto DesignerAppExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager, winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs> const& handler) const;
         using DesignerAppExited_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Hosting::IDesignerAppManager, &impl::abi_t<winrt::Windows::UI::Xaml::Hosting::IDesignerAppManager>::remove_DesignerAppExited>;
         [[nodiscard]] DesignerAppExited_revoker DesignerAppExited(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager, winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) DesignerAppExited(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>) CreateNewViewAsync(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState const& initialViewState, winrt::Windows::Foundation::Size const& initialViewSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) LoadObjectIntoAppAsync(param::hstring const& dllName, winrt::guid const& classId, param::hstring const& initializationData) const;
+        auto DesignerAppExited(winrt::event_token const& token) const noexcept;
+        auto CreateNewViewAsync(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState const& initialViewState, winrt::Windows::Foundation::Size const& initialViewSize) const;
+        auto LoadObjectIntoAppAsync(param::hstring const& dllName, winrt::guid const& classId, param::hstring const& initializationData) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesignerAppManager>
     {
@@ -435,7 +434,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesignerAppManagerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::DesignerAppManager) Create(param::hstring const& appUserModelId) const;
+        auto Create(param::hstring const& appUserModelId) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesignerAppManagerFactory>
     {
@@ -444,11 +443,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesignerAppView
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ApplicationViewId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppUserModelId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState) ViewState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) ViewSize() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) UpdateViewAsync(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState const& viewState, winrt::Windows::Foundation::Size const& viewSize) const;
+        [[nodiscard]] auto ApplicationViewId() const;
+        [[nodiscard]] auto AppUserModelId() const;
+        [[nodiscard]] auto ViewState() const;
+        [[nodiscard]] auto ViewSize() const;
+        auto UpdateViewAsync(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState const& viewState, winrt::Windows::Foundation::Size const& viewSize) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesignerAppView>
     {
@@ -457,18 +456,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSource
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) Content() const;
-        WINRT_IMPL_AUTO(void) Content(winrt::Windows::UI::Xaml::UIElement const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasFocus() const;
-        WINRT_IMPL_AUTO(winrt::event_token) TakeFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs> const& handler) const;
+        [[nodiscard]] auto Content() const;
+        auto Content(winrt::Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto HasFocus() const;
+        auto TakeFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs> const& handler) const;
         using TakeFocusRequested_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource, &impl::abi_t<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource>::remove_TakeFocusRequested>;
         [[nodiscard]] TakeFocusRequested_revoker TakeFocusRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) TakeFocusRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) GotFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs> const& handler) const;
+        auto TakeFocusRequested(winrt::event_token const& token) const noexcept;
+        auto GotFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs> const& handler) const;
         using GotFocus_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource, &impl::abi_t<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource>::remove_GotFocus>;
         [[nodiscard]] GotFocus_revoker GotFocus(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) GotFocus(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult) NavigateFocus(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest const& request) const;
+        auto GotFocus(winrt::event_token const& token) const noexcept;
+        auto NavigateFocus(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest const& request) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource>
     {
@@ -477,7 +476,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSourceFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceFactory>
     {
@@ -486,7 +485,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSourceGotFocusEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest) Request() const;
+        [[nodiscard]] auto Request() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceGotFocusEventArgs>
     {
@@ -495,7 +494,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSourceTakeFocusRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest) Request() const;
+        [[nodiscard]] auto Request() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSourceTakeFocusRequestedEventArgs>
     {
@@ -512,10 +511,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) GetElementVisual(winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) GetElementChildVisual(winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(void) SetElementChildVisual(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::Visual const& visual) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPropertySet) GetScrollViewerManipulationPropertySet(winrt::Windows::UI::Xaml::Controls::ScrollViewer const& scrollViewer) const;
+        auto GetElementVisual(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto GetElementChildVisual(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto SetElementChildVisual(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::Visual const& visual) const;
+        auto GetScrollViewerManipulationPropertySet(winrt::Windows::UI::Xaml::Controls::ScrollViewer const& scrollViewer) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics>
     {
@@ -524,10 +523,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics2
     {
-        WINRT_IMPL_AUTO(void) SetImplicitShowAnimation(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
-        WINRT_IMPL_AUTO(void) SetImplicitHideAnimation(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
-        WINRT_IMPL_AUTO(void) SetIsTranslationEnabled(winrt::Windows::UI::Xaml::UIElement const& element, bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPropertySet) GetPointerPositionPropertySet(winrt::Windows::UI::Xaml::UIElement const& targetElement) const;
+        auto SetImplicitShowAnimation(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
+        auto SetImplicitHideAnimation(winrt::Windows::UI::Xaml::UIElement const& element, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
+        auto SetIsTranslationEnabled(winrt::Windows::UI::Xaml::UIElement const& element, bool value) const;
+        auto GetPointerPositionPropertySet(winrt::Windows::UI::Xaml::UIElement const& targetElement) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2>
     {
@@ -536,8 +535,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IElementCompositionPreviewStatics3
     {
-        WINRT_IMPL_AUTO(void) SetAppWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow, winrt::Windows::UI::Xaml::UIElement const& xamlContent) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) GetAppWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow) const;
+        auto SetAppWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow, winrt::Windows::UI::Xaml::UIElement const& xamlContent) const;
+        auto GetAppWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics3>
     {
@@ -554,7 +553,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IWindowsXamlManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager) InitializeForCurrentThread() const;
+        auto InitializeForCurrentThread() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IWindowsXamlManagerStatics>
     {
@@ -563,9 +562,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlSourceFocusNavigationRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason) Reason() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) HintRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) CorrelationId() const;
+        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] auto HintRect() const;
+        [[nodiscard]] auto CorrelationId() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest>
     {
@@ -574,9 +573,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlSourceFocusNavigationRequestFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest) CreateInstance(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest) CreateInstanceWithHintRect(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest) CreateInstanceWithHintRectAndCorrelationId(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason) const;
+        auto CreateInstanceWithHintRect(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect) const;
+        auto CreateInstanceWithHintRectAndCorrelationId(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequestFactory>
     {
@@ -585,7 +584,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlSourceFocusNavigationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) WasFocusMoved() const;
+        [[nodiscard]] auto WasFocusMoved() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResult>
     {
@@ -594,7 +593,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlSourceFocusNavigationResultFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult) CreateInstance(bool focusMoved) const;
+        auto CreateInstance(bool focusMoved) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResultFactory>
     {
@@ -603,15 +602,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) RootElement() const;
-        WINRT_IMPL_AUTO(void) RootElement(winrt::Windows::UI::Xaml::UIElement const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ThemeKey() const;
-        WINRT_IMPL_AUTO(void) ThemeKey(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ThemeResourcesXaml() const;
-        WINRT_IMPL_AUTO(void) ThemeResourcesXaml(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) SetSize(int32_t width, int32_t height) const;
-        WINRT_IMPL_AUTO(void) Render() const;
-        WINRT_IMPL_AUTO(void) Present() const;
+        [[nodiscard]] auto RootElement() const;
+        auto RootElement(winrt::Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto ThemeKey() const;
+        auto ThemeKey(param::hstring const& value) const;
+        [[nodiscard]] auto ThemeResourcesXaml() const;
+        auto ThemeResourcesXaml(param::hstring const& value) const;
+        auto SetSize(int32_t width, int32_t height) const;
+        auto Render() const;
+        auto Present() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenter>
     {
@@ -620,7 +619,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenterHost
     {
-        WINRT_IMPL_AUTO(hstring) ResolveFileResource(param::hstring const& path) const;
+        auto ResolveFileResource(param::hstring const& path) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
     {
@@ -629,7 +628,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenterHost2
     {
-        WINRT_IMPL_AUTO(hstring) GetGenericXamlFilePath() const;
+        auto GetGenericXamlFilePath() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
     {
@@ -638,7 +637,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenterHost3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) ResolveDictionaryResource(winrt::Windows::UI::Xaml::ResourceDictionary const& dictionary, winrt::Windows::Foundation::IInspectable const& dictionaryKey, winrt::Windows::Foundation::IInspectable const& suggestedValue) const;
+        auto ResolveDictionaryResource(winrt::Windows::UI::Xaml::ResourceDictionary const& dictionary, winrt::Windows::Foundation::IInspectable const& dictionaryKey, winrt::Windows::Foundation::IInspectable const& suggestedValue) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
     {
@@ -647,10 +646,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CompleteTimelinesAutomatically() const;
-        WINRT_IMPL_AUTO(void) CompleteTimelinesAutomatically(bool value) const;
-        WINRT_IMPL_AUTO(void) SetHost(winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost const& host) const;
-        WINRT_IMPL_AUTO(void) NotifyWindowSizeChanged() const;
+        [[nodiscard]] auto CompleteTimelinesAutomatically() const;
+        auto CompleteTimelinesAutomatically(bool value) const;
+        auto SetHost(winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost const& host) const;
+        auto NotifyWindowSizeChanged() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterStatics>
     {
@@ -659,8 +658,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Hosting_IXamlUIPresenterStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) GetFlyoutPlacementTargetInfo(winrt::Windows::UI::Xaml::FrameworkElement const& placementTarget, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& preferredPlacement, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode& targetPreferredPlacement, bool& allowFallbacks) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) GetFlyoutPlacement(winrt::Windows::Foundation::Rect const& placementTargetBounds, winrt::Windows::Foundation::Size const& controlSize, winrt::Windows::Foundation::Size const& minControlSize, winrt::Windows::Foundation::Rect const& containerRect, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& targetPreferredPlacement, bool allowFallbacks, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode& chosenPlacement) const;
+        auto GetFlyoutPlacementTargetInfo(winrt::Windows::UI::Xaml::FrameworkElement const& placementTarget, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& preferredPlacement, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode& targetPreferredPlacement, bool& allowFallbacks) const;
+        auto GetFlyoutPlacement(winrt::Windows::Foundation::Rect const& placementTargetBounds, winrt::Windows::Foundation::Size const& controlSize, winrt::Windows::Foundation::Size const& minControlSize, winrt::Windows::Foundation::Rect const& containerRect, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& targetPreferredPlacement, bool allowFallbacks, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode& chosenPlacement) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterStatics2>
     {

@@ -2114,10 +2114,12 @@ typedef enum
 
 #define JET_paramPerfmonRefreshInterval         217 //  Interval, in units of msec, used by the Permormance Monitor to refresh values for collection.
 
+#define JET_paramEnableBlockCache               218 //  Indicates that the ESE Block Cache is enabled.  This is sufficient to access files previously attached to the ESE Block Cache but not to attach new files.
+
 #endif // JET_VERSION >= 0x0A01
 
 
-#define JET_paramMaxValueInvalid                218 //  This is not a valid parameter. It can change from release to release!
+#define JET_paramMaxValueInvalid                219 //  This is not a valid parameter. It can change from release to release!
 
 
 
@@ -2912,13 +2914,9 @@ typedef struct
 #define JET_TblInfoSpaceUsage          7U
 #define JET_TblInfoDumpTable           8U
 #define JET_TblInfoSpaceAlloc          9U
-#define JET_TblInfoSpaceOwned         10U         // OwnExt for primary, 2ndary indices, and LV
-#define JET_TblInfoSpaceAvailable     11U         // AvailExt for primary, 2ndary indices, and LV
+#define JET_TblInfoSpaceOwned         10U         // OwnExt
+#define JET_TblInfoSpaceAvailable     11U         // AvailExt
 #define JET_TblInfoTemplateTableName  12U
-#if ( JET_VERSION >= 0x0A01 )
-#define JET_TblInfoSpaceOwnedLV       17U         // OwnExt for LV
-#define JET_TblInfoSpaceAvailableLV   18U         // AvailExt for LV
-#endif
 
     /* Info levels for JetGetIndexInfo and JetGetTableIndexInfo */
 
@@ -2946,11 +2944,6 @@ typedef struct
 #define JET_IdxInfoCreateIndex3     13U     //  return a JET_INDEXCREATE3 structure suitable for use by JetCreateIndex4()
 #define JET_IdxInfoLocaleName       14U     //  Returns the locale name, which can be a wide string of up to LOCALE_NAME_MAX_LENGTH (including null).
 #endif // JET_VERSION >= 0x0602
-#if ( JET_VERSION >= 0x0A01 )
-#define JET_IdxInfoSpaceOwned       18U    // Space owned exclusively by this index (unlike tables, ignores space from 2ndary indices, even
-                                           //     when inquiring about primary indices
-#define JET_IdxInfoSpaceAvailable   19U    // Space available exclusively for this index
-#endif
 
 
     /* Info levels for JetGetColumnInfo and JetGetTableColumnInfo */
@@ -3259,6 +3252,7 @@ typedef struct
 #define JET_errEngineFormatVersionSpecifiedTooLowForLogVersion                      -622 /* The specified JET_ENGINEFORMATVERSION is set too low for this log stream, the log files have already been upgraded to a higher version.  A higher JET_ENGINEFORMATVERSION value must be set in the param. */
 #define JET_errEngineFormatVersionSpecifiedTooLowForDatabaseVersion                 -623 /* The specified JET_ENGINEFORMATVERSION is set too low for this database file, the database file has already been upgraded to a higher version.  A higher JET_ENGINEFORMATVERSION value must be set in the param. */
 #define JET_errDbTimeBeyondMaxRequired      -625  /* dbtime on page greater than or equal to dbtimeAfter in record, but record is outside required range for the database */
+#define JET_errLogOperationInconsistentWithDatabase -626 /* Log record in the log is inconsistent with the current state of the database and cannot be applied */
 #define JET_errBackupAbortByServer          -801  /* Backup was aborted by server by calling JetTerm with JET_bitTermStopBackup or by calling JetStopBackup */
 
 #define JET_errInvalidGrbit                 -900  /* Invalid flags parameter */
@@ -3530,6 +3524,8 @@ typedef struct
 #define JET_errUpdateMustVersion            -1621 /* No version updates only for uncommitted tables */
 #define JET_errDecryptionFailed             -1622 /* Data could not be decrypted */
 #define JET_errEncryptionBadItag            -1623 /* Cannot encrypt tagged columns with itag>1 */
+#define JET_errSetAutoIncrementTooHigh      -1624  /* The auto-increment value that the user tried to set explicitly is too high . */
+#define JET_errAutoIncrementNotSet          -1625  /* The user must have explicitly set the auto-increment column for this table. */
 
 /*  Sort Table errors
 /**/
@@ -3586,6 +3582,9 @@ typedef struct
 #define JET_errOSSnapshotInvalidSnapId      -2404 /* invalid JET_OSSNAPID */
 
 
+/** KVP ERRORS
+ **/
+
 #define JET_errLSCallbackNotSpecified       -3000 /* Attempted to use Local Storage without a callback function being specified */
 #define JET_errLSAlreadySet                 -3001 /* Attempted to set Local Storage for an object which already had it set */
 #define JET_errLSNotSet                     -3002 /* Attempted to retrieve Local Storage from an object which didn't have it set */
@@ -3601,6 +3600,14 @@ typedef struct
 #define JET_errFileIORetry                  -4003 /* instructs the JET_ABORTRETRYFAILCALLBACK caller to retry the specified I/O */
 #define JET_errFileIOFail                   -4004 /* instructs the JET_ABORTRETRYFAILCALLBACK caller to fail the specified I/O */
 #define JET_errFileCompressed               -4005 /* read/write access is not supported on compressed files */
+
+/** CLIENT RESERVED ERROR SPACE.
+    An unused errors/warnings section.  JET will never generate values in this space.  Clients may use this space
+        without conflicting with ESE.  Note that the warnings are reserved as well as the errors.  That is, the
+        range from -10,000 to -11,999 is reserved as well as the range from 10,000 to 11,999.
+ **/
+#define JET_errClientSpaceBegin             -10000 /* Begin of the error space reserved for JET client use */
+#define JET_errClientSpaceEnd               -11999 /* End of the error space reserved for JET client use */
 
 /**********************************************************************/
 /***********************     PROTOTYPES      **************************/

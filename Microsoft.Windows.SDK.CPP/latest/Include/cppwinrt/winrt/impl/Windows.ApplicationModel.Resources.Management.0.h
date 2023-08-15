@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,13 +8,7 @@
 #define WINRT_Windows_ApplicationModel_Resources_Management_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Resources::Management
 {
@@ -106,12 +100,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Management_IIndexedResourceCandidate
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceType) Type() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>) Metadata() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>) Qualifiers() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ValueAsString() const;
-        WINRT_IMPL_AUTO(hstring) GetQualifierValue(param::hstring const& qualifierName) const;
+        [[nodiscard]] auto Type() const;
+        [[nodiscard]] auto Uri() const;
+        [[nodiscard]] auto Metadata() const;
+        [[nodiscard]] auto Qualifiers() const;
+        [[nodiscard]] auto ValueAsString() const;
+        auto GetQualifierValue(param::hstring const& qualifierName) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate>
     {
@@ -120,8 +114,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Management_IIndexedResourceQualifier
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QualifierName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QualifierValue() const;
+        [[nodiscard]] auto QualifierName() const;
+        [[nodiscard]] auto QualifierValue() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Management::IIndexedResourceQualifier>
     {
@@ -130,8 +124,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Management_IResourceIndexer
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate) IndexFilePath(winrt::Windows::Foundation::Uri const& filePath) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>>) IndexFileContentsAsync(winrt::Windows::Foundation::Uri const& file) const;
+        auto IndexFilePath(winrt::Windows::Foundation::Uri const& filePath) const;
+        auto IndexFileContentsAsync(winrt::Windows::Foundation::Uri const& file) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Management::IResourceIndexer>
     {
@@ -140,7 +134,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Management_IResourceIndexerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer) CreateResourceIndexer(winrt::Windows::Foundation::Uri const& projectRoot) const;
+        auto CreateResourceIndexer(winrt::Windows::Foundation::Uri const& projectRoot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Management::IResourceIndexerFactory>
     {
@@ -149,7 +143,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Management_IResourceIndexerFactory2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer) CreateResourceIndexerWithExtension(winrt::Windows::Foundation::Uri const& projectRoot, winrt::Windows::Foundation::Uri const& extensionDllPath) const;
+        auto CreateResourceIndexerWithExtension(winrt::Windows::Foundation::Uri const& projectRoot, winrt::Windows::Foundation::Uri const& extensionDllPath) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Management::IResourceIndexerFactory2>
     {

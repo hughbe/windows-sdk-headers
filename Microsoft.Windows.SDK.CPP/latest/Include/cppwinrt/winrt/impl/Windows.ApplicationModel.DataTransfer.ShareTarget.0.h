@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,18 +6,9 @@
 #pragma once
 #ifndef WINRT_Windows_ApplicationModel_DataTransfer_ShareTarget_0_H
 #define WINRT_Windows_ApplicationModel_DataTransfer_ShareTarget_0_H
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts
-{
-    struct Contact;
-}
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer
 {
     struct DataPackageView;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -98,14 +89,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::RandomAccessStreamReference) Thumbnail() const;
-        WINRT_IMPL_AUTO(void) Thumbnail(winrt::Windows::Storage::Streams::RandomAccessStreamReference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        WINRT_IMPL_AUTO(void) Id(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) SupportedDataFormats() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) SupportedFileTypes() const;
+        [[nodiscard]] auto Title() const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto Thumbnail() const;
+        auto Thumbnail(winrt::Windows::Storage::Streams::RandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto Id() const;
+        auto Id(param::hstring const& value) const;
+        [[nodiscard]] auto SupportedDataFormats() const;
+        [[nodiscard]] auto SupportedFileTypes() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink>
     {
@@ -114,15 +105,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::DataTransfer::DataPackageView) Data() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QuickLinkId() const;
-        WINRT_IMPL_AUTO(void) RemoveThisQuickLink() const;
-        WINRT_IMPL_AUTO(void) ReportStarted() const;
-        WINRT_IMPL_AUTO(void) ReportDataRetrieved() const;
-        WINRT_IMPL_AUTO(void) ReportSubmittedBackgroundTask() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted(winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink const& quicklink) const;
-        WINRT_IMPL_AUTO(void) ReportCompleted() const;
-        WINRT_IMPL_AUTO(void) ReportError(param::hstring const& value) const;
+        [[nodiscard]] auto Data() const;
+        [[nodiscard]] auto QuickLinkId() const;
+        auto RemoveThisQuickLink() const;
+        auto ReportStarted() const;
+        auto ReportDataRetrieved() const;
+        auto ReportSubmittedBackgroundTask() const;
+        auto ReportCompleted(winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink const& quicklink) const;
+        auto ReportCompleted() const;
+        auto ReportError(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation>
     {
@@ -131,7 +122,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation2
     {
-        WINRT_IMPL_AUTO(void) DismissUI() const;
+        auto DismissUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2>
     {
@@ -140,7 +131,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::Contact>) Contacts() const;
+        [[nodiscard]] auto Contacts() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3>
     {

@@ -504,7 +504,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPlaylist = _uuidof(IPlaylist);
+                MIDL_CONST_ID IID& IID_IPlaylist = __uuidof(IPlaylist);
             } /* Playlists */
         } /* Media */
     } /* Windows */
@@ -541,7 +541,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPlaylistStatics = _uuidof(IPlaylistStatics);
+                MIDL_CONST_ID IID& IID_IPlaylistStatics = __uuidof(IPlaylistStatics);
             } /* Playlists */
         } /* Media */
     } /* Windows */

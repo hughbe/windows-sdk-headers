@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,32 +7,32 @@
 #ifndef WINRT_Windows_Devices_Portable_H
 #define WINRT_Windows_Devices_Portable_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Storage.2.h"
 #include "winrt/impl/Windows.Devices.Portable.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Portable_IServiceDeviceStatics<D>::GetDeviceSelector(winrt::Windows::Devices::Portable::ServiceDeviceType const& serviceType) const
+    template <typename D> auto consume_Windows_Devices_Portable_IServiceDeviceStatics<D>::GetDeviceSelector(winrt::Windows::Devices::Portable::ServiceDeviceType const& serviceType) const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Portable::IServiceDeviceStatics)->GetDeviceSelector(static_cast<int32_t>(serviceType), &selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Portable_IServiceDeviceStatics<D>::GetDeviceSelectorFromServiceId(winrt::guid const& serviceId) const
+    template <typename D> auto consume_Windows_Devices_Portable_IServiceDeviceStatics<D>::GetDeviceSelectorFromServiceId(winrt::guid const& serviceId) const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Portable::IServiceDeviceStatics)->GetDeviceSelectorFromServiceId(impl::bind_in(serviceId), &selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) consume_Windows_Devices_Portable_IStorageDeviceStatics<D>::FromId(param::hstring const& deviceId) const
+    template <typename D> auto consume_Windows_Devices_Portable_IStorageDeviceStatics<D>::FromId(param::hstring const& deviceId) const
     {
         void* deviceRoot{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Portable::IStorageDeviceStatics)->FromId(*(void**)(&deviceId), &deviceRoot));
         return winrt::Windows::Storage::StorageFolder{ deviceRoot, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Portable_IStorageDeviceStatics<D>::GetDeviceSelector() const
+    template <typename D> auto consume_Windows_Devices_Portable_IStorageDeviceStatics<D>::GetDeviceSelector() const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Portable::IStorageDeviceStatics)->GetDeviceSelector(&selector));

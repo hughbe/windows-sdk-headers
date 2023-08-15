@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -173,9 +173,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneCallBlockedTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason) CallBlockedReason() const;
+        [[nodiscard]] auto PhoneNumber() const;
+        [[nodiscard]] auto LineId() const;
+        [[nodiscard]] auto CallBlockedReason() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
     {
@@ -184,8 +184,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneCallOriginDataRequestTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) RequestId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
+        [[nodiscard]] auto RequestId() const;
+        [[nodiscard]] auto PhoneNumber() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>
     {
@@ -194,12 +194,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallDismissedTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) DismissalTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TextReplyMessage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason) Reason() const;
+        [[nodiscard]] auto LineId() const;
+        [[nodiscard]] auto PhoneNumber() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto DismissalTime() const;
+        [[nodiscard]] auto TextReplyMessage() const;
+        [[nodiscard]] auto Reason() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>
     {
@@ -208,8 +208,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallNotificationTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CallId() const;
+        [[nodiscard]] auto LineId() const;
+        [[nodiscard]] auto CallId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails>
     {
@@ -218,9 +218,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneLineChangedTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind) ChangeType() const;
-        WINRT_IMPL_AUTO(bool) HasLinePropertyChanged(winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties const& lineProperty) const;
+        [[nodiscard]] auto LineId() const;
+        [[nodiscard]] auto ChangeType() const;
+        auto HasLinePropertyChanged(winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties const& lineProperty) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
     {
@@ -229,9 +229,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneNewVoicemailMessageTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) VoicemailCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OperatorMessage() const;
+        [[nodiscard]] auto LineId() const;
+        [[nodiscard]] auto VoicemailCount() const;
+        [[nodiscard]] auto OperatorMessage() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>
     {

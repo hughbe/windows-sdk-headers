@@ -195,6 +195,16 @@ HcsCancelOperation(
     _In_ HCS_OPERATION operation
     );
 
+// Query for information or properties about a specific operation
+
+HRESULT
+WINAPI
+HcsGetOperationProperties(
+    _In_ HCS_OPERATION operation,
+    _In_ PCWSTR options,
+    _Outptr_ PWSTR* resultDocument
+    );
+
 /// Creates a new compute system.
 
 HRESULT
@@ -547,8 +557,8 @@ HcsRevokeVmGroupAccess(
 
 #endif // _HYPERV_COMPUTECORE_H_
 
-#ifndef ext_ms_win_hyperv_compute_l1_2_3_query_routines
-#define ext_ms_win_hyperv_compute_l1_2_3_query_routines
+#ifndef ext_ms_win_hyperv_compute_l1_2_4_query_routines
+#define ext_ms_win_hyperv_compute_l1_2_4_query_routines
 
 //
 //Private Extension API Query Routines
@@ -669,6 +679,12 @@ IsHcsSetOperationCallbackPresent(
 BOOLEAN
 __stdcall
 IsHcsCancelOperationPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsGetOperationPropertiesPresent(
     VOID
     );
 

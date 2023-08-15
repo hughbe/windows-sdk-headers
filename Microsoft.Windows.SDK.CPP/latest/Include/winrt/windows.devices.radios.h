@@ -571,7 +571,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRadio = _uuidof(IRadio);
+                MIDL_CONST_ID IID& IID_IRadio = __uuidof(IRadio);
             } /* Radios */
         } /* Devices */
     } /* Windows */
@@ -617,7 +617,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRadioStatics = _uuidof(IRadioStatics);
+                MIDL_CONST_ID IID& IID_IRadioStatics = __uuidof(IRadioStatics);
             } /* Radios */
         } /* Devices */
     } /* Windows */

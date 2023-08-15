@@ -442,7 +442,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreview = _uuidof(ITwoPanelHingedDevicePosturePreview);
+                MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreview = __uuidof(ITwoPanelHingedDevicePosturePreview);
             } /* Preview */
         } /* System */
     } /* Windows */
@@ -514,7 +514,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewReading = _uuidof(ITwoPanelHingedDevicePosturePreviewReading);
+                MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewReading = __uuidof(ITwoPanelHingedDevicePosturePreviewReading);
             } /* Preview */
         } /* System */
     } /* Windows */
@@ -556,7 +556,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = _uuidof(ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = __uuidof(ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs);
             } /* Preview */
         } /* System */
     } /* Windows */
@@ -598,7 +598,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewStatics = _uuidof(ITwoPanelHingedDevicePosturePreviewStatics);
+                MIDL_CONST_ID IID& IID_ITwoPanelHingedDevicePosturePreviewStatics = __uuidof(ITwoPanelHingedDevicePosturePreviewStatics);
             } /* Preview */
         } /* System */
     } /* Windows */

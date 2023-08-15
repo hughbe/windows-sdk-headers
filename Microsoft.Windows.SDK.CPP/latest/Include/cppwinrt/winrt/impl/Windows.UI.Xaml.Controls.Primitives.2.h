@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -673,7 +673,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFlyoutBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Control) CreatePresenter() const;
+        auto CreatePresenter() const;
     };
     template <typename D>
     class IFlyoutBaseOverrides4T
@@ -682,7 +682,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFlyoutBaseOverrides4 = winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4;
-        WINRT_IMPL_AUTO(void) OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        auto OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <typename D>
     class IPickerFlyoutBaseOverridesT
@@ -691,8 +691,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IPickerFlyoutBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides;
-        WINRT_IMPL_AUTO(void) OnConfirmed() const;
-        WINRT_IMPL_AUTO(bool) ShouldShowConfirmationButtons() const;
+        auto OnConfirmed() const;
+        auto ShouldShowConfirmationButtons() const;
     };
     template <typename D>
     class IRangeBaseOverridesT
@@ -701,9 +701,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IRangeBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides;
-        WINRT_IMPL_AUTO(void) OnMinimumChanged(double oldMinimum, double newMinimum) const;
-        WINRT_IMPL_AUTO(void) OnMaximumChanged(double oldMaximum, double newMaximum) const;
-        WINRT_IMPL_AUTO(void) OnValueChanged(double oldValue, double newValue) const;
+        auto OnMinimumChanged(double oldMinimum, double newMinimum) const;
+        auto OnMaximumChanged(double oldMaximum, double newMaximum) const;
+        auto OnValueChanged(double oldValue, double newValue) const;
     };
     template <typename D>
     class IToggleButtonOverridesT
@@ -712,7 +712,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IToggleButtonOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides;
-        WINRT_IMPL_AUTO(void) OnToggle() const;
+        auto OnToggle() const;
     };
 }
 #endif

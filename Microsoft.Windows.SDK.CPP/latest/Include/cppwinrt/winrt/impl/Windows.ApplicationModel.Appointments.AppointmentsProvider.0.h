@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,10 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments
 {
     struct Appointment;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename T> struct __declspec(empty_bases) IReference;
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider
 {
@@ -113,12 +109,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Appointments_AppointmentsProvider_IAddAppointmentOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Appointments::Appointment) AppointmentInformation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourcePackageFamilyName() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted(param::hstring const& itemId) const;
-        WINRT_IMPL_AUTO(void) ReportCanceled() const;
-        WINRT_IMPL_AUTO(void) ReportError(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) DismissUI() const;
+        [[nodiscard]] auto AppointmentInformation() const;
+        [[nodiscard]] auto SourcePackageFamilyName() const;
+        auto ReportCompleted(param::hstring const& itemId) const;
+        auto ReportCanceled() const;
+        auto ReportError(param::hstring const& value) const;
+        auto DismissUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation>
     {
@@ -127,10 +123,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Appointments_AppointmentsProvider_IAppointmentsProviderLaunchActionVerbsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AddAppointment() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ReplaceAppointment() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoveAppointment() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ShowTimeFrame() const;
+        [[nodiscard]] auto AddAppointment() const;
+        [[nodiscard]] auto ReplaceAppointment() const;
+        [[nodiscard]] auto RemoveAppointment() const;
+        [[nodiscard]] auto ShowTimeFrame() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAppointmentsProviderLaunchActionVerbsStatics>
     {
@@ -139,7 +135,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Appointments_AppointmentsProvider_IAppointmentsProviderLaunchActionVerbsStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ShowAppointmentDetails() const;
+        [[nodiscard]] auto ShowAppointmentDetails() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAppointmentsProviderLaunchActionVerbsStatics2>
     {
@@ -148,13 +144,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Appointments_AppointmentsProvider_IRemoveAppointmentOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppointmentId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) InstanceStartDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourcePackageFamilyName() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted() const;
-        WINRT_IMPL_AUTO(void) ReportCanceled() const;
-        WINRT_IMPL_AUTO(void) ReportError(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) DismissUI() const;
+        [[nodiscard]] auto AppointmentId() const;
+        [[nodiscard]] auto InstanceStartDate() const;
+        [[nodiscard]] auto SourcePackageFamilyName() const;
+        auto ReportCompleted() const;
+        auto ReportCanceled() const;
+        auto ReportError(param::hstring const& value) const;
+        auto DismissUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation>
     {
@@ -163,14 +159,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Appointments_AppointmentsProvider_IReplaceAppointmentOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppointmentId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Appointments::Appointment) AppointmentInformation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) InstanceStartDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourcePackageFamilyName() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted(param::hstring const& itemId) const;
-        WINRT_IMPL_AUTO(void) ReportCanceled() const;
-        WINRT_IMPL_AUTO(void) ReportError(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) DismissUI() const;
+        [[nodiscard]] auto AppointmentId() const;
+        [[nodiscard]] auto AppointmentInformation() const;
+        [[nodiscard]] auto InstanceStartDate() const;
+        [[nodiscard]] auto SourcePackageFamilyName() const;
+        auto ReportCompleted(param::hstring const& itemId) const;
+        auto ReportCanceled() const;
+        auto ReportError(param::hstring const& value) const;
+        auto DismissUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation>
     {

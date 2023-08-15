@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,15 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Media_FaceAnalysis_0_H
 #define WINRT_Windows_Media_FaceAnalysis_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
-}
 WINRT_EXPORT namespace winrt::Windows::Graphics::Imaging
 {
     struct BitmapBounds;
@@ -116,7 +107,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_FaceAnalysis_IDetectedFace
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::BitmapBounds) FaceBox() const;
+        [[nodiscard]] auto FaceBox() const;
     };
     template <> struct consume<winrt::Windows::Media::FaceAnalysis::IDetectedFace>
     {
@@ -125,12 +116,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_FaceAnalysis_IFaceDetector
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::FaceAnalysis::DetectedFace>>) DetectFacesAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& image) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::FaceAnalysis::DetectedFace>>) DetectFacesAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& image, winrt::Windows::Graphics::Imaging::BitmapBounds const& searchArea) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::BitmapSize) MinDetectableFaceSize() const;
-        WINRT_IMPL_AUTO(void) MinDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::BitmapSize) MaxDetectableFaceSize() const;
-        WINRT_IMPL_AUTO(void) MaxDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
+        auto DetectFacesAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& image) const;
+        auto DetectFacesAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& image, winrt::Windows::Graphics::Imaging::BitmapBounds const& searchArea) const;
+        [[nodiscard]] auto MinDetectableFaceSize() const;
+        auto MinDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
+        [[nodiscard]] auto MaxDetectableFaceSize() const;
+        auto MaxDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
     };
     template <> struct consume<winrt::Windows::Media::FaceAnalysis::IFaceDetector>
     {
@@ -139,10 +130,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_FaceAnalysis_IFaceDetectorStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::FaceAnalysis::FaceDetector>) CreateAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>) GetSupportedBitmapPixelFormats() const;
-        WINRT_IMPL_AUTO(bool) IsBitmapPixelFormatSupported(winrt::Windows::Graphics::Imaging::BitmapPixelFormat const& bitmapPixelFormat) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto CreateAsync() const;
+        auto GetSupportedBitmapPixelFormats() const;
+        auto IsBitmapPixelFormatSupported(winrt::Windows::Graphics::Imaging::BitmapPixelFormat const& bitmapPixelFormat) const;
+        [[nodiscard]] auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::Media::FaceAnalysis::IFaceDetectorStatics>
     {
@@ -151,11 +142,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_FaceAnalysis_IFaceTracker
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::FaceAnalysis::DetectedFace>>) ProcessNextFrameAsync(winrt::Windows::Media::VideoFrame const& videoFrame) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::BitmapSize) MinDetectableFaceSize() const;
-        WINRT_IMPL_AUTO(void) MinDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::BitmapSize) MaxDetectableFaceSize() const;
-        WINRT_IMPL_AUTO(void) MaxDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
+        auto ProcessNextFrameAsync(winrt::Windows::Media::VideoFrame const& videoFrame) const;
+        [[nodiscard]] auto MinDetectableFaceSize() const;
+        auto MinDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
+        [[nodiscard]] auto MaxDetectableFaceSize() const;
+        auto MaxDetectableFaceSize(winrt::Windows::Graphics::Imaging::BitmapSize const& value) const;
     };
     template <> struct consume<winrt::Windows::Media::FaceAnalysis::IFaceTracker>
     {
@@ -164,10 +155,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_FaceAnalysis_IFaceTrackerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::FaceAnalysis::FaceTracker>) CreateAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>) GetSupportedBitmapPixelFormats() const;
-        WINRT_IMPL_AUTO(bool) IsBitmapPixelFormatSupported(winrt::Windows::Graphics::Imaging::BitmapPixelFormat const& bitmapPixelFormat) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto CreateAsync() const;
+        auto GetSupportedBitmapPixelFormats() const;
+        auto IsBitmapPixelFormatSupported(winrt::Windows::Graphics::Imaging::BitmapPixelFormat const& bitmapPixelFormat) const;
+        [[nodiscard]] auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::Media::FaceAnalysis::IFaceTrackerStatics>
     {

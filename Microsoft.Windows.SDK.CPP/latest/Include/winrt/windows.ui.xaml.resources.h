@@ -214,7 +214,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoader = _uuidof(ICustomXamlResourceLoader);
+                    MIDL_CONST_ID IID& IID_ICustomXamlResourceLoader = __uuidof(ICustomXamlResourceLoader);
                 } /* Resources */
             } /* Xaml */
         } /* UI */
@@ -254,7 +254,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderFactory = _uuidof(ICustomXamlResourceLoaderFactory);
+                    MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderFactory = __uuidof(ICustomXamlResourceLoaderFactory);
                 } /* Resources */
             } /* Xaml */
         } /* UI */
@@ -296,7 +296,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderOverrides = _uuidof(ICustomXamlResourceLoaderOverrides);
+                    MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderOverrides = __uuidof(ICustomXamlResourceLoaderOverrides);
                 } /* Resources */
             } /* Xaml */
         } /* UI */
@@ -337,7 +337,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderStatics = _uuidof(ICustomXamlResourceLoaderStatics);
+                    MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderStatics = __uuidof(ICustomXamlResourceLoaderStatics);
                 } /* Resources */
             } /* Xaml */
         } /* UI */

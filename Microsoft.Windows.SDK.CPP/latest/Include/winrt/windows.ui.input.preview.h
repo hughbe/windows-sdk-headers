@@ -207,7 +207,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IInputActivationListenerPreviewStatics = _uuidof(IInputActivationListenerPreviewStatics);
+                    MIDL_CONST_ID IID& IID_IInputActivationListenerPreviewStatics = __uuidof(IInputActivationListenerPreviewStatics);
                 } /* Preview */
             } /* Input */
         } /* UI */

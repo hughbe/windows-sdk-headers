@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,13 +9,7 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Sensors::Custom
 {
@@ -113,15 +107,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensor
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Sensors::Custom::CustomSensorReading) GetCurrentReading() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinimumReportInterval() const;
-        WINRT_IMPL_AUTO(void) ReportInterval(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ReportInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ReadingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Custom::CustomSensor, winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs> const& handler) const;
+        auto GetCurrentReading() const;
+        [[nodiscard]] auto MinimumReportInterval() const;
+        auto ReportInterval(uint32_t value) const;
+        [[nodiscard]] auto ReportInterval() const;
+        [[nodiscard]] auto DeviceId() const;
+        auto ReadingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Custom::CustomSensor, winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs> const& handler) const;
         using ReadingChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Sensors::Custom::ICustomSensor, &impl::abi_t<winrt::Windows::Devices::Sensors::Custom::ICustomSensor>::remove_ReadingChanged>;
         [[nodiscard]] ReadingChanged_revoker ReadingChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Custom::CustomSensor, winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ReadingChanged(winrt::event_token const& token) const noexcept;
+        auto ReadingChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensor>
     {
@@ -130,9 +124,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensor2
     {
-        WINRT_IMPL_AUTO(void) ReportLatency(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ReportLatency() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxBatchSize() const;
+        auto ReportLatency(uint32_t value) const;
+        [[nodiscard]] auto ReportLatency() const;
+        [[nodiscard]] auto MaxBatchSize() const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensor2>
     {
@@ -141,8 +135,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensorReading
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) Properties() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensorReading>
     {
@@ -151,7 +145,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensorReading2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) PerformanceCount() const;
+        [[nodiscard]] auto PerformanceCount() const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensorReading2>
     {
@@ -160,7 +154,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensorReadingChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Sensors::Custom::CustomSensorReading) Reading() const;
+        [[nodiscard]] auto Reading() const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs>
     {
@@ -169,8 +163,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Sensors_Custom_ICustomSensorStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(winrt::guid const& interfaceId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::Custom::CustomSensor>) FromIdAsync(param::hstring const& sensorId) const;
+        auto GetDeviceSelector(winrt::guid const& interfaceId) const;
+        auto FromIdAsync(param::hstring const& sensorId) const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::Custom::ICustomSensorStatics>
     {

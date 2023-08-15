@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,12 +9,7 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Radios
 {
@@ -86,14 +81,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Radios_IRadio
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Radios::RadioAccessStatus>) SetStateAsync(winrt::Windows::Devices::Radios::RadioState const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) StateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Radios::Radio, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto SetStateAsync(winrt::Windows::Devices::Radios::RadioState const& value) const;
+        auto StateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Radios::Radio, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using StateChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Radios::IRadio, &impl::abi_t<winrt::Windows::Devices::Radios::IRadio>::remove_StateChanged>;
         [[nodiscard]] StateChanged_revoker StateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Radios::Radio, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) StateChanged(winrt::event_token const& eventCookie) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Radios::RadioState) State() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Radios::RadioKind) Kind() const;
+        auto StateChanged(winrt::event_token const& eventCookie) const noexcept;
+        [[nodiscard]] auto State() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::Devices::Radios::IRadio>
     {
@@ -102,10 +97,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Radios_IRadioStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Radios::Radio>>) GetRadiosAsync() const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Radios::Radio>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Radios::RadioAccessStatus>) RequestAccessAsync() const;
+        auto GetRadiosAsync() const;
+        auto GetDeviceSelector() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
+        auto RequestAccessAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::Radios::IRadioStatics>
     {

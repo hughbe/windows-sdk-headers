@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,10 +16,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IObservableVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -131,12 +127,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionKind) Kind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Tag() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DetailText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) Image() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ImageAlternateText() const;
+        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] auto Text() const;
+        [[nodiscard]] auto Tag() const;
+        [[nodiscard]] auto DetailText() const;
+        [[nodiscard]] auto Image() const;
+        [[nodiscard]] auto ImageAlternateText() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestion>
     {
@@ -145,26 +141,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SearchHistoryEnabled() const;
-        WINRT_IMPL_AUTO(void) SearchHistoryEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SearchHistoryContext() const;
-        WINRT_IMPL_AUTO(void) SearchHistoryContext(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) SetLocalContentSuggestionSettings(winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings const& settings) const;
-        WINRT_IMPL_AUTO(void) SetQuery(param::hstring const& queryText) const;
-        WINRT_IMPL_AUTO(void) SetQuery(param::hstring const& queryText, param::hstring const& language) const;
-        WINRT_IMPL_AUTO(void) SetQuery(param::hstring const& queryText, param::hstring const& language, winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails const& linguisticDetails) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>) Suggestions() const;
-        WINRT_IMPL_AUTO(void) AddToHistory(param::hstring const& queryText) const;
-        WINRT_IMPL_AUTO(void) AddToHistory(param::hstring const& queryText, param::hstring const& language) const;
-        WINRT_IMPL_AUTO(void) ClearHistory() const;
-        WINRT_IMPL_AUTO(winrt::event_token) SuggestionsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> const& handler) const;
+        [[nodiscard]] auto SearchHistoryEnabled() const;
+        auto SearchHistoryEnabled(bool value) const;
+        [[nodiscard]] auto SearchHistoryContext() const;
+        auto SearchHistoryContext(param::hstring const& value) const;
+        auto SetLocalContentSuggestionSettings(winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings const& settings) const;
+        auto SetQuery(param::hstring const& queryText) const;
+        auto SetQuery(param::hstring const& queryText, param::hstring const& language) const;
+        auto SetQuery(param::hstring const& queryText, param::hstring const& language, winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails const& linguisticDetails) const;
+        [[nodiscard]] auto Suggestions() const;
+        auto AddToHistory(param::hstring const& queryText) const;
+        auto AddToHistory(param::hstring const& queryText, param::hstring const& language) const;
+        auto ClearHistory() const;
+        auto SuggestionsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> const& handler) const;
         using SuggestionsRequested_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager, &impl::abi_t<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager>::remove_SuggestionsRequested>;
         [[nodiscard]] SuggestionsRequested_revoker SuggestionsRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) SuggestionsRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) RequestingFocusOnKeyboardInput(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> const& handler) const;
+        auto SuggestionsRequested(winrt::event_token const& token) const noexcept;
+        auto RequestingFocusOnKeyboardInput(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> const& handler) const;
         using RequestingFocusOnKeyboardInput_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager, &impl::abi_t<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager>::remove_RequestingFocusOnKeyboardInput>;
         [[nodiscard]] RequestingFocusOnKeyboardInput_revoker RequestingFocusOnKeyboardInput(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) RequestingFocusOnKeyboardInput(winrt::event_token const& token) const noexcept;
+        auto RequestingFocusOnKeyboardInput(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager>
     {
@@ -173,10 +169,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QueryText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails) LinguisticDetails() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest) Request() const;
+        [[nodiscard]] auto QueryText() const;
+        [[nodiscard]] auto Language() const;
+        [[nodiscard]] auto LinguisticDetails() const;
+        [[nodiscard]] auto Request() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs>
     {

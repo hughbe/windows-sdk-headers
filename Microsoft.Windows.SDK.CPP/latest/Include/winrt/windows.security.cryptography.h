@@ -246,7 +246,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICryptographicBufferStatics = _uuidof(ICryptographicBufferStatics);
+                MIDL_CONST_ID IID& IID_ICryptographicBufferStatics = __uuidof(ICryptographicBufferStatics);
             } /* Cryptography */
         } /* Security */
     } /* Windows */

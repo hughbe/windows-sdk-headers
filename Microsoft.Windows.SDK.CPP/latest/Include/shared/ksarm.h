@@ -502,7 +502,7 @@
 //
 
 #define EtCid 0x2cc
-#define EtPicoContext 0x39c
+#define EtPicoContext 0x3a4
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -570,7 +570,7 @@
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
 #define KernelThreadObjectLength 0x2a0
-#define ExecutiveThreadObjectLength 0x540
+#define ExecutiveThreadObjectLength 0x5c0
 
 #define KF_VFP_32REG 0x10
 
@@ -687,7 +687,7 @@
 #define TeGdiBatchCount 0xf70
 #define TeGuaranteedStackBytes 0xf78
 #define TeFlsData 0xfb4
-#define ThreadEnvironmentBlockLength 0x1018
+#define ThreadEnvironmentBlockLength 0x1020
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
 #define TLS_EXPANSION_SLOTS 0x400
@@ -979,7 +979,7 @@
 #define PbCopyReadNoWait 0x644
 #define PbCopyReadWait 0x648
 #define PbCopyReadNoWaitMiss 0x64c
-#define PbAlignmentFixupCount 0xd18
+#define PbAlignmentFixupCount 0xd10
 #define PbExceptionDispatchCount 0x934
 #define PbProcessorVendorString 0x508
 #define PbFeatureBits 0x50c
@@ -991,8 +991,8 @@
 #define PbPanicMiniStack 0xfd0
 #define PbCycleCounterHigh 0x970
 #define ThNpxState 0x85
-#define ThUserRoBase 0x3a0
-#define ThUserRwBase 0x3a4
+#define ThUserRoBase 0x3a8
+#define ThUserRwBase 0x3ac
 
 //
 // KTHREAD state

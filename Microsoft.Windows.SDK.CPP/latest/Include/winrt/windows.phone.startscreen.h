@@ -336,7 +336,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDualSimTile = _uuidof(IDualSimTile);
+                MIDL_CONST_ID IID& IID_IDualSimTile = __uuidof(IDualSimTile);
             } /* StartScreen */
         } /* Phone */
     } /* Windows */
@@ -394,7 +394,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDualSimTileStatics = _uuidof(IDualSimTileStatics);
+                MIDL_CONST_ID IID& IID_IDualSimTileStatics = __uuidof(IDualSimTileStatics);
             } /* StartScreen */
         } /* Phone */
     } /* Windows */
@@ -429,7 +429,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IToastNotificationManagerStatics3 = _uuidof(IToastNotificationManagerStatics3);
+                MIDL_CONST_ID IID& IID_IToastNotificationManagerStatics3 = __uuidof(IToastNotificationManagerStatics3);
             } /* StartScreen */
         } /* Phone */
     } /* Windows */

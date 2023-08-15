@@ -2851,7 +2851,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayAdapter = _uuidof(IDisplayAdapter);
+                    MIDL_CONST_ID IID& IID_IDisplayAdapter = __uuidof(IDisplayAdapter);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -2890,7 +2890,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayAdapterStatics = _uuidof(IDisplayAdapterStatics);
+                    MIDL_CONST_ID IID& IID_IDisplayAdapterStatics = __uuidof(IDisplayAdapterStatics);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -2956,7 +2956,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayDevice = _uuidof(IDisplayDevice);
+                    MIDL_CONST_ID IID& IID_IDisplayDevice = __uuidof(IDisplayDevice);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3000,7 +3000,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayDevice2 = _uuidof(IDisplayDevice2);
+                    MIDL_CONST_ID IID& IID_IDisplayDevice2 = __uuidof(IDisplayDevice2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3035,7 +3035,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayFence = _uuidof(IDisplayFence);
+                    MIDL_CONST_ID IID& IID_IDisplayFence = __uuidof(IDisplayFence);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3133,7 +3133,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManager = _uuidof(IDisplayManager);
+                    MIDL_CONST_ID IID& IID_IDisplayManager = __uuidof(IDisplayManager);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3177,7 +3177,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerChangedEventArgs = _uuidof(IDisplayManagerChangedEventArgs);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerChangedEventArgs = __uuidof(IDisplayManagerChangedEventArgs);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3221,7 +3221,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerDisabledEventArgs = _uuidof(IDisplayManagerDisabledEventArgs);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerDisabledEventArgs = __uuidof(IDisplayManagerDisabledEventArgs);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3265,7 +3265,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerEnabledEventArgs = _uuidof(IDisplayManagerEnabledEventArgs);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerEnabledEventArgs = __uuidof(IDisplayManagerEnabledEventArgs);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3309,7 +3309,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerPathsFailedOrInvalidatedEventArgs = _uuidof(IDisplayManagerPathsFailedOrInvalidatedEventArgs);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerPathsFailedOrInvalidatedEventArgs = __uuidof(IDisplayManagerPathsFailedOrInvalidatedEventArgs);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3353,7 +3353,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerResultWithState = _uuidof(IDisplayManagerResultWithState);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerResultWithState = __uuidof(IDisplayManagerResultWithState);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3392,7 +3392,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayManagerStatics = _uuidof(IDisplayManagerStatics);
+                    MIDL_CONST_ID IID& IID_IDisplayManagerStatics = __uuidof(IDisplayManagerStatics);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3456,7 +3456,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayModeInfo = _uuidof(IDisplayModeInfo);
+                    MIDL_CONST_ID IID& IID_IDisplayModeInfo = __uuidof(IDisplayModeInfo);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3494,7 +3494,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayModeInfo2 = _uuidof(IDisplayModeInfo2);
+                    MIDL_CONST_ID IID& IID_IDisplayModeInfo2 = __uuidof(IDisplayModeInfo2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3602,7 +3602,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayPath = _uuidof(IDisplayPath);
+                    MIDL_CONST_ID IID& IID_IDisplayPath = __uuidof(IDisplayPath);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3643,7 +3643,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayPath2 = _uuidof(IDisplayPath2);
+                    MIDL_CONST_ID IID& IID_IDisplayPath2 = __uuidof(IDisplayPath2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3699,7 +3699,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayPrimaryDescription = _uuidof(IDisplayPrimaryDescription);
+                    MIDL_CONST_ID IID& IID_IDisplayPrimaryDescription = __uuidof(IDisplayPrimaryDescription);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3743,7 +3743,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayPrimaryDescriptionFactory = _uuidof(IDisplayPrimaryDescriptionFactory);
+                    MIDL_CONST_ID IID& IID_IDisplayPrimaryDescriptionFactory = __uuidof(IDisplayPrimaryDescriptionFactory);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3788,7 +3788,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayPrimaryDescriptionStatics = _uuidof(IDisplayPrimaryDescriptionStatics);
+                    MIDL_CONST_ID IID& IID_IDisplayPrimaryDescriptionStatics = __uuidof(IDisplayPrimaryDescriptionStatics);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3823,7 +3823,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayScanout = _uuidof(IDisplayScanout);
+                    MIDL_CONST_ID IID& IID_IDisplayScanout = __uuidof(IDisplayScanout);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3868,7 +3868,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplaySource = _uuidof(IDisplaySource);
+                    MIDL_CONST_ID IID& IID_IDisplaySource = __uuidof(IDisplaySource);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3913,7 +3913,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplaySource2 = _uuidof(IDisplaySource2);
+                    MIDL_CONST_ID IID& IID_IDisplaySource2 = __uuidof(IDisplaySource2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -3999,7 +3999,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayState = _uuidof(IDisplayState);
+                    MIDL_CONST_ID IID& IID_IDisplayState = __uuidof(IDisplayState);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4040,7 +4040,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayStateOperationResult = _uuidof(IDisplayStateOperationResult);
+                    MIDL_CONST_ID IID& IID_IDisplayStateOperationResult = __uuidof(IDisplayStateOperationResult);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4075,7 +4075,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplaySurface = _uuidof(IDisplaySurface);
+                    MIDL_CONST_ID IID& IID_IDisplaySurface = __uuidof(IDisplaySurface);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4154,7 +4154,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTarget = _uuidof(IDisplayTarget);
+                    MIDL_CONST_ID IID& IID_IDisplayTarget = __uuidof(IDisplayTarget);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4196,7 +4196,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTask = _uuidof(IDisplayTask);
+                    MIDL_CONST_ID IID& IID_IDisplayTask = __uuidof(IDisplayTask);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4235,7 +4235,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTask2 = _uuidof(IDisplayTask2);
+                    MIDL_CONST_ID IID& IID_IDisplayTask2 = __uuidof(IDisplayTask2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4279,7 +4279,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTaskPool = _uuidof(IDisplayTaskPool);
+                    MIDL_CONST_ID IID& IID_IDisplayTaskPool = __uuidof(IDisplayTaskPool);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4318,7 +4318,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTaskPool2 = _uuidof(IDisplayTaskPool2);
+                    MIDL_CONST_ID IID& IID_IDisplayTaskPool2 = __uuidof(IDisplayTaskPool2);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4362,7 +4362,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayTaskResult = _uuidof(IDisplayTaskResult);
+                    MIDL_CONST_ID IID& IID_IDisplayTaskResult = __uuidof(IDisplayTaskResult);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4412,7 +4412,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayView = _uuidof(IDisplayView);
+                    MIDL_CONST_ID IID& IID_IDisplayView = __uuidof(IDisplayView);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4465,7 +4465,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayWireFormat = _uuidof(IDisplayWireFormat);
+                    MIDL_CONST_ID IID& IID_IDisplayWireFormat = __uuidof(IDisplayWireFormat);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4508,7 +4508,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayWireFormatFactory = _uuidof(IDisplayWireFormatFactory);
+                    MIDL_CONST_ID IID& IID_IDisplayWireFormatFactory = __uuidof(IDisplayWireFormatFactory);
                 } /* Core */
             } /* Display */
         } /* Devices */
@@ -4552,7 +4552,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDisplayWireFormatStatics = _uuidof(IDisplayWireFormatStatics);
+                    MIDL_CONST_ID IID& IID_IDisplayWireFormatStatics = __uuidof(IDisplayWireFormatStatics);
                 } /* Core */
             } /* Display */
         } /* Devices */

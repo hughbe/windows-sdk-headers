@@ -3383,9 +3383,6 @@ InterlockedXor16(
 #endif
 
 VOID
-#if defined(_M_ARM64EC)
-__stdcall
-#endif
 __cpuidex (
     int CPUInfo[4],
     int Function,
@@ -5708,7 +5705,15 @@ _BitTestAndSet64(__int64 *Base, __int64 Index)
 #pragma intrinsic(_ReadWriteBarrier)
 #pragma intrinsic(_WriteBarrier)
 
-#define MemoryBarrier()             __dmb(_ARM64_BARRIER_SY)
+FORCEINLINE
+VOID
+MemoryBarrier (
+    VOID
+    ) 
+{
+    __dmb(_ARM64_BARRIER_SY);
+}
+
 #define PreFetchCacheLine(l,a)      __prefetch2((const void *) (a), ARM64_PREFETCH(PLD, L1, KEEP))
 #define PrefetchForWrite(p)         __prefetch2((const void *) (p), ARM64_PREFETCH(PST, L1, KEEP))
 #define ReadForWriteAccess(p)       (__prefetch2((const void *) (p), ARM64_PREFETCH(PST, L1, KEEP)), *(p))
@@ -10136,6 +10141,7 @@ typedef struct _SID_AND_ATTRIBUTES_HASH {
 
 #define SECURITY_CCG_ID_BASE_RID        (0x0000005FL)
 #define SECURITY_UMFD_BASE_RID          (0x00000060L)
+#define SECURITY_UNIQUIFIED_SERVICE_BASE_RID (0x00000061L)
 
 #define SECURITY_VIRTUALACCOUNT_ID_RID_COUNT   (6L)
 
@@ -11538,10 +11544,6 @@ typedef enum _SECURITY_IMPERSONATION_LEVEL {
                                        TOKEN_QUERY  |\
                                        TOKEN_QUERY_SOURCE )
 
-#define TOKEN_TRUST_ALLOWED_MASK    (TOKEN_TRUST_CONSTRAINT_MASK |\
-                                    TOKEN_DUPLICATE              |\
-                                    TOKEN_IMPERSONATE)
-
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 
 #define TOKEN_ACCESS_PSEUDO_HANDLE_WIN8 (TOKEN_QUERY | TOKEN_QUERY_SOURCE)
@@ -12542,7 +12544,6 @@ typedef enum _PROCESS_MITIGATION_POLICY {
     ProcessRedirectionTrustPolicy,
     ProcessUserPointerAuthPolicy,
 	ProcessSEHOPPolicy,
-    ProcessActivationContextTrustPolicy,
     MaxProcessMitigationPolicy
 } PROCESS_MITIGATION_POLICY, *PPROCESS_MITIGATION_POLICY;
 
@@ -12603,9 +12604,7 @@ typedef struct _PROCESS_MITIGATION_SYSTEM_CALL_DISABLE_POLICY {
         struct {
             DWORD DisallowWin32kSystemCalls : 1;
             DWORD AuditDisallowWin32kSystemCalls : 1;
-            DWORD DisallowFsctlSystemCalls : 1;
-            DWORD AuditDisallowFsctlSystemCalls : 1;
-            DWORD ReservedFlags : 28;
+            DWORD ReservedFlags : 30;
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_SYSTEM_CALL_DISABLE_POLICY, *PPROCESS_MITIGATION_SYSTEM_CALL_DISABLE_POLICY;
@@ -12828,16 +12827,6 @@ typedef struct _PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY {
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY, *PPROCESS_MITIGATION_REDIRECTION_TRUST_POLICY;
-
-typedef struct _PROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY {
-    union {
-        DWORD Flags;
-        struct {
-            DWORD AssemblyManifestRedirectionTrust : 1;
-            DWORD ReservedFlags : 31;
-        } DUMMYSTRUCTNAME;
-    } DUMMYUNIONNAME;
-} PROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY, *PPROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY;
 
 //
 //
@@ -13383,9 +13372,11 @@ typedef struct _SERVERSILO_BASIC_INFORMATION {
     DWORD ServiceSessionId;
     SERVERSILO_STATE State;
     DWORD    ExitStatus;
-    BOOLEAN IsDownlevelContainer;
+    BOOLEAN Reserved;
     PVOID ApiSetSchema;
     PVOID HostApiSetSchema;
+    DWORD ContainerBuildNumber;
+    DWORD HostBuildNumber;
 } SERVERSILO_BASIC_INFORMATION, *PSERVERSILO_BASIC_INFORMATION;
 
 //
@@ -13714,7 +13705,6 @@ typedef struct _SYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION {
 #define PF_ERMS_AVAILABLE                           42   
 #define PF_ARM_V82_DP_INSTRUCTIONS_AVAILABLE        43   
 #define PF_ARM_V83_JSCVT_INSTRUCTIONS_AVAILABLE     44   
-#define PF_ARM_V83_LRCPC_INSTRUCTIONS_AVAILABLE     45   
 //
 
 //
@@ -14654,15 +14644,6 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            )
 
 //
-// Macro to determine whether a reparse point tag corresponds to a reserved
-// tag owned by Microsoft.
-//
-
-#define IsReparseTagReserved(_tag) (               \
-                           ((_tag) & 0x40000000)   \
-                           )
-
-//
 // Macro to determine whether a reparse point tag is a name surrogate
 //
 
@@ -14679,7 +14660,6 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            ((_tag) & 0x10000000)   \
                            )
 
-#define IO_REPARSE_TAG_RESERVED_INVALID         (0xC0008000L)       
 #define IO_REPARSE_TAG_MOUNT_POINT              (0xA0000003L)       
 #define IO_REPARSE_TAG_HSM                      (0xC0000004L)       
 #define IO_REPARSE_TAG_HSM2                     (0x80000006L)       
@@ -14780,27 +14760,11 @@ typedef struct _SCRUB_DATA_INPUT {
 
     DWORD ObjectId[4];
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
-    //
-    // Start scrubbing at byte offset for byte count
-    // Both must be cluster aligned
-    //
-
-    ULONGLONG StartingByteOffset;
-
-    ULONGLONG ByteCount;
-
     //
     // Reserved
     //
 
-    DWORD Reserved[40];
-
-#else
-
     DWORD Reserved[41];
-
-#endif
 
     //
     // Opaque data returned from the previous call to restart the
@@ -14975,29 +14939,9 @@ typedef struct _SCRUB_DATA_OUTPUT {
 
     ULONGLONG TotalNumberOfDataBytesInUse;
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
-
-    //
-    //  Next scrub starting offset in bytes
-    //
-
-    ULONGLONG NextStartingByteOffset;
-
-    ULONGLONG ValidDataLength;
-
-#endif
-
-#else
-
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
-
-    ULONGLONG Reserved2[6];
-
 #else
 
     ULONGLONG Reserved2[4];
-
-#endif
 
 #endif
 
@@ -15752,38 +15696,19 @@ DEFINE_GUID( GUID_STANDBY_RESERVE_TIME, 0x468FE7E5, 0x1158, 0x46EC, 0x88, 0xbc, 
 DEFINE_GUID(GUID_STANDBY_RESET_PERCENT, 0x49cb11a5, 0x56e2, 0x4afb, 0x9d, 0x38, 0x3d, 0xf4, 0x78, 0x72, 0xe2, 0x1b);
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Away Display Timeout.
+// Defines a guid to control Human Presence Sensor Adaptive Display Timeout.
 //
 // {0A7D6AB6-AC83-4AD1-8282-ECA5B58308F3}
 //
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
-
-#define GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Inattentive Dim Timeout;
+// Defines a guid to control Human Presence Sensor Adaptive Dim Timeout;
 //
 // {CF8C6097-12B8-4279-BBDD-44601EE5209D}
 //
 
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
-
-#define GUID_HUPR_ADAPTIVE_DIM_TIMEOUT GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT
-
-//
-// Defines a guid to control Human Presence Sensor Adaptive Inattentive Display Timeout.
-//
-// {EE16691E-6AB3-4619-BB48-1C77C9357E5A}
-//
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DISPLAY_TIMEOUT, 0xEE16691E, 0x6AB3, 0x4619, 0xBB, 0x48, 0x1C, 0x77, 0xC9, 0x35, 0x7E, 0x5A);
-
-//
-// Defines a guid to control Human Presence Sensor Adaptive Away Dim Timeout;
-//
-// {A79C8E0E-F271-482D-8F8A-5DB9A18312DE}
-//
-
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DIM_TIMEOUT, 0xA79C8E0E, 0xF271, 0x482D, 0x8F, 0x8A, 0x5D, 0xB9, 0xA1, 0x83, 0x12, 0xDE);
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
 
 //
 // Defines a guid for enabling/disabling standby (S1-S3) states. This does not
@@ -21775,6 +21700,13 @@ RtlConstantTimeEqualMemory(
     for (; i < len; i += 1) {
 
 #if !defined(_M_CEE) && (defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC))
+
+        // Faster is better even when constant time is required.  Optimize performance
+        // by avoiding memory barrier generation for ARM.  The parameters to this
+        // function are NOT volatile, so the caller must not expect the generation
+        // of non-ISO volatile memory barriers regardless of the compiler flags used.
+        // Instead, if the caller shares this memory with other threads, it is
+        // responsible for synchronizing access with the associated acquire barrier.
 
         x |= __iso_volatile_load8(&p1[i]) ^ __iso_volatile_load8(&p2[i]);
 

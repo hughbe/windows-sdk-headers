@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,14 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Devices::Adc::Provider
 {
     struct IAdcProvider;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Adc
 {
@@ -94,9 +86,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_IAdcChannel
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Adc::AdcController) Controller() const;
-        WINRT_IMPL_AUTO(int32_t) ReadValue() const;
-        WINRT_IMPL_AUTO(double) ReadRatio() const;
+        [[nodiscard]] auto Controller() const;
+        auto ReadValue() const;
+        auto ReadRatio() const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::IAdcChannel>
     {
@@ -105,14 +97,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_IAdcController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ChannelCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ResolutionInBits() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Adc::AdcChannelMode) ChannelMode() const;
-        WINRT_IMPL_AUTO(void) ChannelMode(winrt::Windows::Devices::Adc::AdcChannelMode const& value) const;
-        WINRT_IMPL_AUTO(bool) IsChannelModeSupported(winrt::Windows::Devices::Adc::AdcChannelMode const& channelMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Adc::AdcChannel) OpenChannel(int32_t channelNumber) const;
+        [[nodiscard]] auto ChannelCount() const;
+        [[nodiscard]] auto ResolutionInBits() const;
+        [[nodiscard]] auto MinValue() const;
+        [[nodiscard]] auto MaxValue() const;
+        [[nodiscard]] auto ChannelMode() const;
+        auto ChannelMode(winrt::Windows::Devices::Adc::AdcChannelMode const& value) const;
+        auto IsChannelModeSupported(winrt::Windows::Devices::Adc::AdcChannelMode const& channelMode) const;
+        auto OpenChannel(int32_t channelNumber) const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::IAdcController>
     {
@@ -121,7 +113,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_IAdcControllerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Adc::AdcController>>) GetControllersAsync(winrt::Windows::Devices::Adc::Provider::IAdcProvider const& provider) const;
+        auto GetControllersAsync(winrt::Windows::Devices::Adc::Provider::IAdcProvider const& provider) const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::IAdcControllerStatics>
     {
@@ -130,7 +122,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_IAdcControllerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Adc::AdcController>) GetDefaultAsync() const;
+        auto GetDefaultAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::IAdcControllerStatics2>
     {

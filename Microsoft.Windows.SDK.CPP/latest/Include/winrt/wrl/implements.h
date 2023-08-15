@@ -2165,6 +2165,7 @@ class RuntimeClass<InterfaceListHelper<TInterfaces...>, RuntimeClassFlagsT, impl
     public RuntimeClassImpl<RuntimeClassFlagsT, implementsWeakReferenceSource, implementsInspectable, implementsFtmBase, TInterfaces...>
 {
 protected:
+#pragma warning(suppress: 6101) // Function only used internally and the value of 'ppvObject' is only used if *handled is true
     HRESULT CustomQueryInterface(REFIID /*riid*/, _Outptr_result_nullonfailure_ void** /*ppvObject*/, _Out_ bool *handled)
     {
         *handled = false;
@@ -2184,6 +2185,7 @@ class RuntimeClass :
     RuntimeClass(const RuntimeClass&);
     RuntimeClass& operator=(const RuntimeClass&);
 protected:
+#pragma warning(suppress: 6101) // Function only used internally and the value of 'ppvObject' is only used if *handled is true
     HRESULT CustomQueryInterface(REFIID /*riid*/, _Outptr_result_nullonfailure_ void** /*ppvObject*/, _Out_ bool *handled)
     {
         *handled = false;
@@ -2208,6 +2210,7 @@ class RuntimeClass<RuntimeClassFlags<classFlags>, TInterfaces...> :
     RuntimeClass(const RuntimeClass&);
     RuntimeClass& operator=(const RuntimeClass&);
 protected:
+#pragma warning(suppress: 6101) // Function only used internally and the value of 'ppvObject' is only used if *handled is true
     HRESULT CustomQueryInterface(REFIID /*riid*/, _Outptr_result_nullonfailure_ void** /*ppvObject*/, _Out_ bool *handled)
     {
         *handled = false;
@@ -2474,7 +2477,7 @@ public:
         // This will allow developer to override one operator only
         // to enable different memory allocation model
 #ifdef __cpp_aligned_new
-        if constexpr (alignof(T) > __STDCPP_DEFAULT_NEW_ALIGNMENT__) 
+        if constexpr (alignof(T) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
         {
             return buffer_ = (char*) operator new (sizeof(T), static_cast<std::align_val_t>(alignof(T)), ::std::nothrow);
         }
@@ -2484,7 +2487,7 @@ public:
 
     void Detach() throw()
     {
-        buffer_ = nullptr;  
+        buffer_ = nullptr;
     }
 private:
     char* buffer_;

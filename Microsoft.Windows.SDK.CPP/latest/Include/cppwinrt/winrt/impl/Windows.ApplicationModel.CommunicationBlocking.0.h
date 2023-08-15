@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_ApplicationModel_CommunicationBlocking_0_H
 #define WINRT_Windows_ApplicationModel_CommunicationBlocking_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
@@ -67,12 +63,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBlockingActive() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsBlockedNumberAsync(param::hstring const& number) const;
-        WINRT_IMPL_AUTO(bool) ShowBlockNumbersUI(param::iterable<hstring> const& phoneNumbers) const;
-        WINRT_IMPL_AUTO(bool) ShowUnblockNumbersUI(param::iterable<hstring> const& phoneNumbers) const;
-        WINRT_IMPL_AUTO(void) ShowBlockedCallsUI() const;
-        WINRT_IMPL_AUTO(void) ShowBlockedMessagesUI() const;
+        [[nodiscard]] auto IsBlockingActive() const;
+        auto IsBlockedNumberAsync(param::hstring const& number) const;
+        auto ShowBlockNumbersUI(param::iterable<hstring> const& phoneNumbers) const;
+        auto ShowUnblockNumbersUI(param::iterable<hstring> const& phoneNumbers) const;
+        auto ShowBlockedCallsUI() const;
+        auto ShowBlockedMessagesUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>
     {
@@ -81,8 +77,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCurrentAppActiveBlockingApp() const;
-        WINRT_IMPL_AUTO(void) ShowCommunicationBlockingSettingsUI() const;
+        [[nodiscard]] auto IsCurrentAppActiveBlockingApp() const;
+        auto ShowCommunicationBlockingSettingsUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics>
     {
@@ -91,7 +87,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestSetAsActiveBlockingAppAsync() const;
+        auto RequestSetAsActiveBlockingAppAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2>
     {

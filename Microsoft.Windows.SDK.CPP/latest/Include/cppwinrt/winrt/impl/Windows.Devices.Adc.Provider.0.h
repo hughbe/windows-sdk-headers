@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Devices_Adc_Provider_0_H
 #define WINRT_Windows_Devices_Adc_Provider_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-}
 WINRT_EXPORT namespace winrt::Windows::Devices::Adc::Provider
 {
     enum class ProviderAdcChannelMode : int32_t
@@ -56,16 +52,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_Provider_IAdcControllerProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ChannelCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ResolutionInBits() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode) ChannelMode() const;
-        WINRT_IMPL_AUTO(void) ChannelMode(winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode const& value) const;
-        WINRT_IMPL_AUTO(bool) IsChannelModeSupported(winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode const& channelMode) const;
-        WINRT_IMPL_AUTO(void) AcquireChannel(int32_t channel) const;
-        WINRT_IMPL_AUTO(void) ReleaseChannel(int32_t channel) const;
-        WINRT_IMPL_AUTO(int32_t) ReadValue(int32_t channelNumber) const;
+        [[nodiscard]] auto ChannelCount() const;
+        [[nodiscard]] auto ResolutionInBits() const;
+        [[nodiscard]] auto MinValue() const;
+        [[nodiscard]] auto MaxValue() const;
+        [[nodiscard]] auto ChannelMode() const;
+        auto ChannelMode(winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode const& value) const;
+        auto IsChannelModeSupported(winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode const& channelMode) const;
+        auto AcquireChannel(int32_t channel) const;
+        auto ReleaseChannel(int32_t channel) const;
+        auto ReadValue(int32_t channelNumber) const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
     {
@@ -74,7 +70,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Adc_Provider_IAdcProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>) GetControllers() const;
+        auto GetControllers() const;
     };
     template <> struct consume<winrt::Windows::Devices::Adc::Provider::IAdcProvider>
     {

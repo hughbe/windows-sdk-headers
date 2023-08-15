@@ -335,7 +335,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInstalledDesktopApp = _uuidof(IInstalledDesktopApp);
+                MIDL_CONST_ID IID& IID_IInstalledDesktopApp = __uuidof(IInstalledDesktopApp);
             } /* Inventory */
         } /* System */
     } /* Windows */
@@ -371,7 +371,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInstalledDesktopAppStatics = _uuidof(IInstalledDesktopAppStatics);
+                MIDL_CONST_ID IID& IID_IInstalledDesktopAppStatics = __uuidof(IInstalledDesktopAppStatics);
             } /* Inventory */
         } /* System */
     } /* Windows */

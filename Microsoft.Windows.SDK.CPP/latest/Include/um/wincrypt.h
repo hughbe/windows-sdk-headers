@@ -2898,10 +2898,18 @@ CryptDecodeObject(
 #define X509_CERT_TO_BE_SIGNED              ((LPCSTR) 2)
 #define X509_CERT_CRL_TO_BE_SIGNED          ((LPCSTR) 3)
 #define X509_CERT_REQUEST_TO_BE_SIGNED      ((LPCSTR) 4)
-#define X509_EXTENSIONS                     ((LPCSTR) 5)
 #define X509_NAME_VALUE                     ((LPCSTR) 6)
-#define X509_NAME                           ((LPCSTR) 7)
 #define X509_PUBLIC_KEY_INFO                ((LPCSTR) 8)
+
+// WINCRYPT_USE_SYMBOL_PREFIX defined to avoid symbol collision with OpenSSL
+// Only used for specific symbols which have collisions today (Apr 2022) to avoid excessive duplication
+#ifndef WINCRYPT_USE_SYMBOL_PREFIX
+    #define X509_EXTENSIONS                 ((LPCSTR) 5)
+    #define X509_NAME                       ((LPCSTR) 7)
+#else
+    #define WINCRYPT_X509_EXTENSIONS        ((LPCSTR) 5)
+    #define WINCRYPT_X509_NAME              ((LPCSTR) 7)
+#endif
 
 //+-------------------------------------------------------------------------
 //  Predefined X509 certificate extension data structures that can be
@@ -3035,10 +3043,18 @@ CryptDecodeObject(
 //  Online Certificate Status Protocol (OCSP) Data Structures
 //--------------------------------------------------------------------------
 #define OCSP_SIGNED_REQUEST                 ((LPCSTR) 65)
-#define OCSP_REQUEST                        ((LPCSTR) 66)
-#define OCSP_RESPONSE                       ((LPCSTR) 67)
 #define OCSP_BASIC_SIGNED_RESPONSE          ((LPCSTR) 68)
 #define OCSP_BASIC_RESPONSE                 ((LPCSTR) 69)
+
+// WINCRYPT_USE_SYMBOL_PREFIX defined to avoid symbol collision with OpenSSL
+// Only used for specific symbols which have collisions today (Apr 2022) to avoid excessive duplication
+#ifndef WINCRYPT_USE_SYMBOL_PREFIX
+    #define OCSP_REQUEST                    ((LPCSTR) 66)
+    #define OCSP_RESPONSE                   ((LPCSTR) 67)
+#else
+    #define WINCRYPT_OCSP_REQUEST           ((LPCSTR) 66)
+    #define WINCRYPT_OCSP_RESPONSE          ((LPCSTR) 67)
+#endif
 
 //+-------------------------------------------------------------------------
 //  Logotype and Biometric Extensions
@@ -3086,7 +3102,14 @@ CryptDecodeObject(
 //+-------------------------------------------------------------------------
 //  Predefined PKCS #7 data structures that can be encoded / decoded.
 //--------------------------------------------------------------------------
-#define PKCS7_SIGNER_INFO                   ((LPCSTR) 500)
+
+// WINCRYPT_USE_SYMBOL_PREFIX defined to avoid symbol collision with OpenSSL
+// Only used for specific symbols which have collisions today (Apr 2022) to avoid excessive duplication
+#ifndef WINCRYPT_USE_SYMBOL_PREFIX
+    #define PKCS7_SIGNER_INFO               ((LPCSTR) 500)
+#else
+    #define WINCRYPT_PKCS7_SIGNER_INFO      ((LPCSTR) 500)
+#endif
 
 //+-------------------------------------------------------------------------
 //  Predefined PKCS #7 data structures that can be encoded / decoded.
@@ -3717,7 +3740,7 @@ CryptDecodeObject(
 //--------------------------------------------------------------------------
 
 //+-------------------------------------------------------------------------
-//  X509_EXTENSIONS
+//  X509_EXTENSIONS (WINCRYPT_X509_EXTENSIONS)
 //  szOID_CERT_EXTENSIONS
 //
 //  pvStructInfo points to following CERT_EXTENSIONS.
@@ -3788,7 +3811,7 @@ typedef struct _CERT_EXTENSIONS {
 //--------------------------------------------------------------------------
 
 //+-------------------------------------------------------------------------
-//  X509_NAME
+//  X509_NAME (WINCRYPT_X509_NAME)
 //
 //  pvStructInfo points to CERT_NAME_INFO.
 //--------------------------------------------------------------------------
@@ -4946,7 +4969,7 @@ typedef struct _CRYPT_RSAES_OAEP_PARAMETERS {
 
 
 //+-------------------------------------------------------------------------
-//  PKCS7_SIGNER_INFO
+//  PKCS7_SIGNER_INFO (WINCRYPT_PKCS7_SIGNER_INFO)
 //
 //  pvStructInfo points to CMSG_SIGNER_INFO.
 //--------------------------------------------------------------------------
@@ -5612,7 +5635,7 @@ typedef struct _OCSP_SIGNED_REQUEST_INFO {
 } OCSP_SIGNED_REQUEST_INFO, *POCSP_SIGNED_REQUEST_INFO;
 
 //+-------------------------------------------------------------------------
-//  OCSP_REQUEST
+//  OCSP_REQUEST (WINCRYPT_OCSP_REQUEST)
 //
 //  ToBeSigned OCSP request.
 //--------------------------------------------------------------------------
@@ -5642,7 +5665,7 @@ typedef struct _OCSP_REQUEST_INFO {
 #define OCSP_REQUEST_V1     0
 
 //+-------------------------------------------------------------------------
-//  OCSP_RESPONSE
+//  OCSP_RESPONSE (WINCRYPT_OCSP_RESPONSE)
 //
 //  OCSP outer, unsigned response wrapper.
 //--------------------------------------------------------------------------

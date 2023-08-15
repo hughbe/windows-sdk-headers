@@ -212,7 +212,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IRemoteTextConnectionDataHandler = _uuidof(IRemoteTextConnectionDataHandler);
+                    MIDL_CONST_ID IID& IID_IRemoteTextConnectionDataHandler = __uuidof(IRemoteTextConnectionDataHandler);
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -263,7 +263,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IRemoteTextConnection = _uuidof(IRemoteTextConnection);
+                    MIDL_CONST_ID IID& IID_IRemoteTextConnection = __uuidof(IRemoteTextConnection);
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -303,7 +303,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IRemoteTextConnectionFactory = _uuidof(IRemoteTextConnectionFactory);
+                    MIDL_CONST_ID IID& IID_IRemoteTextConnectionFactory = __uuidof(IRemoteTextConnectionFactory);
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */

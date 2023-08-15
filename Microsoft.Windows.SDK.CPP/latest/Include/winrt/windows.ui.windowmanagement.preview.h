@@ -202,7 +202,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWindowManagementPreview = _uuidof(IWindowManagementPreview);
+                    MIDL_CONST_ID IID& IID_IWindowManagementPreview = __uuidof(IWindowManagementPreview);
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */
@@ -241,7 +241,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWindowManagementPreviewStatics = _uuidof(IWindowManagementPreviewStatics);
+                    MIDL_CONST_ID IID& IID_IWindowManagementPreviewStatics = __uuidof(IWindowManagementPreviewStatics);
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct IAsyncAction;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
@@ -382,10 +378,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPane
     {
-        WINRT_IMPL_AUTO(winrt::event_token) AccountCommandsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane, winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs> const& handler) const;
+        auto AccountCommandsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane, winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs> const& handler) const;
         using AccountCommandsRequested_revoker = impl::event_revoker<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPane, &impl::abi_t<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPane>::remove_AccountCommandsRequested>;
         [[nodiscard]] AccountCommandsRequested_revoker AccountCommandsRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane, winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) AccountCommandsRequested(winrt::event_token const& cookie) const noexcept;
+        auto AccountCommandsRequested(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPane>
     {
@@ -394,13 +390,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneCommandsRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand>) WebAccountProviderCommands() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::ApplicationSettings::WebAccountCommand>) WebAccountCommands() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::ApplicationSettings::CredentialCommand>) CredentialCommands() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::ApplicationSettings::SettingsCommand>) Commands() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderText() const;
-        WINRT_IMPL_AUTO(void) HeaderText(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral) GetDeferral() const;
+        [[nodiscard]] auto WebAccountProviderCommands() const;
+        [[nodiscard]] auto WebAccountCommands() const;
+        [[nodiscard]] auto CredentialCommands() const;
+        [[nodiscard]] auto Commands() const;
+        [[nodiscard]] auto HeaderText() const;
+        auto HeaderText(param::hstring const& value) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneCommandsRequestedEventArgs>
     {
@@ -409,7 +405,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneCommandsRequestedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneCommandsRequestedEventArgs2>
     {
@@ -418,7 +414,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneEventDeferral
     {
-        WINRT_IMPL_AUTO(void) Complete() const;
+        auto Complete() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneEventDeferral>
     {
@@ -427,8 +423,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane) GetForCurrentView() const;
-        WINRT_IMPL_AUTO(void) Show() const;
+        auto GetForCurrentView() const;
+        auto Show() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics>
     {
@@ -437,8 +433,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowManageAccountsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAddAccountAsync() const;
+        auto ShowManageAccountsAsync() const;
+        auto ShowAddAccountAsync() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics2>
     {
@@ -447,8 +443,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IAccountsSettingsPaneStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowManageAccountsForUserAsync(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAddAccountForUserAsync(winrt::Windows::System::User const& user) const;
+        auto ShowManageAccountsForUserAsync(winrt::Windows::System::User const& user) const;
+        auto ShowAddAccountForUserAsync(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics3>
     {
@@ -457,8 +453,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ICredentialCommand
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) PasswordCredential() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::CredentialCommandCredentialDeletedHandler) CredentialDeleted() const;
+        [[nodiscard]] auto PasswordCredential() const;
+        [[nodiscard]] auto CredentialDeleted() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ICredentialCommand>
     {
@@ -467,8 +463,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ICredentialCommandFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::CredentialCommand) CreateCredentialCommand(winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::CredentialCommand) CreateCredentialCommandWithHandler(winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, winrt::Windows::UI::ApplicationSettings::CredentialCommandCredentialDeletedHandler const& deleted) const;
+        auto CreateCredentialCommand(winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential) const;
+        auto CreateCredentialCommandWithHandler(winrt::Windows::Security::Credentials::PasswordCredential const& passwordCredential, winrt::Windows::UI::ApplicationSettings::CredentialCommandCredentialDeletedHandler const& deleted) const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ICredentialCommandFactory>
     {
@@ -477,7 +473,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsCommandFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SettingsCommand) CreateSettingsCommand(winrt::Windows::Foundation::IInspectable const& settingsCommandId, param::hstring const& label, winrt::Windows::UI::Popups::UICommandInvokedHandler const& handler) const;
+        auto CreateSettingsCommand(winrt::Windows::Foundation::IInspectable const& settingsCommandId, param::hstring const& label, winrt::Windows::UI::Popups::UICommandInvokedHandler const& handler) const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsCommandFactory>
     {
@@ -486,7 +482,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsCommandStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SettingsCommand) AccountsCommand() const;
+        [[nodiscard]] auto AccountsCommand() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsCommandStatics>
     {
@@ -495,10 +491,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsPane
     {
-        WINRT_IMPL_AUTO(winrt::event_token) CommandsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::SettingsPane, winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs> const& handler) const;
+        auto CommandsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::SettingsPane, winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs> const& handler) const;
         using CommandsRequested_revoker = impl::event_revoker<winrt::Windows::UI::ApplicationSettings::ISettingsPane, &impl::abi_t<winrt::Windows::UI::ApplicationSettings::ISettingsPane>::remove_CommandsRequested>;
         [[nodiscard]] CommandsRequested_revoker CommandsRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::SettingsPane, winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) CommandsRequested(winrt::event_token const& cookie) const noexcept;
+        auto CommandsRequested(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsPane>
     {
@@ -507,7 +503,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsPaneCommandsRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::ApplicationSettings::SettingsCommand>) ApplicationCommands() const;
+        [[nodiscard]] auto ApplicationCommands() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsPaneCommandsRequest>
     {
@@ -516,7 +512,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsPaneCommandsRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest) Request() const;
+        [[nodiscard]] auto Request() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsPaneCommandsRequestedEventArgs>
     {
@@ -525,9 +521,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_ISettingsPaneStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SettingsPane) GetForCurrentView() const;
-        WINRT_IMPL_AUTO(void) Show() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SettingsEdgeLocation) Edge() const;
+        auto GetForCurrentView() const;
+        auto Show() const;
+        [[nodiscard]] auto Edge() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::ISettingsPaneStatics>
     {
@@ -536,9 +532,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IWebAccountCommand
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccount) WebAccount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::WebAccountCommandInvokedHandler) Invoked() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions) Actions() const;
+        [[nodiscard]] auto WebAccount() const;
+        [[nodiscard]] auto Invoked() const;
+        [[nodiscard]] auto Actions() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IWebAccountCommand>
     {
@@ -547,7 +543,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IWebAccountCommandFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::WebAccountCommand) CreateWebAccountCommand(winrt::Windows::Security::Credentials::WebAccount const& webAccount, winrt::Windows::UI::ApplicationSettings::WebAccountCommandInvokedHandler const& invoked, winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions const& actions) const;
+        auto CreateWebAccountCommand(winrt::Windows::Security::Credentials::WebAccount const& webAccount, winrt::Windows::UI::ApplicationSettings::WebAccountCommandInvokedHandler const& invoked, winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions const& actions) const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IWebAccountCommandFactory>
     {
@@ -556,7 +552,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IWebAccountInvokedArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::WebAccountAction) Action() const;
+        [[nodiscard]] auto Action() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IWebAccountInvokedArgs>
     {
@@ -565,8 +561,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IWebAccountProviderCommand
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccountProvider) WebAccountProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommandInvokedHandler) Invoked() const;
+        [[nodiscard]] auto WebAccountProvider() const;
+        [[nodiscard]] auto Invoked() const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IWebAccountProviderCommand>
     {
@@ -575,7 +571,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ApplicationSettings_IWebAccountProviderCommandFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand) CreateWebAccountProviderCommand(winrt::Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommandInvokedHandler const& invoked) const;
+        auto CreateWebAccountProviderCommand(winrt::Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommandInvokedHandler const& invoked) const;
     };
     template <> struct consume<winrt::Windows::UI::ApplicationSettings::IWebAccountProviderCommandFactory>
     {

@@ -151,7 +151,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInteractiveSessionStatics = _uuidof(IInteractiveSessionStatics);
+                MIDL_CONST_ID IID& IID_IInteractiveSessionStatics = __uuidof(IInteractiveSessionStatics);
             } /* RemoteDesktop */
         } /* System */
     } /* Windows */

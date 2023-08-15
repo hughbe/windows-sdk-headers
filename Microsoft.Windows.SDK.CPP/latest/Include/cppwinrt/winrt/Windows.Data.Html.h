@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,12 +7,12 @@
 #ifndef WINRT_Windows_Data_Html_H
 #define WINRT_Windows_Data_Html_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/impl/Windows.Data.Html.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Html_IHtmlUtilities<D>::ConvertToText(param::hstring const& html) const
+    template <typename D> auto consume_Windows_Data_Html_IHtmlUtilities<D>::ConvertToText(param::hstring const& html) const
     {
         void* text{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Html::IHtmlUtilities)->ConvertToText(*(void**)(&html), &text));

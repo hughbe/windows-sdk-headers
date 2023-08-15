@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -250,10 +250,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsNavigationStackEnabled() const;
-        WINRT_IMPL_AUTO(void) IsNavigationStackEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) TransitionInfoOverride() const;
-        WINRT_IMPL_AUTO(void) TransitionInfoOverride(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& value) const;
+        [[nodiscard]] auto IsNavigationStackEnabled() const;
+        auto IsNavigationStackEnabled(bool value) const;
+        [[nodiscard]] auto TransitionInfoOverride() const;
+        auto TransitionInfoOverride(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions>
     {
@@ -262,7 +262,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptionsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory>
     {
@@ -271,10 +271,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Cancel() const;
-        WINRT_IMPL_AUTO(void) Cancel(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Navigation::NavigationMode) NavigationMode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::TypeName) SourcePageType() const;
+        [[nodiscard]] auto Cancel() const;
+        auto Cancel(bool value) const;
+        [[nodiscard]] auto NavigationMode() const;
+        [[nodiscard]] auto SourcePageType() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs>
     {
@@ -283,8 +283,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Parameter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) NavigationTransitionInfo() const;
+        [[nodiscard]] auto Parameter() const;
+        [[nodiscard]] auto NavigationTransitionInfo() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>
     {
@@ -293,12 +293,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_INavigationEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Content() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Parameter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::TypeName) SourcePageType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Navigation::NavigationMode) NavigationMode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        WINRT_IMPL_AUTO(void) Uri(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto Content() const;
+        [[nodiscard]] auto Parameter() const;
+        [[nodiscard]] auto SourcePageType() const;
+        [[nodiscard]] auto NavigationMode() const;
+        [[nodiscard]] auto Uri() const;
+        auto Uri(winrt::Windows::Foundation::Uri const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs>
     {
@@ -307,7 +307,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_INavigationEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) NavigationTransitionInfo() const;
+        [[nodiscard]] auto NavigationTransitionInfo() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2>
     {
@@ -316,10 +316,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) Exception() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::TypeName) SourcePageType() const;
+        [[nodiscard]] auto Exception() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+        [[nodiscard]] auto SourcePageType() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs>
     {
@@ -328,9 +328,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_IPageStackEntry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::TypeName) SourcePageType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Parameter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) NavigationTransitionInfo() const;
+        [[nodiscard]] auto SourcePageType() const;
+        [[nodiscard]] auto Parameter() const;
+        [[nodiscard]] auto NavigationTransitionInfo() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::IPageStackEntry>
     {
@@ -339,7 +339,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_IPageStackEntryFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Navigation::PageStackEntry) CreateInstance(winrt::Windows::UI::Xaml::Interop::TypeName const& sourcePageType, winrt::Windows::Foundation::IInspectable const& parameter, winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Interop::TypeName const& sourcePageType, winrt::Windows::Foundation::IInspectable const& parameter, winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryFactory>
     {
@@ -348,7 +348,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Navigation_IPageStackEntryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SourcePageTypeProperty() const;
+        [[nodiscard]] auto SourcePageTypeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -106,11 +106,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCurrentAppBroadcasting() const;
-        WINRT_IMPL_AUTO(winrt::event_token) IsCurrentAppBroadcastingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto IsCurrentAppBroadcasting() const;
+        auto IsCurrentAppBroadcastingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using IsCurrentAppBroadcastingChanged_revoker = impl::event_revoker<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor, &impl::abi_t<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor>::remove_IsCurrentAppBroadcastingChanged>;
         [[nodiscard]] IsCurrentAppBroadcastingChanged_revoker IsCurrentAppBroadcastingChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) IsCurrentAppBroadcastingChanged(winrt::event_token const& token) const noexcept;
+        auto IsCurrentAppBroadcastingChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor>
     {
@@ -119,8 +119,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatus
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanStartBroadcast() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails) Details() const;
+        [[nodiscard]] auto CanStartBroadcast() const;
+        [[nodiscard]] auto Details() const;
     };
     template <> struct consume<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatus>
     {
@@ -129,14 +129,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAnyAppBroadcasting() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCaptureResourceUnavailable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGameStreamInProgress() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGpuConstrained() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAppInactive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBlockedForApp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisabledByUser() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisabledBySystem() const;
+        [[nodiscard]] auto IsAnyAppBroadcasting() const;
+        [[nodiscard]] auto IsCaptureResourceUnavailable() const;
+        [[nodiscard]] auto IsGameStreamInProgress() const;
+        [[nodiscard]] auto IsGpuConstrained() const;
+        [[nodiscard]] auto IsAppInactive() const;
+        [[nodiscard]] auto IsBlockedForApp() const;
+        [[nodiscard]] auto IsDisabledByUser() const;
+        [[nodiscard]] auto IsDisabledBySystem() const;
     };
     template <> struct consume<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails>
     {
@@ -145,8 +145,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_AppBroadcasting_IAppBroadcastingUI
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus) GetStatus() const;
-        WINRT_IMPL_AUTO(void) ShowBroadcastUI() const;
+        auto GetStatus() const;
+        auto ShowBroadcastUI() const;
     };
     template <> struct consume<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUI>
     {
@@ -155,8 +155,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_AppBroadcasting_IAppBroadcastingUIStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI) GetDefault() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics>
     {

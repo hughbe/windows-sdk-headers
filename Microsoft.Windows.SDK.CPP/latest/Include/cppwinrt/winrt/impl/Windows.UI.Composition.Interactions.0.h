@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -720,10 +720,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_ICompositionConditionalValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Condition() const;
-        WINRT_IMPL_AUTO(void) Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Value() const;
-        WINRT_IMPL_AUTO(void) Value(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto Condition() const;
+        auto Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto Value() const;
+        auto Value(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::ICompositionConditionalValue>
     {
@@ -732,7 +732,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_ICompositionConditionalValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::ICompositionConditionalValueStatics>
     {
@@ -749,10 +749,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_ICompositionInteractionSourceCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) Add(winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource const& value) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        [[nodiscard]] auto Count() const;
+        auto Add(winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource const& value) const;
+        auto Remove(winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource const& value) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSourceCollection>
     {
@@ -761,12 +761,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionSourceConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode) PositionXSourceMode() const;
-        WINRT_IMPL_AUTO(void) PositionXSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode) PositionYSourceMode() const;
-        WINRT_IMPL_AUTO(void) PositionYSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode) ScaleSourceMode() const;
-        WINRT_IMPL_AUTO(void) ScaleSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
+        [[nodiscard]] auto PositionXSourceMode() const;
+        auto PositionXSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
+        [[nodiscard]] auto PositionYSourceMode() const;
+        auto PositionYSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
+        [[nodiscard]] auto ScaleSourceMode() const;
+        auto ScaleSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceRedirectionMode const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionSourceConfiguration>
     {
@@ -775,39 +775,39 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTracker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection) InteractionSources() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPositionRoundingSuggested() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) MaxPosition() const;
-        WINRT_IMPL_AUTO(void) MaxPosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxScale() const;
-        WINRT_IMPL_AUTO(void) MaxScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) MinPosition() const;
-        WINRT_IMPL_AUTO(void) MinPosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinScale() const;
-        WINRT_IMPL_AUTO(void) MinScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) NaturalRestingPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) NaturalRestingScale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner) Owner() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>) PositionInertiaDecayRate() const;
-        WINRT_IMPL_AUTO(void) PositionInertiaDecayRate(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) PositionVelocityInPixelsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Scale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) ScaleInertiaDecayRate() const;
-        WINRT_IMPL_AUTO(void) ScaleInertiaDecayRate(winrt::Windows::Foundation::IReference<float> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) ScaleVelocityInPercentPerSecond() const;
-        WINRT_IMPL_AUTO(void) AdjustPositionXIfGreaterThanThreshold(float adjustment, float positionThreshold) const;
-        WINRT_IMPL_AUTO(void) AdjustPositionYIfGreaterThanThreshold(float adjustment, float positionThreshold) const;
-        WINRT_IMPL_AUTO(void) ConfigurePositionXInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
-        WINRT_IMPL_AUTO(void) ConfigurePositionYInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
-        WINRT_IMPL_AUTO(void) ConfigureScaleInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePositionBy(winrt::Windows::Foundation::Numerics::float3 const& amount) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePositionWithAnimation(winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePositionWithAdditionalVelocity(winrt::Windows::Foundation::Numerics::float3 const& velocityInPixelsPerSecond) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdateScale(float value, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdateScaleWithAnimation(winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdateScaleWithAdditionalVelocity(float velocityInPercentPerSecond, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
+        [[nodiscard]] auto InteractionSources() const;
+        [[nodiscard]] auto IsPositionRoundingSuggested() const;
+        [[nodiscard]] auto MaxPosition() const;
+        auto MaxPosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto MaxScale() const;
+        auto MaxScale(float value) const;
+        [[nodiscard]] auto MinPosition() const;
+        auto MinPosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto MinScale() const;
+        auto MinScale(float value) const;
+        [[nodiscard]] auto NaturalRestingPosition() const;
+        [[nodiscard]] auto NaturalRestingScale() const;
+        [[nodiscard]] auto Owner() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto PositionInertiaDecayRate() const;
+        auto PositionInertiaDecayRate(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
+        [[nodiscard]] auto PositionVelocityInPixelsPerSecond() const;
+        [[nodiscard]] auto Scale() const;
+        [[nodiscard]] auto ScaleInertiaDecayRate() const;
+        auto ScaleInertiaDecayRate(winrt::Windows::Foundation::IReference<float> const& value) const;
+        [[nodiscard]] auto ScaleVelocityInPercentPerSecond() const;
+        auto AdjustPositionXIfGreaterThanThreshold(float adjustment, float positionThreshold) const;
+        auto AdjustPositionYIfGreaterThanThreshold(float adjustment, float positionThreshold) const;
+        auto ConfigurePositionXInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
+        auto ConfigurePositionYInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
+        auto ConfigureScaleInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier> const& modifiers) const;
+        auto TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        auto TryUpdatePositionBy(winrt::Windows::Foundation::Numerics::float3 const& amount) const;
+        auto TryUpdatePositionWithAnimation(winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
+        auto TryUpdatePositionWithAdditionalVelocity(winrt::Windows::Foundation::Numerics::float3 const& velocityInPixelsPerSecond) const;
+        auto TryUpdateScale(float value, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
+        auto TryUpdateScaleWithAnimation(winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
+        auto TryUpdateScaleWithAdditionalVelocity(float velocityInPercentPerSecond, winrt::Windows::Foundation::Numerics::float3 const& centerPoint) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTracker>
     {
@@ -816,8 +816,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTracker2
     {
-        WINRT_IMPL_AUTO(void) ConfigureCenterPointXInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
-        WINRT_IMPL_AUTO(void) ConfigureCenterPointYInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureCenterPointXInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureCenterPointYInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTracker2>
     {
@@ -826,7 +826,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTracker3
     {
-        WINRT_IMPL_AUTO(void) ConfigureVector2PositionInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier> const& modifiers) const;
+        auto ConfigureVector2PositionInertiaModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier> const& modifiers) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTracker3>
     {
@@ -835,9 +835,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTracker4
     {
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option) const;
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePositionBy(winrt::Windows::Foundation::Numerics::float3 const& amount, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInertiaFromImpulse() const;
+        auto TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option) const;
+        auto TryUpdatePositionBy(winrt::Windows::Foundation::Numerics::float3 const& amount, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option) const;
+        [[nodiscard]] auto IsInertiaFromImpulse() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTracker4>
     {
@@ -846,7 +846,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTracker5
     {
-        WINRT_IMPL_AUTO(int32_t) TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option, winrt::Windows::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption const& posUpdateOption) const;
+        auto TryUpdatePosition(winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::Interactions::InteractionTrackerClampingOption const& option, winrt::Windows::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption const& posUpdateOption) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTracker5>
     {
@@ -855,7 +855,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
+        [[nodiscard]] auto RequestId() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs>
     {
@@ -864,7 +864,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerCustomAnimationStateEnteredArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFromBinding() const;
+        [[nodiscard]] auto IsFromBinding() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs2>
     {
@@ -873,7 +873,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
+        [[nodiscard]] auto RequestId() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs>
     {
@@ -882,7 +882,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerIdleStateEnteredArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFromBinding() const;
+        [[nodiscard]] auto IsFromBinding() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerIdleStateEnteredArgs2>
     {
@@ -907,10 +907,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaMotion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Condition() const;
-        WINRT_IMPL_AUTO(void) Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Motion() const;
-        WINRT_IMPL_AUTO(void) Motion(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto Condition() const;
+        auto Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto Motion() const;
+        auto Motion(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotion>
     {
@@ -919,7 +919,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaMotionStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaMotionStatics>
     {
@@ -928,10 +928,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaNaturalMotion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Condition() const;
-        WINRT_IMPL_AUTO(void) Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation) NaturalMotion() const;
-        WINRT_IMPL_AUTO(void) NaturalMotion(winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation const& value) const;
+        [[nodiscard]] auto Condition() const;
+        auto Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto NaturalMotion() const;
+        auto NaturalMotion(winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaNaturalMotion>
     {
@@ -940,7 +940,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaNaturalMotionStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaNaturalMotionStatics>
     {
@@ -949,10 +949,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaRestingValue
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Condition() const;
-        WINRT_IMPL_AUTO(void) Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) RestingValue() const;
-        WINRT_IMPL_AUTO(void) RestingValue(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto Condition() const;
+        auto Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto RestingValue() const;
+        auto RestingValue(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValue>
     {
@@ -961,7 +961,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaRestingValueStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaRestingValueStatics>
     {
@@ -970,13 +970,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>) ModifiedRestingPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) ModifiedRestingScale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) NaturalRestingPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) NaturalRestingScale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) PositionVelocityInPixelsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) ScaleVelocityInPercentPerSecond() const;
+        [[nodiscard]] auto ModifiedRestingPosition() const;
+        [[nodiscard]] auto ModifiedRestingScale() const;
+        [[nodiscard]] auto NaturalRestingPosition() const;
+        [[nodiscard]] auto NaturalRestingScale() const;
+        [[nodiscard]] auto PositionVelocityInPixelsPerSecond() const;
+        [[nodiscard]] auto RequestId() const;
+        [[nodiscard]] auto ScaleVelocityInPercentPerSecond() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs>
     {
@@ -985,7 +985,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInertiaFromImpulse() const;
+        [[nodiscard]] auto IsInertiaFromImpulse() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs2>
     {
@@ -994,7 +994,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInertiaStateEnteredArgs3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFromBinding() const;
+        [[nodiscard]] auto IsFromBinding() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaStateEnteredArgs3>
     {
@@ -1003,7 +1003,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
+        [[nodiscard]] auto RequestId() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs>
     {
@@ -1012,7 +1012,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerInteractingStateEnteredArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFromBinding() const;
+        [[nodiscard]] auto IsFromBinding() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInteractingStateEnteredArgs2>
     {
@@ -1021,12 +1021,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerOwner
     {
-        WINRT_IMPL_AUTO(void) CustomAnimationStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs const& args) const;
-        WINRT_IMPL_AUTO(void) IdleStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs const& args) const;
-        WINRT_IMPL_AUTO(void) InertiaStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs const& args) const;
-        WINRT_IMPL_AUTO(void) InteractingStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs const& args) const;
-        WINRT_IMPL_AUTO(void) RequestIgnored(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs const& args) const;
-        WINRT_IMPL_AUTO(void) ValuesChanged(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs const& args) const;
+        auto CustomAnimationStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs const& args) const;
+        auto IdleStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs const& args) const;
+        auto InertiaStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs const& args) const;
+        auto InteractingStateEntered(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs const& args) const;
+        auto RequestIgnored(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs const& args) const;
+        auto ValuesChanged(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& sender, winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs const& args) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>
     {
@@ -1035,7 +1035,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerRequestIgnoredArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
+        [[nodiscard]] auto RequestId() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerRequestIgnoredArgs>
     {
@@ -1044,8 +1044,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTracker) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTracker) CreateWithOwner(winrt::Windows::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner const& owner) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto CreateWithOwner(winrt::Windows::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner const& owner) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics>
     {
@@ -1054,8 +1054,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerStatics2
     {
-        WINRT_IMPL_AUTO(void) SetBindingMode(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes) GetBindingMode(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2) const;
+        auto SetBindingMode(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2, winrt::Windows::UI::Composition::Interactions::InteractionBindingAxisModes const& axisMode) const;
+        auto GetBindingMode(winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker1, winrt::Windows::UI::Composition::Interactions::InteractionTracker const& boundTracker2) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerStatics2>
     {
@@ -1064,9 +1064,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerValuesChangedArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RequestId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Scale() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto RequestId() const;
+        [[nodiscard]] auto Scale() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerValuesChangedArgs>
     {
@@ -1091,10 +1091,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerVector2InertiaNaturalMotion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) Condition() const;
-        WINRT_IMPL_AUTO(void) Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation) NaturalMotion() const;
-        WINRT_IMPL_AUTO(void) NaturalMotion(winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation const& value) const;
+        [[nodiscard]] auto Condition() const;
+        auto Condition(winrt::Windows::UI::Composition::ExpressionAnimation const& value) const;
+        [[nodiscard]] auto NaturalMotion() const;
+        auto NaturalMotion(winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaNaturalMotion>
     {
@@ -1103,7 +1103,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IInteractionTrackerVector2InertiaNaturalMotionStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerVector2InertiaNaturalMotionStatics>
     {
@@ -1112,26 +1112,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSource
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPositionXRailsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsPositionXRailsEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPositionYRailsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsPositionYRailsEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode) ManipulationRedirectionMode() const;
-        WINRT_IMPL_AUTO(void) ManipulationRedirectionMode(winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode) PositionXChainingMode() const;
-        WINRT_IMPL_AUTO(void) PositionXChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode) PositionXSourceMode() const;
-        WINRT_IMPL_AUTO(void) PositionXSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode) PositionYChainingMode() const;
-        WINRT_IMPL_AUTO(void) PositionYChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode) PositionYSourceMode() const;
-        WINRT_IMPL_AUTO(void) PositionYSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode) ScaleChainingMode() const;
-        WINRT_IMPL_AUTO(void) ScaleChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode) ScaleSourceMode() const;
-        WINRT_IMPL_AUTO(void) ScaleSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) Source() const;
-        WINRT_IMPL_AUTO(void) TryRedirectForManipulation(winrt::Windows::UI::Input::PointerPoint const& pointerPoint) const;
+        [[nodiscard]] auto IsPositionXRailsEnabled() const;
+        auto IsPositionXRailsEnabled(bool value) const;
+        [[nodiscard]] auto IsPositionYRailsEnabled() const;
+        auto IsPositionYRailsEnabled(bool value) const;
+        [[nodiscard]] auto ManipulationRedirectionMode() const;
+        auto ManipulationRedirectionMode(winrt::Windows::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode const& value) const;
+        [[nodiscard]] auto PositionXChainingMode() const;
+        auto PositionXChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
+        [[nodiscard]] auto PositionXSourceMode() const;
+        auto PositionXSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
+        [[nodiscard]] auto PositionYChainingMode() const;
+        auto PositionYChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
+        [[nodiscard]] auto PositionYSourceMode() const;
+        auto PositionYSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
+        [[nodiscard]] auto ScaleChainingMode() const;
+        auto ScaleChainingMode(winrt::Windows::UI::Composition::Interactions::InteractionChainingMode const& value) const;
+        [[nodiscard]] auto ScaleSourceMode() const;
+        auto ScaleSourceMode(winrt::Windows::UI::Composition::Interactions::InteractionSourceMode const& value) const;
+        [[nodiscard]] auto Source() const;
+        auto TryRedirectForManipulation(winrt::Windows::UI::Input::PointerPoint const& pointerPoint) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSource>
     {
@@ -1140,17 +1140,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSource2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) DeltaPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DeltaScale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) PositionVelocity() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Scale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) ScaleVelocity() const;
-        WINRT_IMPL_AUTO(void) ConfigureCenterPointXModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
-        WINRT_IMPL_AUTO(void) ConfigureCenterPointYModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
-        WINRT_IMPL_AUTO(void) ConfigureDeltaPositionXModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
-        WINRT_IMPL_AUTO(void) ConfigureDeltaPositionYModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
-        WINRT_IMPL_AUTO(void) ConfigureDeltaScaleModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        [[nodiscard]] auto DeltaPosition() const;
+        [[nodiscard]] auto DeltaScale() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto PositionVelocity() const;
+        [[nodiscard]] auto Scale() const;
+        [[nodiscard]] auto ScaleVelocity() const;
+        auto ConfigureCenterPointXModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureCenterPointYModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureDeltaPositionXModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureDeltaPositionYModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
+        auto ConfigureDeltaScaleModifiers(param::iterable<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue> const& conditionalValues) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSource2>
     {
@@ -1159,7 +1159,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSource3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration) PointerWheelConfig() const;
+        [[nodiscard]] auto PointerWheelConfig() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSource3>
     {
@@ -1176,7 +1176,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::VisualInteractionSource) Create(winrt::Windows::UI::Composition::Visual const& source) const;
+        auto Create(winrt::Windows::UI::Composition::Visual const& source) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics>
     {
@@ -1185,7 +1185,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Interactions_IVisualInteractionSourceStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Interactions::VisualInteractionSource) CreateFromIVisualElement(winrt::Windows::UI::Composition::IVisualElement const& source) const;
+        auto CreateFromIVisualElement(winrt::Windows::UI::Composition::IVisualElement const& source) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Interactions::IVisualInteractionSourceStatics2>
     {

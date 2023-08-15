@@ -287,7 +287,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICharacterGrouping = _uuidof(ICharacterGrouping);
+                MIDL_CONST_ID IID& IID_ICharacterGrouping = __uuidof(ICharacterGrouping);
             } /* Collation */
         } /* Globalization */
     } /* Windows */
@@ -328,7 +328,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICharacterGroupings = _uuidof(ICharacterGroupings);
+                MIDL_CONST_ID IID& IID_ICharacterGroupings = __uuidof(ICharacterGroupings);
             } /* Collation */
         } /* Globalization */
     } /* Windows */
@@ -365,7 +365,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICharacterGroupingsFactory = _uuidof(ICharacterGroupingsFactory);
+                MIDL_CONST_ID IID& IID_ICharacterGroupingsFactory = __uuidof(ICharacterGroupingsFactory);
             } /* Collation */
         } /* Globalization */
     } /* Windows */
@@ -401,8 +401,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.Globalization.Collation.ICharacterGroupingsFactory interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Globalization.Collation.ICharacterGroupings ** Default Interface **
@@ -919,8 +919,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.Globalization.Collation.ICharacterGroupingsFactory interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Globalization.Collation.ICharacterGroupings ** Default Interface **

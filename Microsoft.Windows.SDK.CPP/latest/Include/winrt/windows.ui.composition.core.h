@@ -256,7 +256,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICompositorController = _uuidof(ICompositorController);
+                    MIDL_CONST_ID IID& IID_ICompositorController = __uuidof(ICompositorController);
                 } /* Core */
             } /* Composition */
         } /* UI */

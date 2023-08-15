@@ -608,7 +608,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAppCapability = _uuidof(IAppCapability);
+                    MIDL_CONST_ID IID& IID_IAppCapability = __uuidof(IAppCapability);
                 } /* AppCapabilityAccess */
             } /* Authorization */
         } /* Security */
@@ -649,7 +649,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAppCapability2 = _uuidof(IAppCapability2);
+                    MIDL_CONST_ID IID& IID_IAppCapability2 = __uuidof(IAppCapability2);
                 } /* AppCapabilityAccess */
             } /* Authorization */
         } /* Security */
@@ -684,7 +684,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAppCapabilityAccessChangedEventArgs = _uuidof(IAppCapabilityAccessChangedEventArgs);
+                    MIDL_CONST_ID IID& IID_IAppCapabilityAccessChangedEventArgs = __uuidof(IAppCapabilityAccessChangedEventArgs);
                 } /* AppCapabilityAccess */
             } /* Authorization */
         } /* Security */
@@ -738,7 +738,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAppCapabilityStatics = _uuidof(IAppCapabilityStatics);
+                    MIDL_CONST_ID IID& IID_IAppCapabilityStatics = __uuidof(IAppCapabilityStatics);
                 } /* AppCapabilityAccess */
             } /* Authorization */
         } /* Security */

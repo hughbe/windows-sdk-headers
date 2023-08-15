@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,7 +13,6 @@
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
-#include "winrt/impl/Windows.UI.Xaml.Automation.Peers.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Input.2.h"
@@ -924,15 +923,15 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IApplicationOverrides = winrt::Windows::UI::Xaml::IApplicationOverrides;
-        WINRT_IMPL_AUTO(void) OnActivated(winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnLaunched(winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnFileActivated(winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnSearchActivated(winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnShareTargetActivated(winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnFileOpenPickerActivated(winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnFileSavePickerActivated(winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnCachedFileUpdaterActivated(winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnWindowCreated(winrt::Windows::UI::Xaml::WindowCreatedEventArgs const& args) const;
+        auto OnActivated(winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const;
+        auto OnLaunched(winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const;
+        auto OnFileActivated(winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const;
+        auto OnSearchActivated(winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const;
+        auto OnShareTargetActivated(winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const;
+        auto OnFileOpenPickerActivated(winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const;
+        auto OnFileSavePickerActivated(winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const;
+        auto OnCachedFileUpdaterActivated(winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const;
+        auto OnWindowCreated(winrt::Windows::UI::Xaml::WindowCreatedEventArgs const& args) const;
     };
     template <typename D>
     class IApplicationOverrides2T
@@ -941,7 +940,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IApplicationOverrides2 = winrt::Windows::UI::Xaml::IApplicationOverrides2;
-        WINRT_IMPL_AUTO(void) OnBackgroundActivated(winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const;
+        auto OnBackgroundActivated(winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const;
     };
     template <typename D>
     class IFrameworkElementOverridesT
@@ -950,9 +949,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFrameworkElementOverrides = winrt::Windows::UI::Xaml::IFrameworkElementOverrides;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) MeasureOverride(winrt::Windows::Foundation::Size const& availableSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) ArrangeOverride(winrt::Windows::Foundation::Size const& finalSize) const;
-        WINRT_IMPL_AUTO(void) OnApplyTemplate() const;
+        auto MeasureOverride(winrt::Windows::Foundation::Size const& availableSize) const;
+        auto ArrangeOverride(winrt::Windows::Foundation::Size const& finalSize) const;
+        auto OnApplyTemplate() const;
     };
     template <typename D>
     class IFrameworkElementOverrides2T
@@ -961,7 +960,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFrameworkElementOverrides2 = winrt::Windows::UI::Xaml::IFrameworkElementOverrides2;
-        WINRT_IMPL_AUTO(bool) GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const;
+        auto GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const;
     };
     template <typename D>
     class IUIElementOverridesT
@@ -970,9 +969,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides = winrt::Windows::UI::Xaml::IUIElementOverrides;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) OnCreateAutomationPeer() const;
-        WINRT_IMPL_AUTO(void) OnDisconnectVisualChildren() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>) FindSubElementsForTouchTargeting(winrt::Windows::Foundation::Point const& point, winrt::Windows::Foundation::Rect const& boundingRect) const;
+        auto OnCreateAutomationPeer() const;
+        auto OnDisconnectVisualChildren() const;
+        auto FindSubElementsForTouchTargeting(winrt::Windows::Foundation::Point const& point, winrt::Windows::Foundation::Rect const& boundingRect) const;
     };
     template <typename D>
     class IUIElementOverrides7T
@@ -981,8 +980,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides7 = winrt::Windows::UI::Xaml::IUIElementOverrides7;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::DependencyObject>) GetChildrenInTabFocusOrder() const;
-        WINRT_IMPL_AUTO(void) OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        auto GetChildrenInTabFocusOrder() const;
+        auto OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <typename D>
     class IUIElementOverrides8T
@@ -991,8 +990,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides8 = winrt::Windows::UI::Xaml::IUIElementOverrides8;
-        WINRT_IMPL_AUTO(void) OnKeyboardAcceleratorInvoked(winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const;
-        WINRT_IMPL_AUTO(void) OnBringIntoViewRequested(winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const;
+        auto OnKeyboardAcceleratorInvoked(winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const;
+        auto OnBringIntoViewRequested(winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const;
     };
     template <typename D>
     class IUIElementOverrides9T
@@ -1001,7 +1000,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides9 = winrt::Windows::UI::Xaml::IUIElementOverrides9;
-        WINRT_IMPL_AUTO(void) PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
+        auto PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
     };
     template <typename D>
     class IVisualStateManagerOverridesT
@@ -1010,7 +1009,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IVisualStateManagerOverrides = winrt::Windows::UI::Xaml::IVisualStateManagerOverrides;
-        WINRT_IMPL_AUTO(bool) GoToStateCore(winrt::Windows::UI::Xaml::Controls::Control const& control, winrt::Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, winrt::Windows::UI::Xaml::VisualStateGroup const& group, winrt::Windows::UI::Xaml::VisualState const& state, bool useTransitions) const;
+        auto GoToStateCore(winrt::Windows::UI::Xaml::Controls::Control const& control, winrt::Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, winrt::Windows::UI::Xaml::VisualStateGroup const& group, winrt::Windows::UI::Xaml::VisualState const& state, bool useTransitions) const;
     };
 }
 #endif

@@ -518,7 +518,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDisplayMonitor = _uuidof(IDisplayMonitor);
+                MIDL_CONST_ID IID& IID_IDisplayMonitor = __uuidof(IDisplayMonitor);
             } /* Display */
         } /* Devices */
     } /* Windows */
@@ -554,7 +554,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDisplayMonitor2 = _uuidof(IDisplayMonitor2);
+                MIDL_CONST_ID IID& IID_IDisplayMonitor2 = __uuidof(IDisplayMonitor2);
             } /* Display */
         } /* Devices */
     } /* Windows */
@@ -598,7 +598,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDisplayMonitorStatics = _uuidof(IDisplayMonitorStatics);
+                MIDL_CONST_ID IID& IID_IDisplayMonitorStatics = __uuidof(IDisplayMonitorStatics);
             } /* Display */
         } /* Devices */
     } /* Windows */

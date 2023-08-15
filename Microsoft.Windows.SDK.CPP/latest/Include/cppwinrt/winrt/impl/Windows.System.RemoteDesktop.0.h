@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -28,7 +28,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_RemoteDesktop_IInteractiveSessionStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRemote() const;
+        [[nodiscard]] auto IsRemote() const;
     };
     template <> struct consume<winrt::Windows::System::RemoteDesktop::IInteractiveSessionStatics>
     {

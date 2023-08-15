@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -96,9 +96,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) SupportLink() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) SupportAppLink() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SupportProvider() const;
+        [[nodiscard]] auto SupportLink() const;
+        [[nodiscard]] auto SupportAppLink() const;
+        [[nodiscard]] auto SupportProvider() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo>
     {
@@ -107,7 +107,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_SystemManufacturers_ISmbiosInformationStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SerialNumber() const;
+        [[nodiscard]] auto SerialNumber() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics>
     {
@@ -116,13 +116,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OperatingSystem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FriendlyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemManufacturer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemProductName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemSku() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemHardwareVersion() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemFirmwareVersion() const;
+        [[nodiscard]] auto OperatingSystem() const;
+        [[nodiscard]] auto FriendlyName() const;
+        [[nodiscard]] auto SystemManufacturer() const;
+        [[nodiscard]] auto SystemProductName() const;
+        [[nodiscard]] auto SystemSku() const;
+        [[nodiscard]] auto SystemHardwareVersion() const;
+        [[nodiscard]] auto SystemFirmwareVersion() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo>
     {
@@ -131,8 +131,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalSystemEdition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo) OemSupportInfo() const;
+        [[nodiscard]] auto LocalSystemEdition() const;
+        [[nodiscard]] auto OemSupportInfo() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics>
     {
@@ -141,7 +141,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo) LocalDeviceInfo() const;
+        [[nodiscard]] auto LocalDeviceInfo() const;
     };
     template <> struct consume<winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2>
     {

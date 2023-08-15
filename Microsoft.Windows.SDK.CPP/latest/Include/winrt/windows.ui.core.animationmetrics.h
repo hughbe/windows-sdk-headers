@@ -551,7 +551,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAnimationDescription = _uuidof(IAnimationDescription);
+                    MIDL_CONST_ID IID& IID_IAnimationDescription = __uuidof(IAnimationDescription);
                 } /* AnimationMetrics */
             } /* Core */
         } /* UI */
@@ -591,7 +591,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAnimationDescriptionFactory = _uuidof(IAnimationDescriptionFactory);
+                    MIDL_CONST_ID IID& IID_IAnimationDescriptionFactory = __uuidof(IAnimationDescriptionFactory);
                 } /* AnimationMetrics */
             } /* Core */
         } /* UI */
@@ -635,7 +635,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IOpacityAnimation = _uuidof(IOpacityAnimation);
+                    MIDL_CONST_ID IID& IID_IOpacityAnimation = __uuidof(IOpacityAnimation);
                 } /* AnimationMetrics */
             } /* Core */
         } /* UI */
@@ -683,7 +683,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPropertyAnimation = _uuidof(IPropertyAnimation);
+                    MIDL_CONST_ID IID& IID_IPropertyAnimation = __uuidof(IPropertyAnimation);
                 } /* AnimationMetrics */
             } /* Core */
         } /* UI */
@@ -736,7 +736,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IScaleAnimation = _uuidof(IScaleAnimation);
+                    MIDL_CONST_ID IID& IID_IScaleAnimation = __uuidof(IScaleAnimation);
                 } /* AnimationMetrics */
             } /* Core */
         } /* UI */

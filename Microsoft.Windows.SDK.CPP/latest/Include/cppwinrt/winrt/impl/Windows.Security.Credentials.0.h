@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,14 +9,11 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
     struct IPropertySet;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
 {
@@ -25,7 +22,6 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IBuffer;
-    struct IRandomAccessStream;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -332,7 +328,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_ICredentialFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) CreatePasswordCredential(param::hstring const& resource, param::hstring const& userName, param::hstring const& password) const;
+        auto CreatePasswordCredential(param::hstring const& resource, param::hstring const& userName, param::hstring const& password) const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::ICredentialFactory>
     {
@@ -341,11 +337,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IKeyCredential
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) RetrievePublicKey() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) RetrievePublicKey(winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& blobType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>) RequestSignAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>) GetAttestationAsync() const;
+        [[nodiscard]] auto Name() const;
+        auto RetrievePublicKey() const;
+        auto RetrievePublicKey(winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& blobType) const;
+        auto RequestSignAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
+        auto GetAttestationAsync() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IKeyCredential>
     {
@@ -354,9 +350,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IKeyCredentialAttestationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) CertificateChainBuffer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) AttestationBuffer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::KeyCredentialAttestationStatus) Status() const;
+        [[nodiscard]] auto CertificateChainBuffer() const;
+        [[nodiscard]] auto AttestationBuffer() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IKeyCredentialAttestationResult>
     {
@@ -365,11 +361,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IKeyCredentialManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsSupportedAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RenewAttestationAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>) RequestCreateAsync(param::hstring const& name, winrt::Windows::Security::Credentials::KeyCredentialCreationOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>) OpenAsync(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync(param::hstring const& name) const;
+        auto IsSupportedAsync() const;
+        auto RenewAttestationAsync() const;
+        auto RequestCreateAsync(param::hstring const& name, winrt::Windows::Security::Credentials::KeyCredentialCreationOption const& option) const;
+        auto OpenAsync(param::hstring const& name) const;
+        auto DeleteAsync(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IKeyCredentialManagerStatics>
     {
@@ -378,8 +374,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IKeyCredentialOperationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Result() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::KeyCredentialStatus) Status() const;
+        [[nodiscard]] auto Result() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IKeyCredentialOperationResult>
     {
@@ -388,8 +384,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IKeyCredentialRetrievalResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::KeyCredential) Credential() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::KeyCredentialStatus) Status() const;
+        [[nodiscard]] auto Credential() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IKeyCredentialRetrievalResult>
     {
@@ -398,14 +394,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IPasswordCredential
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Resource() const;
-        WINRT_IMPL_AUTO(void) Resource(param::hstring const& resource) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserName() const;
-        WINRT_IMPL_AUTO(void) UserName(param::hstring const& userName) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Password() const;
-        WINRT_IMPL_AUTO(void) Password(param::hstring const& password) const;
-        WINRT_IMPL_AUTO(void) RetrievePassword() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) Properties() const;
+        [[nodiscard]] auto Resource() const;
+        auto Resource(param::hstring const& resource) const;
+        [[nodiscard]] auto UserName() const;
+        auto UserName(param::hstring const& userName) const;
+        [[nodiscard]] auto Password() const;
+        auto Password(param::hstring const& password) const;
+        auto RetrievePassword() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IPasswordCredential>
     {
@@ -414,12 +410,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IPasswordVault
     {
-        WINRT_IMPL_AUTO(void) Add(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) Retrieve(param::hstring const& resource, param::hstring const& userName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Credentials::PasswordCredential>) FindAllByResource(param::hstring const& resource) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Credentials::PasswordCredential>) FindAllByUserName(param::hstring const& userName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Security::Credentials::PasswordCredential>) RetrieveAll() const;
+        auto Add(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
+        auto Remove(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
+        auto Retrieve(param::hstring const& resource, param::hstring const& userName) const;
+        auto FindAllByResource(param::hstring const& resource) const;
+        auto FindAllByUserName(param::hstring const& userName) const;
+        auto RetrieveAll() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IPasswordVault>
     {
@@ -428,9 +424,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccount
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccountProvider) WebAccountProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccountState) State() const;
+        [[nodiscard]] auto WebAccountProvider() const;
+        [[nodiscard]] auto UserName() const;
+        [[nodiscard]] auto State() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccount>
     {
@@ -439,11 +435,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccount2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>) Properties() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStream>) GetPictureAsync(winrt::Windows::Security::Credentials::WebAccountPictureSize const& desizedSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SignOutAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SignOutAsync(param::hstring const& clientId) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Properties() const;
+        auto GetPictureAsync(winrt::Windows::Security::Credentials::WebAccountPictureSize const& desizedSize) const;
+        auto SignOutAsync() const;
+        auto SignOutAsync(param::hstring const& clientId) const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccount2>
     {
@@ -452,7 +448,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccount) CreateWebAccount(winrt::Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, param::hstring const& userName, winrt::Windows::Security::Credentials::WebAccountState const& state) const;
+        auto CreateWebAccount(winrt::Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, param::hstring const& userName, winrt::Windows::Security::Credentials::WebAccountState const& state) const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountFactory>
     {
@@ -461,9 +457,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) IconUri() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto IconUri() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountProvider>
     {
@@ -472,8 +468,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountProvider2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayPurpose() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Authority() const;
+        [[nodiscard]] auto DisplayPurpose() const;
+        [[nodiscard]] auto Authority() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountProvider2>
     {
@@ -482,7 +478,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountProvider3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountProvider3>
     {
@@ -491,7 +487,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountProvider4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSystemProvider() const;
+        [[nodiscard]] auto IsSystemProvider() const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountProvider4>
     {
@@ -500,7 +496,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Credentials_IWebAccountProviderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccountProvider) CreateWebAccountProvider(param::hstring const& id, param::hstring const& displayName, winrt::Windows::Foundation::Uri const& iconUri) const;
+        auto CreateWebAccountProvider(param::hstring const& id, param::hstring const& displayName, winrt::Windows::Foundation::Uri const& iconUri) const;
     };
     template <> struct consume<winrt::Windows::Security::Credentials::IWebAccountProviderFactory>
     {

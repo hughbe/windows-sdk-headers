@@ -154,7 +154,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDesktopWindowTarget = _uuidof(IDesktopWindowTarget);
+                    MIDL_CONST_ID IID& IID_IDesktopWindowTarget = __uuidof(IDesktopWindowTarget);
                 } /* Desktop */
             } /* Composition */
         } /* UI */

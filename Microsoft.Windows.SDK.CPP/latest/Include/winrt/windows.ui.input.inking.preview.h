@@ -234,7 +234,7 @@ namespace ABI {
                         public:
                         };
 
-                        extern MIDL_CONST_ID IID& IID_IPalmRejectionDelayZonePreview = _uuidof(IPalmRejectionDelayZonePreview);
+                        MIDL_CONST_ID IID& IID_IPalmRejectionDelayZonePreview = __uuidof(IPalmRejectionDelayZonePreview);
                     } /* Preview */
                 } /* Inking */
             } /* Input */
@@ -283,7 +283,7 @@ namespace ABI {
                                 ) = 0;
                         };
 
-                        extern MIDL_CONST_ID IID& IID_IPalmRejectionDelayZonePreviewStatics = _uuidof(IPalmRejectionDelayZonePreviewStatics);
+                        MIDL_CONST_ID IID& IID_IPalmRejectionDelayZonePreviewStatics = __uuidof(IPalmRejectionDelayZonePreviewStatics);
                     } /* Preview */
                 } /* Inking */
             } /* Input */

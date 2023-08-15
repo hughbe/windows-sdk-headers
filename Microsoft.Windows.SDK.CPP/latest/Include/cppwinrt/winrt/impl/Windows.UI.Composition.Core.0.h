@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -43,13 +43,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Core_ICompositorController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Compositor) Compositor() const;
-        WINRT_IMPL_AUTO(void) Commit() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) EnsurePreviousCommitCompletedAsync() const;
-        WINRT_IMPL_AUTO(winrt::event_token) CommitNeeded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Compositor() const;
+        auto Commit() const;
+        auto EnsurePreviousCommitCompletedAsync() const;
+        auto CommitNeeded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using CommitNeeded_revoker = impl::event_revoker<winrt::Windows::UI::Composition::Core::ICompositorController, &impl::abi_t<winrt::Windows::UI::Composition::Core::ICompositorController>::remove_CommitNeeded>;
         [[nodiscard]] CommitNeeded_revoker CommitNeeded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) CommitNeeded(winrt::event_token const& token) const noexcept;
+        auto CommitNeeded(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Core::ICompositorController>
     {

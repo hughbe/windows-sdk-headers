@@ -258,7 +258,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICoreUserActivityManagerStatics = _uuidof(ICoreUserActivityManagerStatics);
+                    MIDL_CONST_ID IID& IID_ICoreUserActivityManagerStatics = __uuidof(ICoreUserActivityManagerStatics);
                 } /* Core */
             } /* UserActivities */
         } /* ApplicationModel */

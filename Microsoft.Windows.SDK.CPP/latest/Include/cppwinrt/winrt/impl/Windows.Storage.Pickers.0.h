@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Storage_Pickers_0_H
 #define WINRT_Windows_Storage_Pickers_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename K, typename V> struct __declspec(empty_bases) IMap;
@@ -20,7 +16,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
     struct StorageFile;
-    struct StorageFolder;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -282,17 +277,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPicker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::PickerViewMode) ViewMode() const;
-        WINRT_IMPL_AUTO(void) ViewMode(winrt::Windows::Storage::Pickers::PickerViewMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SettingsIdentifier() const;
-        WINRT_IMPL_AUTO(void) SettingsIdentifier(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::PickerLocationId) SuggestedStartLocation() const;
-        WINRT_IMPL_AUTO(void) SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CommitButtonText() const;
-        WINRT_IMPL_AUTO(void) CommitButtonText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) FileTypeFilter() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) PickSingleFileAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageFile>>) PickMultipleFilesAsync() const;
+        [[nodiscard]] auto ViewMode() const;
+        auto ViewMode(winrt::Windows::Storage::Pickers::PickerViewMode const& value) const;
+        [[nodiscard]] auto SettingsIdentifier() const;
+        auto SettingsIdentifier(param::hstring const& value) const;
+        [[nodiscard]] auto SuggestedStartLocation() const;
+        auto SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
+        [[nodiscard]] auto CommitButtonText() const;
+        auto CommitButtonText(param::hstring const& value) const;
+        [[nodiscard]] auto FileTypeFilter() const;
+        auto PickSingleFileAsync() const;
+        auto PickMultipleFilesAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPicker>
     {
@@ -301,9 +296,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPicker2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) ContinuationData() const;
-        WINRT_IMPL_AUTO(void) PickSingleFileAndContinue() const;
-        WINRT_IMPL_AUTO(void) PickMultipleFilesAndContinue() const;
+        [[nodiscard]] auto ContinuationData() const;
+        auto PickSingleFileAndContinue() const;
+        auto PickMultipleFilesAndContinue() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPicker2>
     {
@@ -312,7 +307,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPicker3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPicker3>
     {
@@ -321,7 +316,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPickerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) ResumePickSingleFileAsync() const;
+        auto ResumePickSingleFileAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics>
     {
@@ -330,7 +325,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPickerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::FileOpenPicker) CreateForUser(winrt::Windows::System::User const& user) const;
+        auto CreateForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPickerStatics2>
     {
@@ -339,7 +334,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileOpenPickerWithOperationId
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) PickSingleFileAsync(param::hstring const& pickerOperationId) const;
+        auto PickSingleFileAsync(param::hstring const& pickerOperationId) const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileOpenPickerWithOperationId>
     {
@@ -348,20 +343,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileSavePicker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SettingsIdentifier() const;
-        WINRT_IMPL_AUTO(void) SettingsIdentifier(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::PickerLocationId) SuggestedStartLocation() const;
-        WINRT_IMPL_AUTO(void) SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CommitButtonText() const;
-        WINRT_IMPL_AUTO(void) CommitButtonText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::Foundation::Collections::IVector<hstring>>) FileTypeChoices() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DefaultFileExtension() const;
-        WINRT_IMPL_AUTO(void) DefaultFileExtension(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) SuggestedSaveFile() const;
-        WINRT_IMPL_AUTO(void) SuggestedSaveFile(winrt::Windows::Storage::StorageFile const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SuggestedFileName() const;
-        WINRT_IMPL_AUTO(void) SuggestedFileName(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) PickSaveFileAsync() const;
+        [[nodiscard]] auto SettingsIdentifier() const;
+        auto SettingsIdentifier(param::hstring const& value) const;
+        [[nodiscard]] auto SuggestedStartLocation() const;
+        auto SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
+        [[nodiscard]] auto CommitButtonText() const;
+        auto CommitButtonText(param::hstring const& value) const;
+        [[nodiscard]] auto FileTypeChoices() const;
+        [[nodiscard]] auto DefaultFileExtension() const;
+        auto DefaultFileExtension(param::hstring const& value) const;
+        [[nodiscard]] auto SuggestedSaveFile() const;
+        auto SuggestedSaveFile(winrt::Windows::Storage::StorageFile const& value) const;
+        [[nodiscard]] auto SuggestedFileName() const;
+        auto SuggestedFileName(param::hstring const& value) const;
+        auto PickSaveFileAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileSavePicker>
     {
@@ -370,8 +365,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileSavePicker2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) ContinuationData() const;
-        WINRT_IMPL_AUTO(void) PickSaveFileAndContinue() const;
+        [[nodiscard]] auto ContinuationData() const;
+        auto PickSaveFileAndContinue() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileSavePicker2>
     {
@@ -380,8 +375,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileSavePicker3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnterpriseId() const;
-        WINRT_IMPL_AUTO(void) EnterpriseId(param::hstring const& value) const;
+        [[nodiscard]] auto EnterpriseId() const;
+        auto EnterpriseId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileSavePicker3>
     {
@@ -390,7 +385,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileSavePicker4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileSavePicker4>
     {
@@ -399,7 +394,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFileSavePickerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::FileSavePicker) CreateForUser(winrt::Windows::System::User const& user) const;
+        auto CreateForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFileSavePickerStatics>
     {
@@ -408,16 +403,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFolderPicker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::PickerViewMode) ViewMode() const;
-        WINRT_IMPL_AUTO(void) ViewMode(winrt::Windows::Storage::Pickers::PickerViewMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SettingsIdentifier() const;
-        WINRT_IMPL_AUTO(void) SettingsIdentifier(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::PickerLocationId) SuggestedStartLocation() const;
-        WINRT_IMPL_AUTO(void) SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CommitButtonText() const;
-        WINRT_IMPL_AUTO(void) CommitButtonText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) FileTypeFilter() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) PickSingleFolderAsync() const;
+        [[nodiscard]] auto ViewMode() const;
+        auto ViewMode(winrt::Windows::Storage::Pickers::PickerViewMode const& value) const;
+        [[nodiscard]] auto SettingsIdentifier() const;
+        auto SettingsIdentifier(param::hstring const& value) const;
+        [[nodiscard]] auto SuggestedStartLocation() const;
+        auto SuggestedStartLocation(winrt::Windows::Storage::Pickers::PickerLocationId const& value) const;
+        [[nodiscard]] auto CommitButtonText() const;
+        auto CommitButtonText(param::hstring const& value) const;
+        [[nodiscard]] auto FileTypeFilter() const;
+        auto PickSingleFolderAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFolderPicker>
     {
@@ -426,8 +421,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFolderPicker2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) ContinuationData() const;
-        WINRT_IMPL_AUTO(void) PickFolderAndContinue() const;
+        [[nodiscard]] auto ContinuationData() const;
+        auto PickFolderAndContinue() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFolderPicker2>
     {
@@ -436,7 +431,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFolderPicker3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFolderPicker3>
     {
@@ -445,7 +440,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Pickers_IFolderPickerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::FolderPicker) CreateForUser(winrt::Windows::System::User const& user) const;
+        auto CreateForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Storage::Pickers::IFolderPickerStatics>
     {

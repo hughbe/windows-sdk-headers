@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -18,7 +18,6 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Input
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename T> struct __declspec(empty_bases) IReference;
     struct Point;
     struct Rect;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
@@ -1311,9 +1310,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ICrossSlidingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::CrossSlidingState) CrossSlidingState() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto CrossSlidingState() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ICrossSlidingEventArgs>
     {
@@ -1322,7 +1321,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ICrossSlidingEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ICrossSlidingEventArgs2>
     {
@@ -1331,9 +1330,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IDraggingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::DraggingState) DraggingState() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto DraggingState() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IDraggingEventArgs>
     {
@@ -1342,7 +1341,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IDraggingEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IDraggingEventArgs2>
     {
@@ -1351,18 +1350,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGesture
     {
-        WINRT_IMPL_AUTO(winrt::event_token) Starting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        auto Starting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Starting_revoker = impl::event_revoker<winrt::Windows::UI::Input::IEdgeGesture, &impl::abi_t<winrt::Windows::UI::Input::IEdgeGesture>::remove_Starting>;
         [[nodiscard]] Starting_revoker Starting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Starting(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        auto Starting(winrt::event_token const& token) const noexcept;
+        auto Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Completed_revoker = impl::event_revoker<winrt::Windows::UI::Input::IEdgeGesture, &impl::abi_t<winrt::Windows::UI::Input::IEdgeGesture>::remove_Completed>;
         [[nodiscard]] Completed_revoker Completed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Canceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        auto Completed(winrt::event_token const& token) const noexcept;
+        auto Canceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Canceled_revoker = impl::event_revoker<winrt::Windows::UI::Input::IEdgeGesture, &impl::abi_t<winrt::Windows::UI::Input::IEdgeGesture>::remove_Canceled>;
         [[nodiscard]] Canceled_revoker Canceled(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Canceled(winrt::event_token const& token) const noexcept;
+        auto Canceled(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IEdgeGesture>
     {
@@ -1371,7 +1370,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGestureEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::EdgeGestureKind) Kind() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IEdgeGestureEventArgs>
     {
@@ -1380,7 +1379,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGestureStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::EdgeGesture) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IEdgeGestureStatics>
     {
@@ -1389,82 +1388,82 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IGestureRecognizer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::GestureSettings) GestureSettings() const;
-        WINRT_IMPL_AUTO(void) GestureSettings(winrt::Windows::UI::Input::GestureSettings const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInertial() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShowGestureFeedback() const;
-        WINRT_IMPL_AUTO(void) ShowGestureFeedback(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) PivotCenter() const;
-        WINRT_IMPL_AUTO(void) PivotCenter(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) PivotRadius() const;
-        WINRT_IMPL_AUTO(void) PivotRadius(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaTranslationDeceleration() const;
-        WINRT_IMPL_AUTO(void) InertiaTranslationDeceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaRotationDeceleration() const;
-        WINRT_IMPL_AUTO(void) InertiaRotationDeceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaExpansionDeceleration() const;
-        WINRT_IMPL_AUTO(void) InertiaExpansionDeceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaTranslationDisplacement() const;
-        WINRT_IMPL_AUTO(void) InertiaTranslationDisplacement(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaRotationAngle() const;
-        WINRT_IMPL_AUTO(void) InertiaRotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaExpansion() const;
-        WINRT_IMPL_AUTO(void) InertiaExpansion(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ManipulationExact() const;
-        WINRT_IMPL_AUTO(void) ManipulationExact(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::CrossSlideThresholds) CrossSlideThresholds() const;
-        WINRT_IMPL_AUTO(void) CrossSlideThresholds(winrt::Windows::UI::Input::CrossSlideThresholds const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CrossSlideHorizontally() const;
-        WINRT_IMPL_AUTO(void) CrossSlideHorizontally(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CrossSlideExact() const;
-        WINRT_IMPL_AUTO(void) CrossSlideExact(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AutoProcessInertia() const;
-        WINRT_IMPL_AUTO(void) AutoProcessInertia(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::MouseWheelParameters) MouseWheelParameters() const;
-        WINRT_IMPL_AUTO(bool) CanBeDoubleTap(winrt::Windows::UI::Input::PointerPoint const& value) const;
-        WINRT_IMPL_AUTO(void) ProcessDownEvent(winrt::Windows::UI::Input::PointerPoint const& value) const;
-        WINRT_IMPL_AUTO(void) ProcessMoveEvents(param::vector<winrt::Windows::UI::Input::PointerPoint> const& value) const;
-        WINRT_IMPL_AUTO(void) ProcessUpEvent(winrt::Windows::UI::Input::PointerPoint const& value) const;
-        WINRT_IMPL_AUTO(void) ProcessMouseWheelEvent(winrt::Windows::UI::Input::PointerPoint const& value, bool isShiftKeyDown, bool isControlKeyDown) const;
-        WINRT_IMPL_AUTO(void) ProcessInertia() const;
-        WINRT_IMPL_AUTO(void) CompleteGesture() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Tapped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs> const& handler) const;
+        [[nodiscard]] auto GestureSettings() const;
+        auto GestureSettings(winrt::Windows::UI::Input::GestureSettings const& value) const;
+        [[nodiscard]] auto IsInertial() const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto ShowGestureFeedback() const;
+        auto ShowGestureFeedback(bool value) const;
+        [[nodiscard]] auto PivotCenter() const;
+        auto PivotCenter(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto PivotRadius() const;
+        auto PivotRadius(float value) const;
+        [[nodiscard]] auto InertiaTranslationDeceleration() const;
+        auto InertiaTranslationDeceleration(float value) const;
+        [[nodiscard]] auto InertiaRotationDeceleration() const;
+        auto InertiaRotationDeceleration(float value) const;
+        [[nodiscard]] auto InertiaExpansionDeceleration() const;
+        auto InertiaExpansionDeceleration(float value) const;
+        [[nodiscard]] auto InertiaTranslationDisplacement() const;
+        auto InertiaTranslationDisplacement(float value) const;
+        [[nodiscard]] auto InertiaRotationAngle() const;
+        auto InertiaRotationAngle(float value) const;
+        [[nodiscard]] auto InertiaExpansion() const;
+        auto InertiaExpansion(float value) const;
+        [[nodiscard]] auto ManipulationExact() const;
+        auto ManipulationExact(bool value) const;
+        [[nodiscard]] auto CrossSlideThresholds() const;
+        auto CrossSlideThresholds(winrt::Windows::UI::Input::CrossSlideThresholds const& value) const;
+        [[nodiscard]] auto CrossSlideHorizontally() const;
+        auto CrossSlideHorizontally(bool value) const;
+        [[nodiscard]] auto CrossSlideExact() const;
+        auto CrossSlideExact(bool value) const;
+        [[nodiscard]] auto AutoProcessInertia() const;
+        auto AutoProcessInertia(bool value) const;
+        [[nodiscard]] auto MouseWheelParameters() const;
+        auto CanBeDoubleTap(winrt::Windows::UI::Input::PointerPoint const& value) const;
+        auto ProcessDownEvent(winrt::Windows::UI::Input::PointerPoint const& value) const;
+        auto ProcessMoveEvents(param::vector<winrt::Windows::UI::Input::PointerPoint> const& value) const;
+        auto ProcessUpEvent(winrt::Windows::UI::Input::PointerPoint const& value) const;
+        auto ProcessMouseWheelEvent(winrt::Windows::UI::Input::PointerPoint const& value, bool isShiftKeyDown, bool isControlKeyDown) const;
+        auto ProcessInertia() const;
+        auto CompleteGesture() const;
+        auto Tapped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs> const& handler) const;
         using Tapped_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_Tapped>;
         [[nodiscard]] Tapped_revoker Tapped(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Tapped(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) RightTapped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::RightTappedEventArgs> const& handler) const;
+        auto Tapped(winrt::event_token const& token) const noexcept;
+        auto RightTapped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::RightTappedEventArgs> const& handler) const;
         using RightTapped_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_RightTapped>;
         [[nodiscard]] RightTapped_revoker RightTapped(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::RightTappedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) RightTapped(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Holding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs> const& handler) const;
+        auto RightTapped(winrt::event_token const& token) const noexcept;
+        auto Holding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs> const& handler) const;
         using Holding_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_Holding>;
         [[nodiscard]] Holding_revoker Holding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Holding(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Dragging(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::DraggingEventArgs> const& handler) const;
+        auto Holding(winrt::event_token const& token) const noexcept;
+        auto Dragging(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::DraggingEventArgs> const& handler) const;
         using Dragging_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_Dragging>;
         [[nodiscard]] Dragging_revoker Dragging(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::DraggingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Dragging(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ManipulationStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
+        auto Dragging(winrt::event_token const& token) const noexcept;
+        auto ManipulationStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
         using ManipulationStarted_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_ManipulationStarted>;
         [[nodiscard]] ManipulationStarted_revoker ManipulationStarted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ManipulationStarted(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ManipulationUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
+        auto ManipulationStarted(winrt::event_token const& token) const noexcept;
+        auto ManipulationUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
         using ManipulationUpdated_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_ManipulationUpdated>;
         [[nodiscard]] ManipulationUpdated_revoker ManipulationUpdated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ManipulationUpdated(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ManipulationInertiaStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
+        auto ManipulationUpdated(winrt::event_token const& token) const noexcept;
+        auto ManipulationInertiaStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
         using ManipulationInertiaStarting_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_ManipulationInertiaStarting>;
         [[nodiscard]] ManipulationInertiaStarting_revoker ManipulationInertiaStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ManipulationInertiaStarting(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ManipulationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
+        auto ManipulationInertiaStarting(winrt::event_token const& token) const noexcept;
+        auto ManipulationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
         using ManipulationCompleted_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_ManipulationCompleted>;
         [[nodiscard]] ManipulationCompleted_revoker ManipulationCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ManipulationCompleted(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) CrossSliding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
+        auto ManipulationCompleted(winrt::event_token const& token) const noexcept;
+        auto CrossSliding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
         using CrossSliding_revoker = impl::event_revoker<winrt::Windows::UI::Input::IGestureRecognizer, &impl::abi_t<winrt::Windows::UI::Input::IGestureRecognizer>::remove_CrossSliding>;
         [[nodiscard]] CrossSliding_revoker CrossSliding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) CrossSliding(winrt::event_token const& token) const noexcept;
+        auto CrossSliding(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IGestureRecognizer>
     {
@@ -1473,22 +1472,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IGestureRecognizer2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapMinContactCount() const;
-        WINRT_IMPL_AUTO(void) TapMinContactCount(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapMaxContactCount() const;
-        WINRT_IMPL_AUTO(void) TapMaxContactCount(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) HoldMinContactCount() const;
-        WINRT_IMPL_AUTO(void) HoldMinContactCount(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) HoldMaxContactCount() const;
-        WINRT_IMPL_AUTO(void) HoldMaxContactCount(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) HoldRadius() const;
-        WINRT_IMPL_AUTO(void) HoldRadius(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) HoldStartDelay() const;
-        WINRT_IMPL_AUTO(void) HoldStartDelay(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TranslationMinContactCount() const;
-        WINRT_IMPL_AUTO(void) TranslationMinContactCount(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TranslationMaxContactCount() const;
-        WINRT_IMPL_AUTO(void) TranslationMaxContactCount(uint32_t value) const;
+        [[nodiscard]] auto TapMinContactCount() const;
+        auto TapMinContactCount(uint32_t value) const;
+        [[nodiscard]] auto TapMaxContactCount() const;
+        auto TapMaxContactCount(uint32_t value) const;
+        [[nodiscard]] auto HoldMinContactCount() const;
+        auto HoldMinContactCount(uint32_t value) const;
+        [[nodiscard]] auto HoldMaxContactCount() const;
+        auto HoldMaxContactCount(uint32_t value) const;
+        [[nodiscard]] auto HoldRadius() const;
+        auto HoldRadius(float value) const;
+        [[nodiscard]] auto HoldStartDelay() const;
+        auto HoldStartDelay(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto TranslationMinContactCount() const;
+        auto TranslationMinContactCount(uint32_t value) const;
+        [[nodiscard]] auto TranslationMaxContactCount() const;
+        auto TranslationMaxContactCount(uint32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IGestureRecognizer2>
     {
@@ -1497,9 +1496,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IHoldingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::HoldingState) HoldingState() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto HoldingState() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IHoldingEventArgs>
     {
@@ -1508,8 +1507,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IHoldingEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] auto CurrentContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IHoldingEventArgs2>
     {
@@ -1518,11 +1517,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IInputActivationListener
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::InputActivationState) State() const;
-        WINRT_IMPL_AUTO(winrt::event_token) InputActivationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::InputActivationListener, winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto State() const;
+        auto InputActivationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::InputActivationListener, winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
         using InputActivationChanged_revoker = impl::event_revoker<winrt::Windows::UI::Input::IInputActivationListener, &impl::abi_t<winrt::Windows::UI::Input::IInputActivationListener>::remove_InputActivationChanged>;
         [[nodiscard]] InputActivationChanged_revoker InputActivationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::InputActivationListener, winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) InputActivationChanged(winrt::event_token const& token) const noexcept;
+        auto InputActivationChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IInputActivationListener>
     {
@@ -1531,7 +1530,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::InputActivationState) State() const;
+        [[nodiscard]] auto State() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
     {
@@ -1540,16 +1539,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IKeyboardDeliveryInterceptor
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInterceptionEnabledWhenInForeground() const;
-        WINRT_IMPL_AUTO(void) IsInterceptionEnabledWhenInForeground(bool value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) KeyDown(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] auto IsInterceptionEnabledWhenInForeground() const;
+        auto IsInterceptionEnabledWhenInForeground(bool value) const;
+        auto KeyDown(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyDown_revoker = impl::event_revoker<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor, &impl::abi_t<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor>::remove_KeyDown>;
         [[nodiscard]] KeyDown_revoker KeyDown(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) KeyDown(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) KeyUp(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
+        auto KeyDown(winrt::event_token const& token) const noexcept;
+        auto KeyUp(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyUp_revoker = impl::event_revoker<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor, &impl::abi_t<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor>::remove_KeyUp>;
         [[nodiscard]] KeyUp_revoker KeyUp(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) KeyUp(winrt::event_token const& token) const noexcept;
+        auto KeyUp(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptor>
     {
@@ -1558,7 +1557,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IKeyboardDeliveryInterceptorStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::KeyboardDeliveryInterceptor) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>
     {
@@ -1567,10 +1566,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Cumulative() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationVelocities) Velocities() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto Cumulative() const;
+        [[nodiscard]] auto Velocities() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationCompletedEventArgs>
     {
@@ -1579,8 +1578,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationCompletedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] auto CurrentContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationCompletedEventArgs2>
     {
@@ -1589,11 +1588,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationInertiaStartingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Delta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Cumulative() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationVelocities) Velocities() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto Delta() const;
+        [[nodiscard]] auto Cumulative() const;
+        [[nodiscard]] auto Velocities() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationInertiaStartingEventArgs>
     {
@@ -1602,7 +1601,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationInertiaStartingEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationInertiaStartingEventArgs2>
     {
@@ -1611,9 +1610,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationStartedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Cumulative() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto Cumulative() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationStartedEventArgs>
     {
@@ -1622,7 +1621,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationStartedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationStartedEventArgs2>
     {
@@ -1631,11 +1630,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationUpdatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Delta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationDelta) Cumulative() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::ManipulationVelocities) Velocities() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto Delta() const;
+        [[nodiscard]] auto Cumulative() const;
+        [[nodiscard]] auto Velocities() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationUpdatedEventArgs>
     {
@@ -1644,8 +1643,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationUpdatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] auto CurrentContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IManipulationUpdatedEventArgs2>
     {
@@ -1654,14 +1653,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IMouseWheelParameters
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) CharTranslation() const;
-        WINRT_IMPL_AUTO(void) CharTranslation(winrt::Windows::Foundation::Point const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DeltaScale() const;
-        WINRT_IMPL_AUTO(void) DeltaScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DeltaRotationAngle() const;
-        WINRT_IMPL_AUTO(void) DeltaRotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) PageTranslation() const;
-        WINRT_IMPL_AUTO(void) PageTranslation(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto CharTranslation() const;
+        auto CharTranslation(winrt::Windows::Foundation::Point const& value) const;
+        [[nodiscard]] auto DeltaScale() const;
+        auto DeltaScale(float value) const;
+        [[nodiscard]] auto DeltaRotationAngle() const;
+        auto DeltaRotationAngle(float value) const;
+        [[nodiscard]] auto PageTranslation() const;
+        auto PageTranslation(winrt::Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IMouseWheelParameters>
     {
@@ -1670,14 +1669,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPoint
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDevice) PointerDevice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) RawPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) PointerId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) FrameId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInContact() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::PointerPointProperties) Properties() const;
+        [[nodiscard]] auto PointerDevice() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto RawPosition() const;
+        [[nodiscard]] auto PointerId() const;
+        [[nodiscard]] auto FrameId() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto IsInContact() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerPoint>
     {
@@ -1686,30 +1685,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Pressure() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInverted() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEraser() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Orientation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) XTilt() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) YTilt() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Twist() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ContactRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ContactRectRaw() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) TouchConfidence() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLeftButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRightButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMiddleButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MouseWheelDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsHorizontalMouseWheel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPrimary() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInRange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBarrelButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsXButton1Pressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsXButton2Pressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::PointerUpdateKind) PointerUpdateKind() const;
-        WINRT_IMPL_AUTO(bool) HasUsage(uint32_t usagePage, uint32_t usageId) const;
-        WINRT_IMPL_AUTO(int32_t) GetUsageValue(uint32_t usagePage, uint32_t usageId) const;
+        [[nodiscard]] auto Pressure() const;
+        [[nodiscard]] auto IsInverted() const;
+        [[nodiscard]] auto IsEraser() const;
+        [[nodiscard]] auto Orientation() const;
+        [[nodiscard]] auto XTilt() const;
+        [[nodiscard]] auto YTilt() const;
+        [[nodiscard]] auto Twist() const;
+        [[nodiscard]] auto ContactRect() const;
+        [[nodiscard]] auto ContactRectRaw() const;
+        [[nodiscard]] auto TouchConfidence() const;
+        [[nodiscard]] auto IsLeftButtonPressed() const;
+        [[nodiscard]] auto IsRightButtonPressed() const;
+        [[nodiscard]] auto IsMiddleButtonPressed() const;
+        [[nodiscard]] auto MouseWheelDelta() const;
+        [[nodiscard]] auto IsHorizontalMouseWheel() const;
+        [[nodiscard]] auto IsPrimary() const;
+        [[nodiscard]] auto IsInRange() const;
+        [[nodiscard]] auto IsCanceled() const;
+        [[nodiscard]] auto IsBarrelButtonPressed() const;
+        [[nodiscard]] auto IsXButton1Pressed() const;
+        [[nodiscard]] auto IsXButton2Pressed() const;
+        [[nodiscard]] auto PointerUpdateKind() const;
+        auto HasUsage(uint32_t usagePage, uint32_t usageId) const;
+        auto GetUsageValue(uint32_t usagePage, uint32_t usageId) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerPointProperties>
     {
@@ -1718,7 +1717,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointProperties2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) ZDistance() const;
+        [[nodiscard]] auto ZDistance() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerPointProperties2>
     {
@@ -1727,10 +1726,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::PointerPoint) GetCurrentPoint(uint32_t pointerId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>) GetIntermediatePoints(uint32_t pointerId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::PointerPoint) GetCurrentPoint(uint32_t pointerId, winrt::Windows::UI::Input::IPointerPointTransform const& transform) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>) GetIntermediatePoints(uint32_t pointerId, winrt::Windows::UI::Input::IPointerPointTransform const& transform) const;
+        auto GetCurrentPoint(uint32_t pointerId) const;
+        auto GetIntermediatePoints(uint32_t pointerId) const;
+        auto GetCurrentPoint(uint32_t pointerId, winrt::Windows::UI::Input::IPointerPointTransform const& transform) const;
+        auto GetIntermediatePoints(uint32_t pointerId, winrt::Windows::UI::Input::IPointerPointTransform const& transform) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerPointStatics>
     {
@@ -1739,9 +1738,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointTransform
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::IPointerPointTransform) Inverse() const;
-        WINRT_IMPL_AUTO(bool) TryTransform(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) TransformBounds(winrt::Windows::Foundation::Rect const& rect) const;
+        [[nodiscard]] auto Inverse() const;
+        auto TryTransform(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
+        auto TransformBounds(winrt::Windows::Foundation::Rect const& rect) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerPointTransform>
     {
@@ -1750,10 +1749,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerVisualizationSettings
     {
-        WINRT_IMPL_AUTO(void) IsContactFeedbackEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsContactFeedbackEnabled() const;
-        WINRT_IMPL_AUTO(void) IsBarrelButtonFeedbackEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBarrelButtonFeedbackEnabled() const;
+        auto IsContactFeedbackEnabled(bool value) const;
+        [[nodiscard]] auto IsContactFeedbackEnabled() const;
+        auto IsBarrelButtonFeedbackEnabled(bool value) const;
+        [[nodiscard]] auto IsBarrelButtonFeedbackEnabled() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerVisualizationSettings>
     {
@@ -1762,7 +1761,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerVisualizationSettingsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::PointerVisualizationSettings) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IPointerVisualizationSettingsStatics>
     {
@@ -1771,39 +1770,39 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenu) Menu() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationResolutionInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationResolutionInDegrees(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) UseAutomaticHapticFeedback() const;
-        WINRT_IMPL_AUTO(void) UseAutomaticHapticFeedback(bool value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
+        [[nodiscard]] auto Menu() const;
+        [[nodiscard]] auto RotationResolutionInDegrees() const;
+        auto RotationResolutionInDegrees(double value) const;
+        [[nodiscard]] auto UseAutomaticHapticFeedback() const;
+        auto UseAutomaticHapticFeedback(bool value) const;
+        auto ScreenContactStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
         using ScreenContactStarted_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ScreenContactStarted>;
         [[nodiscard]] ScreenContactStarted_revoker ScreenContactStarted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScreenContactStarted(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ScreenContactStarted(winrt::event_token const& cookie) const noexcept;
+        auto ScreenContactEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ScreenContactEnded_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ScreenContactEnded>;
         [[nodiscard]] ScreenContactEnded_revoker ScreenContactEnded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScreenContactEnded(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactContinued(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
+        auto ScreenContactEnded(winrt::event_token const& cookie) const noexcept;
+        auto ScreenContactContinued(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
         using ScreenContactContinued_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ScreenContactContinued>;
         [[nodiscard]] ScreenContactContinued_revoker ScreenContactContinued(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScreenContactContinued(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ControlLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ScreenContactContinued(winrt::event_token const& cookie) const noexcept;
+        auto ControlLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ControlLost_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ControlLost>;
         [[nodiscard]] ControlLost_revoker ControlLost(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ControlLost(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) RotationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
+        auto ControlLost(winrt::event_token const& cookie) const noexcept;
+        auto RotationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
         using RotationChanged_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_RotationChanged>;
         [[nodiscard]] RotationChanged_revoker RotationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) RotationChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
+        auto RotationChanged(winrt::event_token const& token) const noexcept;
+        auto ButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
         using ButtonClicked_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ButtonClicked>;
         [[nodiscard]] ButtonClicked_revoker ButtonClicked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ButtonClicked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ControlAcquired(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
+        auto ButtonClicked(winrt::event_token const& token) const noexcept;
+        auto ControlAcquired(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
         using ControlAcquired_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController, &impl::abi_t<winrt::Windows::UI::Input::IRadialController>::remove_ControlAcquired>;
         [[nodiscard]] ControlAcquired_revoker ControlAcquired(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ControlAcquired(winrt::event_token const& cookie) const noexcept;
+        auto ControlAcquired(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialController>
     {
@@ -1812,18 +1811,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialController2
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ButtonPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
+        auto ButtonPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
         using ButtonPressed_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController2, &impl::abi_t<winrt::Windows::UI::Input::IRadialController2>::remove_ButtonPressed>;
         [[nodiscard]] ButtonPressed_revoker ButtonPressed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ButtonPressed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ButtonHolding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
+        auto ButtonPressed(winrt::event_token const& token) const noexcept;
+        auto ButtonHolding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
         using ButtonHolding_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController2, &impl::abi_t<winrt::Windows::UI::Input::IRadialController2>::remove_ButtonHolding>;
         [[nodiscard]] ButtonHolding_revoker ButtonHolding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ButtonHolding(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ButtonReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
+        auto ButtonHolding(winrt::event_token const& token) const noexcept;
+        auto ButtonReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
         using ButtonReleased_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialController2, &impl::abi_t<winrt::Windows::UI::Input::IRadialController2>::remove_ButtonReleased>;
         [[nodiscard]] ButtonReleased_revoker ButtonReleased(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ButtonReleased(winrt::event_token const& token) const noexcept;
+        auto ButtonReleased(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialController2>
     {
@@ -1832,7 +1831,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonClickedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerButtonClickedEventArgs>
     {
@@ -1841,7 +1840,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonClickedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>
     {
@@ -1850,8 +1849,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonHoldingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>
     {
@@ -1860,8 +1859,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonPressedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerButtonPressedEventArgs>
     {
@@ -1870,8 +1869,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonReleasedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>
     {
@@ -1880,9 +1879,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfiguration
     {
-        WINRT_IMPL_AUTO(void) SetDefaultMenuItems(param::iterable<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind> const& buttons) const;
-        WINRT_IMPL_AUTO(void) ResetToDefaultMenuItems() const;
-        WINRT_IMPL_AUTO(bool) TrySelectDefaultMenuItem(winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind const& type) const;
+        auto SetDefaultMenuItems(param::iterable<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind> const& buttons) const;
+        auto ResetToDefaultMenuItems() const;
+        auto TrySelectDefaultMenuItem(winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind const& type) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerConfiguration>
     {
@@ -1891,10 +1890,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfiguration2
     {
-        WINRT_IMPL_AUTO(void) ActiveControllerWhenMenuIsSuppressed(winrt::Windows::UI::Input::RadialController const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialController) ActiveControllerWhenMenuIsSuppressed() const;
-        WINRT_IMPL_AUTO(void) IsMenuSuppressed(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMenuSuppressed() const;
+        auto ActiveControllerWhenMenuIsSuppressed(winrt::Windows::UI::Input::RadialController const& value) const;
+        [[nodiscard]] auto ActiveControllerWhenMenuIsSuppressed() const;
+        auto IsMenuSuppressed(bool value) const;
+        [[nodiscard]] auto IsMenuSuppressed() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerConfiguration2>
     {
@@ -1903,7 +1902,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfigurationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerConfiguration) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerConfigurationStatics>
     {
@@ -1912,10 +1911,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfigurationStatics2
     {
-        WINRT_IMPL_AUTO(void) AppController(winrt::Windows::UI::Input::RadialController const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialController) AppController() const;
-        WINRT_IMPL_AUTO(void) IsAppControllerEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAppControllerEnabled() const;
+        auto AppController(winrt::Windows::UI::Input::RadialController const& value) const;
+        [[nodiscard]] auto AppController() const;
+        auto IsAppControllerEnabled(bool value) const;
+        [[nodiscard]] auto IsAppControllerEnabled() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerConfigurationStatics2>
     {
@@ -1924,7 +1923,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerControlAcquiredEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>
     {
@@ -1933,8 +1932,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerControlAcquiredEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto IsButtonPressed() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>
     {
@@ -1943,12 +1942,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenu
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::RadialControllerMenuItem>) Items() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenuItem) GetSelectedMenuItem() const;
-        WINRT_IMPL_AUTO(void) SelectMenuItem(winrt::Windows::UI::Input::RadialControllerMenuItem const& menuItem) const;
-        WINRT_IMPL_AUTO(bool) TrySelectPreviouslySelectedMenuItem() const;
+        [[nodiscard]] auto Items() const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto IsEnabled(bool value) const;
+        auto GetSelectedMenuItem() const;
+        auto SelectMenuItem(winrt::Windows::UI::Input::RadialControllerMenuItem const& menuItem) const;
+        auto TrySelectPreviouslySelectedMenuItem() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerMenu>
     {
@@ -1957,13 +1956,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Tag() const;
-        WINRT_IMPL_AUTO(void) Tag(winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Invoked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialControllerMenuItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto DisplayText() const;
+        [[nodiscard]] auto Tag() const;
+        auto Tag(winrt::Windows::Foundation::IInspectable const& value) const;
+        auto Invoked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialControllerMenuItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Invoked_revoker = impl::event_revoker<winrt::Windows::UI::Input::IRadialControllerMenuItem, &impl::abi_t<winrt::Windows::UI::Input::IRadialControllerMenuItem>::remove_Invoked>;
         [[nodiscard]] Invoked_revoker Invoked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialControllerMenuItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Invoked(winrt::event_token const& token) const noexcept;
+        auto Invoked(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerMenuItem>
     {
@@ -1972,8 +1971,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItemStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenuItem) CreateFromIcon(param::hstring const& displayText, winrt::Windows::Storage::Streams::RandomAccessStreamReference const& icon) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenuItem) CreateFromKnownIcon(param::hstring const& displayText, winrt::Windows::UI::Input::RadialControllerMenuKnownIcon const& value) const;
+        auto CreateFromIcon(param::hstring const& displayText, winrt::Windows::Storage::Streams::RandomAccessStreamReference const& icon) const;
+        auto CreateFromKnownIcon(param::hstring const& displayText, winrt::Windows::UI::Input::RadialControllerMenuKnownIcon const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerMenuItemStatics>
     {
@@ -1982,8 +1981,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItemStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenuItem) CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerMenuItem) CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily, winrt::Windows::Foundation::Uri const& fontUri) const;
+        auto CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily) const;
+        auto CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily, winrt::Windows::Foundation::Uri const& fontUri) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerMenuItemStatics2>
     {
@@ -1992,8 +1991,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerRotationChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationDeltaInDegrees() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] auto RotationDeltaInDegrees() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerRotationChangedEventArgs>
     {
@@ -2002,8 +2001,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerRotationChangedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto IsButtonPressed() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>
     {
@@ -2012,8 +2011,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContact
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) Bounds() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
+        [[nodiscard]] auto Bounds() const;
+        [[nodiscard]] auto Position() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContact>
     {
@@ -2022,7 +2021,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactContinuedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>
     {
@@ -2031,8 +2030,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactContinuedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto IsButtonPressed() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>
     {
@@ -2041,8 +2040,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactEndedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto IsButtonPressed() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>
     {
@@ -2051,7 +2050,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactStartedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>
     {
@@ -2060,8 +2059,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactStartedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+        [[nodiscard]] auto IsButtonPressed() const;
+        [[nodiscard]] auto SimpleHapticsController() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>
     {
@@ -2070,8 +2069,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerStatics
     {
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::RadialController) CreateForCurrentView() const;
+        auto IsSupported() const;
+        auto CreateForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRadialControllerStatics>
     {
@@ -2080,8 +2079,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRightTappedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRightTappedEventArgs>
     {
@@ -2090,7 +2089,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRightTappedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::IRightTappedEventArgs2>
     {
@@ -2099,22 +2098,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemButtonEventController
     {
-        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionButtonPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        auto SystemFunctionButtonPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
         using SystemFunctionButtonPressed_revoker = impl::event_revoker<winrt::Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<winrt::Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionButtonPressed>;
         [[nodiscard]] SystemFunctionButtonPressed_revoker SystemFunctionButtonPressed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) SystemFunctionButtonPressed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionButtonReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        auto SystemFunctionButtonPressed(winrt::event_token const& token) const noexcept;
+        auto SystemFunctionButtonReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
         using SystemFunctionButtonReleased_revoker = impl::event_revoker<winrt::Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<winrt::Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionButtonReleased>;
         [[nodiscard]] SystemFunctionButtonReleased_revoker SystemFunctionButtonReleased(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) SystemFunctionButtonReleased(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionLockChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
+        auto SystemFunctionButtonReleased(winrt::event_token const& token) const noexcept;
+        auto SystemFunctionLockChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
         using SystemFunctionLockChanged_revoker = impl::event_revoker<winrt::Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<winrt::Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionLockChanged>;
         [[nodiscard]] SystemFunctionLockChanged_revoker SystemFunctionLockChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) SystemFunctionLockChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionLockIndicatorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
+        auto SystemFunctionLockChanged(winrt::event_token const& token) const noexcept;
+        auto SystemFunctionLockIndicatorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
         using SystemFunctionLockIndicatorChanged_revoker = impl::event_revoker<winrt::Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<winrt::Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionLockIndicatorChanged>;
         [[nodiscard]] SystemFunctionLockIndicatorChanged_revoker SystemFunctionLockIndicatorChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) SystemFunctionLockIndicatorChanged(winrt::event_token const& token) const noexcept;
+        auto SystemFunctionLockIndicatorChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::ISystemButtonEventController>
     {
@@ -2123,7 +2122,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemButtonEventControllerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Input::SystemButtonEventController) CreateForDispatcherQueue(winrt::Windows::System::DispatcherQueue const& queue) const;
+        auto CreateForDispatcherQueue(winrt::Windows::System::DispatcherQueue const& queue) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ISystemButtonEventControllerStatics>
     {
@@ -2132,9 +2131,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionButtonEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ISystemFunctionButtonEventArgs>
     {
@@ -2143,10 +2142,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionLockChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLocked() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto IsLocked() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ISystemFunctionLockChangedEventArgs>
     {
@@ -2155,10 +2154,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionLockIndicatorChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIndicatorOn() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto IsIndicatorOn() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>
     {
@@ -2167,9 +2166,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ITappedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapCount() const;
+        [[nodiscard]] auto PointerDeviceType() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto TapCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ITappedEventArgs>
     {
@@ -2178,7 +2177,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ITappedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] auto ContactCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ITappedEventArgs2>
     {

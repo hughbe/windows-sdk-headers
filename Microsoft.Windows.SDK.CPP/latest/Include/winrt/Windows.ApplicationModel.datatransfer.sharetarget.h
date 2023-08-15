@@ -499,7 +499,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IQuickLink = _uuidof(IQuickLink);
+                    MIDL_CONST_ID IID& IID_IQuickLink = __uuidof(IQuickLink);
                 } /* ShareTarget */
             } /* DataTransfer */
         } /* ApplicationModel */
@@ -551,7 +551,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IShareOperation = _uuidof(IShareOperation);
+                    MIDL_CONST_ID IID& IID_IShareOperation = __uuidof(IShareOperation);
                 } /* ShareTarget */
             } /* DataTransfer */
         } /* ApplicationModel */
@@ -587,7 +587,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE DismissUI(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IShareOperation2 = _uuidof(IShareOperation2);
+                    MIDL_CONST_ID IID& IID_IShareOperation2 = __uuidof(IShareOperation2);
                 } /* ShareTarget */
             } /* DataTransfer */
         } /* ApplicationModel */
@@ -625,7 +625,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IShareOperation3 = _uuidof(IShareOperation3);
+                    MIDL_CONST_ID IID& IID_IShareOperation3 = __uuidof(IShareOperation3);
                 } /* ShareTarget */
             } /* DataTransfer */
         } /* ApplicationModel */

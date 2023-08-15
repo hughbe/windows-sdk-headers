@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -50,9 +50,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Background_IDeviceServicingDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) ExpectedDuration() const;
+        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] auto Arguments() const;
+        [[nodiscard]] auto ExpectedDuration() const;
     };
     template <> struct consume<winrt::Windows::Devices::Background::IDeviceServicingDetails>
     {
@@ -61,8 +61,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Background_IDeviceUseDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
+        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] auto Arguments() const;
     };
     template <> struct consume<winrt::Windows::Devices::Background::IDeviceUseDetails>
     {

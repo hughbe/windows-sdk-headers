@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,14 +10,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct HResult;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IVectorView;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::Management::Update
@@ -465,10 +463,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IPreviewBuildsManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ArePreviewBuildsAllowed() const;
-        WINRT_IMPL_AUTO(void) ArePreviewBuildsAllowed(bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::PreviewBuildsState) GetCurrentState() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) SyncAsync() const;
+        [[nodiscard]] auto ArePreviewBuildsAllowed() const;
+        auto ArePreviewBuildsAllowed(bool value) const;
+        auto GetCurrentState() const;
+        auto SyncAsync() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IPreviewBuildsManager>
     {
@@ -477,8 +475,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IPreviewBuildsManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::PreviewBuildsManager) GetDefault() const;
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto GetDefault() const;
+        auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IPreviewBuildsManagerStatics>
     {
@@ -487,7 +485,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IPreviewBuildsState
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) Properties() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IPreviewBuildsState>
     {
@@ -496,30 +494,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdate
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UpdateId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFeatureUpdate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMinorImpact() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSecurity() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCritical() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsForOS() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDriver() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMandatory() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUrgent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSeeker() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) MoreInfoUrl() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) SupportUrl() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEulaAccepted() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EulaText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Deadline() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo) AttentionRequiredInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionResult) ActionResult() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CurrentAction() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionProgress) ActionProgress() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetPropertyValue(param::hstring const& propertyName) const;
-        WINRT_IMPL_AUTO(void) AcceptEula() const;
+        [[nodiscard]] auto ProviderId() const;
+        [[nodiscard]] auto UpdateId() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Description() const;
+        [[nodiscard]] auto IsFeatureUpdate() const;
+        [[nodiscard]] auto IsMinorImpact() const;
+        [[nodiscard]] auto IsSecurity() const;
+        [[nodiscard]] auto IsCritical() const;
+        [[nodiscard]] auto IsForOS() const;
+        [[nodiscard]] auto IsDriver() const;
+        [[nodiscard]] auto IsMandatory() const;
+        [[nodiscard]] auto IsUrgent() const;
+        [[nodiscard]] auto IsSeeker() const;
+        [[nodiscard]] auto MoreInfoUrl() const;
+        [[nodiscard]] auto SupportUrl() const;
+        [[nodiscard]] auto IsEulaAccepted() const;
+        [[nodiscard]] auto EulaText() const;
+        [[nodiscard]] auto Deadline() const;
+        [[nodiscard]] auto AttentionRequiredInfo() const;
+        [[nodiscard]] auto ActionResult() const;
+        [[nodiscard]] auto CurrentAction() const;
+        [[nodiscard]] auto ActionProgress() const;
+        auto GetPropertyValue(param::hstring const& propertyName) const;
+        auto AcceptEula() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdate>
     {
@@ -528,10 +526,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) Update() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Action() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Succeeded() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Update() const;
+        [[nodiscard]] auto Action() const;
+        [[nodiscard]] auto Succeeded() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs>
     {
@@ -540,8 +538,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateActionProgress
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Action() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Progress() const;
+        [[nodiscard]] auto Action() const;
+        [[nodiscard]] auto Progress() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateActionProgress>
     {
@@ -550,10 +548,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateActionResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Succeeded() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Action() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto Succeeded() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Action() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateActionResult>
     {
@@ -562,12 +560,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateAdministrator
     {
-        WINRT_IMPL_AUTO(void) StartAdministratorScan() const;
-        WINRT_IMPL_AUTO(void) ApproveWindowsUpdateAction(param::hstring const& updateId, param::hstring const& action) const;
-        WINRT_IMPL_AUTO(void) RevokeWindowsUpdateActionApproval(param::hstring const& updateId, param::hstring const& action) const;
-        WINRT_IMPL_AUTO(void) ApproveWindowsUpdate(param::hstring const& updateId, winrt::Windows::Management::Update::WindowsUpdateApprovalData const& approvalData) const;
-        WINRT_IMPL_AUTO(void) RevokeWindowsUpdateApproval(param::hstring const& updateId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) GetUpdates() const;
+        auto StartAdministratorScan() const;
+        auto ApproveWindowsUpdateAction(param::hstring const& updateId, param::hstring const& action) const;
+        auto RevokeWindowsUpdateActionApproval(param::hstring const& updateId, param::hstring const& action) const;
+        auto ApproveWindowsUpdate(param::hstring const& updateId, winrt::Windows::Management::Update::WindowsUpdateApprovalData const& approvalData) const;
+        auto RevokeWindowsUpdateApproval(param::hstring const& updateId) const;
+        auto GetUpdates() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateAdministrator>
     {
@@ -576,12 +574,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult) GetRegisteredAdministrator(param::hstring const& organizationName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) RegisterForAdministration(param::hstring const& organizationName, winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) UnregisterForAdministration(param::hstring const& organizationName) const;
-        WINRT_IMPL_AUTO(hstring) GetRegisteredAdministratorName() const;
-        WINRT_IMPL_AUTO(hstring) RequestRestart(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions const& restartOptions) const;
-        WINRT_IMPL_AUTO(void) CancelRestartRequest(param::hstring const& requestRestartToken) const;
+        auto GetRegisteredAdministrator(param::hstring const& organizationName) const;
+        auto RegisterForAdministration(param::hstring const& organizationName, winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions const& options) const;
+        auto UnregisterForAdministration(param::hstring const& organizationName) const;
+        auto GetRegisteredAdministratorName() const;
+        auto RequestRestart(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions const& restartOptions) const;
+        auto CancelRestartRequest(param::hstring const& requestRestartToken) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics>
     {
@@ -590,16 +588,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateApprovalData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) Seeker() const;
-        WINRT_IMPL_AUTO(void) Seeker(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) AllowDownloadOnMetered() const;
-        WINRT_IMPL_AUTO(void) AllowDownloadOnMetered(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) ComplianceDeadlineInDays() const;
-        WINRT_IMPL_AUTO(void) ComplianceDeadlineInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) ComplianceGracePeriodInDays() const;
-        WINRT_IMPL_AUTO(void) ComplianceGracePeriodInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) OptOutOfAutoReboot() const;
-        WINRT_IMPL_AUTO(void) OptOutOfAutoReboot(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto Seeker() const;
+        auto Seeker(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto AllowDownloadOnMetered() const;
+        auto AllowDownloadOnMetered(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto ComplianceDeadlineInDays() const;
+        auto ComplianceDeadlineInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto ComplianceGracePeriodInDays() const;
+        auto ComplianceGracePeriodInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto OptOutOfAutoReboot() const;
+        auto OptOutOfAutoReboot(winrt::Windows::Foundation::IReference<bool> const& value) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateApprovalData>
     {
@@ -608,8 +606,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason) Reason() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) Timestamp() const;
+        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] auto Timestamp() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredInfo>
     {
@@ -618,8 +616,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) Update() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason) Reason() const;
+        [[nodiscard]] auto Update() const;
+        [[nodiscard]] auto Reason() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredReasonChangedEventArgs>
     {
@@ -628,8 +626,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateGetAdministratorResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministrator) Administrator() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) Status() const;
+        [[nodiscard]] auto Administrator() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateGetAdministratorResult>
     {
@@ -638,14 +636,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UpdateId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) MoreInfoUrl() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Category() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Operation() const;
+        [[nodiscard]] auto ProviderId() const;
+        [[nodiscard]] auto UpdateId() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Description() const;
+        [[nodiscard]] auto MoreInfoUrl() const;
+        [[nodiscard]] auto Category() const;
+        [[nodiscard]] auto Operation() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateItem>
     {
@@ -654,37 +652,37 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateManager
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ScanningStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ScanningStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ScanningStateChanged_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_ScanningStateChanged>;
         [[nodiscard]] ScanningStateChanged_revoker ScanningStateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScanningStateChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) WorkingStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ScanningStateChanged(winrt::event_token const& token) const noexcept;
+        auto WorkingStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using WorkingStateChanged_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_WorkingStateChanged>;
         [[nodiscard]] WorkingStateChanged_revoker WorkingStateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) WorkingStateChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs> const& handler) const;
+        auto WorkingStateChanged(winrt::event_token const& token) const noexcept;
+        auto ProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs> const& handler) const;
         using ProgressChanged_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_ProgressChanged>;
         [[nodiscard]] ProgressChanged_revoker ProgressChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProgressChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) AttentionRequiredReasonChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs> const& handler) const;
+        auto ProgressChanged(winrt::event_token const& token) const noexcept;
+        auto AttentionRequiredReasonChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs> const& handler) const;
         using AttentionRequiredReasonChanged_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_AttentionRequiredReasonChanged>;
         [[nodiscard]] AttentionRequiredReasonChanged_revoker AttentionRequiredReasonChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) AttentionRequiredReasonChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ActionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs> const& handler) const;
+        auto AttentionRequiredReasonChanged(winrt::event_token const& token) const noexcept;
+        auto ActionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs> const& handler) const;
         using ActionCompleted_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_ActionCompleted>;
         [[nodiscard]] ActionCompleted_revoker ActionCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ActionCompleted(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ScanCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs> const& handler) const;
+        auto ActionCompleted(winrt::event_token const& token) const noexcept;
+        auto ScanCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs> const& handler) const;
         using ScanCompleted_revoker = impl::event_revoker<winrt::Windows::Management::Update::IWindowsUpdateManager, &impl::abi_t<winrt::Windows::Management::Update::IWindowsUpdateManager>::remove_ScanCompleted>;
         [[nodiscard]] ScanCompleted_revoker ScanCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ScanCompleted(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsScanning() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWorking() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) LastSuccessfulScanTimestamp() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) GetApplicableUpdates() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>) GetMostRecentCompletedUpdates(int32_t count) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>>) GetMostRecentCompletedUpdatesAsync(int32_t count) const;
-        WINRT_IMPL_AUTO(void) StartScan(bool userInitiated) const;
+        auto ScanCompleted(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto IsScanning() const;
+        [[nodiscard]] auto IsWorking() const;
+        [[nodiscard]] auto LastSuccessfulScanTimestamp() const;
+        auto GetApplicableUpdates() const;
+        auto GetMostRecentCompletedUpdates(int32_t count) const;
+        auto GetMostRecentCompletedUpdatesAsync(int32_t count) const;
+        auto StartScan(bool userInitiated) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateManager>
     {
@@ -693,7 +691,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateManagerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateManager) CreateInstance(param::hstring const& clientId) const;
+        auto CreateInstance(param::hstring const& clientId) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateManagerFactory>
     {
@@ -702,8 +700,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) Update() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionProgress) ActionProgress() const;
+        [[nodiscard]] auto Update() const;
+        [[nodiscard]] auto ActionProgress() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateProgressChangedEventArgs>
     {
@@ -712,20 +710,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) MoreInfoUrl() const;
-        WINRT_IMPL_AUTO(void) MoreInfoUrl(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ComplianceDeadlineInDays() const;
-        WINRT_IMPL_AUTO(void) ComplianceDeadlineInDays(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ComplianceGracePeriodInDays() const;
-        WINRT_IMPL_AUTO(void) ComplianceGracePeriodInDays(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OrganizationName() const;
-        WINRT_IMPL_AUTO(void) OrganizationName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OptOutOfAutoReboot() const;
-        WINRT_IMPL_AUTO(void) OptOutOfAutoReboot(bool value) const;
+        [[nodiscard]] auto Title() const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto MoreInfoUrl() const;
+        auto MoreInfoUrl(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto ComplianceDeadlineInDays() const;
+        auto ComplianceDeadlineInDays(int32_t value) const;
+        [[nodiscard]] auto ComplianceGracePeriodInDays() const;
+        auto ComplianceGracePeriodInDays(int32_t value) const;
+        [[nodiscard]] auto OrganizationName() const;
+        auto OrganizationName(param::hstring const& value) const;
+        [[nodiscard]] auto OptOutOfAutoReboot() const;
+        auto OptOutOfAutoReboot(bool value) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions>
     {
@@ -734,7 +732,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptionsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions) CreateInstance(param::hstring const& title, param::hstring const& description, winrt::Windows::Foundation::Uri const& moreInfoUrl, int32_t complianceDeadlineInDays, int32_t complianceGracePeriodInDays) const;
+        auto CreateInstance(param::hstring const& title, param::hstring const& description, winrt::Windows::Foundation::Uri const& moreInfoUrl, int32_t complianceDeadlineInDays, int32_t complianceGracePeriodInDays) const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptionsFactory>
     {
@@ -743,10 +741,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Succeeded() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) Updates() const;
+        [[nodiscard]] auto ProviderId() const;
+        [[nodiscard]] auto Succeeded() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Updates() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdateScanCompletedEventArgs>
     {

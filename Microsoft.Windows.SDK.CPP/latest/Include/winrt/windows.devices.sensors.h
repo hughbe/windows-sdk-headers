@@ -410,21 +410,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IAdaptiveDimmingOptions;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions ABI::Windows::Devices::Sensors::IAdaptiveDimmingOptions
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_FWD_DEFINED__
 namespace ABI {
@@ -1070,21 +1055,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceFeatures2;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2 ABI::Windows::Devices::Sensors::IHumanPresenceFeatures2
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
 namespace ABI {
@@ -1099,36 +1069,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor ABI::Windows::Devices::Sensors::IHumanPresenceSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSensor2;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2 ABI::Windows::Devices::Sensors::IHumanPresenceSensor2
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSensorExtension;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension ABI::Windows::Devices::Sensors::IHumanPresenceSensorExtension
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
@@ -1145,21 +1085,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSensorReading2;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2 ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading2
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
 namespace ABI {
@@ -1174,21 +1099,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSensorReadingUpdate;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate ABI::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
@@ -1205,21 +1115,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSensorStatics2;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2 ABI::Windows::Devices::Sensors::IHumanPresenceSensorStatics2
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
 namespace ABI {
@@ -1234,21 +1129,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings ABI::Windows::Devices::Sensors::IHumanPresenceSettings
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IHumanPresenceSettings2;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2 ABI::Windows::Devices::Sensors::IHumanPresenceSettings2
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettingsStatics_FWD_DEFINED__
@@ -1624,21 +1504,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2 ABI::Windows::Devices::Sensors::ILightSensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface ILockOnLeaveOptions;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions ABI::Windows::Devices::Sensors::ILockOnLeaveOptions
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_FWD_DEFINED__
@@ -2329,21 +2194,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2 ABI::Windows::Devices::Sensors::ISimpleOrientationSensorStatics2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                interface IWakeOnApproachOptions;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions ABI::Windows::Devices::Sensors::IWakeOnApproachOptions
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -4481,115 +4331,6 @@ typedef IReference<UINT32> __FIReference_1_UINT32_t;
 #endif /* DEF___FIReference_1_UINT32_USE */
 
 
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                typedef enum HumanEngagement : int HumanEngagement;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-#ifndef DEF___FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_USE
-#define DEF___FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("148adf95-eb2c-5912-9c40-6dcec31357bd"))
-IReference<enum ABI::Windows::Devices::Sensors::HumanEngagement> : IReference_impl<enum ABI::Windows::Devices::Sensors::HumanEngagement>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IReference`1<Windows.Devices.Sensors.HumanEngagement>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IReference<enum ABI::Windows::Devices::Sensors::HumanEngagement> __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_t;
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement ABI::Windows::Foundation::__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                typedef enum HumanPresence : int HumanPresence;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-#ifndef DEF___FIReference_1_Windows__CDevices__CSensors__CHumanPresence_USE
-#define DEF___FIReference_1_Windows__CDevices__CSensors__CHumanPresence_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("bacd473d-348f-54d0-95c0-ffd5379f8b7f"))
-IReference<enum ABI::Windows::Devices::Sensors::HumanPresence> : IReference_impl<enum ABI::Windows::Devices::Sensors::HumanPresence>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IReference`1<Windows.Devices.Sensors.HumanPresence>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IReference<enum ABI::Windows::Devices::Sensors::HumanPresence> __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_t;
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence ABI::Windows::Foundation::__FIReference_1_Windows__CDevices__CSensors__CHumanPresence_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIReference_1_Windows__CDevices__CSensors__CHumanPresence_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Foundation {
-            typedef struct DateTime DateTime;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
-#define DEF___FIReference_1_Windows__CFoundation__CDateTime_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("5541d8a7-497c-5aa4-86fc-7713adbf2a2c"))
-IReference<struct ABI::Windows::Foundation::DateTime> : IReference_impl<struct ABI::Windows::Foundation::DateTime>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IReference`1<Windows.Foundation.DateTime>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IReference<struct ABI::Windows::Foundation::DateTime> __FIReference_1_Windows__CFoundation__CDateTime_t;
-#define __FIReference_1_Windows__CFoundation__CDateTime ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CDateTime_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIReference_1_Windows__CFoundation__CDateTime_USE */
-
-#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
-
 #if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -5261,6 +5002,14 @@ typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::SimpleOrientationSens
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            typedef struct DateTime DateTime;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
+
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 namespace ABI {
@@ -5334,6 +5083,26 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Sensors {
+                typedef enum HumanEngagement : int HumanEngagement;
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Sensors {
+                typedef enum HumanPresence : int HumanPresence;
+            } /* Sensors */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Sensors {
                 typedef enum MagnetometerAccuracy : int MagnetometerAccuracy;
             } /* Sensors */
         } /* Devices */
@@ -5395,16 +5164,6 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class AccelerometerReading;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                class AdaptiveDimmingOptions;
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -5494,16 +5253,6 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Sensors {
-                class HumanPresenceSensorReadingUpdate;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
                 class InclinometerDataThreshold;
             } /* Sensors */
         } /* Devices */
@@ -5535,16 +5284,6 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class LightSensorReading;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                class LockOnLeaveOptions;
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -5635,16 +5374,6 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 class SensorRotationMatrix;
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                class WakeOnApproachOptions;
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -5980,7 +5709,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometer = _uuidof(IAccelerometer);
+                MIDL_CONST_ID IID& IID_IAccelerometer = __uuidof(IAccelerometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6019,7 +5748,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometer2 = _uuidof(IAccelerometer2);
+                MIDL_CONST_ID IID& IID_IAccelerometer2 = __uuidof(IAccelerometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6061,7 +5790,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometer3 = _uuidof(IAccelerometer3);
+                MIDL_CONST_ID IID& IID_IAccelerometer3 = __uuidof(IAccelerometer3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6097,7 +5826,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometer4 = _uuidof(IAccelerometer4);
+                MIDL_CONST_ID IID& IID_IAccelerometer4 = __uuidof(IAccelerometer4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6133,7 +5862,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometer5 = _uuidof(IAccelerometer5);
+                MIDL_CONST_ID IID& IID_IAccelerometer5 = __uuidof(IAccelerometer5);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6184,7 +5913,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerDataThreshold = _uuidof(IAccelerometerDataThreshold);
+                MIDL_CONST_ID IID& IID_IAccelerometerDataThreshold = __uuidof(IAccelerometerDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6220,7 +5949,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerDeviceId = _uuidof(IAccelerometerDeviceId);
+                MIDL_CONST_ID IID& IID_IAccelerometerDeviceId = __uuidof(IAccelerometerDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6265,7 +5994,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerReading = _uuidof(IAccelerometerReading);
+                MIDL_CONST_ID IID& IID_IAccelerometerReading = __uuidof(IAccelerometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6304,7 +6033,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerReading2 = _uuidof(IAccelerometerReading2);
+                MIDL_CONST_ID IID& IID_IAccelerometerReading2 = __uuidof(IAccelerometerReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6340,7 +6069,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerReadingChangedEventArgs = _uuidof(IAccelerometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IAccelerometerReadingChangedEventArgs = __uuidof(IAccelerometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6376,7 +6105,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerShakenEventArgs = _uuidof(IAccelerometerShakenEventArgs);
+                MIDL_CONST_ID IID& IID_IAccelerometerShakenEventArgs = __uuidof(IAccelerometerShakenEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6412,7 +6141,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerStatics = _uuidof(IAccelerometerStatics);
+                MIDL_CONST_ID IID& IID_IAccelerometerStatics = __uuidof(IAccelerometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6449,7 +6178,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerStatics2 = _uuidof(IAccelerometerStatics2);
+                MIDL_CONST_ID IID& IID_IAccelerometerStatics2 = __uuidof(IAccelerometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6490,7 +6219,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAccelerometerStatics3 = _uuidof(IAccelerometerStatics3);
+                MIDL_CONST_ID IID& IID_IAccelerometerStatics3 = __uuidof(IAccelerometerStatics3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6548,7 +6277,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensor = _uuidof(IActivitySensor);
+                MIDL_CONST_ID IID& IID_IActivitySensor = __uuidof(IActivitySensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6590,7 +6319,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorReading = _uuidof(IActivitySensorReading);
+                MIDL_CONST_ID IID& IID_IActivitySensorReading = __uuidof(IActivitySensorReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6626,7 +6355,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorReadingChangeReport = _uuidof(IActivitySensorReadingChangeReport);
+                MIDL_CONST_ID IID& IID_IActivitySensorReadingChangeReport = __uuidof(IActivitySensorReadingChangeReport);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6662,7 +6391,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorReadingChangedEventArgs = _uuidof(IActivitySensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IActivitySensorReadingChangedEventArgs = __uuidof(IActivitySensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6714,7 +6443,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorStatics = _uuidof(IActivitySensorStatics);
+                MIDL_CONST_ID IID& IID_IActivitySensorStatics = __uuidof(IActivitySensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6750,7 +6479,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorTriggerDetails = _uuidof(IActivitySensorTriggerDetails);
+                MIDL_CONST_ID IID& IID_IActivitySensorTriggerDetails = __uuidof(IActivitySensorTriggerDetails);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6759,45 +6488,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IAdaptiveDimmingOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.AdaptiveDimmingOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IAdaptiveDimmingOptions[] = L"Windows.Devices.Sensors.IAdaptiveDimmingOptions";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("d3213cf7-89b5-5732-b2a0-aefe324f54e6")
-                IAdaptiveDimmingOptions : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowWhenExternalDisplayConnected(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowWhenExternalDisplayConnected(
-                        boolean value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IAdaptiveDimmingOptions = _uuidof(IAdaptiveDimmingOptions);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -6844,7 +6534,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeter = _uuidof(IAltimeter);
+                MIDL_CONST_ID IID& IID_IAltimeter = __uuidof(IAltimeter);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6886,7 +6576,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeter2 = _uuidof(IAltimeter2);
+                MIDL_CONST_ID IID& IID_IAltimeter2 = __uuidof(IAltimeter2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6925,7 +6615,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeterReading = _uuidof(IAltimeterReading);
+                MIDL_CONST_ID IID& IID_IAltimeterReading = __uuidof(IAltimeterReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -6964,7 +6654,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeterReading2 = _uuidof(IAltimeterReading2);
+                MIDL_CONST_ID IID& IID_IAltimeterReading2 = __uuidof(IAltimeterReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7000,7 +6690,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeterReadingChangedEventArgs = _uuidof(IAltimeterReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IAltimeterReadingChangedEventArgs = __uuidof(IAltimeterReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7036,7 +6726,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAltimeterStatics = _uuidof(IAltimeterStatics);
+                MIDL_CONST_ID IID& IID_IAltimeterStatics = __uuidof(IAltimeterStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7091,7 +6781,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometer = _uuidof(IBarometer);
+                MIDL_CONST_ID IID& IID_IBarometer = __uuidof(IBarometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7133,7 +6823,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometer2 = _uuidof(IBarometer2);
+                MIDL_CONST_ID IID& IID_IBarometer2 = __uuidof(IBarometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7169,7 +6859,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometer3 = _uuidof(IBarometer3);
+                MIDL_CONST_ID IID& IID_IBarometer3 = __uuidof(IBarometer3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7208,7 +6898,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerDataThreshold = _uuidof(IBarometerDataThreshold);
+                MIDL_CONST_ID IID& IID_IBarometerDataThreshold = __uuidof(IBarometerDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7247,7 +6937,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerReading = _uuidof(IBarometerReading);
+                MIDL_CONST_ID IID& IID_IBarometerReading = __uuidof(IBarometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7286,7 +6976,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerReading2 = _uuidof(IBarometerReading2);
+                MIDL_CONST_ID IID& IID_IBarometerReading2 = __uuidof(IBarometerReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7322,7 +7012,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerReadingChangedEventArgs = _uuidof(IBarometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IBarometerReadingChangedEventArgs = __uuidof(IBarometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7358,7 +7048,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerStatics = _uuidof(IBarometerStatics);
+                MIDL_CONST_ID IID& IID_IBarometerStatics = __uuidof(IBarometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7398,7 +7088,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBarometerStatics2 = _uuidof(IBarometerStatics2);
+                MIDL_CONST_ID IID& IID_IBarometerStatics2 = __uuidof(IBarometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7450,7 +7140,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompass = _uuidof(ICompass);
+                MIDL_CONST_ID IID& IID_ICompass = __uuidof(ICompass);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7489,7 +7179,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompass2 = _uuidof(ICompass2);
+                MIDL_CONST_ID IID& IID_ICompass2 = __uuidof(ICompass2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7531,7 +7221,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompass3 = _uuidof(ICompass3);
+                MIDL_CONST_ID IID& IID_ICompass3 = __uuidof(ICompass3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7567,7 +7257,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompass4 = _uuidof(ICompass4);
+                MIDL_CONST_ID IID& IID_ICompass4 = __uuidof(ICompass4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7606,7 +7296,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassDataThreshold = _uuidof(ICompassDataThreshold);
+                MIDL_CONST_ID IID& IID_ICompassDataThreshold = __uuidof(ICompassDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7642,7 +7332,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassDeviceId = _uuidof(ICompassDeviceId);
+                MIDL_CONST_ID IID& IID_ICompassDeviceId = __uuidof(ICompassDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7684,7 +7374,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassReading = _uuidof(ICompassReading);
+                MIDL_CONST_ID IID& IID_ICompassReading = __uuidof(ICompassReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7723,7 +7413,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassReading2 = _uuidof(ICompassReading2);
+                MIDL_CONST_ID IID& IID_ICompassReading2 = __uuidof(ICompassReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7759,7 +7449,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassReadingChangedEventArgs = _uuidof(ICompassReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_ICompassReadingChangedEventArgs = __uuidof(ICompassReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7795,7 +7485,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassReadingHeadingAccuracy = _uuidof(ICompassReadingHeadingAccuracy);
+                MIDL_CONST_ID IID& IID_ICompassReadingHeadingAccuracy = __uuidof(ICompassReadingHeadingAccuracy);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7831,7 +7521,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassStatics = _uuidof(ICompassStatics);
+                MIDL_CONST_ID IID& IID_ICompassStatics = __uuidof(ICompassStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7871,7 +7561,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompassStatics2 = _uuidof(ICompassStatics2);
+                MIDL_CONST_ID IID& IID_ICompassStatics2 = __uuidof(ICompassStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7923,7 +7613,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometer = _uuidof(IGyrometer);
+                MIDL_CONST_ID IID& IID_IGyrometer = __uuidof(IGyrometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -7962,7 +7652,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometer2 = _uuidof(IGyrometer2);
+                MIDL_CONST_ID IID& IID_IGyrometer2 = __uuidof(IGyrometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8004,7 +7694,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometer3 = _uuidof(IGyrometer3);
+                MIDL_CONST_ID IID& IID_IGyrometer3 = __uuidof(IGyrometer3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8040,7 +7730,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometer4 = _uuidof(IGyrometer4);
+                MIDL_CONST_ID IID& IID_IGyrometer4 = __uuidof(IGyrometer4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8091,7 +7781,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerDataThreshold = _uuidof(IGyrometerDataThreshold);
+                MIDL_CONST_ID IID& IID_IGyrometerDataThreshold = __uuidof(IGyrometerDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8127,7 +7817,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerDeviceId = _uuidof(IGyrometerDeviceId);
+                MIDL_CONST_ID IID& IID_IGyrometerDeviceId = __uuidof(IGyrometerDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8172,7 +7862,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerReading = _uuidof(IGyrometerReading);
+                MIDL_CONST_ID IID& IID_IGyrometerReading = __uuidof(IGyrometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8211,7 +7901,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerReading2 = _uuidof(IGyrometerReading2);
+                MIDL_CONST_ID IID& IID_IGyrometerReading2 = __uuidof(IGyrometerReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8247,7 +7937,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerReadingChangedEventArgs = _uuidof(IGyrometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IGyrometerReadingChangedEventArgs = __uuidof(IGyrometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8283,7 +7973,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerStatics = _uuidof(IGyrometerStatics);
+                MIDL_CONST_ID IID& IID_IGyrometerStatics = __uuidof(IGyrometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8323,7 +8013,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGyrometerStatics2 = _uuidof(IGyrometerStatics2);
+                MIDL_CONST_ID IID& IID_IGyrometerStatics2 = __uuidof(IGyrometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8365,7 +8055,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHingeAngleReading = _uuidof(IHingeAngleReading);
+                MIDL_CONST_ID IID& IID_IHingeAngleReading = __uuidof(IHingeAngleReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8420,7 +8110,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHingeAngleSensor = _uuidof(IHingeAngleSensor);
+                MIDL_CONST_ID IID& IID_IHingeAngleSensor = __uuidof(IHingeAngleSensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8456,7 +8146,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHingeAngleSensorReadingChangedEventArgs = _uuidof(IHingeAngleSensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IHingeAngleSensorReadingChangedEventArgs = __uuidof(IHingeAngleSensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8504,7 +8194,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHingeAngleSensorStatics = _uuidof(IHingeAngleSensorStatics);
+                MIDL_CONST_ID IID& IID_IHingeAngleSensorStatics = __uuidof(IHingeAngleSensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8547,15 +8237,12 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE get_IsLockOnLeaveSupported(
                         boolean* value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-                    DEPRECATED("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
                     virtual HRESULT STDMETHODCALLTYPE get_IsAttentionAwareDimmingSupported(
                         boolean* value
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceFeatures = _uuidof(IHumanPresenceFeatures);
+                MIDL_CONST_ID IID& IID_IHumanPresenceFeatures = __uuidof(IHumanPresenceFeatures);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8563,42 +8250,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceFeatures2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceFeatures
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceFeatures2[] = L"Windows.Devices.Sensors.IHumanPresenceFeatures2";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("08a9cdda-d929-5ec2-81e2-940bafa089cf")
-                IHumanPresenceFeatures2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsAdaptiveDimmingSupported(
-                        boolean* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceFeatures2 = _uuidof(IHumanPresenceFeatures2);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -8643,7 +8294,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensor = _uuidof(IHumanPresenceSensor);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSensor = __uuidof(IHumanPresenceSensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8651,90 +8302,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensor2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensor
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensor2[] = L"Windows.Devices.Sensors.IHumanPresenceSensor2";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("f8833779-65fe-541a-b9d6-1e474a485e7a")
-                IHumanPresenceSensor2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsPresenceSupported(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsEngagementSupported(
-                        boolean* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensor2 = _uuidof(IHumanPresenceSensor2);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtension
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtension[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtension";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("3e526a71-2d1d-5d43-8a8e-a434a8242ef0")
-                IHumanPresenceSensorExtension : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE Initialize(
-                        HSTRING deviceId
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE ProcessReading(
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* reading,
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE ProcessReadingTimeoutExpired(
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* reading
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE Uninitialize(void) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE Reset(void) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorExtension = _uuidof(IHumanPresenceSensorExtension);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -8772,7 +8339,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorReading = _uuidof(IHumanPresenceSensorReading);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSensorReading = __uuidof(IHumanPresenceSensorReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8780,42 +8347,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorReading2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensorReading
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorReading2[] = L"Windows.Devices.Sensors.IHumanPresenceSensorReading2";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("c4f0e950-3bff-53d6-a0f8-514ea3705c66")
-                IHumanPresenceSensorReading2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Properties(
-                        __FIMapView_2_HSTRING_IInspectable** value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorReading2 = _uuidof(IHumanPresenceSensorReading2);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -8844,7 +8375,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorReadingChangedEventArgs = _uuidof(IHumanPresenceSensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSensorReadingChangedEventArgs = __uuidof(IHumanPresenceSensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8852,63 +8383,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate[] = L"Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("42419c77-6d2f-55a0-9e01-c9cbe7b2d6df")
-                IHumanPresenceSensorReadingUpdate : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
-                        __FIReference_1_Windows__CFoundation__CDateTime** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Timestamp(
-                        __FIReference_1_Windows__CFoundation__CDateTime* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Presence(
-                        __FIReference_1_Windows__CDevices__CSensors__CHumanPresence** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Presence(
-                        __FIReference_1_Windows__CDevices__CSensors__CHumanPresence* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Engagement(
-                        __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Engagement(
-                        __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_DistanceInMillimeters(
-                        __FIReference_1_UINT32** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_DistanceInMillimeters(
-                        __FIReference_1_UINT32* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorReadingUpdate = _uuidof(IHumanPresenceSensorReadingUpdate);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -8944,7 +8418,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorStatics = _uuidof(IHumanPresenceSensorStatics);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSensorStatics = __uuidof(IHumanPresenceSensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -8952,46 +8426,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorStatics2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensor
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorStatics2[] = L"Windows.Devices.Sensors.IHumanPresenceSensorStatics2";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("5de35843-d260-5a87-995e-ace91326e1c4")
-                IHumanPresenceSensorStatics2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE FromId(
-                        HSTRING sensorId,
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensor** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensor** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorStatics2 = _uuidof(IHumanPresenceSensorStatics2);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -9051,21 +8485,15 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE put_LockOnLeaveTimeout(
                         ABI::Windows::Foundation::TimeSpan value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-                    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
                     virtual HRESULT STDMETHODCALLTYPE get_IsAttentionAwareDimmingEnabled(
                         boolean* value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-                    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
                     virtual HRESULT STDMETHODCALLTYPE put_IsAttentionAwareDimmingEnabled(
                         boolean value
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSettings = _uuidof(IHumanPresenceSettings);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSettings = __uuidof(IHumanPresenceSettings);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9073,54 +8501,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSettings2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSettings
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSettings2[] = L"Windows.Devices.Sensors.IHumanPresenceSettings2";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("a26f705e-8696-5eb4-b9e1-26a508de1cd4")
-                IHumanPresenceSettings2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsAdaptiveDimmingEnabled(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_IsAdaptiveDimmingEnabled(
-                        boolean value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_WakeOptions(
-                        ABI::Windows::Devices::Sensors::IWakeOnApproachOptions** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_DimmingOptions(
-                        ABI::Windows::Devices::Sensors::IAdaptiveDimmingOptions** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_LockOptions(
-                        ABI::Windows::Devices::Sensors::ILockOnLeaveOptions** value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSettings2 = _uuidof(IHumanPresenceSettings2);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -9177,7 +8557,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSettingsStatics = _uuidof(IHumanPresenceSettingsStatics);
+                MIDL_CONST_ID IID& IID_IHumanPresenceSettingsStatics = __uuidof(IHumanPresenceSettingsStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9229,7 +8609,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometer = _uuidof(IInclinometer);
+                MIDL_CONST_ID IID& IID_IInclinometer = __uuidof(IInclinometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9271,7 +8651,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometer2 = _uuidof(IInclinometer2);
+                MIDL_CONST_ID IID& IID_IInclinometer2 = __uuidof(IInclinometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9313,7 +8693,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometer3 = _uuidof(IInclinometer3);
+                MIDL_CONST_ID IID& IID_IInclinometer3 = __uuidof(IInclinometer3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9349,7 +8729,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometer4 = _uuidof(IInclinometer4);
+                MIDL_CONST_ID IID& IID_IInclinometer4 = __uuidof(IInclinometer4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9400,7 +8780,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerDataThreshold = _uuidof(IInclinometerDataThreshold);
+                MIDL_CONST_ID IID& IID_IInclinometerDataThreshold = __uuidof(IInclinometerDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9436,7 +8816,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerDeviceId = _uuidof(IInclinometerDeviceId);
+                MIDL_CONST_ID IID& IID_IInclinometerDeviceId = __uuidof(IInclinometerDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9481,7 +8861,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerReading = _uuidof(IInclinometerReading);
+                MIDL_CONST_ID IID& IID_IInclinometerReading = __uuidof(IInclinometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9520,7 +8900,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerReading2 = _uuidof(IInclinometerReading2);
+                MIDL_CONST_ID IID& IID_IInclinometerReading2 = __uuidof(IInclinometerReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9556,7 +8936,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerReadingChangedEventArgs = _uuidof(IInclinometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IInclinometerReadingChangedEventArgs = __uuidof(IInclinometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9592,7 +8972,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerReadingYawAccuracy = _uuidof(IInclinometerReadingYawAccuracy);
+                MIDL_CONST_ID IID& IID_IInclinometerReadingYawAccuracy = __uuidof(IInclinometerReadingYawAccuracy);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9628,7 +9008,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerStatics = _uuidof(IInclinometerStatics);
+                MIDL_CONST_ID IID& IID_IInclinometerStatics = __uuidof(IInclinometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9664,7 +9044,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerStatics2 = _uuidof(IInclinometerStatics2);
+                MIDL_CONST_ID IID& IID_IInclinometerStatics2 = __uuidof(IInclinometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9701,7 +9081,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerStatics3 = _uuidof(IInclinometerStatics3);
+                MIDL_CONST_ID IID& IID_IInclinometerStatics3 = __uuidof(IInclinometerStatics3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9742,7 +9122,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IInclinometerStatics4 = _uuidof(IInclinometerStatics4);
+                MIDL_CONST_ID IID& IID_IInclinometerStatics4 = __uuidof(IInclinometerStatics4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9794,7 +9174,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensor = _uuidof(ILightSensor);
+                MIDL_CONST_ID IID& IID_ILightSensor = __uuidof(ILightSensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9836,7 +9216,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensor2 = _uuidof(ILightSensor2);
+                MIDL_CONST_ID IID& IID_ILightSensor2 = __uuidof(ILightSensor2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9872,7 +9252,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensor3 = _uuidof(ILightSensor3);
+                MIDL_CONST_ID IID& IID_ILightSensor3 = __uuidof(ILightSensor3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9917,7 +9297,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorDataThreshold = _uuidof(ILightSensorDataThreshold);
+                MIDL_CONST_ID IID& IID_ILightSensorDataThreshold = __uuidof(ILightSensorDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9953,7 +9333,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorDeviceId = _uuidof(ILightSensorDeviceId);
+                MIDL_CONST_ID IID& IID_ILightSensorDeviceId = __uuidof(ILightSensorDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -9992,7 +9372,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorReading = _uuidof(ILightSensorReading);
+                MIDL_CONST_ID IID& IID_ILightSensorReading = __uuidof(ILightSensorReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10031,7 +9411,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorReading2 = _uuidof(ILightSensorReading2);
+                MIDL_CONST_ID IID& IID_ILightSensorReading2 = __uuidof(ILightSensorReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10067,7 +9447,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorReadingChangedEventArgs = _uuidof(ILightSensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_ILightSensorReadingChangedEventArgs = __uuidof(ILightSensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10103,7 +9483,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorStatics = _uuidof(ILightSensorStatics);
+                MIDL_CONST_ID IID& IID_ILightSensorStatics = __uuidof(ILightSensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10143,7 +9523,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILightSensorStatics2 = _uuidof(ILightSensorStatics2);
+                MIDL_CONST_ID IID& IID_ILightSensorStatics2 = __uuidof(ILightSensorStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10152,45 +9532,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-/*
- *
- * Interface Windows.Devices.Sensors.ILockOnLeaveOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.LockOnLeaveOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_ILockOnLeaveOptions[] = L"Windows.Devices.Sensors.ILockOnLeaveOptions";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("3c6bf8bd-04c1-5829-8d4e-70521755b8be")
-                ILockOnLeaveOptions : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowWhenExternalDisplayConnected(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowWhenExternalDisplayConnected(
-                        boolean value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_ILockOnLeaveOptions = _uuidof(ILockOnLeaveOptions);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -10234,7 +9575,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometer = _uuidof(IMagnetometer);
+                MIDL_CONST_ID IID& IID_IMagnetometer = __uuidof(IMagnetometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10273,7 +9614,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometer2 = _uuidof(IMagnetometer2);
+                MIDL_CONST_ID IID& IID_IMagnetometer2 = __uuidof(IMagnetometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10315,7 +9656,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometer3 = _uuidof(IMagnetometer3);
+                MIDL_CONST_ID IID& IID_IMagnetometer3 = __uuidof(IMagnetometer3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10351,7 +9692,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometer4 = _uuidof(IMagnetometer4);
+                MIDL_CONST_ID IID& IID_IMagnetometer4 = __uuidof(IMagnetometer4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10402,7 +9743,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerDataThreshold = _uuidof(IMagnetometerDataThreshold);
+                MIDL_CONST_ID IID& IID_IMagnetometerDataThreshold = __uuidof(IMagnetometerDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10438,7 +9779,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerDeviceId = _uuidof(IMagnetometerDeviceId);
+                MIDL_CONST_ID IID& IID_IMagnetometerDeviceId = __uuidof(IMagnetometerDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10486,7 +9827,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerReading = _uuidof(IMagnetometerReading);
+                MIDL_CONST_ID IID& IID_IMagnetometerReading = __uuidof(IMagnetometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10525,7 +9866,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerReading2 = _uuidof(IMagnetometerReading2);
+                MIDL_CONST_ID IID& IID_IMagnetometerReading2 = __uuidof(IMagnetometerReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10561,7 +9902,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerReadingChangedEventArgs = _uuidof(IMagnetometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IMagnetometerReadingChangedEventArgs = __uuidof(IMagnetometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10597,7 +9938,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerStatics = _uuidof(IMagnetometerStatics);
+                MIDL_CONST_ID IID& IID_IMagnetometerStatics = __uuidof(IMagnetometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10637,7 +9978,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMagnetometerStatics2 = _uuidof(IMagnetometerStatics2);
+                MIDL_CONST_ID IID& IID_IMagnetometerStatics2 = __uuidof(IMagnetometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10689,7 +10030,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensor = _uuidof(IOrientationSensor);
+                MIDL_CONST_ID IID& IID_IOrientationSensor = __uuidof(IOrientationSensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10731,7 +10072,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensor2 = _uuidof(IOrientationSensor2);
+                MIDL_CONST_ID IID& IID_IOrientationSensor2 = __uuidof(IOrientationSensor2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10773,7 +10114,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensor3 = _uuidof(IOrientationSensor3);
+                MIDL_CONST_ID IID& IID_IOrientationSensor3 = __uuidof(IOrientationSensor3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10809,7 +10150,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorDeviceId = _uuidof(IOrientationSensorDeviceId);
+                MIDL_CONST_ID IID& IID_IOrientationSensorDeviceId = __uuidof(IOrientationSensorDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10851,7 +10192,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorReading = _uuidof(IOrientationSensorReading);
+                MIDL_CONST_ID IID& IID_IOrientationSensorReading = __uuidof(IOrientationSensorReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10890,7 +10231,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorReading2 = _uuidof(IOrientationSensorReading2);
+                MIDL_CONST_ID IID& IID_IOrientationSensorReading2 = __uuidof(IOrientationSensorReading2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10926,7 +10267,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorReadingChangedEventArgs = _uuidof(IOrientationSensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IOrientationSensorReadingChangedEventArgs = __uuidof(IOrientationSensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10962,7 +10303,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorReadingYawAccuracy = _uuidof(IOrientationSensorReadingYawAccuracy);
+                MIDL_CONST_ID IID& IID_IOrientationSensorReadingYawAccuracy = __uuidof(IOrientationSensorReadingYawAccuracy);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -10998,7 +10339,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorStatics = _uuidof(IOrientationSensorStatics);
+                MIDL_CONST_ID IID& IID_IOrientationSensorStatics = __uuidof(IOrientationSensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11034,7 +10375,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorStatics2 = _uuidof(IOrientationSensorStatics2);
+                MIDL_CONST_ID IID& IID_IOrientationSensorStatics2 = __uuidof(IOrientationSensorStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11076,7 +10417,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorStatics3 = _uuidof(IOrientationSensorStatics3);
+                MIDL_CONST_ID IID& IID_IOrientationSensorStatics3 = __uuidof(IOrientationSensorStatics3);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11122,7 +10463,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IOrientationSensorStatics4 = _uuidof(IOrientationSensorStatics4);
+                MIDL_CONST_ID IID& IID_IOrientationSensorStatics4 = __uuidof(IOrientationSensorStatics4);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11177,7 +10518,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometer = _uuidof(IPedometer);
+                MIDL_CONST_ID IID& IID_IPedometer = __uuidof(IPedometer);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11213,7 +10554,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometer2 = _uuidof(IPedometer2);
+                MIDL_CONST_ID IID& IID_IPedometer2 = __uuidof(IPedometer2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11251,7 +10592,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometerDataThresholdFactory = _uuidof(IPedometerDataThresholdFactory);
+                MIDL_CONST_ID IID& IID_IPedometerDataThresholdFactory = __uuidof(IPedometerDataThresholdFactory);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11296,7 +10637,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometerReading = _uuidof(IPedometerReading);
+                MIDL_CONST_ID IID& IID_IPedometerReading = __uuidof(IPedometerReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11332,7 +10673,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometerReadingChangedEventArgs = _uuidof(IPedometerReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IPedometerReadingChangedEventArgs = __uuidof(IPedometerReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11384,7 +10725,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometerStatics = _uuidof(IPedometerStatics);
+                MIDL_CONST_ID IID& IID_IPedometerStatics = __uuidof(IPedometerStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11421,7 +10762,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPedometerStatics2 = _uuidof(IPedometerStatics2);
+                MIDL_CONST_ID IID& IID_IPedometerStatics2 = __uuidof(IPedometerStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11476,7 +10817,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensor = _uuidof(IProximitySensor);
+                MIDL_CONST_ID IID& IID_IProximitySensor = __uuidof(IProximitySensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11513,7 +10854,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensorDataThresholdFactory = _uuidof(IProximitySensorDataThresholdFactory);
+                MIDL_CONST_ID IID& IID_IProximitySensorDataThresholdFactory = __uuidof(IProximitySensorDataThresholdFactory);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11555,7 +10896,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensorReading = _uuidof(IProximitySensorReading);
+                MIDL_CONST_ID IID& IID_IProximitySensorReading = __uuidof(IProximitySensorReading);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11591,7 +10932,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensorReadingChangedEventArgs = _uuidof(IProximitySensorReadingChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IProximitySensorReadingChangedEventArgs = __uuidof(IProximitySensorReadingChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11631,7 +10972,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensorStatics = _uuidof(IProximitySensorStatics);
+                MIDL_CONST_ID IID& IID_IProximitySensorStatics = __uuidof(IProximitySensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11668,7 +11009,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IProximitySensorStatics2 = _uuidof(IProximitySensorStatics2);
+                MIDL_CONST_ID IID& IID_IProximitySensorStatics2 = __uuidof(IProximitySensorStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11699,7 +11040,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorDataThreshold = _uuidof(ISensorDataThreshold);
+                MIDL_CONST_ID IID& IID_ISensorDataThreshold = __uuidof(ISensorDataThreshold);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11738,7 +11079,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorDataThresholdTriggerDetails = _uuidof(ISensorDataThresholdTriggerDetails);
+                MIDL_CONST_ID IID& IID_ISensorDataThresholdTriggerDetails = __uuidof(ISensorDataThresholdTriggerDetails);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11783,7 +11124,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorQuaternion = _uuidof(ISensorQuaternion);
+                MIDL_CONST_ID IID& IID_ISensorQuaternion = __uuidof(ISensorQuaternion);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11843,7 +11184,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorRotationMatrix = _uuidof(ISensorRotationMatrix);
+                MIDL_CONST_ID IID& IID_ISensorRotationMatrix = __uuidof(ISensorRotationMatrix);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11886,7 +11227,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensor = _uuidof(ISimpleOrientationSensor);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensor = __uuidof(ISimpleOrientationSensor);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11925,7 +11266,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensor2 = _uuidof(ISimpleOrientationSensor2);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensor2 = __uuidof(ISimpleOrientationSensor2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -11961,7 +11302,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensorDeviceId = _uuidof(ISimpleOrientationSensorDeviceId);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensorDeviceId = __uuidof(ISimpleOrientationSensorDeviceId);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -12000,7 +11341,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensorOrientationChangedEventArgs = _uuidof(ISimpleOrientationSensorOrientationChangedEventArgs);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensorOrientationChangedEventArgs = __uuidof(ISimpleOrientationSensorOrientationChangedEventArgs);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -12036,7 +11377,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensorStatics = _uuidof(ISimpleOrientationSensorStatics);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensorStatics = __uuidof(ISimpleOrientationSensorStatics);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -12076,7 +11417,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleOrientationSensorStatics2 = _uuidof(ISimpleOrientationSensorStatics2);
+                MIDL_CONST_ID IID& IID_ISimpleOrientationSensorStatics2 = __uuidof(ISimpleOrientationSensorStatics2);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
@@ -12088,59 +11429,14 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSen
 
 /*
  *
- * Interface Windows.Devices.Sensors.IWakeOnApproachOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.WakeOnApproachOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IWakeOnApproachOptions[] = L"Windows.Devices.Sensors.IWakeOnApproachOptions";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                MIDL_INTERFACE("f0b87ae7-7e1f-5ea5-814d-6b7e07defc2b")
-                IWakeOnApproachOptions : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowWhenExternalDisplayConnected(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowWhenExternalDisplayConnected(
-                        boolean value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_DisableWhenBatterySaverOn(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_DisableWhenBatterySaverOn(
-                        boolean value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IWakeOnApproachOptions = _uuidof(IWakeOnApproachOptions);
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Accelerometer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics3 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IAccelerometer ** Default Interface **
@@ -12355,25 +11651,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.AdaptiveDimmingOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IAdaptiveDimmingOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_AdaptiveDimmingOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_AdaptiveDimmingOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_AdaptiveDimmingOptions[] = L"Windows.Devices.Sensors.AdaptiveDimmingOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Altimeter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -12443,8 +11720,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IBarometer ** Default Interface **
@@ -12782,7 +12059,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceFeatures ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceFeatures2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12801,12 +12077,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IHumanPresenceSensorStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IHumanPresenceSensorStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSensor ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSensor2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -12828,7 +12102,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSensorReading ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSensorReading2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12861,30 +12134,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate[] = L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.HumanPresenceSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -12894,7 +12143,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSettings ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -12915,9 +12163,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -13094,32 +12342,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.LockOnLeaveOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.ILockOnLeaveOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_LockOnLeaveOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_LockOnLeaveOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_LockOnLeaveOptions[] = L"Windows.Devices.Sensors.LockOnLeaveOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Magnetometer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IMagnetometer ** Default Interface **
@@ -13209,10 +12438,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IOrientationSensor ** Default Interface **
@@ -13283,8 +12512,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IPedometer ** Default Interface **
@@ -13544,8 +12773,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.ISimpleOrientationSensor ** Default Interface **
@@ -13584,25 +12813,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_SimpleOrientationSensorOrientationChangedEventArgs[] = L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Devices.Sensors.WakeOnApproachOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IWakeOnApproachOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_WakeOnApproachOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_WakeOnApproachOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_WakeOnApproachOptions[] = L"Windows.Devices.Sensors.WakeOnApproachOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -13725,12 +12935,6 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorStatics __x
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIAltimeter_FWD_DEFINED__
@@ -13990,29 +13194,11 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures __x
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2 __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2 __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
@@ -14020,23 +13206,11 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadin
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2 __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
@@ -14044,23 +13218,11 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatic
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2 __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2 __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettingsStatics_FWD_DEFINED__
@@ -14211,12 +13373,6 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics __x_AB
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2 __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIMagnetometer_FWD_DEFINED__
@@ -14493,12 +13649,6 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorSt
 typedef interface __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2 __x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2;
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSensorStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions;
-
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -19382,204 +18532,6 @@ interface __FIReference_1_UINT32
 
 #endif // ____FIReference_1_UINT32_INTERFACE_DEFINED__
 
-typedef enum __x_ABI_CWindows_CDevices_CSensors_CHumanEngagement __x_ABI_CWindows_CDevices_CSensors_CHumanEngagement;
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_INTERFACE_DEFINED__)
-#define ____FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_INTERFACE_DEFINED__
-
-typedef interface __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIReference_1_Windows__CDevices__CSensors__CHumanEngagement;
-
-typedef struct __FIReference_1_Windows__CDevices__CSensors__CHumanEngagementVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* This,
-        enum __x_ABI_CWindows_CDevices_CSensors_CHumanEngagement* result);
-
-    END_INTERFACE
-} __FIReference_1_Windows__CDevices__CSensors__CHumanEngagementVtbl;
-
-interface __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement
-{
-    CONST_VTBL struct __FIReference_1_Windows__CDevices__CSensors__CHumanEngagementVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_get_Value(This, result) \
-    ((This)->lpVtbl->get_Value(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIReference_1_Windows__CDevices__CSensors__CHumanEngagement_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-typedef enum __x_ABI_CWindows_CDevices_CSensors_CHumanPresence __x_ABI_CWindows_CDevices_CSensors_CHumanPresence;
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____FIReference_1_Windows__CDevices__CSensors__CHumanPresence_INTERFACE_DEFINED__)
-#define ____FIReference_1_Windows__CDevices__CSensors__CHumanPresence_INTERFACE_DEFINED__
-
-typedef interface __FIReference_1_Windows__CDevices__CSensors__CHumanPresence __FIReference_1_Windows__CDevices__CSensors__CHumanPresence;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIReference_1_Windows__CDevices__CSensors__CHumanPresence;
-
-typedef struct __FIReference_1_Windows__CDevices__CSensors__CHumanPresenceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_Windows__CDevices__CSensors__CHumanPresence* This,
-        enum __x_ABI_CWindows_CDevices_CSensors_CHumanPresence* result);
-
-    END_INTERFACE
-} __FIReference_1_Windows__CDevices__CSensors__CHumanPresenceVtbl;
-
-interface __FIReference_1_Windows__CDevices__CSensors__CHumanPresence
-{
-    CONST_VTBL struct __FIReference_1_Windows__CDevices__CSensors__CHumanPresenceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIReference_1_Windows__CDevices__CSensors__CHumanPresence_get_Value(This, result) \
-    ((This)->lpVtbl->get_Value(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIReference_1_Windows__CDevices__CSensors__CHumanPresence_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
-
-#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
-#if !defined(____FIReference_1_Windows__CFoundation__CDateTime_INTERFACE_DEFINED__)
-#define ____FIReference_1_Windows__CFoundation__CDateTime_INTERFACE_DEFINED__
-
-typedef interface __FIReference_1_Windows__CFoundation__CDateTime __FIReference_1_Windows__CFoundation__CDateTime;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIReference_1_Windows__CFoundation__CDateTime;
-
-typedef struct __FIReference_1_Windows__CFoundation__CDateTimeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_Windows__CFoundation__CDateTime* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_Windows__CFoundation__CDateTime* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_Windows__CFoundation__CDateTime* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_Windows__CFoundation__CDateTime* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_Windows__CFoundation__CDateTime* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_Windows__CFoundation__CDateTime* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_Windows__CFoundation__CDateTime* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime* result);
-
-    END_INTERFACE
-} __FIReference_1_Windows__CFoundation__CDateTimeVtbl;
-
-interface __FIReference_1_Windows__CFoundation__CDateTime
-{
-    CONST_VTBL struct __FIReference_1_Windows__CFoundation__CDateTimeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIReference_1_Windows__CFoundation__CDateTime_get_Value(This, result) \
-    ((This)->lpVtbl->get_Value(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIReference_1_Windows__CFoundation__CDateTime_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
-
 #if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 #if !defined(____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__)
 #define ____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__
@@ -20460,6 +19412,8 @@ interface __FITypedEventHandler_2_Windows__CDevices__CSensors__CSimpleOrientatio
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
+
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIAsyncAction __x_ABI_CWindows_CFoundation_CIAsyncAction;
@@ -20483,6 +19437,10 @@ typedef enum __x_ABI_CWindows_CGraphics_CDisplay_CDisplayOrientations __x_ABI_CW
 typedef enum __x_ABI_CWindows_CDevices_CSensors_CAccelerometerReadingType __x_ABI_CWindows_CDevices_CSensors_CAccelerometerReadingType;
 
 typedef enum __x_ABI_CWindows_CDevices_CSensors_CActivitySensorReadingConfidence __x_ABI_CWindows_CDevices_CSensors_CActivitySensorReadingConfidence;
+
+typedef enum __x_ABI_CWindows_CDevices_CSensors_CHumanEngagement __x_ABI_CWindows_CDevices_CSensors_CHumanEngagement;
+
+typedef enum __x_ABI_CWindows_CDevices_CSensors_CHumanPresence __x_ABI_CWindows_CDevices_CSensors_CHumanPresence;
 
 typedef enum __x_ABI_CWindows_CDevices_CSensors_CMagnetometerAccuracy __x_ABI_CWindows_CDevices_CSensors_CMagnetometerAccuracy;
 
@@ -22241,80 +21199,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIActivitySensorTriggerDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IAdaptiveDimmingOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.AdaptiveDimmingOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IAdaptiveDimmingOptions[] = L"Windows.Devices.Sensors.IAdaptiveDimmingOptions";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptionsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions* This,
-        boolean value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptionsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptionsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_get_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->get_AllowWhenExternalDisplayConnected(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_put_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->put_AllowWhenExternalDisplayConnected(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -25582,9 +24466,6 @@ typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeaturesVtbl
         boolean* value);
     HRESULT (STDMETHODCALLTYPE* get_IsLockOnLeaveSupported)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures* This,
         boolean* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
     HRESULT (STDMETHODCALLTYPE* get_IsAttentionAwareDimmingSupported)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures* This,
         boolean* value);
 
@@ -25628,9 +24509,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_get_IsLockOnLeaveSupported(This, value) \
     ((This)->lpVtbl->get_IsLockOnLeaveSupported(This, value))
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_get_IsAttentionAwareDimmingSupported(This, value) \
     ((This)->lpVtbl->get_IsAttentionAwareDimmingSupported(This, value))
 
@@ -25638,75 +24516,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceFeatures2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceFeatures
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceFeatures2[] = L"Windows.Devices.Sensors.IHumanPresenceFeatures2";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsAdaptiveDimmingSupported)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2* This,
-        boolean* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2Vtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_get_IsAdaptiveDimmingSupported(This, value) \
-    ((This)->lpVtbl->get_IsAdaptiveDimmingSupported(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceFeatures2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -25806,174 +24615,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor;
 
 /*
  *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensor2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensor
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensor2[] = L"Windows.Devices.Sensors.IHumanPresenceSensor2";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsPresenceSupported)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsEngagementSupported)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2* This,
-        boolean* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2Vtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_get_IsPresenceSupported(This, value) \
-    ((This)->lpVtbl->get_IsPresenceSupported(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_get_IsEngagementSupported(This, value) \
-    ((This)->lpVtbl->get_IsEngagementSupported(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtension
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtension[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtension";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Initialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        HSTRING deviceId);
-    HRESULT (STDMETHODCALLTYPE* Start)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-    HRESULT (STDMETHODCALLTYPE* ProcessReading)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* reading,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate** result);
-    HRESULT (STDMETHODCALLTYPE* ProcessReadingTimeoutExpired)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* reading);
-    HRESULT (STDMETHODCALLTYPE* Stop)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-    HRESULT (STDMETHODCALLTYPE* Uninitialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-    HRESULT (STDMETHODCALLTYPE* Reset)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Initialize(This, deviceId) \
-    ((This)->lpVtbl->Initialize(This, deviceId))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Start(This) \
-    ((This)->lpVtbl->Start(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_ProcessReading(This, reading, result) \
-    ((This)->lpVtbl->ProcessReading(This, reading, result))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_ProcessReadingTimeoutExpired(This, reading) \
-    ((This)->lpVtbl->ProcessReadingTimeoutExpired(This, reading))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Stop(This) \
-    ((This)->lpVtbl->Stop(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Uninitialize(This) \
-    ((This)->lpVtbl->Uninitialize(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Reset(This) \
-    ((This)->lpVtbl->Reset(This))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Interface Windows.Devices.Sensors.IHumanPresenceSensorReading
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -26058,75 +24699,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorR
 
 /*
  *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorReading2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensorReading
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorReading2[] = L"Windows.Devices.Sensors.IHumanPresenceSensorReading2";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Properties)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2* This,
-        __FIMapView_2_HSTRING_IInspectable** value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2Vtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_get_Properties(This, value) \
-    ((This)->lpVtbl->get_Properties(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Interface Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -26192,110 +24764,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChanged
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate[] = L"Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdateVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Timestamp)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CFoundation__CDateTime** value);
-    HRESULT (STDMETHODCALLTYPE* put_Timestamp)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CFoundation__CDateTime* value);
-    HRESULT (STDMETHODCALLTYPE* get_Presence)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CDevices__CSensors__CHumanPresence** value);
-    HRESULT (STDMETHODCALLTYPE* put_Presence)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CDevices__CSensors__CHumanPresence* value);
-    HRESULT (STDMETHODCALLTYPE* get_Engagement)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement** value);
-    HRESULT (STDMETHODCALLTYPE* put_Engagement)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_Windows__CDevices__CSensors__CHumanEngagement* value);
-    HRESULT (STDMETHODCALLTYPE* get_DistanceInMillimeters)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_UINT32** value);
-    HRESULT (STDMETHODCALLTYPE* put_DistanceInMillimeters)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate* This,
-        __FIReference_1_UINT32* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdateVtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdateVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_get_Timestamp(This, value) \
-    ((This)->lpVtbl->get_Timestamp(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_put_Timestamp(This, value) \
-    ((This)->lpVtbl->put_Timestamp(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_get_Presence(This, value) \
-    ((This)->lpVtbl->get_Presence(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_put_Presence(This, value) \
-    ((This)->lpVtbl->put_Presence(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_get_Engagement(This, value) \
-    ((This)->lpVtbl->get_Engagement(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_put_Engagement(This, value) \
-    ((This)->lpVtbl->put_Engagement(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_get_DistanceInMillimeters(This, value) \
-    ((This)->lpVtbl->get_DistanceInMillimeters(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_put_DistanceInMillimeters(This, value) \
-    ((This)->lpVtbl->put_DistanceInMillimeters(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -26380,81 +24848,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorS
 
 /*
  *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorStatics2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSensor
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorStatics2[] = L"Windows.Devices.Sensors.IHumanPresenceSensorStatics2";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* FromId)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        HSTRING sensorId,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor** result);
-    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2Vtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_FromId(This, sensorId, result) \
-    ((This)->lpVtbl->FromId(This, sensorId, result))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_GetDefault(This, result) \
-    ((This)->lpVtbl->GetDefault(This, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorStatics2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Interface Windows.Devices.Sensors.IHumanPresenceSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -26506,14 +24899,8 @@ typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettingsVtbl
         struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
     HRESULT (STDMETHODCALLTYPE* put_LockOnLeaveTimeout)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings* This,
         struct __x_ABI_CWindows_CFoundation_CTimeSpan value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
     HRESULT (STDMETHODCALLTYPE* get_IsAttentionAwareDimmingEnabled)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings* This,
         boolean* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
     HRESULT (STDMETHODCALLTYPE* put_IsAttentionAwareDimmingEnabled)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings* This,
         boolean value);
 
@@ -26581,15 +24968,9 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_put_LockOnLeaveTimeout(This, value) \
     ((This)->lpVtbl->put_LockOnLeaveTimeout(This, value))
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_get_IsAttentionAwareDimmingEnabled(This, value) \
     ((This)->lpVtbl->get_IsAttentionAwareDimmingEnabled(This, value))
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-    DEPRECATED("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_put_IsAttentionAwareDimmingEnabled(This, value) \
     ((This)->lpVtbl->put_IsAttentionAwareDimmingEnabled(This, value))
 
@@ -26597,95 +24978,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Devices.Sensors.IHumanPresenceSettings2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.HumanPresenceSettings
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSettings2[] = L"Windows.Devices.Sensors.IHumanPresenceSettings2";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsAdaptiveDimmingEnabled)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_IsAdaptiveDimmingEnabled)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_WakeOptions)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions** value);
-    HRESULT (STDMETHODCALLTYPE* get_DimmingOptions)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIAdaptiveDimmingOptions** value);
-    HRESULT (STDMETHODCALLTYPE* get_LockOptions)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2* This,
-        __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions** value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2Vtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_get_IsAdaptiveDimmingEnabled(This, value) \
-    ((This)->lpVtbl->get_IsAdaptiveDimmingEnabled(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_put_IsAdaptiveDimmingEnabled(This, value) \
-    ((This)->lpVtbl->put_IsAdaptiveDimmingEnabled(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_get_WakeOptions(This, value) \
-    ((This)->lpVtbl->get_WakeOptions(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_get_DimmingOptions(This, value) \
-    ((This)->lpVtbl->get_DimmingOptions(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_get_LockOptions(This, value) \
-    ((This)->lpVtbl->get_LockOptions(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSettings2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -28622,80 +26914,6 @@ interface __x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILightSensorStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-/*
- *
- * Interface Windows.Devices.Sensors.ILockOnLeaveOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.LockOnLeaveOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_ILockOnLeaveOptions[] = L"Windows.Devices.Sensors.ILockOnLeaveOptions";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptionsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions* This,
-        boolean value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptionsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptionsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_get_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->get_AllowWhenExternalDisplayConnected(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_put_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->put_AllowWhenExternalDisplayConnected(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CILockOnLeaveOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -32255,98 +30473,14 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CISimpleOrientationSen
 
 /*
  *
- * Interface Windows.Devices.Sensors.IWakeOnApproachOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Sensors.WakeOnApproachOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IWakeOnApproachOptions[] = L"Windows.Devices.Sensors.IWakeOnApproachOptions";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptionsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_AllowWhenExternalDisplayConnected)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_DisableWhenBatterySaverOn)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_DisableWhenBatterySaverOn)(__x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions* This,
-        boolean value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptionsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptionsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_get_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->get_AllowWhenExternalDisplayConnected(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_put_AllowWhenExternalDisplayConnected(This, value) \
-    ((This)->lpVtbl->put_AllowWhenExternalDisplayConnected(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_get_DisableWhenBatterySaverOn(This, value) \
-    ((This)->lpVtbl->get_DisableWhenBatterySaverOn(This, value))
-
-#define __x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_put_DisableWhenBatterySaverOn(This, value) \
-    ((This)->lpVtbl->put_DisableWhenBatterySaverOn(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIWakeOnApproachOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Accelerometer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics3 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IAccelerometerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IAccelerometer ** Default Interface **
@@ -32561,25 +30695,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.AdaptiveDimmingOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IAdaptiveDimmingOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_AdaptiveDimmingOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_AdaptiveDimmingOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_AdaptiveDimmingOptions[] = L"Windows.Devices.Sensors.AdaptiveDimmingOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Altimeter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -32649,8 +30764,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IBarometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IBarometer ** Default Interface **
@@ -32988,7 +31103,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceFeatures ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceFeatures2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33007,12 +31121,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IHumanPresenceSensorStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IHumanPresenceSensorStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSensor ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSensor2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -33034,7 +31146,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSensorReading ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSensorReading2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -33067,30 +31178,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_HumanPresenceSensorReadingUpdate[] = L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.HumanPresenceSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -33100,7 +31187,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IHumanPresenceSettings ** Default Interface **
- *    Windows.Devices.Sensors.IHumanPresenceSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -33121,9 +31207,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IInclinometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -33300,32 +31386,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Devices.Sensors.LockOnLeaveOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.ILockOnLeaveOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_LockOnLeaveOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_LockOnLeaveOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_LockOnLeaveOptions[] = L"Windows.Devices.Sensors.LockOnLeaveOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Devices.Sensors.Magnetometer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IMagnetometerStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IMagnetometer ** Default Interface **
@@ -33415,10 +31482,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics4 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IOrientationSensorStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IOrientationSensor ** Default Interface **
@@ -33489,8 +31556,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.IPedometerStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.IPedometer ** Default Interface **
@@ -33750,8 +31817,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Sensors.ISimpleOrientationSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.ISimpleOrientationSensor ** Default Interface **
@@ -33790,25 +31857,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_SimpleOrientationSensorOrientationChangedEventArgs[] = L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Devices.Sensors.WakeOnApproachOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Sensors.IWakeOnApproachOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Devices_Sensors_WakeOnApproachOptions_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Sensors_WakeOnApproachOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_WakeOnApproachOptions[] = L"Windows.Devices.Sensors.WakeOnApproachOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

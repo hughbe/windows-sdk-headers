@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,16 +11,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
 {
@@ -1086,11 +1082,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatCapabilities
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOnline() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsChatCapable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFileTransferCapable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGeoLocationPushCapable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIntegratedMessagingCapable() const;
+        [[nodiscard]] auto IsOnline() const;
+        [[nodiscard]] auto IsChatCapable() const;
+        [[nodiscard]] auto IsFileTransferCapable() const;
+        [[nodiscard]] auto IsGeoLocationPushCapable() const;
+        [[nodiscard]] auto IsIntegratedMessagingCapable() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatCapabilities>
     {
@@ -1099,8 +1095,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatCapabilitiesManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>) GetCachedCapabilitiesAsync(param::hstring const& address) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>) GetCapabilitiesFromNetworkAsync(param::hstring const& address) const;
+        auto GetCachedCapabilitiesAsync(param::hstring const& address) const;
+        auto GetCapabilitiesFromNetworkAsync(param::hstring const& address) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatCapabilitiesManagerStatics>
     {
@@ -1109,8 +1105,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatCapabilitiesManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>) GetCachedCapabilitiesAsync(param::hstring const& address, param::hstring const& transportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>) GetCapabilitiesFromNetworkAsync(param::hstring const& address, param::hstring const& transportId) const;
+        auto GetCachedCapabilitiesAsync(param::hstring const& address, param::hstring const& transportId) const;
+        auto GetCapabilitiesFromNetworkAsync(param::hstring const& address, param::hstring const& transportId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatCapabilitiesManagerStatics2>
     {
@@ -1119,26 +1115,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatConversation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasUnreadMessages() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subject() const;
-        WINRT_IMPL_AUTO(void) Subject(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsConversationMuted() const;
-        WINRT_IMPL_AUTO(void) IsConversationMuted(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MostRecentMessageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) Participants() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo) ThreadingInfo() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageReader) GetMessageReader() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkMessagesAsReadAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkMessagesAsReadAsync(winrt::Windows::Foundation::DateTime const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveAsync() const;
-        WINRT_IMPL_AUTO(void) NotifyLocalParticipantComposing(param::hstring const& transportId, param::hstring const& participantAddress, bool isComposing) const;
-        WINRT_IMPL_AUTO(void) NotifyRemoteParticipantComposing(param::hstring const& transportId, param::hstring const& participantAddress, bool isComposing) const;
-        WINRT_IMPL_AUTO(winrt::event_token) RemoteParticipantComposingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatConversation, winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto HasUnreadMessages() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Subject() const;
+        auto Subject(param::hstring const& value) const;
+        [[nodiscard]] auto IsConversationMuted() const;
+        auto IsConversationMuted(bool value) const;
+        [[nodiscard]] auto MostRecentMessageId() const;
+        [[nodiscard]] auto Participants() const;
+        [[nodiscard]] auto ThreadingInfo() const;
+        auto DeleteAsync() const;
+        auto GetMessageReader() const;
+        auto MarkMessagesAsReadAsync() const;
+        auto MarkMessagesAsReadAsync(winrt::Windows::Foundation::DateTime const& value) const;
+        auto SaveAsync() const;
+        auto NotifyLocalParticipantComposing(param::hstring const& transportId, param::hstring const& participantAddress, bool isComposing) const;
+        auto NotifyRemoteParticipantComposing(param::hstring const& transportId, param::hstring const& participantAddress, bool isComposing) const;
+        auto RemoteParticipantComposingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatConversation, winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs> const& handler) const;
         using RemoteParticipantComposingChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IChatConversation, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IChatConversation>::remove_RemoteParticipantComposingChanged>;
         [[nodiscard]] RemoteParticipantComposingChanged_revoker RemoteParticipantComposingChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatConversation, winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) RemoteParticipantComposingChanged(winrt::event_token const& token) const noexcept;
+        auto RemoteParticipantComposingChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatConversation>
     {
@@ -1147,8 +1143,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatConversation2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanModifyParticipants() const;
-        WINRT_IMPL_AUTO(void) CanModifyParticipants(bool value) const;
+        [[nodiscard]] auto CanModifyParticipants() const;
+        auto CanModifyParticipants(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatConversation2>
     {
@@ -1157,8 +1153,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatConversationReader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatConversation>>) ReadBatchAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatConversation>>) ReadBatchAsync(int32_t count) const;
+        auto ReadBatchAsync() const;
+        auto ReadBatchAsync(int32_t count) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatConversationReader>
     {
@@ -1167,15 +1163,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatConversationThreadingInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactId() const;
-        WINRT_IMPL_AUTO(void) ContactId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Custom() const;
-        WINRT_IMPL_AUTO(void) Custom(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ConversationId() const;
-        WINRT_IMPL_AUTO(void) ConversationId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) Participants() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind) Kind() const;
-        WINRT_IMPL_AUTO(void) Kind(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind const& value) const;
+        [[nodiscard]] auto ContactId() const;
+        auto ContactId(param::hstring const& value) const;
+        [[nodiscard]] auto Custom() const;
+        auto Custom(param::hstring const& value) const;
+        [[nodiscard]] auto ConversationId() const;
+        auto ConversationId(param::hstring const& value) const;
+        [[nodiscard]] auto Participants() const;
+        [[nodiscard]] auto Kind() const;
+        auto Kind(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatConversationThreadingInfo>
     {
@@ -1184,7 +1180,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatItemKind) ItemKind() const;
+        [[nodiscard]] auto ItemKind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatItem>
     {
@@ -1193,23 +1189,23 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment>) Attachments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Body() const;
-        WINRT_IMPL_AUTO(void) Body(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) From() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsForwardingDisabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIncoming() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRead() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) LocalTimestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) NetworkTimestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) Recipients() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::ApplicationModel::Chat::ChatMessageStatus>) RecipientSendStatuses() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subject() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportFriendlyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportId() const;
-        WINRT_IMPL_AUTO(void) TransportId(param::hstring const& value) const;
+        [[nodiscard]] auto Attachments() const;
+        [[nodiscard]] auto Body() const;
+        auto Body(param::hstring const& value) const;
+        [[nodiscard]] auto From() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto IsForwardingDisabled() const;
+        [[nodiscard]] auto IsIncoming() const;
+        [[nodiscard]] auto IsRead() const;
+        [[nodiscard]] auto LocalTimestamp() const;
+        [[nodiscard]] auto NetworkTimestamp() const;
+        [[nodiscard]] auto Recipients() const;
+        [[nodiscard]] auto RecipientSendStatuses() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto Subject() const;
+        [[nodiscard]] auto TransportFriendlyName() const;
+        [[nodiscard]] auto TransportId() const;
+        auto TransportId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessage>
     {
@@ -1218,34 +1214,34 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessage2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) EstimatedDownloadSize() const;
-        WINRT_IMPL_AUTO(void) EstimatedDownloadSize(uint64_t value) const;
-        WINRT_IMPL_AUTO(void) From(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAutoReply() const;
-        WINRT_IMPL_AUTO(void) IsAutoReply(bool value) const;
-        WINRT_IMPL_AUTO(void) IsForwardingDisabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReplyDisabled() const;
-        WINRT_IMPL_AUTO(void) IsIncoming(bool value) const;
-        WINRT_IMPL_AUTO(void) IsRead(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSeen() const;
-        WINRT_IMPL_AUTO(void) IsSeen(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSimMessage() const;
-        WINRT_IMPL_AUTO(void) LocalTimestamp(winrt::Windows::Foundation::DateTime const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageKind) MessageKind() const;
-        WINRT_IMPL_AUTO(void) MessageKind(winrt::Windows::ApplicationModel::Chat::ChatMessageKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind) MessageOperatorKind() const;
-        WINRT_IMPL_AUTO(void) MessageOperatorKind(winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind const& value) const;
-        WINRT_IMPL_AUTO(void) NetworkTimestamp(winrt::Windows::Foundation::DateTime const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReceivedDuringQuietHours() const;
-        WINRT_IMPL_AUTO(void) IsReceivedDuringQuietHours(bool value) const;
-        WINRT_IMPL_AUTO(void) RemoteId(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) Status(winrt::Windows::ApplicationModel::Chat::ChatMessageStatus const& value) const;
-        WINRT_IMPL_AUTO(void) Subject(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldSuppressNotification() const;
-        WINRT_IMPL_AUTO(void) ShouldSuppressNotification(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo) ThreadingInfo() const;
-        WINRT_IMPL_AUTO(void) ThreadingInfo(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo>) RecipientsDeliveryInfos() const;
+        [[nodiscard]] auto EstimatedDownloadSize() const;
+        auto EstimatedDownloadSize(uint64_t value) const;
+        auto From(param::hstring const& value) const;
+        [[nodiscard]] auto IsAutoReply() const;
+        auto IsAutoReply(bool value) const;
+        auto IsForwardingDisabled(bool value) const;
+        [[nodiscard]] auto IsReplyDisabled() const;
+        auto IsIncoming(bool value) const;
+        auto IsRead(bool value) const;
+        [[nodiscard]] auto IsSeen() const;
+        auto IsSeen(bool value) const;
+        [[nodiscard]] auto IsSimMessage() const;
+        auto LocalTimestamp(winrt::Windows::Foundation::DateTime const& value) const;
+        [[nodiscard]] auto MessageKind() const;
+        auto MessageKind(winrt::Windows::ApplicationModel::Chat::ChatMessageKind const& value) const;
+        [[nodiscard]] auto MessageOperatorKind() const;
+        auto MessageOperatorKind(winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind const& value) const;
+        auto NetworkTimestamp(winrt::Windows::Foundation::DateTime const& value) const;
+        [[nodiscard]] auto IsReceivedDuringQuietHours() const;
+        auto IsReceivedDuringQuietHours(bool value) const;
+        auto RemoteId(param::hstring const& value) const;
+        auto Status(winrt::Windows::ApplicationModel::Chat::ChatMessageStatus const& value) const;
+        auto Subject(param::hstring const& value) const;
+        [[nodiscard]] auto ShouldSuppressNotification() const;
+        auto ShouldSuppressNotification(bool value) const;
+        [[nodiscard]] auto ThreadingInfo() const;
+        auto ThreadingInfo(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo const& value) const;
+        [[nodiscard]] auto RecipientsDeliveryInfos() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessage2>
     {
@@ -1254,7 +1250,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessage3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
+        [[nodiscard]] auto RemoteId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessage3>
     {
@@ -1263,8 +1259,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessage4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SyncId() const;
-        WINRT_IMPL_AUTO(void) SyncId(param::hstring const& value) const;
+        [[nodiscard]] auto SyncId() const;
+        auto SyncId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessage4>
     {
@@ -1273,14 +1269,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageAttachment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) DataStreamReference() const;
-        WINRT_IMPL_AUTO(void) DataStreamReference(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) GroupId() const;
-        WINRT_IMPL_AUTO(void) GroupId(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MimeType() const;
-        WINRT_IMPL_AUTO(void) MimeType(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
+        [[nodiscard]] auto DataStreamReference() const;
+        auto DataStreamReference(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto GroupId() const;
+        auto GroupId(uint32_t value) const;
+        [[nodiscard]] auto MimeType() const;
+        auto MimeType(param::hstring const& value) const;
+        [[nodiscard]] auto Text() const;
+        auto Text(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment>
     {
@@ -1289,12 +1285,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageAttachment2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) Thumbnail() const;
-        WINRT_IMPL_AUTO(void) Thumbnail(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) TransferProgress() const;
-        WINRT_IMPL_AUTO(void) TransferProgress(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OriginalFileName() const;
-        WINRT_IMPL_AUTO(void) OriginalFileName(param::hstring const& value) const;
+        [[nodiscard]] auto Thumbnail() const;
+        auto Thumbnail(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto TransferProgress() const;
+        auto TransferProgress(double value) const;
+        [[nodiscard]] auto OriginalFileName() const;
+        auto OriginalFileName(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachment2>
     {
@@ -1303,7 +1299,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageAttachmentFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment) CreateChatMessageAttachment(param::hstring const& mimeType, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& dataStreamReference) const;
+        auto CreateChatMessageAttachment(param::hstring const& mimeType, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& dataStreamReference) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageAttachmentFactory>
     {
@@ -1312,7 +1308,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageBlockingStatic
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkMessageAsBlockedAsync(param::hstring const& localChatMessageId, bool blocked) const;
+        auto MarkMessageAsBlockedAsync(param::hstring const& localChatMessageId, bool blocked) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageBlockingStatic>
     {
@@ -1321,8 +1317,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageChange
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType) ChangeType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessage) Message() const;
+        [[nodiscard]] auto ChangeType() const;
+        [[nodiscard]] auto Message() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageChange>
     {
@@ -1331,9 +1327,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageChangeReader
     {
-        WINRT_IMPL_AUTO(void) AcceptChanges() const;
-        WINRT_IMPL_AUTO(void) AcceptChangesThrough(winrt::Windows::ApplicationModel::Chat::ChatMessageChange const& lastChangeToAcknowledge) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>>) ReadBatchAsync() const;
+        auto AcceptChanges() const;
+        auto AcceptChangesThrough(winrt::Windows::ApplicationModel::Chat::ChatMessageChange const& lastChangeToAcknowledge) const;
+        auto ReadBatchAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageChangeReader>
     {
@@ -1342,9 +1338,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageChangeTracker
     {
-        WINRT_IMPL_AUTO(void) Enable() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader) GetChangeReader() const;
-        WINRT_IMPL_AUTO(void) Reset() const;
+        auto Enable() const;
+        auto GetChangeReader() const;
+        auto Reset() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageChangeTracker>
     {
@@ -1353,7 +1349,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageChangedDeferral
     {
-        WINRT_IMPL_AUTO(void) Complete() const;
+        auto Complete() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageChangedDeferral>
     {
@@ -1362,7 +1358,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageChangedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral) GetDeferral() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageChangedEventArgs>
     {
@@ -1371,8 +1367,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageManager2Statics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) RegisterTransportAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>) GetTransportAsync(param::hstring const& transportId) const;
+        auto RegisterTransportAsync() const;
+        auto GetTransportAsync(param::hstring const& transportId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageManager2Statics>
     {
@@ -1381,10 +1377,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageManagerStatic
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>>) GetTransportsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>) RequestStoreAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowComposeSmsMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& message) const;
-        WINRT_IMPL_AUTO(void) ShowSmsSettings() const;
+        auto GetTransportsAsync() const;
+        auto RequestStoreAsync() const;
+        auto ShowComposeSmsMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& message) const;
+        auto ShowSmsSettings() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageManagerStatic>
     {
@@ -1393,7 +1389,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageManagerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>) RequestSyncManagerAsync() const;
+        auto RequestSyncManagerAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageManagerStatics3>
     {
@@ -1402,7 +1398,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageNotificationTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessage) ChatMessage() const;
+        [[nodiscard]] auto ChatMessage() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails>
     {
@@ -1411,10 +1407,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageNotificationTriggerDetails2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldDisplayToast() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldUpdateDetailText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldUpdateBadge() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldUpdateActionCenter() const;
+        [[nodiscard]] auto ShouldDisplayToast() const;
+        [[nodiscard]] auto ShouldUpdateDetailText() const;
+        [[nodiscard]] auto ShouldUpdateBadge() const;
+        [[nodiscard]] auto ShouldUpdateActionCenter() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageNotificationTriggerDetails2>
     {
@@ -1423,7 +1419,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageReader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatMessage>>) ReadBatchAsync() const;
+        auto ReadBatchAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageReader>
     {
@@ -1432,7 +1428,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageReader2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::ChatMessage>>) ReadBatchAsync(int32_t count) const;
+        auto ReadBatchAsync(int32_t count) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageReader2>
     {
@@ -1441,20 +1437,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageStore
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker) ChangeTracker() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteMessageAsync(param::hstring const& localMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DownloadMessageAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessage>) GetMessageAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageReader) GetMessageReader() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageReader) GetMessageReader(winrt::Windows::Foundation::TimeSpan const& recentTimeLimit) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkMessageReadAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RetrySendMessageAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SendMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult) ValidateMessage(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
-        WINRT_IMPL_AUTO(winrt::event_token) MessageChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs> const& value) const;
+        [[nodiscard]] auto ChangeTracker() const;
+        auto DeleteMessageAsync(param::hstring const& localMessageId) const;
+        auto DownloadMessageAsync(param::hstring const& localChatMessageId) const;
+        auto GetMessageAsync(param::hstring const& localChatMessageId) const;
+        auto GetMessageReader() const;
+        auto GetMessageReader(winrt::Windows::Foundation::TimeSpan const& recentTimeLimit) const;
+        auto MarkMessageReadAsync(param::hstring const& localChatMessageId) const;
+        auto RetrySendMessageAsync(param::hstring const& localChatMessageId) const;
+        auto SendMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
+        auto ValidateMessage(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
+        auto MessageChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs> const& value) const;
         using MessageChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IChatMessageStore, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IChatMessageStore>::remove_MessageChanged>;
         [[nodiscard]] MessageChanged_revoker MessageChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs> const& value) const;
-        WINRT_IMPL_AUTO(void) MessageChanged(winrt::event_token const& value) const noexcept;
+        auto MessageChanged(winrt::event_token const& value) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageStore>
     {
@@ -1463,25 +1459,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageStore2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessage>) ForwardMessageAsync(param::hstring const& localChatMessageId, param::async_iterable<hstring> const& addresses) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatConversation>) GetConversationAsync(param::hstring const& conversationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatConversation>) GetConversationAsync(param::hstring const& conversationId, param::async_iterable<hstring> const& transportIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatConversation>) GetConversationFromThreadingInfoAsync(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo const& threadingInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatConversationReader) GetConversationReader() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatConversationReader) GetConversationReader(param::iterable<hstring> const& transportIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessage>) GetMessageByRemoteIdAsync(param::hstring const& transportId, param::hstring const& remoteId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<int32_t>) GetUnseenCountAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<int32_t>) GetUnseenCountAsync(param::async_iterable<hstring> const& transportIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkAsSeenAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MarkAsSeenAsync(param::async_iterable<hstring> const& transportIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatSearchReader) GetSearchReader(winrt::Windows::ApplicationModel::Chat::ChatQueryOptions const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryCancelDownloadMessageAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryCancelSendMessageAsync(param::hstring const& localChatMessageId) const;
-        WINRT_IMPL_AUTO(winrt::event_token) StoreChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs> const& handler) const;
+        auto ForwardMessageAsync(param::hstring const& localChatMessageId, param::async_iterable<hstring> const& addresses) const;
+        auto GetConversationAsync(param::hstring const& conversationId) const;
+        auto GetConversationAsync(param::hstring const& conversationId, param::async_iterable<hstring> const& transportIds) const;
+        auto GetConversationFromThreadingInfoAsync(winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo const& threadingInfo) const;
+        auto GetConversationReader() const;
+        auto GetConversationReader(param::iterable<hstring> const& transportIds) const;
+        auto GetMessageByRemoteIdAsync(param::hstring const& transportId, param::hstring const& remoteId) const;
+        auto GetUnseenCountAsync() const;
+        auto GetUnseenCountAsync(param::async_iterable<hstring> const& transportIds) const;
+        auto MarkAsSeenAsync() const;
+        auto MarkAsSeenAsync(param::async_iterable<hstring> const& transportIds) const;
+        auto GetSearchReader(winrt::Windows::ApplicationModel::Chat::ChatQueryOptions const& value) const;
+        auto SaveMessageAsync(winrt::Windows::ApplicationModel::Chat::ChatMessage const& chatMessage) const;
+        auto TryCancelDownloadMessageAsync(param::hstring const& localChatMessageId) const;
+        auto TryCancelSendMessageAsync(param::hstring const& localChatMessageId) const;
+        auto StoreChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs> const& handler) const;
         using StoreChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>::remove_StoreChanged>;
         [[nodiscard]] StoreChanged_revoker StoreChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::ChatMessageStore, winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) StoreChanged(winrt::event_token const& token) const noexcept;
+        auto StoreChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageStore2>
     {
@@ -1490,7 +1486,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageStore3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::ChatMessage>) GetMessageBySyncIdAsync(param::hstring const& syncId) const;
+        auto GetMessageBySyncIdAsync(param::hstring const& syncId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageStore3>
     {
@@ -1499,8 +1495,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageStoreChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind) Kind() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageStoreChangedEventArgs>
     {
@@ -1509,11 +1505,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageTransport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAppSetAsNotificationProvider() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportFriendlyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RequestSetAsNotificationProviderAsync() const;
+        [[nodiscard]] auto IsAppSetAsNotificationProvider() const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto TransportFriendlyName() const;
+        [[nodiscard]] auto TransportId() const;
+        auto RequestSetAsNotificationProviderAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageTransport>
     {
@@ -1522,8 +1518,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageTransport2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration) Configuration() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageTransportKind) TransportKind() const;
+        [[nodiscard]] auto Configuration() const;
+        [[nodiscard]] auto TransportKind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageTransport2>
     {
@@ -1532,11 +1528,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageTransportConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxAttachmentCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxMessageSizeInKilobytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxRecipientCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::MediaEncodingProfile) SupportedVideoFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) ExtendedProperties() const;
+        [[nodiscard]] auto MaxAttachmentCount() const;
+        [[nodiscard]] auto MaxMessageSizeInKilobytes() const;
+        [[nodiscard]] auto MaxRecipientCount() const;
+        [[nodiscard]] auto SupportedVideoFormat() const;
+        [[nodiscard]] auto ExtendedProperties() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageTransportConfiguration>
     {
@@ -1545,10 +1541,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatMessageValidationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) MaxPartCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) PartCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) RemainingCharacterCountInPart() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus) Status() const;
+        [[nodiscard]] auto MaxPartCount() const;
+        [[nodiscard]] auto PartCount() const;
+        [[nodiscard]] auto RemainingCharacterCountInPart() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatMessageValidationResult>
     {
@@ -1557,8 +1553,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatQueryOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SearchString() const;
-        WINRT_IMPL_AUTO(void) SearchString(param::hstring const& value) const;
+        [[nodiscard]] auto SearchString() const;
+        auto SearchString(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatQueryOptions>
     {
@@ -1567,17 +1563,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatRecipientDeliveryInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportAddress() const;
-        WINRT_IMPL_AUTO(void) TransportAddress(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) DeliveryTime() const;
-        WINRT_IMPL_AUTO(void) DeliveryTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) ReadTime() const;
-        WINRT_IMPL_AUTO(void) ReadTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatTransportErrorCodeCategory) TransportErrorCodeCategory() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode) TransportInterpretedErrorCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TransportErrorCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsErrorPermanent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatMessageStatus) Status() const;
+        [[nodiscard]] auto TransportAddress() const;
+        auto TransportAddress(param::hstring const& value) const;
+        [[nodiscard]] auto DeliveryTime() const;
+        auto DeliveryTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto ReadTime() const;
+        auto ReadTime(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] auto TransportErrorCodeCategory() const;
+        [[nodiscard]] auto TransportInterpretedErrorCode() const;
+        [[nodiscard]] auto TransportErrorCode() const;
+        [[nodiscard]] auto IsErrorPermanent() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatRecipientDeliveryInfo>
     {
@@ -1586,8 +1582,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatSearchReader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::IChatItem>>) ReadBatchAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::IChatItem>>) ReadBatchAsync(int32_t count) const;
+        auto ReadBatchAsync() const;
+        auto ReadBatchAsync(int32_t count) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatSearchReader>
     {
@@ -1596,10 +1592,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatSyncConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSyncEnabled() const;
-        WINRT_IMPL_AUTO(void) IsSyncEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan) RestoreHistorySpan() const;
-        WINRT_IMPL_AUTO(void) RestoreHistorySpan(winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan const& value) const;
+        [[nodiscard]] auto IsSyncEnabled() const;
+        auto IsSyncEnabled(bool value) const;
+        [[nodiscard]] auto RestoreHistorySpan() const;
+        auto RestoreHistorySpan(winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatSyncConfiguration>
     {
@@ -1608,12 +1604,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IChatSyncManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration) Configuration() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AssociateAccountAsync(winrt::Windows::Security::Credentials::WebAccount const& webAccount) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) UnassociateAccountAsync() const;
-        WINRT_IMPL_AUTO(bool) IsAccountAssociated(winrt::Windows::Security::Credentials::WebAccount const& webAccount) const;
-        WINRT_IMPL_AUTO(void) StartSync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetConfigurationAsync(winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration const& configuration) const;
+        [[nodiscard]] auto Configuration() const;
+        auto AssociateAccountAsync(winrt::Windows::Security::Credentials::WebAccount const& webAccount) const;
+        auto UnassociateAccountAsync() const;
+        auto IsAccountAssociated(winrt::Windows::Security::Credentials::WebAccount const& webAccount) const;
+        auto StartSync() const;
+        auto SetConfigurationAsync(winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration const& configuration) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IChatSyncManager>
     {
@@ -1622,13 +1618,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsEndUserMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPinRequired() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>) Actions() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SendResponseAsync(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction const& action) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SendResponseWithPinAsync(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction const& action, param::hstring const& pin) const;
+        [[nodiscard]] auto TransportId() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Text() const;
+        [[nodiscard]] auto IsPinRequired() const;
+        [[nodiscard]] auto Actions() const;
+        auto SendResponseAsync(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction const& action) const;
+        auto SendResponseWithPinAsync(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction const& action, param::hstring const& pin) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessage>
     {
@@ -1637,7 +1633,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsEndUserMessageAction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Label() const;
+        [[nodiscard]] auto Label() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageAction>
     {
@@ -1646,8 +1642,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsEndUserMessageAvailableEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMessageAvailable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage) Message() const;
+        [[nodiscard]] auto IsMessageAvailable() const;
+        [[nodiscard]] auto Message() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageAvailableEventArgs>
     {
@@ -1656,8 +1652,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsEndUserMessageAvailableTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Text() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageAvailableTriggerDetails>
     {
@@ -1666,10 +1662,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsEndUserMessageManager
     {
-        WINRT_IMPL_AUTO(winrt::event_token) MessageAvailableChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager, winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs> const& handler) const;
+        auto MessageAvailableChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager, winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs> const& handler) const;
         using MessageAvailableChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageManager, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageManager>::remove_MessageAvailableChanged>;
         [[nodiscard]] MessageAvailableChanged_revoker MessageAvailableChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager, winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) MessageAvailableChanged(winrt::event_token const& token) const noexcept;
+        auto MessageAvailableChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsEndUserMessageManager>
     {
@@ -1678,10 +1674,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager) GetEndUserMessageManager() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Chat::RcsTransport>>) GetTransportsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Chat::RcsTransport>) GetTransportAsync(param::hstring const& transportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) LeaveConversationAsync(winrt::Windows::ApplicationModel::Chat::ChatConversation const& conversation) const;
+        auto GetEndUserMessageManager() const;
+        auto GetTransportsAsync() const;
+        auto GetTransportAsync(param::hstring const& transportId) const;
+        auto LeaveConversationAsync(winrt::Windows::ApplicationModel::Chat::ChatConversation const& conversation) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsManagerStatics>
     {
@@ -1690,10 +1686,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::event_token) TransportListChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto TransportListChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using TransportListChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IRcsManagerStatics2, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IRcsManagerStatics2>::remove_TransportListChanged>;
         [[nodiscard]] TransportListChanged_revoker TransportListChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) TransportListChanged(winrt::event_token const& token) const noexcept;
+        auto TransportListChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsManagerStatics2>
     {
@@ -1702,7 +1698,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsServiceKindSupportedChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::RcsServiceKind) ServiceKind() const;
+        [[nodiscard]] auto ServiceKind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsServiceKindSupportedChangedEventArgs>
     {
@@ -1711,17 +1707,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsTransport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) ExtendedProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportFriendlyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration) Configuration() const;
-        WINRT_IMPL_AUTO(bool) IsStoreAndForwardEnabled(winrt::Windows::ApplicationModel::Chat::RcsServiceKind const& serviceKind) const;
-        WINRT_IMPL_AUTO(bool) IsServiceKindSupported(winrt::Windows::ApplicationModel::Chat::RcsServiceKind const& serviceKind) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ServiceKindSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsTransport, winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto ExtendedProperties() const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto TransportFriendlyName() const;
+        [[nodiscard]] auto TransportId() const;
+        [[nodiscard]] auto Configuration() const;
+        auto IsStoreAndForwardEnabled(winrt::Windows::ApplicationModel::Chat::RcsServiceKind const& serviceKind) const;
+        auto IsServiceKindSupported(winrt::Windows::ApplicationModel::Chat::RcsServiceKind const& serviceKind) const;
+        auto ServiceKindSupportedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsTransport, winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs> const& handler) const;
         using ServiceKindSupportedChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Chat::IRcsTransport, &impl::abi_t<winrt::Windows::ApplicationModel::Chat::IRcsTransport>::remove_ServiceKindSupportedChanged>;
         [[nodiscard]] ServiceKindSupportedChanged_revoker ServiceKindSupportedChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Chat::RcsTransport, winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ServiceKindSupportedChanged(winrt::event_token const& token) const noexcept;
+        auto ServiceKindSupportedChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsTransport>
     {
@@ -1730,12 +1726,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRcsTransportConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxAttachmentCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxMessageSizeInKilobytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxGroupMessageSizeInKilobytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxRecipientCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxFileSizeInKilobytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) WarningFileSizeInKilobytes() const;
+        [[nodiscard]] auto MaxAttachmentCount() const;
+        [[nodiscard]] auto MaxMessageSizeInKilobytes() const;
+        [[nodiscard]] auto MaxGroupMessageSizeInKilobytes() const;
+        [[nodiscard]] auto MaxRecipientCount() const;
+        [[nodiscard]] auto MaxFileSizeInKilobytes() const;
+        [[nodiscard]] auto WarningFileSizeInKilobytes() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRcsTransportConfiguration>
     {
@@ -1744,9 +1740,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Chat_IRemoteParticipantComposingChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TransportId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ParticipantAddress() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsComposing() const;
+        [[nodiscard]] auto TransportId() const;
+        [[nodiscard]] auto ParticipantAddress() const;
+        [[nodiscard]] auto IsComposing() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Chat::IRemoteParticipantComposingChangedEventArgs>
     {

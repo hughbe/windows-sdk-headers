@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Storage_Compression_0_H
 #define WINRT_Windows_Storage_Compression_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IInputStream;
@@ -88,8 +84,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Compression_ICompressor
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) FinishAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IOutputStream) DetachStream() const;
+        auto FinishAsync() const;
+        auto DetachStream() const;
     };
     template <> struct consume<winrt::Windows::Storage::Compression::ICompressor>
     {
@@ -98,8 +94,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Compression_ICompressorFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Compression::Compressor) CreateCompressor(winrt::Windows::Storage::Streams::IOutputStream const& underlyingStream) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Compression::Compressor) CreateCompressorEx(winrt::Windows::Storage::Streams::IOutputStream const& underlyingStream, winrt::Windows::Storage::Compression::CompressAlgorithm const& algorithm, uint32_t blockSize) const;
+        auto CreateCompressor(winrt::Windows::Storage::Streams::IOutputStream const& underlyingStream) const;
+        auto CreateCompressorEx(winrt::Windows::Storage::Streams::IOutputStream const& underlyingStream, winrt::Windows::Storage::Compression::CompressAlgorithm const& algorithm, uint32_t blockSize) const;
     };
     template <> struct consume<winrt::Windows::Storage::Compression::ICompressorFactory>
     {
@@ -108,7 +104,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Compression_IDecompressor
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IInputStream) DetachStream() const;
+        auto DetachStream() const;
     };
     template <> struct consume<winrt::Windows::Storage::Compression::IDecompressor>
     {
@@ -117,7 +113,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_Compression_IDecompressorFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Compression::Decompressor) CreateDecompressor(winrt::Windows::Storage::Streams::IInputStream const& underlyingStream) const;
+        auto CreateDecompressor(winrt::Windows::Storage::Streams::IInputStream const& underlyingStream) const;
     };
     template <> struct consume<winrt::Windows::Storage::Compression::IDecompressorFactory>
     {

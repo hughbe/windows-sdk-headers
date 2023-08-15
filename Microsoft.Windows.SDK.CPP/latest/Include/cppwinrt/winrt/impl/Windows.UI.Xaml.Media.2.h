@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -678,7 +678,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IBrushOverrides2 = winrt::Windows::UI::Xaml::Media::IBrushOverrides2;
-        WINRT_IMPL_AUTO(void) PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
+        auto PopulatePropertyInfoOverride(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
     };
     template <typename D>
     class IGeneralTransformOverridesT
@@ -687,9 +687,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IGeneralTransformOverrides = winrt::Windows::UI::Xaml::Media::IGeneralTransformOverrides;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::GeneralTransform) InverseCore() const;
-        WINRT_IMPL_AUTO(bool) TryTransformCore(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) TransformBoundsCore(winrt::Windows::Foundation::Rect const& rect) const;
+        [[nodiscard]] auto InverseCore() const;
+        auto TryTransformCore(winrt::Windows::Foundation::Point const& inPoint, winrt::Windows::Foundation::Point& outPoint) const;
+        auto TransformBoundsCore(winrt::Windows::Foundation::Rect const& rect) const;
     };
     template <typename D>
     class IXamlCompositionBrushBaseOverridesT
@@ -698,8 +698,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IXamlCompositionBrushBaseOverrides = winrt::Windows::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides;
-        WINRT_IMPL_AUTO(void) OnConnected() const;
-        WINRT_IMPL_AUTO(void) OnDisconnected() const;
+        auto OnConnected() const;
+        auto OnDisconnected() const;
     };
     template <typename D>
     class IXamlLightOverridesT
@@ -708,9 +708,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IXamlLightOverrides = winrt::Windows::UI::Xaml::Media::IXamlLightOverrides;
-        WINRT_IMPL_AUTO(hstring) GetId() const;
-        WINRT_IMPL_AUTO(void) OnConnected(winrt::Windows::UI::Xaml::UIElement const& newElement) const;
-        WINRT_IMPL_AUTO(void) OnDisconnected(winrt::Windows::UI::Xaml::UIElement const& oldElement) const;
+        auto GetId() const;
+        auto OnConnected(winrt::Windows::UI::Xaml::UIElement const& newElement) const;
+        auto OnDisconnected(winrt::Windows::UI::Xaml::UIElement const& oldElement) const;
     };
 }
 #endif

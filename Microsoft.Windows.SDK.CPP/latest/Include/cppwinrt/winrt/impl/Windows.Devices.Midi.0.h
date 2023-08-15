@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,7 +13,6 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
@@ -484,8 +483,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiChannelPressureMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Pressure() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Pressure() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiChannelPressureMessage>
     {
@@ -494,7 +493,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiChannelPressureMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiChannelPressureMessage) CreateMidiChannelPressureMessage(uint8_t channel, uint8_t pressure) const;
+        auto CreateMidiChannelPressureMessage(uint8_t channel, uint8_t pressure) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiChannelPressureMessageFactory>
     {
@@ -503,9 +502,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiControlChangeMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Controller() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) ControlValue() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Controller() const;
+        [[nodiscard]] auto ControlValue() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiControlChangeMessage>
     {
@@ -514,7 +513,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiControlChangeMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiControlChangeMessage) CreateMidiControlChangeMessage(uint8_t channel, uint8_t controller, uint8_t controlValue) const;
+        auto CreateMidiControlChangeMessage(uint8_t channel, uint8_t controller, uint8_t controlValue) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiControlChangeMessageFactory>
     {
@@ -523,11 +522,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiInPort
     {
-        WINRT_IMPL_AUTO(winrt::event_token) MessageReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Midi::MidiInPort, winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs> const& handler) const;
+        auto MessageReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Midi::MidiInPort, winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs> const& handler) const;
         using MessageReceived_revoker = impl::event_revoker<winrt::Windows::Devices::Midi::IMidiInPort, &impl::abi_t<winrt::Windows::Devices::Midi::IMidiInPort>::remove_MessageReceived>;
         [[nodiscard]] MessageReceived_revoker MessageReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Midi::MidiInPort, winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) MessageReceived(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        auto MessageReceived(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto DeviceId() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiInPort>
     {
@@ -536,8 +535,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiInPortStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Midi::MidiInPort>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiInPortStatics>
     {
@@ -546,9 +545,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Timestamp() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) RawData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiMessageType) Type() const;
+        [[nodiscard]] auto Timestamp() const;
+        [[nodiscard]] auto RawData() const;
+        [[nodiscard]] auto Type() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiMessage>
     {
@@ -557,7 +556,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiMessageReceivedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::IMidiMessage) Message() const;
+        [[nodiscard]] auto Message() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiMessageReceivedEventArgs>
     {
@@ -566,9 +565,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiNoteOffMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Note() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Velocity() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Note() const;
+        [[nodiscard]] auto Velocity() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiNoteOffMessage>
     {
@@ -577,7 +576,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiNoteOffMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiNoteOffMessage) CreateMidiNoteOffMessage(uint8_t channel, uint8_t note, uint8_t velocity) const;
+        auto CreateMidiNoteOffMessage(uint8_t channel, uint8_t note, uint8_t velocity) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiNoteOffMessageFactory>
     {
@@ -586,9 +585,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiNoteOnMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Note() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Velocity() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Note() const;
+        [[nodiscard]] auto Velocity() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiNoteOnMessage>
     {
@@ -597,7 +596,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiNoteOnMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiNoteOnMessage) CreateMidiNoteOnMessage(uint8_t channel, uint8_t note, uint8_t velocity) const;
+        auto CreateMidiNoteOnMessage(uint8_t channel, uint8_t note, uint8_t velocity) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiNoteOnMessageFactory>
     {
@@ -606,9 +605,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiOutPort
     {
-        WINRT_IMPL_AUTO(void) SendMessage(winrt::Windows::Devices::Midi::IMidiMessage const& midiMessage) const;
-        WINRT_IMPL_AUTO(void) SendBuffer(winrt::Windows::Storage::Streams::IBuffer const& midiData) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        auto SendMessage(winrt::Windows::Devices::Midi::IMidiMessage const& midiMessage) const;
+        auto SendBuffer(winrt::Windows::Storage::Streams::IBuffer const& midiData) const;
+        [[nodiscard]] auto DeviceId() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiOutPort>
     {
@@ -617,8 +616,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiOutPortStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Midi::IMidiOutPort>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiOutPortStatics>
     {
@@ -627,8 +626,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiPitchBendChangeMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Bend() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Bend() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiPitchBendChangeMessage>
     {
@@ -637,7 +636,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiPitchBendChangeMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage) CreateMidiPitchBendChangeMessage(uint8_t channel, uint16_t bend) const;
+        auto CreateMidiPitchBendChangeMessage(uint8_t channel, uint16_t bend) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiPitchBendChangeMessageFactory>
     {
@@ -646,9 +645,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiPolyphonicKeyPressureMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Note() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Pressure() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Note() const;
+        [[nodiscard]] auto Pressure() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiPolyphonicKeyPressureMessage>
     {
@@ -657,7 +656,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiPolyphonicKeyPressureMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage) CreateMidiPolyphonicKeyPressureMessage(uint8_t channel, uint8_t note, uint8_t pressure) const;
+        auto CreateMidiPolyphonicKeyPressureMessage(uint8_t channel, uint8_t note, uint8_t pressure) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiPolyphonicKeyPressureMessageFactory>
     {
@@ -666,8 +665,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiProgramChangeMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Channel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Program() const;
+        [[nodiscard]] auto Channel() const;
+        [[nodiscard]] auto Program() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiProgramChangeMessage>
     {
@@ -676,7 +675,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiProgramChangeMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiProgramChangeMessage) CreateMidiProgramChangeMessage(uint8_t channel, uint8_t program) const;
+        auto CreateMidiProgramChangeMessage(uint8_t channel, uint8_t program) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiProgramChangeMessageFactory>
     {
@@ -685,7 +684,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSongPositionPointerMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Beats() const;
+        [[nodiscard]] auto Beats() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSongPositionPointerMessage>
     {
@@ -694,7 +693,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSongPositionPointerMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage) CreateMidiSongPositionPointerMessage(uint16_t beats) const;
+        auto CreateMidiSongPositionPointerMessage(uint16_t beats) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSongPositionPointerMessageFactory>
     {
@@ -703,7 +702,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSongSelectMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Song() const;
+        [[nodiscard]] auto Song() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSongSelectMessage>
     {
@@ -712,7 +711,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSongSelectMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiSongSelectMessage) CreateMidiSongSelectMessage(uint8_t song) const;
+        auto CreateMidiSongSelectMessage(uint8_t song) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSongSelectMessageFactory>
     {
@@ -721,9 +720,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSynthesizer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceInformation) AudioDevice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Volume() const;
-        WINRT_IMPL_AUTO(void) Volume(double value) const;
+        [[nodiscard]] auto AudioDevice() const;
+        [[nodiscard]] auto Volume() const;
+        auto Volume(double value) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSynthesizer>
     {
@@ -732,9 +731,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSynthesizerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Midi::MidiSynthesizer>) CreateAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Midi::MidiSynthesizer>) CreateAsync(winrt::Windows::Devices::Enumeration::DeviceInformation const& audioDevice) const;
-        WINRT_IMPL_AUTO(bool) IsSynthesizer(winrt::Windows::Devices::Enumeration::DeviceInformation const& midiDevice) const;
+        auto CreateAsync() const;
+        auto CreateAsync(winrt::Windows::Devices::Enumeration::DeviceInformation const& audioDevice) const;
+        auto IsSynthesizer(winrt::Windows::Devices::Enumeration::DeviceInformation const& midiDevice) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSynthesizerStatics>
     {
@@ -743,7 +742,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiSystemExclusiveMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage) CreateMidiSystemExclusiveMessage(winrt::Windows::Storage::Streams::IBuffer const& rawData) const;
+        auto CreateMidiSystemExclusiveMessage(winrt::Windows::Storage::Streams::IBuffer const& rawData) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiSystemExclusiveMessageFactory>
     {
@@ -752,8 +751,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiTimeCodeMessage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) FrameType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) Values() const;
+        [[nodiscard]] auto FrameType() const;
+        [[nodiscard]] auto Values() const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiTimeCodeMessage>
     {
@@ -762,7 +761,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Midi_IMidiTimeCodeMessageFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Midi::MidiTimeCodeMessage) CreateMidiTimeCodeMessage(uint8_t frameType, uint8_t values) const;
+        auto CreateMidiTimeCodeMessage(uint8_t frameType, uint8_t values) const;
     };
     template <> struct consume<winrt::Windows::Devices::Midi::IMidiTimeCodeMessageFactory>
     {

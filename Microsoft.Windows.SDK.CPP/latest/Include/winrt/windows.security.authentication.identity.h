@@ -361,7 +361,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationInfo = _uuidof(IEnterpriseKeyCredentialRegistrationInfo);
+                    MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationInfo = __uuidof(IEnterpriseKeyCredentialRegistrationInfo);
                 } /* Identity */
             } /* Authentication */
         } /* Security */
@@ -399,7 +399,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationManager = _uuidof(IEnterpriseKeyCredentialRegistrationManager);
+                    MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationManager = __uuidof(IEnterpriseKeyCredentialRegistrationManager);
                 } /* Identity */
             } /* Authentication */
         } /* Security */
@@ -437,7 +437,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationManagerStatics = _uuidof(IEnterpriseKeyCredentialRegistrationManagerStatics);
+                    MIDL_CONST_ID IID& IID_IEnterpriseKeyCredentialRegistrationManagerStatics = __uuidof(IEnterpriseKeyCredentialRegistrationManagerStatics);
                 } /* Identity */
             } /* Authentication */
         } /* Security */

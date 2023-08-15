@@ -341,7 +341,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBattery = _uuidof(IBattery);
+                MIDL_CONST_ID IID& IID_IBattery = __uuidof(IBattery);
             } /* Power */
         } /* Devices */
     } /* Windows */
@@ -389,7 +389,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBatteryReport = _uuidof(IBatteryReport);
+                MIDL_CONST_ID IID& IID_IBatteryReport = __uuidof(IBatteryReport);
             } /* Power */
         } /* Devices */
     } /* Windows */
@@ -432,7 +432,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBatteryStatics = _uuidof(IBatteryStatics);
+                MIDL_CONST_ID IID& IID_IBatteryStatics = __uuidof(IBatteryStatics);
             } /* Power */
         } /* Devices */
     } /* Windows */

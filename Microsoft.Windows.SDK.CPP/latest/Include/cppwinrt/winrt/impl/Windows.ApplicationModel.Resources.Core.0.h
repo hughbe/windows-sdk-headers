@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,6 @@
 #define WINRT_Windows_ApplicationModel_Resources_Core_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
@@ -23,11 +22,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
     struct IStorageFile;
-    struct StorageFile;
-}
-WINRT_EXPORT namespace winrt::Windows::Storage::Streams
-{
-    struct IRandomAccessStream;
 }
 WINRT_EXPORT namespace winrt::Windows::UI
 {
@@ -303,12 +297,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_INamedResource
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>) Candidates() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate) Resolve() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate) Resolve(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>) ResolveAll() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>) ResolveAll(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const;
+        [[nodiscard]] auto Uri() const;
+        [[nodiscard]] auto Candidates() const;
+        auto Resolve() const;
+        auto Resolve(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const;
+        auto ResolveAll() const;
+        auto ResolveAll(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::INamedResource>
     {
@@ -317,13 +311,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>) Qualifiers() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMatch() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMatchAsDefault() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDefault() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ValueAsString() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) GetValueAsFileAsync() const;
-        WINRT_IMPL_AUTO(hstring) GetQualifierValue(param::hstring const& qualifierName) const;
+        [[nodiscard]] auto Qualifiers() const;
+        [[nodiscard]] auto IsMatch() const;
+        [[nodiscard]] auto IsMatchAsDefault() const;
+        [[nodiscard]] auto IsDefault() const;
+        [[nodiscard]] auto ValueAsString() const;
+        auto GetValueAsFileAsync() const;
+        auto GetQualifierValue(param::hstring const& qualifierName) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate>
     {
@@ -332,7 +326,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStream>) GetValueAsStreamAsync() const;
+        auto GetValueAsStreamAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2>
     {
@@ -341,7 +335,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateKind) Kind() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3>
     {
@@ -350,13 +344,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceContext
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableMap<hstring, hstring>) QualifierValues() const;
-        WINRT_IMPL_AUTO(void) Reset() const;
-        WINRT_IMPL_AUTO(void) Reset(param::iterable<hstring> const& qualifierNames) const;
-        WINRT_IMPL_AUTO(void) OverrideToMatch(param::iterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) Clone() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) Languages() const;
-        WINRT_IMPL_AUTO(void) Languages(param::async_vector_view<hstring> const& languages) const;
+        [[nodiscard]] auto QualifierValues() const;
+        auto Reset() const;
+        auto Reset(param::iterable<hstring> const& qualifierNames) const;
+        auto OverrideToMatch(param::iterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const;
+        auto Clone() const;
+        [[nodiscard]] auto Languages() const;
+        auto Languages(param::async_vector_view<hstring> const& languages) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext>
     {
@@ -365,7 +359,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) CreateMatchingContext(param::iterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const;
+        auto CreateMatchingContext(param::iterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics>
     {
@@ -374,11 +368,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) GetForCurrentView() const;
-        WINRT_IMPL_AUTO(void) SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) ResetGlobalQualifierValues() const;
-        WINRT_IMPL_AUTO(void) ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) GetForViewIndependentUse() const;
+        auto GetForCurrentView() const;
+        auto SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value) const;
+        auto ResetGlobalQualifierValues() const;
+        auto ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames) const;
+        auto GetForViewIndependentUse() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>
     {
@@ -387,7 +381,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3
     {
-        WINRT_IMPL_AUTO(void) SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const;
+        auto SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>
     {
@@ -396,7 +390,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
+        auto GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>
     {
@@ -405,11 +399,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceMap) MainResourceMap() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>) AllResourceMaps() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceContext) DefaultContext() const;
-        WINRT_IMPL_AUTO(void) LoadPriFiles(param::iterable<winrt::Windows::Storage::IStorageFile> const& files) const;
-        WINRT_IMPL_AUTO(void) UnloadPriFiles(param::iterable<winrt::Windows::Storage::IStorageFile> const& files) const;
+        [[nodiscard]] auto MainResourceMap() const;
+        [[nodiscard]] auto AllResourceMaps() const;
+        [[nodiscard]] auto DefaultContext() const;
+        auto LoadPriFiles(param::iterable<winrt::Windows::Storage::IStorageFile> const& files) const;
+        auto UnloadPriFiles(param::iterable<winrt::Windows::Storage::IStorageFile> const& files) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager>
     {
@@ -418,8 +412,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceManager2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>) GetAllNamedResourcesForPackage(param::hstring const& packageName, winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>) GetAllSubtreesForPackage(param::hstring const& packageName, winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const;
+        auto GetAllNamedResourcesForPackage(param::hstring const& packageName, winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const;
+        auto GetAllSubtreesForPackage(param::hstring const& packageName, winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2>
     {
@@ -428,8 +422,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceManagerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceManager) Current() const;
-        WINRT_IMPL_AUTO(bool) IsResourceReference(param::hstring const& resourceReference) const;
+        [[nodiscard]] auto Current() const;
+        auto IsResourceReference(param::hstring const& resourceReference) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>
     {
@@ -438,10 +432,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceMap
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate) GetValue(param::hstring const& resource) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate) GetValue(param::hstring const& resource, winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& context) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Resources::Core::ResourceMap) GetSubtree(param::hstring const& reference) const;
+        [[nodiscard]] auto Uri() const;
+        auto GetValue(param::hstring const& resource) const;
+        auto GetValue(param::hstring const& resource, winrt::Windows::ApplicationModel::Resources::Core::ResourceContext const& context) const;
+        auto GetSubtree(param::hstring const& reference) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceMap>
     {
@@ -450,11 +444,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QualifierName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QualifierValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDefault() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMatch() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Score() const;
+        [[nodiscard]] auto QualifierName() const;
+        [[nodiscard]] auto QualifierValue() const;
+        [[nodiscard]] auto IsDefault() const;
+        [[nodiscard]] auto IsMatch() const;
+        [[nodiscard]] auto Score() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Resources::Core::IResourceQualifier>
     {

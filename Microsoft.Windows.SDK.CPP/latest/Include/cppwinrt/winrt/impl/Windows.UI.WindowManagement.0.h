@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,17 +11,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct Deferral;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Point;
     struct Rect;
     struct Size;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -32,11 +26,6 @@ WINRT_EXPORT namespace winrt::Windows::UI
     struct Color;
     struct UIContentRoot;
     struct UIContext;
-    struct WindowId;
-}
-WINRT_EXPORT namespace winrt::Windows::UI::Composition
-{
-    struct IVisualElement;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement
 {
@@ -504,41 +493,41 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindow
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::UIContentRoot) Content() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) DispatcherQueue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowFrame) Frame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsVisible() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PersistedStateId() const;
-        WINRT_IMPL_AUTO(void) PersistedStateId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowPresenter) Presenter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowTitleBar) TitleBar() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::UIContext) UIContext() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) WindowingEnvironment() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CloseAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowPlacement) GetPlacement() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::DisplayRegion>) GetDisplayRegions() const;
-        WINRT_IMPL_AUTO(void) RequestMoveToDisplayRegion(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const;
-        WINRT_IMPL_AUTO(void) RequestMoveAdjacentToCurrentView() const;
-        WINRT_IMPL_AUTO(void) RequestMoveAdjacentToWindow(winrt::Windows::UI::WindowManagement::AppWindow const& anchorWindow) const;
-        WINRT_IMPL_AUTO(void) RequestMoveRelativeToWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& anchorWindow, winrt::Windows::Foundation::Point const& contentOffset) const;
-        WINRT_IMPL_AUTO(void) RequestMoveRelativeToCurrentViewContent(winrt::Windows::Foundation::Point const& contentOffset) const;
-        WINRT_IMPL_AUTO(void) RequestMoveRelativeToDisplayRegion(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion, winrt::Windows::Foundation::Point const& displayRegionOffset) const;
-        WINRT_IMPL_AUTO(void) RequestSize(winrt::Windows::Foundation::Size const& frameSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsync() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto Content() const;
+        [[nodiscard]] auto DispatcherQueue() const;
+        [[nodiscard]] auto Frame() const;
+        [[nodiscard]] auto IsVisible() const;
+        [[nodiscard]] auto PersistedStateId() const;
+        auto PersistedStateId(param::hstring const& value) const;
+        [[nodiscard]] auto Presenter() const;
+        [[nodiscard]] auto Title() const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto TitleBar() const;
+        [[nodiscard]] auto UIContext() const;
+        [[nodiscard]] auto WindowingEnvironment() const;
+        auto CloseAsync() const;
+        auto GetPlacement() const;
+        auto GetDisplayRegions() const;
+        auto RequestMoveToDisplayRegion(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const;
+        auto RequestMoveAdjacentToCurrentView() const;
+        auto RequestMoveAdjacentToWindow(winrt::Windows::UI::WindowManagement::AppWindow const& anchorWindow) const;
+        auto RequestMoveRelativeToWindowContent(winrt::Windows::UI::WindowManagement::AppWindow const& anchorWindow, winrt::Windows::Foundation::Point const& contentOffset) const;
+        auto RequestMoveRelativeToCurrentViewContent(winrt::Windows::Foundation::Point const& contentOffset) const;
+        auto RequestMoveRelativeToDisplayRegion(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion, winrt::Windows::Foundation::Point const& displayRegionOffset) const;
+        auto RequestSize(winrt::Windows::Foundation::Size const& frameSize) const;
+        auto TryShowAsync() const;
+        auto Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::UI::WindowManagement::IAppWindow, &impl::abi_t<winrt::Windows::UI::WindowManagement::IAppWindow>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs> const& handler) const;
+        auto Changed(winrt::event_token const& token) const noexcept;
+        auto Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs> const& handler) const;
         using Closed_revoker = impl::event_revoker<winrt::Windows::UI::WindowManagement::IAppWindow, &impl::abi_t<winrt::Windows::UI::WindowManagement::IAppWindow>::remove_Closed>;
         [[nodiscard]] Closed_revoker Closed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) CloseRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs> const& handler) const;
+        auto Closed(winrt::event_token const& token) const noexcept;
+        auto CloseRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs> const& handler) const;
         using CloseRequested_revoker = impl::event_revoker<winrt::Windows::UI::WindowManagement::IAppWindow, &impl::abi_t<winrt::Windows::UI::WindowManagement::IAppWindow>::remove_CloseRequested>;
         [[nodiscard]] CloseRequested_revoker CloseRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) CloseRequested(winrt::event_token const& token) const noexcept;
+        auto CloseRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindow>
     {
@@ -547,14 +536,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidAvailableWindowPresentationsChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidDisplayRegionsChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidFrameChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidSizeChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidTitleBarChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidVisibilityChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidWindowingEnvironmentChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DidWindowPresentationChange() const;
+        [[nodiscard]] auto DidAvailableWindowPresentationsChange() const;
+        [[nodiscard]] auto DidDisplayRegionsChange() const;
+        [[nodiscard]] auto DidFrameChange() const;
+        [[nodiscard]] auto DidSizeChange() const;
+        [[nodiscard]] auto DidTitleBarChange() const;
+        [[nodiscard]] auto DidVisibilityChange() const;
+        [[nodiscard]] auto DidWindowingEnvironmentChange() const;
+        [[nodiscard]] auto DidWindowPresentationChange() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowChangedEventArgs>
     {
@@ -563,9 +552,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowCloseRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Cancel() const;
-        WINRT_IMPL_AUTO(void) Cancel(bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Cancel() const;
+        auto Cancel(bool value) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowCloseRequestedEventArgs>
     {
@@ -574,7 +563,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowClosedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowClosedReason) Reason() const;
+        [[nodiscard]] auto Reason() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowClosedEventArgs>
     {
@@ -583,7 +572,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Composition::IVisualElement>) DragRegionVisuals() const;
+        [[nodiscard]] auto DragRegionVisuals() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowFrame>
     {
@@ -592,8 +581,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowFrameStyle
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowFrameStyle) GetFrameStyle() const;
-        WINRT_IMPL_AUTO(void) SetFrameStyle(winrt::Windows::UI::WindowManagement::AppWindowFrameStyle const& frameStyle) const;
+        auto GetFrameStyle() const;
+        auto SetFrameStyle(winrt::Windows::UI::WindowManagement::AppWindowFrameStyle const& frameStyle) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowFrameStyle>
     {
@@ -602,9 +591,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowPlacement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::DisplayRegion) DisplayRegion() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Offset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) Size() const;
+        [[nodiscard]] auto DisplayRegion() const;
+        [[nodiscard]] auto Offset() const;
+        [[nodiscard]] auto Size() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowPlacement>
     {
@@ -613,7 +602,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowPresentationConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowPresentationKind) Kind() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowPresentationConfiguration>
     {
@@ -630,10 +619,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowPresenter
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration) GetConfiguration() const;
-        WINRT_IMPL_AUTO(bool) IsPresentationSupported(winrt::Windows::UI::WindowManagement::AppWindowPresentationKind const& presentationKind) const;
-        WINRT_IMPL_AUTO(bool) RequestPresentation(winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration const& configuration) const;
-        WINRT_IMPL_AUTO(bool) RequestPresentation(winrt::Windows::UI::WindowManagement::AppWindowPresentationKind const& presentationKind) const;
+        auto GetConfiguration() const;
+        auto IsPresentationSupported(winrt::Windows::UI::WindowManagement::AppWindowPresentationKind const& presentationKind) const;
+        auto RequestPresentation(winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration const& configuration) const;
+        auto RequestPresentation(winrt::Windows::UI::WindowManagement::AppWindowPresentationKind const& presentationKind) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowPresenter>
     {
@@ -642,9 +631,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::WindowManagement::AppWindow>) TryCreateAsync() const;
-        WINRT_IMPL_AUTO(void) ClearAllPersistedState() const;
-        WINRT_IMPL_AUTO(void) ClearPersistedState(param::hstring const& key) const;
+        auto TryCreateAsync() const;
+        auto ClearAllPersistedState() const;
+        auto ClearPersistedState(param::hstring const& key) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowStatics>
     {
@@ -653,34 +642,34 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowTitleBar
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) BackgroundColor() const;
-        WINRT_IMPL_AUTO(void) BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonHoverBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonHoverBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonHoverForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonHoverForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonInactiveBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonInactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonInactiveForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonInactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonPressedBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonPressedBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonPressedForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonPressedForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ExtendsContentIntoTitleBar() const;
-        WINRT_IMPL_AUTO(void) ExtendsContentIntoTitleBar(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) InactiveBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) InactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) InactiveForegroundColor() const;
-        WINRT_IMPL_AUTO(void) InactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsVisible() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>) GetTitleBarOcclusions() const;
+        [[nodiscard]] auto BackgroundColor() const;
+        auto BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonBackgroundColor() const;
+        auto ButtonBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonForegroundColor() const;
+        auto ButtonForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonHoverBackgroundColor() const;
+        auto ButtonHoverBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonHoverForegroundColor() const;
+        auto ButtonHoverForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonInactiveBackgroundColor() const;
+        auto ButtonInactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonInactiveForegroundColor() const;
+        auto ButtonInactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonPressedBackgroundColor() const;
+        auto ButtonPressedBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonPressedForegroundColor() const;
+        auto ButtonPressedForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ExtendsContentIntoTitleBar() const;
+        auto ExtendsContentIntoTitleBar(bool value) const;
+        [[nodiscard]] auto ForegroundColor() const;
+        auto ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto InactiveBackgroundColor() const;
+        auto InactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto InactiveForegroundColor() const;
+        auto InactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto IsVisible() const;
+        auto GetTitleBarOcclusions() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowTitleBar>
     {
@@ -689,7 +678,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowTitleBarOcclusion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OccludingRect() const;
+        [[nodiscard]] auto OccludingRect() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowTitleBarOcclusion>
     {
@@ -698,8 +687,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IAppWindowTitleBarVisibility
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility) GetPreferredVisibility() const;
-        WINRT_IMPL_AUTO(void) SetPreferredVisibility(winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility const& visibilityMode) const;
+        auto GetPreferredVisibility() const;
+        auto SetPreferredVisibility(winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility const& visibilityMode) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IAppWindowTitleBarVisibility>
     {
@@ -724,15 +713,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IDisplayRegion
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayMonitorDeviceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsVisible() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) WorkAreaOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) WorkAreaSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) WindowingEnvironment() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::DisplayRegion, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto DisplayMonitorDeviceId() const;
+        [[nodiscard]] auto IsVisible() const;
+        [[nodiscard]] auto WorkAreaOffset() const;
+        [[nodiscard]] auto WorkAreaSize() const;
+        [[nodiscard]] auto WindowingEnvironment() const;
+        auto Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::DisplayRegion, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::UI::WindowManagement::IDisplayRegion, &impl::abi_t<winrt::Windows::UI::WindowManagement::IDisplayRegion>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::DisplayRegion, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
+        auto Changed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IDisplayRegion>
     {
@@ -741,8 +730,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IFullScreenPresentationConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsExclusive() const;
-        WINRT_IMPL_AUTO(void) IsExclusive(bool value) const;
+        [[nodiscard]] auto IsExclusive() const;
+        auto IsExclusive(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IFullScreenPresentationConfiguration>
     {
@@ -751,7 +740,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IWindowServicesStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowId>) FindAllTopLevelWindowIds() const;
+        auto FindAllTopLevelWindowIds() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IWindowServicesStatics>
     {
@@ -760,13 +749,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IWindowingEnvironment
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind) Kind() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::DisplayRegion>) GetDisplayRegions() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::WindowingEnvironment, winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto IsEnabled() const;
+        [[nodiscard]] auto Kind() const;
+        auto GetDisplayRegions() const;
+        auto Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::WindowingEnvironment, winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::UI::WindowManagement::IWindowingEnvironment, &impl::abi_t<winrt::Windows::UI::WindowManagement::IWindowingEnvironment>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::WindowingEnvironment, winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
+        auto Changed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IWindowingEnvironment>
     {
@@ -775,7 +764,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IWindowingEnvironmentAddedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) WindowingEnvironment() const;
+        [[nodiscard]] auto WindowingEnvironment() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IWindowingEnvironmentAddedEventArgs>
     {
@@ -792,7 +781,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IWindowingEnvironmentRemovedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) WindowingEnvironment() const;
+        [[nodiscard]] auto WindowingEnvironment() const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IWindowingEnvironmentRemovedEventArgs>
     {
@@ -801,8 +790,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_WindowManagement_IWindowingEnvironmentStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::WindowingEnvironment>) FindAll() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::WindowingEnvironment>) FindAll(winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind const& kind) const;
+        auto FindAll() const;
+        auto FindAll(winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind const& kind) const;
     };
     template <> struct consume<winrt::Windows::UI::WindowManagement::IWindowingEnvironmentStatics>
     {

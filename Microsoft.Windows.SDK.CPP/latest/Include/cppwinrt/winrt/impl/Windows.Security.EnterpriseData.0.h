@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,12 +11,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct Deferral;
     template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Networking
 {
@@ -540,8 +538,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IBufferProtectUnprotectResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Buffer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::DataProtectionInfo) ProtectionInfo() const;
+        [[nodiscard]] auto Buffer() const;
+        [[nodiscard]] auto ProtectionInfo() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IBufferProtectUnprotectResult>
     {
@@ -550,8 +548,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IDataProtectionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::DataProtectionStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Identity() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto Identity() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IDataProtectionInfo>
     {
@@ -560,12 +558,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IDataProtectionManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>) ProtectAsync(winrt::Windows::Storage::Streams::IBuffer const& data, param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>) UnprotectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>) ProtectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& unprotectedStream, param::hstring const& identity, winrt::Windows::Storage::Streams::IOutputStream const& protectedStream) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>) UnprotectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& protectedStream, winrt::Windows::Storage::Streams::IOutputStream const& unprotectedStream) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>) GetProtectionInfoAsync(winrt::Windows::Storage::Streams::IBuffer const& protectedData) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>) GetStreamProtectionInfoAsync(winrt::Windows::Storage::Streams::IInputStream const& protectedStream) const;
+        auto ProtectAsync(winrt::Windows::Storage::Streams::IBuffer const& data, param::hstring const& identity) const;
+        auto UnprotectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
+        auto ProtectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& unprotectedStream, param::hstring const& identity, winrt::Windows::Storage::Streams::IOutputStream const& protectedStream) const;
+        auto UnprotectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& protectedStream, winrt::Windows::Storage::Streams::IOutputStream const& unprotectedStream) const;
+        auto GetProtectionInfoAsync(winrt::Windows::Storage::Streams::IBuffer const& protectedData) const;
+        auto GetStreamProtectionInfoAsync(winrt::Windows::Storage::Streams::IInputStream const& protectedStream) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IDataProtectionManagerStatics>
     {
@@ -574,9 +572,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileProtectionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::FileProtectionStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRoamable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Identity() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto IsRoamable() const;
+        [[nodiscard]] auto Identity() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileProtectionInfo>
     {
@@ -585,7 +583,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileProtectionInfo2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsProtectWhileOpenSupported() const;
+        [[nodiscard]] auto IsProtectWhileOpenSupported() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileProtectionInfo2>
     {
@@ -594,13 +592,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileProtectionManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>) ProtectAsync(winrt::Windows::Storage::IStorageItem const& target, param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) CopyProtectionAsync(winrt::Windows::Storage::IStorageItem const& source, winrt::Windows::Storage::IStorageItem const& target) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>) GetProtectionInfoAsync(winrt::Windows::Storage::IStorageItem const& source) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>) SaveFileAsContainerAsync(winrt::Windows::Storage::IStorageFile const& protectedFile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>) LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>) LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile, winrt::Windows::Storage::IStorageItem const& target) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>) CreateProtectedAndOpenAsync(winrt::Windows::Storage::IStorageFolder const& parentFolder, param::hstring const& desiredName, param::hstring const& identity, winrt::Windows::Storage::CreationCollisionOption const& collisionOption) const;
+        auto ProtectAsync(winrt::Windows::Storage::IStorageItem const& target, param::hstring const& identity) const;
+        auto CopyProtectionAsync(winrt::Windows::Storage::IStorageItem const& source, winrt::Windows::Storage::IStorageItem const& target) const;
+        auto GetProtectionInfoAsync(winrt::Windows::Storage::IStorageItem const& source) const;
+        auto SaveFileAsContainerAsync(winrt::Windows::Storage::IStorageFile const& protectedFile) const;
+        auto LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile) const;
+        auto LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile, winrt::Windows::Storage::IStorageItem const& target) const;
+        auto CreateProtectedAndOpenAsync(winrt::Windows::Storage::IStorageFolder const& parentFolder, param::hstring const& desiredName, param::hstring const& identity, winrt::Windows::Storage::CreationCollisionOption const& collisionOption) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileProtectionManagerStatics>
     {
@@ -609,9 +607,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileProtectionManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsContainerAsync(winrt::Windows::Storage::IStorageFile const& file) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>) LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile, winrt::Windows::Storage::IStorageItem const& target, winrt::Windows::Storage::NameCollisionOption const& collisionOption) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>) SaveFileAsContainerAsync(winrt::Windows::Storage::IStorageFile const& protectedFile, param::async_iterable<hstring> const& sharedWithIdentities) const;
+        auto IsContainerAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto LoadFileFromContainerAsync(winrt::Windows::Storage::IStorageFile const& containerFile, winrt::Windows::Storage::IStorageItem const& target, winrt::Windows::Storage::NameCollisionOption const& collisionOption) const;
+        auto SaveFileAsContainerAsync(winrt::Windows::Storage::IStorageFile const& protectedFile, param::async_iterable<hstring> const& sharedWithIdentities) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileProtectionManagerStatics2>
     {
@@ -620,8 +618,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileProtectionManagerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>) UnprotectAsync(winrt::Windows::Storage::IStorageItem const& target) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>) UnprotectAsync(winrt::Windows::Storage::IStorageItem const& target, winrt::Windows::Security::EnterpriseData::FileUnprotectOptions const& options) const;
+        auto UnprotectAsync(winrt::Windows::Storage::IStorageItem const& target) const;
+        auto UnprotectAsync(winrt::Windows::Storage::IStorageItem const& target, winrt::Windows::Security::EnterpriseData::FileUnprotectOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileProtectionManagerStatics3>
     {
@@ -630,10 +628,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileRevocationManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionStatus>) ProtectAsync(winrt::Windows::Storage::IStorageItem const& storageItem, param::hstring const& enterpriseIdentity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) CopyProtectionAsync(winrt::Windows::Storage::IStorageItem const& sourceStorageItem, winrt::Windows::Storage::IStorageItem const& targetStorageItem) const;
-        WINRT_IMPL_AUTO(void) Revoke(param::hstring const& enterpriseIdentity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::FileProtectionStatus>) GetStatusAsync(winrt::Windows::Storage::IStorageItem const& storageItem) const;
+        auto ProtectAsync(winrt::Windows::Storage::IStorageItem const& storageItem, param::hstring const& enterpriseIdentity) const;
+        auto CopyProtectionAsync(winrt::Windows::Storage::IStorageItem const& sourceStorageItem, winrt::Windows::Storage::IStorageItem const& targetStorageItem) const;
+        auto Revoke(param::hstring const& enterpriseIdentity) const;
+        auto GetStatusAsync(winrt::Windows::Storage::IStorageItem const& storageItem) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileRevocationManagerStatics>
     {
@@ -642,8 +640,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileUnprotectOptions
     {
-        WINRT_IMPL_AUTO(void) Audit(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Audit() const;
+        auto Audit(bool value) const;
+        [[nodiscard]] auto Audit() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileUnprotectOptions>
     {
@@ -652,7 +650,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IFileUnprotectOptionsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::FileUnprotectOptions) Create(bool audit) const;
+        auto Create(bool audit) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IFileUnprotectOptionsFactory>
     {
@@ -661,7 +659,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedAccessResumedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) Identities() const;
+        [[nodiscard]] auto Identities() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedAccessResumedEventArgs>
     {
@@ -670,9 +668,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedAccessSuspendingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) Identities() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Deadline() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Identities() const;
+        [[nodiscard]] auto Deadline() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedAccessSuspendingEventArgs>
     {
@@ -681,8 +679,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedContainerExportResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) File() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto File() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedContainerExportResult>
     {
@@ -691,8 +689,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedContainerImportResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) File() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto File() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedContainerImportResult>
     {
@@ -701,7 +699,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedContentRevokedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) Identities() const;
+        [[nodiscard]] auto Identities() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedContentRevokedEventArgs>
     {
@@ -710,9 +708,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectedFileCreateResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) File() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStream) Stream() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::FileProtectionInfo) ProtectionInfo() const;
+        [[nodiscard]] auto File() const;
+        [[nodiscard]] auto Stream() const;
+        [[nodiscard]] auto ProtectionInfo() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectedFileCreateResult>
     {
@@ -721,14 +719,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyAuditInfo
     {
-        WINRT_IMPL_AUTO(void) Action(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction) Action() const;
-        WINRT_IMPL_AUTO(void) DataDescription(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DataDescription() const;
-        WINRT_IMPL_AUTO(void) SourceDescription(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourceDescription() const;
-        WINRT_IMPL_AUTO(void) TargetDescription(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TargetDescription() const;
+        auto Action(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& value) const;
+        [[nodiscard]] auto Action() const;
+        auto DataDescription(param::hstring const& value) const;
+        [[nodiscard]] auto DataDescription() const;
+        auto SourceDescription(param::hstring const& value) const;
+        [[nodiscard]] auto SourceDescription() const;
+        auto TargetDescription(param::hstring const& value) const;
+        [[nodiscard]] auto TargetDescription() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyAuditInfo>
     {
@@ -737,8 +735,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyAuditInfoFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo) Create(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& action, param::hstring const& dataDescription, param::hstring const& sourceDescription, param::hstring const& targetDescription) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo) CreateWithActionAndDataDescription(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& action, param::hstring const& dataDescription) const;
+        auto Create(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& action, param::hstring const& dataDescription, param::hstring const& sourceDescription, param::hstring const& targetDescription) const;
+        auto CreateWithActionAndDataDescription(winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction const& action, param::hstring const& dataDescription) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyAuditInfoFactory>
     {
@@ -747,8 +745,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManager
     {
-        WINRT_IMPL_AUTO(void) Identity(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Identity() const;
+        auto Identity(param::hstring const& value) const;
+        [[nodiscard]] auto Identity() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManager>
     {
@@ -757,8 +755,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManager2
     {
-        WINRT_IMPL_AUTO(void) ShowEnterpriseIndicator(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShowEnterpriseIndicator() const;
+        auto ShowEnterpriseIndicator(bool value) const;
+        [[nodiscard]] auto ShowEnterpriseIndicator() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManager2>
     {
@@ -767,27 +765,27 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManagerStatics
     {
-        WINRT_IMPL_AUTO(bool) IsIdentityManaged(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(bool) TryApplyProcessUIPolicy(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(void) ClearProcessUIPolicy() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ThreadNetworkContext) CreateCurrentThreadNetworkContext(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) GetPrimaryManagedIdentityForNetworkEndpointAsync(winrt::Windows::Networking::HostName const& endpointHost) const;
-        WINRT_IMPL_AUTO(void) RevokeContent(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager) GetForCurrentView() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ProtectedAccessSuspending(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler) const;
+        auto IsIdentityManaged(param::hstring const& identity) const;
+        auto TryApplyProcessUIPolicy(param::hstring const& identity) const;
+        auto ClearProcessUIPolicy() const;
+        auto CreateCurrentThreadNetworkContext(param::hstring const& identity) const;
+        auto GetPrimaryManagedIdentityForNetworkEndpointAsync(winrt::Windows::Networking::HostName const& endpointHost) const;
+        auto RevokeContent(param::hstring const& identity) const;
+        auto GetForCurrentView() const;
+        auto ProtectedAccessSuspending(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler) const;
         using ProtectedAccessSuspending_revoker = impl::event_revoker<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedAccessSuspending>;
         [[nodiscard]] ProtectedAccessSuspending_revoker ProtectedAccessSuspending(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProtectedAccessSuspending(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ProtectedAccessResumed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler) const;
+        auto ProtectedAccessSuspending(winrt::event_token const& token) const noexcept;
+        auto ProtectedAccessResumed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler) const;
         using ProtectedAccessResumed_revoker = impl::event_revoker<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedAccessResumed>;
         [[nodiscard]] ProtectedAccessResumed_revoker ProtectedAccessResumed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProtectedAccessResumed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ProtectedContentRevoked(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler) const;
+        auto ProtectedAccessResumed(winrt::event_token const& token) const noexcept;
+        auto ProtectedContentRevoked(winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler) const;
         using ProtectedContentRevoked_revoker = impl::event_revoker<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedContentRevoked>;
         [[nodiscard]] ProtectedContentRevoked_revoker ProtectedContentRevoked(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProtectedContentRevoked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult) CheckAccess(param::hstring const& sourceIdentity, param::hstring const& targetIdentity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity) const;
+        auto ProtectedContentRevoked(winrt::event_token const& token) const noexcept;
+        auto CheckAccess(param::hstring const& sourceIdentity, param::hstring const& targetIdentity) const;
+        auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>
     {
@@ -796,17 +794,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManagerStatics2
     {
-        WINRT_IMPL_AUTO(bool) HasContentBeenRevokedSince(param::hstring const& identity, winrt::Windows::Foundation::DateTime const& since) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult) CheckAccessForApp(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Security::EnterpriseData::EnforcementLevel) GetEnforcementLevel(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(bool) IsUserDecryptionAllowed(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(bool) IsProtectionUnderLockRequired(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::event_token) PolicyChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto HasContentBeenRevokedSince(param::hstring const& identity, winrt::Windows::Foundation::DateTime const& since) const;
+        auto CheckAccessForApp(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName) const;
+        auto RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName) const;
+        auto GetEnforcementLevel(param::hstring const& identity) const;
+        auto IsUserDecryptionAllowed(param::hstring const& identity) const;
+        auto IsProtectionUnderLockRequired(param::hstring const& identity) const;
+        auto PolicyChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using PolicyChanged_revoker = impl::event_revoker<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2, &impl::abi_t<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2>::remove_PolicyChanged>;
         [[nodiscard]] PolicyChanged_revoker PolicyChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) PolicyChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsProtectionEnabled() const;
+        auto PolicyChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto IsProtectionEnabled() const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2>
     {
@@ -815,11 +813,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManagerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp) const;
-        WINRT_IMPL_AUTO(void) LogAuditEvent(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
+        auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
+        auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp) const;
+        auto RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
+        auto RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp) const;
+        auto LogAuditEvent(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics3>
     {
@@ -828,17 +826,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_EnterpriseData_IProtectionPolicyManagerStatics4
     {
-        WINRT_IMPL_AUTO(bool) IsRoamableProtectionEnabled(param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessToFilesForAppAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessToFilesForAppAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessToFilesForProcessAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, uint32_t processId, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>) RequestAccessToFilesForProcessAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, uint32_t processId, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsFileProtectionRequiredAsync(winrt::Windows::Storage::IStorageItem const& target, param::hstring const& identity) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsFileProtectionRequiredForNewFileAsync(winrt::Windows::Storage::IStorageFolder const& parentFolder, param::hstring const& identity, param::hstring const& desiredName) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PrimaryManagedIdentity() const;
-        WINRT_IMPL_AUTO(hstring) GetPrimaryManagedIdentityForIdentity(param::hstring const& identity) const;
+        auto IsRoamableProtectionEnabled(param::hstring const& identity) const;
+        auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
+        auto RequestAccessForAppAsync(param::hstring const& sourceIdentity, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
+        auto RequestAccessToFilesForAppAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
+        auto RequestAccessToFilesForAppAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, param::hstring const& appPackageFamilyName, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
+        auto RequestAccessToFilesForProcessAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, uint32_t processId, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo) const;
+        auto RequestAccessToFilesForProcessAsync(param::async_iterable<winrt::Windows::Storage::IStorageItem> const& sourceItemList, uint32_t processId, winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo, param::hstring const& messageFromApp, winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior const& behavior) const;
+        auto IsFileProtectionRequiredAsync(winrt::Windows::Storage::IStorageItem const& target, param::hstring const& identity) const;
+        auto IsFileProtectionRequiredForNewFileAsync(winrt::Windows::Storage::IStorageFolder const& parentFolder, param::hstring const& identity, param::hstring const& desiredName) const;
+        [[nodiscard]] auto PrimaryManagedIdentity() const;
+        auto GetPrimaryManagedIdentityForIdentity(param::hstring const& identity) const;
     };
     template <> struct consume<winrt::Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics4>
     {

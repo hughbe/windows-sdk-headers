@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,15 +9,11 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Numerics
 {
@@ -28,10 +24,8 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX
 }
 WINRT_EXPORT namespace winrt::Windows::Perception::Spatial
 {
-    struct SpatialBoundingOrientedBox;
     struct SpatialBoundingVolume;
     struct SpatialCoordinateSystem;
-    enum class SpatialPerceptionAccessStatus : int32_t;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -178,11 +172,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) UpdateTime() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>) TryGetBounds(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>) TryComputeLatestMeshAsync(double maxTrianglesPerCubicMeter) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>) TryComputeLatestMeshAsync(double maxTrianglesPerCubicMeter, winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions const& options) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto UpdateTime() const;
+        auto TryGetBounds(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
+        auto TryComputeLatestMeshAsync(double maxTrianglesPerCubicMeter) const;
+        auto TryComputeLatestMeshAsync(double maxTrianglesPerCubicMeter, winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo>
     {
@@ -191,12 +185,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceMesh
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo) SurfaceInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CoordinateSystem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer) TriangleIndices() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer) VertexPositions() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) VertexPositionScale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer) VertexNormals() const;
+        [[nodiscard]] auto SurfaceInfo() const;
+        [[nodiscard]] auto CoordinateSystem() const;
+        [[nodiscard]] auto TriangleIndices() const;
+        [[nodiscard]] auto VertexPositions() const;
+        [[nodiscard]] auto VertexPositionScale() const;
+        [[nodiscard]] auto VertexNormals() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh>
     {
@@ -205,10 +199,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceMeshBuffer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) Format() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Stride() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ElementCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Data() const;
+        [[nodiscard]] auto Format() const;
+        [[nodiscard]] auto Stride() const;
+        [[nodiscard]] auto ElementCount() const;
+        [[nodiscard]] auto Data() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshBuffer>
     {
@@ -217,14 +211,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceMeshOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) VertexPositionFormat() const;
-        WINRT_IMPL_AUTO(void) VertexPositionFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) TriangleIndexFormat() const;
-        WINRT_IMPL_AUTO(void) TriangleIndexFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) VertexNormalFormat() const;
-        WINRT_IMPL_AUTO(void) VertexNormalFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeVertexNormals() const;
-        WINRT_IMPL_AUTO(void) IncludeVertexNormals(bool value) const;
+        [[nodiscard]] auto VertexPositionFormat() const;
+        auto VertexPositionFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
+        [[nodiscard]] auto TriangleIndexFormat() const;
+        auto TriangleIndexFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
+        [[nodiscard]] auto VertexNormalFormat() const;
+        auto VertexNormalFormat(winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& value) const;
+        [[nodiscard]] auto IncludeVertexNormals() const;
+        auto IncludeVertexNormals(bool value) const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptions>
     {
@@ -233,9 +227,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceMeshOptionsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>) SupportedVertexPositionFormats() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>) SupportedTriangleIndexFormats() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>) SupportedVertexNormalFormats() const;
+        [[nodiscard]] auto SupportedVertexPositionFormats() const;
+        [[nodiscard]] auto SupportedTriangleIndexFormats() const;
+        [[nodiscard]] auto SupportedVertexNormalFormats() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptionsStatics>
     {
@@ -244,13 +238,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceObserver
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>) GetObservedSurfaces() const;
-        WINRT_IMPL_AUTO(void) SetBoundingVolume(winrt::Windows::Perception::Spatial::SpatialBoundingVolume const& bounds) const;
-        WINRT_IMPL_AUTO(void) SetBoundingVolumes(param::iterable<winrt::Windows::Perception::Spatial::SpatialBoundingVolume> const& bounds) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ObservedSurfacesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto GetObservedSurfaces() const;
+        auto SetBoundingVolume(winrt::Windows::Perception::Spatial::SpatialBoundingVolume const& bounds) const;
+        auto SetBoundingVolumes(param::iterable<winrt::Windows::Perception::Spatial::SpatialBoundingVolume> const& bounds) const;
+        auto ObservedSurfacesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ObservedSurfacesChanged_revoker = impl::event_revoker<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver, &impl::abi_t<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver>::remove_ObservedSurfacesChanged>;
         [[nodiscard]] ObservedSurfacesChanged_revoker ObservedSurfacesChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ObservedSurfacesChanged(winrt::event_token const& token) const noexcept;
+        auto ObservedSurfacesChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver>
     {
@@ -259,7 +253,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceObserverStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>) RequestAccessAsync() const;
+        auto RequestAccessAsync() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserverStatics>
     {
@@ -268,7 +262,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_Spatial_Surfaces_ISpatialSurfaceObserverStatics2
     {
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserverStatics2>
     {

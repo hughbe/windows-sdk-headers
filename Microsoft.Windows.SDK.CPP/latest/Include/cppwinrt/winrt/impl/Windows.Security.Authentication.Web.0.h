@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,6 @@
 #define WINRT_Windows_Security_Authentication_Web_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
@@ -97,9 +96,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Web_IWebAuthenticationBrokerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>) AuthenticateAsync(winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options, winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>) AuthenticateAsync(winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options, winrt::Windows::Foundation::Uri const& requestUri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) GetCurrentApplicationCallbackUri() const;
+        auto AuthenticateAsync(winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options, winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri) const;
+        auto AuthenticateAsync(winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options, winrt::Windows::Foundation::Uri const& requestUri) const;
+        auto GetCurrentApplicationCallbackUri() const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Web::IWebAuthenticationBrokerStatics>
     {
@@ -108,11 +107,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Web_IWebAuthenticationBrokerStatics2
     {
-        WINRT_IMPL_AUTO(void) AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri) const;
-        WINRT_IMPL_AUTO(void) AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri) const;
-        WINRT_IMPL_AUTO(void) AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri, winrt::Windows::Foundation::Collections::ValueSet const& continuationData, winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>) AuthenticateSilentlyAsync(winrt::Windows::Foundation::Uri const& requestUri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>) AuthenticateSilentlyAsync(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options) const;
+        auto AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri) const;
+        auto AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri) const;
+        auto AuthenticateAndContinue(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Foundation::Uri const& callbackUri, winrt::Windows::Foundation::Collections::ValueSet const& continuationData, winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options) const;
+        auto AuthenticateSilentlyAsync(winrt::Windows::Foundation::Uri const& requestUri) const;
+        auto AuthenticateSilentlyAsync(winrt::Windows::Foundation::Uri const& requestUri, winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Web::IWebAuthenticationBrokerStatics2>
     {
@@ -121,9 +120,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Web_IWebAuthenticationResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ResponseData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus) ResponseStatus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ResponseErrorDetail() const;
+        [[nodiscard]] auto ResponseData() const;
+        [[nodiscard]] auto ResponseStatus() const;
+        [[nodiscard]] auto ResponseErrorDetail() const;
     };
     template <> struct consume<winrt::Windows::Security::Authentication::Web::IWebAuthenticationResult>
     {

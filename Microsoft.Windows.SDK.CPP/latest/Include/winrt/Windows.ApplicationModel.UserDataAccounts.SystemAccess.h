@@ -854,7 +854,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDeviceAccountConfiguration = _uuidof(IDeviceAccountConfiguration);
+                    MIDL_CONST_ID IID& IID_IDeviceAccountConfiguration = __uuidof(IDeviceAccountConfiguration);
                 } /* SystemAccess */
             } /* UserDataAccounts */
         } /* ApplicationModel */
@@ -1057,7 +1057,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDeviceAccountConfiguration2 = _uuidof(IDeviceAccountConfiguration2);
+                    MIDL_CONST_ID IID& IID_IDeviceAccountConfiguration2 = __uuidof(IDeviceAccountConfiguration2);
                 } /* SystemAccess */
             } /* UserDataAccounts */
         } /* ApplicationModel */
@@ -1096,7 +1096,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IUserDataAccountSystemAccessManagerStatics = _uuidof(IUserDataAccountSystemAccessManagerStatics);
+                    MIDL_CONST_ID IID& IID_IUserDataAccountSystemAccessManagerStatics = __uuidof(IUserDataAccountSystemAccessManagerStatics);
                 } /* SystemAccess */
             } /* UserDataAccounts */
         } /* ApplicationModel */
@@ -1147,7 +1147,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IUserDataAccountSystemAccessManagerStatics2 = _uuidof(IUserDataAccountSystemAccessManagerStatics2);
+                    MIDL_CONST_ID IID& IID_IUserDataAccountSystemAccessManagerStatics2 = __uuidof(IUserDataAccountSystemAccessManagerStatics2);
                 } /* SystemAccess */
             } /* UserDataAccounts */
         } /* ApplicationModel */
@@ -1190,8 +1190,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -2846,8 +2846,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

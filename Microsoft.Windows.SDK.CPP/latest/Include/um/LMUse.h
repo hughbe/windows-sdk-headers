@@ -307,6 +307,91 @@ typedef struct _USE_OPTION_PROPERTIES {
     size_t Length;
 } USE_OPTION_PROPERTIES, *PUSE_OPTION_PROPERTIES;
 
+//
+// Client Certificate Mapping Flags
+//
+
+//
+// Pins certificate mapping by issuer name
+//
+
+#define CLIENT_CERTIFICATE_MAPPING_PIN_BY_ISSUER_NAME 0x00000001
+
+typedef struct _CLIENT_CERTIFICATE_INFO_0 {
+    LMSTR      srvci0_name;
+    LMSTR      srvci0_subject;
+    LMSTR      srvci0_issuer;
+    LMSTR      srvci0_thumbprint;
+    LMSTR      srvci0_friendlyname;
+    LMSTR      srvci0_notbefore;
+    LMSTR      srvci0_notafter;
+    LMSTR      srvci0_storelocation;
+    LMSTR      srvci0_storename;
+    LMSTR      srvci0_renewalchain;
+    DWORD      srvci0_type;
+    DWORD      srvci0_flags;
+    DWORD      srvci0_mapping_status;
+} CLIENT_CERTIFICATE_INFO_0, *PCLIENT_CERTIFICATE_INFO_0, *LPCLIENT_CERTIFICATE_INFO_0;
+
+//
+// Client Certificate mapping
+//
+
+typedef union _CLIENT_CERTIFICATE_INFO {
+    LPCLIENT_CERTIFICATE_INFO_0 ClientCertificateInfo0;
+} CLIENT_CERTIFICATE_INFO, *PCLIENT_CERTIFICATE_INFO, *LPCLIENT_CERTIFICATE_INFO;
+
+__checkReturn
+__success( return == 0 )
+NET_API_STATUS
+NetWkstaClientCertificateMappingGet(
+    __in LMSTR ClientName,
+    __in LMSTR SubjectName,
+    __in LMSTR Thumbprint,
+    __in LMSTR FriendlyName,
+    __in DWORD Level,
+    __out LPDWORD TotalEntries,
+    __out LPCLIENT_CERTIFICATE_INFO_0 *CertInfo
+    );
+
+__checkReturn
+__success(return == 0)
+NET_API_STATUS
+NetWkstaClientCertificateMappingAdd(
+    __in LMSTR        ClientName,
+    __in DWORD        Level,
+    __in LPCLIENT_CERTIFICATE_INFO     CertInfo
+    );
+
+__checkReturn
+__success(return == 0)
+NET_API_STATUS
+NetWkstaClientCertificateMappingRemove(
+    __in LMSTR        ClientName,
+    __in DWORD        Level,
+    __in LPCLIENT_CERTIFICATE_INFO     CertInfo
+    );
+
+__checkReturn
+__success(return == 0)
+NET_API_STATUS
+NetWkstaClientCertificateMappingEnum(
+    __in LMSTR        ClientName,
+    __in DWORD         Level, 
+    __inout LPCLIENT_CERTIFICATE_INFO_0* CertInfo,
+    __in  DWORD                PreferedMaximumLength,
+    __out  LPDWORD              TotalEntries,
+    __inout  LPDWORD              ResumeHandle
+    );
+
+__checkReturn
+__success(return == 0)
+NET_API_STATUS
+NetWkstaClientCertificateMappingModify(
+    __in LMSTR        ClientName,
+    __in DWORD        Level,
+    __in LPCLIENT_CERTIFICATE_INFO     CertInfo
+    );
 #ifdef __cplusplus
 }
 #endif

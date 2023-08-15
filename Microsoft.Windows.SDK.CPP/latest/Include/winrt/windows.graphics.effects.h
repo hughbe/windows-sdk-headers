@@ -170,7 +170,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsEffect = _uuidof(IGraphicsEffect);
+                MIDL_CONST_ID IID& IID_IGraphicsEffect = __uuidof(IGraphicsEffect);
             } /* Effects */
         } /* Graphics */
     } /* Windows */
@@ -201,7 +201,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsEffectSource = _uuidof(IGraphicsEffectSource);
+                MIDL_CONST_ID IID& IID_IGraphicsEffectSource = __uuidof(IGraphicsEffectSource);
             } /* Effects */
         } /* Graphics */
     } /* Windows */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_Core_H
 #define WINRT_Windows_ApplicationModel_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -19,43 +19,43 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppDisplayInfo) consume_Windows_ApplicationModel_Core_IAppListEntry<D>::DisplayInfo() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IAppListEntry<D>::DisplayInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IAppListEntry)->get_DisplayInfo(&value));
         return winrt::Windows::ApplicationModel::AppDisplayInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Core_IAppListEntry<D>::LaunchAsync() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IAppListEntry<D>::LaunchAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IAppListEntry)->LaunchAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Core_IAppListEntry2<D>::AppUserModelId() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IAppListEntry2<D>::AppUserModelId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IAppListEntry2)->get_AppUserModelId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Core_IAppListEntry3<D>::LaunchForUserAsync(winrt::Windows::System::User const& user) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IAppListEntry3<D>::LaunchForUserAsync(winrt::Windows::System::User const& user) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IAppListEntry3)->LaunchForUserAsync(*(void**)(&user), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) consume_Windows_ApplicationModel_Core_IAppListEntry4<D>::AppInfo() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IAppListEntry4<D>::AppInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IAppListEntry4)->get_AppInfo(&value));
         return winrt::Windows::ApplicationModel::AppInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Id() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Suspending(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::SuspendingEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Suspending(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::SuspendingEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->add_Suspending(*(void**)(&handler), put_abi(token)));
@@ -65,11 +65,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Suspending_revoker>(this, Suspending(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Suspending(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Suspending(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->remove_Suspending(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Resuming(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Resuming(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->add_Resuming(*(void**)(&handler), put_abi(token)));
@@ -79,31 +79,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Resuming_revoker>(this, Resuming(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Resuming(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Resuming(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->remove_Resuming(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Properties() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->get_Properties(&value));
         return winrt::Windows::Foundation::Collections::IPropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationView) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::GetCurrentView() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::GetCurrentView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->GetCurrentView(&value));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationView{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Run(winrt::Windows::ApplicationModel::Core::IFrameworkViewSource const& viewSource) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::Run(winrt::Windows::ApplicationModel::Core::IFrameworkViewSource const& viewSource) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->Run(*(void**)(&viewSource)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication<D>::RunWithActivationFactories(winrt::Windows::Foundation::IGetActivationFactory const& activationFactoryCallback) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication<D>::RunWithActivationFactories(winrt::Windows::Foundation::IGetActivationFactory const& activationFactoryCallback) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication)->RunWithActivationFactories(*(void**)(&activationFactoryCallback)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::BackgroundActivated(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::BackgroundActivated(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->add_BackgroundActivated(*(void**)(&handler), put_abi(token)));
@@ -113,11 +113,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BackgroundActivated_revoker>(this, BackgroundActivated(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::BackgroundActivated(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::BackgroundActivated(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->remove_BackgroundActivated(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::LeavingBackground(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::LeavingBackground(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->add_LeavingBackground(*(void**)(&handler), put_abi(token)));
@@ -127,11 +127,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LeavingBackground_revoker>(this, LeavingBackground(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->remove_LeavingBackground(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnteredBackground(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnteredBackground(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->add_EnteredBackground(*(void**)(&handler), put_abi(token)));
@@ -141,31 +141,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EnteredBackground_revoker>(this, EnteredBackground(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->remove_EnteredBackground(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnablePrelaunch(bool value) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication2<D>::EnablePrelaunch(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication2)->EnablePrelaunch(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>) consume_Windows_ApplicationModel_Core_ICoreApplication3<D>::RequestRestartAsync(param::hstring const& launchArguments) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication3<D>::RequestRestartAsync(param::hstring const& launchArguments) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication3)->RequestRestartAsync(*(void**)(&launchArguments), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>) consume_Windows_ApplicationModel_Core_ICoreApplication3<D>::RequestRestartForUserAsync(winrt::Windows::System::User const& user, param::hstring const& launchArguments) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplication3<D>::RequestRestartForUserAsync(winrt::Windows::System::User const& user, param::hstring const& launchArguments) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplication3)->RequestRestartForUserAsync(*(void**)(&user), *(void**)(&launchArguments), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exit() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exit() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationExit)->Exit());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exiting(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exiting(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationExit)->add_Exiting(*(void**)(&handler), put_abi(token)));
@@ -175,11 +175,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Exiting_revoker>(this, Exiting(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exiting(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationExit<D>::Exiting(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationExit)->remove_Exiting(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationUnhandledError<D>::UnhandledErrorDetected(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationUnhandledError<D>::UnhandledErrorDetected(winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError)->add_UnhandledErrorDetected(*(void**)(&handler), put_abi(token)));
@@ -189,25 +189,25 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UnhandledErrorDetected_revoker>(this, UnhandledErrorDetected(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationUnhandledError<D>::UnhandledErrorDetected(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationUnhandledError<D>::UnhandledErrorDetected(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError)->remove_UnhandledErrorDetected(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationUseCount<D>::IncrementApplicationUseCount() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationUseCount<D>::IncrementApplicationUseCount() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationUseCount)->IncrementApplicationUseCount());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationUseCount<D>::DecrementApplicationUseCount() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationUseCount<D>::DecrementApplicationUseCount() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationUseCount)->DecrementApplicationUseCount());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Core::CoreWindow) consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::CoreWindow() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::CoreWindow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView)->get_CoreWindow(&value));
         return winrt::Windows::UI::Core::CoreWindow{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView)->add_Activated(*(void**)(&handler), put_abi(token)));
@@ -217,41 +217,41 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Activated_revoker>(this, Activated(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::Activated(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::Activated(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView)->remove_Activated(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::IsMain() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::IsMain() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView)->get_IsMain(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::IsHosted() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView<D>::IsHosted() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView)->get_IsHosted(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Core::CoreDispatcher) consume_Windows_ApplicationModel_Core_ICoreApplicationView2<D>::Dispatcher() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView2<D>::Dispatcher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView2)->get_Dispatcher(&value));
         return winrt::Windows::UI::Core::CoreDispatcher{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::IsComponent() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::IsComponent() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView3)->get_IsComponent(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar) consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::TitleBar() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::TitleBar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView3)->get_TitleBar(&value));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::HostedViewClosing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::HostedViewClosing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView3)->add_HostedViewClosing(*(void**)(&handler), put_abi(token)));
@@ -261,51 +261,51 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, HostedViewClosing_revoker>(this, HostedViewClosing(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::HostedViewClosing(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView3<D>::HostedViewClosing(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView3)->remove_HostedViewClosing(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) consume_Windows_ApplicationModel_Core_ICoreApplicationView5<D>::Properties() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView5<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView5)->get_Properties(&value));
         return winrt::Windows::Foundation::Collections::IPropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) consume_Windows_ApplicationModel_Core_ICoreApplicationView6<D>::DispatcherQueue() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationView6<D>::DispatcherQueue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationView6)->get_DispatcherQueue(&value));
         return winrt::Windows::System::DispatcherQueue{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::ExtendViewIntoTitleBar(bool value) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::ExtendViewIntoTitleBar(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->put_ExtendViewIntoTitleBar(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::ExtendViewIntoTitleBar() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::ExtendViewIntoTitleBar() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->get_ExtendViewIntoTitleBar(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::SystemOverlayLeftInset() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::SystemOverlayLeftInset() const
     {
         double value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->get_SystemOverlayLeftInset(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::SystemOverlayRightInset() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::SystemOverlayRightInset() const
     {
         double value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->get_SystemOverlayRightInset(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::Height() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::Height() const
     {
         double value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->get_Height(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::LayoutMetricsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::LayoutMetricsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->add_LayoutMetricsChanged(*(void**)(&handler), put_abi(token)));
@@ -315,17 +315,17 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LayoutMetricsChanged_revoker>(this, LayoutMetricsChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::LayoutMetricsChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::LayoutMetricsChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->remove_LayoutMetricsChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisible() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisible() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->get_IsVisible(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisibleChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisibleChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->add_IsVisibleChanged(*(void**)(&handler), put_abi(token)));
@@ -335,83 +335,83 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsVisibleChanged_revoker>(this, IsVisibleChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisibleChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreApplicationViewTitleBar<D>::IsVisibleChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreApplicationViewTitleBar)->remove_IsVisibleChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Core::CoreApplicationView>) consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::Views() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::Views() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication)->get_Views(&value));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Core::CoreApplicationView>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationView) consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::CreateNewView(param::hstring const& runtimeType, param::hstring const& entryPoint) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::CreateNewView(param::hstring const& runtimeType, param::hstring const& entryPoint) const
     {
         void* view{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication)->CreateNewView(*(void**)(&runtimeType), *(void**)(&entryPoint), &view));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationView{ view, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationView) consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::MainView() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication<D>::MainView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication)->get_MainView(&value));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationView{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationView) consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication2<D>::CreateNewView() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication2<D>::CreateNewView() const
     {
         void* view{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication2)->CreateNewViewFromMainView(&view));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationView{ view, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::CoreApplicationView) consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication3<D>::CreateNewView(winrt::Windows::ApplicationModel::Core::IFrameworkViewSource const& viewSource) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_ICoreImmersiveApplication3<D>::CreateNewView(winrt::Windows::ApplicationModel::Core::IFrameworkViewSource const& viewSource) const
     {
         void* view{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication3)->CreateNewViewWithViewSource(*(void**)(&viewSource), &view));
         return winrt::Windows::ApplicationModel::Core::CoreApplicationView{ view, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Initialize(winrt::Windows::ApplicationModel::Core::CoreApplicationView const& applicationView) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Initialize(winrt::Windows::ApplicationModel::Core::CoreApplicationView const& applicationView) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkView)->Initialize(*(void**)(&applicationView)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IFrameworkView<D>::SetWindow(winrt::Windows::UI::Core::CoreWindow const& window) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkView<D>::SetWindow(winrt::Windows::UI::Core::CoreWindow const& window) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkView)->SetWindow(*(void**)(&window)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Load(param::hstring const& entryPoint) const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Load(param::hstring const& entryPoint) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkView)->Load(*(void**)(&entryPoint)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Run() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Run() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkView)->Run());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Uninitialize() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkView<D>::Uninitialize() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkView)->Uninitialize());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::IFrameworkView) consume_Windows_ApplicationModel_Core_IFrameworkViewSource<D>::CreateView() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IFrameworkViewSource<D>::CreateView() const
     {
         void* viewProvider{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IFrameworkViewSource)->CreateView(&viewProvider));
         return winrt::Windows::ApplicationModel::Core::IFrameworkView{ viewProvider, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_ApplicationModel_Core_IHostedViewClosingEventArgs<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IHostedViewClosingEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IHostedViewClosingEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Core_IUnhandledError<D>::Handled() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IUnhandledError<D>::Handled() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IUnhandledError)->get_Handled(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Core_IUnhandledError<D>::Propagate() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IUnhandledError<D>::Propagate() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IUnhandledError)->Propagate());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Core::UnhandledError) consume_Windows_ApplicationModel_Core_IUnhandledErrorDetectedEventArgs<D>::UnhandledError() const
+    template <typename D> auto consume_Windows_ApplicationModel_Core_IUnhandledErrorDetectedEventArgs<D>::UnhandledError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Core::IUnhandledErrorDetectedEventArgs)->get_UnhandledError(&value));

@@ -515,7 +515,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ILicenseManagerStatics = _uuidof(ILicenseManagerStatics);
+                    MIDL_CONST_ID IID& IID_ILicenseManagerStatics = __uuidof(ILicenseManagerStatics);
                 } /* LicenseManagement */
             } /* Store */
         } /* ApplicationModel */
@@ -554,7 +554,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ILicenseManagerStatics2 = _uuidof(ILicenseManagerStatics2);
+                    MIDL_CONST_ID IID& IID_ILicenseManagerStatics2 = __uuidof(ILicenseManagerStatics2);
                 } /* LicenseManagement */
             } /* Store */
         } /* ApplicationModel */
@@ -610,7 +610,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ILicenseSatisfactionInfo = _uuidof(ILicenseSatisfactionInfo);
+                    MIDL_CONST_ID IID& IID_ILicenseSatisfactionInfo = __uuidof(ILicenseSatisfactionInfo);
                 } /* LicenseManagement */
             } /* Store */
         } /* ApplicationModel */
@@ -651,7 +651,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ILicenseSatisfactionResult = _uuidof(ILicenseSatisfactionResult);
+                    MIDL_CONST_ID IID& IID_ILicenseSatisfactionResult = __uuidof(ILicenseSatisfactionResult);
                 } /* LicenseManagement */
             } /* Store */
         } /* ApplicationModel */

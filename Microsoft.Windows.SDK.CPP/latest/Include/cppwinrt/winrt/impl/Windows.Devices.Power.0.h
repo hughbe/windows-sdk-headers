@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,8 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::System::Power
@@ -75,12 +73,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBattery
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Power::BatteryReport) GetReport() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ReportUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Power::Battery, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto DeviceId() const;
+        auto GetReport() const;
+        auto ReportUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Power::Battery, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ReportUpdated_revoker = impl::event_revoker<winrt::Windows::Devices::Power::IBattery, &impl::abi_t<winrt::Windows::Devices::Power::IBattery>::remove_ReportUpdated>;
         [[nodiscard]] ReportUpdated_revoker ReportUpdated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Power::Battery, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ReportUpdated(winrt::event_token const& token) const noexcept;
+        auto ReportUpdated(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Power::IBattery>
     {
@@ -89,11 +87,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBatteryReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) ChargeRateInMilliwatts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) DesignCapacityInMilliwattHours() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) FullChargeCapacityInMilliwattHours() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) RemainingCapacityInMilliwattHours() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Power::BatteryStatus) Status() const;
+        [[nodiscard]] auto ChargeRateInMilliwatts() const;
+        [[nodiscard]] auto DesignCapacityInMilliwattHours() const;
+        [[nodiscard]] auto FullChargeCapacityInMilliwattHours() const;
+        [[nodiscard]] auto RemainingCapacityInMilliwattHours() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Devices::Power::IBatteryReport>
     {
@@ -102,9 +100,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBatteryStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Power::Battery) AggregateBattery() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Power::Battery>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        [[nodiscard]] auto AggregateBattery() const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::Devices::Power::IBatteryStatics>
     {

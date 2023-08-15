@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,14 +9,12 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Networking
 {
@@ -829,11 +827,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IAttributedNetworkUsage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesSent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesReceived() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AttributionId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AttributionName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) AttributionThumbnail() const;
+        [[nodiscard]] auto BytesSent() const;
+        [[nodiscard]] auto BytesReceived() const;
+        [[nodiscard]] auto AttributionId() const;
+        [[nodiscard]] auto AttributionName() const;
+        [[nodiscard]] auto AttributionThumbnail() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IAttributedNetworkUsage>
     {
@@ -842,18 +840,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_ICellularApnContext
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
-        WINRT_IMPL_AUTO(void) ProviderId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AccessPointName() const;
-        WINRT_IMPL_AUTO(void) AccessPointName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserName() const;
-        WINRT_IMPL_AUTO(void) UserName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Password() const;
-        WINRT_IMPL_AUTO(void) Password(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCompressionEnabled() const;
-        WINRT_IMPL_AUTO(void) IsCompressionEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType) AuthenticationType() const;
-        WINRT_IMPL_AUTO(void) AuthenticationType(winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType const& value) const;
+        [[nodiscard]] auto ProviderId() const;
+        auto ProviderId(param::hstring const& value) const;
+        [[nodiscard]] auto AccessPointName() const;
+        auto AccessPointName(param::hstring const& value) const;
+        [[nodiscard]] auto UserName() const;
+        auto UserName(param::hstring const& value) const;
+        [[nodiscard]] auto Password() const;
+        auto Password(param::hstring const& value) const;
+        [[nodiscard]] auto IsCompressionEnabled() const;
+        auto IsCompressionEnabled(bool value) const;
+        [[nodiscard]] auto AuthenticationType() const;
+        auto AuthenticationType(winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::ICellularApnContext>
     {
@@ -862,8 +860,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_ICellularApnContext2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProfileName() const;
-        WINRT_IMPL_AUTO(void) ProfileName(param::hstring const& value) const;
+        [[nodiscard]] auto ProfileName() const;
+        auto ProfileName(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::ICellularApnContext2>
     {
@@ -872,10 +870,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionCost
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkCostType) NetworkCostType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Roaming() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OverDataLimit() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ApproachingDataLimit() const;
+        [[nodiscard]] auto NetworkCostType() const;
+        [[nodiscard]] auto Roaming() const;
+        [[nodiscard]] auto OverDataLimit() const;
+        [[nodiscard]] auto ApproachingDataLimit() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionCost>
     {
@@ -884,7 +882,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionCost2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) BackgroundDataUsageRestricted() const;
+        [[nodiscard]] auto BackgroundDataUsageRestricted() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionCost2>
     {
@@ -893,15 +891,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProfileName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkConnectivityLevel) GetNetworkConnectivityLevel() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) GetNetworkNames() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::ConnectionCost) GetConnectionCost() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::DataPlanStatus) GetDataPlanStatus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkAdapter) NetworkAdapter() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::DataUsage) GetLocalUsage(winrt::Windows::Foundation::DateTime const& StartTime, winrt::Windows::Foundation::DateTime const& EndTime) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::DataUsage) GetLocalUsage(winrt::Windows::Foundation::DateTime const& StartTime, winrt::Windows::Foundation::DateTime const& EndTime, winrt::Windows::Networking::Connectivity::RoamingStates const& States) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkSecuritySettings) NetworkSecuritySettings() const;
+        [[nodiscard]] auto ProfileName() const;
+        auto GetNetworkConnectivityLevel() const;
+        auto GetNetworkNames() const;
+        auto GetConnectionCost() const;
+        auto GetDataPlanStatus() const;
+        [[nodiscard]] auto NetworkAdapter() const;
+        auto GetLocalUsage(winrt::Windows::Foundation::DateTime const& StartTime, winrt::Windows::Foundation::DateTime const& EndTime) const;
+        auto GetLocalUsage(winrt::Windows::Foundation::DateTime const& StartTime, winrt::Windows::Foundation::DateTime const& EndTime, winrt::Windows::Networking::Connectivity::RoamingStates const& States) const;
+        [[nodiscard]] auto NetworkSecuritySettings() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile>
     {
@@ -910,15 +908,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWwanConnectionProfile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWlanConnectionProfile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails) WwanConnectionProfileDetails() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails) WlanConnectionProfileDetails() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::guid>) ServiceProviderGuid() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint8_t>) GetSignalBars() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::DomainConnectivityLevel) GetDomainConnectivityLevel() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::NetworkUsage>>) GetNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::DataUsageGranularity const& granularity, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::ConnectivityInterval>>) GetConnectivityIntervalsAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
+        [[nodiscard]] auto IsWwanConnectionProfile() const;
+        [[nodiscard]] auto IsWlanConnectionProfile() const;
+        [[nodiscard]] auto WwanConnectionProfileDetails() const;
+        [[nodiscard]] auto WlanConnectionProfileDetails() const;
+        [[nodiscard]] auto ServiceProviderGuid() const;
+        auto GetSignalBars() const;
+        auto GetDomainConnectivityLevel() const;
+        auto GetNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::DataUsageGranularity const& granularity, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
+        auto GetConnectivityIntervalsAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile2>
     {
@@ -927,7 +925,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>>) GetAttributedNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
+        auto GetAttributedNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile3>
     {
@@ -936,7 +934,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>>) GetProviderNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
+        auto GetProviderNetworkUsageAsync(winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime, winrt::Windows::Networking::Connectivity::NetworkUsageStates const& states) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile4>
     {
@@ -945,8 +943,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanDelete() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::Connectivity::ConnectionProfileDeleteStatus>) TryDeleteAsync() const;
+        [[nodiscard]] auto CanDelete() const;
+        auto TryDeleteAsync() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile5>
     {
@@ -955,7 +953,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfile6
     {
-        WINRT_IMPL_AUTO(bool) IsDomainAuthenticatedBy(winrt::Windows::Networking::Connectivity::DomainAuthenticationKind const& kind) const;
+        auto IsDomainAuthenticatedBy(winrt::Windows::Networking::Connectivity::DomainAuthenticationKind const& kind) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfile6>
     {
@@ -964,16 +962,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfileFilter
     {
-        WINRT_IMPL_AUTO(void) IsConnected(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsConnected() const;
-        WINRT_IMPL_AUTO(void) IsWwanConnectionProfile(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWwanConnectionProfile() const;
-        WINRT_IMPL_AUTO(void) IsWlanConnectionProfile(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWlanConnectionProfile() const;
-        WINRT_IMPL_AUTO(void) NetworkCostType(winrt::Windows::Networking::Connectivity::NetworkCostType const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkCostType) NetworkCostType() const;
-        WINRT_IMPL_AUTO(void) ServiceProviderGuid(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::guid>) ServiceProviderGuid() const;
+        auto IsConnected(bool value) const;
+        [[nodiscard]] auto IsConnected() const;
+        auto IsWwanConnectionProfile(bool value) const;
+        [[nodiscard]] auto IsWwanConnectionProfile() const;
+        auto IsWlanConnectionProfile(bool value) const;
+        [[nodiscard]] auto IsWlanConnectionProfile() const;
+        auto NetworkCostType(winrt::Windows::Networking::Connectivity::NetworkCostType const& value) const;
+        [[nodiscard]] auto NetworkCostType() const;
+        auto ServiceProviderGuid(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const;
+        [[nodiscard]] auto ServiceProviderGuid() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfileFilter>
     {
@@ -982,13 +980,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfileFilter2
     {
-        WINRT_IMPL_AUTO(void) IsRoaming(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) IsRoaming() const;
-        WINRT_IMPL_AUTO(void) IsOverDataLimit(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) IsOverDataLimit() const;
-        WINRT_IMPL_AUTO(void) IsBackgroundDataUsageRestricted(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) IsBackgroundDataUsageRestricted() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) RawData() const;
+        auto IsRoaming(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto IsRoaming() const;
+        auto IsOverDataLimit(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto IsOverDataLimit() const;
+        auto IsBackgroundDataUsageRestricted(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto IsBackgroundDataUsageRestricted() const;
+        [[nodiscard]] auto RawData() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfileFilter2>
     {
@@ -997,8 +995,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionProfileFilter3
     {
-        WINRT_IMPL_AUTO(void) PurposeGuid(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::guid>) PurposeGuid() const;
+        auto PurposeGuid(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const;
+        [[nodiscard]] auto PurposeGuid() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionProfileFilter3>
     {
@@ -1007,7 +1005,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectionSession
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::ConnectionProfile) ConnectionProfile() const;
+        [[nodiscard]] auto ConnectionProfile() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectionSession>
     {
@@ -1016,8 +1014,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectivityInterval
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) StartTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) ConnectionDuration() const;
+        [[nodiscard]] auto StartTime() const;
+        [[nodiscard]] auto ConnectionDuration() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectivityInterval>
     {
@@ -1026,9 +1024,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IConnectivityManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::Connectivity::ConnectionSession>) AcquireConnectionAsync(winrt::Windows::Networking::Connectivity::CellularApnContext const& cellularApnContext) const;
-        WINRT_IMPL_AUTO(void) AddHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy) const;
-        WINRT_IMPL_AUTO(void) RemoveHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy) const;
+        auto AcquireConnectionAsync(winrt::Windows::Networking::Connectivity::CellularApnContext const& cellularApnContext) const;
+        auto AddHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy) const;
+        auto RemoveHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IConnectivityManagerStatics>
     {
@@ -1037,12 +1035,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IDataPlanStatus
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::DataPlanUsage) DataPlanUsage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) DataLimitInMegabytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) InboundBitsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint64_t>) OutboundBitsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) NextBillingCycle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) MaxTransferSizeInMegabytes() const;
+        [[nodiscard]] auto DataPlanUsage() const;
+        [[nodiscard]] auto DataLimitInMegabytes() const;
+        [[nodiscard]] auto InboundBitsPerSecond() const;
+        [[nodiscard]] auto OutboundBitsPerSecond() const;
+        [[nodiscard]] auto NextBillingCycle() const;
+        [[nodiscard]] auto MaxTransferSizeInMegabytes() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IDataPlanStatus>
     {
@@ -1051,8 +1049,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IDataPlanUsage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MegabytesUsed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) LastSyncTime() const;
+        [[nodiscard]] auto MegabytesUsed() const;
+        [[nodiscard]] auto LastSyncTime() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IDataPlanUsage>
     {
@@ -1061,8 +1059,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IDataUsage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesSent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesReceived() const;
+        [[nodiscard]] auto BytesSent() const;
+        [[nodiscard]] auto BytesReceived() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IDataUsage>
     {
@@ -1071,8 +1069,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IIPInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkAdapter) NetworkAdapter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint8_t>) PrefixLength() const;
+        [[nodiscard]] auto NetworkAdapter() const;
+        [[nodiscard]] auto PrefixLength() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IIPInformation>
     {
@@ -1081,9 +1079,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_ILanIdentifier
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::LanIdentifierData) InfrastructureId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::LanIdentifierData) PortId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) NetworkAdapterId() const;
+        [[nodiscard]] auto InfrastructureId() const;
+        [[nodiscard]] auto PortId() const;
+        [[nodiscard]] auto NetworkAdapterId() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::ILanIdentifier>
     {
@@ -1092,8 +1090,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_ILanIdentifierData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Type() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<uint8_t>) Value() const;
+        [[nodiscard]] auto Type() const;
+        [[nodiscard]] auto Value() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::ILanIdentifierData>
     {
@@ -1102,12 +1100,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkAdapter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) OutboundMaxBitsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) InboundMaxBitsPerSecond() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) IanaInterfaceType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkItem) NetworkItem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) NetworkAdapterId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::Connectivity::ConnectionProfile>) GetConnectedProfileAsync() const;
+        [[nodiscard]] auto OutboundMaxBitsPerSecond() const;
+        [[nodiscard]] auto InboundMaxBitsPerSecond() const;
+        [[nodiscard]] auto IanaInterfaceType() const;
+        [[nodiscard]] auto NetworkItem() const;
+        [[nodiscard]] auto NetworkAdapterId() const;
+        auto GetConnectedProfileAsync() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkAdapter>
     {
@@ -1116,16 +1114,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkInformationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::ConnectionProfile>) GetConnectionProfiles() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::ConnectionProfile) GetInternetConnectionProfile() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::LanIdentifier>) GetLanIdentifiers() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>) GetHostNames() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::Connectivity::ProxyConfiguration>) GetProxyConfigurationAsync(winrt::Windows::Foundation::Uri const& uri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::EndpointPair>) GetSortedEndpointPairs(param::iterable<winrt::Windows::Networking::EndpointPair> const& destinationList, winrt::Windows::Networking::HostNameSortOptions const& sortOptions) const;
-        WINRT_IMPL_AUTO(winrt::event_token) NetworkStatusChanged(winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler) const;
+        auto GetConnectionProfiles() const;
+        auto GetInternetConnectionProfile() const;
+        auto GetLanIdentifiers() const;
+        auto GetHostNames() const;
+        auto GetProxyConfigurationAsync(winrt::Windows::Foundation::Uri const& uri) const;
+        auto GetSortedEndpointPairs(param::iterable<winrt::Windows::Networking::EndpointPair> const& destinationList, winrt::Windows::Networking::HostNameSortOptions const& sortOptions) const;
+        auto NetworkStatusChanged(winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler) const;
         using NetworkStatusChanged_revoker = impl::event_revoker<winrt::Windows::Networking::Connectivity::INetworkInformationStatics, &impl::abi_t<winrt::Windows::Networking::Connectivity::INetworkInformationStatics>::remove_NetworkStatusChanged>;
         [[nodiscard]] NetworkStatusChanged_revoker NetworkStatusChanged(auto_revoke_t, winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler) const;
-        WINRT_IMPL_AUTO(void) NetworkStatusChanged(winrt::event_token const& eventCookie) const noexcept;
+        auto NetworkStatusChanged(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkInformationStatics>
     {
@@ -1134,7 +1132,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkInformationStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Connectivity::ConnectionProfile>>) FindConnectionProfilesAsync(winrt::Windows::Networking::Connectivity::ConnectionProfileFilter const& pProfileFilter) const;
+        auto FindConnectionProfilesAsync(winrt::Windows::Networking::Connectivity::ConnectionProfileFilter const& pProfileFilter) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkInformationStatics2>
     {
@@ -1143,8 +1141,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) NetworkId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkTypes) GetNetworkTypes() const;
+        [[nodiscard]] auto NetworkId() const;
+        auto GetNetworkTypes() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkItem>
     {
@@ -1153,8 +1151,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkSecuritySettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkAuthenticationType) NetworkAuthenticationType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::NetworkEncryptionType) NetworkEncryptionType() const;
+        [[nodiscard]] auto NetworkAuthenticationType() const;
+        [[nodiscard]] auto NetworkEncryptionType() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkSecuritySettings>
     {
@@ -1163,12 +1161,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkStateChangeEventDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewInternetConnectionProfile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewConnectionCost() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewNetworkConnectivityLevel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewDomainConnectivityLevel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewHostNameList() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewWwanRegistrationState() const;
+        [[nodiscard]] auto HasNewInternetConnectionProfile() const;
+        [[nodiscard]] auto HasNewConnectionCost() const;
+        [[nodiscard]] auto HasNewNetworkConnectivityLevel() const;
+        [[nodiscard]] auto HasNewDomainConnectivityLevel() const;
+        [[nodiscard]] auto HasNewHostNameList() const;
+        [[nodiscard]] auto HasNewWwanRegistrationState() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkStateChangeEventDetails>
     {
@@ -1177,8 +1175,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkStateChangeEventDetails2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewTetheringOperationalState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNewTetheringClientCount() const;
+        [[nodiscard]] auto HasNewTetheringOperationalState() const;
+        [[nodiscard]] auto HasNewTetheringClientCount() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkStateChangeEventDetails2>
     {
@@ -1187,9 +1185,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_INetworkUsage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesSent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesReceived() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) ConnectionDuration() const;
+        [[nodiscard]] auto BytesSent() const;
+        [[nodiscard]] auto BytesReceived() const;
+        [[nodiscard]] auto ConnectionDuration() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::INetworkUsage>
     {
@@ -1198,9 +1196,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IProviderNetworkUsage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesSent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) BytesReceived() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
+        [[nodiscard]] auto BytesSent() const;
+        [[nodiscard]] auto BytesReceived() const;
+        [[nodiscard]] auto ProviderId() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IProviderNetworkUsage>
     {
@@ -1209,8 +1207,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IProxyConfiguration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Uri>) ProxyUris() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanConnectDirectly() const;
+        [[nodiscard]] auto ProxyUris() const;
+        [[nodiscard]] auto CanConnectDirectly() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IProxyConfiguration>
     {
@@ -1219,9 +1217,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IRoutePolicy
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::ConnectionProfile) ConnectionProfile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) HostName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::DomainNameType) HostNameType() const;
+        [[nodiscard]] auto ConnectionProfile() const;
+        [[nodiscard]] auto HostName() const;
+        [[nodiscard]] auto HostNameType() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IRoutePolicy>
     {
@@ -1230,7 +1228,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IRoutePolicyFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::RoutePolicy) CreateRoutePolicy(winrt::Windows::Networking::Connectivity::ConnectionProfile const& connectionProfile, winrt::Windows::Networking::HostName const& hostName, winrt::Windows::Networking::DomainNameType const& type) const;
+        auto CreateRoutePolicy(winrt::Windows::Networking::Connectivity::ConnectionProfile const& connectionProfile, winrt::Windows::Networking::HostName const& hostName, winrt::Windows::Networking::DomainNameType const& type) const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IRoutePolicyFactory>
     {
@@ -1239,7 +1237,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IWlanConnectionProfileDetails
     {
-        WINRT_IMPL_AUTO(hstring) GetConnectedSsid() const;
+        auto GetConnectedSsid() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IWlanConnectionProfileDetails>
     {
@@ -1248,10 +1246,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IWwanConnectionProfileDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HomeProviderId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AccessPointName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState) GetNetworkRegistrationState() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::WwanDataClass) GetCurrentDataClass() const;
+        [[nodiscard]] auto HomeProviderId() const;
+        [[nodiscard]] auto AccessPointName() const;
+        auto GetNetworkRegistrationState() const;
+        auto GetCurrentDataClass() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IWwanConnectionProfileDetails>
     {
@@ -1260,8 +1258,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_Connectivity_IWwanConnectionProfileDetails2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Connectivity::WwanNetworkIPKind) IPKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::guid>) PurposeGuids() const;
+        [[nodiscard]] auto IPKind() const;
+        [[nodiscard]] auto PurposeGuids() const;
     };
     template <> struct consume<winrt::Windows::Networking::Connectivity::IWwanConnectionProfileDetails2>
     {

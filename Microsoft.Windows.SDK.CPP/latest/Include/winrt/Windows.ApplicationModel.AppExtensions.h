@@ -887,7 +887,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtension = _uuidof(IAppExtension);
+                MIDL_CONST_ID IID& IID_IAppExtension = __uuidof(IAppExtension);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -923,7 +923,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtension2 = _uuidof(IAppExtension2);
+                MIDL_CONST_ID IID& IID_IAppExtension2 = __uuidof(IAppExtension2);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -998,7 +998,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionCatalog = _uuidof(IAppExtensionCatalog);
+                MIDL_CONST_ID IID& IID_IAppExtensionCatalog = __uuidof(IAppExtensionCatalog);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1035,7 +1035,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionCatalogStatics = _uuidof(IAppExtensionCatalogStatics);
+                MIDL_CONST_ID IID& IID_IAppExtensionCatalogStatics = __uuidof(IAppExtensionCatalogStatics);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1077,7 +1077,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionPackageInstalledEventArgs = _uuidof(IAppExtensionPackageInstalledEventArgs);
+                MIDL_CONST_ID IID& IID_IAppExtensionPackageInstalledEventArgs = __uuidof(IAppExtensionPackageInstalledEventArgs);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1116,7 +1116,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionPackageStatusChangedEventArgs = _uuidof(IAppExtensionPackageStatusChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IAppExtensionPackageStatusChangedEventArgs = __uuidof(IAppExtensionPackageStatusChangedEventArgs);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1155,7 +1155,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionPackageUninstallingEventArgs = _uuidof(IAppExtensionPackageUninstallingEventArgs);
+                MIDL_CONST_ID IID& IID_IAppExtensionPackageUninstallingEventArgs = __uuidof(IAppExtensionPackageUninstallingEventArgs);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1197,7 +1197,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionPackageUpdatedEventArgs = _uuidof(IAppExtensionPackageUpdatedEventArgs);
+                MIDL_CONST_ID IID& IID_IAppExtensionPackageUpdatedEventArgs = __uuidof(IAppExtensionPackageUpdatedEventArgs);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */
@@ -1236,7 +1236,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppExtensionPackageUpdatingEventArgs = _uuidof(IAppExtensionPackageUpdatingEventArgs);
+                MIDL_CONST_ID IID& IID_IAppExtensionPackageUpdatingEventArgs = __uuidof(IAppExtensionPackageUpdatingEventArgs);
             } /* AppExtensions */
         } /* ApplicationModel */
     } /* Windows */

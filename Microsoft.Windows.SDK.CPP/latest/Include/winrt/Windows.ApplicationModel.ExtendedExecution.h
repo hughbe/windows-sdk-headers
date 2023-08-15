@@ -370,7 +370,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IExtendedExecutionRevokedEventArgs = _uuidof(IExtendedExecutionRevokedEventArgs);
+                MIDL_CONST_ID IID& IID_IExtendedExecutionRevokedEventArgs = __uuidof(IExtendedExecutionRevokedEventArgs);
             } /* ExtendedExecution */
         } /* ApplicationModel */
     } /* Windows */
@@ -434,7 +434,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IExtendedExecutionSession = _uuidof(IExtendedExecutionSession);
+                MIDL_CONST_ID IID& IID_IExtendedExecutionSession = __uuidof(IExtendedExecutionSession);
             } /* ExtendedExecution */
         } /* ApplicationModel */
     } /* Windows */

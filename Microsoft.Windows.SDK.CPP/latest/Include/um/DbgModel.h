@@ -793,6 +793,10 @@ enum LocationKind
 //     contains an unsigned value which describes how far the element should be expanded if not otherwise specified
 //     by a host command or other UI affordance.
 //
+// "PreferTabularFormat"
+//     contains a boolean value which describes whether the value should be displayed in a tabular form instead
+//     of a hierarchical form
+//
 
 //
 // PreferredFormat

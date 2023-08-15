@@ -150,7 +150,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE RequestRelease(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDisplayRequest = _uuidof(IDisplayRequest);
+                MIDL_CONST_ID IID& IID_IDisplayRequest = __uuidof(IDisplayRequest);
             } /* Display */
         } /* System */
     } /* Windows */

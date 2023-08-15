@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::SocialInfo
 {
     struct SocialFeedContent;
-    struct SocialFeedItem;
     enum class SocialFeedKind : int32_t;
     enum class SocialFeedUpdateMode : int32_t;
     struct SocialItemThumbnail;
@@ -17,12 +16,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::SocialInfo
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::SocialInfo::Provider
 {
@@ -92,15 +86,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_SocialInfo_Provider_ISocialDashboardItemUpdater
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OwnerRemoteId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent) Content() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) Timestamp() const;
-        WINRT_IMPL_AUTO(void) Timestamp(winrt::Windows::Foundation::DateTime const& value) const;
-        WINRT_IMPL_AUTO(void) Thumbnail(winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail) Thumbnail() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CommitAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) TargetUri() const;
-        WINRT_IMPL_AUTO(void) TargetUri(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto OwnerRemoteId() const;
+        [[nodiscard]] auto Content() const;
+        [[nodiscard]] auto Timestamp() const;
+        auto Timestamp(winrt::Windows::Foundation::DateTime const& value) const;
+        auto Thumbnail(winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail const& value) const;
+        [[nodiscard]] auto Thumbnail() const;
+        auto CommitAsync() const;
+        [[nodiscard]] auto TargetUri() const;
+        auto TargetUri(winrt::Windows::Foundation::Uri const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::SocialInfo::Provider::ISocialDashboardItemUpdater>
     {
@@ -109,10 +103,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_SocialInfo_Provider_ISocialFeedUpdater
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OwnerRemoteId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind) Kind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>) Items() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CommitAsync() const;
+        [[nodiscard]] auto OwnerRemoteId() const;
+        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] auto Items() const;
+        auto CommitAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::SocialInfo::Provider::ISocialFeedUpdater>
     {
@@ -121,12 +115,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_SocialInfo_Provider_ISocialInfoProviderManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater>) CreateSocialFeedUpdaterAsync(winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind const& kind, winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode const& mode, param::hstring const& ownerRemoteId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater>) CreateDashboardItemUpdaterAsync(param::hstring const& ownerRemoteId) const;
-        WINRT_IMPL_AUTO(void) UpdateBadgeCountValue(param::hstring const& itemRemoteId, int32_t newCount) const;
-        WINRT_IMPL_AUTO(void) ReportNewContentAvailable(param::hstring const& contactRemoteId, winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind const& kind) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) ProvisionAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeprovisionAsync() const;
+        auto CreateSocialFeedUpdaterAsync(winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind const& kind, winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode const& mode, param::hstring const& ownerRemoteId) const;
+        auto CreateDashboardItemUpdaterAsync(param::hstring const& ownerRemoteId) const;
+        auto UpdateBadgeCountValue(param::hstring const& itemRemoteId, int32_t newCount) const;
+        auto ReportNewContentAvailable(param::hstring const& contactRemoteId, winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind const& kind) const;
+        auto ProvisionAsync() const;
+        auto DeprovisionAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::SocialInfo::Provider::ISocialInfoProviderManagerStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -56,7 +56,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Xml_Xsl_IXsltProcessor
     {
-        WINRT_IMPL_AUTO(hstring) TransformToString(winrt::Windows::Data::Xml::Dom::IXmlNode const& inputNode) const;
+        auto TransformToString(winrt::Windows::Data::Xml::Dom::IXmlNode const& inputNode) const;
     };
     template <> struct consume<winrt::Windows::Data::Xml::Xsl::IXsltProcessor>
     {
@@ -65,7 +65,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Xml_Xsl_IXsltProcessor2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) TransformToDocument(winrt::Windows::Data::Xml::Dom::IXmlNode const& inputNode) const;
+        auto TransformToDocument(winrt::Windows::Data::Xml::Dom::IXmlNode const& inputNode) const;
     };
     template <> struct consume<winrt::Windows::Data::Xml::Xsl::IXsltProcessor2>
     {
@@ -74,7 +74,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Xml_Xsl_IXsltProcessorFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Xsl::XsltProcessor) CreateInstance(winrt::Windows::Data::Xml::Dom::XmlDocument const& document) const;
+        auto CreateInstance(winrt::Windows::Data::Xml::Dom::XmlDocument const& document) const;
     };
     template <> struct consume<winrt::Windows::Data::Xml::Xsl::IXsltProcessorFactory>
     {

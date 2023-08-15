@@ -421,7 +421,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWebAuthenticationBrokerStatics = _uuidof(IWebAuthenticationBrokerStatics);
+                    MIDL_CONST_ID IID& IID_IWebAuthenticationBrokerStatics = __uuidof(IWebAuthenticationBrokerStatics);
                 } /* Web */
             } /* Authentication */
         } /* Security */
@@ -478,7 +478,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWebAuthenticationBrokerStatics2 = _uuidof(IWebAuthenticationBrokerStatics2);
+                    MIDL_CONST_ID IID& IID_IWebAuthenticationBrokerStatics2 = __uuidof(IWebAuthenticationBrokerStatics2);
                 } /* Web */
             } /* Authentication */
         } /* Security */
@@ -522,7 +522,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWebAuthenticationResult = _uuidof(IWebAuthenticationResult);
+                    MIDL_CONST_ID IID& IID_IWebAuthenticationResult = __uuidof(IWebAuthenticationResult);
                 } /* Web */
             } /* Authentication */
         } /* Security */

@@ -494,7 +494,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IMdmAlert = _uuidof(IMdmAlert);
+            MIDL_CONST_ID IID& IID_IMdmAlert = __uuidof(IMdmAlert);
         } /* Management */
     } /* Windows */
 } /* ABI */
@@ -548,7 +548,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IMdmSession = _uuidof(IMdmSession);
+            MIDL_CONST_ID IID& IID_IMdmSession = __uuidof(IMdmSession);
         } /* Management */
     } /* Windows */
 } /* ABI */
@@ -592,7 +592,7 @@ namespace ABI {
                     ) = 0;
             };
 
-            extern MIDL_CONST_ID IID& IID_IMdmSessionManagerStatics = _uuidof(IMdmSessionManagerStatics);
+            MIDL_CONST_ID IID& IID_IMdmSessionManagerStatics = __uuidof(IMdmSessionManagerStatics);
         } /* Management */
     } /* Windows */
 } /* ABI */

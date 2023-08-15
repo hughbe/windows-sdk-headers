@@ -3723,6 +3723,7 @@ MFCreateWaveFormatExFromMFMediaType(
     _Out_opt_   UINT32*         pcbSize,
     _In_        UINT32          Flags = MFWaveFormatExConvertFlag_Normal
     );
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
@@ -3840,8 +3841,8 @@ MFCalculateBitmapImageSize(
 
 #endif /* cplusplus */
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 STDAPI
 MFCalculateImageSize(
@@ -3866,18 +3867,6 @@ MFAverageTimePerFrameToFrameRate(
     );
 
 STDAPI
-MFInitMediaTypeFromMFVideoFormat(
-    _In_                    IMFMediaType*           pMFType,
-    _In_reads_bytes_(cbBufSize)  const MFVIDEOFORMAT*    pMFVF,
-    _In_                    UINT32                  cbBufSize
-    );
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
-STDAPI
 MFInitMediaTypeFromWaveFormatEx(
     _In_                    IMFMediaType*           pMFType,
     _In_reads_bytes_(cbBufSize)  const WAVEFORMATEX*     pWaveFormat,
@@ -3888,6 +3877,13 @@ MFInitMediaTypeFromWaveFormatEx(
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+STDAPI
+MFInitMediaTypeFromMFVideoFormat(
+    _In_                    IMFMediaType*           pMFType,
+    _In_reads_bytes_(cbBufSize)  const MFVIDEOFORMAT*    pMFVF,
+    _In_                    UINT32                  cbBufSize
+    );
+
 STDAPI
 MFInitMediaTypeFromAMMediaType(
     _In_    IMFMediaType*           pMFType,
@@ -3950,6 +3946,12 @@ STDAPI
 MFUnwrapMediaType(
     _In_    IMFMediaType*    pWrap,
     _Out_   IMFMediaType **  ppOrig
+    );
+
+STDAPI MFGetStrideForBitmapInfoHeader(
+    DWORD format,
+    DWORD dwWidth,
+    _Out_ LONG* pStride
     );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -4015,12 +4017,6 @@ STDAPI MFCreateVideoMediaTypeFromBitMapInfoHeader(
     _Out_ IMFVideoMediaType** ppIVideoMediaType
     );
 #endif // NOBITMAP
-
-STDAPI MFGetStrideForBitmapInfoHeader(
-    DWORD format,
-    DWORD dwWidth,
-    _Out_ LONG* pStride
-    );
 
 STDAPI MFGetPlaneSize(
     DWORD format,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,12 +14,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -86,11 +81,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Wallet_System_IWalletItemSystemStore
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>) GetItemsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>) ImportItemAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::System::WalletItemAppAssociation) GetAppStatusForItem(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) LaunchAppForItemAsync(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
+        auto GetItemsAsync() const;
+        auto DeleteAsync(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
+        auto ImportItemAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const;
+        auto GetAppStatusForItem(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
+        auto LaunchAppForItemAsync(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Wallet::System::IWalletItemSystemStore>
     {
@@ -99,10 +94,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Wallet_System_IWalletItemSystemStore2
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ItemsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ItemsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ItemsChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Wallet::System::IWalletItemSystemStore2, &impl::abi_t<winrt::Windows::ApplicationModel::Wallet::System::IWalletItemSystemStore2>::remove_ItemsChanged>;
         [[nodiscard]] ItemsChanged_revoker ItemsChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ItemsChanged(winrt::event_token const& cookie) const noexcept;
+        auto ItemsChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Wallet::System::IWalletItemSystemStore2>
     {
@@ -111,7 +106,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Wallet_System_IWalletManagerSystemStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore>) RequestStoreAsync() const;
+        auto RequestStoreAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Wallet::System::IWalletManagerSystemStatics>
     {

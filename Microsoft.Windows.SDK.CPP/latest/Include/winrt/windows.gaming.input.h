@@ -2209,7 +2209,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IArcadeStick = _uuidof(IArcadeStick);
+                MIDL_CONST_ID IID& IID_IArcadeStick = __uuidof(IArcadeStick);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2259,7 +2259,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IArcadeStickStatics = _uuidof(IArcadeStickStatics);
+                MIDL_CONST_ID IID& IID_IArcadeStickStatics = __uuidof(IArcadeStickStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2299,7 +2299,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IArcadeStickStatics2 = _uuidof(IArcadeStickStatics2);
+                MIDL_CONST_ID IID& IID_IArcadeStickStatics2 = __uuidof(IArcadeStickStatics2);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2345,7 +2345,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFlightStick = _uuidof(IFlightStick);
+                MIDL_CONST_ID IID& IID_IFlightStick = __uuidof(IFlightStick);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2399,7 +2399,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFlightStickStatics = _uuidof(IFlightStickStatics);
+                MIDL_CONST_ID IID& IID_IFlightStickStatics = __uuidof(IFlightStickStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2460,7 +2460,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGameController = _uuidof(IGameController);
+                MIDL_CONST_ID IID& IID_IGameController = __uuidof(IGameController);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2494,7 +2494,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGameControllerBatteryInfo = _uuidof(IGameControllerBatteryInfo);
+                MIDL_CONST_ID IID& IID_IGameControllerBatteryInfo = __uuidof(IGameControllerBatteryInfo);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2539,7 +2539,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGamepad = _uuidof(IGamepad);
+                MIDL_CONST_ID IID& IID_IGamepad = __uuidof(IGamepad);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2580,7 +2580,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGamepad2 = _uuidof(IGamepad2);
+                MIDL_CONST_ID IID& IID_IGamepad2 = __uuidof(IGamepad2);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2630,7 +2630,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGamepadStatics = _uuidof(IGamepadStatics);
+                MIDL_CONST_ID IID& IID_IGamepadStatics = __uuidof(IGamepadStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2670,7 +2670,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGamepadStatics2 = _uuidof(IGamepadStatics2);
+                MIDL_CONST_ID IID& IID_IGamepadStatics2 = __uuidof(IGamepadStatics2);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2709,7 +2709,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHeadset = _uuidof(IHeadset);
+                MIDL_CONST_ID IID& IID_IHeadset = __uuidof(IHeadset);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2770,7 +2770,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRacingWheel = _uuidof(IRacingWheel);
+                MIDL_CONST_ID IID& IID_IRacingWheel = __uuidof(IRacingWheel);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2820,7 +2820,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRacingWheelStatics = _uuidof(IRacingWheelStatics);
+                MIDL_CONST_ID IID& IID_IRacingWheelStatics = __uuidof(IRacingWheelStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2860,7 +2860,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRacingWheelStatics2 = _uuidof(IRacingWheelStatics2);
+                MIDL_CONST_ID IID& IID_IRacingWheelStatics2 = __uuidof(IRacingWheelStatics2);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2931,7 +2931,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRawGameController = _uuidof(IRawGameController);
+                MIDL_CONST_ID IID& IID_IRawGameController = __uuidof(IRawGameController);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -2977,7 +2977,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRawGameController2 = _uuidof(IRawGameController2);
+                MIDL_CONST_ID IID& IID_IRawGameController2 = __uuidof(IRawGameController2);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -3031,7 +3031,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRawGameControllerStatics = _uuidof(IRawGameControllerStatics);
+                MIDL_CONST_ID IID& IID_IRawGameControllerStatics = __uuidof(IRawGameControllerStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -3078,7 +3078,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUINavigationController = _uuidof(IUINavigationController);
+                MIDL_CONST_ID IID& IID_IUINavigationController = __uuidof(IUINavigationController);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -3128,7 +3128,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUINavigationControllerStatics = _uuidof(IUINavigationControllerStatics);
+                MIDL_CONST_ID IID& IID_IUINavigationControllerStatics = __uuidof(IUINavigationControllerStatics);
             } /* Input */
         } /* Gaming */
     } /* Windows */
@@ -3168,7 +3168,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUINavigationControllerStatics2 = _uuidof(IUINavigationControllerStatics2);
+                MIDL_CONST_ID IID& IID_IUINavigationControllerStatics2 = __uuidof(IUINavigationControllerStatics2);
             } /* Input */
         } /* Gaming */
     } /* Windows */

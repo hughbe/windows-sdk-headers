@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,43 +7,43 @@
 #ifndef WINRT_Windows_Management_Workplace_H
 #define WINRT_Windows_Management_Workplace_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Management.h"
 #include "winrt/impl/Windows.Management.Workplace.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsBrowserAllowed() const
+    template <typename D> auto consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsBrowserAllowed() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IMdmAllowPolicyStatics)->IsBrowserAllowed(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsCameraAllowed() const
+    template <typename D> auto consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsCameraAllowed() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IMdmAllowPolicyStatics)->IsCameraAllowed(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsMicrosoftAccountAllowed() const
+    template <typename D> auto consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsMicrosoftAccountAllowed() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IMdmAllowPolicyStatics)->IsMicrosoftAccountAllowed(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsStoreAllowed() const
+    template <typename D> auto consume_Windows_Management_Workplace_IMdmAllowPolicyStatics<D>::IsStoreAllowed() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IMdmAllowPolicyStatics)->IsStoreAllowed(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Workplace::MessagingSyncPolicy) consume_Windows_Management_Workplace_IMdmPolicyStatics2<D>::GetMessagingSyncPolicy() const
+    template <typename D> auto consume_Windows_Management_Workplace_IMdmPolicyStatics2<D>::GetMessagingSyncPolicy() const
     {
         winrt::Windows::Management::Workplace::MessagingSyncPolicy value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IMdmPolicyStatics2)->GetMessagingSyncPolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Workplace_IWorkplaceSettingsStatics<D>::IsMicrosoftAccountOptional() const
+    template <typename D> auto consume_Windows_Management_Workplace_IWorkplaceSettingsStatics<D>::IsMicrosoftAccountOptional() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Workplace::IWorkplaceSettingsStatics)->get_IsMicrosoftAccountOptional(&value));

@@ -311,7 +311,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDataProtectionProvider = _uuidof(IDataProtectionProvider);
+                    MIDL_CONST_ID IID& IID_IDataProtectionProvider = __uuidof(IDataProtectionProvider);
                 } /* DataProtection */
             } /* Cryptography */
         } /* Security */
@@ -350,7 +350,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IDataProtectionProviderFactory = _uuidof(IDataProtectionProviderFactory);
+                    MIDL_CONST_ID IID& IID_IDataProtectionProviderFactory = __uuidof(IDataProtectionProviderFactory);
                 } /* DataProtection */
             } /* Cryptography */
         } /* Security */

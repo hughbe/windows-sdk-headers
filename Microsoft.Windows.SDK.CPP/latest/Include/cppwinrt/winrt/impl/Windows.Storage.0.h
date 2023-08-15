@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,30 +10,19 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IObservableVector;
     struct IPropertySet;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::FileProperties
 {
-    struct BasicProperties;
     struct StorageItemContentProperties;
-    struct StorageItemThumbnail;
     enum class ThumbnailMode : int32_t;
     enum class ThumbnailOptions : uint32_t;
-}
-WINRT_EXPORT namespace winrt::Windows::Storage::Provider
-{
-    enum class FileUpdateStatus : int32_t;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -1271,15 +1260,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IAppDataPaths
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Cookies() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Desktop() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Documents() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Favorites() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) History() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InternetCache() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalAppData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProgramData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RoamingAppData() const;
+        [[nodiscard]] auto Cookies() const;
+        [[nodiscard]] auto Desktop() const;
+        [[nodiscard]] auto Documents() const;
+        [[nodiscard]] auto Favorites() const;
+        [[nodiscard]] auto History() const;
+        [[nodiscard]] auto InternetCache() const;
+        [[nodiscard]] auto LocalAppData() const;
+        [[nodiscard]] auto ProgramData() const;
+        [[nodiscard]] auto RoamingAppData() const;
     };
     template <> struct consume<winrt::Windows::Storage::IAppDataPaths>
     {
@@ -1288,8 +1277,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IAppDataPathsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::AppDataPaths) GetForUser(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::AppDataPaths) GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Storage::IAppDataPathsStatics>
     {
@@ -1298,21 +1287,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Version() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetVersionAsync(uint32_t desiredVersion, winrt::Windows::Storage::ApplicationDataSetVersionHandler const& handler) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ClearAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ClearAsync(winrt::Windows::Storage::ApplicationDataLocality const& locality) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationDataContainer) LocalSettings() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationDataContainer) RoamingSettings() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) LocalFolder() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) RoamingFolder() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) TemporaryFolder() const;
-        WINRT_IMPL_AUTO(winrt::event_token) DataChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::ApplicationData, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Version() const;
+        auto SetVersionAsync(uint32_t desiredVersion, winrt::Windows::Storage::ApplicationDataSetVersionHandler const& handler) const;
+        auto ClearAsync() const;
+        auto ClearAsync(winrt::Windows::Storage::ApplicationDataLocality const& locality) const;
+        [[nodiscard]] auto LocalSettings() const;
+        [[nodiscard]] auto RoamingSettings() const;
+        [[nodiscard]] auto LocalFolder() const;
+        [[nodiscard]] auto RoamingFolder() const;
+        [[nodiscard]] auto TemporaryFolder() const;
+        auto DataChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::ApplicationData, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using DataChanged_revoker = impl::event_revoker<winrt::Windows::Storage::IApplicationData, &impl::abi_t<winrt::Windows::Storage::IApplicationData>::remove_DataChanged>;
         [[nodiscard]] DataChanged_revoker DataChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::ApplicationData, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) DataChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) SignalDataChanged() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) RoamingStorageQuota() const;
+        auto DataChanged(winrt::event_token const& token) const noexcept;
+        auto SignalDataChanged() const;
+        [[nodiscard]] auto RoamingStorageQuota() const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationData>
     {
@@ -1321,7 +1310,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationData2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) LocalCacheFolder() const;
+        [[nodiscard]] auto LocalCacheFolder() const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationData2>
     {
@@ -1330,9 +1319,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationData3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) GetPublisherCacheFolder(param::hstring const& folderName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ClearPublisherCacheFolderAsync(param::hstring const& folderName) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) SharedLocalFolder() const;
+        auto GetPublisherCacheFolder(param::hstring const& folderName) const;
+        auto ClearPublisherCacheFolderAsync(param::hstring const& folderName) const;
+        [[nodiscard]] auto SharedLocalFolder() const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationData3>
     {
@@ -1341,12 +1330,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationDataContainer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationDataLocality) Locality() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) Values() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Storage::ApplicationDataContainer>) Containers() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationDataContainer) CreateContainer(param::hstring const& name, winrt::Windows::Storage::ApplicationDataCreateDisposition const& disposition) const;
-        WINRT_IMPL_AUTO(void) DeleteContainer(param::hstring const& name) const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Locality() const;
+        [[nodiscard]] auto Values() const;
+        [[nodiscard]] auto Containers() const;
+        auto CreateContainer(param::hstring const& name, winrt::Windows::Storage::ApplicationDataCreateDisposition const& disposition) const;
+        auto DeleteContainer(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationDataContainer>
     {
@@ -1355,7 +1344,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationDataStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::ApplicationData) Current() const;
+        [[nodiscard]] auto Current() const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationDataStatics>
     {
@@ -1364,7 +1353,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IApplicationDataStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::ApplicationData>) GetForUserAsync(winrt::Windows::System::User const& user) const;
+        auto GetForUserAsync(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Storage::IApplicationDataStatics2>
     {
@@ -1373,8 +1362,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ICachedFileManagerStatics
     {
-        WINRT_IMPL_AUTO(void) DeferUpdates(winrt::Windows::Storage::IStorageFile const& file) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Provider::FileUpdateStatus>) CompleteUpdatesAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto DeferUpdates(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto CompleteUpdatesAsync(winrt::Windows::Storage::IStorageFile const& file) const;
     };
     template <> struct consume<winrt::Windows::Storage::ICachedFileManagerStatics>
     {
@@ -1383,10 +1372,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IDownloadsFolderStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileAsync(param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderAsync(param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
+        auto CreateFileAsync(param::hstring const& desiredName) const;
+        auto CreateFolderAsync(param::hstring const& desiredName) const;
+        auto CreateFileAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
+        auto CreateFolderAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
     };
     template <> struct consume<winrt::Windows::Storage::IDownloadsFolderStatics>
     {
@@ -1395,10 +1384,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IDownloadsFolderStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
+        auto CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName) const;
+        auto CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName) const;
+        auto CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
+        auto CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option) const;
     };
     template <> struct consume<winrt::Windows::Storage::IDownloadsFolderStatics2>
     {
@@ -1407,21 +1396,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IFileIOStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<hstring>>) ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<hstring>>) ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) ReadBufferAsync(winrt::Windows::Storage::IStorageFile const& file) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteBufferAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteBytesAsync(winrt::Windows::Storage::IStorageFile const& file, array_view<uint8_t const> buffer) const;
+        auto ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents) const;
+        auto WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents) const;
+        auto AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines) const;
+        auto WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines) const;
+        auto AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto ReadBufferAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto WriteBufferAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
+        auto WriteBytesAsync(winrt::Windows::Storage::IStorageFile const& file, array_view<uint8_t const> buffer) const;
     };
     template <> struct consume<winrt::Windows::Storage::IFileIOStatics>
     {
@@ -1430,7 +1419,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersCameraRollStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) CameraRoll() const;
+        [[nodiscard]] auto CameraRoll() const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersCameraRollStatics>
     {
@@ -1439,7 +1428,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersPlaylistsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) Playlists() const;
+        [[nodiscard]] auto Playlists() const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersPlaylistsStatics>
     {
@@ -1448,7 +1437,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersSavedPicturesStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) SavedPictures() const;
+        [[nodiscard]] auto SavedPictures() const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersSavedPicturesStatics>
     {
@@ -1457,13 +1446,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) MusicLibrary() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) PicturesLibrary() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) VideosLibrary() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) DocumentsLibrary() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) HomeGroup() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) RemovableDevices() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) MediaServerDevices() const;
+        [[nodiscard]] auto MusicLibrary() const;
+        [[nodiscard]] auto PicturesLibrary() const;
+        [[nodiscard]] auto VideosLibrary() const;
+        [[nodiscard]] auto DocumentsLibrary() const;
+        [[nodiscard]] auto HomeGroup() const;
+        [[nodiscard]] auto RemovableDevices() const;
+        [[nodiscard]] auto MediaServerDevices() const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersStatics>
     {
@@ -1472,9 +1461,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) Objects3D() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) AppCaptures() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) RecordedCalls() const;
+        [[nodiscard]] auto Objects3D() const;
+        [[nodiscard]] auto AppCaptures() const;
+        [[nodiscard]] auto RecordedCalls() const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersStatics2>
     {
@@ -1483,7 +1472,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetFolderForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId) const;
+        auto GetFolderForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId) const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersStatics3>
     {
@@ -1492,9 +1481,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IKnownFoldersStatics4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::KnownFoldersAccessStatus>) RequestAccessAsync(winrt::Windows::Storage::KnownFolderId const& folderId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::KnownFoldersAccessStatus>) RequestAccessForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetFolderAsync(winrt::Windows::Storage::KnownFolderId const& folderId) const;
+        auto RequestAccessAsync(winrt::Windows::Storage::KnownFolderId const& folderId) const;
+        auto RequestAccessForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId) const;
+        auto GetFolderAsync(winrt::Windows::Storage::KnownFolderId const& folderId) const;
     };
     template <> struct consume<winrt::Windows::Storage::IKnownFoldersStatics4>
     {
@@ -1503,21 +1492,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IPathIOStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) ReadTextAsync(param::hstring const& absolutePath) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) ReadTextAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<hstring>>) ReadLinesAsync(param::hstring const& absolutePath) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<hstring>>) ReadLinesAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) ReadBufferAsync(param::hstring const& absolutePath) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteBufferAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) WriteBytesAsync(param::hstring const& absolutePath, array_view<uint8_t const> buffer) const;
+        auto ReadTextAsync(param::hstring const& absolutePath) const;
+        auto ReadTextAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents) const;
+        auto WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents) const;
+        auto AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto ReadLinesAsync(param::hstring const& absolutePath) const;
+        auto ReadLinesAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines) const;
+        auto WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines) const;
+        auto AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding) const;
+        auto ReadBufferAsync(param::hstring const& absolutePath) const;
+        auto WriteBufferAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::IBuffer const& buffer) const;
+        auto WriteBytesAsync(param::hstring const& absolutePath, array_view<uint8_t const> buffer) const;
     };
     template <> struct consume<winrt::Windows::Storage::IPathIOStatics>
     {
@@ -1526,7 +1515,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISetVersionDeferral
     {
-        WINRT_IMPL_AUTO(void) Complete() const;
+        auto Complete() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISetVersionDeferral>
     {
@@ -1535,9 +1524,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISetVersionRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentVersion() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DesiredVersion() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::SetVersionDeferral) GetDeferral() const;
+        [[nodiscard]] auto CurrentVersion() const;
+        [[nodiscard]] auto DesiredVersion() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISetVersionRequest>
     {
@@ -1546,18 +1535,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFile
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FileType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContentType() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStream>) OpenAsync(winrt::Windows::Storage::FileAccessMode const& accessMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageStreamTransaction>) OpenTransactedWriteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName, winrt::Windows::Storage::NameCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CopyAndReplaceAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName, winrt::Windows::Storage::NameCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) MoveAndReplaceAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace) const;
+        [[nodiscard]] auto FileType() const;
+        [[nodiscard]] auto ContentType() const;
+        auto OpenAsync(winrt::Windows::Storage::FileAccessMode const& accessMode) const;
+        auto OpenTransactedWriteAsync() const;
+        auto CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder) const;
+        auto CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName) const;
+        auto CopyAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName, winrt::Windows::Storage::NameCollisionOption const& option) const;
+        auto CopyAndReplaceAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace) const;
+        auto MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder) const;
+        auto MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName) const;
+        auto MoveAsync(winrt::Windows::Storage::IStorageFolder const& destinationFolder, param::hstring const& desiredNewName, winrt::Windows::Storage::NameCollisionOption const& option) const;
+        auto MoveAndReplaceAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFile>
     {
@@ -1566,8 +1555,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFile2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStream>) OpenAsync(winrt::Windows::Storage::FileAccessMode const& accessMode, winrt::Windows::Storage::StorageOpenOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageStreamTransaction>) OpenTransactedWriteAsync(winrt::Windows::Storage::StorageOpenOptions const& options) const;
+        auto OpenAsync(winrt::Windows::Storage::FileAccessMode const& accessMode, winrt::Windows::Storage::StorageOpenOptions const& options) const;
+        auto OpenTransactedWriteAsync(winrt::Windows::Storage::StorageOpenOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFile2>
     {
@@ -1576,7 +1565,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFilePropertiesWithAvailability
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAvailable() const;
+        [[nodiscard]] auto IsAvailable() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>
     {
@@ -1585,12 +1574,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFileStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) GetFileFromPathAsync(param::hstring const& path) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) GetFileFromApplicationUriAsync(winrt::Windows::Foundation::Uri const& uri) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateStreamedFileAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) ReplaceWithStreamedFileAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateStreamedFileFromUriAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) ReplaceWithStreamedFileFromUriAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
+        auto GetFileFromPathAsync(param::hstring const& path) const;
+        auto GetFileFromApplicationUriAsync(winrt::Windows::Foundation::Uri const& uri) const;
+        auto CreateStreamedFileAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
+        auto ReplaceWithStreamedFileAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
+        auto CreateStreamedFileFromUriAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
+        auto ReplaceWithStreamedFileFromUriAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFileStatics>
     {
@@ -1599,7 +1588,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFileStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) GetFileFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path) const;
+        auto GetFileFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFileStatics2>
     {
@@ -1608,16 +1597,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFolder
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileAsync(param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) CreateFileAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderAsync(param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) CreateFolderAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) GetFileAsync(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetFolderAsync(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::IStorageItem>) GetItemAsync(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageFile>>) GetFilesAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageFolder>>) GetFoldersAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>) GetItemsAsync() const;
+        auto CreateFileAsync(param::hstring const& desiredName) const;
+        auto CreateFileAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& options) const;
+        auto CreateFolderAsync(param::hstring const& desiredName) const;
+        auto CreateFolderAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& options) const;
+        auto GetFileAsync(param::hstring const& name) const;
+        auto GetFolderAsync(param::hstring const& name) const;
+        auto GetItemAsync(param::hstring const& name) const;
+        auto GetFilesAsync() const;
+        auto GetFoldersAsync() const;
+        auto GetItemsAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFolder>
     {
@@ -1626,7 +1615,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFolder2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::IStorageItem>) TryGetItemAsync(param::hstring const& name) const;
+        auto TryGetItemAsync(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFolder2>
     {
@@ -1635,7 +1624,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFolder3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageLibraryChangeTracker) TryGetChangeTracker() const;
+        auto TryGetChangeTracker() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFolder3>
     {
@@ -1644,7 +1633,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFolderStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetFolderFromPathAsync(param::hstring const& path) const;
+        auto GetFolderFromPathAsync(param::hstring const& path) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFolderStatics>
     {
@@ -1653,7 +1642,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageFolderStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetFolderFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path) const;
+        auto GetFolderFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageFolderStatics2>
     {
@@ -1662,16 +1651,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageItem
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RenameAsync(param::hstring const& desiredName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RenameAsync(param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync(winrt::Windows::Storage::StorageDeleteOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::BasicProperties>) GetBasicPropertiesAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Path() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileAttributes) Attributes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) DateCreated() const;
-        WINRT_IMPL_AUTO(bool) IsOfType(winrt::Windows::Storage::StorageItemTypes const& type) const;
+        auto RenameAsync(param::hstring const& desiredName) const;
+        auto RenameAsync(param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option) const;
+        auto DeleteAsync() const;
+        auto DeleteAsync(winrt::Windows::Storage::StorageDeleteOption const& option) const;
+        auto GetBasicPropertiesAsync() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Path() const;
+        [[nodiscard]] auto Attributes() const;
+        [[nodiscard]] auto DateCreated() const;
+        auto IsOfType(winrt::Windows::Storage::StorageItemTypes const& type) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageItem>
     {
@@ -1680,8 +1669,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageItem2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) GetParentAsync() const;
-        WINRT_IMPL_AUTO(bool) IsEqual(winrt::Windows::Storage::IStorageItem const& item) const;
+        auto GetParentAsync() const;
+        auto IsEqual(winrt::Windows::Storage::IStorageItem const& item) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageItem2>
     {
@@ -1690,13 +1679,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageItemProperties
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& options) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FolderRelativeId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::StorageItemContentProperties) Properties() const;
+        auto GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
+        auto GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize) const;
+        auto GetThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& options) const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto DisplayType() const;
+        [[nodiscard]] auto FolderRelativeId() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageItemProperties>
     {
@@ -1705,9 +1694,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageItemProperties2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>) GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& options) const;
+        auto GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
+        auto GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize) const;
+        auto GetScaledImageAsThumbnailAsync(winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageItemProperties2>
     {
@@ -1716,7 +1705,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageItemPropertiesWithProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageProvider) Provider() const;
+        [[nodiscard]] auto Provider() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>
     {
@@ -1725,14 +1714,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibrary
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFolder>) RequestAddFolderAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestRemoveFolderAsync(winrt::Windows::Storage::StorageFolder const& folder) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Storage::StorageFolder>) Folders() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) SaveFolder() const;
-        WINRT_IMPL_AUTO(winrt::event_token) DefinitionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::StorageLibrary, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto RequestAddFolderAsync() const;
+        auto RequestRemoveFolderAsync(winrt::Windows::Storage::StorageFolder const& folder) const;
+        [[nodiscard]] auto Folders() const;
+        [[nodiscard]] auto SaveFolder() const;
+        auto DefinitionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::StorageLibrary, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using DefinitionChanged_revoker = impl::event_revoker<winrt::Windows::Storage::IStorageLibrary, &impl::abi_t<winrt::Windows::Storage::IStorageLibrary>::remove_DefinitionChanged>;
         [[nodiscard]] DefinitionChanged_revoker DefinitionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::StorageLibrary, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) DefinitionChanged(winrt::event_token const& eventCookie) const noexcept;
+        auto DefinitionChanged(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibrary>
     {
@@ -1741,7 +1730,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibrary2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageLibraryChangeTracker) ChangeTracker() const;
+        [[nodiscard]] auto ChangeTracker() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibrary2>
     {
@@ -1750,7 +1739,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibrary3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) AreFolderSuggestionsAvailableAsync() const;
+        auto AreFolderSuggestionsAvailableAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibrary3>
     {
@@ -1759,11 +1748,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChange
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageLibraryChangeType) ChangeType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Path() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PreviousPath() const;
-        WINRT_IMPL_AUTO(bool) IsOfType(winrt::Windows::Storage::StorageItemTypes const& type) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::IStorageItem>) GetStorageItemAsync() const;
+        [[nodiscard]] auto ChangeType() const;
+        [[nodiscard]] auto Path() const;
+        [[nodiscard]] auto PreviousPath() const;
+        auto IsOfType(winrt::Windows::Storage::StorageItemTypes const& type) const;
+        auto GetStorageItemAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChange>
     {
@@ -1772,8 +1761,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChangeReader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageLibraryChange>>) ReadBatchAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) AcceptChangesAsync() const;
+        auto ReadBatchAsync() const;
+        auto AcceptChangesAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChangeReader>
     {
@@ -1782,7 +1771,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChangeReader2
     {
-        WINRT_IMPL_AUTO(uint64_t) GetLastChangeId() const;
+        auto GetLastChangeId() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChangeReader2>
     {
@@ -1791,9 +1780,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChangeTracker
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageLibraryChangeReader) GetChangeReader() const;
-        WINRT_IMPL_AUTO(void) Enable() const;
-        WINRT_IMPL_AUTO(void) Reset() const;
+        auto GetChangeReader() const;
+        auto Enable() const;
+        auto Reset() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChangeTracker>
     {
@@ -1802,8 +1791,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChangeTracker2
     {
-        WINRT_IMPL_AUTO(void) Enable(winrt::Windows::Storage::StorageLibraryChangeTrackerOptions const& options) const;
-        WINRT_IMPL_AUTO(void) Disable() const;
+        auto Enable(winrt::Windows::Storage::StorageLibraryChangeTrackerOptions const& options) const;
+        auto Disable() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChangeTracker2>
     {
@@ -1812,8 +1801,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryChangeTrackerOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) TrackChangeDetails() const;
-        WINRT_IMPL_AUTO(void) TrackChangeDetails(bool value) const;
+        [[nodiscard]] auto TrackChangeDetails() const;
+        auto TrackChangeDetails(bool value) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryChangeTrackerOptions>
     {
@@ -1830,7 +1819,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryLastChangeIdStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Unknown() const;
+        [[nodiscard]] auto Unknown() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryLastChangeIdStatics>
     {
@@ -1839,7 +1828,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageLibrary>) GetLibraryAsync(winrt::Windows::Storage::KnownLibraryId const& libraryId) const;
+        auto GetLibraryAsync(winrt::Windows::Storage::KnownLibraryId const& libraryId) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryStatics>
     {
@@ -1848,7 +1837,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageLibraryStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageLibrary>) GetLibraryForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownLibraryId const& libraryId) const;
+        auto GetLibraryForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownLibraryId const& libraryId) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageLibraryStatics2>
     {
@@ -1857,8 +1846,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto DisplayName() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageProvider>
     {
@@ -1867,7 +1856,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageProvider2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsPropertySupportedForPartialFileAsync(param::hstring const& propertyCanonicalName) const;
+        auto IsPropertySupportedForPartialFileAsync(param::hstring const& propertyCanonicalName) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageProvider2>
     {
@@ -1876,8 +1865,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStorageStreamTransaction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStream) Stream() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CommitAsync() const;
+        [[nodiscard]] auto Stream() const;
+        auto CommitAsync() const;
     };
     template <> struct consume<winrt::Windows::Storage::IStorageStreamTransaction>
     {
@@ -1886,7 +1875,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IStreamedFileDataRequest
     {
-        WINRT_IMPL_AUTO(void) FailAndClose(winrt::Windows::Storage::StreamedFileFailureMode const& failureMode) const;
+        auto FailAndClose(winrt::Windows::Storage::StreamedFileFailureMode const& failureMode) const;
     };
     template <> struct consume<winrt::Windows::Storage::IStreamedFileDataRequest>
     {
@@ -1895,7 +1884,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemAudioProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EncodingBitrate() const;
+        [[nodiscard]] auto EncodingBitrate() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemAudioProperties>
     {
@@ -1904,22 +1893,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemDataPaths
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Fonts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProgramData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Public() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicDesktop() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicDocuments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicDownloads() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicMusic() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicPictures() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicVideos() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) System() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemHost() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemX86() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemX64() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemArm() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserProfiles() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Windows() const;
+        [[nodiscard]] auto Fonts() const;
+        [[nodiscard]] auto ProgramData() const;
+        [[nodiscard]] auto Public() const;
+        [[nodiscard]] auto PublicDesktop() const;
+        [[nodiscard]] auto PublicDocuments() const;
+        [[nodiscard]] auto PublicDownloads() const;
+        [[nodiscard]] auto PublicMusic() const;
+        [[nodiscard]] auto PublicPictures() const;
+        [[nodiscard]] auto PublicVideos() const;
+        [[nodiscard]] auto System() const;
+        [[nodiscard]] auto SystemHost() const;
+        [[nodiscard]] auto SystemX86() const;
+        [[nodiscard]] auto SystemX64() const;
+        [[nodiscard]] auto SystemArm() const;
+        [[nodiscard]] auto UserProfiles() const;
+        [[nodiscard]] auto Windows() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemDataPaths>
     {
@@ -1928,7 +1917,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemDataPathsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemDataPaths) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemDataPathsStatics>
     {
@@ -1937,8 +1926,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemGPSProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LatitudeDecimal() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LongitudeDecimal() const;
+        [[nodiscard]] auto LatitudeDecimal() const;
+        [[nodiscard]] auto LongitudeDecimal() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemGPSProperties>
     {
@@ -1947,8 +1936,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemImageProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HorizontalSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) VerticalSize() const;
+        [[nodiscard]] auto HorizontalSize() const;
+        [[nodiscard]] auto VerticalSize() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemImageProperties>
     {
@@ -1957,12 +1946,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemMediaProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Duration() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Producer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Publisher() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SubTitle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Writer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Year() const;
+        [[nodiscard]] auto Duration() const;
+        [[nodiscard]] auto Producer() const;
+        [[nodiscard]] auto Publisher() const;
+        [[nodiscard]] auto SubTitle() const;
+        [[nodiscard]] auto Writer() const;
+        [[nodiscard]] auto Year() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemMediaProperties>
     {
@@ -1971,14 +1960,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemMusicProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AlbumArtist() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AlbumTitle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Artist() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Composer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Conductor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayArtist() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Genre() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TrackNumber() const;
+        [[nodiscard]] auto AlbumArtist() const;
+        [[nodiscard]] auto AlbumTitle() const;
+        [[nodiscard]] auto Artist() const;
+        [[nodiscard]] auto Composer() const;
+        [[nodiscard]] auto Conductor() const;
+        [[nodiscard]] auto DisplayArtist() const;
+        [[nodiscard]] auto Genre() const;
+        [[nodiscard]] auto TrackNumber() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemMusicProperties>
     {
@@ -1987,11 +1976,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemPhotoProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CameraManufacturer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CameraModel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DateTaken() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Orientation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PeopleNames() const;
+        [[nodiscard]] auto CameraManufacturer() const;
+        [[nodiscard]] auto CameraModel() const;
+        [[nodiscard]] auto DateTaken() const;
+        [[nodiscard]] auto Orientation() const;
+        [[nodiscard]] auto PeopleNames() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemPhotoProperties>
     {
@@ -2000,19 +1989,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Author() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Comment() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ItemNameDisplay() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Keywords() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Rating() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemAudioProperties) Audio() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemGPSProperties) GPS() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemMediaProperties) Media() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemMusicProperties) Music() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemPhotoProperties) Photo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemVideoProperties) Video() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::SystemImageProperties) Image() const;
+        [[nodiscard]] auto Author() const;
+        [[nodiscard]] auto Comment() const;
+        [[nodiscard]] auto ItemNameDisplay() const;
+        [[nodiscard]] auto Keywords() const;
+        [[nodiscard]] auto Rating() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Audio() const;
+        [[nodiscard]] auto GPS() const;
+        [[nodiscard]] auto Media() const;
+        [[nodiscard]] auto Music() const;
+        [[nodiscard]] auto Photo() const;
+        [[nodiscard]] auto Video() const;
+        [[nodiscard]] auto Image() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemProperties>
     {
@@ -2021,11 +2010,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_ISystemVideoProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Director() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FrameHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FrameWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Orientation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TotalBitrate() const;
+        [[nodiscard]] auto Director() const;
+        [[nodiscard]] auto FrameHeight() const;
+        [[nodiscard]] auto FrameWidth() const;
+        [[nodiscard]] auto Orientation() const;
+        [[nodiscard]] auto TotalBitrate() const;
     };
     template <> struct consume<winrt::Windows::Storage::ISystemVideoProperties>
     {
@@ -2034,25 +2023,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IUserDataPaths
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CameraRoll() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Cookies() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Desktop() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Documents() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Downloads() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Favorites() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) History() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InternetCache() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalAppData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalAppDataLow() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Music() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Pictures() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Profile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Recent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RoamingAppData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SavedPictures() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Screenshots() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Templates() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Videos() const;
+        [[nodiscard]] auto CameraRoll() const;
+        [[nodiscard]] auto Cookies() const;
+        [[nodiscard]] auto Desktop() const;
+        [[nodiscard]] auto Documents() const;
+        [[nodiscard]] auto Downloads() const;
+        [[nodiscard]] auto Favorites() const;
+        [[nodiscard]] auto History() const;
+        [[nodiscard]] auto InternetCache() const;
+        [[nodiscard]] auto LocalAppData() const;
+        [[nodiscard]] auto LocalAppDataLow() const;
+        [[nodiscard]] auto Music() const;
+        [[nodiscard]] auto Pictures() const;
+        [[nodiscard]] auto Profile() const;
+        [[nodiscard]] auto Recent() const;
+        [[nodiscard]] auto RoamingAppData() const;
+        [[nodiscard]] auto SavedPictures() const;
+        [[nodiscard]] auto Screenshots() const;
+        [[nodiscard]] auto Templates() const;
+        [[nodiscard]] auto Videos() const;
     };
     template <> struct consume<winrt::Windows::Storage::IUserDataPaths>
     {
@@ -2061,8 +2050,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_IUserDataPathsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::UserDataPaths) GetForUser(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::UserDataPaths) GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Storage::IUserDataPathsStatics>
     {

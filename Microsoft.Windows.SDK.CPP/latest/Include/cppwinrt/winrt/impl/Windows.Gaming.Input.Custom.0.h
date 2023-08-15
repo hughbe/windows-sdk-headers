@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,10 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Gaming_Input_Custom_0_H
 #define WINRT_Windows_Gaming_Input_Custom_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
-}
 WINRT_EXPORT namespace winrt::Windows::Gaming::Input
 {
     struct IGameController;
@@ -240,9 +236,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_ICustomGameControllerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) CreateGameController(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
-        WINRT_IMPL_AUTO(void) OnGameControllerAdded(winrt::Windows::Gaming::Input::IGameController const& value) const;
-        WINRT_IMPL_AUTO(void) OnGameControllerRemoved(winrt::Windows::Gaming::Input::IGameController const& value) const;
+        auto CreateGameController(winrt::Windows::Gaming::Input::Custom::IGameControllerProvider const& provider) const;
+        auto OnGameControllerAdded(winrt::Windows::Gaming::Input::IGameController const& value) const;
+        auto OnGameControllerRemoved(winrt::Windows::Gaming::Input::IGameController const& value) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>
     {
@@ -251,9 +247,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGameControllerFactoryManagerStatics
     {
-        WINRT_IMPL_AUTO(void) RegisterCustomFactoryForGipInterface(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::guid const& interfaceId) const;
-        WINRT_IMPL_AUTO(void) RegisterCustomFactoryForHardwareId(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, uint16_t hardwareVendorId, uint16_t hardwareProductId) const;
-        WINRT_IMPL_AUTO(void) RegisterCustomFactoryForXusbType(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::Windows::Gaming::Input::Custom::XusbDeviceType const& xusbType, winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype const& xusbSubtype) const;
+        auto RegisterCustomFactoryForGipInterface(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::guid const& interfaceId) const;
+        auto RegisterCustomFactoryForHardwareId(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, uint16_t hardwareVendorId, uint16_t hardwareProductId) const;
+        auto RegisterCustomFactoryForXusbType(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::Windows::Gaming::Input::Custom::XusbDeviceType const& xusbType, winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype const& xusbSubtype) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGameControllerFactoryManagerStatics>
     {
@@ -262,7 +258,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGameControllerFactoryManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Gaming::Input::IGameController) TryGetFactoryControllerFromGameController(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::Windows::Gaming::Input::IGameController const& gameController) const;
+        auto TryGetFactoryControllerFromGameController(winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory const& factory, winrt::Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGameControllerFactoryManagerStatics2>
     {
@@ -271,8 +267,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGameControllerInputSink
     {
-        WINRT_IMPL_AUTO(void) OnInputResumed(uint64_t timestamp) const;
-        WINRT_IMPL_AUTO(void) OnInputSuspended(uint64_t timestamp) const;
+        auto OnInputResumed(uint64_t timestamp) const;
+        auto OnInputSuspended(uint64_t timestamp) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>
     {
@@ -281,11 +277,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGameControllerProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo) FirmwareVersionInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) HardwareProductId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) HardwareVendorId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo) HardwareVersionInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsConnected() const;
+        [[nodiscard]] auto FirmwareVersionInfo() const;
+        [[nodiscard]] auto HardwareProductId() const;
+        [[nodiscard]] auto HardwareVendorId() const;
+        [[nodiscard]] auto HardwareVersionInfo() const;
+        [[nodiscard]] auto IsConnected() const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>
     {
@@ -294,9 +290,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGipFirmwareUpdateResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ExtendedErrorCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) FinalComponentId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateStatus) Status() const;
+        [[nodiscard]] auto ExtendedErrorCode() const;
+        [[nodiscard]] auto FinalComponentId() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGipFirmwareUpdateResult>
     {
@@ -305,8 +301,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGipGameControllerInputSink
     {
-        WINRT_IMPL_AUTO(void) OnKeyReceived(uint64_t timestamp, uint8_t keyCode, bool isPressed) const;
-        WINRT_IMPL_AUTO(void) OnMessageReceived(uint64_t timestamp, winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, uint8_t sequenceId, array_view<uint8_t const> messageBuffer) const;
+        auto OnKeyReceived(uint64_t timestamp, uint8_t keyCode, bool isPressed) const;
+        auto OnMessageReceived(uint64_t timestamp, winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, uint8_t sequenceId, array_view<uint8_t const> messageBuffer) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>
     {
@@ -315,9 +311,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IGipGameControllerProvider
     {
-        WINRT_IMPL_AUTO(void) SendMessage(winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, array_view<uint8_t const> messageBuffer) const;
-        WINRT_IMPL_AUTO(void) SendReceiveMessage(winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, array_view<uint8_t const> requestMessageBuffer, array_view<uint8_t> responseMessageBuffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult, winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>) UpdateFirmwareAsync(winrt::Windows::Storage::Streams::IInputStream const& firmwareImage) const;
+        auto SendMessage(winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, array_view<uint8_t const> messageBuffer) const;
+        auto SendReceiveMessage(winrt::Windows::Gaming::Input::Custom::GipMessageClass const& messageClass, uint8_t messageId, array_view<uint8_t const> requestMessageBuffer, array_view<uint8_t> responseMessageBuffer) const;
+        auto UpdateFirmwareAsync(winrt::Windows::Storage::Streams::IInputStream const& firmwareImage) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IGipGameControllerProvider>
     {
@@ -326,7 +322,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IHidGameControllerInputSink
     {
-        WINRT_IMPL_AUTO(void) OnInputReportReceived(uint64_t timestamp, uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
+        auto OnInputReportReceived(uint64_t timestamp, uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>
     {
@@ -335,11 +331,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IHidGameControllerProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        WINRT_IMPL_AUTO(void) GetFeatureReport(uint8_t reportId, array_view<uint8_t> reportBuffer) const;
-        WINRT_IMPL_AUTO(void) SendFeatureReport(uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
-        WINRT_IMPL_AUTO(void) SendOutputReport(uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
+        [[nodiscard]] auto UsageId() const;
+        [[nodiscard]] auto UsagePage() const;
+        auto GetFeatureReport(uint8_t reportId, array_view<uint8_t> reportBuffer) const;
+        auto SendFeatureReport(uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
+        auto SendOutputReport(uint8_t reportId, array_view<uint8_t const> reportBuffer) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IHidGameControllerProvider>
     {
@@ -348,7 +344,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IXusbGameControllerInputSink
     {
-        WINRT_IMPL_AUTO(void) OnInputReceived(uint64_t timestamp, uint8_t reportId, array_view<uint8_t const> inputBuffer) const;
+        auto OnInputReceived(uint64_t timestamp, uint8_t reportId, array_view<uint8_t const> inputBuffer) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>
     {
@@ -357,7 +353,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_Custom_IXusbGameControllerProvider
     {
-        WINRT_IMPL_AUTO(void) SetVibration(double lowFrequencyMotorSpeed, double highFrequencyMotorSpeed) const;
+        auto SetVibration(double lowFrequencyMotorSpeed, double highFrequencyMotorSpeed) const;
     };
     template <> struct consume<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerProvider>
     {

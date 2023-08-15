@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -70,7 +70,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_DirectX_Direct3D11_IDirect3DDevice
     {
-        WINRT_IMPL_AUTO(void) Trim() const;
+        auto Trim() const;
     };
     template <> struct consume<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
     {
@@ -79,7 +79,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription) Description() const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
     {

@@ -516,7 +516,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGpioControllerProvider = _uuidof(IGpioControllerProvider);
+                    MIDL_CONST_ID IID& IID_IGpioControllerProvider = __uuidof(IGpioControllerProvider);
                 } /* Provider */
             } /* Gpio */
         } /* Devices */
@@ -584,7 +584,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGpioPinProvider = _uuidof(IGpioPinProvider);
+                    MIDL_CONST_ID IID& IID_IGpioPinProvider = __uuidof(IGpioPinProvider);
                 } /* Provider */
             } /* Gpio */
         } /* Devices */
@@ -622,7 +622,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGpioPinProviderValueChangedEventArgs = _uuidof(IGpioPinProviderValueChangedEventArgs);
+                    MIDL_CONST_ID IID& IID_IGpioPinProviderValueChangedEventArgs = __uuidof(IGpioPinProviderValueChangedEventArgs);
                 } /* Provider */
             } /* Gpio */
         } /* Devices */
@@ -661,7 +661,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGpioPinProviderValueChangedEventArgsFactory = _uuidof(IGpioPinProviderValueChangedEventArgsFactory);
+                    MIDL_CONST_ID IID& IID_IGpioPinProviderValueChangedEventArgsFactory = __uuidof(IGpioPinProviderValueChangedEventArgsFactory);
                 } /* Provider */
             } /* Gpio */
         } /* Devices */
@@ -697,7 +697,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGpioProvider = _uuidof(IGpioProvider);
+                    MIDL_CONST_ID IID& IID_IGpioProvider = __uuidof(IGpioProvider);
                 } /* Provider */
             } /* Gpio */
         } /* Devices */

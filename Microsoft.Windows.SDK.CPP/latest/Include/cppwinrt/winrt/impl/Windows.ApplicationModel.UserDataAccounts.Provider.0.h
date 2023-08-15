@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,10 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts
 {
     enum class UserDataAccountContentKinds : uint32_t;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts::Provider
 {
@@ -114,9 +110,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountPartnerAccountInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Priority() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind) AccountKind() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto Priority() const;
+        [[nodiscard]] auto AccountKind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
     {
@@ -125,9 +121,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderAddAccountOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds) ContentKinds() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>) PartnerAccountInfos() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted(param::hstring const& userDataAccountId) const;
+        [[nodiscard]] auto ContentKinds() const;
+        [[nodiscard]] auto PartnerAccountInfos() const;
+        auto ReportCompleted(param::hstring const& userDataAccountId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>
     {
@@ -136,7 +132,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind) Kind() const;
+        [[nodiscard]] auto Kind() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
     {
@@ -145,8 +141,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderResolveErrorsOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted() const;
+        [[nodiscard]] auto UserDataAccountId() const;
+        auto ReportCompleted() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>
     {
@@ -155,8 +151,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderSettingsOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
-        WINRT_IMPL_AUTO(void) ReportCompleted() const;
+        [[nodiscard]] auto UserDataAccountId() const;
+        auto ReportCompleted() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>
     {

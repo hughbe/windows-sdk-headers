@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,14 +15,8 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX::Direct3D11
 {
@@ -39,7 +33,6 @@ WINRT_EXPORT namespace winrt::Windows::Media
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Capture
 {
-    struct MediaCaptureVideoProfileMediaDescription;
     enum class MediaStreamType : int32_t;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Devices
@@ -605,9 +598,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IAudioMediaFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) FrameReference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::AudioEncodingProperties) AudioEncodingProperties() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::AudioFrame) GetAudioFrame() const;
+        [[nodiscard]] auto FrameReference() const;
+        [[nodiscard]] auto AudioEncodingProperties() const;
+        auto GetAudioFrame() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IAudioMediaFrame>
     {
@@ -616,8 +609,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IBufferMediaFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) FrameReference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Buffer() const;
+        [[nodiscard]] auto FrameReference() const;
+        [[nodiscard]] auto Buffer() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IBufferMediaFrame>
     {
@@ -626,10 +619,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IDepthMediaFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) FrameReference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrame) VideoMediaFrame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat) DepthFormat() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper) TryCreateCoordinateMapper(winrt::Windows::Media::Devices::Core::CameraIntrinsics const& cameraIntrinsics, winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
+        [[nodiscard]] auto FrameReference() const;
+        [[nodiscard]] auto VideoMediaFrame() const;
+        [[nodiscard]] auto DepthFormat() const;
+        auto TryCreateCoordinateMapper(winrt::Windows::Media::Devices::Core::CameraIntrinsics const& cameraIntrinsics, winrt::Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame>
     {
@@ -638,8 +631,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IDepthMediaFrame2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxReliableDepth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinReliableDepth() const;
+        [[nodiscard]] auto MaxReliableDepth() const;
+        [[nodiscard]] auto MinReliableDepth() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame2>
     {
@@ -648,8 +641,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IDepthMediaFrameFormat
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat) VideoFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DepthScaleInMeters() const;
+        [[nodiscard]] auto VideoFormat() const;
+        [[nodiscard]] auto DepthScaleInMeters() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IDepthMediaFrameFormat>
     {
@@ -658,9 +651,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IInfraredMediaFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) FrameReference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrame) VideoMediaFrame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIlluminated() const;
+        [[nodiscard]] auto FrameReference() const;
+        [[nodiscard]] auto VideoMediaFrame() const;
+        [[nodiscard]] auto IsIlluminated() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IInfraredMediaFrame>
     {
@@ -677,11 +670,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameFormat
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MajorType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Subtype() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::MediaRatio) FrameRate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::Foundation::IInspectable>) Properties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat) VideoFormat() const;
+        [[nodiscard]] auto MajorType() const;
+        [[nodiscard]] auto Subtype() const;
+        [[nodiscard]] auto FrameRate() const;
+        [[nodiscard]] auto Properties() const;
+        [[nodiscard]] auto VideoFormat() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat>
     {
@@ -690,7 +683,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameFormat2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::AudioEncodingProperties) AudioEncodingProperties() const;
+        [[nodiscard]] auto AudioEncodingProperties() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat2>
     {
@@ -699,13 +692,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameReader
     {
-        WINRT_IMPL_AUTO(winrt::event_token) FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameReader, winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> const& handler) const;
+        auto FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameReader, winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> const& handler) const;
         using FrameArrived_revoker = impl::event_revoker<winrt::Windows::Media::Capture::Frames::IMediaFrameReader, &impl::abi_t<winrt::Windows::Media::Capture::Frames::IMediaFrameReader>::remove_FrameArrived>;
         [[nodiscard]] FrameArrived_revoker FrameArrived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameReader, winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) FrameArrived(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) TryAcquireLatestFrame() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>) StartAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StopAsync() const;
+        auto FrameArrived(winrt::event_token const& token) const noexcept;
+        auto TryAcquireLatestFrame() const;
+        auto StartAsync() const;
+        auto StopAsync() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameReader>
     {
@@ -714,8 +707,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameReader2
     {
-        WINRT_IMPL_AUTO(void) AcquisitionMode(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode) AcquisitionMode() const;
+        auto AcquisitionMode(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const;
+        [[nodiscard]] auto AcquisitionMode() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameReader2>
     {
@@ -724,14 +717,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameReference
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind) SourceKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameFormat) Format() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) SystemRelativeTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Duration() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::Foundation::IInspectable>) Properties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::BufferMediaFrame) BufferMediaFrame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrame) VideoMediaFrame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CoordinateSystem() const;
+        [[nodiscard]] auto SourceKind() const;
+        [[nodiscard]] auto Format() const;
+        [[nodiscard]] auto SystemRelativeTime() const;
+        [[nodiscard]] auto Duration() const;
+        [[nodiscard]] auto Properties() const;
+        [[nodiscard]] auto BufferMediaFrame() const;
+        [[nodiscard]] auto VideoMediaFrame() const;
+        [[nodiscard]] auto CoordinateSystem() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameReference>
     {
@@ -740,7 +733,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameReference2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::AudioMediaFrame) AudioMediaFrame() const;
+        [[nodiscard]] auto AudioMediaFrame() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameReference2>
     {
@@ -749,16 +742,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSource
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo) Info() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceController) Controller() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>) SupportedFormats() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameFormat) CurrentFormat() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetFormatAsync(winrt::Windows::Media::Capture::Frames::MediaFrameFormat const& format) const;
-        WINRT_IMPL_AUTO(winrt::event_token) FormatChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Info() const;
+        [[nodiscard]] auto Controller() const;
+        [[nodiscard]] auto SupportedFormats() const;
+        [[nodiscard]] auto CurrentFormat() const;
+        auto SetFormatAsync(winrt::Windows::Media::Capture::Frames::MediaFrameFormat const& format) const;
+        auto FormatChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using FormatChanged_revoker = impl::event_revoker<winrt::Windows::Media::Capture::Frames::IMediaFrameSource, &impl::abi_t<winrt::Windows::Media::Capture::Frames::IMediaFrameSource>::remove_FormatChanged>;
         [[nodiscard]] FormatChanged_revoker FormatChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MediaFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) FormatChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::Core::CameraIntrinsics) TryGetCameraIntrinsics(winrt::Windows::Media::Capture::Frames::MediaFrameFormat const& format) const;
+        auto FormatChanged(winrt::event_token const& token) const noexcept;
+        auto TryGetCameraIntrinsics(winrt::Windows::Media::Capture::Frames::MediaFrameFormat const& format) const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSource>
     {
@@ -767,9 +760,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceController
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>) GetPropertyAsync(param::hstring const& propertyId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>) SetPropertyAsync(param::hstring const& propertyId, winrt::Windows::Foundation::IInspectable const& propertyValue) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::VideoDeviceController) VideoDeviceController() const;
+        auto GetPropertyAsync(param::hstring const& propertyId) const;
+        auto SetPropertyAsync(param::hstring const& propertyId, winrt::Windows::Foundation::IInspectable const& propertyValue) const;
+        [[nodiscard]] auto VideoDeviceController() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController>
     {
@@ -778,8 +771,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceController2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>) GetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, winrt::Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>) SetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const;
+        auto GetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, winrt::Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const;
+        auto SetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController2>
     {
@@ -788,7 +781,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceController3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::AudioDeviceController) AudioDeviceController() const;
+        [[nodiscard]] auto AudioDeviceController() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController3>
     {
@@ -797,8 +790,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceGetPropertyResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Value() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto Value() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult>
     {
@@ -807,9 +800,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>) SourceInfos() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto SourceInfos() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroup>
     {
@@ -818,9 +811,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>>) FindAllAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>) FromIdAsync(param::hstring const& id) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        auto FindAllAsync() const;
+        auto FromIdAsync(param::hstring const& id) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics>
     {
@@ -829,13 +822,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::MediaStreamType) MediaStreamType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind) SourceKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup) SourceGroup() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceInformation) DeviceInformation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::Foundation::IInspectable>) Properties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Perception::Spatial::SpatialCoordinateSystem) CoordinateSystem() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto MediaStreamType() const;
+        [[nodiscard]] auto SourceKind() const;
+        [[nodiscard]] auto SourceGroup() const;
+        [[nodiscard]] auto DeviceInformation() const;
+        [[nodiscard]] auto Properties() const;
+        [[nodiscard]] auto CoordinateSystem() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo>
     {
@@ -844,8 +837,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProfileId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>) VideoProfileMediaDescription() const;
+        [[nodiscard]] auto ProfileId() const;
+        [[nodiscard]] auto VideoProfileMediaDescription() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2>
     {
@@ -854,7 +847,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::Panel) GetRelativePanel(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const;
+        auto GetRelativePanel(winrt::Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3>
     {
@@ -863,7 +856,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsShareable() const;
+        [[nodiscard]] auto IsShareable() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4>
     {
@@ -880,13 +873,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader
     {
-        WINRT_IMPL_AUTO(winrt::event_token) FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const;
+        auto FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const;
         using FrameArrived_revoker = impl::event_revoker<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader, &impl::abi_t<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader>::remove_FrameArrived>;
         [[nodiscard]] FrameArrived_revoker FrameArrived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) FrameArrived(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference) TryAcquireLatestFrame() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>) StartAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StopAsync() const;
+        auto FrameArrived(winrt::event_token const& token) const noexcept;
+        auto TryAcquireLatestFrame() const;
+        auto StartAsync() const;
+        auto StopAsync() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader>
     {
@@ -895,8 +888,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader2
     {
-        WINRT_IMPL_AUTO(void) AcquisitionMode(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode) AcquisitionMode() const;
+        auto AcquisitionMode(winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const;
+        [[nodiscard]] auto AcquisitionMode() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2>
     {
@@ -905,7 +898,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReference
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) TryGetFrameReferenceBySourceId(param::hstring const& sourceId) const;
+        auto TryGetFrameReferenceBySourceId(param::hstring const& sourceId) const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference>
     {
@@ -914,14 +907,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IVideoMediaFrame
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) FrameReference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat) VideoFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::SoftwareBitmap) SoftwareBitmap() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface) Direct3DSurface() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::Core::CameraIntrinsics) CameraIntrinsics() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::InfraredMediaFrame) InfraredMediaFrame() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::DepthMediaFrame) DepthMediaFrame() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::VideoFrame) GetVideoFrame() const;
+        [[nodiscard]] auto FrameReference() const;
+        [[nodiscard]] auto VideoFormat() const;
+        [[nodiscard]] auto SoftwareBitmap() const;
+        [[nodiscard]] auto Direct3DSurface() const;
+        [[nodiscard]] auto CameraIntrinsics() const;
+        [[nodiscard]] auto InfraredMediaFrame() const;
+        [[nodiscard]] auto DepthMediaFrame() const;
+        auto GetVideoFrame() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IVideoMediaFrame>
     {
@@ -930,10 +923,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameFormat) MediaFrameFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat) DepthFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Width() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Height() const;
+        [[nodiscard]] auto MediaFrameFormat() const;
+        [[nodiscard]] auto DepthFormat() const;
+        [[nodiscard]] auto Width() const;
+        [[nodiscard]] auto Height() const;
     };
     template <> struct consume<winrt::Windows::Media::Capture::Frames::IVideoMediaFrameFormat>
     {

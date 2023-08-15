@@ -249,7 +249,7 @@ namespace ABI {
             public:
             };
 
-            extern MIDL_CONST_ID IID& IID_IGeometrySource2D = _uuidof(IGeometrySource2D);
+            MIDL_CONST_ID IID& IID_IGeometrySource2D = __uuidof(IGeometrySource2D);
         } /* Graphics */
     } /* Windows */
 } /* ABI */

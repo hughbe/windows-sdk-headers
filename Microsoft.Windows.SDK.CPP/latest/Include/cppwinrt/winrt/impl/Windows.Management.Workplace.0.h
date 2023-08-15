@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -64,10 +64,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Workplace_IMdmAllowPolicyStatics
     {
-        WINRT_IMPL_AUTO(bool) IsBrowserAllowed() const;
-        WINRT_IMPL_AUTO(bool) IsCameraAllowed() const;
-        WINRT_IMPL_AUTO(bool) IsMicrosoftAccountAllowed() const;
-        WINRT_IMPL_AUTO(bool) IsStoreAllowed() const;
+        auto IsBrowserAllowed() const;
+        auto IsCameraAllowed() const;
+        auto IsMicrosoftAccountAllowed() const;
+        auto IsStoreAllowed() const;
     };
     template <> struct consume<winrt::Windows::Management::Workplace::IMdmAllowPolicyStatics>
     {
@@ -76,7 +76,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Workplace_IMdmPolicyStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Workplace::MessagingSyncPolicy) GetMessagingSyncPolicy() const;
+        auto GetMessagingSyncPolicy() const;
     };
     template <> struct consume<winrt::Windows::Management::Workplace::IMdmPolicyStatics2>
     {
@@ -85,7 +85,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Workplace_IWorkplaceSettingsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMicrosoftAccountOptional() const;
+        [[nodiscard]] auto IsMicrosoftAccountOptional() const;
     };
     template <> struct consume<winrt::Windows::Management::Workplace::IWorkplaceSettingsStatics>
     {

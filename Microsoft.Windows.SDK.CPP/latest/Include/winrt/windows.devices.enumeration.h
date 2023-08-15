@@ -2464,7 +2464,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceAccessChangedEventArgs = _uuidof(IDeviceAccessChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IDeviceAccessChangedEventArgs = __uuidof(IDeviceAccessChangedEventArgs);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2503,7 +2503,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceAccessChangedEventArgs2 = _uuidof(IDeviceAccessChangedEventArgs2);
+                MIDL_CONST_ID IID& IID_IDeviceAccessChangedEventArgs2 = __uuidof(IDeviceAccessChangedEventArgs2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2546,7 +2546,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceAccessInformation = _uuidof(IDeviceAccessInformation);
+                MIDL_CONST_ID IID& IID_IDeviceAccessInformation = __uuidof(IDeviceAccessInformation);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2591,7 +2591,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceAccessInformationStatics = _uuidof(IDeviceAccessInformationStatics);
+                MIDL_CONST_ID IID& IID_IDeviceAccessInformationStatics = __uuidof(IDeviceAccessInformationStatics);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2627,7 +2627,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTriggerDetails = _uuidof(IDeviceConnectionChangeTriggerDetails);
+                MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTriggerDetails = __uuidof(IDeviceConnectionChangeTriggerDetails);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2663,7 +2663,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceDisconnectButtonClickedEventArgs = _uuidof(IDeviceDisconnectButtonClickedEventArgs);
+                MIDL_CONST_ID IID& IID_IDeviceDisconnectButtonClickedEventArgs = __uuidof(IDeviceDisconnectButtonClickedEventArgs);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2723,7 +2723,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformation = _uuidof(IDeviceInformation);
+                MIDL_CONST_ID IID& IID_IDeviceInformation = __uuidof(IDeviceInformation);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2762,7 +2762,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformation2 = _uuidof(IDeviceInformation2);
+                MIDL_CONST_ID IID& IID_IDeviceInformation2 = __uuidof(IDeviceInformation2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2817,7 +2817,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationCustomPairing = _uuidof(IDeviceInformationCustomPairing);
+                MIDL_CONST_ID IID& IID_IDeviceInformationCustomPairing = __uuidof(IDeviceInformationCustomPairing);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2863,7 +2863,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationPairing = _uuidof(IDeviceInformationPairing);
+                MIDL_CONST_ID IID& IID_IDeviceInformationPairing = __uuidof(IDeviceInformationPairing);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2910,7 +2910,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationPairing2 = _uuidof(IDeviceInformationPairing2);
+                MIDL_CONST_ID IID& IID_IDeviceInformationPairing2 = __uuidof(IDeviceInformationPairing2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2947,7 +2947,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationPairingStatics = _uuidof(IDeviceInformationPairingStatics);
+                MIDL_CONST_ID IID& IID_IDeviceInformationPairingStatics = __uuidof(IDeviceInformationPairingStatics);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -2985,7 +2985,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationPairingStatics2 = _uuidof(IDeviceInformationPairingStatics2);
+                MIDL_CONST_ID IID& IID_IDeviceInformationPairingStatics2 = __uuidof(IDeviceInformationPairingStatics2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3059,7 +3059,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationStatics = _uuidof(IDeviceInformationStatics);
+                MIDL_CONST_ID IID& IID_IDeviceInformationStatics = __uuidof(IDeviceInformationStatics);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3114,7 +3114,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationStatics2 = _uuidof(IDeviceInformationStatics2);
+                MIDL_CONST_ID IID& IID_IDeviceInformationStatics2 = __uuidof(IDeviceInformationStatics2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3153,7 +3153,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationUpdate = _uuidof(IDeviceInformationUpdate);
+                MIDL_CONST_ID IID& IID_IDeviceInformationUpdate = __uuidof(IDeviceInformationUpdate);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3189,7 +3189,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceInformationUpdate2 = _uuidof(IDeviceInformationUpdate2);
+                MIDL_CONST_ID IID& IID_IDeviceInformationUpdate2 = __uuidof(IDeviceInformationUpdate2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3238,7 +3238,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePairingRequestedEventArgs = _uuidof(IDevicePairingRequestedEventArgs);
+                MIDL_CONST_ID IID& IID_IDevicePairingRequestedEventArgs = __uuidof(IDevicePairingRequestedEventArgs);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3274,7 +3274,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePairingRequestedEventArgs2 = _uuidof(IDevicePairingRequestedEventArgs2);
+                MIDL_CONST_ID IID& IID_IDevicePairingRequestedEventArgs2 = __uuidof(IDevicePairingRequestedEventArgs2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3313,7 +3313,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePairingResult = _uuidof(IDevicePairingResult);
+                MIDL_CONST_ID IID& IID_IDevicePairingResult = __uuidof(IDevicePairingResult);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3344,7 +3344,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePairingSettings = _uuidof(IDevicePairingSettings);
+                MIDL_CONST_ID IID& IID_IDevicePairingSettings = __uuidof(IDevicePairingSettings);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3429,7 +3429,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePicker = _uuidof(IDevicePicker);
+                MIDL_CONST_ID IID& IID_IDevicePicker = __uuidof(IDevicePicker);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3504,7 +3504,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePickerAppearance = _uuidof(IDevicePickerAppearance);
+                MIDL_CONST_ID IID& IID_IDevicePickerAppearance = __uuidof(IDevicePickerAppearance);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3543,7 +3543,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDevicePickerFilter = _uuidof(IDevicePickerFilter);
+                MIDL_CONST_ID IID& IID_IDevicePickerFilter = __uuidof(IDevicePickerFilter);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3579,7 +3579,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceSelectedEventArgs = _uuidof(IDeviceSelectedEventArgs);
+                MIDL_CONST_ID IID& IID_IDeviceSelectedEventArgs = __uuidof(IDeviceSelectedEventArgs);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3615,7 +3615,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceUnpairingResult = _uuidof(IDeviceUnpairingResult);
+                MIDL_CONST_ID IID& IID_IDeviceUnpairingResult = __uuidof(IDeviceUnpairingResult);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3688,7 +3688,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceWatcher = _uuidof(IDeviceWatcher);
+                MIDL_CONST_ID IID& IID_IDeviceWatcher = __uuidof(IDeviceWatcher);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3725,7 +3725,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceWatcher2 = _uuidof(IDeviceWatcher2);
+                MIDL_CONST_ID IID& IID_IDeviceWatcher2 = __uuidof(IDeviceWatcher2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3767,7 +3767,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceWatcherEvent = _uuidof(IDeviceWatcherEvent);
+                MIDL_CONST_ID IID& IID_IDeviceWatcherEvent = __uuidof(IDeviceWatcherEvent);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3803,7 +3803,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceWatcherTriggerDetails = _uuidof(IDeviceWatcherTriggerDetails);
+                MIDL_CONST_ID IID& IID_IDeviceWatcherTriggerDetails = __uuidof(IDeviceWatcherTriggerDetails);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3845,7 +3845,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEnclosureLocation = _uuidof(IEnclosureLocation);
+                MIDL_CONST_ID IID& IID_IEnclosureLocation = __uuidof(IEnclosureLocation);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3884,7 +3884,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEnclosureLocation2 = _uuidof(IEnclosureLocation2);
+                MIDL_CONST_ID IID& IID_IEnclosureLocation2 = __uuidof(IEnclosureLocation2);
             } /* Enumeration */
         } /* Devices */
     } /* Windows */
@@ -3987,8 +3987,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDeviceInformation ** Default Interface **
@@ -4054,8 +4054,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDeviceInformationPairing ** Default Interface **
@@ -10273,8 +10273,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDeviceInformation ** Default Interface **
@@ -10340,8 +10340,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Enumeration.IDeviceInformationPairingStatics interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Enumeration.IDeviceInformationPairing ** Default Interface **

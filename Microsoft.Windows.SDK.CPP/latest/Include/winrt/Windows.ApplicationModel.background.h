@@ -4067,7 +4067,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskCanceledEventHandler = _uuidof(IBackgroundTaskCanceledEventHandler);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskCanceledEventHandler = __uuidof(IBackgroundTaskCanceledEventHandler);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4101,7 +4101,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskCompletedEventHandler = _uuidof(IBackgroundTaskCompletedEventHandler);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskCompletedEventHandler = __uuidof(IBackgroundTaskCompletedEventHandler);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4135,7 +4135,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskProgressEventHandler = _uuidof(IBackgroundTaskProgressEventHandler);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskProgressEventHandler = __uuidof(IBackgroundTaskProgressEventHandler);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4183,7 +4183,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorTrigger = _uuidof(IActivitySensorTrigger);
+                MIDL_CONST_ID IID& IID_IActivitySensorTrigger = __uuidof(IActivitySensorTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4220,7 +4220,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IActivitySensorTriggerFactory = _uuidof(IActivitySensorTriggerFactory);
+                MIDL_CONST_ID IID& IID_IActivitySensorTriggerFactory = __uuidof(IActivitySensorTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4259,7 +4259,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAlarmApplicationManagerStatics = _uuidof(IAlarmApplicationManagerStatics);
+                MIDL_CONST_ID IID& IID_IAlarmApplicationManagerStatics = __uuidof(IAlarmApplicationManagerStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4301,7 +4301,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppBroadcastTrigger = _uuidof(IAppBroadcastTrigger);
+                MIDL_CONST_ID IID& IID_IAppBroadcastTrigger = __uuidof(IAppBroadcastTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4338,7 +4338,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppBroadcastTriggerFactory = _uuidof(IAppBroadcastTriggerFactory);
+                MIDL_CONST_ID IID& IID_IAppBroadcastTriggerFactory = __uuidof(IAppBroadcastTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4407,7 +4407,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppBroadcastTriggerProviderInfo = _uuidof(IAppBroadcastTriggerProviderInfo);
+                MIDL_CONST_ID IID& IID_IAppBroadcastTriggerProviderInfo = __uuidof(IAppBroadcastTriggerProviderInfo);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4450,7 +4450,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IApplicationTrigger = _uuidof(IApplicationTrigger);
+                MIDL_CONST_ID IID& IID_IApplicationTrigger = __uuidof(IApplicationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4486,7 +4486,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IApplicationTriggerDetails = _uuidof(IApplicationTriggerDetails);
+                MIDL_CONST_ID IID& IID_IApplicationTriggerDetails = __uuidof(IApplicationTriggerDetails);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4522,7 +4522,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppointmentStoreNotificationTrigger = _uuidof(IAppointmentStoreNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IAppointmentStoreNotificationTrigger = __uuidof(IAppointmentStoreNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4553,7 +4553,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundCondition = _uuidof(IBackgroundCondition);
+                MIDL_CONST_ID IID& IID_IBackgroundCondition = __uuidof(IBackgroundCondition);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4604,7 +4604,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics = _uuidof(IBackgroundExecutionManagerStatics);
+                MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics = __uuidof(IBackgroundExecutionManagerStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4642,7 +4642,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics2 = _uuidof(IBackgroundExecutionManagerStatics2);
+                MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics2 = __uuidof(IBackgroundExecutionManagerStatics2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4687,7 +4687,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics3 = _uuidof(IBackgroundExecutionManagerStatics3);
+                MIDL_CONST_ID IID& IID_IBackgroundExecutionManagerStatics3 = __uuidof(IBackgroundExecutionManagerStatics3);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4721,7 +4721,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTask = _uuidof(IBackgroundTask);
+                MIDL_CONST_ID IID& IID_IBackgroundTask = __uuidof(IBackgroundTask);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4775,7 +4775,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder = _uuidof(IBackgroundTaskBuilder);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder = __uuidof(IBackgroundTaskBuilder);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4814,7 +4814,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder2 = _uuidof(IBackgroundTaskBuilder2);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder2 = __uuidof(IBackgroundTaskBuilder2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4853,7 +4853,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder3 = _uuidof(IBackgroundTaskBuilder3);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder3 = __uuidof(IBackgroundTaskBuilder3);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4892,7 +4892,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder4 = _uuidof(IBackgroundTaskBuilder4);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder4 = __uuidof(IBackgroundTaskBuilder4);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4928,7 +4928,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder5 = _uuidof(IBackgroundTaskBuilder5);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskBuilder5 = __uuidof(IBackgroundTaskBuilder5);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4965,7 +4965,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE CheckResult(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskCompletedEventArgs = _uuidof(IBackgroundTaskCompletedEventArgs);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskCompletedEventArgs = __uuidof(IBackgroundTaskCompletedEventArgs);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -4999,7 +4999,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskDeferral = _uuidof(IBackgroundTaskDeferral);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskDeferral = __uuidof(IBackgroundTaskDeferral);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5058,7 +5058,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskInstance = _uuidof(IBackgroundTaskInstance);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskInstance = __uuidof(IBackgroundTaskInstance);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5096,7 +5096,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskInstance2 = _uuidof(IBackgroundTaskInstance2);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskInstance2 = __uuidof(IBackgroundTaskInstance2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5133,7 +5133,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskInstance4 = _uuidof(IBackgroundTaskInstance4);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskInstance4 = __uuidof(IBackgroundTaskInstance4);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5172,7 +5172,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskProgressEventArgs = _uuidof(IBackgroundTaskProgressEventArgs);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskProgressEventArgs = __uuidof(IBackgroundTaskProgressEventArgs);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5226,7 +5226,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration = _uuidof(IBackgroundTaskRegistration);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration = __uuidof(IBackgroundTaskRegistration);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5263,7 +5263,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration2 = _uuidof(IBackgroundTaskRegistration2);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration2 = __uuidof(IBackgroundTaskRegistration2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5300,7 +5300,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration3 = _uuidof(IBackgroundTaskRegistration3);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistration3 = __uuidof(IBackgroundTaskRegistration3);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5349,7 +5349,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationGroup = _uuidof(IBackgroundTaskRegistrationGroup);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationGroup = __uuidof(IBackgroundTaskRegistrationGroup);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5391,7 +5391,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationGroupFactory = _uuidof(IBackgroundTaskRegistrationGroupFactory);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationGroupFactory = __uuidof(IBackgroundTaskRegistrationGroupFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5427,7 +5427,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationStatics = _uuidof(IBackgroundTaskRegistrationStatics);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationStatics = __uuidof(IBackgroundTaskRegistrationStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5467,7 +5467,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationStatics2 = _uuidof(IBackgroundTaskRegistrationStatics2);
+                MIDL_CONST_ID IID& IID_IBackgroundTaskRegistrationStatics2 = __uuidof(IBackgroundTaskRegistrationStatics2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5498,7 +5498,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundTrigger = _uuidof(IBackgroundTrigger);
+                MIDL_CONST_ID IID& IID_IBackgroundTrigger = __uuidof(IBackgroundTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5534,7 +5534,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundWorkCostStatics = _uuidof(IBackgroundWorkCostStatics);
+                MIDL_CONST_ID IID& IID_IBackgroundWorkCostStatics = __uuidof(IBackgroundWorkCostStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5573,7 +5573,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementPublisherTrigger = _uuidof(IBluetoothLEAdvertisementPublisherTrigger);
+                MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementPublisherTrigger = __uuidof(IBluetoothLEAdvertisementPublisherTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5630,7 +5630,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementPublisherTrigger2 = _uuidof(IBluetoothLEAdvertisementPublisherTrigger2);
+                MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementPublisherTrigger2 = __uuidof(IBluetoothLEAdvertisementPublisherTrigger2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5690,7 +5690,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementWatcherTrigger = _uuidof(IBluetoothLEAdvertisementWatcherTrigger);
+                MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementWatcherTrigger = __uuidof(IBluetoothLEAdvertisementWatcherTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5729,7 +5729,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementWatcherTrigger2 = _uuidof(IBluetoothLEAdvertisementWatcherTrigger2);
+                MIDL_CONST_ID IID& IID_IBluetoothLEAdvertisementWatcherTrigger2 = __uuidof(IBluetoothLEAdvertisementWatcherTrigger2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5765,7 +5765,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICachedFileUpdaterTrigger = _uuidof(ICachedFileUpdaterTrigger);
+                MIDL_CONST_ID IID& IID_ICachedFileUpdaterTrigger = __uuidof(ICachedFileUpdaterTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5807,7 +5807,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICachedFileUpdaterTriggerDetails = _uuidof(ICachedFileUpdaterTriggerDetails);
+                MIDL_CONST_ID IID& IID_ICachedFileUpdaterTriggerDetails = __uuidof(ICachedFileUpdaterTriggerDetails);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5843,7 +5843,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IChatMessageNotificationTrigger = _uuidof(IChatMessageNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IChatMessageNotificationTrigger = __uuidof(IChatMessageNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5879,7 +5879,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IChatMessageReceivedNotificationTrigger = _uuidof(IChatMessageReceivedNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IChatMessageReceivedNotificationTrigger = __uuidof(IChatMessageReceivedNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5915,7 +5915,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICommunicationBlockingAppSetAsActiveTrigger = _uuidof(ICommunicationBlockingAppSetAsActiveTrigger);
+                MIDL_CONST_ID IID& IID_ICommunicationBlockingAppSetAsActiveTrigger = __uuidof(ICommunicationBlockingAppSetAsActiveTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5951,7 +5951,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContactStoreNotificationTrigger = _uuidof(IContactStoreNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IContactStoreNotificationTrigger = __uuidof(IContactStoreNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -5990,7 +5990,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContentPrefetchTrigger = _uuidof(IContentPrefetchTrigger);
+                MIDL_CONST_ID IID& IID_IContentPrefetchTrigger = __uuidof(IContentPrefetchTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6027,7 +6027,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContentPrefetchTriggerFactory = _uuidof(IContentPrefetchTriggerFactory);
+                MIDL_CONST_ID IID& IID_IContentPrefetchTriggerFactory = __uuidof(IContentPrefetchTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6066,7 +6066,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICustomSystemEventTrigger = _uuidof(ICustomSystemEventTrigger);
+                MIDL_CONST_ID IID& IID_ICustomSystemEventTrigger = __uuidof(ICustomSystemEventTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6104,7 +6104,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICustomSystemEventTriggerFactory = _uuidof(ICustomSystemEventTriggerFactory);
+                MIDL_CONST_ID IID& IID_ICustomSystemEventTriggerFactory = __uuidof(ICustomSystemEventTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6152,7 +6152,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTrigger = _uuidof(IDeviceConnectionChangeTrigger);
+                MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTrigger = __uuidof(IDeviceConnectionChangeTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6189,7 +6189,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTriggerStatics = _uuidof(IDeviceConnectionChangeTriggerStatics);
+                MIDL_CONST_ID IID& IID_IDeviceConnectionChangeTriggerStatics = __uuidof(IDeviceConnectionChangeTriggerStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6240,7 +6240,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceManufacturerNotificationTrigger = _uuidof(IDeviceManufacturerNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IDeviceManufacturerNotificationTrigger = __uuidof(IDeviceManufacturerNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6284,7 +6284,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceManufacturerNotificationTriggerFactory = _uuidof(IDeviceManufacturerNotificationTriggerFactory);
+                MIDL_CONST_ID IID& IID_IDeviceManufacturerNotificationTriggerFactory = __uuidof(IDeviceManufacturerNotificationTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6331,7 +6331,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceServicingTrigger = _uuidof(IDeviceServicingTrigger);
+                MIDL_CONST_ID IID& IID_IDeviceServicingTrigger = __uuidof(IDeviceServicingTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6376,7 +6376,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceUseTrigger = _uuidof(IDeviceUseTrigger);
+                MIDL_CONST_ID IID& IID_IDeviceUseTrigger = __uuidof(IDeviceUseTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6412,7 +6412,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeviceWatcherTrigger = _uuidof(IDeviceWatcherTrigger);
+                MIDL_CONST_ID IID& IID_IDeviceWatcherTrigger = __uuidof(IDeviceWatcherTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6448,7 +6448,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEmailStoreNotificationTrigger = _uuidof(IEmailStoreNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IEmailStoreNotificationTrigger = __uuidof(IEmailStoreNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6487,7 +6487,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTrigger = _uuidof(IGattCharacteristicNotificationTrigger);
+                MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTrigger = __uuidof(IGattCharacteristicNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6523,7 +6523,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTrigger2 = _uuidof(IGattCharacteristicNotificationTrigger2);
+                MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTrigger2 = __uuidof(IGattCharacteristicNotificationTrigger2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6560,7 +6560,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTriggerFactory = _uuidof(IGattCharacteristicNotificationTriggerFactory);
+                MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTriggerFactory = __uuidof(IGattCharacteristicNotificationTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6598,7 +6598,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTriggerFactory2 = _uuidof(IGattCharacteristicNotificationTriggerFactory2);
+                MIDL_CONST_ID IID& IID_IGattCharacteristicNotificationTriggerFactory2 = __uuidof(IGattCharacteristicNotificationTriggerFactory2);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6643,7 +6643,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattServiceProviderTrigger = _uuidof(IGattServiceProviderTrigger);
+                MIDL_CONST_ID IID& IID_IGattServiceProviderTrigger = __uuidof(IGattServiceProviderTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6682,7 +6682,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattServiceProviderTriggerResult = _uuidof(IGattServiceProviderTriggerResult);
+                MIDL_CONST_ID IID& IID_IGattServiceProviderTriggerResult = __uuidof(IGattServiceProviderTriggerResult);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6720,7 +6720,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGattServiceProviderTriggerStatics = _uuidof(IGattServiceProviderTriggerStatics);
+                MIDL_CONST_ID IID& IID_IGattServiceProviderTriggerStatics = __uuidof(IGattServiceProviderTriggerStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6762,7 +6762,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGeovisitTrigger = _uuidof(IGeovisitTrigger);
+                MIDL_CONST_ID IID& IID_IGeovisitTrigger = __uuidof(IGeovisitTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6801,7 +6801,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILocationTrigger = _uuidof(ILocationTrigger);
+                MIDL_CONST_ID IID& IID_ILocationTrigger = __uuidof(ILocationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6838,7 +6838,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILocationTriggerFactory = _uuidof(ILocationTriggerFactory);
+                MIDL_CONST_ID IID& IID_ILocationTriggerFactory = __uuidof(ILocationTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6880,7 +6880,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMaintenanceTrigger = _uuidof(IMaintenanceTrigger);
+                MIDL_CONST_ID IID& IID_IMaintenanceTrigger = __uuidof(IMaintenanceTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6918,7 +6918,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMaintenanceTriggerFactory = _uuidof(IMaintenanceTriggerFactory);
+                MIDL_CONST_ID IID& IID_IMaintenanceTriggerFactory = __uuidof(IMaintenanceTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6961,7 +6961,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaProcessingTrigger = _uuidof(IMediaProcessingTrigger);
+                MIDL_CONST_ID IID& IID_IMediaProcessingTrigger = __uuidof(IMediaProcessingTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -6997,7 +6997,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_INetworkOperatorHotspotAuthenticationTrigger = _uuidof(INetworkOperatorHotspotAuthenticationTrigger);
+                MIDL_CONST_ID IID& IID_INetworkOperatorHotspotAuthenticationTrigger = __uuidof(INetworkOperatorHotspotAuthenticationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7036,7 +7036,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_INetworkOperatorNotificationTrigger = _uuidof(INetworkOperatorNotificationTrigger);
+                MIDL_CONST_ID IID& IID_INetworkOperatorNotificationTrigger = __uuidof(INetworkOperatorNotificationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7073,7 +7073,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_INetworkOperatorNotificationTriggerFactory = _uuidof(INetworkOperatorNotificationTriggerFactory);
+                MIDL_CONST_ID IID& IID_INetworkOperatorNotificationTriggerFactory = __uuidof(INetworkOperatorNotificationTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7116,7 +7116,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneTrigger = _uuidof(IPhoneTrigger);
+                MIDL_CONST_ID IID& IID_IPhoneTrigger = __uuidof(IPhoneTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7156,7 +7156,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneTriggerFactory = _uuidof(IPhoneTriggerFactory);
+                MIDL_CONST_ID IID& IID_IPhoneTriggerFactory = __uuidof(IPhoneTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7194,7 +7194,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPushNotificationTriggerFactory = _uuidof(IPushNotificationTriggerFactory);
+                MIDL_CONST_ID IID& IID_IPushNotificationTriggerFactory = __uuidof(IPushNotificationTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7230,7 +7230,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRcsEndUserMessageAvailableTrigger = _uuidof(IRcsEndUserMessageAvailableTrigger);
+                MIDL_CONST_ID IID& IID_IRcsEndUserMessageAvailableTrigger = __uuidof(IRcsEndUserMessageAvailableTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7290,7 +7290,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRfcommConnectionTrigger = _uuidof(IRfcommConnectionTrigger);
+                MIDL_CONST_ID IID& IID_IRfcommConnectionTrigger = __uuidof(IRfcommConnectionTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7329,7 +7329,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISecondaryAuthenticationFactorAuthenticationTrigger = _uuidof(ISecondaryAuthenticationFactorAuthenticationTrigger);
+                MIDL_CONST_ID IID& IID_ISecondaryAuthenticationFactorAuthenticationTrigger = __uuidof(ISecondaryAuthenticationFactorAuthenticationTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7365,7 +7365,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorDataThresholdTrigger = _uuidof(ISensorDataThresholdTrigger);
+                MIDL_CONST_ID IID& IID_ISensorDataThresholdTrigger = __uuidof(ISensorDataThresholdTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7402,7 +7402,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISensorDataThresholdTriggerFactory = _uuidof(ISensorDataThresholdTriggerFactory);
+                MIDL_CONST_ID IID& IID_ISensorDataThresholdTriggerFactory = __uuidof(ISensorDataThresholdTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7441,7 +7441,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISmartCardTrigger = _uuidof(ISmartCardTrigger);
+                MIDL_CONST_ID IID& IID_ISmartCardTrigger = __uuidof(ISmartCardTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7478,7 +7478,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISmartCardTriggerFactory = _uuidof(ISmartCardTriggerFactory);
+                MIDL_CONST_ID IID& IID_ISmartCardTriggerFactory = __uuidof(ISmartCardTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7515,7 +7515,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISmsMessageReceivedTriggerFactory = _uuidof(ISmsMessageReceivedTriggerFactory);
+                MIDL_CONST_ID IID& IID_ISmsMessageReceivedTriggerFactory = __uuidof(ISmsMessageReceivedTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7551,7 +7551,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityTrigger = _uuidof(ISocketActivityTrigger);
+                MIDL_CONST_ID IID& IID_ISocketActivityTrigger = __uuidof(ISocketActivityTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7588,7 +7588,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorageLibraryChangeTrackerTriggerFactory = _uuidof(IStorageLibraryChangeTrackerTriggerFactory);
+                MIDL_CONST_ID IID& IID_IStorageLibraryChangeTrackerTriggerFactory = __uuidof(IStorageLibraryChangeTrackerTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7624,7 +7624,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorageLibraryContentChangedTrigger = _uuidof(IStorageLibraryContentChangedTrigger);
+                MIDL_CONST_ID IID& IID_IStorageLibraryContentChangedTrigger = __uuidof(IStorageLibraryContentChangedTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7665,7 +7665,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorageLibraryContentChangedTriggerStatics = _uuidof(IStorageLibraryContentChangedTriggerStatics);
+                MIDL_CONST_ID IID& IID_IStorageLibraryContentChangedTriggerStatics = __uuidof(IStorageLibraryContentChangedTriggerStatics);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7704,7 +7704,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemCondition = _uuidof(ISystemCondition);
+                MIDL_CONST_ID IID& IID_ISystemCondition = __uuidof(ISystemCondition);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7741,7 +7741,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemConditionFactory = _uuidof(ISystemConditionFactory);
+                MIDL_CONST_ID IID& IID_ISystemConditionFactory = __uuidof(ISystemConditionFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7783,7 +7783,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemTrigger = _uuidof(ISystemTrigger);
+                MIDL_CONST_ID IID& IID_ISystemTrigger = __uuidof(ISystemTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7821,7 +7821,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemTriggerFactory = _uuidof(ISystemTriggerFactory);
+                MIDL_CONST_ID IID& IID_ISystemTriggerFactory = __uuidof(ISystemTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7863,7 +7863,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITimeTrigger = _uuidof(ITimeTrigger);
+                MIDL_CONST_ID IID& IID_ITimeTrigger = __uuidof(ITimeTrigger);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7901,7 +7901,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITimeTriggerFactory = _uuidof(ITimeTriggerFactory);
+                MIDL_CONST_ID IID& IID_ITimeTriggerFactory = __uuidof(ITimeTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7938,7 +7938,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IToastNotificationActionTriggerFactory = _uuidof(IToastNotificationActionTriggerFactory);
+                MIDL_CONST_ID IID& IID_IToastNotificationActionTriggerFactory = __uuidof(IToastNotificationActionTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -7975,7 +7975,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IToastNotificationHistoryChangedTriggerFactory = _uuidof(IToastNotificationHistoryChangedTriggerFactory);
+                MIDL_CONST_ID IID& IID_IToastNotificationHistoryChangedTriggerFactory = __uuidof(IToastNotificationHistoryChangedTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -8012,7 +8012,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUserNotificationChangedTriggerFactory = _uuidof(IUserNotificationChangedTriggerFactory);
+                MIDL_CONST_ID IID& IID_IUserNotificationChangedTriggerFactory = __uuidof(IUserNotificationChangedTriggerFactory);
             } /* Background */
         } /* ApplicationModel */
     } /* Windows */
@@ -8188,8 +8188,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */
@@ -8298,8 +8298,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTaskRegistration ** Default Interface **
@@ -8564,8 +8564,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IContentPrefetchTrigger ** Default Interface **
@@ -9549,8 +9549,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
@@ -9574,8 +9574,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
@@ -20754,8 +20754,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */
@@ -20864,8 +20864,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTaskRegistration ** Default Interface **
@@ -21130,8 +21130,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IContentPrefetchTrigger ** Default Interface **
@@ -22115,8 +22115,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **
@@ -22140,8 +22140,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Background.IBackgroundTrigger ** Default Interface **

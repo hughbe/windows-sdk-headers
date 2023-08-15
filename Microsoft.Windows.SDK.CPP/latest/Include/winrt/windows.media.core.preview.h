@@ -199,7 +199,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISoundLevelBrokerStatics = _uuidof(ISoundLevelBrokerStatics);
+                    MIDL_CONST_ID IID& IID_ISoundLevelBrokerStatics = __uuidof(ISoundLevelBrokerStatics);
                 } /* Preview */
             } /* Core */
         } /* Media */

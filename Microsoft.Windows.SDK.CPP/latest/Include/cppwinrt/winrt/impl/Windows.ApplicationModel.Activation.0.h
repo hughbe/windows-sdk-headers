@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -59,14 +59,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
-    template <typename T> struct __declspec(empty_bases) IReference;
     struct Rect;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IVectorView;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::SpeechRecognition
@@ -83,7 +81,6 @@ WINRT_EXPORT namespace winrt::Windows::Security::Authentication::Web::Provider
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
-    struct IStorageItem;
     struct StorageFile;
     struct StorageFolder;
 }
@@ -104,10 +101,6 @@ WINRT_EXPORT namespace winrt::Windows::System
 {
     struct ProtocolForResultsOperation;
     struct User;
-}
-WINRT_EXPORT namespace winrt::Windows::UI::Notifications
-{
-    struct ShownTileNotification;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement
 {
@@ -1111,9 +1104,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Activation::ActivationKind) Kind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState) PreviousExecutionState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Activation::SplashScreen) SplashScreen() const;
+        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] auto PreviousExecutionState() const;
+        [[nodiscard]] auto SplashScreen() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
     {
@@ -1122,7 +1115,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IActivatedEventArgsWithUser
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
     {
@@ -1131,7 +1124,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IApplicationViewActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) CurrentlyShownApplicationViewId() const;
+        [[nodiscard]] auto CurrentlyShownApplicationViewId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
     {
@@ -1140,7 +1133,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Verb() const;
+        [[nodiscard]] auto Verb() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
     {
@@ -1149,7 +1142,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderAddAppointmentActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation) AddAppointmentOperation() const;
+        [[nodiscard]] auto AddAppointmentOperation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
     {
@@ -1158,7 +1151,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderRemoveAppointmentActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation) RemoveAppointmentOperation() const;
+        [[nodiscard]] auto RemoveAppointmentOperation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
     {
@@ -1167,7 +1160,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderReplaceAppointmentActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation) ReplaceAppointmentOperation() const;
+        [[nodiscard]] auto ReplaceAppointmentOperation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
     {
@@ -1176,9 +1169,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) InstanceStartDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RoamingId() const;
+        [[nodiscard]] auto InstanceStartDate() const;
+        [[nodiscard]] auto LocalId() const;
+        [[nodiscard]] auto RoamingId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
     {
@@ -1187,8 +1180,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IAppointmentsProviderShowTimeFrameActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) TimeToShow() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Duration() const;
+        [[nodiscard]] auto TimeToShow() const;
+        [[nodiscard]] auto Duration() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
     {
@@ -1197,7 +1190,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IBackgroundActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance) TaskInstance() const;
+        [[nodiscard]] auto TaskInstance() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
     {
@@ -1206,7 +1199,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IBarcodeScannerPreviewActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ConnectionId() const;
+        [[nodiscard]] auto ConnectionId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
     {
@@ -1215,7 +1208,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ICachedFileUpdaterActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::CachedFileUpdaterUI) CachedFileUpdaterUI() const;
+        [[nodiscard]] auto CachedFileUpdaterUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
     {
@@ -1224,8 +1217,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ICameraSettingsActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) VideoDeviceController() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) VideoDeviceExtension() const;
+        [[nodiscard]] auto VideoDeviceController() const;
+        [[nodiscard]] auto VideoDeviceExtension() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
     {
@@ -1234,7 +1227,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ICommandLineActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation) Operation() const;
+        [[nodiscard]] auto Operation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
     {
@@ -1243,11 +1236,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ICommandLineActivationOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CurrentDirectoryPath() const;
-        WINRT_IMPL_AUTO(void) ExitCode(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ExitCode() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Arguments() const;
+        [[nodiscard]] auto CurrentDirectoryPath() const;
+        auto ExitCode(int32_t value) const;
+        [[nodiscard]] auto ExitCode() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ICommandLineActivationOperation>
     {
@@ -1256,7 +1249,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Verb() const;
+        [[nodiscard]] auto Verb() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
     {
@@ -1265,9 +1258,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactCallActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceUserId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ServiceId() const;
+        [[nodiscard]] auto ServiceUserId() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
     {
@@ -1276,8 +1269,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactMapActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactAddress) Address() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto Address() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
     {
@@ -1286,9 +1279,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactMessageActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceUserId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ServiceId() const;
+        [[nodiscard]] auto ServiceUserId() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
     {
@@ -1297,8 +1290,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactPanelActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactPanel) ContactPanel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ContactPanel() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
     {
@@ -1307,7 +1300,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactPickerActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI) ContactPickerUI() const;
+        [[nodiscard]] auto ContactPickerUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
     {
@@ -1316,9 +1309,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactPostActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceUserId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ServiceId() const;
+        [[nodiscard]] auto ServiceUserId() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
     {
@@ -1327,9 +1320,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactVideoCallActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceUserId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ServiceId() const;
+        [[nodiscard]] auto ServiceUserId() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
     {
@@ -1338,7 +1331,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContactsProviderActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Verb() const;
+        [[nodiscard]] auto Verb() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
     {
@@ -1347,7 +1340,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IContinuationActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) ContinuationData() const;
+        [[nodiscard]] auto ContinuationData() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
     {
@@ -1356,8 +1349,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IDeviceActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceInformationId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Verb() const;
+        [[nodiscard]] auto DeviceInformationId() const;
+        [[nodiscard]] auto Verb() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
     {
@@ -1366,7 +1359,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IDevicePairingActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceInformation) DeviceInformation() const;
+        [[nodiscard]] auto DeviceInformation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
     {
@@ -1375,7 +1368,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IDialReceiverActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppName() const;
+        [[nodiscard]] auto AppName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
     {
@@ -1384,8 +1377,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>) Files() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Verb() const;
+        [[nodiscard]] auto Files() const;
+        [[nodiscard]] auto Verb() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
     {
@@ -1394,7 +1387,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileActivatedEventArgsWithCallerPackageFamilyName
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CallerPackageFamilyName() const;
+        [[nodiscard]] auto CallerPackageFamilyName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
     {
@@ -1403,7 +1396,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileActivatedEventArgsWithNeighboringFiles
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Search::StorageFileQueryResult) NeighboringFilesQuery() const;
+        [[nodiscard]] auto NeighboringFilesQuery() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
     {
@@ -1412,7 +1405,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileOpenPickerActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI) FileOpenPickerUI() const;
+        [[nodiscard]] auto FileOpenPickerUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
     {
@@ -1421,7 +1414,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileOpenPickerActivatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CallerPackageFamilyName() const;
+        [[nodiscard]] auto CallerPackageFamilyName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
     {
@@ -1430,7 +1423,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileOpenPickerContinuationEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::StorageFile>) Files() const;
+        [[nodiscard]] auto Files() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
     {
@@ -1439,7 +1432,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileSavePickerActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI) FileSavePickerUI() const;
+        [[nodiscard]] auto FileSavePickerUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
     {
@@ -1448,8 +1441,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileSavePickerActivatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CallerPackageFamilyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnterpriseId() const;
+        [[nodiscard]] auto CallerPackageFamilyName() const;
+        [[nodiscard]] auto EnterpriseId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
     {
@@ -1458,7 +1451,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFileSavePickerContinuationEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) File() const;
+        [[nodiscard]] auto File() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
     {
@@ -1467,7 +1460,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IFolderPickerContinuationEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) Folder() const;
+        [[nodiscard]] auto Folder() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
     {
@@ -1476,8 +1469,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ILaunchActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Arguments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TileId() const;
+        [[nodiscard]] auto Arguments() const;
+        [[nodiscard]] auto TileId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
     {
@@ -1486,7 +1479,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ILaunchActivatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Activation::TileActivatedInfo) TileActivatedInfo() const;
+        [[nodiscard]] auto TileActivatedInfo() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
     {
@@ -1495,7 +1488,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ILockScreenActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Info() const;
+        [[nodiscard]] auto Info() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
     {
@@ -1504,7 +1497,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ILockScreenCallActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::LockScreenCallUI) CallUI() const;
+        [[nodiscard]] auto CallUI() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
     {
@@ -1513,7 +1506,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IPhoneCallActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
+        [[nodiscard]] auto LineId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
     {
@@ -1522,7 +1515,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IPickerReturnedActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PickerOperationId() const;
+        [[nodiscard]] auto PickerOperationId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
     {
@@ -1531,7 +1524,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IPrelaunchActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) PrelaunchActivated() const;
+        [[nodiscard]] auto PrelaunchActivated() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
     {
@@ -1540,7 +1533,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IPrint3DWorkflowActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow) Workflow() const;
+        [[nodiscard]] auto Workflow() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
     {
@@ -1549,7 +1542,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IPrintTaskSettingsActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration) Configuration() const;
+        [[nodiscard]] auto Configuration() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
     {
@@ -1558,7 +1551,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IProtocolActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
+        [[nodiscard]] auto Uri() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
     {
@@ -1567,8 +1560,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CallerPackageFamilyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) Data() const;
+        [[nodiscard]] auto CallerPackageFamilyName() const;
+        [[nodiscard]] auto Data() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
     {
@@ -1577,7 +1570,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IProtocolForResultsActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::ProtocolForResultsOperation) ProtocolForResultsOperation() const;
+        [[nodiscard]] auto ProtocolForResultsOperation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
     {
@@ -1586,7 +1579,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IRestrictedLaunchActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) SharedContext() const;
+        [[nodiscard]] auto SharedContext() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
     {
@@ -1595,8 +1588,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ISearchActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) QueryText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
+        [[nodiscard]] auto QueryText() const;
+        [[nodiscard]] auto Language() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
     {
@@ -1605,7 +1598,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ISearchActivatedEventArgsWithLinguisticDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails) LinguisticDetails() const;
+        [[nodiscard]] auto LinguisticDetails() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
     {
@@ -1614,7 +1607,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IShareTargetActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation) ShareOperation() const;
+        [[nodiscard]] auto ShareOperation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
     {
@@ -1623,11 +1616,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ISplashScreen
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ImageLocation() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Activation::SplashScreen, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto ImageLocation() const;
+        auto Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Activation::SplashScreen, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Dismissed_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Activation::ISplashScreen, &impl::abi_t<winrt::Windows::ApplicationModel::Activation::ISplashScreen>::remove_Dismissed>;
         [[nodiscard]] Dismissed_revoker Dismissed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Activation::SplashScreen, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Dismissed(winrt::event_token const& cookie) const noexcept;
+        auto Dismissed(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ISplashScreen>
     {
@@ -1636,7 +1629,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IStartupTaskActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TaskId() const;
+        [[nodiscard]] auto TaskId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
     {
@@ -1645,7 +1638,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_ITileActivatedInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Notifications::ShownTileNotification>) RecentlyShownNotifications() const;
+        [[nodiscard]] auto RecentlyShownNotifications() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::ITileActivatedInfo>
     {
@@ -1654,8 +1647,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IToastNotificationActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Argument() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) UserInput() const;
+        [[nodiscard]] auto Argument() const;
+        [[nodiscard]] auto UserInput() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
     {
@@ -1664,7 +1657,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IUserDataAccountProviderActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation) Operation() const;
+        [[nodiscard]] auto Operation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
     {
@@ -1673,7 +1666,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IViewSwitcherProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ActivationViewSwitcher) ViewSwitcher() const;
+        [[nodiscard]] auto ViewSwitcher() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
     {
@@ -1682,7 +1675,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IVoiceCommandActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult) Result() const;
+        [[nodiscard]] auto Result() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
     {
@@ -1691,9 +1684,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IWalletActionActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ItemId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletActionKind) ActionKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ActionId() const;
+        [[nodiscard]] auto ItemId() const;
+        [[nodiscard]] auto ActionKind() const;
+        [[nodiscard]] auto ActionId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
     {
@@ -1702,7 +1695,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IWebAccountProviderActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation) Operation() const;
+        [[nodiscard]] auto Operation() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
     {
@@ -1711,7 +1704,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Activation_IWebAuthenticationBrokerContinuationEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Authentication::Web::WebAuthenticationResult) WebAuthenticationResult() const;
+        [[nodiscard]] auto WebAuthenticationResult() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
     {

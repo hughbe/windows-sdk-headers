@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -60,7 +60,7 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
         StoreConsumableResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStoreConsumableResult(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) StoreContext : winrt::Windows::Services::Store::IStoreContext,
-        impl::require<StoreContext, winrt::Windows::Services::Store::IStoreContext2, winrt::Windows::Services::Store::IStoreContext3, winrt::Windows::Services::Store::IStoreContext4, winrt::Windows::Services::Store::IStoreContext5>
+        impl::require<StoreContext, winrt::Windows::Services::Store::IStoreContext2, winrt::Windows::Services::Store::IStoreContext3, winrt::Windows::Services::Store::IStoreContext4>
     {
         StoreContext(std::nullptr_t) noexcept {}
         StoreContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStoreContext(ptr, take_ownership_from_abi) {}
@@ -103,8 +103,7 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
         StorePackageUpdateResult(std::nullptr_t) noexcept {}
         StorePackageUpdateResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStorePackageUpdateResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorePrice : winrt::Windows::Services::Store::IStorePrice,
-        impl::require<StorePrice, winrt::Windows::Services::Store::IStorePrice2>
+    struct __declspec(empty_bases) StorePrice : winrt::Windows::Services::Store::IStorePrice
     {
         StorePrice(std::nullptr_t) noexcept {}
         StorePrice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStorePrice(ptr, take_ownership_from_abi) {}

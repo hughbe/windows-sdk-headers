@@ -227,7 +227,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManager = _uuidof(IInkWorkspaceHostedAppManager);
+                    MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManager = __uuidof(IInkWorkspaceHostedAppManager);
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
@@ -265,7 +265,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManagerStatics = _uuidof(IInkWorkspaceHostedAppManagerStatics);
+                    MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManagerStatics = __uuidof(IInkWorkspaceHostedAppManagerStatics);
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */

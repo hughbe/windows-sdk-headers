@@ -2640,7 +2640,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAboutData = _uuidof(IAllJoynAboutData);
+                MIDL_CONST_ID IID& IID_IAllJoynAboutData = __uuidof(IAllJoynAboutData);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -2772,7 +2772,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAboutDataView = _uuidof(IAllJoynAboutDataView);
+                MIDL_CONST_ID IID& IID_IAllJoynAboutDataView = __uuidof(IAllJoynAboutDataView);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -2827,7 +2827,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAboutDataViewStatics = _uuidof(IAllJoynAboutDataViewStatics);
+                MIDL_CONST_ID IID& IID_IAllJoynAboutDataViewStatics = __uuidof(IAllJoynAboutDataViewStatics);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -2865,7 +2865,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Accept(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoiner = _uuidof(IAllJoynAcceptSessionJoiner);
+                MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoiner = __uuidof(IAllJoynAcceptSessionJoiner);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -2935,7 +2935,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Accept(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoinerEventArgs = _uuidof(IAllJoynAcceptSessionJoinerEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoinerEventArgs = __uuidof(IAllJoynAcceptSessionJoinerEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -2982,7 +2982,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoinerEventArgsFactory = _uuidof(IAllJoynAcceptSessionJoinerEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynAcceptSessionJoinerEventArgsFactory = __uuidof(IAllJoynAcceptSessionJoinerEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3036,7 +3036,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynAuthenticationCompleteEventArgs = _uuidof(IAllJoynAuthenticationCompleteEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynAuthenticationCompleteEventArgs = __uuidof(IAllJoynAuthenticationCompleteEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3169,7 +3169,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusAttachment = _uuidof(IAllJoynBusAttachment);
+                MIDL_CONST_ID IID& IID_IAllJoynBusAttachment = __uuidof(IAllJoynBusAttachment);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3246,7 +3246,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusAttachment2 = _uuidof(IAllJoynBusAttachment2);
+                MIDL_CONST_ID IID& IID_IAllJoynBusAttachment2 = __uuidof(IAllJoynBusAttachment2);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3289,7 +3289,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentFactory = _uuidof(IAllJoynBusAttachmentFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentFactory = __uuidof(IAllJoynBusAttachmentFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3337,7 +3337,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentStateChangedEventArgs = _uuidof(IAllJoynBusAttachmentStateChangedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentStateChangedEventArgs = __uuidof(IAllJoynBusAttachmentStateChangedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3386,7 +3386,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentStatics = _uuidof(IAllJoynBusAttachmentStatics);
+                MIDL_CONST_ID IID& IID_IAllJoynBusAttachmentStatics = __uuidof(IAllJoynBusAttachmentStatics);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3461,7 +3461,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusObject = _uuidof(IAllJoynBusObject);
+                MIDL_CONST_ID IID& IID_IAllJoynBusObject = __uuidof(IAllJoynBusObject);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3512,7 +3512,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusObjectFactory = _uuidof(IAllJoynBusObjectFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynBusObjectFactory = __uuidof(IAllJoynBusObjectFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3554,7 +3554,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusObjectStoppedEventArgs = _uuidof(IAllJoynBusObjectStoppedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynBusObjectStoppedEventArgs = __uuidof(IAllJoynBusObjectStoppedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3597,7 +3597,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynBusObjectStoppedEventArgsFactory = _uuidof(IAllJoynBusObjectStoppedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynBusObjectStoppedEventArgsFactory = __uuidof(IAllJoynBusObjectStoppedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3675,7 +3675,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynCredentials = _uuidof(IAllJoynCredentials);
+                MIDL_CONST_ID IID& IID_IAllJoynCredentials = __uuidof(IAllJoynCredentials);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3741,7 +3741,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynCredentialsRequestedEventArgs = _uuidof(IAllJoynCredentialsRequestedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynCredentialsRequestedEventArgs = __uuidof(IAllJoynCredentialsRequestedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3823,7 +3823,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynCredentialsVerificationRequestedEventArgs = _uuidof(IAllJoynCredentialsVerificationRequestedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynCredentialsVerificationRequestedEventArgs = __uuidof(IAllJoynCredentialsVerificationRequestedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3865,7 +3865,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynMessageInfo = _uuidof(IAllJoynMessageInfo);
+                MIDL_CONST_ID IID& IID_IAllJoynMessageInfo = __uuidof(IAllJoynMessageInfo);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3908,7 +3908,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynMessageInfoFactory = _uuidof(IAllJoynMessageInfoFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynMessageInfoFactory = __uuidof(IAllJoynMessageInfoFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3948,7 +3948,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynProducer = _uuidof(IAllJoynProducer);
+                MIDL_CONST_ID IID& IID_IAllJoynProducer = __uuidof(IAllJoynProducer);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -3990,7 +3990,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynProducerStoppedEventArgs = _uuidof(IAllJoynProducerStoppedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynProducerStoppedEventArgs = __uuidof(IAllJoynProducerStoppedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4033,7 +4033,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynProducerStoppedEventArgsFactory = _uuidof(IAllJoynProducerStoppedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynProducerStoppedEventArgsFactory = __uuidof(IAllJoynProducerStoppedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4087,7 +4087,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynServiceInfo = _uuidof(IAllJoynServiceInfo);
+                MIDL_CONST_ID IID& IID_IAllJoynServiceInfo = __uuidof(IAllJoynServiceInfo);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4132,7 +4132,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynServiceInfoFactory = _uuidof(IAllJoynServiceInfoFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynServiceInfoFactory = __uuidof(IAllJoynServiceInfoFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4174,7 +4174,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynServiceInfoRemovedEventArgs = _uuidof(IAllJoynServiceInfoRemovedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynServiceInfoRemovedEventArgs = __uuidof(IAllJoynServiceInfoRemovedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4217,7 +4217,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynServiceInfoRemovedEventArgsFactory = _uuidof(IAllJoynServiceInfoRemovedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynServiceInfoRemovedEventArgsFactory = __uuidof(IAllJoynServiceInfoRemovedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4260,7 +4260,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynServiceInfoStatics = _uuidof(IAllJoynServiceInfoStatics);
+                MIDL_CONST_ID IID& IID_IAllJoynServiceInfoStatics = __uuidof(IAllJoynServiceInfoStatics);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4354,7 +4354,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSession = _uuidof(IAllJoynSession);
+                MIDL_CONST_ID IID& IID_IAllJoynSession = __uuidof(IAllJoynSession);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4396,7 +4396,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionJoinedEventArgs = _uuidof(IAllJoynSessionJoinedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionJoinedEventArgs = __uuidof(IAllJoynSessionJoinedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4439,7 +4439,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionJoinedEventArgsFactory = _uuidof(IAllJoynSessionJoinedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionJoinedEventArgsFactory = __uuidof(IAllJoynSessionJoinedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4481,7 +4481,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionLostEventArgs = _uuidof(IAllJoynSessionLostEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionLostEventArgs = __uuidof(IAllJoynSessionLostEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4524,7 +4524,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionLostEventArgsFactory = _uuidof(IAllJoynSessionLostEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionLostEventArgsFactory = __uuidof(IAllJoynSessionLostEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4566,7 +4566,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionMemberAddedEventArgs = _uuidof(IAllJoynSessionMemberAddedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionMemberAddedEventArgs = __uuidof(IAllJoynSessionMemberAddedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4609,7 +4609,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionMemberAddedEventArgsFactory = _uuidof(IAllJoynSessionMemberAddedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionMemberAddedEventArgsFactory = __uuidof(IAllJoynSessionMemberAddedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4651,7 +4651,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionMemberRemovedEventArgs = _uuidof(IAllJoynSessionMemberRemovedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionMemberRemovedEventArgs = __uuidof(IAllJoynSessionMemberRemovedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4694,7 +4694,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionMemberRemovedEventArgsFactory = _uuidof(IAllJoynSessionMemberRemovedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionMemberRemovedEventArgsFactory = __uuidof(IAllJoynSessionMemberRemovedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4745,7 +4745,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynSessionStatics = _uuidof(IAllJoynSessionStatics);
+                MIDL_CONST_ID IID& IID_IAllJoynSessionStatics = __uuidof(IAllJoynSessionStatics);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4889,7 +4889,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynStatusStatics = _uuidof(IAllJoynStatusStatics);
+                MIDL_CONST_ID IID& IID_IAllJoynStatusStatics = __uuidof(IAllJoynStatusStatics);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4931,7 +4931,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynWatcherStoppedEventArgs = _uuidof(IAllJoynWatcherStoppedEventArgs);
+                MIDL_CONST_ID IID& IID_IAllJoynWatcherStoppedEventArgs = __uuidof(IAllJoynWatcherStoppedEventArgs);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -4974,7 +4974,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAllJoynWatcherStoppedEventArgsFactory = _uuidof(IAllJoynWatcherStoppedEventArgsFactory);
+                MIDL_CONST_ID IID& IID_IAllJoynWatcherStoppedEventArgsFactory = __uuidof(IAllJoynWatcherStoppedEventArgsFactory);
             } /* AllJoyn */
         } /* Devices */
     } /* Windows */
@@ -5085,8 +5085,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.AllJoyn.IAllJoynBusAttachmentStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5137,8 +5137,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusObjectFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusObjectFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.AllJoyn.IAllJoynBusObject ** Default Interface **
@@ -13616,8 +13616,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.AllJoyn.IAllJoynBusAttachmentStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -13668,8 +13668,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusObjectFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Devices.AllJoyn.IAllJoynBusObjectFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.AllJoyn.IAllJoynBusObject ** Default Interface **

@@ -581,7 +581,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDateTimeFormatter = _uuidof(IDateTimeFormatter);
+                MIDL_CONST_ID IID& IID_IDateTimeFormatter = __uuidof(IDateTimeFormatter);
             } /* DateTimeFormatting */
         } /* Globalization */
     } /* Windows */
@@ -619,7 +619,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDateTimeFormatter2 = _uuidof(IDateTimeFormatter2);
+                MIDL_CONST_ID IID& IID_IDateTimeFormatter2 = __uuidof(IDateTimeFormatter2);
             } /* DateTimeFormatting */
         } /* Globalization */
     } /* Windows */
@@ -707,7 +707,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDateTimeFormatterFactory = _uuidof(IDateTimeFormatterFactory);
+                MIDL_CONST_ID IID& IID_IDateTimeFormatterFactory = __uuidof(IDateTimeFormatterFactory);
             } /* DateTimeFormatting */
         } /* Globalization */
     } /* Windows */
@@ -752,7 +752,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDateTimeFormatterStatics = _uuidof(IDateTimeFormatterStatics);
+                MIDL_CONST_ID IID& IID_IDateTimeFormatterStatics = __uuidof(IDateTimeFormatterStatics);
             } /* DateTimeFormatting */
         } /* Globalization */
     } /* Windows */

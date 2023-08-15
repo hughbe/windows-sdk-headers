@@ -730,7 +730,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDirect3D11CaptureFrame = _uuidof(IDirect3D11CaptureFrame);
+                MIDL_CONST_ID IID& IID_IDirect3D11CaptureFrame = __uuidof(IDirect3D11CaptureFrame);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -786,7 +786,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePool = _uuidof(IDirect3D11CaptureFramePool);
+                MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePool = __uuidof(IDirect3D11CaptureFramePool);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -826,7 +826,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePoolStatics = _uuidof(IDirect3D11CaptureFramePoolStatics);
+                MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePoolStatics = __uuidof(IDirect3D11CaptureFramePoolStatics);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -866,7 +866,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePoolStatics2 = _uuidof(IDirect3D11CaptureFramePoolStatics2);
+                MIDL_CONST_ID IID& IID_IDirect3D11CaptureFramePoolStatics2 = __uuidof(IDirect3D11CaptureFramePoolStatics2);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -903,7 +903,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureAccessStatics = _uuidof(IGraphicsCaptureAccessStatics);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureAccessStatics = __uuidof(IGraphicsCaptureAccessStatics);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -949,7 +949,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureItem = _uuidof(IGraphicsCaptureItem);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureItem = __uuidof(IGraphicsCaptureItem);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -986,7 +986,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureItemStatics = _uuidof(IGraphicsCaptureItemStatics);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureItemStatics = __uuidof(IGraphicsCaptureItemStatics);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1027,7 +1027,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureItemStatics2 = _uuidof(IGraphicsCaptureItemStatics2);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureItemStatics2 = __uuidof(IGraphicsCaptureItemStatics2);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1063,7 +1063,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCapturePicker = _uuidof(IGraphicsCapturePicker);
+                MIDL_CONST_ID IID& IID_IGraphicsCapturePicker = __uuidof(IGraphicsCapturePicker);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1097,7 +1097,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE StartCapture(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureSession = _uuidof(IGraphicsCaptureSession);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureSession = __uuidof(IGraphicsCaptureSession);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1136,7 +1136,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureSession2 = _uuidof(IGraphicsCaptureSession2);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureSession2 = __uuidof(IGraphicsCaptureSession2);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1175,7 +1175,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureSession3 = _uuidof(IGraphicsCaptureSession3);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureSession3 = __uuidof(IGraphicsCaptureSession3);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1211,7 +1211,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IGraphicsCaptureSessionStatics = _uuidof(IGraphicsCaptureSessionStatics);
+                MIDL_CONST_ID IID& IID_IGraphicsCaptureSessionStatics = __uuidof(IGraphicsCaptureSessionStatics);
             } /* Capture */
         } /* Graphics */
     } /* Windows */
@@ -1248,8 +1248,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Capture.IDirect3D11CaptureFramePool ** Default Interface **
@@ -2861,8 +2861,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Capture.IDirect3D11CaptureFramePool ** Default Interface **

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -272,16 +272,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::IppPrintDevice) Printer() const;
-        WINRT_IMPL_AUTO(winrt::event_token) PrintTicketValidationRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs> const& handler) const;
+        [[nodiscard]] auto Printer() const;
+        auto PrintTicketValidationRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs> const& handler) const;
         using PrintTicketValidationRequested_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession, &impl::abi_t<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession>::remove_PrintTicketValidationRequested>;
         [[nodiscard]] PrintTicketValidationRequested_revoker PrintTicketValidationRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) PrintTicketValidationRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) PrintDeviceCapabilitiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> const& handler) const;
+        auto PrintTicketValidationRequested(winrt::event_token const& token) const noexcept;
+        auto PrintDeviceCapabilitiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> const& handler) const;
         using PrintDeviceCapabilitiesChanged_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession, &impl::abi_t<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession>::remove_PrintDeviceCapabilitiesChanged>;
         [[nodiscard]] PrintDeviceCapabilitiesChanged_revoker PrintDeviceCapabilitiesChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) PrintDeviceCapabilitiesChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) Start() const;
+        auto PrintDeviceCapabilitiesChanged(winrt::event_token const& token) const noexcept;
+        auto Start() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession>
     {
@@ -290,10 +290,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession2
     {
-        WINRT_IMPL_AUTO(winrt::event_token) PrinterSelected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs> const& handler) const;
+        auto PrinterSelected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs> const& handler) const;
         using PrinterSelected_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2, &impl::abi_t<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2>::remove_PrinterSelected>;
         [[nodiscard]] PrinterSelected_revoker PrinterSelected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) PrinterSelected(winrt::event_token const& token) const noexcept;
+        auto PrinterSelected(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2>
     {
@@ -302,7 +302,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession) Session() const;
+        [[nodiscard]] auto Session() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails>
     {
@@ -311,9 +311,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetCurrentPrintDeviceCapabilities() const;
-        WINRT_IMPL_AUTO(void) UpdatePrintDeviceCapabilities(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdc) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        auto GetCurrentPrintDeviceCapabilities() const;
+        auto UpdatePrintDeviceCapabilities(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdc) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs>
     {
@@ -322,11 +322,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2
     {
-        WINRT_IMPL_AUTO(void) SetSupportedPdlPassthroughContentTypes(param::iterable<hstring> const& supportedPdlContentTypes) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ResourceLanguage() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) GetCurrentPrintDeviceResources() const;
-        WINRT_IMPL_AUTO(void) UpdatePrintDeviceResources(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdr) const;
-        WINRT_IMPL_AUTO(void) SetPrintDeviceCapabilitiesUpdatePolicy(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const& updatePolicy) const;
+        auto SetSupportedPdlPassthroughContentTypes(param::iterable<hstring> const& supportedPdlContentTypes) const;
+        [[nodiscard]] auto ResourceLanguage() const;
+        auto GetCurrentPrintDeviceResources() const;
+        auto UpdatePrintDeviceResources(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdr) const;
+        auto SetPrintDeviceCapabilitiesUpdatePolicy(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const& updatePolicy) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2>
     {
@@ -343,8 +343,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy) CreatePeriodicRefresh(winrt::Windows::Foundation::TimeSpan const& updatePeriod) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy) CreatePrintJobRefresh(uint32_t numberOfJobs) const;
+        auto CreatePeriodicRefresh(winrt::Windows::Foundation::TimeSpan const& updatePeriod) const;
+        auto CreatePrintJobRefresh(uint32_t numberOfJobs) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics>
     {
@@ -353,10 +353,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LocalName() const;
-        WINRT_IMPL_AUTO(void) LocalName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NamespaceUri() const;
-        WINRT_IMPL_AUTO(void) NamespaceUri(param::hstring const& value) const;
+        [[nodiscard]] auto LocalName() const;
+        auto LocalName(param::hstring const& value) const;
+        [[nodiscard]] auto NamespaceUri() const;
+        auto NamespaceUri(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement>
     {
@@ -365,9 +365,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) PrintTicket() const;
-        WINRT_IMPL_AUTO(void) SetPrintTicketValidationStatus(winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus const& status) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto PrintTicket() const;
+        auto SetPrintTicketValidationStatus(winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus const& status) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketValidationRequestedEventArgs>
     {
@@ -376,14 +376,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) SourceAppInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) PrintTicket() const;
-        WINRT_IMPL_AUTO(void) PrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& value) const;
-        WINRT_IMPL_AUTO(void) SetAdditionalFeatures(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& features) const;
-        WINRT_IMPL_AUTO(void) SetAdditionalParameters(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& parameters) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) AllowedAdditionalFeaturesAndParametersCount() const;
-        WINRT_IMPL_AUTO(void) SetAdaptiveCard(winrt::Windows::UI::Shell::IAdaptiveCard const& adaptiveCard) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto SourceAppInfo() const;
+        [[nodiscard]] auto PrintTicket() const;
+        auto PrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& value) const;
+        auto SetAdditionalFeatures(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& features) const;
+        auto SetAdditionalParameters(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& parameters) const;
+        [[nodiscard]] auto AllowedAdditionalFeaturesAndParametersCount() const;
+        auto SetAdaptiveCard(winrt::Windows::UI::Shell::IAdaptiveCard const& adaptiveCard) const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs>
     {
@@ -392,8 +392,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSessionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) SourceAppInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::IppPrintDevice) Printer() const;
+        [[nodiscard]] auto SourceAppInfo() const;
+        [[nodiscard]] auto Printer() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSessionInfo>
     {
@@ -402,8 +402,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsActivatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession) Session() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto Session() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsActivatedEventArgs>
     {
@@ -412,11 +412,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) SessionPrintTicket() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DocumentTitle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind) LaunchKind() const;
-        WINRT_IMPL_AUTO(void) UpdatePrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& printTicket) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo) SessionInfo() const;
+        [[nodiscard]] auto SessionPrintTicket() const;
+        [[nodiscard]] auto DocumentTitle() const;
+        [[nodiscard]] auto LaunchKind() const;
+        auto UpdatePrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& printTicket) const;
+        [[nodiscard]] auto SessionInfo() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession>
     {

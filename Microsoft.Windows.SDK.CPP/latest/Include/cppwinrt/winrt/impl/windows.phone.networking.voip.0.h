@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -307,7 +307,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_ICallAnswerEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipCallMedia) AcceptedMedia() const;
+        [[nodiscard]] auto AcceptedMedia() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>
     {
@@ -316,7 +316,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_ICallRejectEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipCallRejectReason) RejectReason() const;
+        [[nodiscard]] auto RejectReason() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs>
     {
@@ -325,7 +325,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_ICallStateChangeEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipCallState) State() const;
+        [[nodiscard]] auto State() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs>
     {
@@ -334,7 +334,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IMuteChangeEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Muted() const;
+        [[nodiscard]] auto Muted() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IMuteChangeEventArgs>
     {
@@ -343,8 +343,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IQuerySeamlessUpgradeSupportOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
-        WINRT_IMPL_AUTO(void) NotifyCompletion(bool succeeded, winrt::Windows::Phone::Networking::Voip::SeamlessCallUpgradeSupport const& seamlessCallUpgradeSupport) const;
+        [[nodiscard]] auto RemoteId() const;
+        auto NotifyCompletion(bool succeeded, winrt::Windows::Phone::Networking::Voip::SeamlessCallUpgradeSupport const& seamlessCallUpgradeSupport) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IQuerySeamlessUpgradeSupportOperation>
     {
@@ -353,18 +353,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinator
     {
-        WINRT_IMPL_AUTO(winrt::event_token) MuteRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
+        auto MuteRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
         using MuteRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator>::remove_MuteRequested>;
         [[nodiscard]] MuteRequested_revoker MuteRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
-        WINRT_IMPL_AUTO(void) MuteRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) UnmuteRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
+        auto MuteRequested(winrt::event_token const& token) const noexcept;
+        auto UnmuteRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
         using UnmuteRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator>::remove_UnmuteRequested>;
         [[nodiscard]] UnmuteRequested_revoker UnmuteRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
-        WINRT_IMPL_AUTO(void) UnmuteRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
-        WINRT_IMPL_AUTO(void) RequestNewOutgoingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
-        WINRT_IMPL_AUTO(void) NotifyMuted() const;
-        WINRT_IMPL_AUTO(void) NotifyUnmuted() const;
+        auto UnmuteRequested(winrt::event_token const& token) const noexcept;
+        auto RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestNewOutgoingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto NotifyMuted() const;
+        auto NotifyUnmuted() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator>
     {
@@ -373,7 +373,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinator2
     {
-        WINRT_IMPL_AUTO(void) SetupNewAcceptedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto SetupNewAcceptedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator2>
     {
@@ -382,8 +382,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinator3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipPhoneCall) RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, param::hstring const& contactRemoteId) const;
-        WINRT_IMPL_AUTO(void) RequestNewAppInitiatedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, param::hstring const& contactRemoteId) const;
+        auto RequestNewAppInitiatedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator3>
     {
@@ -392,7 +392,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinatorStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator) GetDefault() const;
+        auto GetDefault() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinatorStatics>
     {
@@ -401,8 +401,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinatorWithAppDeterminedUpgrade
     {
-        WINRT_IMPL_AUTO(void) ConfirmNonSeamlessUpgrade(winrt::guid const& callUpgradeGuid) const;
-        WINRT_IMPL_AUTO(void) CancelUpgrade(winrt::guid const& callUpgradeGuid) const;
+        auto ConfirmNonSeamlessUpgrade(winrt::guid const& callUpgradeGuid) const;
+        auto CancelUpgrade(winrt::guid const& callUpgradeGuid) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinatorWithAppDeterminedUpgrade>
     {
@@ -411,8 +411,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinatorWithUpgrade
     {
-        WINRT_IMPL_AUTO(void) RequestOutgoingUpgradeToVideoCall(winrt::guid const& callUpgradeGuid, param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
-        WINRT_IMPL_AUTO(void) RequestIncomingUpgradeToVideoCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Foundation::TimeSpan const& ringTimeout, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestOutgoingUpgradeToVideoCall(winrt::guid const& callUpgradeGuid, param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestIncomingUpgradeToVideoCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Foundation::TimeSpan const& ringTimeout, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinatorWithUpgrade>
     {
@@ -421,8 +421,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipOperationType) Type() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Type() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipOperation>
     {
@@ -431,7 +431,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipOperationsManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::IVoipOperation) GetNextOperation() const;
+        auto GetNextOperation() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipOperationsManager>
     {
@@ -440,35 +440,35 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCall
     {
-        WINRT_IMPL_AUTO(winrt::event_token) EndRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
+        auto EndRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
         using EndRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>::remove_EndRequested>;
         [[nodiscard]] EndRequested_revoker EndRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) EndRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) HoldRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
+        auto EndRequested(winrt::event_token const& token) const noexcept;
+        auto HoldRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
         using HoldRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>::remove_HoldRequested>;
         [[nodiscard]] HoldRequested_revoker HoldRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) HoldRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ResumeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
+        auto HoldRequested(winrt::event_token const& token) const noexcept;
+        auto ResumeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
         using ResumeRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>::remove_ResumeRequested>;
         [[nodiscard]] ResumeRequested_revoker ResumeRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallStateChangeEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ResumeRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) AnswerRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallAnswerEventArgs> const& acceptHandler) const;
+        auto ResumeRequested(winrt::event_token const& token) const noexcept;
+        auto AnswerRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallAnswerEventArgs> const& acceptHandler) const;
         using AnswerRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>::remove_AnswerRequested>;
         [[nodiscard]] AnswerRequested_revoker AnswerRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallAnswerEventArgs> const& acceptHandler) const;
-        WINRT_IMPL_AUTO(void) AnswerRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) RejectRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallRejectEventArgs> const& rejectHandler) const;
+        auto AnswerRequested(winrt::event_token const& token) const noexcept;
+        auto RejectRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallRejectEventArgs> const& rejectHandler) const;
         using RejectRequested_revoker = impl::event_revoker<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall, &impl::abi_t<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>::remove_RejectRequested>;
         [[nodiscard]] RejectRequested_revoker RejectRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::CallRejectEventArgs> const& rejectHandler) const;
-        WINRT_IMPL_AUTO(void) RejectRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) NotifyCallHeld() const;
-        WINRT_IMPL_AUTO(void) NotifyCallActive() const;
-        WINRT_IMPL_AUTO(void) NotifyCallEnded() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactName() const;
-        WINRT_IMPL_AUTO(void) ContactName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) StartTime() const;
-        WINRT_IMPL_AUTO(void) StartTime(winrt::Windows::Foundation::DateTime const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Phone::Networking::Voip::VoipCallMedia) CallMedia() const;
-        WINRT_IMPL_AUTO(void) CallMedia(winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& value) const;
+        auto RejectRequested(winrt::event_token const& token) const noexcept;
+        auto NotifyCallHeld() const;
+        auto NotifyCallActive() const;
+        auto NotifyCallEnded() const;
+        [[nodiscard]] auto ContactName() const;
+        auto ContactName(param::hstring const& value) const;
+        [[nodiscard]] auto StartTime() const;
+        auto StartTime(winrt::Windows::Foundation::DateTime const& value) const;
+        [[nodiscard]] auto CallMedia() const;
+        auto CallMedia(winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& value) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>
     {
@@ -477,7 +477,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCall2
     {
-        WINRT_IMPL_AUTO(void) TryShowAppUI() const;
+        auto TryShowAppUI() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2>
     {
@@ -486,7 +486,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCall3
     {
-        WINRT_IMPL_AUTO(void) NotifyCallAccepted(winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media) const;
+        auto NotifyCallAccepted(winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3>
     {
@@ -495,7 +495,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCallReady
     {
-        WINRT_IMPL_AUTO(void) NotifyCallReady() const;
+        auto NotifyCallReady() const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady>
     {

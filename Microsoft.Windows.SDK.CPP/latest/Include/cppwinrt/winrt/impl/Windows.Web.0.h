@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,12 +8,7 @@
 #define WINRT_Windows_Web_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
-}
-WINRT_EXPORT namespace winrt::Windows::Storage::Streams
-{
-    struct IInputStream;
 }
 WINRT_EXPORT namespace winrt::Windows::Web
 {
@@ -108,7 +103,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_IUriToStreamResolver
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IInputStream>) UriToStreamAsync(winrt::Windows::Foundation::Uri const& uri) const;
+        auto UriToStreamAsync(winrt::Windows::Foundation::Uri const& uri) const;
     };
     template <> struct consume<winrt::Windows::Web::IUriToStreamResolver>
     {
@@ -117,7 +112,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Web_IWebErrorStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::WebErrorStatus) GetStatus(int32_t hresult) const;
+        auto GetStatus(int32_t hresult) const;
     };
     template <> struct consume<winrt::Windows::Web::IWebErrorStatics>
     {

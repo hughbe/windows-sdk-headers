@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,25 +7,25 @@
 #ifndef WINRT_Windows_Management_Deployment_Preview_H
 #define WINRT_Windows_Management_Deployment_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Management.Deployment.h"
 #include "winrt/impl/Windows.Management.Deployment.Preview.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo) consume_Windows_Management_Deployment_Preview_IClassicAppManagerStatics<D>::FindInstalledApp(param::hstring const& appUninstallKey) const
+    template <typename D> auto consume_Windows_Management_Deployment_Preview_IClassicAppManagerStatics<D>::FindInstalledApp(param::hstring const& appUninstallKey) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::Preview::IClassicAppManagerStatics)->FindInstalledApp(*(void**)(&appUninstallKey), &result));
         return winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayName() const
+    template <typename D> auto consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayVersion() const
+    template <typename D> auto consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo)->get_DisplayVersion(&value));

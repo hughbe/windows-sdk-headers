@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -52,13 +52,6 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         IAudioEncodingPropertiesWithFormatUserData(std::nullptr_t = nullptr) noexcept {}
         IAudioEncodingPropertiesWithFormatUserData(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IAv1ProfileIdsStatics :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IAv1ProfileIdsStatics>
-    {
-        IAv1ProfileIdsStatics(std::nullptr_t = nullptr) noexcept {}
-        IAv1ProfileIdsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IContainerEncodingProperties :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContainerEncodingProperties>,
@@ -80,13 +73,6 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
     {
         IH264ProfileIdsStatics(std::nullptr_t = nullptr) noexcept {}
         IH264ProfileIdsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IHevcProfileIdsStatics :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IHevcProfileIdsStatics>
-    {
-        IHevcProfileIdsStatics(std::nullptr_t = nullptr) noexcept {}
-        IHevcProfileIdsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IImageEncodingProperties :
         winrt::Windows::Foundation::IInspectable,
@@ -166,13 +152,6 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         IMediaEncodingProfileStatics3(std::nullptr_t = nullptr) noexcept {}
         IMediaEncodingProfileStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IMediaEncodingProfileStatics4 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMediaEncodingProfileStatics4>
-    {
-        IMediaEncodingProfileStatics4(std::nullptr_t = nullptr) noexcept {}
-        IMediaEncodingProfileStatics4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IMediaEncodingProperties :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IMediaEncodingProperties>
@@ -221,13 +200,6 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
     {
         IMediaEncodingSubtypesStatics6(std::nullptr_t = nullptr) noexcept {}
         IMediaEncodingSubtypesStatics6(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IMediaEncodingSubtypesStatics7 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IMediaEncodingSubtypesStatics7>
-    {
-        IMediaEncodingSubtypesStatics7(std::nullptr_t = nullptr) noexcept {}
-        IMediaEncodingSubtypesStatics7(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IMediaRatio :
         winrt::Windows::Foundation::IInspectable,
@@ -306,20 +278,6 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
     {
         IVideoEncodingPropertiesStatics2(std::nullptr_t = nullptr) noexcept {}
         IVideoEncodingPropertiesStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IVideoEncodingPropertiesStatics3 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IVideoEncodingPropertiesStatics3>
-    {
-        IVideoEncodingPropertiesStatics3(std::nullptr_t = nullptr) noexcept {}
-        IVideoEncodingPropertiesStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IVp9ProfileIdsStatics :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IVp9ProfileIdsStatics>
-    {
-        IVp9ProfileIdsStatics(std::nullptr_t = nullptr) noexcept {}
-        IVp9ProfileIdsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

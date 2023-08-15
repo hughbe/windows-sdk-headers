@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,9 +13,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IIterable;
     template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
@@ -2839,7 +2837,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAppBarAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAppBarAutomationPeerFactory>
     {
@@ -2856,7 +2854,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAppBarButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBarButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBarButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAppBarButtonAutomationPeerFactory>
     {
@@ -2873,7 +2871,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAppBarToggleButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AppBarToggleButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAppBarToggleButtonAutomationPeerFactory>
     {
@@ -2890,7 +2888,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutoSuggestBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AutoSuggestBox const& owner) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::AutoSuggestBox const& owner) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutoSuggestBoxAutomationPeerFactory>
     {
@@ -2899,39 +2897,39 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) EventsSource() const;
-        WINRT_IMPL_AUTO(void) EventsSource(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetPattern(winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
-        WINRT_IMPL_AUTO(void) RaiseAutomationEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents const& eventId) const;
-        WINRT_IMPL_AUTO(void) RaisePropertyChangedEvent(winrt::Windows::UI::Xaml::Automation::AutomationProperty const& automationProperty, winrt::Windows::Foundation::IInspectable const& oldValue, winrt::Windows::Foundation::IInspectable const& newValue) const;
-        WINRT_IMPL_AUTO(hstring) GetAcceleratorKey() const;
-        WINRT_IMPL_AUTO(hstring) GetAccessKey() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType) GetAutomationControlType() const;
-        WINRT_IMPL_AUTO(hstring) GetAutomationId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) GetBoundingRectangle() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetChildren() const;
-        WINRT_IMPL_AUTO(hstring) GetClassName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) GetClickablePoint() const;
-        WINRT_IMPL_AUTO(hstring) GetHelpText() const;
-        WINRT_IMPL_AUTO(hstring) GetItemStatus() const;
-        WINRT_IMPL_AUTO(hstring) GetItemType() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetLabeledBy() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedControlType() const;
-        WINRT_IMPL_AUTO(hstring) GetName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationOrientation) GetOrientation() const;
-        WINRT_IMPL_AUTO(bool) HasKeyboardFocus() const;
-        WINRT_IMPL_AUTO(bool) IsContentElement() const;
-        WINRT_IMPL_AUTO(bool) IsControlElement() const;
-        WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(bool) IsKeyboardFocusable() const;
-        WINRT_IMPL_AUTO(bool) IsOffscreen() const;
-        WINRT_IMPL_AUTO(bool) IsPassword() const;
-        WINRT_IMPL_AUTO(bool) IsRequiredForForm() const;
-        WINRT_IMPL_AUTO(void) SetFocus() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetParent() const;
-        WINRT_IMPL_AUTO(void) InvalidatePeer() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetPeerFromPoint(winrt::Windows::Foundation::Point const& point) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting) GetLiveSetting() const;
+        [[nodiscard]] auto EventsSource() const;
+        auto EventsSource(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& value) const;
+        auto GetPattern(winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
+        auto RaiseAutomationEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents const& eventId) const;
+        auto RaisePropertyChangedEvent(winrt::Windows::UI::Xaml::Automation::AutomationProperty const& automationProperty, winrt::Windows::Foundation::IInspectable const& oldValue, winrt::Windows::Foundation::IInspectable const& newValue) const;
+        auto GetAcceleratorKey() const;
+        auto GetAccessKey() const;
+        auto GetAutomationControlType() const;
+        auto GetAutomationId() const;
+        auto GetBoundingRectangle() const;
+        auto GetChildren() const;
+        auto GetClassName() const;
+        auto GetClickablePoint() const;
+        auto GetHelpText() const;
+        auto GetItemStatus() const;
+        auto GetItemType() const;
+        auto GetLabeledBy() const;
+        auto GetLocalizedControlType() const;
+        auto GetName() const;
+        auto GetOrientation() const;
+        auto HasKeyboardFocus() const;
+        auto IsContentElement() const;
+        auto IsControlElement() const;
+        auto IsEnabled() const;
+        auto IsKeyboardFocusable() const;
+        auto IsOffscreen() const;
+        auto IsPassword() const;
+        auto IsRequiredForForm() const;
+        auto SetFocus() const;
+        auto GetParent() const;
+        auto InvalidatePeer() const;
+        auto GetPeerFromPoint(winrt::Windows::Foundation::Point const& point) const;
+        auto GetLiveSetting() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer>
     {
@@ -2948,18 +2946,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Navigate(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetElementFromPoint(winrt::Windows::Foundation::Point const& pointInWindowCoordinates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetFocusedElement() const;
-        WINRT_IMPL_AUTO(void) ShowContextMenu() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetControlledPeers() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>) GetAnnotations() const;
-        WINRT_IMPL_AUTO(void) SetParent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
-        WINRT_IMPL_AUTO(void) RaiseTextEditTextChangedEvent(winrt::Windows::UI::Xaml::Automation::AutomationTextEditChangeType const& automationTextEditChangeType, param::vector_view<hstring> const& changedData) const;
-        WINRT_IMPL_AUTO(int32_t) GetPositionInSet() const;
-        WINRT_IMPL_AUTO(int32_t) GetSizeOfSet() const;
-        WINRT_IMPL_AUTO(int32_t) GetLevel() const;
-        WINRT_IMPL_AUTO(void) RaiseStructureChangedEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationStructureChangeType const& structureChangeType, winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& child) const;
+        auto Navigate(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
+        auto GetElementFromPoint(winrt::Windows::Foundation::Point const& pointInWindowCoordinates) const;
+        auto GetFocusedElement() const;
+        auto ShowContextMenu() const;
+        auto GetControlledPeers() const;
+        auto GetAnnotations() const;
+        auto SetParent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
+        auto RaiseTextEditTextChangedEvent(winrt::Windows::UI::Xaml::Automation::AutomationTextEditChangeType const& automationTextEditChangeType, param::vector_view<hstring> const& changedData) const;
+        auto GetPositionInSet() const;
+        auto GetSizeOfSet() const;
+        auto GetLevel() const;
+        auto RaiseStructureChangedEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationStructureChangeType const& structureChangeType, winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& child) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer3>
     {
@@ -2968,8 +2966,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType) GetLandmarkType() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedLandmarkType() const;
+        auto GetLandmarkType() const;
+        auto GetLocalizedLandmarkType() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer4>
     {
@@ -2978,9 +2976,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer5
     {
-        WINRT_IMPL_AUTO(bool) IsPeripheral() const;
-        WINRT_IMPL_AUTO(bool) IsDataValidForForm() const;
-        WINRT_IMPL_AUTO(hstring) GetFullDescription() const;
+        auto IsPeripheral() const;
+        auto IsDataValidForForm() const;
+        auto GetFullDescription() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer5>
     {
@@ -2989,7 +2987,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer6
     {
-        WINRT_IMPL_AUTO(int32_t) GetCulture() const;
+        auto GetCulture() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer6>
     {
@@ -2998,7 +2996,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer7
     {
-        WINRT_IMPL_AUTO(void) RaiseNotificationEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationKind const& notificationKind, winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationProcessing const& notificationProcessing, param::hstring const& displayString, param::hstring const& activityId) const;
+        auto RaiseNotificationEvent(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationKind const& notificationKind, winrt::Windows::UI::Xaml::Automation::Peers::AutomationNotificationProcessing const& notificationProcessing, param::hstring const& displayString, param::hstring const& activityId) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer7>
     {
@@ -3007,7 +3005,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer8
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel) GetHeadingLevel() const;
+        auto GetHeadingLevel() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer8>
     {
@@ -3016,7 +3014,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeer9
     {
-        WINRT_IMPL_AUTO(bool) IsDialog() const;
+        auto IsDialog() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeer9>
     {
@@ -3025,10 +3023,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerAnnotation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::AnnotationType) Type() const;
-        WINRT_IMPL_AUTO(void) Type(winrt::Windows::UI::Xaml::Automation::AnnotationType const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) Peer() const;
-        WINRT_IMPL_AUTO(void) Peer(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& value) const;
+        [[nodiscard]] auto Type() const;
+        auto Type(winrt::Windows::UI::Xaml::Automation::AnnotationType const& value) const;
+        [[nodiscard]] auto Peer() const;
+        auto Peer(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerAnnotation>
     {
@@ -3037,8 +3035,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerAnnotationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation) CreateInstance(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation) CreateWithPeerParameter(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type, winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type) const;
+        auto CreateWithPeerParameter(winrt::Windows::UI::Xaml::Automation::AnnotationType const& type, winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerAnnotationFactory>
     {
@@ -3047,8 +3045,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerAnnotationStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TypeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PeerProperty() const;
+        [[nodiscard]] auto TypeProperty() const;
+        [[nodiscard]] auto PeerProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerAnnotationStatics>
     {
@@ -3057,7 +3055,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerFactory>
     {
@@ -3066,33 +3064,33 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetPatternCore(winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
-        WINRT_IMPL_AUTO(hstring) GetAcceleratorKeyCore() const;
-        WINRT_IMPL_AUTO(hstring) GetAccessKeyCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationControlType) GetAutomationControlTypeCore() const;
-        WINRT_IMPL_AUTO(hstring) GetAutomationIdCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) GetBoundingRectangleCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetChildrenCore() const;
-        WINRT_IMPL_AUTO(hstring) GetClassNameCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) GetClickablePointCore() const;
-        WINRT_IMPL_AUTO(hstring) GetHelpTextCore() const;
-        WINRT_IMPL_AUTO(hstring) GetItemStatusCore() const;
-        WINRT_IMPL_AUTO(hstring) GetItemTypeCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetLabeledByCore() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedControlTypeCore() const;
-        WINRT_IMPL_AUTO(hstring) GetNameCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationOrientation) GetOrientationCore() const;
-        WINRT_IMPL_AUTO(bool) HasKeyboardFocusCore() const;
-        WINRT_IMPL_AUTO(bool) IsContentElementCore() const;
-        WINRT_IMPL_AUTO(bool) IsControlElementCore() const;
-        WINRT_IMPL_AUTO(bool) IsEnabledCore() const;
-        WINRT_IMPL_AUTO(bool) IsKeyboardFocusableCore() const;
-        WINRT_IMPL_AUTO(bool) IsOffscreenCore() const;
-        WINRT_IMPL_AUTO(bool) IsPasswordCore() const;
-        WINRT_IMPL_AUTO(bool) IsRequiredForFormCore() const;
-        WINRT_IMPL_AUTO(void) SetFocusCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetPeerFromPointCore(winrt::Windows::Foundation::Point const& point) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting) GetLiveSettingCore() const;
+        auto GetPatternCore(winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
+        auto GetAcceleratorKeyCore() const;
+        auto GetAccessKeyCore() const;
+        auto GetAutomationControlTypeCore() const;
+        auto GetAutomationIdCore() const;
+        auto GetBoundingRectangleCore() const;
+        auto GetChildrenCore() const;
+        auto GetClassNameCore() const;
+        auto GetClickablePointCore() const;
+        auto GetHelpTextCore() const;
+        auto GetItemStatusCore() const;
+        auto GetItemTypeCore() const;
+        auto GetLabeledByCore() const;
+        auto GetLocalizedControlTypeCore() const;
+        auto GetNameCore() const;
+        auto GetOrientationCore() const;
+        auto HasKeyboardFocusCore() const;
+        auto IsContentElementCore() const;
+        auto IsControlElementCore() const;
+        auto IsEnabledCore() const;
+        auto IsKeyboardFocusableCore() const;
+        auto IsOffscreenCore() const;
+        auto IsPasswordCore() const;
+        auto IsRequiredForFormCore() const;
+        auto SetFocusCore() const;
+        auto GetPeerFromPointCore(winrt::Windows::Foundation::Point const& point) const;
+        auto GetLiveSettingCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>
     {
@@ -3101,8 +3099,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides2
     {
-        WINRT_IMPL_AUTO(void) ShowContextMenuCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetControlledPeersCore() const;
+        auto ShowContextMenuCore() const;
+        auto GetControlledPeersCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2>
     {
@@ -3111,13 +3109,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) NavigateCore(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetElementFromPointCore(winrt::Windows::Foundation::Point const& pointInWindowCoordinates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetFocusedElementCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>) GetAnnotationsCore() const;
-        WINRT_IMPL_AUTO(int32_t) GetPositionInSetCore() const;
-        WINRT_IMPL_AUTO(int32_t) GetSizeOfSetCore() const;
-        WINRT_IMPL_AUTO(int32_t) GetLevelCore() const;
+        auto NavigateCore(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
+        auto GetElementFromPointCore(winrt::Windows::Foundation::Point const& pointInWindowCoordinates) const;
+        auto GetFocusedElementCore() const;
+        auto GetAnnotationsCore() const;
+        auto GetPositionInSetCore() const;
+        auto GetSizeOfSetCore() const;
+        auto GetLevelCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3>
     {
@@ -3126,8 +3124,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType) GetLandmarkTypeCore() const;
-        WINRT_IMPL_AUTO(hstring) GetLocalizedLandmarkTypeCore() const;
+        auto GetLandmarkTypeCore() const;
+        auto GetLocalizedLandmarkTypeCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4>
     {
@@ -3136,12 +3134,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides5
     {
-        WINRT_IMPL_AUTO(bool) IsPeripheralCore() const;
-        WINRT_IMPL_AUTO(bool) IsDataValidForFormCore() const;
-        WINRT_IMPL_AUTO(hstring) GetFullDescriptionCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetDescribedByCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetFlowsToCore() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetFlowsFromCore() const;
+        auto IsPeripheralCore() const;
+        auto IsDataValidForFormCore() const;
+        auto GetFullDescriptionCore() const;
+        auto GetDescribedByCore() const;
+        auto GetFlowsToCore() const;
+        auto GetFlowsFromCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5>
     {
@@ -3150,7 +3148,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides6
     {
-        WINRT_IMPL_AUTO(int32_t) GetCultureCore() const;
+        auto GetCultureCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides6>
     {
@@ -3159,7 +3157,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides8
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel) GetHeadingLevelCore() const;
+        auto GetHeadingLevelCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides8>
     {
@@ -3168,7 +3166,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerOverrides9
     {
-        WINRT_IMPL_AUTO(bool) IsDialogCore() const;
+        auto IsDialogCore() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides9>
     {
@@ -3177,8 +3175,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerProtected
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) PeerFromProvider(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& provider) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) ProviderFromPeer(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
+        auto PeerFromProvider(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& provider) const;
+        auto ProviderFromPeer(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerProtected>
     {
@@ -3187,7 +3185,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerStatics
     {
-        WINRT_IMPL_AUTO(bool) ListenerExists(winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents const& eventId) const;
+        auto ListenerExists(winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents const& eventId) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerStatics>
     {
@@ -3196,7 +3194,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IAutomationPeerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId) GenerateRawElementProviderRuntimeId() const;
+        auto GenerateRawElementProviderRuntimeId() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerStatics3>
     {
@@ -3213,7 +3211,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Button const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Button const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IButtonAutomationPeerFactory>
     {
@@ -3230,7 +3228,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IButtonBaseAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IButtonBaseAutomationPeerFactory>
     {
@@ -3247,7 +3245,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ICalendarDatePickerAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CalendarDatePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CalendarDatePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ICalendarDatePickerAutomationPeerFactory>
     {
@@ -3264,7 +3262,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ICaptureElementAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CaptureElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CaptureElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ICaptureElementAutomationPeerFactory>
     {
@@ -3281,7 +3279,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ICheckBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CheckBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::CheckBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ICheckBoxAutomationPeerFactory>
     {
@@ -3298,7 +3296,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IColorPickerSliderAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IColorPickerSliderAutomationPeerFactory>
     {
@@ -3315,7 +3313,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IColorSpectrumAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IColorSpectrumAutomationPeerFactory>
     {
@@ -3332,7 +3330,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IComboBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ComboBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ComboBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IComboBoxAutomationPeerFactory>
     {
@@ -3349,7 +3347,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IComboBoxItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ComboBoxItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ComboBoxItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IComboBoxItemAutomationPeerFactory>
     {
@@ -3366,7 +3364,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IComboBoxItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IComboBoxItemDataAutomationPeerFactory>
     {
@@ -3383,7 +3381,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IDatePickerAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::DatePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::DatePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IDatePickerAutomationPeerFactory>
     {
@@ -3408,7 +3406,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFlipViewAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlipView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlipView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFlipViewAutomationPeerFactory>
     {
@@ -3425,7 +3423,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFlipViewItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlipViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlipViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFlipViewItemAutomationPeerFactory>
     {
@@ -3442,7 +3440,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFlipViewItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFlipViewItemDataAutomationPeerFactory>
     {
@@ -3459,7 +3457,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFlyoutPresenterAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlyoutPresenter const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::FlyoutPresenter const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFlyoutPresenterAutomationPeerFactory>
     {
@@ -3468,7 +3466,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFrameworkElementAutomationPeer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) Owner() const;
+        [[nodiscard]] auto Owner() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer>
     {
@@ -3477,7 +3475,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFrameworkElementAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::FrameworkElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::FrameworkElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeerFactory>
     {
@@ -3486,8 +3484,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IFrameworkElementAutomationPeerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) FromElement(winrt::Windows::UI::Xaml::UIElement const& element) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer) CreatePeerForElement(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto FromElement(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto CreatePeerForElement(winrt::Windows::UI::Xaml::UIElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeerStatics>
     {
@@ -3504,7 +3502,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IGridViewAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IGridViewAutomationPeerFactory>
     {
@@ -3521,7 +3519,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IGridViewHeaderItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IGridViewHeaderItemAutomationPeerFactory>
     {
@@ -3538,7 +3536,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IGridViewItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GridViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IGridViewItemAutomationPeerFactory>
     {
@@ -3555,7 +3553,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IGridViewItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IGridViewItemDataAutomationPeerFactory>
     {
@@ -3572,7 +3570,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IGroupItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GroupItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::GroupItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IGroupItemAutomationPeerFactory>
     {
@@ -3589,7 +3587,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IHubAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Hub const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Hub const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IHubAutomationPeerFactory>
     {
@@ -3606,7 +3604,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IHubSectionAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::HubSection const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::HubSection const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IHubSectionAutomationPeerFactory>
     {
@@ -3623,7 +3621,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IHyperlinkButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::HyperlinkButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::HyperlinkButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IHyperlinkButtonAutomationPeerFactory>
     {
@@ -3640,7 +3638,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IImageAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Image const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Image const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IImageAutomationPeerFactory>
     {
@@ -3657,8 +3655,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IItemAutomationPeer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Item() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer) ItemsControlAutomationPeer() const;
+        [[nodiscard]] auto Item() const;
+        [[nodiscard]] auto ItemsControlAutomationPeer() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IItemAutomationPeer>
     {
@@ -3667,7 +3665,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IItemAutomationPeerFactory>
     {
@@ -3684,7 +3682,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IItemsControlAutomationPeer2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer) CreateItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item) const;
+        auto CreateItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeer2>
     {
@@ -3693,7 +3691,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IItemsControlAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ItemsControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ItemsControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeerFactory>
     {
@@ -3702,7 +3700,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IItemsControlAutomationPeerOverrides2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer) OnCreateItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item) const;
+        auto OnCreateItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeerOverrides2>
     {
@@ -3719,7 +3717,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListBoxAutomationPeerFactory>
     {
@@ -3736,7 +3734,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListBoxItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListBoxItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListBoxItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListBoxItemAutomationPeerFactory>
     {
@@ -3753,7 +3751,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListBoxItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListBoxItemDataAutomationPeerFactory>
     {
@@ -3778,7 +3776,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListView const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewAutomationPeerFactory>
     {
@@ -3795,7 +3793,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewBaseAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewBaseAutomationPeerFactory>
     {
@@ -3812,7 +3810,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewBaseHeaderItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewBaseHeaderItemAutomationPeerFactory>
     {
@@ -3829,7 +3827,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewHeaderItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewHeaderItemAutomationPeerFactory>
     {
@@ -3846,7 +3844,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ListViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewItemAutomationPeerFactory>
     {
@@ -3863,7 +3861,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IListViewItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IListViewItemDataAutomationPeerFactory>
     {
@@ -3912,7 +3910,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMediaElementAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMediaElementAutomationPeerFactory>
     {
@@ -3929,7 +3927,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMediaPlayerElementAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaPlayerElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaPlayerElement const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMediaPlayerElementAutomationPeerFactory>
     {
@@ -3946,7 +3944,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMediaTransportControlsAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaTransportControls const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MediaTransportControls const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMediaTransportControlsAutomationPeerFactory>
     {
@@ -3963,7 +3961,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMenuBarAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer) CreateInstance(winrt::Windows::UI::Xaml::Controls::MenuBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Controls::MenuBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMenuBarAutomationPeerFactory>
     {
@@ -3980,7 +3978,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMenuBarItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer) CreateInstance(winrt::Windows::UI::Xaml::Controls::MenuBarItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::UI::Xaml::Controls::MenuBarItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMenuBarItemAutomationPeerFactory>
     {
@@ -3997,7 +3995,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMenuFlyoutItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMenuFlyoutItemAutomationPeerFactory>
     {
@@ -4014,7 +4012,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IMenuFlyoutPresenterAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IMenuFlyoutPresenterAutomationPeerFactory>
     {
@@ -4031,7 +4029,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_INavigationViewItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::NavigationViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::NavigationViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeerFactory>
     {
@@ -4048,7 +4046,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IPasswordBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PasswordBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PasswordBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeerFactory>
     {
@@ -4065,7 +4063,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IPersonPictureAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PersonPicture const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PersonPicture const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeerFactory>
     {
@@ -4090,7 +4088,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IPivotAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Pivot const& owner) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Pivot const& owner) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IPivotAutomationPeerFactory>
     {
@@ -4107,7 +4105,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IPivotItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PivotItem const& owner) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::PivotItem const& owner) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IPivotItemAutomationPeerFactory>
     {
@@ -4124,7 +4122,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IPivotItemDataAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer const& parent) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer const& parent) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IPivotItemDataAutomationPeerFactory>
     {
@@ -4141,7 +4139,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IProgressBarAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ProgressBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ProgressBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IProgressBarAutomationPeerFactory>
     {
@@ -4158,7 +4156,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IProgressRingAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ProgressRing const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ProgressRing const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IProgressRingAutomationPeerFactory>
     {
@@ -4175,7 +4173,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRadioButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RadioButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RadioButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRadioButtonAutomationPeerFactory>
     {
@@ -4192,7 +4190,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRangeBaseAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRangeBaseAutomationPeerFactory>
     {
@@ -4209,7 +4207,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRatingControlAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RatingControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RatingControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRatingControlAutomationPeerFactory>
     {
@@ -4226,7 +4224,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRepeatButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRepeatButtonAutomationPeerFactory>
     {
@@ -4243,7 +4241,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRichEditBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichEditBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichEditBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRichEditBoxAutomationPeerFactory>
     {
@@ -4260,7 +4258,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRichTextBlockAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichTextBlock const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichTextBlock const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRichTextBlockAutomationPeerFactory>
     {
@@ -4277,7 +4275,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IRichTextBlockOverflowAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeerFactory>
     {
@@ -4294,7 +4292,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IScrollBarAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IScrollBarAutomationPeerFactory>
     {
@@ -4311,7 +4309,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IScrollViewerAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ScrollViewer const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ScrollViewer const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeerFactory>
     {
@@ -4328,7 +4326,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISearchBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SearchBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SearchBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISearchBoxAutomationPeerFactory>
     {
@@ -4345,7 +4343,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISelectorAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::Selector const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::Selector const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISelectorAutomationPeerFactory>
     {
@@ -4362,7 +4360,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISelectorItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer) CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeerFactory>
     {
@@ -4379,7 +4377,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISemanticZoomAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SemanticZoom const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SemanticZoom const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISemanticZoomAutomationPeerFactory>
     {
@@ -4396,7 +4394,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISettingsFlyoutAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SettingsFlyout const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::SettingsFlyout const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISettingsFlyoutAutomationPeerFactory>
     {
@@ -4413,7 +4411,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ISliderAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Slider const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Slider const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ISliderAutomationPeerFactory>
     {
@@ -4430,7 +4428,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ITextBlockAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TextBlock const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TextBlock const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ITextBlockAutomationPeerFactory>
     {
@@ -4447,7 +4445,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ITextBoxAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TextBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TextBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ITextBoxAutomationPeerFactory>
     {
@@ -4464,7 +4462,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IThumbAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::Thumb const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::Thumb const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IThumbAutomationPeerFactory>
     {
@@ -4481,7 +4479,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ITimePickerAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TimePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TimePicker const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ITimePickerAutomationPeerFactory>
     {
@@ -4506,7 +4504,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IToggleButtonAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IToggleButtonAutomationPeerFactory>
     {
@@ -4523,7 +4521,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IToggleMenuFlyoutItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IToggleMenuFlyoutItemAutomationPeerFactory>
     {
@@ -4540,7 +4538,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_IToggleSwitchAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ToggleSwitch const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::ToggleSwitch const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::IToggleSwitchAutomationPeerFactory>
     {
@@ -4557,7 +4555,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ITreeViewItemAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TreeViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TreeViewItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ITreeViewItemAutomationPeerFactory>
     {
@@ -4574,7 +4572,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Peers_ITreeViewListAutomationPeerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer) CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TreeViewList const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithOwner(winrt::Windows::UI::Xaml::Controls::TreeViewList const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Peers::ITreeViewListAutomationPeerFactory>
     {

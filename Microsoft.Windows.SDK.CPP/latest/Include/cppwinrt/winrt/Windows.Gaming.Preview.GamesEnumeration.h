@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Gaming_Preview_GamesEnumeration_H
 #define WINRT_Windows_Gaming_Preview_GamesEnumeration_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,97 +16,97 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatche
 #include "winrt/impl/Windows.Gaming.Preview.GamesEnumeration.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppDisplayInfo) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::DisplayInfo() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::DisplayInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry)->get_DisplayInfo(&value));
         return winrt::Windows::ApplicationModel::AppDisplayInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::LaunchAsync() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::LaunchAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry)->LaunchAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::Category() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::Category() const
     {
         winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry)->get_Category(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::Properties() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry)->get_Properties(&value));
         return winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::SetCategoryAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry<D>::SetCategoryAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory const& value) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry)->SetCategoryAsync(static_cast<int32_t>(value), &action));
         return winrt::Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LaunchableState() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LaunchableState() const
     {
         winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->get_LaunchableState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::IStorageFile) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LauncherExecutable() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LauncherExecutable() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->get_LauncherExecutable(&value));
         return winrt::Windows::Storage::IStorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LaunchParameters() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::LaunchParameters() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->get_LaunchParameters(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetLauncherExecutableFileAsync(winrt::Windows::Storage::IStorageFile const& executableFile) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetLauncherExecutableFileAsync(winrt::Windows::Storage::IStorageFile const& executableFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->SetLauncherExecutableFileAsync(*(void**)(&executableFile), &operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetLauncherExecutableFileAsync(winrt::Windows::Storage::IStorageFile const& executableFile, param::hstring const& launchParams) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetLauncherExecutableFileAsync(winrt::Windows::Storage::IStorageFile const& executableFile, param::hstring const& launchParams) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->SetLauncherExecutableFileWithParamsAsync(*(void**)(&executableFile), *(void**)(&launchParams), &operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::TitleId() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::TitleId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->get_TitleId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetTitleIdAsync(param::hstring const& id) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::SetTitleIdAsync(param::hstring const& id) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->SetTitleIdAsync(*(void**)(&id), &operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::GameModeConfiguration() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListEntry2<D>::GameModeConfiguration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2)->get_GameModeConfiguration(&value));
         return winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::FindAllAsync() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::FindAllAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->FindAllAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::FindAllAsync(param::hstring const& packageFamilyName) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::FindAllAsync(param::hstring const& packageFamilyName) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->FindAllAsyncPackageFamilyName(*(void**)(&packageFamilyName), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameAdded(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameAdded(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->add_GameAdded(*(void**)(&handler), put_abi(token)));
@@ -116,11 +116,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GameAdded_revoker>(this, GameAdded(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameAdded(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameAdded(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->remove_GameAdded(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameRemoved(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameRemoved(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->add_GameRemoved(*(void**)(&handler), put_abi(token)));
@@ -130,11 +130,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GameRemoved_revoker>(this, GameRemoved(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameRemoved(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameRemoved(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->remove_GameRemoved(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameUpdated(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameUpdated(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->add_GameUpdated(*(void**)(&handler), put_abi(token)));
@@ -144,127 +144,127 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GameUpdated_revoker>(this, GameUpdated(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics<D>::GameUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics)->remove_GameUpdated(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics2<D>::MergeEntriesAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& left, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& right) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics2<D>::MergeEntriesAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& left, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& right) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics2)->MergeEntriesAsync(*(void**)(&left), *(void**)(&right), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics2<D>::UnmergeEntryAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& mergedEntry) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameListStatics2<D>::UnmergeEntryAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& mergedEntry) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics2)->UnmergeEntryAsync(*(void**)(&mergedEntry), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::IsEnabled() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::IsEnabled() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::IsEnabled(bool value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_IsEnabled(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::RelatedProcessNames() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::RelatedProcessNames() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_RelatedProcessNames(&value));
         return winrt::Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuTimeAllocatedToGame() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuTimeAllocatedToGame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_PercentGpuTimeAllocatedToGame(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuTimeAllocatedToGame(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuTimeAllocatedToGame(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_PercentGpuTimeAllocatedToGame(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToGame() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToGame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_PercentGpuMemoryAllocatedToGame(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToGame(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToGame(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_PercentGpuMemoryAllocatedToGame(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToSystemCompositor() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToSystemCompositor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_PercentGpuMemoryAllocatedToSystemCompositor(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToSystemCompositor(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::PercentGpuMemoryAllocatedToSystemCompositor(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_PercentGpuMemoryAllocatedToSystemCompositor(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::MaxCpuCount() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::MaxCpuCount() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_MaxCpuCount(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::MaxCpuCount(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::MaxCpuCount(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_MaxCpuCount(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskLow() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_CpuExclusivityMaskLow(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskLow(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskLow(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_CpuExclusivityMaskLow(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskHigh() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_CpuExclusivityMaskHigh(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskHigh(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::CpuExclusivityMaskHigh(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_CpuExclusivityMaskHigh(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::AffinitizeToExclusiveCpus() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::AffinitizeToExclusiveCpus() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->get_AffinitizeToExclusiveCpus(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::AffinitizeToExclusiveCpus(bool value) const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::AffinitizeToExclusiveCpus(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->put_AffinitizeToExclusiveCpus(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::SaveAsync() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeConfiguration<D>::SaveAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration)->SaveAsync(&operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfiguration<D>::GamingRelatedProcessNames() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfiguration<D>::GamingRelatedProcessNames() const
     {
         void* processNames{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration)->get_GamingRelatedProcessNames(&processNames));
         return winrt::Windows::Foundation::Collections::IVector<hstring>{ processNames, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfiguration<D>::SaveAsync() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfiguration<D>::SaveAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration)->SaveAsync(&operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration) consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfigurationStatics<D>::GetDefault() const
+    template <typename D> auto consume_Windows_Gaming_Preview_GamesEnumeration_IGameModeUserConfigurationStatics<D>::GetDefault() const
     {
         void* userConfiguration{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfigurationStatics)->GetDefault(&userConfiguration));

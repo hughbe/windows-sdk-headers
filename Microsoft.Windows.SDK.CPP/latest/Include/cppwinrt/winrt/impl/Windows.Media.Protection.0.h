@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,15 +9,11 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     struct IPropertySet;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Playback
 {
@@ -329,8 +325,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IComponentLoadFailedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::RevocationAndRenewalInformation) Information() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::MediaProtectionServiceCompletion) Completion() const;
+        [[nodiscard]] auto Information() const;
+        [[nodiscard]] auto Completion() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IComponentLoadFailedEventArgs>
     {
@@ -339,7 +335,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IComponentRenewalStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Media::Protection::RenewalStatus, uint32_t>) RenewSystemComponentsAsync(winrt::Windows::Media::Protection::RevocationAndRenewalInformation const& information) const;
+        auto RenewSystemComponentsAsync(winrt::Windows::Media::Protection::RevocationAndRenewalInformation const& information) const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IComponentRenewalStatics>
     {
@@ -348,13 +344,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IHdcpSession
     {
-        WINRT_IMPL_AUTO(bool) IsEffectiveProtectionAtLeast(winrt::Windows::Media::Protection::HdcpProtection const& protection) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Media::Protection::HdcpProtection>) GetEffectiveProtection() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Protection::HdcpSetProtectionResult>) SetDesiredMinProtectionAsync(winrt::Windows::Media::Protection::HdcpProtection const& protection) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ProtectionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::HdcpSession, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto IsEffectiveProtectionAtLeast(winrt::Windows::Media::Protection::HdcpProtection const& protection) const;
+        auto GetEffectiveProtection() const;
+        auto SetDesiredMinProtectionAsync(winrt::Windows::Media::Protection::HdcpProtection const& protection) const;
+        auto ProtectionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::HdcpSession, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ProtectionChanged_revoker = impl::event_revoker<winrt::Windows::Media::Protection::IHdcpSession, &impl::abi_t<winrt::Windows::Media::Protection::IHdcpSession>::remove_ProtectionChanged>;
         [[nodiscard]] ProtectionChanged_revoker ProtectionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::HdcpSession, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProtectionChanged(winrt::event_token const& token) const noexcept;
+        auto ProtectionChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IHdcpSession>
     {
@@ -363,19 +359,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IMediaProtectionManager
     {
-        WINRT_IMPL_AUTO(winrt::event_token) ServiceRequested(winrt::Windows::Media::Protection::ServiceRequestedEventHandler const& handler) const;
+        auto ServiceRequested(winrt::Windows::Media::Protection::ServiceRequestedEventHandler const& handler) const;
         using ServiceRequested_revoker = impl::event_revoker<winrt::Windows::Media::Protection::IMediaProtectionManager, &impl::abi_t<winrt::Windows::Media::Protection::IMediaProtectionManager>::remove_ServiceRequested>;
         [[nodiscard]] ServiceRequested_revoker ServiceRequested(auto_revoke_t, winrt::Windows::Media::Protection::ServiceRequestedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) ServiceRequested(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) RebootNeeded(winrt::Windows::Media::Protection::RebootNeededEventHandler const& handler) const;
+        auto ServiceRequested(winrt::event_token const& cookie) const noexcept;
+        auto RebootNeeded(winrt::Windows::Media::Protection::RebootNeededEventHandler const& handler) const;
         using RebootNeeded_revoker = impl::event_revoker<winrt::Windows::Media::Protection::IMediaProtectionManager, &impl::abi_t<winrt::Windows::Media::Protection::IMediaProtectionManager>::remove_RebootNeeded>;
         [[nodiscard]] RebootNeeded_revoker RebootNeeded(auto_revoke_t, winrt::Windows::Media::Protection::RebootNeededEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) RebootNeeded(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) ComponentLoadFailed(winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler const& handler) const;
+        auto RebootNeeded(winrt::event_token const& cookie) const noexcept;
+        auto ComponentLoadFailed(winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler const& handler) const;
         using ComponentLoadFailed_revoker = impl::event_revoker<winrt::Windows::Media::Protection::IMediaProtectionManager, &impl::abi_t<winrt::Windows::Media::Protection::IMediaProtectionManager>::remove_ComponentLoadFailed>;
         [[nodiscard]] ComponentLoadFailed_revoker ComponentLoadFailed(auto_revoke_t, winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) ComponentLoadFailed(winrt::event_token const& cookie) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) Properties() const;
+        auto ComponentLoadFailed(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IMediaProtectionManager>
     {
@@ -384,7 +380,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IMediaProtectionPMPServer
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) Properties() const;
+        [[nodiscard]] auto Properties() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IMediaProtectionPMPServer>
     {
@@ -393,7 +389,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IMediaProtectionPMPServerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::MediaProtectionPMPServer) CreatePMPServer(winrt::Windows::Foundation::Collections::IPropertySet const& pProperties) const;
+        auto CreatePMPServer(winrt::Windows::Foundation::Collections::IPropertySet const& pProperties) const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IMediaProtectionPMPServerFactory>
     {
@@ -402,7 +398,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IMediaProtectionServiceCompletion
     {
-        WINRT_IMPL_AUTO(void) Complete(bool success) const;
+        auto Complete(bool success) const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IMediaProtectionServiceCompletion>
     {
@@ -411,8 +407,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IMediaProtectionServiceRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) ProtectionSystem() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Type() const;
+        [[nodiscard]] auto ProtectionSystem() const;
+        [[nodiscard]] auto Type() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
     {
@@ -421,7 +417,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IProtectionCapabilities
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::ProtectionCapabilityResult) IsTypeSupported(param::hstring const& type, param::hstring const& keySystem) const;
+        auto IsTypeSupported(param::hstring const& type, param::hstring const& keySystem) const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IProtectionCapabilities>
     {
@@ -430,7 +426,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IRevocationAndRenewalInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Protection::RevocationAndRenewalItem>) Items() const;
+        [[nodiscard]] auto Items() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IRevocationAndRenewalInformation>
     {
@@ -439,11 +435,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IRevocationAndRenewalItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::RevocationAndRenewalReasons) Reasons() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderHash() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PublicKeyHash() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RenewalId() const;
+        [[nodiscard]] auto Reasons() const;
+        [[nodiscard]] auto HeaderHash() const;
+        [[nodiscard]] auto PublicKeyHash() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto RenewalId() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IRevocationAndRenewalItem>
     {
@@ -452,8 +448,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IServiceRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::IMediaProtectionServiceRequest) Request() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::MediaProtectionServiceCompletion) Completion() const;
+        [[nodiscard]] auto Request() const;
+        [[nodiscard]] auto Completion() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IServiceRequestedEventArgs>
     {
@@ -462,7 +458,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Protection_IServiceRequestedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlaybackItem) MediaPlaybackItem() const;
+        [[nodiscard]] auto MediaPlaybackItem() const;
     };
     template <> struct consume<winrt::Windows::Media::Protection::IServiceRequestedEventArgs2>
     {

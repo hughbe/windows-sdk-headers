@@ -1067,7 +1067,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAnalyticsInfoStatics = _uuidof(IAnalyticsInfoStatics);
+                MIDL_CONST_ID IID& IID_IAnalyticsInfoStatics = __uuidof(IAnalyticsInfoStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1104,7 +1104,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAnalyticsInfoStatics2 = _uuidof(IAnalyticsInfoStatics2);
+                MIDL_CONST_ID IID& IID_IAnalyticsInfoStatics2 = __uuidof(IAnalyticsInfoStatics2);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1143,7 +1143,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAnalyticsVersionInfo = _uuidof(IAnalyticsVersionInfo);
+                MIDL_CONST_ID IID& IID_IAnalyticsVersionInfo = __uuidof(IAnalyticsVersionInfo);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1179,7 +1179,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAnalyticsVersionInfo2 = _uuidof(IAnalyticsVersionInfo2);
+                MIDL_CONST_ID IID& IID_IAnalyticsVersionInfo2 = __uuidof(IAnalyticsVersionInfo2);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1216,7 +1216,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppApplicabilityStatics = _uuidof(IAppApplicabilityStatics);
+                MIDL_CONST_ID IID& IID_IAppApplicabilityStatics = __uuidof(IAppApplicabilityStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1252,7 +1252,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IEducationSettingsStatics = _uuidof(IEducationSettingsStatics);
+                MIDL_CONST_ID IID& IID_IEducationSettingsStatics = __uuidof(IEducationSettingsStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1289,7 +1289,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHardwareIdentificationStatics = _uuidof(IHardwareIdentificationStatics);
+                MIDL_CONST_ID IID& IID_IHardwareIdentificationStatics = __uuidof(IHardwareIdentificationStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1331,7 +1331,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHardwareToken = _uuidof(IHardwareToken);
+                MIDL_CONST_ID IID& IID_IHardwareToken = __uuidof(IHardwareToken);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1430,7 +1430,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IKnownRetailInfoPropertiesStatics = _uuidof(IKnownRetailInfoPropertiesStatics);
+                MIDL_CONST_ID IID& IID_IKnownRetailInfoPropertiesStatics = __uuidof(IKnownRetailInfoPropertiesStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1477,7 +1477,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPlatformDiagnosticsAndUsageDataSettingsStatics = _uuidof(IPlatformDiagnosticsAndUsageDataSettingsStatics);
+                MIDL_CONST_ID IID& IID_IPlatformDiagnosticsAndUsageDataSettingsStatics = __uuidof(IPlatformDiagnosticsAndUsageDataSettingsStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1516,7 +1516,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRetailInfoStatics = _uuidof(IRetailInfoStatics);
+                MIDL_CONST_ID IID& IID_IRetailInfoStatics = __uuidof(IRetailInfoStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1552,7 +1552,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedModeSettingsStatics = _uuidof(ISharedModeSettingsStatics);
+                MIDL_CONST_ID IID& IID_ISharedModeSettingsStatics = __uuidof(ISharedModeSettingsStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1588,7 +1588,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedModeSettingsStatics2 = _uuidof(ISharedModeSettingsStatics2);
+                MIDL_CONST_ID IID& IID_ISharedModeSettingsStatics2 = __uuidof(ISharedModeSettingsStatics2);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1631,7 +1631,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISmartAppControlPolicyStatics = _uuidof(ISmartAppControlPolicyStatics);
+                MIDL_CONST_ID IID& IID_ISmartAppControlPolicyStatics = __uuidof(ISmartAppControlPolicyStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1670,7 +1670,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemIdentificationInfo = _uuidof(ISystemIdentificationInfo);
+                MIDL_CONST_ID IID& IID_ISystemIdentificationInfo = __uuidof(ISystemIdentificationInfo);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1710,7 +1710,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemIdentificationStatics = _uuidof(ISystemIdentificationStatics);
+                MIDL_CONST_ID IID& IID_ISystemIdentificationStatics = __uuidof(ISystemIdentificationStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1753,7 +1753,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISystemSetupInfoStatics = _uuidof(ISystemSetupInfoStatics);
+                MIDL_CONST_ID IID& IID_ISystemSetupInfoStatics = __uuidof(ISystemSetupInfoStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1792,7 +1792,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUnsupportedAppRequirement = _uuidof(IUnsupportedAppRequirement);
+                MIDL_CONST_ID IID& IID_IUnsupportedAppRequirement = __uuidof(IUnsupportedAppRequirement);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -1844,7 +1844,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWindowsIntegrityPolicyStatics = _uuidof(IWindowsIntegrityPolicyStatics);
+                MIDL_CONST_ID IID& IID_IWindowsIntegrityPolicyStatics = __uuidof(IWindowsIntegrityPolicyStatics);
             } /* Profile */
         } /* System */
     } /* Windows */
@@ -2046,8 +2046,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.Profile.ProfileSharedModeContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
+ *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5226,8 +5226,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.Profile.ProfileSharedModeContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
+ *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

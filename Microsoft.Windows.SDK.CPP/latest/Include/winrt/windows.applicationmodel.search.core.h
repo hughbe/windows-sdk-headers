@@ -625,7 +625,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IRequestingFocusOnKeyboardInputEventArgs = _uuidof(IRequestingFocusOnKeyboardInputEventArgs);
+                    MIDL_CONST_ID IID& IID_IRequestingFocusOnKeyboardInputEventArgs = __uuidof(IRequestingFocusOnKeyboardInputEventArgs);
                 } /* Core */
             } /* Search */
         } /* ApplicationModel */
@@ -678,7 +678,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISearchSuggestion = _uuidof(ISearchSuggestion);
+                    MIDL_CONST_ID IID& IID_ISearchSuggestion = __uuidof(ISearchSuggestion);
                 } /* Core */
             } /* Search */
         } /* ApplicationModel */
@@ -765,7 +765,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISearchSuggestionManager = _uuidof(ISearchSuggestionManager);
+                    MIDL_CONST_ID IID& IID_ISearchSuggestionManager = __uuidof(ISearchSuggestionManager);
                 } /* Core */
             } /* Search */
         } /* ApplicationModel */
@@ -812,7 +812,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISearchSuggestionsRequestedEventArgs = _uuidof(ISearchSuggestionsRequestedEventArgs);
+                    MIDL_CONST_ID IID& IID_ISearchSuggestionsRequestedEventArgs = __uuidof(ISearchSuggestionsRequestedEventArgs);
                 } /* Core */
             } /* Search */
         } /* ApplicationModel */

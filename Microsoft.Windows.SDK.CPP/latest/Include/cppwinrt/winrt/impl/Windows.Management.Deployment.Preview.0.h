@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -44,7 +44,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Deployment_Preview_IClassicAppManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo) FindInstalledApp(param::hstring const& appUninstallKey) const;
+        auto FindInstalledApp(param::hstring const& appUninstallKey) const;
     };
     template <> struct consume<winrt::Windows::Management::Deployment::Preview::IClassicAppManagerStatics>
     {
@@ -53,8 +53,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayVersion() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto DisplayVersion() const;
     };
     template <> struct consume<winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo>
     {

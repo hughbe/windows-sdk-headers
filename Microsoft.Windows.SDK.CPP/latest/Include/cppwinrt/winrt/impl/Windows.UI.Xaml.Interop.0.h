@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -172,7 +172,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_IBindableIterable
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::IBindableIterator) First() const;
+        auto First() const;
 
         auto begin() const;
         auto end() const;
@@ -184,9 +184,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_IBindableIterator
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Current() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasCurrent() const;
-        WINRT_IMPL_AUTO(bool) MoveNext() const;
+        [[nodiscard]] auto Current() const;
+        [[nodiscard]] auto HasCurrent() const;
+        auto MoveNext() const;
 
         auto& operator++()
         {
@@ -215,10 +215,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_IBindableObservableVector
     {
-        WINRT_IMPL_AUTO(winrt::event_token) VectorChanged(winrt::Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler const& handler) const;
+        auto VectorChanged(winrt::Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler const& handler) const;
         using VectorChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector, &impl::abi_t<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::remove_VectorChanged>;
         [[nodiscard]] VectorChanged_revoker VectorChanged(auto_revoke_t, winrt::Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) VectorChanged(winrt::event_token const& token) const noexcept;
+        auto VectorChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>
     {
@@ -227,16 +227,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_IBindableVector
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetAt(uint32_t index) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::IBindableVectorView) GetView() const;
-        WINRT_IMPL_AUTO(bool) IndexOf(winrt::Windows::Foundation::IInspectable const& value, uint32_t& index) const;
-        WINRT_IMPL_AUTO(void) SetAt(uint32_t index, winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(void) InsertAt(uint32_t index, winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAt(uint32_t index) const;
-        WINRT_IMPL_AUTO(void) Append(winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAtEnd() const;
-        WINRT_IMPL_AUTO(void) Clear() const;
+        auto GetAt(uint32_t index) const;
+        [[nodiscard]] auto Size() const;
+        auto GetView() const;
+        auto IndexOf(winrt::Windows::Foundation::IInspectable const& value, uint32_t& index) const;
+        auto SetAt(uint32_t index, winrt::Windows::Foundation::IInspectable const& value) const;
+        auto InsertAt(uint32_t index, winrt::Windows::Foundation::IInspectable const& value) const;
+        auto RemoveAt(uint32_t index) const;
+        auto Append(winrt::Windows::Foundation::IInspectable const& value) const;
+        auto RemoveAtEnd() const;
+        auto Clear() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::IBindableVector>
     {
@@ -245,9 +245,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_IBindableVectorView
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetAt(uint32_t index) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Size() const;
-        WINRT_IMPL_AUTO(bool) IndexOf(winrt::Windows::Foundation::IInspectable const& value, uint32_t& index) const;
+        auto GetAt(uint32_t index) const;
+        [[nodiscard]] auto Size() const;
+        auto IndexOf(winrt::Windows::Foundation::IInspectable const& value, uint32_t& index) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>
     {
@@ -256,10 +256,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_INotifyCollectionChanged
     {
-        WINRT_IMPL_AUTO(winrt::event_token) CollectionChanged(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler const& handler) const;
+        auto CollectionChanged(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler const& handler) const;
         using CollectionChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged, &impl::abi_t<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::remove_CollectionChanged>;
         [[nodiscard]] CollectionChanged_revoker CollectionChanged(auto_revoke_t, winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) CollectionChanged(winrt::event_token const& token) const noexcept;
+        auto CollectionChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>
     {
@@ -268,11 +268,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction) Action() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::IBindableVector) NewItems() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::IBindableVector) OldItems() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) NewStartingIndex() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) OldStartingIndex() const;
+        [[nodiscard]] auto Action() const;
+        [[nodiscard]] auto NewItems() const;
+        [[nodiscard]] auto OldItems() const;
+        [[nodiscard]] auto NewStartingIndex() const;
+        [[nodiscard]] auto OldStartingIndex() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs>
     {
@@ -281,7 +281,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs) CreateInstanceWithAllParameters(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, winrt::Windows::UI::Xaml::Interop::IBindableVector const& newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithAllParameters(winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, winrt::Windows::UI::Xaml::Interop::IBindableVector const& newItems, winrt::Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory>
     {

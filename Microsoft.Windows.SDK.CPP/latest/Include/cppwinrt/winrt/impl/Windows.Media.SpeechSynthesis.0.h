@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,18 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_Media_SpeechSynthesis_0_H
 #define WINRT_Windows_Media_SpeechSynthesis_0_H
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-}
-WINRT_EXPORT namespace winrt::Windows::Media
-{
-    struct IMediaMarker;
-}
 WINRT_EXPORT namespace winrt::Windows::Media::SpeechSynthesis
 {
     enum class SpeechAppendedSilence : int32_t
@@ -181,8 +169,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_IInstalledVoicesStatic
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>) AllVoices() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::VoiceInformation) DefaultVoice() const;
+        [[nodiscard]] auto AllVoices() const;
+        [[nodiscard]] auto DefaultVoice() const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::IInstalledVoicesStatic>
     {
@@ -191,7 +179,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_IInstalledVoicesStatic2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TrySetDefaultVoiceAsync(winrt::Windows::Media::SpeechSynthesis::VoiceInformation const& voice) const;
+        auto TrySetDefaultVoiceAsync(winrt::Windows::Media::SpeechSynthesis::VoiceInformation const& voice) const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::IInstalledVoicesStatic2>
     {
@@ -200,7 +188,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesisStream
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::IMediaMarker>) Markers() const;
+        [[nodiscard]] auto Markers() const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesisStream>
     {
@@ -209,10 +197,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesizer
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>) SynthesizeTextToStreamAsync(param::hstring const& text) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>) SynthesizeSsmlToStreamAsync(param::hstring const& Ssml) const;
-        WINRT_IMPL_AUTO(void) Voice(winrt::Windows::Media::SpeechSynthesis::VoiceInformation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::VoiceInformation) Voice() const;
+        auto SynthesizeTextToStreamAsync(param::hstring const& text) const;
+        auto SynthesizeSsmlToStreamAsync(param::hstring const& Ssml) const;
+        auto Voice(winrt::Windows::Media::SpeechSynthesis::VoiceInformation const& value) const;
+        [[nodiscard]] auto Voice() const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizer>
     {
@@ -221,7 +209,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesizer2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions) Options() const;
+        [[nodiscard]] auto Options() const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizer2>
     {
@@ -230,10 +218,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesizerOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeWordBoundaryMetadata() const;
-        WINRT_IMPL_AUTO(void) IncludeWordBoundaryMetadata(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeSentenceBoundaryMetadata() const;
-        WINRT_IMPL_AUTO(void) IncludeSentenceBoundaryMetadata(bool value) const;
+        [[nodiscard]] auto IncludeWordBoundaryMetadata() const;
+        auto IncludeWordBoundaryMetadata(bool value) const;
+        [[nodiscard]] auto IncludeSentenceBoundaryMetadata() const;
+        auto IncludeSentenceBoundaryMetadata(bool value) const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions>
     {
@@ -242,12 +230,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesizerOptions2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) AudioVolume() const;
-        WINRT_IMPL_AUTO(void) AudioVolume(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) SpeakingRate() const;
-        WINRT_IMPL_AUTO(void) SpeakingRate(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) AudioPitch() const;
-        WINRT_IMPL_AUTO(void) AudioPitch(double value) const;
+        [[nodiscard]] auto AudioVolume() const;
+        auto AudioVolume(double value) const;
+        [[nodiscard]] auto SpeakingRate() const;
+        auto SpeakingRate(double value) const;
+        [[nodiscard]] auto AudioPitch() const;
+        auto AudioPitch(double value) const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>
     {
@@ -256,10 +244,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_ISpeechSynthesizerOptions3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence) AppendedSilence() const;
-        WINRT_IMPL_AUTO(void) AppendedSilence(winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence) PunctuationSilence() const;
-        WINRT_IMPL_AUTO(void) PunctuationSilence(winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence const& value) const;
+        [[nodiscard]] auto AppendedSilence() const;
+        auto AppendedSilence(winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence const& value) const;
+        [[nodiscard]] auto PunctuationSilence() const;
+        auto PunctuationSilence(winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence const& value) const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3>
     {
@@ -268,11 +256,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_SpeechSynthesis_IVoiceInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Media::SpeechSynthesis::VoiceGender) Gender() const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Language() const;
+        [[nodiscard]] auto Description() const;
+        [[nodiscard]] auto Gender() const;
     };
     template <> struct consume<winrt::Windows::Media::SpeechSynthesis::IVoiceInformation>
     {

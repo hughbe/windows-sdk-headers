@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,37 +6,16 @@
 #pragma once
 #ifndef WINRT_Windows_ApplicationModel_UserDataAccounts_0_H
 #define WINRT_Windows_ApplicationModel_UserDataAccounts_0_H
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments
-{
-    struct AppointmentCalendar;
-}
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts
-{
-    struct ContactAnnotationList;
-    struct ContactGroup;
-    struct ContactList;
-}
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Email
-{
-    struct EmailMailbox;
-}
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataTasks
-{
-    struct UserDataTaskList;
-}
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     struct IPropertySet;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -248,20 +227,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDisplayName() const;
-        WINRT_IMPL_AUTO(void) UserDisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess) OtherAppReadAccess() const;
-        WINRT_IMPL_AUTO(void) OtherAppReadAccess(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) Icon() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceAccountTypeId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PackageFamilyName() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>>) FindAppointmentCalendarsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Email::EmailMailbox>>) FindEmailMailboxesAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactList>>) FindContactListsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>>) FindContactAnnotationListsAsync() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto UserDisplayName() const;
+        auto UserDisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto OtherAppReadAccess() const;
+        auto OtherAppReadAccess(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const& value) const;
+        [[nodiscard]] auto Icon() const;
+        [[nodiscard]] auto DeviceAccountTypeId() const;
+        [[nodiscard]] auto PackageFamilyName() const;
+        auto SaveAsync() const;
+        auto DeleteAsync() const;
+        auto FindAppointmentCalendarsAsync() const;
+        auto FindEmailMailboxesAsync() const;
+        auto FindContactListsAsync() const;
+        auto FindContactAnnotationListsAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount>
     {
@@ -270,8 +249,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) EnterpriseId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsProtectedUnderLock() const;
+        [[nodiscard]] auto EnterpriseId() const;
+        [[nodiscard]] auto IsProtectedUnderLock() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2>
     {
@@ -280,9 +259,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ExplictReadAccessPackageFamilyNames() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto ExplictReadAccessPackageFamilyNames() const;
+        [[nodiscard]] auto DisplayName() const;
+        auto DisplayName(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3>
     {
@@ -291,14 +270,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanShowCreateContactGroup() const;
-        WINRT_IMPL_AUTO(void) CanShowCreateContactGroup(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) ProviderProperties() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>) FindUserDataTaskListsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactGroup>>) FindContactGroupsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) TryShowCreateContactGroupAsync() const;
-        WINRT_IMPL_AUTO(void) IsProtectedUnderLock(bool value) const;
-        WINRT_IMPL_AUTO(void) Icon(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto CanShowCreateContactGroup() const;
+        auto CanShowCreateContactGroup(bool value) const;
+        [[nodiscard]] auto ProviderProperties() const;
+        auto FindUserDataTaskListsAsync() const;
+        auto FindContactGroupsAsync() const;
+        auto TryShowCreateContactGroupAsync() const;
+        auto IsProtectedUnderLock(bool value) const;
+        auto Icon(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4>
     {
@@ -307,8 +286,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerForUser
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        auto RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser>
     {
@@ -317,10 +296,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) ShowAddAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAccountSettingsAsync(param::hstring const& id) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAccountErrorResolverAsync(param::hstring const& id) const;
+        auto RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const;
+        auto ShowAddAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds) const;
+        auto ShowAccountSettingsAsync(param::hstring const& id) const;
+        auto ShowAccountErrorResolverAsync(param::hstring const& id) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics>
     {
@@ -329,7 +308,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2>
     {
@@ -338,9 +317,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>) FindAccountsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) GetAccountAsync(param::hstring const& id) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) CreateAccountAsync(param::hstring const& userDisplayName) const;
+        auto FindAccountsAsync() const;
+        auto GetAccountAsync(param::hstring const& id) const;
+        auto CreateAccountAsync(param::hstring const& userDisplayName) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore>
     {
@@ -349,11 +328,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId) const;
-        WINRT_IMPL_AUTO(winrt::event_token) StoreChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const;
+        auto CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId) const;
+        auto StoreChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const;
         using StoreChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2, &impl::abi_t<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2>::remove_StoreChanged>;
         [[nodiscard]] StoreChanged_revoker StoreChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) StoreChanged(winrt::event_token const& token) const noexcept;
+        auto StoreChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2>
     {
@@ -362,7 +341,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId, param::hstring const& enterpriseId) const;
+        auto CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId, param::hstring const& enterpriseId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3>
     {
@@ -371,7 +350,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStoreChangedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs>
     {

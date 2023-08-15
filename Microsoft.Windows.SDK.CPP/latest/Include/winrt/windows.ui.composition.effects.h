@@ -266,7 +266,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISceneLightingEffect = _uuidof(ISceneLightingEffect);
+                    MIDL_CONST_ID IID& IID_ISceneLightingEffect = __uuidof(ISceneLightingEffect);
                 } /* Effects */
             } /* Composition */
         } /* UI */
@@ -307,7 +307,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ISceneLightingEffect2 = _uuidof(ISceneLightingEffect2);
+                    MIDL_CONST_ID IID& IID_ISceneLightingEffect2 = __uuidof(ISceneLightingEffect2);
                 } /* Effects */
             } /* Composition */
         } /* UI */

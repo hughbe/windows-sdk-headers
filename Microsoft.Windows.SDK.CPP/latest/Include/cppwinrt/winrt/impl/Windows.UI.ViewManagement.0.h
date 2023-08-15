@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,15 +15,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Rect;
     struct Size;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::UI
 {
@@ -40,7 +35,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Popups
 }
 WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement
 {
-    struct DisplayRegion;
     struct WindowingEnvironment;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement
@@ -930,12 +924,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IAccessibilitySettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HighContrast() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HighContrastScheme() const;
-        WINRT_IMPL_AUTO(winrt::event_token) HighContrastChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::AccessibilitySettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto HighContrast() const;
+        [[nodiscard]] auto HighContrastScheme() const;
+        auto HighContrastChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::AccessibilitySettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using HighContrastChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IAccessibilitySettings, &impl::abi_t<winrt::Windows::UI::ViewManagement::IAccessibilitySettings>::remove_HighContrastChanged>;
         [[nodiscard]] HighContrastChanged_revoker HighContrastChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::AccessibilitySettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) HighContrastChanged(winrt::event_token const& cookie) const noexcept;
+        auto HighContrastChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IAccessibilitySettings>
     {
@@ -944,9 +938,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IActivationViewSwitcher
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAsStandaloneAsync(int32_t viewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference) const;
-        WINRT_IMPL_AUTO(bool) IsViewPresentedOnActivationVirtualDesktop(int32_t viewId) const;
+        auto ShowAsStandaloneAsync(int32_t viewId) const;
+        auto ShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference) const;
+        auto IsViewPresentedOnActivationVirtualDesktop(int32_t viewId) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IActivationViewSwitcher>
     {
@@ -955,20 +949,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewOrientation) Orientation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AdjacentToLeftDisplayEdge() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AdjacentToRightDisplayEdge() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFullScreen() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOnLockScreen() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsScreenCaptureEnabled() const;
-        WINRT_IMPL_AUTO(void) IsScreenCaptureEnabled(bool value) const;
-        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Id() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Consolidated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs> const& handler) const;
+        [[nodiscard]] auto Orientation() const;
+        [[nodiscard]] auto AdjacentToLeftDisplayEdge() const;
+        [[nodiscard]] auto AdjacentToRightDisplayEdge() const;
+        [[nodiscard]] auto IsFullScreen() const;
+        [[nodiscard]] auto IsOnLockScreen() const;
+        [[nodiscard]] auto IsScreenCaptureEnabled() const;
+        auto IsScreenCaptureEnabled(bool value) const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Id() const;
+        auto Consolidated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs> const& handler) const;
         using Consolidated_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IApplicationView, &impl::abi_t<winrt::Windows::UI::ViewManagement::IApplicationView>::remove_Consolidated>;
         [[nodiscard]] Consolidated_revoker Consolidated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Consolidated(winrt::event_token const& token) const noexcept;
+        auto Consolidated(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView>
     {
@@ -977,15 +971,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SuppressSystemOverlays() const;
-        WINRT_IMPL_AUTO(void) SuppressSystemOverlays(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) VisibleBounds() const;
-        WINRT_IMPL_AUTO(winrt::event_token) VisibleBoundsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto SuppressSystemOverlays() const;
+        auto SuppressSystemOverlays(bool value) const;
+        [[nodiscard]] auto VisibleBounds() const;
+        auto VisibleBoundsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using VisibleBoundsChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IApplicationView2, &impl::abi_t<winrt::Windows::UI::ViewManagement::IApplicationView2>::remove_VisibleBoundsChanged>;
         [[nodiscard]] VisibleBoundsChanged_revoker VisibleBoundsChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::ApplicationView, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) VisibleBoundsChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(bool) SetDesiredBoundsMode(winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode const& boundsMode) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode) DesiredBoundsMode() const;
+        auto VisibleBoundsChanged(winrt::event_token const& token) const noexcept;
+        auto SetDesiredBoundsMode(winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode const& boundsMode) const;
+        [[nodiscard]] auto DesiredBoundsMode() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView2>
     {
@@ -994,15 +988,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar) TitleBar() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::FullScreenSystemOverlayMode) FullScreenSystemOverlayMode() const;
-        WINRT_IMPL_AUTO(void) FullScreenSystemOverlayMode(winrt::Windows::UI::ViewManagement::FullScreenSystemOverlayMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFullScreenMode() const;
-        WINRT_IMPL_AUTO(bool) TryEnterFullScreenMode() const;
-        WINRT_IMPL_AUTO(void) ExitFullScreenMode() const;
-        WINRT_IMPL_AUTO(void) ShowStandardSystemOverlays() const;
-        WINRT_IMPL_AUTO(bool) TryResizeView(winrt::Windows::Foundation::Size const& value) const;
-        WINRT_IMPL_AUTO(void) SetPreferredMinSize(winrt::Windows::Foundation::Size const& minSize) const;
+        [[nodiscard]] auto TitleBar() const;
+        [[nodiscard]] auto FullScreenSystemOverlayMode() const;
+        auto FullScreenSystemOverlayMode(winrt::Windows::UI::ViewManagement::FullScreenSystemOverlayMode const& value) const;
+        [[nodiscard]] auto IsFullScreenMode() const;
+        auto TryEnterFullScreenMode() const;
+        auto ExitFullScreenMode() const;
+        auto ShowStandardSystemOverlays() const;
+        auto TryResizeView(winrt::Windows::Foundation::Size const& value) const;
+        auto SetPreferredMinSize(winrt::Windows::Foundation::Size const& minSize) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView3>
     {
@@ -1011,11 +1005,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewMode) ViewMode() const;
-        WINRT_IMPL_AUTO(bool) IsViewModeSupported(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryEnterViewModeAsync(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryEnterViewModeAsync(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode, winrt::Windows::UI::ViewManagement::ViewModePreferences const& viewModePreferences) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryConsolidateAsync() const;
+        [[nodiscard]] auto ViewMode() const;
+        auto IsViewModeSupported(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
+        auto TryEnterViewModeAsync(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
+        auto TryEnterViewModeAsync(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode, winrt::Windows::UI::ViewManagement::ViewModePreferences const& viewModePreferences) const;
+        auto TryConsolidateAsync() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView4>
     {
@@ -1024,8 +1018,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView7
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PersistedStateId() const;
-        WINRT_IMPL_AUTO(void) PersistedStateId(param::hstring const& value) const;
+        [[nodiscard]] auto PersistedStateId() const;
+        auto PersistedStateId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView7>
     {
@@ -1034,8 +1028,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationView9
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) WindowingEnvironment() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::WindowManagement::DisplayRegion>) GetDisplayRegions() const;
+        [[nodiscard]] auto WindowingEnvironment() const;
+        auto GetDisplayRegions() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationView9>
     {
@@ -1044,7 +1038,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewConsolidatedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUserInitiated() const;
+        [[nodiscard]] auto IsUserInitiated() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs>
     {
@@ -1053,7 +1047,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewConsolidatedEventArgs2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAppInitiated() const;
+        [[nodiscard]] auto IsAppInitiated() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewConsolidatedEventArgs2>
     {
@@ -1062,7 +1056,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewFullscreenStatics
     {
-        WINRT_IMPL_AUTO(bool) TryUnsnapToFullscreen() const;
+        auto TryUnsnapToFullscreen() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewFullscreenStatics>
     {
@@ -1071,7 +1065,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewInteropStatics
     {
-        WINRT_IMPL_AUTO(int32_t) GetApplicationViewIdForWindow(winrt::Windows::UI::Core::ICoreWindow const& window) const;
+        auto GetApplicationViewIdForWindow(winrt::Windows::UI::Core::ICoreWindow const& window) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewInteropStatics>
     {
@@ -1088,8 +1082,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewScalingStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) DisableLayoutScaling() const;
-        WINRT_IMPL_AUTO(bool) TrySetDisableLayoutScaling(bool disableLayoutScaling) const;
+        [[nodiscard]] auto DisableLayoutScaling() const;
+        auto TrySetDisableLayoutScaling(bool disableLayoutScaling) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics>
     {
@@ -1098,8 +1092,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewState) Value() const;
-        WINRT_IMPL_AUTO(bool) TryUnsnap() const;
+        [[nodiscard]] auto Value() const;
+        auto TryUnsnap() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewStatics>
     {
@@ -1108,9 +1102,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationView) GetForCurrentView() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) TerminateAppOnFinalViewClose() const;
-        WINRT_IMPL_AUTO(void) TerminateAppOnFinalViewClose(bool value) const;
+        auto GetForCurrentView() const;
+        [[nodiscard]] auto TerminateAppOnFinalViewClose() const;
+        auto TerminateAppOnFinalViewClose(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2>
     {
@@ -1119,10 +1113,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode) PreferredLaunchWindowingMode() const;
-        WINRT_IMPL_AUTO(void) PreferredLaunchWindowingMode(winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) PreferredLaunchViewSize() const;
-        WINRT_IMPL_AUTO(void) PreferredLaunchViewSize(winrt::Windows::Foundation::Size const& value) const;
+        [[nodiscard]] auto PreferredLaunchWindowingMode() const;
+        auto PreferredLaunchWindowingMode(winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode const& value) const;
+        [[nodiscard]] auto PreferredLaunchViewSize() const;
+        auto PreferredLaunchViewSize(winrt::Windows::Foundation::Size const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3>
     {
@@ -1131,8 +1125,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewStatics4
     {
-        WINRT_IMPL_AUTO(void) ClearAllPersistedState() const;
-        WINRT_IMPL_AUTO(void) ClearPersistedState(param::hstring const& key) const;
+        auto ClearAllPersistedState() const;
+        auto ClearPersistedState(param::hstring const& key) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewStatics4>
     {
@@ -1141,14 +1135,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewSwitcherStatics
     {
-        WINRT_IMPL_AUTO(void) DisableShowingMainViewOnActivation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsStandaloneAsync(int32_t viewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference, int32_t anchorViewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& anchorSizePreference) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SwitchAsync(int32_t viewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SwitchAsync(int32_t toViewId, int32_t fromViewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SwitchAsync(int32_t toViewId, int32_t fromViewId, winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) PrepareForCustomAnimatedSwitchAsync(int32_t toViewId, int32_t fromViewId, winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions const& options) const;
+        auto DisableShowingMainViewOnActivation() const;
+        auto TryShowAsStandaloneAsync(int32_t viewId) const;
+        auto TryShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference) const;
+        auto TryShowAsStandaloneAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& sizePreference, int32_t anchorViewId, winrt::Windows::UI::ViewManagement::ViewSizePreference const& anchorSizePreference) const;
+        auto SwitchAsync(int32_t viewId) const;
+        auto SwitchAsync(int32_t toViewId, int32_t fromViewId) const;
+        auto SwitchAsync(int32_t toViewId, int32_t fromViewId, winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions const& options) const;
+        auto PrepareForCustomAnimatedSwitchAsync(int32_t toViewId, int32_t fromViewId, winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions const& options) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics>
     {
@@ -1157,7 +1151,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewSwitcherStatics2
     {
-        WINRT_IMPL_AUTO(void) DisableSystemViewActivationPolicy() const;
+        auto DisableSystemViewActivationPolicy() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics2>
     {
@@ -1166,8 +1160,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewSwitcherStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsViewModeAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryShowAsViewModeAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode, winrt::Windows::UI::ViewManagement::ViewModePreferences const& viewModePreferences) const;
+        auto TryShowAsViewModeAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode) const;
+        auto TryShowAsViewModeAsync(int32_t viewId, winrt::Windows::UI::ViewManagement::ApplicationViewMode const& viewMode, winrt::Windows::UI::ViewManagement::ViewModePreferences const& viewModePreferences) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewSwitcherStatics3>
     {
@@ -1176,30 +1170,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewTitleBar
     {
-        WINRT_IMPL_AUTO(void) ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ForegroundColor() const;
-        WINRT_IMPL_AUTO(void) BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) BackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonHoverForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonHoverForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonHoverBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonHoverBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonPressedForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonPressedForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonPressedBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonPressedBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) InactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) InactiveForegroundColor() const;
-        WINRT_IMPL_AUTO(void) InactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) InactiveBackgroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonInactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonInactiveForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ButtonInactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ButtonInactiveBackgroundColor() const;
+        auto ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ForegroundColor() const;
+        auto BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto BackgroundColor() const;
+        auto ButtonForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonForegroundColor() const;
+        auto ButtonBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonBackgroundColor() const;
+        auto ButtonHoverForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonHoverForegroundColor() const;
+        auto ButtonHoverBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonHoverBackgroundColor() const;
+        auto ButtonPressedForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonPressedForegroundColor() const;
+        auto ButtonPressedBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonPressedBackgroundColor() const;
+        auto InactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto InactiveForegroundColor() const;
+        auto InactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto InactiveBackgroundColor() const;
+        auto ButtonInactiveForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonInactiveForegroundColor() const;
+        auto ButtonInactiveBackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ButtonInactiveBackgroundColor() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewTitleBar>
     {
@@ -1208,8 +1202,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewTransferContext
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ViewId() const;
-        WINRT_IMPL_AUTO(void) ViewId(int32_t value) const;
+        [[nodiscard]] auto ViewId() const;
+        auto ViewId(int32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContext>
     {
@@ -1218,7 +1212,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewTransferContextStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DataPackageFormatId() const;
+        [[nodiscard]] auto DataPackageFormatId() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewTransferContextStatics>
     {
@@ -1227,7 +1221,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewWithContext
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::UIContext) UIContext() const;
+        [[nodiscard]] auto UIContext() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewWithContext>
     {
@@ -1236,15 +1230,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPane
     {
-        WINRT_IMPL_AUTO(winrt::event_token) Showing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
+        auto Showing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
         using Showing_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IInputPane, &impl::abi_t<winrt::Windows::UI::ViewManagement::IInputPane>::remove_Showing>;
         [[nodiscard]] Showing_revoker Showing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Showing(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
+        auto Showing(winrt::event_token const& token) const noexcept;
+        auto Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
         using Hiding_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IInputPane, &impl::abi_t<winrt::Windows::UI::ViewManagement::IInputPane>::remove_Hiding>;
         [[nodiscard]] Hiding_revoker Hiding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Hiding(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OccludedRect() const;
+        auto Hiding(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto OccludedRect() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPane>
     {
@@ -1253,8 +1247,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPane2
     {
-        WINRT_IMPL_AUTO(bool) TryShow() const;
-        WINRT_IMPL_AUTO(bool) TryHide() const;
+        auto TryShow() const;
+        auto TryHide() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPane2>
     {
@@ -1263,8 +1257,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPaneControl
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Visible() const;
-        WINRT_IMPL_AUTO(void) Visible(bool value) const;
+        [[nodiscard]] auto Visible() const;
+        auto Visible(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPaneControl>
     {
@@ -1273,7 +1267,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPaneStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::InputPane) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPaneStatics>
     {
@@ -1282,7 +1276,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPaneStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::InputPane) GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
+        auto GetForUIContext(winrt::Windows::UI::UIContext const& context) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPaneStatics2>
     {
@@ -1291,9 +1285,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IInputPaneVisibilityEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OccludedRect() const;
-        WINRT_IMPL_AUTO(void) EnsuredFocusedElementInView(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) EnsuredFocusedElementInView() const;
+        [[nodiscard]] auto OccludedRect() const;
+        auto EnsuredFocusedElementInView(bool value) const;
+        [[nodiscard]] auto EnsuredFocusedElementInView() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IInputPaneVisibilityEventArgs>
     {
@@ -1302,14 +1296,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IProjectionManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SwapDisplaysForViewsAsync(int32_t projectionViewId, int32_t anchorViewId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StopProjectingAsync(int32_t projectionViewId, int32_t anchorViewId) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ProjectionDisplayAvailable() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ProjectionDisplayAvailableChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId) const;
+        auto SwapDisplaysForViewsAsync(int32_t projectionViewId, int32_t anchorViewId) const;
+        auto StopProjectingAsync(int32_t projectionViewId, int32_t anchorViewId) const;
+        [[nodiscard]] auto ProjectionDisplayAvailable() const;
+        auto ProjectionDisplayAvailableChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ProjectionDisplayAvailableChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics, &impl::abi_t<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics>::remove_ProjectionDisplayAvailableChanged>;
         [[nodiscard]] ProjectionDisplayAvailableChanged_revoker ProjectionDisplayAvailableChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ProjectionDisplayAvailableChanged(winrt::event_token const& token) const noexcept;
+        auto ProjectionDisplayAvailableChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics>
     {
@@ -1318,10 +1312,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IProjectionManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Devices::Enumeration::DeviceInformation const& displayDeviceInfo) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestStartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Foundation::Rect const& selection) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestStartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& prefferedPlacement) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        auto StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Devices::Enumeration::DeviceInformation const& displayDeviceInfo) const;
+        auto RequestStartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Foundation::Rect const& selection) const;
+        auto RequestStartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& prefferedPlacement) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IProjectionManagerStatics2>
     {
@@ -1330,24 +1324,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IStatusBar
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) HideAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) BackgroundOpacity() const;
-        WINRT_IMPL_AUTO(void) BackgroundOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) ForegroundColor() const;
-        WINRT_IMPL_AUTO(void) ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) BackgroundColor() const;
-        WINRT_IMPL_AUTO(void) BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator) ProgressIndicator() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OccludedRect() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Showing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
+        auto ShowAsync() const;
+        auto HideAsync() const;
+        [[nodiscard]] auto BackgroundOpacity() const;
+        auto BackgroundOpacity(double value) const;
+        [[nodiscard]] auto ForegroundColor() const;
+        auto ForegroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto BackgroundColor() const;
+        auto BackgroundColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        [[nodiscard]] auto ProgressIndicator() const;
+        [[nodiscard]] auto OccludedRect() const;
+        auto Showing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
         using Showing_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IStatusBar, &impl::abi_t<winrt::Windows::UI::ViewManagement::IStatusBar>::remove_Showing>;
         [[nodiscard]] Showing_revoker Showing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
-        WINRT_IMPL_AUTO(void) Showing(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
+        auto Showing(winrt::event_token const& token) const noexcept;
+        auto Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
         using Hiding_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IStatusBar, &impl::abi_t<winrt::Windows::UI::ViewManagement::IStatusBar>::remove_Hiding>;
         [[nodiscard]] Hiding_revoker Hiding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
-        WINRT_IMPL_AUTO(void) Hiding(winrt::event_token const& token) const noexcept;
+        auto Hiding(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IStatusBar>
     {
@@ -1356,12 +1350,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IStatusBarProgressIndicator
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ShowAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) HideAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) ProgressValue() const;
-        WINRT_IMPL_AUTO(void) ProgressValue(winrt::Windows::Foundation::IReference<double> const& value) const;
+        auto ShowAsync() const;
+        auto HideAsync() const;
+        [[nodiscard]] auto Text() const;
+        auto Text(param::hstring const& value) const;
+        [[nodiscard]] auto ProgressValue() const;
+        auto ProgressValue(winrt::Windows::Foundation::IReference<double> const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IStatusBarProgressIndicator>
     {
@@ -1370,7 +1364,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IStatusBarStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::StatusBar) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IStatusBarStatics>
     {
@@ -1379,19 +1373,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::HandPreference) HandPreference() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) CursorSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) ScrollBarSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) ScrollBarArrowSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) ScrollBarThumbBoxSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MessageDuration() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AnimationsEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CaretBrowsingEnabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CaretBlinkRate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CaretWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DoubleClickTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MouseHoverTime() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Color) UIElementColor(winrt::Windows::UI::ViewManagement::UIElementType const& desiredElement) const;
+        [[nodiscard]] auto HandPreference() const;
+        [[nodiscard]] auto CursorSize() const;
+        [[nodiscard]] auto ScrollBarSize() const;
+        [[nodiscard]] auto ScrollBarArrowSize() const;
+        [[nodiscard]] auto ScrollBarThumbBoxSize() const;
+        [[nodiscard]] auto MessageDuration() const;
+        [[nodiscard]] auto AnimationsEnabled() const;
+        [[nodiscard]] auto CaretBrowsingEnabled() const;
+        [[nodiscard]] auto CaretBlinkRate() const;
+        [[nodiscard]] auto CaretWidth() const;
+        [[nodiscard]] auto DoubleClickTime() const;
+        [[nodiscard]] auto MouseHoverTime() const;
+        auto UIElementColor(winrt::Windows::UI::ViewManagement::UIElementType const& desiredElement) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings>
     {
@@ -1400,11 +1394,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) TextScaleFactor() const;
-        WINRT_IMPL_AUTO(winrt::event_token) TextScaleFactorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto TextScaleFactor() const;
+        auto TextScaleFactorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using TextScaleFactorChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings2, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings2>::remove_TextScaleFactorChanged>;
         [[nodiscard]] TextScaleFactorChanged_revoker TextScaleFactorChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) TextScaleFactorChanged(winrt::event_token const& cookie) const noexcept;
+        auto TextScaleFactorChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings2>
     {
@@ -1413,11 +1407,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Color) GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType const& desiredColor) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ColorValuesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType const& desiredColor) const;
+        auto ColorValuesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ColorValuesChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings3, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings3>::remove_ColorValuesChanged>;
         [[nodiscard]] ColorValuesChanged_revoker ColorValuesChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ColorValuesChanged(winrt::event_token const& cookie) const noexcept;
+        auto ColorValuesChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings3>
     {
@@ -1426,11 +1420,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AdvancedEffectsEnabled() const;
-        WINRT_IMPL_AUTO(winrt::event_token) AdvancedEffectsEnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto AdvancedEffectsEnabled() const;
+        auto AdvancedEffectsEnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using AdvancedEffectsEnabledChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings4, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings4>::remove_AdvancedEffectsEnabledChanged>;
         [[nodiscard]] AdvancedEffectsEnabledChanged_revoker AdvancedEffectsEnabledChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) AdvancedEffectsEnabledChanged(winrt::event_token const& cookie) const noexcept;
+        auto AdvancedEffectsEnabledChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings4>
     {
@@ -1439,11 +1433,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AutoHideScrollBars() const;
-        WINRT_IMPL_AUTO(winrt::event_token) AutoHideScrollBarsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto AutoHideScrollBars() const;
+        auto AutoHideScrollBarsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const;
         using AutoHideScrollBarsChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings5, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings5>::remove_AutoHideScrollBarsChanged>;
         [[nodiscard]] AutoHideScrollBarsChanged_revoker AutoHideScrollBarsChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) AutoHideScrollBarsChanged(winrt::event_token const& token) const noexcept;
+        auto AutoHideScrollBarsChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings5>
     {
@@ -1452,14 +1446,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUISettings6
     {
-        WINRT_IMPL_AUTO(winrt::event_token) AnimationsEnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs> const& handler) const;
+        auto AnimationsEnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs> const& handler) const;
         using AnimationsEnabledChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings6, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings6>::remove_AnimationsEnabledChanged>;
         [[nodiscard]] AnimationsEnabledChanged_revoker AnimationsEnabledChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) AnimationsEnabledChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) MessageDurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs> const& handler) const;
+        auto AnimationsEnabledChanged(winrt::event_token const& token) const noexcept;
+        auto MessageDurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs> const& handler) const;
         using MessageDurationChanged_revoker = impl::event_revoker<winrt::Windows::UI::ViewManagement::IUISettings6, &impl::abi_t<winrt::Windows::UI::ViewManagement::IUISettings6>::remove_MessageDurationChanged>;
         [[nodiscard]] MessageDurationChanged_revoker MessageDurationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) MessageDurationChanged(winrt::event_token const& token) const noexcept;
+        auto MessageDurationChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUISettings6>
     {
@@ -1492,7 +1486,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUIViewSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::UserInteractionMode) UserInteractionMode() const;
+        [[nodiscard]] auto UserInteractionMode() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUIViewSettings>
     {
@@ -1501,7 +1495,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IUIViewSettingsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::UIViewSettings) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>
     {
@@ -1510,10 +1504,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IViewModePreferences
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ViewSizePreference) ViewSizePreference() const;
-        WINRT_IMPL_AUTO(void) ViewSizePreference(winrt::Windows::UI::ViewManagement::ViewSizePreference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) CustomSize() const;
-        WINRT_IMPL_AUTO(void) CustomSize(winrt::Windows::Foundation::Size const& value) const;
+        [[nodiscard]] auto ViewSizePreference() const;
+        auto ViewSizePreference(winrt::Windows::UI::ViewManagement::ViewSizePreference const& value) const;
+        [[nodiscard]] auto CustomSize() const;
+        auto CustomSize(winrt::Windows::Foundation::Size const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IViewModePreferences>
     {
@@ -1522,7 +1516,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IViewModePreferencesStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ViewModePreferences) CreateDefault(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& mode) const;
+        auto CreateDefault(winrt::Windows::UI::ViewManagement::ApplicationViewMode const& mode) const;
     };
     template <> struct consume<winrt::Windows::UI::ViewManagement::IViewModePreferencesStatics>
     {

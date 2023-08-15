@@ -202,21 +202,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IAv1ProfileIdsStatics;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics ABI::Windows::Media::MediaProperties::IAv1ProfileIdsStatics
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_FWD_DEFINED__
 namespace ABI {
@@ -261,21 +246,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics ABI::Windows::Media::MediaProperties::IH264ProfileIdsStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IHevcProfileIdsStatics;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics ABI::Windows::Media::MediaProperties::IHevcProfileIdsStatics
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_FWD_DEFINED__
@@ -442,21 +412,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IMediaEncodingProfileStatics4;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4 ABI::Windows::Media::MediaProperties::IMediaEncodingProfileStatics4
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
 namespace ABI {
@@ -561,21 +516,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics6
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IMediaEncodingSubtypesStatics7;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7 ABI::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics7
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -741,36 +681,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2 ABI::Windows::Media::MediaProperties::IVideoEncodingPropertiesStatics2
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IVideoEncodingPropertiesStatics3;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3 ABI::Windows::Media::MediaProperties::IVideoEncodingPropertiesStatics3
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                interface IVp9ProfileIdsStatics;
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics ABI::Windows::Media::MediaProperties::IVp9ProfileIdsStatics
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -1769,7 +1679,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingProperties = _uuidof(IAudioEncodingProperties);
+                MIDL_CONST_ID IID& IID_IAudioEncodingProperties = __uuidof(IAudioEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1805,7 +1715,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingProperties2 = _uuidof(IAudioEncodingProperties2);
+                MIDL_CONST_ID IID& IID_IAudioEncodingProperties2 = __uuidof(IAudioEncodingProperties2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1841,7 +1751,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingProperties3 = _uuidof(IAudioEncodingProperties3);
+                MIDL_CONST_ID IID& IID_IAudioEncodingProperties3 = __uuidof(IAudioEncodingProperties3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1904,7 +1814,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesStatics = _uuidof(IAudioEncodingPropertiesStatics);
+                MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesStatics = __uuidof(IAudioEncodingPropertiesStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1949,7 +1859,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesStatics2 = _uuidof(IAudioEncodingPropertiesStatics2);
+                MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesStatics2 = __uuidof(IAudioEncodingPropertiesStatics2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1990,7 +1900,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesWithFormatUserData = _uuidof(IAudioEncodingPropertiesWithFormatUserData);
+                MIDL_CONST_ID IID& IID_IAudioEncodingPropertiesWithFormatUserData = __uuidof(IAudioEncodingPropertiesWithFormatUserData);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -1999,75 +1909,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IAv1ProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.Av1ProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IAv1ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IAv1ProfileIdsStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("9105812b-7c09-5882-88a4-678008a5174d")
-                IAv1ProfileIdsStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling420BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling420BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling400BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling400BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HighChromaSubsampling444BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HighChromaSubsampling444BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling420BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling400BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling444BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling422BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling422BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ProfessionalChromaSubsampling422BitDepth12(
-                        INT32* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IAv1ProfileIdsStatics = _uuidof(IAv1ProfileIdsStatics);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -2095,7 +1936,7 @@ namespace ABI {
                 public:
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContainerEncodingProperties = _uuidof(IContainerEncodingProperties);
+                MIDL_CONST_ID IID& IID_IContainerEncodingProperties = __uuidof(IContainerEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2131,7 +1972,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContainerEncodingProperties2 = _uuidof(IContainerEncodingProperties2);
+                MIDL_CONST_ID IID& IID_IContainerEncodingProperties2 = __uuidof(IContainerEncodingProperties2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2194,7 +2035,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IH264ProfileIdsStatics = _uuidof(IH264ProfileIdsStatics);
+                MIDL_CONST_ID IID& IID_IH264ProfileIdsStatics = __uuidof(IH264ProfileIdsStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2203,105 +2044,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IHevcProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.HevcProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IHevcProfileIdsStatics[] = L"Windows.Media.MediaProperties.IHevcProfileIdsStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("1e50d280-2aa7-53c1-973f-2189fa656f53")
-                IHevcProfileIdsStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling420BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling420BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling420BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling422BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling422BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling444BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling444BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainChromaSubsampling444BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MonochromeBitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MonochromeBitDepth16(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling420BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling420BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling420BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling422BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling422BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling444BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling444BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling444BitDepth12(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainIntraChromaSubsampling444BitDepth16(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainStillChromaSubsampling420BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainStillChromaSubsampling444BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MainStillChromaSubsampling444BitDepth16(
-                        INT32* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IHevcProfileIdsStatics = _uuidof(IHevcProfileIdsStatics);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -2341,7 +2083,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IImageEncodingProperties = _uuidof(IImageEncodingProperties);
+                MIDL_CONST_ID IID& IID_IImageEncodingProperties = __uuidof(IImageEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2377,7 +2119,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IImageEncodingProperties2 = _uuidof(IImageEncodingProperties2);
+                MIDL_CONST_ID IID& IID_IImageEncodingProperties2 = __uuidof(IImageEncodingProperties2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2419,7 +2161,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics = _uuidof(IImageEncodingPropertiesStatics);
+                MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics = __uuidof(IImageEncodingPropertiesStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2459,7 +2201,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics2 = _uuidof(IImageEncodingPropertiesStatics2);
+                MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics2 = __uuidof(IImageEncodingPropertiesStatics2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2495,7 +2237,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics3 = _uuidof(IImageEncodingPropertiesStatics3);
+                MIDL_CONST_ID IID& IID_IImageEncodingPropertiesStatics3 = __uuidof(IImageEncodingPropertiesStatics3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2546,7 +2288,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfile = _uuidof(IMediaEncodingProfile);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfile = __uuidof(IMediaEncodingProfile);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2591,7 +2333,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfile2 = _uuidof(IMediaEncodingProfile2);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfile2 = __uuidof(IMediaEncodingProfile2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2630,7 +2372,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfile3 = _uuidof(IMediaEncodingProfile3);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfile3 = __uuidof(IMediaEncodingProfile3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2691,7 +2433,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics = _uuidof(IMediaEncodingProfileStatics);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics = __uuidof(IMediaEncodingProfileStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2732,7 +2474,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics2 = _uuidof(IMediaEncodingProfileStatics2);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics2 = __uuidof(IMediaEncodingProfileStatics2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2777,7 +2519,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics3 = _uuidof(IMediaEncodingProfileStatics3);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics3 = __uuidof(IMediaEncodingProfileStatics3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -2786,47 +2528,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingProfile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingProfileStatics4[] = L"Windows.Media.MediaProperties.IMediaEncodingProfileStatics4";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("6fafd7b5-9404-514a-81dd-c9444d648af0")
-                IMediaEncodingProfileStatics4 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE CreateVp9(
-                        ABI::Windows::Media::MediaProperties::VideoEncodingQuality quality,
-                        ABI::Windows::Media::MediaProperties::IMediaEncodingProfile** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE CreateAv1(
-                        ABI::Windows::Media::MediaProperties::VideoEncodingQuality quality,
-                        ABI::Windows::Media::MediaProperties::IMediaEncodingProfile** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProfileStatics4 = _uuidof(IMediaEncodingProfileStatics4);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -2861,7 +2562,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingProperties = _uuidof(IMediaEncodingProperties);
+                MIDL_CONST_ID IID& IID_IMediaEncodingProperties = __uuidof(IMediaEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3014,7 +2715,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics = _uuidof(IMediaEncodingSubtypesStatics);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics = __uuidof(IMediaEncodingSubtypesStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3059,7 +2760,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics2 = _uuidof(IMediaEncodingSubtypesStatics2);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics2 = __uuidof(IMediaEncodingSubtypesStatics2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3098,7 +2799,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics3 = _uuidof(IMediaEncodingSubtypesStatics3);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics3 = __uuidof(IMediaEncodingSubtypesStatics3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3134,7 +2835,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics4 = _uuidof(IMediaEncodingSubtypesStatics4);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics4 = __uuidof(IMediaEncodingSubtypesStatics4);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3170,7 +2871,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics5 = _uuidof(IMediaEncodingSubtypesStatics5);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics5 = __uuidof(IMediaEncodingSubtypesStatics5);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3215,7 +2916,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics6 = _uuidof(IMediaEncodingSubtypesStatics6);
+                MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics6 = __uuidof(IMediaEncodingSubtypesStatics6);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3224,42 +2925,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingSubtypes
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingSubtypesStatics7[] = L"Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("92f2dca7-9937-52a1-b619-ddfad81cd99c")
-                IMediaEncodingSubtypesStatics7 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Av1(
-                        HSTRING* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IMediaEncodingSubtypesStatics7 = _uuidof(IMediaEncodingSubtypesStatics7);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3296,7 +2961,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMediaRatio = _uuidof(IMediaRatio);
+                MIDL_CONST_ID IID& IID_IMediaRatio = __uuidof(IMediaRatio);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3344,7 +3009,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMpeg2ProfileIdsStatics = _uuidof(IMpeg2ProfileIdsStatics);
+                MIDL_CONST_ID IID& IID_IMpeg2ProfileIdsStatics = __uuidof(IMpeg2ProfileIdsStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3388,7 +3053,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITimedMetadataEncodingProperties = _uuidof(ITimedMetadataEncodingProperties);
+                MIDL_CONST_ID IID& IID_ITimedMetadataEncodingProperties = __uuidof(ITimedMetadataEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3437,7 +3102,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITimedMetadataEncodingPropertiesStatics = _uuidof(ITimedMetadataEncodingPropertiesStatics);
+                MIDL_CONST_ID IID& IID_ITimedMetadataEncodingPropertiesStatics = __uuidof(ITimedMetadataEncodingPropertiesStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3497,7 +3162,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingProperties = _uuidof(IVideoEncodingProperties);
+                MIDL_CONST_ID IID& IID_IVideoEncodingProperties = __uuidof(IVideoEncodingProperties);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3544,7 +3209,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingProperties2 = _uuidof(IVideoEncodingProperties2);
+                MIDL_CONST_ID IID& IID_IVideoEncodingProperties2 = __uuidof(IVideoEncodingProperties2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3580,7 +3245,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingProperties3 = _uuidof(IVideoEncodingProperties3);
+                MIDL_CONST_ID IID& IID_IVideoEncodingProperties3 = __uuidof(IVideoEncodingProperties3);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3616,7 +3281,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingProperties4 = _uuidof(IVideoEncodingProperties4);
+                MIDL_CONST_ID IID& IID_IVideoEncodingProperties4 = __uuidof(IVideoEncodingProperties4);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3652,7 +3317,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingProperties5 = _uuidof(IVideoEncodingProperties5);
+                MIDL_CONST_ID IID& IID_IVideoEncodingProperties5 = __uuidof(IVideoEncodingProperties5);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3697,7 +3362,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingPropertiesStatics = _uuidof(IVideoEncodingPropertiesStatics);
+                MIDL_CONST_ID IID& IID_IVideoEncodingPropertiesStatics = __uuidof(IVideoEncodingPropertiesStatics);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3733,7 +3398,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingPropertiesStatics2 = _uuidof(IVideoEncodingPropertiesStatics2);
+                MIDL_CONST_ID IID& IID_IVideoEncodingPropertiesStatics2 = __uuidof(IVideoEncodingPropertiesStatics2);
             } /* MediaProperties */
         } /* Media */
     } /* Windows */
@@ -3745,87 +3410,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingP
 
 /*
  *
- * Interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.VideoEncodingProperties
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVideoEncodingPropertiesStatics3[] = L"Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("65b46685-60da-5e51-91a2-b38c4763b872")
-                IVideoEncodingPropertiesStatics3 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE CreateVp9(
-                        ABI::Windows::Media::MediaProperties::IVideoEncodingProperties** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE CreateAv1(
-                        ABI::Windows::Media::MediaProperties::IVideoEncodingProperties** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IVideoEncodingPropertiesStatics3 = _uuidof(IVideoEncodingPropertiesStatics3);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IVp9ProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.Vp9ProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVp9ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IVp9ProfileIdsStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace MediaProperties {
-                MIDL_INTERFACE("20311a55-fe06-5883-92d9-6080c97743e5")
-                IVp9ProfileIdsStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Profile0ChromaSubsampling420BitDepth8(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Profile2ChromaSubsampling420BitDepth10(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Profile2ChromaSubsampling420BitDepth12(
-                        INT32* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IVp9ProfileIdsStatics = _uuidof(IVp9ProfileIdsStatics);
-            } /* MediaProperties */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Media.MediaProperties.AudioEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -3834,8 +3418,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IAudioEncodingProperties ** Default Interface **
@@ -3855,27 +3439,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_AudioEncodingProperties[] = L"Windows.Media.MediaProperties.AudioEncodingProperties";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Media.MediaProperties.Av1ProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Av1ProfileIds[] = L"Windows.Media.MediaProperties.Av1ProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3926,27 +3489,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Media.MediaProperties.HevcProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_HevcProfileIds[] = L"Windows.Media.MediaProperties.HevcProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Media.MediaProperties.ImageEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -3955,9 +3497,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IImageEncodingProperties ** Default Interface **
@@ -3986,10 +3528,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IMediaEncodingProfile ** Default Interface **
@@ -4016,12 +3557,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -4142,7 +3682,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IVideoEncodingProperties ** Default Interface **
@@ -4163,27 +3702,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_VideoEncodingProperties[] = L"Windows.Media.MediaProperties.VideoEncodingProperties";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Media.MediaProperties.Vp9ProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Vp9ProfileIds[] = L"Windows.Media.MediaProperties.Vp9ProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -4223,12 +3741,6 @@ typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingProper
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingPropertiesWithFormatUserData_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties __x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingProperties;
@@ -4246,12 +3758,6 @@ typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIContainerEncodingPr
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics __x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics;
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIImageEncodingProperties_FWD_DEFINED__
@@ -4319,12 +3825,6 @@ typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfil
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics3_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4 __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProperties;
@@ -4366,12 +3866,6 @@ typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtyp
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6 __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6;
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7 __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaRatio_FWD_DEFINED__
@@ -4438,18 +3932,6 @@ typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProper
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2 __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2;
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics2_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3 __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics;
-
-#endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -6722,130 +6204,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingP
 
 /*
  *
- * Interface Windows.Media.MediaProperties.IAv1ProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.Av1ProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IAv1ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IAv1ProfileIdsStatics";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling420BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling420BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling400BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling400BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_HighChromaSubsampling444BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_HighChromaSubsampling444BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling420BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling400BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling444BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling422BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling422BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_ProfessionalChromaSubsampling422BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics* This,
-        INT32* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStaticsVtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_MainChromaSubsampling420BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling420BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_MainChromaSubsampling420BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling420BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_MainChromaSubsampling400BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling400BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_MainChromaSubsampling400BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling400BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_HighChromaSubsampling444BitDepth8(This, value) \
-    ((This)->lpVtbl->get_HighChromaSubsampling444BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_HighChromaSubsampling444BitDepth10(This, value) \
-    ((This)->lpVtbl->get_HighChromaSubsampling444BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling420BitDepth12(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling420BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling400BitDepth12(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling400BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling444BitDepth12(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling444BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling422BitDepth8(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling422BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling422BitDepth10(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling422BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_get_ProfessionalChromaSubsampling422BitDepth12(This, value) \
-    ((This)->lpVtbl->get_ProfessionalChromaSubsampling422BitDepth12(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Interface Windows.Media.MediaProperties.IContainerEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -7093,180 +6451,6 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIdsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IHevcProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.HevcProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IHevcProfileIdsStatics[] = L"Windows.Media.MediaProperties.IHevcProfileIdsStatics";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling420BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling420BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling420BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling422BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling422BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling444BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling444BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainChromaSubsampling444BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MonochromeBitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MonochromeBitDepth16)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling420BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling420BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling420BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling422BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling422BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling444BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling444BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling444BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainIntraChromaSubsampling444BitDepth16)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainStillChromaSubsampling420BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainStillChromaSubsampling444BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MainStillChromaSubsampling444BitDepth16)(__x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics* This,
-        INT32* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStaticsVtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling420BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling420BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling420BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling420BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling420BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling420BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling422BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling422BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling422BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling422BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling444BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling444BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling444BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling444BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainChromaSubsampling444BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainChromaSubsampling444BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MonochromeBitDepth12(This, value) \
-    ((This)->lpVtbl->get_MonochromeBitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MonochromeBitDepth16(This, value) \
-    ((This)->lpVtbl->get_MonochromeBitDepth16(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling420BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling420BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling420BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling420BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling420BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling420BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling422BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling422BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling422BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling422BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling444BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling444BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling444BitDepth10(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling444BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling444BitDepth12(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling444BitDepth12(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainIntraChromaSubsampling444BitDepth16(This, value) \
-    ((This)->lpVtbl->get_MainIntraChromaSubsampling444BitDepth16(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainStillChromaSubsampling420BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainStillChromaSubsampling420BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainStillChromaSubsampling444BitDepth8(This, value) \
-    ((This)->lpVtbl->get_MainStillChromaSubsampling444BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_get_MainStillChromaSubsampling444BitDepth16(This, value) \
-    ((This)->lpVtbl->get_MainStillChromaSubsampling444BitDepth16(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -8165,82 +7349,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingP
 
 /*
  *
- * Interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingProfile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingProfileStatics4[] = L"Windows.Media.MediaProperties.IMediaEncodingProfileStatics4";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateVp9)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        enum __x_ABI_CWindows_CMedia_CMediaProperties_CVideoEncodingQuality quality,
-        __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile** result);
-    HRESULT (STDMETHODCALLTYPE* CreateAv1)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4* This,
-        enum __x_ABI_CWindows_CMedia_CMediaProperties_CVideoEncodingQuality quality,
-        __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4Vtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_CreateVp9(This, quality, result) \
-    ((This)->lpVtbl->CreateVp9(This, quality, result))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_CreateAv1(This, quality, result) \
-    ((This)->lpVtbl->CreateAv1(This, quality, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Interface Windows.Media.MediaProperties.IMediaEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -8964,75 +8072,6 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatic
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics6_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingSubtypes
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingSubtypesStatics7[] = L"Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Av1)(__x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7* This,
-        HSTRING* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7Vtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_get_Av1(This, value) \
-    ((This)->lpVtbl->get_Av1(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -9929,159 +8968,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingP
 
 /*
  *
- * Interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.VideoEncodingProperties
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVideoEncodingPropertiesStatics3[] = L"Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateVp9)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties** result);
-    HRESULT (STDMETHODCALLTYPE* CreateAv1)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3* This,
-        __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingProperties** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3Vtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_CreateVp9(This, result) \
-    ((This)->lpVtbl->CreateVp9(This, result))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_CreateAv1(This, result) \
-    ((This)->lpVtbl->CreateAv1(This, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.Media.MediaProperties.IVp9ProfileIdsStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.Media.MediaProperties.Vp9ProfileIds
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVp9ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IVp9ProfileIdsStatics";
-typedef struct __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Profile0ChromaSubsampling420BitDepth8)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_Profile2ChromaSubsampling420BitDepth10)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_Profile2ChromaSubsampling420BitDepth12)(__x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics* This,
-        INT32* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStaticsVtbl;
-
-interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_get_Profile0ChromaSubsampling420BitDepth8(This, value) \
-    ((This)->lpVtbl->get_Profile0ChromaSubsampling420BitDepth8(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_get_Profile2ChromaSubsampling420BitDepth10(This, value) \
-    ((This)->lpVtbl->get_Profile2ChromaSubsampling420BitDepth10(This, value))
-
-#define __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_get_Profile2ChromaSubsampling420BitDepth12(This, value) \
-    ((This)->lpVtbl->get_Profile2ChromaSubsampling420BitDepth12(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics;
-#endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Media.MediaProperties.AudioEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -10090,8 +8976,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IAudioEncodingProperties ** Default Interface **
@@ -10111,27 +8997,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_AudioEncodingProperties[] = L"Windows.Media.MediaProperties.AudioEncodingProperties";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Media.MediaProperties.Av1ProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Av1ProfileIds[] = L"Windows.Media.MediaProperties.Av1ProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -10182,27 +9047,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.Media.MediaProperties.HevcProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_HevcProfileIds[] = L"Windows.Media.MediaProperties.HevcProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
  * Class Windows.Media.MediaProperties.ImageEncodingProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -10211,9 +9055,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IImageEncodingProperties ** Default Interface **
@@ -10242,10 +9086,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IMediaEncodingProfile ** Default Interface **
@@ -10272,12 +9115,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -10398,7 +9240,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IVideoEncodingProperties ** Default Interface **
@@ -10419,27 +9260,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_VideoEncodingProperties[] = L"Windows.Media.MediaProperties.VideoEncodingProperties";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Class Windows.Media.MediaProperties.Vp9ProfileIds
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
-#define RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Vp9ProfileIds[] = L"Windows.Media.MediaProperties.Vp9ProfileIds";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

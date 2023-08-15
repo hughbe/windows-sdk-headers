@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -77,10 +77,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Diagnostics_ICompositionDebugHeatMaps
     {
-        WINRT_IMPL_AUTO(void) Hide(winrt::Windows::UI::Composition::Visual const& subtree) const;
-        WINRT_IMPL_AUTO(void) ShowMemoryUsage(winrt::Windows::UI::Composition::Visual const& subtree) const;
-        WINRT_IMPL_AUTO(void) ShowOverdraw(winrt::Windows::UI::Composition::Visual const& subtree, winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds const& contentKinds) const;
-        WINRT_IMPL_AUTO(void) ShowRedraw(winrt::Windows::UI::Composition::Visual const& subtree) const;
+        auto Hide(winrt::Windows::UI::Composition::Visual const& subtree) const;
+        auto ShowMemoryUsage(winrt::Windows::UI::Composition::Visual const& subtree) const;
+        auto ShowOverdraw(winrt::Windows::UI::Composition::Visual const& subtree, winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds const& contentKinds) const;
+        auto ShowRedraw(winrt::Windows::UI::Composition::Visual const& subtree) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Diagnostics::ICompositionDebugHeatMaps>
     {
@@ -89,7 +89,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Diagnostics_ICompositionDebugSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps) HeatMaps() const;
+        [[nodiscard]] auto HeatMaps() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Diagnostics::ICompositionDebugSettings>
     {
@@ -98,7 +98,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Diagnostics_ICompositionDebugSettingsStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings) TryGetSettings(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto TryGetSettings(winrt::Windows::UI::Composition::Compositor const& compositor) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::Diagnostics::ICompositionDebugSettingsStatics>
     {

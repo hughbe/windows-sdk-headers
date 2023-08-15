@@ -2220,7 +2220,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHostMessageReceivedCallback = _uuidof(IHostMessageReceivedCallback);
+                MIDL_CONST_ID IID& IID_IHostMessageReceivedCallback = __uuidof(IHostMessageReceivedCallback);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2254,7 +2254,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageReceivedCallback = _uuidof(IMessageReceivedCallback);
+                MIDL_CONST_ID IID& IID_IMessageReceivedCallback = __uuidof(IMessageReceivedCallback);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2341,7 +2341,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment = _uuidof(IIsolatedWindowsEnvironment);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment = __uuidof(IIsolatedWindowsEnvironment);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2385,7 +2385,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment2 = _uuidof(IIsolatedWindowsEnvironment2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment2 = __uuidof(IIsolatedWindowsEnvironment2);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2432,7 +2432,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment3 = _uuidof(IIsolatedWindowsEnvironment3);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment3 = __uuidof(IIsolatedWindowsEnvironment3);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2468,7 +2468,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment4 = _uuidof(IIsolatedWindowsEnvironment4);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironment4 = __uuidof(IIsolatedWindowsEnvironment4);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2510,7 +2510,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentCreateResult = _uuidof(IIsolatedWindowsEnvironmentCreateResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentCreateResult = __uuidof(IIsolatedWindowsEnvironmentCreateResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2546,7 +2546,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentCreateResult2 = _uuidof(IIsolatedWindowsEnvironmentCreateResult2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentCreateResult2 = __uuidof(IIsolatedWindowsEnvironmentCreateResult2);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2596,7 +2596,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFactory = _uuidof(IIsolatedWindowsEnvironmentFactory);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFactory = __uuidof(IIsolatedWindowsEnvironmentFactory);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2636,7 +2636,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Close(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFile = _uuidof(IIsolatedWindowsEnvironmentFile);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFile = __uuidof(IIsolatedWindowsEnvironmentFile);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2675,7 +2675,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFile2 = _uuidof(IIsolatedWindowsEnvironmentFile2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentFile2 = __uuidof(IIsolatedWindowsEnvironmentFile2);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2714,7 +2714,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentHostStatics = _uuidof(IIsolatedWindowsEnvironmentHostStatics);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentHostStatics = __uuidof(IIsolatedWindowsEnvironmentHostStatics);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2756,7 +2756,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentLaunchFileResult = _uuidof(IIsolatedWindowsEnvironmentLaunchFileResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentLaunchFileResult = __uuidof(IIsolatedWindowsEnvironmentLaunchFileResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2841,7 +2841,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions = _uuidof(IIsolatedWindowsEnvironmentOptions);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions = __uuidof(IIsolatedWindowsEnvironmentOptions);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2880,7 +2880,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions2 = _uuidof(IIsolatedWindowsEnvironmentOptions2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions2 = __uuidof(IIsolatedWindowsEnvironmentOptions2);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2931,7 +2931,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions3 = _uuidof(IIsolatedWindowsEnvironmentOptions3);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOptions3 = __uuidof(IIsolatedWindowsEnvironmentOptions3);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -2976,7 +2976,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationData = _uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationData);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationData = __uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationData);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3015,7 +3015,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationResult = _uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationResult = __uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3056,7 +3056,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationStatics = _uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationStatics);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentOwnerRegistrationStatics = __uuidof(IIsolatedWindowsEnvironmentOwnerRegistrationStatics);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3095,7 +3095,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentPostMessageResult = _uuidof(IIsolatedWindowsEnvironmentPostMessageResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentPostMessageResult = __uuidof(IIsolatedWindowsEnvironmentPostMessageResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3141,7 +3141,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentProcess = _uuidof(IIsolatedWindowsEnvironmentProcess);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentProcess = __uuidof(IIsolatedWindowsEnvironmentProcess);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3180,7 +3180,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFileRequestOptions = _uuidof(IIsolatedWindowsEnvironmentShareFileRequestOptions);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFileRequestOptions = __uuidof(IIsolatedWindowsEnvironmentShareFileRequestOptions);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3222,7 +3222,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFileResult = _uuidof(IIsolatedWindowsEnvironmentShareFileResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFileResult = __uuidof(IIsolatedWindowsEnvironmentShareFileResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3261,7 +3261,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFolderRequestOptions = _uuidof(IIsolatedWindowsEnvironmentShareFolderRequestOptions);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFolderRequestOptions = __uuidof(IIsolatedWindowsEnvironmentShareFolderRequestOptions);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3300,7 +3300,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFolderResult = _uuidof(IIsolatedWindowsEnvironmentShareFolderResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentShareFolderResult = __uuidof(IIsolatedWindowsEnvironmentShareFolderResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3342,7 +3342,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentStartProcessResult = _uuidof(IIsolatedWindowsEnvironmentStartProcessResult);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentStartProcessResult = __uuidof(IIsolatedWindowsEnvironmentStartProcessResult);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3381,7 +3381,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentTelemetryParameters = _uuidof(IIsolatedWindowsEnvironmentTelemetryParameters);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentTelemetryParameters = __uuidof(IIsolatedWindowsEnvironmentTelemetryParameters);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3423,7 +3423,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentUserInfo = _uuidof(IIsolatedWindowsEnvironmentUserInfo);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentUserInfo = __uuidof(IIsolatedWindowsEnvironmentUserInfo);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3459,7 +3459,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentUserInfo2 = _uuidof(IIsolatedWindowsEnvironmentUserInfo2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsEnvironmentUserInfo2 = __uuidof(IIsolatedWindowsEnvironmentUserInfo2);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3500,7 +3500,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsHostMessengerStatics = _uuidof(IIsolatedWindowsHostMessengerStatics);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsHostMessengerStatics = __uuidof(IIsolatedWindowsHostMessengerStatics);
             } /* Isolation */
         } /* Security */
     } /* Windows */
@@ -3540,7 +3540,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIsolatedWindowsHostMessengerStatics2 = _uuidof(IIsolatedWindowsHostMessengerStatics2);
+                MIDL_CONST_ID IID& IID_IIsolatedWindowsHostMessengerStatics2 = __uuidof(IIsolatedWindowsHostMessengerStatics2);
             } /* Isolation */
         } /* Security */
     } /* Windows */

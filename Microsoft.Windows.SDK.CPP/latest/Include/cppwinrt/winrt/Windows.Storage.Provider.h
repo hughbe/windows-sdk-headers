@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Storage_Provider_H
 #define WINRT_Windows_Storage_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Storage.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -18,27 +18,27 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatche
 #include "winrt/impl/Windows.Storage.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_ICachedFileUpdaterStatics<D>::SetUpdateInformation(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contentId, winrt::Windows::Storage::Provider::ReadActivationMode const& readMode, winrt::Windows::Storage::Provider::WriteActivationMode const& writeMode, winrt::Windows::Storage::Provider::CachedFileOptions const& options) const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterStatics<D>::SetUpdateInformation(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contentId, winrt::Windows::Storage::Provider::ReadActivationMode const& readMode, winrt::Windows::Storage::Provider::WriteActivationMode const& writeMode, winrt::Windows::Storage::Provider::CachedFileOptions const& options) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterStatics)->SetUpdateInformation(*(void**)(&file), *(void**)(&contentId), static_cast<int32_t>(readMode), static_cast<int32_t>(writeMode), static_cast<uint32_t>(options)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::Title() const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::Title(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::Title(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->put_Title(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::CachedFileTarget) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UpdateTarget() const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UpdateTarget() const
     {
         winrt::Windows::Storage::Provider::CachedFileTarget value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->get_UpdateTarget(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::FileUpdateRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::FileUpdateRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->add_FileUpdateRequested(*(void**)(&handler), put_abi(token)));
@@ -48,11 +48,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FileUpdateRequested_revoker>(this, FileUpdateRequested(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::FileUpdateRequested(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::FileUpdateRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->remove_FileUpdateRequested(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::CachedFileUpdaterUI, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->add_UIRequested(*(void**)(&handler), put_abi(token)));
@@ -62,447 +62,363 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UIRequested_revoker>(this, UIRequested(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIRequested(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->remove_UIRequested(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::UIStatus) consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIStatus() const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI<D>::UIStatus() const
     {
         winrt::Windows::Storage::Provider::UIStatus value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI)->get_UIStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateRequest) consume_Windows_Storage_Provider_ICachedFileUpdaterUI2<D>::UpdateRequest() const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI2<D>::UpdateRequest() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI2)->get_UpdateRequest(&value));
         return winrt::Windows::Storage::Provider::FileUpdateRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateRequestDeferral) consume_Windows_Storage_Provider_ICachedFileUpdaterUI2<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Storage_Provider_ICachedFileUpdaterUI2<D>::GetDeferral() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::ICachedFileUpdaterUI2)->GetDeferral(&value));
         return winrt::Windows::Storage::Provider::FileUpdateRequestDeferral{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::ContentId() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::ContentId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->get_ContentId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFile) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::File() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::File() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->get_File(&value));
         return winrt::Windows::Storage::StorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateStatus) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::Status() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::Status() const
     {
         winrt::Windows::Storage::Provider::FileUpdateStatus value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::Status(winrt::Windows::Storage::Provider::FileUpdateStatus const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::Status(winrt::Windows::Storage::Provider::FileUpdateStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateRequestDeferral) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::GetDeferral() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->GetDeferral(&value));
         return winrt::Windows::Storage::Provider::FileUpdateRequestDeferral{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IFileUpdateRequest<D>::UpdateLocalFile(winrt::Windows::Storage::IStorageFile const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest<D>::UpdateLocalFile(winrt::Windows::Storage::IStorageFile const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest)->UpdateLocalFile(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IFileUpdateRequest2<D>::UserInputNeededMessage() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest2<D>::UserInputNeededMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest2)->get_UserInputNeededMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IFileUpdateRequest2<D>::UserInputNeededMessage(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequest2<D>::UserInputNeededMessage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequest2)->put_UserInputNeededMessage(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IFileUpdateRequestDeferral<D>::Complete() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequestDeferral<D>::Complete() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequestDeferral)->Complete());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateRequest) consume_Windows_Storage_Provider_IFileUpdateRequestedEventArgs<D>::Request() const
+    template <typename D> auto consume_Windows_Storage_Provider_IFileUpdateRequestedEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IFileUpdateRequestedEventArgs)->get_Request(&value));
         return winrt::Windows::Storage::Provider::FileUpdateRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderFileTypeInfo<D>::FileExtension() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderFileTypeInfo<D>::FileExtension() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderFileTypeInfo)->get_FileExtension(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderFileTypeInfo<D>::IconResource() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderFileTypeInfo<D>::IconResource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderFileTypeInfo)->get_IconResource(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo) consume_Windows_Storage_Provider_IStorageProviderFileTypeInfoFactory<D>::CreateInstance(param::hstring const& fileExtension, param::hstring const& iconResource) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderFileTypeInfoFactory<D>::CreateInstance(param::hstring const& fileExtension, param::hstring const& iconResource) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderFileTypeInfoFactory)->CreateInstance(*(void**)(&fileExtension), *(void**)(&iconResource), &value));
         return winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::Status() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::Status() const
     {
         winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::Status(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::Status(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentUri() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->get_ContentUri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentUri(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentUri(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->put_ContentUri(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentId() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->get_ContentId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentId(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetContentInfoForPathResult<D>::ContentId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetContentInfoForPathResult)->put_ContentId(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus) consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Status() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Status() const
     {
         winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetPathForContentUriResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Status(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Status(winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetPathForContentUriResult)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Path() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetPathForContentUriResult)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Path(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderGetPathForContentUriResult<D>::Path(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderGetPathForContentUriResult)->put_Path(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Storage_Provider_IStorageProviderItemPropertiesStatics<D>::SetAsync(winrt::Windows::Storage::IStorageItem const& item, param::async_iterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty> const& itemProperties) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertiesStatics<D>::SetAsync(winrt::Windows::Storage::IStorageItem const& item, param::async_iterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty> const& itemProperties) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertiesStatics)->SetAsync(*(void**)(&item), *(void**)(&itemProperties), &operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Id(int32_t value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Id(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->put_Id(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Id() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Id() const
     {
         int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->get_Id(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Value(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Value(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->put_Value(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Value() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::IconResource(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::IconResource(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->put_IconResource(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::IconResource() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemProperty<D>::IconResource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemProperty)->get_IconResource(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::Id() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::Id() const
     {
         int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition)->get_Id(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::Id(int32_t value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::Id(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition)->put_Id(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::DisplayNameResource() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::DisplayNameResource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition)->get_DisplayNameResource(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::DisplayNameResource(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertyDefinition<D>::DisplayNameResource(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition)->put_DisplayNameResource(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty>) consume_Windows_Storage_Provider_IStorageProviderItemPropertySource<D>::GetItemProperties(param::hstring const& itemPath) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderItemPropertySource<D>::GetItemProperties(param::hstring const& itemPath) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource)->GetItemProperties(*(void**)(&itemPath), &result));
         return winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::Provider::StorageProviderItemProperty>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Storage_Provider_IStorageProviderKnownFolderEntry<D>::KnownFolderId() const
-    {
-        winrt::guid value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry)->get_KnownFolderId(put_abi(value)));
-        return value;
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderKnownFolderEntry<D>::KnownFolderId(winrt::guid const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry)->put_KnownFolderId(impl::bind_in(value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus) consume_Windows_Storage_Provider_IStorageProviderKnownFolderEntry<D>::Status() const
-    {
-        winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry)->get_Status(reinterpret_cast<int32_t*>(&value)));
-        return value;
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderKnownFolderEntry<D>::Status(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry)->put_Status(static_cast<int32_t>(value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfo<D>::ProviderDisplayName() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo)->get_ProviderDisplayName(&value));
-        return hstring{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfo<D>::ProviderDisplayName(param::hstring const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo)->put_ProviderDisplayName(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfo<D>::KnownFolderEntries() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo)->get_KnownFolderEntries(&value));
-        return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfo<D>::SyncRequested() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo)->get_SyncRequested(&value));
-        return winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfo<D>::SyncRequested(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo)->put_SyncRequested(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSource<D>::GetKnownFolderSyncInfo() const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource)->GetKnownFolderSyncInfo(&result));
-        return winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo{ result, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSource<D>::KnownFolderSyncInfoChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable> const& handler) const
-    {
-        winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource)->add_KnownFolderSyncInfoChanged(*(void**)(&handler), put_abi(token)));
-        return token;
-    }
-    template <typename D> typename consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSource<D>::KnownFolderSyncInfoChanged_revoker consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSource<D>::KnownFolderSyncInfoChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable> const& handler) const
-    {
-        return impl::make_event_revoker<D, KnownFolderSyncInfoChanged_revoker>(this, KnownFolderSyncInfoChanged(handler));
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSource<D>::KnownFolderSyncInfoChanged(winrt::event_token const& token) const noexcept
-    {
-        WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource)->remove_KnownFolderSyncInfoChanged(impl::bind_in(token));
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncInfoSourceFactory<D>::GetKnownFolderSyncInfoSource() const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory)->GetKnownFolderSyncInfoSource(&result));
-        return winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource{ result, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::guid>) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncRequestArgs<D>::KnownFolders() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs)->get_KnownFolders(&value));
-        return winrt::Windows::Foundation::Collections::IVectorView<winrt::guid>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) consume_Windows_Storage_Provider_IStorageProviderKnownFolderSyncRequestArgs<D>::Source() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs)->get_Source(&value));
-        return winrt::Windows::Storage::StorageFolder{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Message() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Message(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Message(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI)->put_Message(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::IStorageProviderUICommand) consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Command() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Command() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI)->get_Command(&value));
         return winrt::Windows::Storage::Provider::IStorageProviderUICommand{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Command(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderMoreInfoUI<D>::Command(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI)->put_Command(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Storage_Provider_IStorageProviderPropertyCapabilities<D>::IsPropertySupported(param::hstring const& propertyCanonicalName) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderPropertyCapabilities<D>::IsPropertySupported(param::hstring const& propertyCanonicalName) const
     {
         bool isSupported{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities)->IsPropertySupported(*(void**)(&propertyCanonicalName), &isSupported));
         return isSupported;
     }
-    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaTotalInBytes() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaTotalInBytes() const
     {
         uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->get_QuotaTotalInBytes(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaTotalInBytes(uint64_t value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaTotalInBytes(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->put_QuotaTotalInBytes(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedInBytes() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedInBytes() const
     {
         uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->get_QuotaUsedInBytes(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedInBytes(uint64_t value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedInBytes(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->put_QuotaUsedInBytes(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedLabel() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedLabel() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->get_QuotaUsedLabel(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedLabel(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedLabel(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->put_QuotaUsedLabel(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedColor() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedColor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->get_QuotaUsedColor(&value));
         return winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>::QuotaUsedColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->put_QuotaUsedColor(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderState) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderState() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderState() const
     {
         winrt::Windows::Storage::Provider::StorageProviderState value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_ProviderState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderState(winrt::Windows::Storage::Provider::StorageProviderState const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderState(winrt::Windows::Storage::Provider::StorageProviderState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_ProviderState(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateLabel() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateLabel() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_ProviderStateLabel(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateLabel(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateLabel(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_ProviderStateLabel(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateIcon() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateIcon() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_ProviderStateIcon(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateIcon(winrt::Windows::Foundation::Uri const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderStateIcon(winrt::Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_ProviderStateIcon(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::IStorageProviderUICommand) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::SyncStatusCommand() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::SyncStatusCommand() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_SyncStatusCommand(&value));
         return winrt::Windows::Storage::Provider::IStorageProviderUICommand{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::SyncStatusCommand(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::SyncStatusCommand(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_SyncStatusCommand(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderQuotaUI) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::QuotaUI() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::QuotaUI() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_QuotaUI(&value));
         return winrt::Windows::Storage::Provider::StorageProviderQuotaUI{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::QuotaUI(winrt::Windows::Storage::Provider::StorageProviderQuotaUI const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::QuotaUI(winrt::Windows::Storage::Provider::StorageProviderQuotaUI const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_QuotaUI(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::MoreInfoUI() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::MoreInfoUI() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_MoreInfoUI(&value));
         return winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::MoreInfoUI(winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::MoreInfoUI(winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_MoreInfoUI(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::IStorageProviderUICommand) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderPrimaryCommand() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderPrimaryCommand() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_ProviderPrimaryCommand(&value));
         return winrt::Windows::Storage::Provider::IStorageProviderUICommand{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderPrimaryCommand(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderPrimaryCommand(winrt::Windows::Storage::Provider::IStorageProviderUICommand const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_ProviderPrimaryCommand(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::IStorageProviderUICommand>) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderSecondaryCommands() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderSecondaryCommands() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->get_ProviderSecondaryCommands(&value));
         return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::IStorageProviderUICommand>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderSecondaryCommands(param::vector<winrt::Windows::Storage::Provider::IStorageProviderUICommand> const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderSecondaryCommands(param::vector<winrt::Windows::Storage::Provider::IStorageProviderUICommand> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUI)->put_ProviderSecondaryCommands(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderStatusUI) consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::GetStatusUI() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::GetStatusUI() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUISource)->GetStatusUI(&result));
         return winrt::Windows::Storage::Provider::StorageProviderStatusUI{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::StatusUIChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::StatusUIChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUISource)->add_StatusUIChanged(*(void**)(&handler), put_abi(token)));
@@ -512,267 +428,256 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUIChanged_revoker>(this, StatusUIChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::StatusUIChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUISource<D>::StatusUIChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUISource)->remove_StatusUIChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::IStorageProviderStatusUISource) consume_Windows_Storage_Provider_IStorageProviderStatusUISourceFactory<D>::GetStatusUISource(param::hstring const& syncRootId) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUISourceFactory<D>::GetStatusUISource(param::hstring const& syncRootId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory)->GetStatusUISource(*(void**)(&syncRootId), &result));
         return winrt::Windows::Storage::Provider::IStorageProviderStatusUISource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Id() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Id(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_Id(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Context() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Context() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_Context(&value));
         return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Context(winrt::Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Context(winrt::Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_Context(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::IStorageFolder) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Path() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_Path(&value));
         return winrt::Windows::Storage::IStorageFolder{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Path(winrt::Windows::Storage::IStorageFolder const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Path(winrt::Windows::Storage::IStorageFolder const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_Path(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::DisplayNameResource() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::DisplayNameResource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_DisplayNameResource(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::DisplayNameResource(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::DisplayNameResource(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_DisplayNameResource(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::IconResource() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::IconResource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_IconResource(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::IconResource(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::IconResource(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_IconResource(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicy() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicy() const
     {
         winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_HydrationPolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicy(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicy(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_HydrationPolicy(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicyModifier() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicyModifier() const
     {
         winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_HydrationPolicyModifier(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicyModifier(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HydrationPolicyModifier(winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_HydrationPolicyModifier(static_cast<uint32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::PopulationPolicy() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::PopulationPolicy() const
     {
         winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_PopulationPolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::PopulationPolicy(winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::PopulationPolicy(winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_PopulationPolicy(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::InSyncPolicy() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::InSyncPolicy() const
     {
         winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_InSyncPolicy(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::InSyncPolicy(winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::InSyncPolicy(winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_InSyncPolicy(static_cast<uint32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HardlinkPolicy() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HardlinkPolicy() const
     {
         winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_HardlinkPolicy(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HardlinkPolicy(winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::HardlinkPolicy(winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_HardlinkPolicy(static_cast<uint32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ShowSiblingsAsGroup() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ShowSiblingsAsGroup() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_ShowSiblingsAsGroup(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ShowSiblingsAsGroup(bool value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ShowSiblingsAsGroup(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_ShowSiblingsAsGroup(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Version() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Version() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_Version(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Version(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::Version(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_Version(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderProtectionMode) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ProtectionMode() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ProtectionMode() const
     {
         winrt::Windows::Storage::Provider::StorageProviderProtectionMode value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_ProtectionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ProtectionMode(winrt::Windows::Storage::Provider::StorageProviderProtectionMode const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::ProtectionMode(winrt::Windows::Storage::Provider::StorageProviderProtectionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_ProtectionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::AllowPinning() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::AllowPinning() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_AllowPinning(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::AllowPinning(bool value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::AllowPinning(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_AllowPinning(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::StorageProviderItemPropertyDefinitions() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::StorageProviderItemPropertyDefinitions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_StorageProviderItemPropertyDefinitions(&value));
         return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::RecycleBinUri() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::RecycleBinUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->get_RecycleBinUri(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::RecycleBinUri(winrt::Windows::Foundation::Uri const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo<D>::RecycleBinUri(winrt::Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo)->put_RecycleBinUri(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo2<D>::ProviderId() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo2<D>::ProviderId() const
     {
         winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo2)->get_ProviderId(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo2<D>::ProviderId(winrt::guid const& value) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo2<D>::ProviderId(winrt::guid const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo2)->put_ProviderId(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>) consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo3<D>::FallbackFileTypeInfo() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootInfo3<D>::FallbackFileTypeInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo3)->get_FallbackFileTypeInfo(&value));
         return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::Register(winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo const& syncRootInformation) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::Register(winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo const& syncRootInformation) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics)->Register(*(void**)(&syncRootInformation)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::Unregister(param::hstring const& id) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::Unregister(param::hstring const& id) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics)->Unregister(*(void**)(&id)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetSyncRootInformationForFolder(winrt::Windows::Storage::IStorageFolder const& folder) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetSyncRootInformationForFolder(winrt::Windows::Storage::IStorageFolder const& folder) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics)->GetSyncRootInformationForFolder(*(void**)(&folder), &result));
         return winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetSyncRootInformationForId(param::hstring const& id) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetSyncRootInformationForId(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics)->GetSyncRootInformationForId(*(void**)(&id), &result));
         return winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetCurrentSyncRoots() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics<D>::GetCurrentSyncRoots() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics)->GetCurrentSyncRoots(&result));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics2<D>::IsSupported() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderSyncRootManagerStatics2<D>::IsSupported() const
     {
         bool result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderSyncRootManagerStatics2)->IsSupported(&result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Label() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Label() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUICommand)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Description() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUICommand)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Icon() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Icon() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUICommand)->get_Icon(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::StorageProviderUICommandState) consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::State() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::State() const
     {
         winrt::Windows::Storage::Provider::StorageProviderUICommandState value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUICommand)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Invoke() const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUICommand<D>::Invoke() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUICommand)->Invoke());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderUriSource<D>::GetPathForContentUri(param::hstring const& contentUri, winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult const& result) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUriSource<D>::GetPathForContentUri(param::hstring const& contentUri, winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult const& result) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUriSource)->GetPathForContentUri(*(void**)(&contentUri), *(void**)(&result)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Storage_Provider_IStorageProviderUriSource<D>::GetContentInfoForPath(param::hstring const& path, winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult const& result) const
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderUriSource<D>::GetContentInfoForPath(param::hstring const& path, winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult const& result) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderUriSource)->GetContentInfoForPath(*(void**)(&path), *(void**)(&result)));
     }
-    template <typename H> struct delegate<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler, H> final : implements_delegate<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler, H>
-    {
-        delegate(H&& handler) : implements_delegate<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler, H>(std::forward<H>(handler)) {}
-
-        int32_t __stdcall Invoke(void* args) noexcept final try
-        {
-            (*this)(*reinterpret_cast<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs const*>(&args));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::Storage::Provider::ICachedFileUpdaterStatics> : produce_base<D, winrt::Windows::Storage::Provider::ICachedFileUpdaterStatics>
@@ -1202,144 +1107,6 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry>
-    {
-        int32_t __stdcall get_KnownFolderId(winrt::guid* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::guid>(this->shim().KnownFolderId());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_KnownFolderId(winrt::guid value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().KnownFolderId(*reinterpret_cast<winrt::guid const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_Status(int32_t* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus>(this->shim().Status());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_Status(int32_t value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().Status(*reinterpret_cast<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo>
-    {
-        int32_t __stdcall get_ProviderDisplayName(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().ProviderDisplayName());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_ProviderDisplayName(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().ProviderDisplayName(*reinterpret_cast<hstring const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_KnownFolderEntries(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>>(this->shim().KnownFolderEntries());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_SyncRequested(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler>(this->shim().SyncRequested());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_SyncRequested(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().SyncRequested(*reinterpret_cast<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-    template <typename D>
-    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>
-    {
-        int32_t __stdcall GetKnownFolderSyncInfo(void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>(this->shim().GetKnownFolderSyncInfo());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall add_KnownFolderSyncInfoChanged(void* handler, winrt::event_token* token) noexcept final try
-        {
-            zero_abi<winrt::event_token>(token);
-            typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().KnownFolderSyncInfoChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall remove_KnownFolderSyncInfoChanged(winrt::event_token token) noexcept final
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().KnownFolderSyncInfoChanged(*reinterpret_cast<winrt::event_token const*>(&token));
-            return 0;
-        }
-    };
-    template <typename D>
-    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>
-    {
-        int32_t __stdcall GetKnownFolderSyncInfoSource(void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>(this->shim().GetKnownFolderSyncInfoSource());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs>
-    {
-        int32_t __stdcall get_KnownFolders(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::guid>>(this->shim().KnownFolders());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_Source(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Storage::StorageFolder>(this->shim().Source());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI>
@@ -2151,14 +1918,6 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
         StorageProviderItemPropertyDefinition(impl::call_factory_cast<StorageProviderItemPropertyDefinition(*)(winrt::Windows::Foundation::IActivationFactory const&), StorageProviderItemPropertyDefinition>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StorageProviderItemPropertyDefinition>(); }))
     {
     }
-    inline StorageProviderKnownFolderEntry::StorageProviderKnownFolderEntry() :
-        StorageProviderKnownFolderEntry(impl::call_factory_cast<StorageProviderKnownFolderEntry(*)(winrt::Windows::Foundation::IActivationFactory const&), StorageProviderKnownFolderEntry>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StorageProviderKnownFolderEntry>(); }))
-    {
-    }
-    inline StorageProviderKnownFolderSyncInfo::StorageProviderKnownFolderSyncInfo() :
-        StorageProviderKnownFolderSyncInfo(impl::call_factory_cast<StorageProviderKnownFolderSyncInfo(*)(winrt::Windows::Foundation::IActivationFactory const&), StorageProviderKnownFolderSyncInfo>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StorageProviderKnownFolderSyncInfo>(); }))
-    {
-    }
     inline StorageProviderMoreInfoUI::StorageProviderMoreInfoUI() :
         StorageProviderMoreInfoUI(impl::call_factory_cast<StorageProviderMoreInfoUI(*)(winrt::Windows::Foundation::IActivationFactory const&), StorageProviderMoreInfoUI>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StorageProviderMoreInfoUI>(); }))
     {
@@ -2199,30 +1958,6 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
     {
         return impl::call_factory_cast<bool(*)(IStorageProviderSyncRootManagerStatics2 const&), StorageProviderSyncRootManager, IStorageProviderSyncRootManagerStatics2>([](IStorageProviderSyncRootManagerStatics2 const& f) { return f.IsSupported(); });
     }
-    template <typename L> StorageProviderKnownFolderSyncRequestedHandler::StorageProviderKnownFolderSyncRequestedHandler(L handler) :
-        StorageProviderKnownFolderSyncRequestedHandler(impl::make_delegate<StorageProviderKnownFolderSyncRequestedHandler>(std::forward<L>(handler)))
-    {
-    }
-    template <typename F> StorageProviderKnownFolderSyncRequestedHandler::StorageProviderKnownFolderSyncRequestedHandler(F* handler) :
-        StorageProviderKnownFolderSyncRequestedHandler([=](auto&&... args) { return handler(args...); })
-    {
-    }
-    template <typename O, typename M> StorageProviderKnownFolderSyncRequestedHandler::StorageProviderKnownFolderSyncRequestedHandler(O* object, M method) :
-        StorageProviderKnownFolderSyncRequestedHandler([=](auto&&... args) { return ((*object).*(method))(args...); })
-    {
-    }
-    template <typename O, typename M> StorageProviderKnownFolderSyncRequestedHandler::StorageProviderKnownFolderSyncRequestedHandler(com_ptr<O>&& object, M method) :
-        StorageProviderKnownFolderSyncRequestedHandler([o = std::move(object), method](auto&&... args) { return ((*o).*(method))(args...); })
-    {
-    }
-    template <typename O, typename M> StorageProviderKnownFolderSyncRequestedHandler::StorageProviderKnownFolderSyncRequestedHandler(weak_ref<O>&& object, M method) :
-        StorageProviderKnownFolderSyncRequestedHandler([o = std::move(object), method](auto&&... args) { if (auto s = o.get()) { ((*s).*(method))(args...); } })
-    {
-    }
-    inline auto StorageProviderKnownFolderSyncRequestedHandler::operator()(winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs const& args) const
-    {
-        check_hresult((*(impl::abi_t<StorageProviderKnownFolderSyncRequestedHandler>**)this)->Invoke(*(void**)(&args)));
-    }
 }
 namespace std
 {
@@ -2242,11 +1977,6 @@ namespace std
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderItemProperty> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderEntry> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfo> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI> : winrt::impl::hash_base {};
@@ -2271,9 +2001,6 @@ namespace std
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderItemProperties> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderItemProperty> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderQuotaUI> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::StorageProviderStatusUI> : winrt::impl::hash_base {};

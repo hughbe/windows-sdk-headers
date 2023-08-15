@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,451 +7,451 @@
 #ifndef WINRT_Windows_Management_Update_H
 #define WINRT_Windows_Management_Update_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Management.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Management.Update.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IPreviewBuildsManager<D>::ArePreviewBuildsAllowed() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManager<D>::ArePreviewBuildsAllowed() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManager)->get_ArePreviewBuildsAllowed(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IPreviewBuildsManager<D>::ArePreviewBuildsAllowed(bool value) const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManager<D>::ArePreviewBuildsAllowed(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManager)->put_ArePreviewBuildsAllowed(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::PreviewBuildsState) consume_Windows_Management_Update_IPreviewBuildsManager<D>::GetCurrentState() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManager<D>::GetCurrentState() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManager)->GetCurrentState(&result));
         return winrt::Windows::Management::Update::PreviewBuildsState{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Management_Update_IPreviewBuildsManager<D>::SyncAsync() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManager<D>::SyncAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManager)->SyncAsync(&result));
         return winrt::Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::PreviewBuildsManager) consume_Windows_Management_Update_IPreviewBuildsManagerStatics<D>::GetDefault() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManagerStatics<D>::GetDefault() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManagerStatics)->GetDefault(&value));
         return winrt::Windows::Management::Update::PreviewBuildsManager{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IPreviewBuildsManagerStatics<D>::IsSupported() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsManagerStatics<D>::IsSupported() const
     {
         bool result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsManagerStatics)->IsSupported(&result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_Management_Update_IPreviewBuildsState<D>::Properties() const
+    template <typename D> auto consume_Windows_Management_Update_IPreviewBuildsState<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IPreviewBuildsState)->get_Properties(&value));
         return winrt::Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::ProviderId() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::ProviderId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_ProviderId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::UpdateId() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::UpdateId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_UpdateId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::Title() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::Description() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsFeatureUpdate() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsFeatureUpdate() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsFeatureUpdate(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsMinorImpact() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsMinorImpact() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsMinorImpact(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsSecurity() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsSecurity() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsSecurity(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsCritical() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsCritical() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsCritical(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsForOS() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsForOS() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsForOS(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsDriver() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsDriver() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsDriver(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsMandatory() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsMandatory() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsMandatory(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsUrgent() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsUrgent() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsUrgent(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsSeeker() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsSeeker() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsSeeker(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Management_Update_IWindowsUpdate<D>::MoreInfoUrl() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::MoreInfoUrl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_MoreInfoUrl(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Management_Update_IWindowsUpdate<D>::SupportUrl() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::SupportUrl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_SupportUrl(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdate<D>::IsEulaAccepted() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::IsEulaAccepted() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_IsEulaAccepted(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::EulaText() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::EulaText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_EulaText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_Management_Update_IWindowsUpdate<D>::Deadline() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::Deadline() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_Deadline(&value));
         return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo) consume_Windows_Management_Update_IWindowsUpdate<D>::AttentionRequiredInfo() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::AttentionRequiredInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_AttentionRequiredInfo(&value));
         return winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionResult) consume_Windows_Management_Update_IWindowsUpdate<D>::ActionResult() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::ActionResult() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_ActionResult(&value));
         return winrt::Windows::Management::Update::WindowsUpdateActionResult{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdate<D>::CurrentAction() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::CurrentAction() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_CurrentAction(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionProgress) consume_Windows_Management_Update_IWindowsUpdate<D>::ActionProgress() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::ActionProgress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_ActionProgress(&value));
         return winrt::Windows::Management::Update::WindowsUpdateActionProgress{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Management_Update_IWindowsUpdate<D>::GetPropertyValue(param::hstring const& propertyName) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::GetPropertyValue(param::hstring const& propertyName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->GetPropertyValue(*(void**)(&propertyName), &result));
         return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdate<D>::AcceptEula() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdate<D>::AcceptEula() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->AcceptEula());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Update() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Update() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs)->get_Update(&value));
         return winrt::Windows::Management::Update::WindowsUpdate{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Action() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Action() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs)->get_Action(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Succeeded() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::Succeeded() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::ExtendedError() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs<D>::ExtendedError() const
     {
         winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateActionProgress<D>::Action() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionProgress<D>::Action() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionProgress)->get_Action(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Management_Update_IWindowsUpdateActionProgress<D>::Progress() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionProgress<D>::Progress() const
     {
         double value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionProgress)->get_Progress(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Timestamp() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Timestamp() const
     {
         winrt::Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionResult)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Succeeded() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Succeeded() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::ExtendedError() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::ExtendedError() const
     {
         winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Action() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateActionResult<D>::Action() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateActionResult)->get_Action(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::StartAdministratorScan() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::StartAdministratorScan() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->StartAdministratorScan());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::ApproveWindowsUpdateAction(param::hstring const& updateId, param::hstring const& action) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::ApproveWindowsUpdateAction(param::hstring const& updateId, param::hstring const& action) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->ApproveWindowsUpdateAction(*(void**)(&updateId), *(void**)(&action)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::RevokeWindowsUpdateActionApproval(param::hstring const& updateId, param::hstring const& action) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::RevokeWindowsUpdateActionApproval(param::hstring const& updateId, param::hstring const& action) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->RevokeWindowsUpdateActionApproval(*(void**)(&updateId), *(void**)(&action)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::ApproveWindowsUpdate(param::hstring const& updateId, winrt::Windows::Management::Update::WindowsUpdateApprovalData const& approvalData) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::ApproveWindowsUpdate(param::hstring const& updateId, winrt::Windows::Management::Update::WindowsUpdateApprovalData const& approvalData) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->ApproveWindowsUpdate(*(void**)(&updateId), *(void**)(&approvalData)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::RevokeWindowsUpdateApproval(param::hstring const& updateId) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::RevokeWindowsUpdateApproval(param::hstring const& updateId) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->RevokeWindowsUpdateApproval(*(void**)(&updateId)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::GetUpdates() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministrator<D>::GetUpdates() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministrator)->GetUpdates(&result));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::GetRegisteredAdministrator(param::hstring const& organizationName) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::GetRegisteredAdministrator(param::hstring const& organizationName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->GetRegisteredAdministrator(*(void**)(&organizationName), &result));
         return winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::RegisterForAdministration(param::hstring const& organizationName, winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions const& options) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::RegisterForAdministration(param::hstring const& organizationName, winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions const& options) const
     {
         winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->RegisterForAdministration(*(void**)(&organizationName), static_cast<uint32_t>(options), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::UnregisterForAdministration(param::hstring const& organizationName) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::UnregisterForAdministration(param::hstring const& organizationName) const
     {
         winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->UnregisterForAdministration(*(void**)(&organizationName), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::GetRegisteredAdministratorName() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::GetRegisteredAdministratorName() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->GetRegisteredAdministratorName(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::RequestRestart(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions const& restartOptions) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::RequestRestart(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions const& restartOptions) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->RequestRestart(*(void**)(&restartOptions), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::CancelRestartRequest(param::hstring const& requestRestartToken) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAdministratorStatics<D>::CancelRestartRequest(param::hstring const& requestRestartToken) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAdministratorStatics)->CancelRestartRequest(*(void**)(&requestRestartToken)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::Seeker() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::Seeker() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->get_Seeker(&value));
         return winrt::Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::Seeker(winrt::Windows::Foundation::IReference<bool> const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::Seeker(winrt::Windows::Foundation::IReference<bool> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->put_Seeker(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::AllowDownloadOnMetered() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::AllowDownloadOnMetered() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->get_AllowDownloadOnMetered(&value));
         return winrt::Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::AllowDownloadOnMetered(winrt::Windows::Foundation::IReference<bool> const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::AllowDownloadOnMetered(winrt::Windows::Foundation::IReference<bool> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->put_AllowDownloadOnMetered(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceDeadlineInDays() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceDeadlineInDays() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->get_ComplianceDeadlineInDays(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceDeadlineInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceDeadlineInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->put_ComplianceDeadlineInDays(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceGracePeriodInDays() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceGracePeriodInDays() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->get_ComplianceGracePeriodInDays(&value));
         return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceGracePeriodInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::ComplianceGracePeriodInDays(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->put_ComplianceGracePeriodInDays(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::OptOutOfAutoReboot() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::OptOutOfAutoReboot() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->get_OptOutOfAutoReboot(&value));
         return winrt::Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::OptOutOfAutoReboot(winrt::Windows::Foundation::IReference<bool> const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateApprovalData<D>::OptOutOfAutoReboot(winrt::Windows::Foundation::IReference<bool> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateApprovalData)->put_OptOutOfAutoReboot(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason) consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo<D>::Reason() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo<D>::Reason() const
     {
         winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredInfo)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo<D>::Timestamp() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo<D>::Timestamp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredInfo)->get_Timestamp(&value));
         return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs<D>::Update() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs<D>::Update() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredReasonChangedEventArgs)->get_Update(&value));
         return winrt::Windows::Management::Update::WindowsUpdate{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason) consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs<D>::Reason() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs<D>::Reason() const
     {
         winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateAttentionRequiredReasonChangedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministrator) consume_Windows_Management_Update_IWindowsUpdateGetAdministratorResult<D>::Administrator() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateGetAdministratorResult<D>::Administrator() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateGetAdministratorResult)->get_Administrator(&value));
         return winrt::Windows::Management::Update::WindowsUpdateAdministrator{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus) consume_Windows_Management_Update_IWindowsUpdateGetAdministratorResult<D>::Status() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateGetAdministratorResult<D>::Status() const
     {
         winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateGetAdministratorResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::ProviderId() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::ProviderId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_ProviderId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::UpdateId() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::UpdateId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_UpdateId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_Management_Update_IWindowsUpdateItem<D>::Timestamp() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::Timestamp() const
     {
         winrt::Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::Title() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::Description() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Management_Update_IWindowsUpdateItem<D>::MoreInfoUrl() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::MoreInfoUrl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_MoreInfoUrl(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::Category() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::Category() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_Category(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateItem<D>::Operation() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateItem<D>::Operation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateItem)->get_Operation(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanningStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanningStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_ScanningStateChanged(*(void**)(&handler), put_abi(token)));
@@ -461,11 +461,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ScanningStateChanged_revoker>(this, ScanningStateChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanningStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanningStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_ScanningStateChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::WorkingStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::WorkingStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_WorkingStateChanged(*(void**)(&handler), put_abi(token)));
@@ -475,11 +475,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, WorkingStateChanged_revoker>(this, WorkingStateChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::WorkingStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::WorkingStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_WorkingStateChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_ProgressChanged(*(void**)(&handler), put_abi(token)));
@@ -489,11 +489,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ProgressChanged_revoker>(this, ProgressChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ProgressChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ProgressChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_ProgressChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::AttentionRequiredReasonChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::AttentionRequiredReasonChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_AttentionRequiredReasonChanged(*(void**)(&handler), put_abi(token)));
@@ -503,11 +503,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AttentionRequiredReasonChanged_revoker>(this, AttentionRequiredReasonChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::AttentionRequiredReasonChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::AttentionRequiredReasonChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_AttentionRequiredReasonChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ActionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ActionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_ActionCompleted(*(void**)(&handler), put_abi(token)));
@@ -517,11 +517,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ActionCompleted_revoker>(this, ActionCompleted(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ActionCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ActionCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_ActionCompleted(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Update::WindowsUpdateManager, winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->add_ScanCompleted(*(void**)(&handler), put_abi(token)));
@@ -531,163 +531,163 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ScanCompleted_revoker>(this, ScanCompleted(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::ScanCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->remove_ScanCompleted(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateManager<D>::IsScanning() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::IsScanning() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->get_IsScanning(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateManager<D>::IsWorking() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::IsWorking() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->get_IsWorking(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_Management_Update_IWindowsUpdateManager<D>::LastSuccessfulScanTimestamp() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::LastSuccessfulScanTimestamp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->get_LastSuccessfulScanTimestamp(&value));
         return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetApplicableUpdates() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetApplicableUpdates() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->GetApplicableUpdates(&result));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>) consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetMostRecentCompletedUpdates(int32_t count) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetMostRecentCompletedUpdates(int32_t count) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->GetMostRecentCompletedUpdates(count, &result));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>>) consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetMostRecentCompletedUpdatesAsync(int32_t count) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::GetMostRecentCompletedUpdatesAsync(int32_t count) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->GetMostRecentCompletedUpdatesAsync(count, &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdateItem>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateManager<D>::StartScan(bool userInitiated) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManager<D>::StartScan(bool userInitiated) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManager)->StartScan(userInitiated));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateManager) consume_Windows_Management_Update_IWindowsUpdateManagerFactory<D>::CreateInstance(param::hstring const& clientId) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateManagerFactory<D>::CreateInstance(param::hstring const& clientId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateManagerFactory)->CreateInstance(*(void**)(&clientId), &value));
         return winrt::Windows::Management::Update::WindowsUpdateManager{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdate) consume_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs<D>::Update() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs<D>::Update() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateProgressChangedEventArgs)->get_Update(&value));
         return winrt::Windows::Management::Update::WindowsUpdate{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionProgress) consume_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs<D>::ActionProgress() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs<D>::ActionProgress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateProgressChangedEventArgs)->get_ActionProgress(&value));
         return winrt::Windows::Management::Update::WindowsUpdateActionProgress{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Title() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Title(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Title(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_Title(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Description() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Description(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_Description(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::MoreInfoUrl() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::MoreInfoUrl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_MoreInfoUrl(&value));
         return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::MoreInfoUrl(winrt::Windows::Foundation::Uri const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::MoreInfoUrl(winrt::Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_MoreInfoUrl(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceDeadlineInDays() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceDeadlineInDays() const
     {
         int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_ComplianceDeadlineInDays(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceDeadlineInDays(int32_t value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceDeadlineInDays(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_ComplianceDeadlineInDays(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceGracePeriodInDays() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceGracePeriodInDays() const
     {
         int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_ComplianceGracePeriodInDays(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceGracePeriodInDays(int32_t value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::ComplianceGracePeriodInDays(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_ComplianceGracePeriodInDays(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OrganizationName() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OrganizationName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_OrganizationName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OrganizationName(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OrganizationName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_OrganizationName(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OptOutOfAutoReboot() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OptOutOfAutoReboot() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->get_OptOutOfAutoReboot(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OptOutOfAutoReboot(bool value) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptions<D>::OptOutOfAutoReboot(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptions)->put_OptOutOfAutoReboot(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions) consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptionsFactory<D>::CreateInstance(param::hstring const& title, param::hstring const& description, winrt::Windows::Foundation::Uri const& moreInfoUrl, int32_t complianceDeadlineInDays, int32_t complianceGracePeriodInDays) const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateRestartRequestOptionsFactory<D>::CreateInstance(param::hstring const& title, param::hstring const& description, winrt::Windows::Foundation::Uri const& moreInfoUrl, int32_t complianceDeadlineInDays, int32_t complianceGracePeriodInDays) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateRestartRequestOptionsFactory)->CreateInstance(*(void**)(&title), *(void**)(&description), *(void**)(&moreInfoUrl), complianceDeadlineInDays, complianceGracePeriodInDays, &value));
         return winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::ProviderId() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::ProviderId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateScanCompletedEventArgs)->get_ProviderId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::Succeeded() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::Succeeded() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateScanCompletedEventArgs)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::ExtendedError() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::ExtendedError() const
     {
         winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateScanCompletedEventArgs)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Management::Update::WindowsUpdate>) consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::Updates() const
+    template <typename D> auto consume_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs<D>::Updates() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdateScanCompletedEventArgs)->get_Updates(&value));

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -18,7 +18,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IVectorView;
     template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Numerics
@@ -2561,7 +2560,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarButtonTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KeyboardAcceleratorTextMinWidth() const;
+        [[nodiscard]] auto KeyboardAcceleratorTextMinWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarButtonTemplateSettings>
     {
@@ -2570,13 +2569,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ClipRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CompactVerticalDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) CompactRootMargin() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MinimalVerticalDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) MinimalRootMargin() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HiddenVerticalDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) HiddenRootMargin() const;
+        [[nodiscard]] auto ClipRect() const;
+        [[nodiscard]] auto CompactVerticalDelta() const;
+        [[nodiscard]] auto CompactRootMargin() const;
+        [[nodiscard]] auto MinimalVerticalDelta() const;
+        [[nodiscard]] auto MinimalRootMargin() const;
+        [[nodiscard]] auto HiddenVerticalDelta() const;
+        [[nodiscard]] auto HiddenRootMargin() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings>
     {
@@ -2585,9 +2584,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarTemplateSettings2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeCompactVerticalDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeMinimalVerticalDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeHiddenVerticalDelta() const;
+        [[nodiscard]] auto NegativeCompactVerticalDelta() const;
+        [[nodiscard]] auto NegativeMinimalVerticalDelta() const;
+        [[nodiscard]] auto NegativeHiddenVerticalDelta() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2>
     {
@@ -2596,7 +2595,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IAppBarToggleButtonTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KeyboardAcceleratorTextMinWidth() const;
+        [[nodiscard]] auto KeyboardAcceleratorTextMinWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarToggleButtonTemplateSettings>
     {
@@ -2605,18 +2604,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IButtonBase
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::ClickMode) ClickMode() const;
-        WINRT_IMPL_AUTO(void) ClickMode(winrt::Windows::UI::Xaml::Controls::ClickMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPointerOver() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPressed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Input::ICommand) Command() const;
-        WINRT_IMPL_AUTO(void) Command(winrt::Windows::UI::Xaml::Input::ICommand const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) CommandParameter() const;
-        WINRT_IMPL_AUTO(void) CommandParameter(winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] auto ClickMode() const;
+        auto ClickMode(winrt::Windows::UI::Xaml::Controls::ClickMode const& value) const;
+        [[nodiscard]] auto IsPointerOver() const;
+        [[nodiscard]] auto IsPressed() const;
+        [[nodiscard]] auto Command() const;
+        auto Command(winrt::Windows::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto CommandParameter() const;
+        auto CommandParameter(winrt::Windows::Foundation::IInspectable const& value) const;
+        auto Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using Click_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>::remove_Click>;
         [[nodiscard]] Click_revoker Click(auto_revoke_t, winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Click(winrt::event_token const& token) const noexcept;
+        auto Click(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>
     {
@@ -2625,7 +2624,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IButtonBaseFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBaseFactory>
     {
@@ -2634,11 +2633,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IButtonBaseStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ClickModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsPointerOverProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsPressedProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CommandProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CommandParameterProperty() const;
+        [[nodiscard]] auto ClickModeProperty() const;
+        [[nodiscard]] auto IsPointerOverProperty() const;
+        [[nodiscard]] auto IsPressedProperty() const;
+        [[nodiscard]] auto CommandProperty() const;
+        [[nodiscard]] auto CommandParameterProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBaseStatics>
     {
@@ -2655,21 +2654,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICalendarViewTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MinViewWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HeaderText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay1() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay2() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay3() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay4() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay5() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay6() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WeekDay7() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasMoreContentAfter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasMoreContentBefore() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasMoreViews() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ClipRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterX() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CenterY() const;
+        [[nodiscard]] auto MinViewWidth() const;
+        [[nodiscard]] auto HeaderText() const;
+        [[nodiscard]] auto WeekDay1() const;
+        [[nodiscard]] auto WeekDay2() const;
+        [[nodiscard]] auto WeekDay3() const;
+        [[nodiscard]] auto WeekDay4() const;
+        [[nodiscard]] auto WeekDay5() const;
+        [[nodiscard]] auto WeekDay6() const;
+        [[nodiscard]] auto WeekDay7() const;
+        [[nodiscard]] auto HasMoreContentAfter() const;
+        [[nodiscard]] auto HasMoreContentBefore() const;
+        [[nodiscard]] auto HasMoreViews() const;
+        [[nodiscard]] auto ClipRect() const;
+        [[nodiscard]] auto CenterX() const;
+        [[nodiscard]] auto CenterY() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICalendarViewTemplateSettings>
     {
@@ -2678,33 +2677,33 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICarouselPanel
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanVerticallyScroll() const;
-        WINRT_IMPL_AUTO(void) CanVerticallyScroll(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanHorizontallyScroll() const;
-        WINRT_IMPL_AUTO(void) CanHorizontallyScroll(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExtentWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExtentHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ViewportWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ViewportHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) ScrollOwner() const;
-        WINRT_IMPL_AUTO(void) ScrollOwner(winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(void) LineUp() const;
-        WINRT_IMPL_AUTO(void) LineDown() const;
-        WINRT_IMPL_AUTO(void) LineLeft() const;
-        WINRT_IMPL_AUTO(void) LineRight() const;
-        WINRT_IMPL_AUTO(void) PageUp() const;
-        WINRT_IMPL_AUTO(void) PageDown() const;
-        WINRT_IMPL_AUTO(void) PageLeft() const;
-        WINRT_IMPL_AUTO(void) PageRight() const;
-        WINRT_IMPL_AUTO(void) MouseWheelUp() const;
-        WINRT_IMPL_AUTO(void) MouseWheelDown() const;
-        WINRT_IMPL_AUTO(void) MouseWheelLeft() const;
-        WINRT_IMPL_AUTO(void) MouseWheelRight() const;
-        WINRT_IMPL_AUTO(void) SetHorizontalOffset(double offset) const;
-        WINRT_IMPL_AUTO(void) SetVerticalOffset(double offset) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) MakeVisible(winrt::Windows::UI::Xaml::UIElement const& visual, winrt::Windows::Foundation::Rect const& rectangle) const;
+        [[nodiscard]] auto CanVerticallyScroll() const;
+        auto CanVerticallyScroll(bool value) const;
+        [[nodiscard]] auto CanHorizontallyScroll() const;
+        auto CanHorizontallyScroll(bool value) const;
+        [[nodiscard]] auto ExtentWidth() const;
+        [[nodiscard]] auto ExtentHeight() const;
+        [[nodiscard]] auto ViewportWidth() const;
+        [[nodiscard]] auto ViewportHeight() const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        [[nodiscard]] auto VerticalOffset() const;
+        [[nodiscard]] auto ScrollOwner() const;
+        auto ScrollOwner(winrt::Windows::Foundation::IInspectable const& value) const;
+        auto LineUp() const;
+        auto LineDown() const;
+        auto LineLeft() const;
+        auto LineRight() const;
+        auto PageUp() const;
+        auto PageDown() const;
+        auto PageLeft() const;
+        auto PageRight() const;
+        auto MouseWheelUp() const;
+        auto MouseWheelDown() const;
+        auto MouseWheelLeft() const;
+        auto MouseWheelRight() const;
+        auto SetHorizontalOffset(double offset) const;
+        auto SetVerticalOffset(double offset) const;
+        auto MakeVisible(winrt::Windows::UI::Xaml::UIElement const& visual, winrt::Windows::Foundation::Rect const& rectangle) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICarouselPanel>
     {
@@ -2713,7 +2712,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICarouselPanelFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICarouselPanelFactory>
     {
@@ -2722,8 +2721,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorPickerSlider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::ColorPickerHsvChannel) ColorChannel() const;
-        WINRT_IMPL_AUTO(void) ColorChannel(winrt::Windows::UI::Xaml::Controls::ColorPickerHsvChannel const& value) const;
+        [[nodiscard]] auto ColorChannel() const;
+        auto ColorChannel(winrt::Windows::UI::Xaml::Controls::ColorPickerHsvChannel const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorPickerSlider>
     {
@@ -2732,7 +2731,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorPickerSliderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorPickerSliderFactory>
     {
@@ -2741,7 +2740,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorPickerSliderStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorChannelProperty() const;
+        [[nodiscard]] auto ColorChannelProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorPickerSliderStatics>
     {
@@ -2750,30 +2749,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorSpectrum
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float4) HsvColor() const;
-        WINRT_IMPL_AUTO(void) HsvColor(winrt::Windows::Foundation::Numerics::float4 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinHue() const;
-        WINRT_IMPL_AUTO(void) MinHue(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxHue() const;
-        WINRT_IMPL_AUTO(void) MaxHue(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinSaturation() const;
-        WINRT_IMPL_AUTO(void) MinSaturation(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxSaturation() const;
-        WINRT_IMPL_AUTO(void) MaxSaturation(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinValue() const;
-        WINRT_IMPL_AUTO(void) MinValue(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxValue() const;
-        WINRT_IMPL_AUTO(void) MaxValue(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::ColorSpectrumShape) Shape() const;
-        WINRT_IMPL_AUTO(void) Shape(winrt::Windows::UI::Xaml::Controls::ColorSpectrumShape const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents) Components() const;
-        WINRT_IMPL_AUTO(void) Components(winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ColorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs> const& handler) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto HsvColor() const;
+        auto HsvColor(winrt::Windows::Foundation::Numerics::float4 const& value) const;
+        [[nodiscard]] auto MinHue() const;
+        auto MinHue(int32_t value) const;
+        [[nodiscard]] auto MaxHue() const;
+        auto MaxHue(int32_t value) const;
+        [[nodiscard]] auto MinSaturation() const;
+        auto MinSaturation(int32_t value) const;
+        [[nodiscard]] auto MaxSaturation() const;
+        auto MaxSaturation(int32_t value) const;
+        [[nodiscard]] auto MinValue() const;
+        auto MinValue(int32_t value) const;
+        [[nodiscard]] auto MaxValue() const;
+        auto MaxValue(int32_t value) const;
+        [[nodiscard]] auto Shape() const;
+        auto Shape(winrt::Windows::UI::Xaml::Controls::ColorSpectrumShape const& value) const;
+        [[nodiscard]] auto Components() const;
+        auto Components(winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents const& value) const;
+        auto ColorChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs> const& handler) const;
         using ColorChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IColorSpectrum, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IColorSpectrum>::remove_ColorChanged>;
         [[nodiscard]] ColorChanged_revoker ColorChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) ColorChanged(winrt::event_token const& token) const noexcept;
+        auto ColorChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorSpectrum>
     {
@@ -2782,7 +2781,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorSpectrumFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorSpectrumFactory>
     {
@@ -2791,16 +2790,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IColorSpectrumStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) HsvColorProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MinHueProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MaxHueProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MinSaturationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MaxSaturationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MinValueProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MaxValueProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ShapeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ComponentsProperty() const;
+        [[nodiscard]] auto ColorProperty() const;
+        [[nodiscard]] auto HsvColorProperty() const;
+        [[nodiscard]] auto MinHueProperty() const;
+        [[nodiscard]] auto MaxHueProperty() const;
+        [[nodiscard]] auto MinSaturationProperty() const;
+        [[nodiscard]] auto MaxSaturationProperty() const;
+        [[nodiscard]] auto MinValueProperty() const;
+        [[nodiscard]] auto MaxValueProperty() const;
+        [[nodiscard]] auto ShapeProperty() const;
+        [[nodiscard]] auto ComponentsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IColorSpectrumStatics>
     {
@@ -2809,10 +2808,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IComboBoxTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DropDownOpenedHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DropDownClosedHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DropDownOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection) SelectedItemDirection() const;
+        [[nodiscard]] auto DropDownOpenedHeight() const;
+        [[nodiscard]] auto DropDownClosedHeight() const;
+        [[nodiscard]] auto DropDownOffset() const;
+        [[nodiscard]] auto SelectedItemDirection() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IComboBoxTemplateSettings>
     {
@@ -2821,7 +2820,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IComboBoxTemplateSettings2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DropDownContentMinWidth() const;
+        [[nodiscard]] auto DropDownContentMinWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IComboBoxTemplateSettings2>
     {
@@ -2830,7 +2829,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarFlyoutCommandBar
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings) FlyoutTemplateSettings() const;
+        [[nodiscard]] auto FlyoutTemplateSettings() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBar>
     {
@@ -2839,7 +2838,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarFlyoutCommandBarFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBarFactory>
     {
@@ -2848,26 +2847,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarFlyoutCommandBarTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OpenAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OpenAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CloseAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CurrentWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandedWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) WidthExpansionDelta() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) WidthExpansionAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) WidthExpansionAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) WidthExpansionMoreButtonAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) WidthExpansionMoreButtonAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandUpOverflowVerticalPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandDownOverflowVerticalPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandUpAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandUpAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandUpAnimationHoldPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandDownAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandDownAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExpandDownAnimationHoldPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ContentClipRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OverflowContentClipRect() const;
+        [[nodiscard]] auto OpenAnimationStartPosition() const;
+        [[nodiscard]] auto OpenAnimationEndPosition() const;
+        [[nodiscard]] auto CloseAnimationEndPosition() const;
+        [[nodiscard]] auto CurrentWidth() const;
+        [[nodiscard]] auto ExpandedWidth() const;
+        [[nodiscard]] auto WidthExpansionDelta() const;
+        [[nodiscard]] auto WidthExpansionAnimationStartPosition() const;
+        [[nodiscard]] auto WidthExpansionAnimationEndPosition() const;
+        [[nodiscard]] auto WidthExpansionMoreButtonAnimationStartPosition() const;
+        [[nodiscard]] auto WidthExpansionMoreButtonAnimationEndPosition() const;
+        [[nodiscard]] auto ExpandUpOverflowVerticalPosition() const;
+        [[nodiscard]] auto ExpandDownOverflowVerticalPosition() const;
+        [[nodiscard]] auto ExpandUpAnimationStartPosition() const;
+        [[nodiscard]] auto ExpandUpAnimationEndPosition() const;
+        [[nodiscard]] auto ExpandUpAnimationHoldPosition() const;
+        [[nodiscard]] auto ExpandDownAnimationStartPosition() const;
+        [[nodiscard]] auto ExpandDownAnimationEndPosition() const;
+        [[nodiscard]] auto ExpandDownAnimationHoldPosition() const;
+        [[nodiscard]] auto ContentClipRect() const;
+        [[nodiscard]] auto OverflowContentClipRect() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarFlyoutCommandBarTemplateSettings>
     {
@@ -2876,13 +2875,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ContentHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) OverflowContentClipRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentMinWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentMaxHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentHorizontalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeOverflowContentHeight() const;
+        [[nodiscard]] auto ContentHeight() const;
+        [[nodiscard]] auto OverflowContentClipRect() const;
+        [[nodiscard]] auto OverflowContentMinWidth() const;
+        [[nodiscard]] auto OverflowContentMaxHeight() const;
+        [[nodiscard]] auto OverflowContentHorizontalOffset() const;
+        [[nodiscard]] auto OverflowContentHeight() const;
+        [[nodiscard]] auto NegativeOverflowContentHeight() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings>
     {
@@ -2891,7 +2890,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentMaxWidth() const;
+        [[nodiscard]] auto OverflowContentMaxWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings2>
     {
@@ -2900,7 +2899,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Visibility) EffectiveOverflowButtonVisibility() const;
+        [[nodiscard]] auto EffectiveOverflowButtonVisibility() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings3>
     {
@@ -2909,9 +2908,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ICommandBarTemplateSettings4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentCompactYTranslation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentMinimalYTranslation() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OverflowContentHiddenYTranslation() const;
+        [[nodiscard]] auto OverflowContentCompactYTranslation() const;
+        [[nodiscard]] auto OverflowContentMinimalYTranslation() const;
+        [[nodiscard]] auto OverflowContentHiddenYTranslation() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings4>
     {
@@ -2920,9 +2919,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Canceled() const;
+        [[nodiscard]] auto HorizontalChange() const;
+        [[nodiscard]] auto VerticalChange() const;
+        [[nodiscard]] auto Canceled() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgs>
     {
@@ -2931,7 +2930,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragCompletedEventArgsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs) CreateInstanceWithHorizontalChangeVerticalChangeAndCanceled(double horizontalChange, double verticalChange, bool canceled, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithHorizontalChangeVerticalChangeAndCanceled(double horizontalChange, double verticalChange, bool canceled, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory>
     {
@@ -2940,8 +2939,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragDeltaEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalChange() const;
+        [[nodiscard]] auto HorizontalChange() const;
+        [[nodiscard]] auto VerticalChange() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgs>
     {
@@ -2950,7 +2949,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragDeltaEventArgsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs) CreateInstanceWithHorizontalChangeAndVerticalChange(double horizontalChange, double verticalChange, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithHorizontalChangeAndVerticalChange(double horizontalChange, double verticalChange, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragDeltaEventArgsFactory>
     {
@@ -2959,8 +2958,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragStartedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalOffset() const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        [[nodiscard]] auto VerticalOffset() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventArgs>
     {
@@ -2969,7 +2968,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IDragStartedEventArgsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs) CreateInstanceWithHorizontalOffsetAndVerticalOffset(double horizontalOffset, double verticalOffset, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstanceWithHorizontalOffsetAndVerticalOffset(double horizontalOffset, double verticalOffset, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IDragStartedEventArgsFactory>
     {
@@ -2978,22 +2977,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode) Placement() const;
-        WINRT_IMPL_AUTO(void) Placement(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Opened(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Placement() const;
+        auto Placement(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& value) const;
+        auto Opened(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Opened_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase>::remove_Opened>;
         [[nodiscard]] Opened_revoker Opened(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Opened(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Closed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Opened(winrt::event_token const& token) const noexcept;
+        auto Closed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Closed_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase>::remove_Closed>;
         [[nodiscard]] Closed_revoker Closed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Opening(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Closed(winrt::event_token const& token) const noexcept;
+        auto Opening(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Opening_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase>::remove_Opening>;
         [[nodiscard]] Opening_revoker Opening(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Opening(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) ShowAt(winrt::Windows::UI::Xaml::FrameworkElement const& placementTarget) const;
-        WINRT_IMPL_AUTO(void) Hide() const;
+        auto Opening(winrt::event_token const& token) const noexcept;
+        auto ShowAt(winrt::Windows::UI::Xaml::FrameworkElement const& placementTarget) const;
+        auto Hide() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase>
     {
@@ -3002,19 +3001,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::FrameworkElement) Target() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowFocusOnInteraction() const;
-        WINRT_IMPL_AUTO(void) AllowFocusOnInteraction(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode) LightDismissOverlayMode() const;
-        WINRT_IMPL_AUTO(void) LightDismissOverlayMode(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowFocusWhenDisabled() const;
-        WINRT_IMPL_AUTO(void) AllowFocusWhenDisabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::ElementSoundMode) ElementSoundMode() const;
-        WINRT_IMPL_AUTO(void) ElementSoundMode(winrt::Windows::UI::Xaml::ElementSoundMode const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Closing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs> const& handler) const;
+        [[nodiscard]] auto Target() const;
+        [[nodiscard]] auto AllowFocusOnInteraction() const;
+        auto AllowFocusOnInteraction(bool value) const;
+        [[nodiscard]] auto LightDismissOverlayMode() const;
+        auto LightDismissOverlayMode(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode const& value) const;
+        [[nodiscard]] auto AllowFocusWhenDisabled() const;
+        auto AllowFocusWhenDisabled(bool value) const;
+        [[nodiscard]] auto ElementSoundMode() const;
+        auto ElementSoundMode(winrt::Windows::UI::Xaml::ElementSoundMode const& value) const;
+        auto Closing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs> const& handler) const;
         using Closing_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2>::remove_Closing>;
         [[nodiscard]] Closing_revoker Closing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closing(winrt::event_token const& token) const noexcept;
+        auto Closing(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase2>
     {
@@ -3023,8 +3022,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyObject) OverlayInputPassThroughElement() const;
-        WINRT_IMPL_AUTO(void) OverlayInputPassThroughElement(winrt::Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] auto OverlayInputPassThroughElement() const;
+        auto OverlayInputPassThroughElement(winrt::Windows::UI::Xaml::DependencyObject const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase3>
     {
@@ -3033,7 +3032,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase4
     {
-        WINRT_IMPL_AUTO(void) TryInvokeKeyboardAccelerator(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        auto TryInvokeKeyboardAccelerator(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase4>
     {
@@ -3042,13 +3041,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode) ShowMode() const;
-        WINRT_IMPL_AUTO(void) ShowMode(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) InputDevicePrefersPrimaryCommands() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AreOpenCloseAnimationsEnabled() const;
-        WINRT_IMPL_AUTO(void) AreOpenCloseAnimationsEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOpen() const;
-        WINRT_IMPL_AUTO(void) ShowAt(winrt::Windows::UI::Xaml::DependencyObject const& placementTarget, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions const& showOptions) const;
+        [[nodiscard]] auto ShowMode() const;
+        auto ShowMode(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode const& value) const;
+        [[nodiscard]] auto InputDevicePrefersPrimaryCommands() const;
+        [[nodiscard]] auto AreOpenCloseAnimationsEnabled() const;
+        auto AreOpenCloseAnimationsEnabled(bool value) const;
+        [[nodiscard]] auto IsOpen() const;
+        auto ShowAt(winrt::Windows::UI::Xaml::DependencyObject const& placementTarget, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions const& showOptions) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase5>
     {
@@ -3057,11 +3056,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBase6
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldConstrainToRootBounds() const;
-        WINRT_IMPL_AUTO(void) ShouldConstrainToRootBounds(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsConstrainedToRootBounds() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::XamlRoot) XamlRoot() const;
-        WINRT_IMPL_AUTO(void) XamlRoot(winrt::Windows::UI::Xaml::XamlRoot const& value) const;
+        [[nodiscard]] auto ShouldConstrainToRootBounds() const;
+        auto ShouldConstrainToRootBounds(bool value) const;
+        [[nodiscard]] auto IsConstrainedToRootBounds() const;
+        [[nodiscard]] auto XamlRoot() const;
+        auto XamlRoot(winrt::Windows::UI::Xaml::XamlRoot const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBase6>
     {
@@ -3070,8 +3069,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseClosingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Cancel() const;
-        WINRT_IMPL_AUTO(void) Cancel(bool value) const;
+        [[nodiscard]] auto Cancel() const;
+        auto Cancel(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseClosingEventArgs>
     {
@@ -3080,7 +3079,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseFactory>
     {
@@ -3089,7 +3088,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseOverrides
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Control) CreatePresenter() const;
+        auto CreatePresenter() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides>
     {
@@ -3098,7 +3097,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseOverrides4
     {
-        WINRT_IMPL_AUTO(void) OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        auto OnProcessKeyboardAccelerators(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4>
     {
@@ -3107,11 +3106,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PlacementProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AttachedFlyoutProperty() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase) GetAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& element) const;
-        WINRT_IMPL_AUTO(void) SetAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& element, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase const& value) const;
-        WINRT_IMPL_AUTO(void) ShowAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& flyoutOwner) const;
+        [[nodiscard]] auto PlacementProperty() const;
+        [[nodiscard]] auto AttachedFlyoutProperty() const;
+        auto GetAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& element) const;
+        auto SetAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& element, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase const& value) const;
+        auto ShowAttachedFlyout(winrt::Windows::UI::Xaml::FrameworkElement const& flyoutOwner) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics>
     {
@@ -3120,10 +3119,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AllowFocusOnInteractionProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LightDismissOverlayModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AllowFocusWhenDisabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ElementSoundModeProperty() const;
+        [[nodiscard]] auto AllowFocusOnInteractionProperty() const;
+        [[nodiscard]] auto LightDismissOverlayModeProperty() const;
+        [[nodiscard]] auto AllowFocusWhenDisabledProperty() const;
+        [[nodiscard]] auto ElementSoundModeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics2>
     {
@@ -3132,7 +3131,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) OverlayInputPassThroughElementProperty() const;
+        [[nodiscard]] auto OverlayInputPassThroughElementProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics3>
     {
@@ -3141,11 +3140,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TargetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ShowModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) InputDevicePrefersPrimaryCommandsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) AreOpenCloseAnimationsEnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsOpenProperty() const;
+        [[nodiscard]] auto TargetProperty() const;
+        [[nodiscard]] auto ShowModeProperty() const;
+        [[nodiscard]] auto InputDevicePrefersPrimaryCommandsProperty() const;
+        [[nodiscard]] auto AreOpenCloseAnimationsEnabledProperty() const;
+        [[nodiscard]] auto IsOpenProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics5>
     {
@@ -3154,7 +3153,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutBaseStatics6
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ShouldConstrainToRootBoundsProperty() const;
+        [[nodiscard]] auto ShouldConstrainToRootBoundsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseStatics6>
     {
@@ -3163,14 +3162,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutShowOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>) Position() const;
-        WINRT_IMPL_AUTO(void) Position(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>) ExclusionRect() const;
-        WINRT_IMPL_AUTO(void) ExclusionRect(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode) ShowMode() const;
-        WINRT_IMPL_AUTO(void) ShowMode(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode) Placement() const;
-        WINRT_IMPL_AUTO(void) Placement(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& value) const;
+        [[nodiscard]] auto Position() const;
+        auto Position(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point> const& value) const;
+        [[nodiscard]] auto ExclusionRect() const;
+        auto ExclusionRect(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect> const& value) const;
+        [[nodiscard]] auto ShowMode() const;
+        auto ShowMode(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode const& value) const;
+        [[nodiscard]] auto Placement() const;
+        auto Placement(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptions>
     {
@@ -3179,7 +3178,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IFlyoutShowOptionsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutShowOptionsFactory>
     {
@@ -3196,7 +3195,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IGeneratorPositionHelperStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition) FromIndexAndOffset(int32_t index, int32_t offset) const;
+        auto FromIndexAndOffset(int32_t index, int32_t offset) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IGeneratorPositionHelperStatics>
     {
@@ -3205,50 +3204,50 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IGridViewItemPresenter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SelectionCheckMarkVisualEnabled() const;
-        WINRT_IMPL_AUTO(void) SelectionCheckMarkVisualEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckHintBrush() const;
-        WINRT_IMPL_AUTO(void) CheckHintBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckSelectingBrush() const;
-        WINRT_IMPL_AUTO(void) CheckSelectingBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) DragBackground() const;
-        WINRT_IMPL_AUTO(void) DragBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) DragForeground() const;
-        WINRT_IMPL_AUTO(void) DragForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) FocusBorderBrush() const;
-        WINRT_IMPL_AUTO(void) FocusBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PlaceholderBackground() const;
-        WINRT_IMPL_AUTO(void) PlaceholderBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PointerOverBackground() const;
-        WINRT_IMPL_AUTO(void) PointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedForeground() const;
-        WINRT_IMPL_AUTO(void) SelectedForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPointerOverBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedPointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPointerOverBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) SelectedBorderThickness() const;
-        WINRT_IMPL_AUTO(void) SelectedBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DisabledOpacity() const;
-        WINRT_IMPL_AUTO(void) DisabledOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DragOpacity() const;
-        WINRT_IMPL_AUTO(void) DragOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ReorderHintOffset() const;
-        WINRT_IMPL_AUTO(void) ReorderHintOffset(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::HorizontalAlignment) GridViewItemPresenterHorizontalContentAlignment() const;
-        WINRT_IMPL_AUTO(void) GridViewItemPresenterHorizontalContentAlignment(winrt::Windows::UI::Xaml::HorizontalAlignment const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::VerticalAlignment) GridViewItemPresenterVerticalContentAlignment() const;
-        WINRT_IMPL_AUTO(void) GridViewItemPresenterVerticalContentAlignment(winrt::Windows::UI::Xaml::VerticalAlignment const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) GridViewItemPresenterPadding() const;
-        WINRT_IMPL_AUTO(void) GridViewItemPresenterPadding(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) PointerOverBackgroundMargin() const;
-        WINRT_IMPL_AUTO(void) PointerOverBackgroundMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) ContentMargin() const;
-        WINRT_IMPL_AUTO(void) ContentMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto SelectionCheckMarkVisualEnabled() const;
+        auto SelectionCheckMarkVisualEnabled(bool value) const;
+        [[nodiscard]] auto CheckHintBrush() const;
+        auto CheckHintBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckSelectingBrush() const;
+        auto CheckSelectingBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBrush() const;
+        auto CheckBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto DragBackground() const;
+        auto DragBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto DragForeground() const;
+        auto DragForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto FocusBorderBrush() const;
+        auto FocusBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PlaceholderBackground() const;
+        auto PlaceholderBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PointerOverBackground() const;
+        auto PointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedBackground() const;
+        auto SelectedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedForeground() const;
+        auto SelectedForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPointerOverBackground() const;
+        auto SelectedPointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPointerOverBorderBrush() const;
+        auto SelectedPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedBorderThickness() const;
+        auto SelectedBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto DisabledOpacity() const;
+        auto DisabledOpacity(double value) const;
+        [[nodiscard]] auto DragOpacity() const;
+        auto DragOpacity(double value) const;
+        [[nodiscard]] auto ReorderHintOffset() const;
+        auto ReorderHintOffset(double value) const;
+        [[nodiscard]] auto GridViewItemPresenterHorizontalContentAlignment() const;
+        auto GridViewItemPresenterHorizontalContentAlignment(winrt::Windows::UI::Xaml::HorizontalAlignment const& value) const;
+        [[nodiscard]] auto GridViewItemPresenterVerticalContentAlignment() const;
+        auto GridViewItemPresenterVerticalContentAlignment(winrt::Windows::UI::Xaml::VerticalAlignment const& value) const;
+        [[nodiscard]] auto GridViewItemPresenterPadding() const;
+        auto GridViewItemPresenterPadding(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto PointerOverBackgroundMargin() const;
+        auto PointerOverBackgroundMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto ContentMargin() const;
+        auto ContentMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenter>
     {
@@ -3257,7 +3256,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IGridViewItemPresenterFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenterFactory>
     {
@@ -3266,28 +3265,28 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IGridViewItemPresenterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionCheckMarkVisualEnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckHintBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckSelectingBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragForegroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FocusBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PlaceholderBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedForegroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPointerOverBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPointerOverBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedBorderThicknessProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DisabledOpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragOpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ReorderHintOffsetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GridViewItemPresenterHorizontalContentAlignmentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GridViewItemPresenterVerticalContentAlignmentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) GridViewItemPresenterPaddingProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverBackgroundMarginProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ContentMarginProperty() const;
+        [[nodiscard]] auto SelectionCheckMarkVisualEnabledProperty() const;
+        [[nodiscard]] auto CheckHintBrushProperty() const;
+        [[nodiscard]] auto CheckSelectingBrushProperty() const;
+        [[nodiscard]] auto CheckBrushProperty() const;
+        [[nodiscard]] auto DragBackgroundProperty() const;
+        [[nodiscard]] auto DragForegroundProperty() const;
+        [[nodiscard]] auto FocusBorderBrushProperty() const;
+        [[nodiscard]] auto PlaceholderBackgroundProperty() const;
+        [[nodiscard]] auto PointerOverBackgroundProperty() const;
+        [[nodiscard]] auto SelectedBackgroundProperty() const;
+        [[nodiscard]] auto SelectedForegroundProperty() const;
+        [[nodiscard]] auto SelectedPointerOverBackgroundProperty() const;
+        [[nodiscard]] auto SelectedPointerOverBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedBorderThicknessProperty() const;
+        [[nodiscard]] auto DisabledOpacityProperty() const;
+        [[nodiscard]] auto DragOpacityProperty() const;
+        [[nodiscard]] auto ReorderHintOffsetProperty() const;
+        [[nodiscard]] auto GridViewItemPresenterHorizontalContentAlignmentProperty() const;
+        [[nodiscard]] auto GridViewItemPresenterVerticalContentAlignmentProperty() const;
+        [[nodiscard]] auto GridViewItemPresenterPaddingProperty() const;
+        [[nodiscard]] auto PointerOverBackgroundMarginProperty() const;
+        [[nodiscard]] auto ContentMarginProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IGridViewItemPresenterStatics>
     {
@@ -3296,7 +3295,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IGridViewItemTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DragItemsCount() const;
+        [[nodiscard]] auto DragItemsCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IGridViewItemTemplateSettings>
     {
@@ -3305,11 +3304,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IItemsChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Action() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition) Position() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition) OldPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ItemCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ItemUICount() const;
+        [[nodiscard]] auto Action() const;
+        [[nodiscard]] auto Position() const;
+        [[nodiscard]] auto OldPosition() const;
+        [[nodiscard]] auto ItemCount() const;
+        [[nodiscard]] auto ItemUICount() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IItemsChangedEventArgs>
     {
@@ -3318,10 +3317,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IJumpListItemBackgroundConverter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) Enabled() const;
-        WINRT_IMPL_AUTO(void) Enabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) Disabled() const;
-        WINRT_IMPL_AUTO(void) Disabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto Enabled() const;
+        auto Enabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto Disabled() const;
+        auto Disabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IJumpListItemBackgroundConverter>
     {
@@ -3330,8 +3329,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IJumpListItemBackgroundConverterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) EnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DisabledProperty() const;
+        [[nodiscard]] auto EnabledProperty() const;
+        [[nodiscard]] auto DisabledProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IJumpListItemBackgroundConverterStatics>
     {
@@ -3340,10 +3339,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IJumpListItemForegroundConverter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) Enabled() const;
-        WINRT_IMPL_AUTO(void) Enabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) Disabled() const;
-        WINRT_IMPL_AUTO(void) Disabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto Enabled() const;
+        auto Enabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto Disabled() const;
+        auto Disabled(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IJumpListItemForegroundConverter>
     {
@@ -3352,8 +3351,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IJumpListItemForegroundConverterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) EnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DisabledProperty() const;
+        [[nodiscard]] auto EnabledProperty() const;
+        [[nodiscard]] auto DisabledProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IJumpListItemForegroundConverterStatics>
     {
@@ -3370,8 +3369,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ILayoutInformationStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) GetLayoutExceptionElement(winrt::Windows::Foundation::IInspectable const& dispatcher) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) GetLayoutSlot(winrt::Windows::UI::Xaml::FrameworkElement const& element) const;
+        auto GetLayoutExceptionElement(winrt::Windows::Foundation::IInspectable const& dispatcher) const;
+        auto GetLayoutSlot(winrt::Windows::UI::Xaml::FrameworkElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ILayoutInformationStatics>
     {
@@ -3380,7 +3379,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ILayoutInformationStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) GetAvailableSize(winrt::Windows::UI::Xaml::UIElement const& element) const;
+        auto GetAvailableSize(winrt::Windows::UI::Xaml::UIElement const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ILayoutInformationStatics2>
     {
@@ -3389,50 +3388,50 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SelectionCheckMarkVisualEnabled() const;
-        WINRT_IMPL_AUTO(void) SelectionCheckMarkVisualEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckHintBrush() const;
-        WINRT_IMPL_AUTO(void) CheckHintBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckSelectingBrush() const;
-        WINRT_IMPL_AUTO(void) CheckSelectingBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) DragBackground() const;
-        WINRT_IMPL_AUTO(void) DragBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) DragForeground() const;
-        WINRT_IMPL_AUTO(void) DragForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) FocusBorderBrush() const;
-        WINRT_IMPL_AUTO(void) FocusBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PlaceholderBackground() const;
-        WINRT_IMPL_AUTO(void) PlaceholderBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PointerOverBackground() const;
-        WINRT_IMPL_AUTO(void) PointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedForeground() const;
-        WINRT_IMPL_AUTO(void) SelectedForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPointerOverBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedPointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPointerOverBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) SelectedBorderThickness() const;
-        WINRT_IMPL_AUTO(void) SelectedBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DisabledOpacity() const;
-        WINRT_IMPL_AUTO(void) DisabledOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DragOpacity() const;
-        WINRT_IMPL_AUTO(void) DragOpacity(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ReorderHintOffset() const;
-        WINRT_IMPL_AUTO(void) ReorderHintOffset(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::HorizontalAlignment) ListViewItemPresenterHorizontalContentAlignment() const;
-        WINRT_IMPL_AUTO(void) ListViewItemPresenterHorizontalContentAlignment(winrt::Windows::UI::Xaml::HorizontalAlignment const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::VerticalAlignment) ListViewItemPresenterVerticalContentAlignment() const;
-        WINRT_IMPL_AUTO(void) ListViewItemPresenterVerticalContentAlignment(winrt::Windows::UI::Xaml::VerticalAlignment const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) ListViewItemPresenterPadding() const;
-        WINRT_IMPL_AUTO(void) ListViewItemPresenterPadding(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) PointerOverBackgroundMargin() const;
-        WINRT_IMPL_AUTO(void) PointerOverBackgroundMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) ContentMargin() const;
-        WINRT_IMPL_AUTO(void) ContentMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto SelectionCheckMarkVisualEnabled() const;
+        auto SelectionCheckMarkVisualEnabled(bool value) const;
+        [[nodiscard]] auto CheckHintBrush() const;
+        auto CheckHintBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckSelectingBrush() const;
+        auto CheckSelectingBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBrush() const;
+        auto CheckBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto DragBackground() const;
+        auto DragBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto DragForeground() const;
+        auto DragForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto FocusBorderBrush() const;
+        auto FocusBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PlaceholderBackground() const;
+        auto PlaceholderBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PointerOverBackground() const;
+        auto PointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedBackground() const;
+        auto SelectedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedForeground() const;
+        auto SelectedForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPointerOverBackground() const;
+        auto SelectedPointerOverBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPointerOverBorderBrush() const;
+        auto SelectedPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedBorderThickness() const;
+        auto SelectedBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto DisabledOpacity() const;
+        auto DisabledOpacity(double value) const;
+        [[nodiscard]] auto DragOpacity() const;
+        auto DragOpacity(double value) const;
+        [[nodiscard]] auto ReorderHintOffset() const;
+        auto ReorderHintOffset(double value) const;
+        [[nodiscard]] auto ListViewItemPresenterHorizontalContentAlignment() const;
+        auto ListViewItemPresenterHorizontalContentAlignment(winrt::Windows::UI::Xaml::HorizontalAlignment const& value) const;
+        [[nodiscard]] auto ListViewItemPresenterVerticalContentAlignment() const;
+        auto ListViewItemPresenterVerticalContentAlignment(winrt::Windows::UI::Xaml::VerticalAlignment const& value) const;
+        [[nodiscard]] auto ListViewItemPresenterPadding() const;
+        auto ListViewItemPresenterPadding(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto PointerOverBackgroundMargin() const;
+        auto PointerOverBackgroundMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto ContentMargin() const;
+        auto ContentMargin(winrt::Windows::UI::Xaml::Thickness const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter>
     {
@@ -3441,18 +3440,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPressedBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedPressedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PressedBackground() const;
-        WINRT_IMPL_AUTO(void) PressedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) FocusSecondaryBorderBrush() const;
-        WINRT_IMPL_AUTO(void) FocusSecondaryBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode) CheckMode() const;
-        WINRT_IMPL_AUTO(void) CheckMode(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PointerOverForeground() const;
-        WINRT_IMPL_AUTO(void) PointerOverForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPressedBackground() const;
+        auto SelectedPressedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PressedBackground() const;
+        auto PressedBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxBrush() const;
+        auto CheckBoxBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto FocusSecondaryBorderBrush() const;
+        auto FocusSecondaryBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckMode() const;
+        auto CheckMode(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode const& value) const;
+        [[nodiscard]] auto PointerOverForeground() const;
+        auto PointerOverForeground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2>
     {
@@ -3461,14 +3460,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) RevealBackground() const;
-        WINRT_IMPL_AUTO(void) RevealBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) RevealBorderBrush() const;
-        WINRT_IMPL_AUTO(void) RevealBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) RevealBorderThickness() const;
-        WINRT_IMPL_AUTO(void) RevealBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) RevealBackgroundShowsAboveContent() const;
-        WINRT_IMPL_AUTO(void) RevealBackgroundShowsAboveContent(bool value) const;
+        [[nodiscard]] auto RevealBackground() const;
+        auto RevealBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto RevealBorderBrush() const;
+        auto RevealBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto RevealBorderThickness() const;
+        auto RevealBorderThickness(winrt::Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto RevealBackgroundShowsAboveContent() const;
+        auto RevealBackgroundShowsAboveContent(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3>
     {
@@ -3477,60 +3476,60 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedDisabledBackground() const;
-        WINRT_IMPL_AUTO(void) SelectedDisabledBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckPressedBrush() const;
-        WINRT_IMPL_AUTO(void) CheckPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckDisabledBrush() const;
-        WINRT_IMPL_AUTO(void) CheckDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxPointerOverBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxPressedBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxDisabledBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxSelectedBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxSelectedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxSelectedPointerOverBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxSelectedPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxSelectedPressedBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxSelectedPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxSelectedDisabledBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxSelectedDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxBorderBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxPointerOverBorderBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxPressedBorderBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxPressedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) CheckBoxDisabledBorderBrush() const;
-        WINRT_IMPL_AUTO(void) CheckBoxDisabledBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::CornerRadius) CheckBoxCornerRadius() const;
-        WINRT_IMPL_AUTO(void) CheckBoxCornerRadius(winrt::Windows::UI::Xaml::CornerRadius const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::CornerRadius) SelectionIndicatorCornerRadius() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorCornerRadius(winrt::Windows::UI::Xaml::CornerRadius const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SelectionIndicatorVisualEnabled() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorVisualEnabled(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode) SelectionIndicatorMode() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorMode(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectionIndicatorBrush() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectionIndicatorPointerOverBrush() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectionIndicatorPressedBrush() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectionIndicatorDisabledBrush() const;
-        WINRT_IMPL_AUTO(void) SelectionIndicatorDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedPressedBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedPressedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedDisabledBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedDisabledBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) SelectedInnerBorderBrush() const;
-        WINRT_IMPL_AUTO(void) SelectedInnerBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) PointerOverBorderBrush() const;
-        WINRT_IMPL_AUTO(void) PointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedDisabledBackground() const;
+        auto SelectedDisabledBackground(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckPressedBrush() const;
+        auto CheckPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckDisabledBrush() const;
+        auto CheckDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxPointerOverBrush() const;
+        auto CheckBoxPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxPressedBrush() const;
+        auto CheckBoxPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxDisabledBrush() const;
+        auto CheckBoxDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxSelectedBrush() const;
+        auto CheckBoxSelectedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxSelectedPointerOverBrush() const;
+        auto CheckBoxSelectedPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxSelectedPressedBrush() const;
+        auto CheckBoxSelectedPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxSelectedDisabledBrush() const;
+        auto CheckBoxSelectedDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxBorderBrush() const;
+        auto CheckBoxBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxPointerOverBorderBrush() const;
+        auto CheckBoxPointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxPressedBorderBrush() const;
+        auto CheckBoxPressedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxDisabledBorderBrush() const;
+        auto CheckBoxDisabledBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto CheckBoxCornerRadius() const;
+        auto CheckBoxCornerRadius(winrt::Windows::UI::Xaml::CornerRadius const& value) const;
+        [[nodiscard]] auto SelectionIndicatorCornerRadius() const;
+        auto SelectionIndicatorCornerRadius(winrt::Windows::UI::Xaml::CornerRadius const& value) const;
+        [[nodiscard]] auto SelectionIndicatorVisualEnabled() const;
+        auto SelectionIndicatorVisualEnabled(bool value) const;
+        [[nodiscard]] auto SelectionIndicatorMode() const;
+        auto SelectionIndicatorMode(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode const& value) const;
+        [[nodiscard]] auto SelectionIndicatorBrush() const;
+        auto SelectionIndicatorBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectionIndicatorPointerOverBrush() const;
+        auto SelectionIndicatorPointerOverBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectionIndicatorPressedBrush() const;
+        auto SelectionIndicatorPressedBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectionIndicatorDisabledBrush() const;
+        auto SelectionIndicatorDisabledBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedBorderBrush() const;
+        auto SelectedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedPressedBorderBrush() const;
+        auto SelectedPressedBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedDisabledBorderBrush() const;
+        auto SelectedDisabledBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto SelectedInnerBorderBrush() const;
+        auto SelectedInnerBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto PointerOverBorderBrush() const;
+        auto PointerOverBorderBrush(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>
     {
@@ -3539,7 +3538,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory>
     {
@@ -3548,28 +3547,28 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionCheckMarkVisualEnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckHintBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckSelectingBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragForegroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FocusBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PlaceholderBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedForegroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPointerOverBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPointerOverBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedBorderThicknessProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DisabledOpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DragOpacityProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ReorderHintOffsetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ListViewItemPresenterHorizontalContentAlignmentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ListViewItemPresenterVerticalContentAlignmentProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ListViewItemPresenterPaddingProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverBackgroundMarginProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ContentMarginProperty() const;
+        [[nodiscard]] auto SelectionCheckMarkVisualEnabledProperty() const;
+        [[nodiscard]] auto CheckHintBrushProperty() const;
+        [[nodiscard]] auto CheckSelectingBrushProperty() const;
+        [[nodiscard]] auto CheckBrushProperty() const;
+        [[nodiscard]] auto DragBackgroundProperty() const;
+        [[nodiscard]] auto DragForegroundProperty() const;
+        [[nodiscard]] auto FocusBorderBrushProperty() const;
+        [[nodiscard]] auto PlaceholderBackgroundProperty() const;
+        [[nodiscard]] auto PointerOverBackgroundProperty() const;
+        [[nodiscard]] auto SelectedBackgroundProperty() const;
+        [[nodiscard]] auto SelectedForegroundProperty() const;
+        [[nodiscard]] auto SelectedPointerOverBackgroundProperty() const;
+        [[nodiscard]] auto SelectedPointerOverBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedBorderThicknessProperty() const;
+        [[nodiscard]] auto DisabledOpacityProperty() const;
+        [[nodiscard]] auto DragOpacityProperty() const;
+        [[nodiscard]] auto ReorderHintOffsetProperty() const;
+        [[nodiscard]] auto ListViewItemPresenterHorizontalContentAlignmentProperty() const;
+        [[nodiscard]] auto ListViewItemPresenterVerticalContentAlignmentProperty() const;
+        [[nodiscard]] auto ListViewItemPresenterPaddingProperty() const;
+        [[nodiscard]] auto PointerOverBackgroundMarginProperty() const;
+        [[nodiscard]] auto ContentMarginProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics>
     {
@@ -3578,12 +3577,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPressedBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PressedBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FocusSecondaryBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverForegroundProperty() const;
+        [[nodiscard]] auto SelectedPressedBackgroundProperty() const;
+        [[nodiscard]] auto PressedBackgroundProperty() const;
+        [[nodiscard]] auto CheckBoxBrushProperty() const;
+        [[nodiscard]] auto FocusSecondaryBorderBrushProperty() const;
+        [[nodiscard]] auto CheckModeProperty() const;
+        [[nodiscard]] auto PointerOverForegroundProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2>
     {
@@ -3592,10 +3591,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RevealBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RevealBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RevealBorderThicknessProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) RevealBackgroundShowsAboveContentProperty() const;
+        [[nodiscard]] auto RevealBackgroundProperty() const;
+        [[nodiscard]] auto RevealBorderBrushProperty() const;
+        [[nodiscard]] auto RevealBorderThicknessProperty() const;
+        [[nodiscard]] auto RevealBackgroundShowsAboveContentProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3>
     {
@@ -3604,33 +3603,33 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedDisabledBackgroundProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckPressedBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckDisabledBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxPointerOverBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxPressedBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxDisabledBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedPointerOverBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedPressedBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedDisabledBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxPointerOverBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxPressedBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxDisabledBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) CheckBoxCornerRadiusProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorCornerRadiusProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorVisualEnabledProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorModeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorPointerOverBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorPressedBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectionIndicatorDisabledBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedPressedBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedDisabledBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedInnerBorderBrushProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PointerOverBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedDisabledBackgroundProperty() const;
+        [[nodiscard]] auto CheckPressedBrushProperty() const;
+        [[nodiscard]] auto CheckDisabledBrushProperty() const;
+        [[nodiscard]] auto CheckBoxPointerOverBrushProperty() const;
+        [[nodiscard]] auto CheckBoxPressedBrushProperty() const;
+        [[nodiscard]] auto CheckBoxDisabledBrushProperty() const;
+        [[nodiscard]] auto CheckBoxSelectedBrushProperty() const;
+        [[nodiscard]] auto CheckBoxSelectedPointerOverBrushProperty() const;
+        [[nodiscard]] auto CheckBoxSelectedPressedBrushProperty() const;
+        [[nodiscard]] auto CheckBoxSelectedDisabledBrushProperty() const;
+        [[nodiscard]] auto CheckBoxBorderBrushProperty() const;
+        [[nodiscard]] auto CheckBoxPointerOverBorderBrushProperty() const;
+        [[nodiscard]] auto CheckBoxPressedBorderBrushProperty() const;
+        [[nodiscard]] auto CheckBoxDisabledBorderBrushProperty() const;
+        [[nodiscard]] auto CheckBoxCornerRadiusProperty() const;
+        [[nodiscard]] auto SelectionIndicatorCornerRadiusProperty() const;
+        [[nodiscard]] auto SelectionIndicatorVisualEnabledProperty() const;
+        [[nodiscard]] auto SelectionIndicatorModeProperty() const;
+        [[nodiscard]] auto SelectionIndicatorBrushProperty() const;
+        [[nodiscard]] auto SelectionIndicatorPointerOverBrushProperty() const;
+        [[nodiscard]] auto SelectionIndicatorPressedBrushProperty() const;
+        [[nodiscard]] auto SelectionIndicatorDisabledBrushProperty() const;
+        [[nodiscard]] auto SelectedBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedPressedBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedDisabledBorderBrushProperty() const;
+        [[nodiscard]] auto SelectedInnerBorderBrushProperty() const;
+        [[nodiscard]] auto PointerOverBorderBrushProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>
     {
@@ -3639,7 +3638,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DragItemsCount() const;
+        [[nodiscard]] auto DragItemsCount() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings>
     {
@@ -3648,24 +3647,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ILoopingSelector
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldLoop() const;
-        WINRT_IMPL_AUTO(void) ShouldLoop(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>) Items() const;
-        WINRT_IMPL_AUTO(void) Items(param::vector<winrt::Windows::Foundation::IInspectable> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SelectedIndex() const;
-        WINRT_IMPL_AUTO(void) SelectedIndex(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) SelectedItem() const;
-        WINRT_IMPL_AUTO(void) SelectedItem(winrt::Windows::Foundation::IInspectable const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ItemWidth() const;
-        WINRT_IMPL_AUTO(void) ItemWidth(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ItemHeight() const;
-        WINRT_IMPL_AUTO(void) ItemHeight(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DataTemplate) ItemTemplate() const;
-        WINRT_IMPL_AUTO(void) ItemTemplate(winrt::Windows::UI::Xaml::DataTemplate const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) SelectionChanged(winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
+        [[nodiscard]] auto ShouldLoop() const;
+        auto ShouldLoop(bool value) const;
+        [[nodiscard]] auto Items() const;
+        auto Items(param::vector<winrt::Windows::Foundation::IInspectable> const& value) const;
+        [[nodiscard]] auto SelectedIndex() const;
+        auto SelectedIndex(int32_t value) const;
+        [[nodiscard]] auto SelectedItem() const;
+        auto SelectedItem(winrt::Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] auto ItemWidth() const;
+        auto ItemWidth(int32_t value) const;
+        [[nodiscard]] auto ItemHeight() const;
+        auto ItemHeight(int32_t value) const;
+        [[nodiscard]] auto ItemTemplate() const;
+        auto ItemTemplate(winrt::Windows::UI::Xaml::DataTemplate const& value) const;
+        auto SelectionChanged(winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
         using SelectionChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelector, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelector>::remove_SelectionChanged>;
         [[nodiscard]] SelectionChanged_revoker SelectionChanged(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) SelectionChanged(winrt::event_token const& token) const noexcept;
+        auto SelectionChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelector>
     {
@@ -3690,13 +3689,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ILoopingSelectorStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ShouldLoopProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedIndexProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedItemProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemWidthProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemHeightProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ItemTemplateProperty() const;
+        [[nodiscard]] auto ShouldLoopProperty() const;
+        [[nodiscard]] auto ItemsProperty() const;
+        [[nodiscard]] auto SelectedIndexProperty() const;
+        [[nodiscard]] auto SelectedItemProperty() const;
+        [[nodiscard]] auto ItemWidthProperty() const;
+        [[nodiscard]] auto ItemHeightProperty() const;
+        [[nodiscard]] auto ItemTemplateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorStatics>
     {
@@ -3705,7 +3704,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IMenuFlyoutItemTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KeyboardAcceleratorTextMinWidth() const;
+        [[nodiscard]] auto KeyboardAcceleratorTextMinWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IMenuFlyoutItemTemplateSettings>
     {
@@ -3714,7 +3713,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IMenuFlyoutPresenterTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) FlyoutContentMinWidth() const;
+        [[nodiscard]] auto FlyoutContentMinWidth() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IMenuFlyoutPresenterTemplateSettings>
     {
@@ -3723,8 +3722,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_INavigationViewItemPresenter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::IconElement) Icon() const;
-        WINRT_IMPL_AUTO(void) Icon(winrt::Windows::UI::Xaml::Controls::IconElement const& value) const;
+        [[nodiscard]] auto Icon() const;
+        auto Icon(winrt::Windows::UI::Xaml::Controls::IconElement const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenter>
     {
@@ -3733,7 +3732,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_INavigationViewItemPresenterFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterFactory>
     {
@@ -3742,7 +3741,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_INavigationViewItemPresenterStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IconProperty() const;
+        [[nodiscard]] auto IconProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::INavigationViewItemPresenterStatics>
     {
@@ -3751,33 +3750,33 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IOrientedVirtualizingPanel
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanVerticallyScroll() const;
-        WINRT_IMPL_AUTO(void) CanVerticallyScroll(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanHorizontallyScroll() const;
-        WINRT_IMPL_AUTO(void) CanHorizontallyScroll(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExtentWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ExtentHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ViewportWidth() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ViewportHeight() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) ScrollOwner() const;
-        WINRT_IMPL_AUTO(void) ScrollOwner(winrt::Windows::Foundation::IInspectable const& value) const;
-        WINRT_IMPL_AUTO(void) LineUp() const;
-        WINRT_IMPL_AUTO(void) LineDown() const;
-        WINRT_IMPL_AUTO(void) LineLeft() const;
-        WINRT_IMPL_AUTO(void) LineRight() const;
-        WINRT_IMPL_AUTO(void) PageUp() const;
-        WINRT_IMPL_AUTO(void) PageDown() const;
-        WINRT_IMPL_AUTO(void) PageLeft() const;
-        WINRT_IMPL_AUTO(void) PageRight() const;
-        WINRT_IMPL_AUTO(void) MouseWheelUp() const;
-        WINRT_IMPL_AUTO(void) MouseWheelDown() const;
-        WINRT_IMPL_AUTO(void) MouseWheelLeft() const;
-        WINRT_IMPL_AUTO(void) MouseWheelRight() const;
-        WINRT_IMPL_AUTO(void) SetHorizontalOffset(double offset) const;
-        WINRT_IMPL_AUTO(void) SetVerticalOffset(double offset) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) MakeVisible(winrt::Windows::UI::Xaml::UIElement const& visual, winrt::Windows::Foundation::Rect const& rectangle) const;
+        [[nodiscard]] auto CanVerticallyScroll() const;
+        auto CanVerticallyScroll(bool value) const;
+        [[nodiscard]] auto CanHorizontallyScroll() const;
+        auto CanHorizontallyScroll(bool value) const;
+        [[nodiscard]] auto ExtentWidth() const;
+        [[nodiscard]] auto ExtentHeight() const;
+        [[nodiscard]] auto ViewportWidth() const;
+        [[nodiscard]] auto ViewportHeight() const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        [[nodiscard]] auto VerticalOffset() const;
+        [[nodiscard]] auto ScrollOwner() const;
+        auto ScrollOwner(winrt::Windows::Foundation::IInspectable const& value) const;
+        auto LineUp() const;
+        auto LineDown() const;
+        auto LineLeft() const;
+        auto LineRight() const;
+        auto PageUp() const;
+        auto PageDown() const;
+        auto PageLeft() const;
+        auto PageRight() const;
+        auto MouseWheelUp() const;
+        auto MouseWheelDown() const;
+        auto MouseWheelLeft() const;
+        auto MouseWheelRight() const;
+        auto SetHorizontalOffset(double offset) const;
+        auto SetVerticalOffset(double offset) const;
+        auto MakeVisible(winrt::Windows::UI::Xaml::UIElement const& visual, winrt::Windows::Foundation::Rect const& rectangle) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IOrientedVirtualizingPanel>
     {
@@ -3802,7 +3801,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPickerFlyoutBaseFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseFactory>
     {
@@ -3811,8 +3810,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPickerFlyoutBaseOverrides
     {
-        WINRT_IMPL_AUTO(void) OnConfirmed() const;
-        WINRT_IMPL_AUTO(bool) ShouldShowConfirmationButtons() const;
+        auto OnConfirmed() const;
+        auto ShouldShowConfirmationButtons() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides>
     {
@@ -3821,9 +3820,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPickerFlyoutBaseStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) TitleProperty() const;
-        WINRT_IMPL_AUTO(hstring) GetTitle(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
-        WINRT_IMPL_AUTO(void) SetTitle(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
+        [[nodiscard]] auto TitleProperty() const;
+        auto GetTitle(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        auto SetTitle(winrt::Windows::UI::Xaml::DependencyObject const& element, param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseStatics>
     {
@@ -3840,7 +3839,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPivotHeaderItemFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPivotHeaderItemFactory>
     {
@@ -3865,26 +3864,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::UIElement) Child() const;
-        WINRT_IMPL_AUTO(void) Child(winrt::Windows::UI::Xaml::UIElement const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOpen() const;
-        WINRT_IMPL_AUTO(void) IsOpen(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalOffset() const;
-        WINRT_IMPL_AUTO(void) HorizontalOffset(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalOffset() const;
-        WINRT_IMPL_AUTO(void) VerticalOffset(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection) ChildTransitions() const;
-        WINRT_IMPL_AUTO(void) ChildTransitions(winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLightDismissEnabled() const;
-        WINRT_IMPL_AUTO(void) IsLightDismissEnabled(bool value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Opened(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Child() const;
+        auto Child(winrt::Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto IsOpen() const;
+        auto IsOpen(bool value) const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        auto HorizontalOffset(double value) const;
+        [[nodiscard]] auto VerticalOffset() const;
+        auto VerticalOffset(double value) const;
+        [[nodiscard]] auto ChildTransitions() const;
+        auto ChildTransitions(winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection const& value) const;
+        [[nodiscard]] auto IsLightDismissEnabled() const;
+        auto IsLightDismissEnabled(bool value) const;
+        auto Opened(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Opened_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup>::remove_Opened>;
         [[nodiscard]] Opened_revoker Opened(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Opened(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Closed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Opened(winrt::event_token const& token) const noexcept;
+        auto Closed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Closed_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup>::remove_Closed>;
         [[nodiscard]] Closed_revoker Closed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closed(winrt::event_token const& token) const noexcept;
+        auto Closed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup>
     {
@@ -3893,8 +3892,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode) LightDismissOverlayMode() const;
-        WINRT_IMPL_AUTO(void) LightDismissOverlayMode(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode const& value) const;
+        [[nodiscard]] auto LightDismissOverlayMode() const;
+        auto LightDismissOverlayMode(winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup2>
     {
@@ -3903,9 +3902,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldConstrainToRootBounds() const;
-        WINRT_IMPL_AUTO(void) ShouldConstrainToRootBounds(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsConstrainedToRootBounds() const;
+        [[nodiscard]] auto ShouldConstrainToRootBounds() const;
+        auto ShouldConstrainToRootBounds(bool value) const;
+        [[nodiscard]] auto IsConstrainedToRootBounds() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup3>
     {
@@ -3914,15 +3913,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::FrameworkElement) PlacementTarget() const;
-        WINRT_IMPL_AUTO(void) PlacementTarget(winrt::Windows::UI::Xaml::FrameworkElement const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) DesiredPlacement() const;
-        WINRT_IMPL_AUTO(void) DesiredPlacement(winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) ActualPlacement() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ActualPlacementChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto PlacementTarget() const;
+        auto PlacementTarget(winrt::Windows::UI::Xaml::FrameworkElement const& value) const;
+        [[nodiscard]] auto DesiredPlacement() const;
+        auto DesiredPlacement(winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode const& value) const;
+        [[nodiscard]] auto ActualPlacement() const;
+        auto ActualPlacementChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using ActualPlacementChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup4, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup4>::remove_ActualPlacementChanged>;
         [[nodiscard]] ActualPlacementChanged_revoker ActualPlacementChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) ActualPlacementChanged(winrt::event_token const& token) const noexcept;
+        auto ActualPlacementChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup4>
     {
@@ -3931,12 +3930,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ChildProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsOpenProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) HorizontalOffsetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) VerticalOffsetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ChildTransitionsProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsLightDismissEnabledProperty() const;
+        [[nodiscard]] auto ChildProperty() const;
+        [[nodiscard]] auto IsOpenProperty() const;
+        [[nodiscard]] auto HorizontalOffsetProperty() const;
+        [[nodiscard]] auto VerticalOffsetProperty() const;
+        [[nodiscard]] auto ChildTransitionsProperty() const;
+        [[nodiscard]] auto IsLightDismissEnabledProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics>
     {
@@ -3945,7 +3944,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LightDismissOverlayModeProperty() const;
+        [[nodiscard]] auto LightDismissOverlayModeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>
     {
@@ -3954,7 +3953,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ShouldConstrainToRootBoundsProperty() const;
+        [[nodiscard]] auto ShouldConstrainToRootBoundsProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>
     {
@@ -3963,8 +3962,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) PlacementTargetProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DesiredPlacementProperty() const;
+        [[nodiscard]] auto PlacementTargetProperty() const;
+        [[nodiscard]] auto DesiredPlacementProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>
     {
@@ -3973,13 +3972,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IProgressBarTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) EllipseDiameter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) EllipseOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) EllipseAnimationWellPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) EllipseAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ContainerAnimationStartPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ContainerAnimationEndPosition() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) IndicatorLengthDelta() const;
+        [[nodiscard]] auto EllipseDiameter() const;
+        [[nodiscard]] auto EllipseOffset() const;
+        [[nodiscard]] auto EllipseAnimationWellPosition() const;
+        [[nodiscard]] auto EllipseAnimationEndPosition() const;
+        [[nodiscard]] auto ContainerAnimationStartPosition() const;
+        [[nodiscard]] auto ContainerAnimationEndPosition() const;
+        [[nodiscard]] auto IndicatorLengthDelta() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>
     {
@@ -3988,9 +3987,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IProgressRingTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) EllipseDiameter() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) EllipseOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxSideLength() const;
+        [[nodiscard]] auto EllipseDiameter() const;
+        [[nodiscard]] auto EllipseOffset() const;
+        [[nodiscard]] auto MaxSideLength() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>
     {
@@ -3999,20 +3998,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRangeBase
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Minimum() const;
-        WINRT_IMPL_AUTO(void) Minimum(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Maximum() const;
-        WINRT_IMPL_AUTO(void) Maximum(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) SmallChange() const;
-        WINRT_IMPL_AUTO(void) SmallChange(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) LargeChange() const;
-        WINRT_IMPL_AUTO(void) LargeChange(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Value() const;
-        WINRT_IMPL_AUTO(void) Value(double value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) ValueChanged(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler const& handler) const;
+        [[nodiscard]] auto Minimum() const;
+        auto Minimum(double value) const;
+        [[nodiscard]] auto Maximum() const;
+        auto Maximum(double value) const;
+        [[nodiscard]] auto SmallChange() const;
+        auto SmallChange(double value) const;
+        [[nodiscard]] auto LargeChange() const;
+        auto LargeChange(double value) const;
+        [[nodiscard]] auto Value() const;
+        auto Value(double value) const;
+        auto ValueChanged(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler const& handler) const;
         using ValueChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase>::remove_ValueChanged>;
         [[nodiscard]] ValueChanged_revoker ValueChanged(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) ValueChanged(winrt::event_token const& token) const noexcept;
+        auto ValueChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase>
     {
@@ -4021,7 +4020,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRangeBaseFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseFactory>
     {
@@ -4030,9 +4029,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRangeBaseOverrides
     {
-        WINRT_IMPL_AUTO(void) OnMinimumChanged(double oldMinimum, double newMinimum) const;
-        WINRT_IMPL_AUTO(void) OnMaximumChanged(double oldMaximum, double newMaximum) const;
-        WINRT_IMPL_AUTO(void) OnValueChanged(double oldValue, double newValue) const;
+        auto OnMinimumChanged(double oldMinimum, double newMinimum) const;
+        auto OnMaximumChanged(double oldMaximum, double newMaximum) const;
+        auto OnValueChanged(double oldValue, double newValue) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides>
     {
@@ -4041,11 +4040,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRangeBaseStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MinimumProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) MaximumProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SmallChangeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) LargeChangeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ValueProperty() const;
+        [[nodiscard]] auto MinimumProperty() const;
+        [[nodiscard]] auto MaximumProperty() const;
+        [[nodiscard]] auto SmallChangeProperty() const;
+        [[nodiscard]] auto LargeChangeProperty() const;
+        [[nodiscard]] auto ValueProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseStatics>
     {
@@ -4054,8 +4053,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRangeBaseValueChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OldValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NewValue() const;
+        [[nodiscard]] auto OldValue() const;
+        [[nodiscard]] auto NewValue() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseValueChangedEventArgs>
     {
@@ -4064,10 +4063,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRepeatButton
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Delay() const;
-        WINRT_IMPL_AUTO(void) Delay(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Interval() const;
-        WINRT_IMPL_AUTO(void) Interval(int32_t value) const;
+        [[nodiscard]] auto Delay() const;
+        auto Delay(int32_t value) const;
+        [[nodiscard]] auto Interval() const;
+        auto Interval(int32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRepeatButton>
     {
@@ -4076,8 +4075,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IRepeatButtonStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) DelayProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IntervalProperty() const;
+        [[nodiscard]] auto DelayProperty() const;
+        [[nodiscard]] auto IntervalProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IRepeatButtonStatics>
     {
@@ -4086,16 +4085,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IScrollBar
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Orientation) Orientation() const;
-        WINRT_IMPL_AUTO(void) Orientation(winrt::Windows::UI::Xaml::Controls::Orientation const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ViewportSize() const;
-        WINRT_IMPL_AUTO(void) ViewportSize(double value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode) IndicatorMode() const;
-        WINRT_IMPL_AUTO(void) IndicatorMode(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Scroll(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler const& handler) const;
+        [[nodiscard]] auto Orientation() const;
+        auto Orientation(winrt::Windows::UI::Xaml::Controls::Orientation const& value) const;
+        [[nodiscard]] auto ViewportSize() const;
+        auto ViewportSize(double value) const;
+        [[nodiscard]] auto IndicatorMode() const;
+        auto IndicatorMode(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode const& value) const;
+        auto Scroll(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler const& handler) const;
         using Scroll_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollBar, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollBar>::remove_Scroll>;
         [[nodiscard]] Scroll_revoker Scroll(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Scroll(winrt::event_token const& token) const noexcept;
+        auto Scroll(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollBar>
     {
@@ -4104,9 +4103,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IScrollBarStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) OrientationProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) ViewportSizeProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IndicatorModeProperty() const;
+        [[nodiscard]] auto OrientationProperty() const;
+        [[nodiscard]] auto ViewportSizeProperty() const;
+        [[nodiscard]] auto IndicatorModeProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollBarStatics>
     {
@@ -4115,8 +4114,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IScrollEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NewValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType) ScrollEventType() const;
+        [[nodiscard]] auto NewValue() const;
+        [[nodiscard]] auto ScrollEventType() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollEventArgs>
     {
@@ -4125,18 +4124,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IScrollSnapPointsInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AreHorizontalSnapPointsRegular() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AreVerticalSnapPointsRegular() const;
-        WINRT_IMPL_AUTO(winrt::event_token) HorizontalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto AreHorizontalSnapPointsRegular() const;
+        [[nodiscard]] auto AreVerticalSnapPointsRegular() const;
+        auto HorizontalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using HorizontalSnapPointsChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::remove_HorizontalSnapPointsChanged>;
         [[nodiscard]] HorizontalSnapPointsChanged_revoker HorizontalSnapPointsChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) HorizontalSnapPointsChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) VerticalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto HorizontalSnapPointsChanged(winrt::event_token const& token) const noexcept;
+        auto VerticalSnapPointsChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using VerticalSnapPointsChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::remove_VerticalSnapPointsChanged>;
         [[nodiscard]] VerticalSnapPointsChanged_revoker VerticalSnapPointsChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) VerticalSnapPointsChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<float>) GetIrregularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation const& orientation, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment const& alignment) const;
-        WINRT_IMPL_AUTO(float) GetRegularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation const& orientation, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment const& alignment, float& offset) const;
+        auto VerticalSnapPointsChanged(winrt::event_token const& token) const noexcept;
+        auto GetIrregularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation const& orientation, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment const& alignment) const;
+        auto GetRegularSnapPoints(winrt::Windows::UI::Xaml::Controls::Orientation const& orientation, winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment const& alignment, float& offset) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
     {
@@ -4145,20 +4144,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISelector
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SelectedIndex() const;
-        WINRT_IMPL_AUTO(void) SelectedIndex(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) SelectedItem() const;
-        WINRT_IMPL_AUTO(void) SelectedItem(winrt::Windows::Foundation::IInspectable const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) SelectedValue() const;
-        WINRT_IMPL_AUTO(void) SelectedValue(winrt::Windows::Foundation::IInspectable const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SelectedValuePath() const;
-        WINRT_IMPL_AUTO(void) SelectedValuePath(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) IsSynchronizedWithCurrentItem() const;
-        WINRT_IMPL_AUTO(void) IsSynchronizedWithCurrentItem(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) SelectionChanged(winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
+        [[nodiscard]] auto SelectedIndex() const;
+        auto SelectedIndex(int32_t value) const;
+        [[nodiscard]] auto SelectedItem() const;
+        auto SelectedItem(winrt::Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] auto SelectedValue() const;
+        auto SelectedValue(winrt::Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] auto SelectedValuePath() const;
+        auto SelectedValuePath(param::hstring const& value) const;
+        [[nodiscard]] auto IsSynchronizedWithCurrentItem() const;
+        auto IsSynchronizedWithCurrentItem(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        auto SelectionChanged(winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
         using SelectionChanged_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::ISelector, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::ISelector>::remove_SelectionChanged>;
         [[nodiscard]] SelectionChanged_revoker SelectionChanged(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) SelectionChanged(winrt::event_token const& token) const noexcept;
+        auto SelectionChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISelector>
     {
@@ -4175,8 +4174,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISelectorItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSelected() const;
-        WINRT_IMPL_AUTO(void) IsSelected(bool value) const;
+        [[nodiscard]] auto IsSelected() const;
+        auto IsSelected(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISelectorItem>
     {
@@ -4185,7 +4184,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISelectorItemFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISelectorItemFactory>
     {
@@ -4194,7 +4193,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISelectorItemStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsSelectedProperty() const;
+        [[nodiscard]] auto IsSelectedProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISelectorItemStatics>
     {
@@ -4203,12 +4202,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISelectorStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedIndexProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedItemProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedValueProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) SelectedValuePathProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsSynchronizedWithCurrentItemProperty() const;
-        WINRT_IMPL_AUTO(bool) GetIsSelectionActive(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
+        [[nodiscard]] auto SelectedIndexProperty() const;
+        [[nodiscard]] auto SelectedItemProperty() const;
+        [[nodiscard]] auto SelectedValueProperty() const;
+        [[nodiscard]] auto SelectedValuePathProperty() const;
+        [[nodiscard]] auto IsSynchronizedWithCurrentItemProperty() const;
+        auto GetIsSelectionActive(winrt::Windows::UI::Xaml::DependencyObject const& element) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISelectorStatics>
     {
@@ -4217,12 +4216,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISettingsFlyoutTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) HeaderBackground() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) HeaderForeground() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) BorderBrush() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Thickness) BorderThickness() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::ImageSource) IconSource() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection) ContentTransitions() const;
+        [[nodiscard]] auto HeaderBackground() const;
+        [[nodiscard]] auto HeaderForeground() const;
+        [[nodiscard]] auto BorderBrush() const;
+        [[nodiscard]] auto BorderThickness() const;
+        [[nodiscard]] auto IconSource() const;
+        [[nodiscard]] auto ContentTransitions() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISettingsFlyoutTemplateSettings>
     {
@@ -4231,12 +4230,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ISplitViewTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OpenPaneLength() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeOpenPaneLength() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) OpenPaneLengthMinusCompactLength() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) NegativeOpenPaneLengthMinusCompactLength() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::GridLength) OpenPaneGridLength() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::GridLength) CompactPaneGridLength() const;
+        [[nodiscard]] auto OpenPaneLength() const;
+        [[nodiscard]] auto NegativeOpenPaneLength() const;
+        [[nodiscard]] auto OpenPaneLengthMinusCompactLength() const;
+        [[nodiscard]] auto NegativeOpenPaneLengthMinusCompactLength() const;
+        [[nodiscard]] auto OpenPaneGridLength() const;
+        [[nodiscard]] auto CompactPaneGridLength() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ISplitViewTemplateSettings>
     {
@@ -4245,20 +4244,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IThumb
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDragging() const;
-        WINRT_IMPL_AUTO(winrt::event_token) DragStarted(winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventHandler const& handler) const;
+        [[nodiscard]] auto IsDragging() const;
+        auto DragStarted(winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventHandler const& handler) const;
         using DragStarted_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb>::remove_DragStarted>;
         [[nodiscard]] DragStarted_revoker DragStarted(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) DragStarted(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) DragDelta(winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventHandler const& handler) const;
+        auto DragStarted(winrt::event_token const& token) const noexcept;
+        auto DragDelta(winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventHandler const& handler) const;
         using DragDelta_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb>::remove_DragDelta>;
         [[nodiscard]] DragDelta_revoker DragDelta(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) DragDelta(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) DragCompleted(winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventHandler const& handler) const;
+        auto DragDelta(winrt::event_token const& token) const noexcept;
+        auto DragCompleted(winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventHandler const& handler) const;
         using DragCompleted_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb>::remove_DragCompleted>;
         [[nodiscard]] DragCompleted_revoker DragCompleted(auto_revoke_t, winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) DragCompleted(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(void) CancelDrag() const;
+        auto DragCompleted(winrt::event_token const& token) const noexcept;
+        auto CancelDrag() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IThumb>
     {
@@ -4267,7 +4266,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IThumbStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsDraggingProperty() const;
+        [[nodiscard]] auto IsDraggingProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IThumbStatics>
     {
@@ -4276,8 +4275,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ITickBar
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Brush) Fill() const;
-        WINRT_IMPL_AUTO(void) Fill(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto Fill() const;
+        auto Fill(winrt::Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ITickBar>
     {
@@ -4286,7 +4285,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_ITickBarStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) FillProperty() const;
+        [[nodiscard]] auto FillProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::ITickBarStatics>
     {
@@ -4295,22 +4294,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToggleButton
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<bool>) IsChecked() const;
-        WINRT_IMPL_AUTO(void) IsChecked(winrt::Windows::Foundation::IReference<bool> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsThreeState() const;
-        WINRT_IMPL_AUTO(void) IsThreeState(bool value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Checked(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] auto IsChecked() const;
+        auto IsChecked(winrt::Windows::Foundation::IReference<bool> const& value) const;
+        [[nodiscard]] auto IsThreeState() const;
+        auto IsThreeState(bool value) const;
+        auto Checked(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using Checked_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton>::remove_Checked>;
         [[nodiscard]] Checked_revoker Checked(auto_revoke_t, winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Checked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Unchecked(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        auto Checked(winrt::event_token const& token) const noexcept;
+        auto Unchecked(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using Unchecked_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton>::remove_Unchecked>;
         [[nodiscard]] Unchecked_revoker Unchecked(auto_revoke_t, winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Unchecked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Indeterminate(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        auto Unchecked(winrt::event_token const& token) const noexcept;
+        auto Indeterminate(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using Indeterminate_revoker = impl::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton, &impl::abi_t<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton>::remove_Indeterminate>;
         [[nodiscard]] Indeterminate_revoker Indeterminate(auto_revoke_t, winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Indeterminate(winrt::event_token const& token) const noexcept;
+        auto Indeterminate(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButton>
     {
@@ -4319,7 +4318,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToggleButtonFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton) CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonFactory>
     {
@@ -4328,7 +4327,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToggleButtonOverrides
     {
-        WINRT_IMPL_AUTO(void) OnToggle() const;
+        auto OnToggle() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides>
     {
@@ -4337,8 +4336,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToggleButtonStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsCheckedProperty() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) IsThreeStateProperty() const;
+        [[nodiscard]] auto IsCheckedProperty() const;
+        [[nodiscard]] auto IsThreeStateProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonStatics>
     {
@@ -4347,14 +4346,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToggleSwitchTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KnobCurrentToOnOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KnobCurrentToOffOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KnobOnToOffOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) KnobOffToOnOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CurtainCurrentToOnOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CurtainCurrentToOffOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CurtainOnToOffOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) CurtainOffToOnOffset() const;
+        [[nodiscard]] auto KnobCurrentToOnOffset() const;
+        [[nodiscard]] auto KnobCurrentToOffOffset() const;
+        [[nodiscard]] auto KnobOnToOffOffset() const;
+        [[nodiscard]] auto KnobOffToOnOffset() const;
+        [[nodiscard]] auto CurtainCurrentToOnOffset() const;
+        [[nodiscard]] auto CurtainCurrentToOffOffset() const;
+        [[nodiscard]] auto CurtainOnToOffOffset() const;
+        [[nodiscard]] auto CurtainOffToOnOffset() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToggleSwitchTemplateSettings>
     {
@@ -4363,8 +4362,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IToolTipTemplateSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) FromHorizontalOffset() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) FromVerticalOffset() const;
+        [[nodiscard]] auto FromHorizontalOffset() const;
+        [[nodiscard]] auto FromVerticalOffset() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Controls::Primitives::IToolTipTemplateSettings>
     {

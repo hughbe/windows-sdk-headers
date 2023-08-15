@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -25,7 +25,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Resources
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using ICustomXamlResourceLoaderOverrides = winrt::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetResource(param::hstring const& resourceId, param::hstring const& objectType, param::hstring const& propertyName, param::hstring const& propertyType) const;
+        auto GetResource(param::hstring const& resourceId, param::hstring const& objectType, param::hstring const& propertyName, param::hstring const& propertyType) const;
     };
 }
 #endif

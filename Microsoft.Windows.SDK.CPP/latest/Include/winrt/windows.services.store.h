@@ -293,21 +293,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext4_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-#define ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Services {
-            namespace Store {
-                interface IStoreContext5;
-            } /* Store */
-        } /* Services */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5 ABI::Windows::Services::Store::IStoreContext5
-
-#endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_FWD_DEFINED__
 namespace ABI {
@@ -442,21 +427,6 @@ namespace ABI {
 #define __x_ABI_CWindows_CServices_CStore_CIStorePrice ABI::Windows::Services::Store::IStorePrice
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePrice_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Services {
-            namespace Store {
-                interface IStorePrice2;
-            } /* Store */
-        } /* Services */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2 ABI::Windows::Services::Store::IStorePrice2
-
-#endif // ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreProduct_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CStore_CIStoreProduct_FWD_DEFINED__
@@ -3495,7 +3465,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreAcquireLicenseResult = _uuidof(IStoreAcquireLicenseResult);
+                MIDL_CONST_ID IID& IID_IStoreAcquireLicenseResult = __uuidof(IStoreAcquireLicenseResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3555,7 +3525,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreAppLicense = _uuidof(IStoreAppLicense);
+                MIDL_CONST_ID IID& IID_IStoreAppLicense = __uuidof(IStoreAppLicense);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3591,7 +3561,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreAppLicense2 = _uuidof(IStoreAppLicense2);
+                MIDL_CONST_ID IID& IID_IStoreAppLicense2 = __uuidof(IStoreAppLicense2);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3643,7 +3613,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreAvailability = _uuidof(IStoreAvailability);
+                MIDL_CONST_ID IID& IID_IStoreAvailability = __uuidof(IStoreAvailability);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3685,7 +3655,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreCanAcquireLicenseResult = _uuidof(IStoreCanAcquireLicenseResult);
+                MIDL_CONST_ID IID& IID_IStoreCanAcquireLicenseResult = __uuidof(IStoreCanAcquireLicenseResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3742,7 +3712,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreCollectionData = _uuidof(IStoreCollectionData);
+                MIDL_CONST_ID IID& IID_IStoreCollectionData = __uuidof(IStoreCollectionData);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3787,7 +3757,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreConsumableResult = _uuidof(IStoreConsumableResult);
+                MIDL_CONST_ID IID& IID_IStoreConsumableResult = __uuidof(IStoreConsumableResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3907,7 +3877,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreContext = _uuidof(IStoreContext);
+                MIDL_CONST_ID IID& IID_IStoreContext = __uuidof(IStoreContext);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -3945,7 +3915,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreContext2 = _uuidof(IStoreContext2);
+                MIDL_CONST_ID IID& IID_IStoreContext2 = __uuidof(IStoreContext2);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4035,7 +4005,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreContext3 = _uuidof(IStoreContext3);
+                MIDL_CONST_ID IID& IID_IStoreContext3 = __uuidof(IStoreContext3);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4075,7 +4045,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreContext4 = _uuidof(IStoreContext4);
+                MIDL_CONST_ID IID& IID_IStoreContext4 = __uuidof(IStoreContext4);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4083,51 +4053,6 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext4;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext4_INTERFACE_DEFINED__) */
-#endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-
-/*
- *
- * Interface Windows.Services.Store.IStoreContext5
- *
- * Introduced to Windows.Services.Store.StoreContract in version 4.0
- *
- * Interface is a part of the implementation of type Windows.Services.Store.StoreContext
- *
- */
-#if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-#if !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Services_Store_IStoreContext5[] = L"Windows.Services.Store.IStoreContext5";
-namespace ABI {
-    namespace Windows {
-        namespace Services {
-            namespace Store {
-                MIDL_INTERFACE("6de6c52b-c43a-5953-b39a-71643c57d96e")
-                IStoreContext5 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE GetUserPurchaseHistoryAsync(
-                        __FIIterable_1_HSTRING* productKinds,
-                        __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult** operation
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE GetAssociatedStoreProductsByInAppOfferTokenAsync(
-                        __FIIterable_1_HSTRING* inAppOfferTokens,
-                        __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult** operation
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE RequestPurchaseByInAppOfferTokenAsync(
-                        HSTRING inAppOfferToken,
-                        __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult** operation
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IStoreContext5 = _uuidof(IStoreContext5);
-            } /* Store */
-        } /* Services */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext5;
-#endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
 
 /*
@@ -4160,7 +4085,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreContextStatics = _uuidof(IStoreContextStatics);
+                MIDL_CONST_ID IID& IID_IStoreContextStatics = __uuidof(IStoreContextStatics);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4208,7 +4133,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreImage = _uuidof(IStoreImage);
+                MIDL_CONST_ID IID& IID_IStoreImage = __uuidof(IStoreImage);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4256,7 +4181,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreLicense = _uuidof(IStoreLicense);
+                MIDL_CONST_ID IID& IID_IStoreLicense = __uuidof(IStoreLicense);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4295,7 +4220,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePackageInstallOptions = _uuidof(IStorePackageInstallOptions);
+                MIDL_CONST_ID IID& IID_IStorePackageInstallOptions = __uuidof(IStorePackageInstallOptions);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4345,7 +4270,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE ReleaseLicense(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePackageLicense = _uuidof(IStorePackageLicense);
+                MIDL_CONST_ID IID& IID_IStorePackageLicense = __uuidof(IStorePackageLicense);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4384,7 +4309,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePackageUpdate = _uuidof(IStorePackageUpdate);
+                MIDL_CONST_ID IID& IID_IStorePackageUpdate = __uuidof(IStorePackageUpdate);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4423,7 +4348,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePackageUpdateResult = _uuidof(IStorePackageUpdateResult);
+                MIDL_CONST_ID IID& IID_IStorePackageUpdateResult = __uuidof(IStorePackageUpdateResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4459,7 +4384,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePackageUpdateResult2 = _uuidof(IStorePackageUpdateResult2);
+                MIDL_CONST_ID IID& IID_IStorePackageUpdateResult2 = __uuidof(IStorePackageUpdateResult2);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4510,7 +4435,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePrice = _uuidof(IStorePrice);
+                MIDL_CONST_ID IID& IID_IStorePrice = __uuidof(IStorePrice);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4519,48 +4444,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePrice;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Services.Store.IStorePrice2
- *
- * Introduced to Windows.Services.Store.StoreContract in version 4.0
- *
- * Interface is a part of the implementation of type Windows.Services.Store.StorePrice
- *
- */
-#if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-#if !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Services_Store_IStorePrice2[] = L"Windows.Services.Store.IStorePrice2";
-namespace ABI {
-    namespace Windows {
-        namespace Services {
-            namespace Store {
-                MIDL_INTERFACE("f711573c-40e6-5641-b063-f1df42b2b12a")
-                IStorePrice2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_UnformattedBasePrice(
-                        HSTRING* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_UnformattedPrice(
-                        HSTRING* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_UnformattedRecurrencePrice(
-                        HSTRING* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IStorePrice2 = _uuidof(IStorePrice2);
-            } /* Store */
-        } /* Services */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePrice2;
-#endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
 
 /*
  *
@@ -4640,7 +4523,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreProduct = _uuidof(IStoreProduct);
+                MIDL_CONST_ID IID& IID_IStoreProduct = __uuidof(IStoreProduct);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4676,7 +4559,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreProductOptions = _uuidof(IStoreProductOptions);
+                MIDL_CONST_ID IID& IID_IStoreProductOptions = __uuidof(IStoreProductOptions);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4721,7 +4604,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreProductPagedQueryResult = _uuidof(IStoreProductPagedQueryResult);
+                MIDL_CONST_ID IID& IID_IStoreProductPagedQueryResult = __uuidof(IStoreProductPagedQueryResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4760,7 +4643,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreProductQueryResult = _uuidof(IStoreProductQueryResult);
+                MIDL_CONST_ID IID& IID_IStoreProductQueryResult = __uuidof(IStoreProductQueryResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4799,7 +4682,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreProductResult = _uuidof(IStoreProductResult);
+                MIDL_CONST_ID IID& IID_IStoreProductResult = __uuidof(IStoreProductResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4844,7 +4727,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePurchaseProperties = _uuidof(IStorePurchaseProperties);
+                MIDL_CONST_ID IID& IID_IStorePurchaseProperties = __uuidof(IStorePurchaseProperties);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4881,7 +4764,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePurchasePropertiesFactory = _uuidof(IStorePurchasePropertiesFactory);
+                MIDL_CONST_ID IID& IID_IStorePurchasePropertiesFactory = __uuidof(IStorePurchasePropertiesFactory);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4920,7 +4803,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorePurchaseResult = _uuidof(IStorePurchaseResult);
+                MIDL_CONST_ID IID& IID_IStorePurchaseResult = __uuidof(IStorePurchaseResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -4979,7 +4862,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreQueueItem = _uuidof(IStoreQueueItem);
+                MIDL_CONST_ID IID& IID_IStoreQueueItem = __uuidof(IStoreQueueItem);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5021,7 +4904,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreQueueItem2 = _uuidof(IStoreQueueItem2);
+                MIDL_CONST_ID IID& IID_IStoreQueueItem2 = __uuidof(IStoreQueueItem2);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5057,7 +4940,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreQueueItemCompletedEventArgs = _uuidof(IStoreQueueItemCompletedEventArgs);
+                MIDL_CONST_ID IID& IID_IStoreQueueItemCompletedEventArgs = __uuidof(IStoreQueueItemCompletedEventArgs);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5102,7 +4985,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreQueueItemStatus = _uuidof(IStoreQueueItemStatus);
+                MIDL_CONST_ID IID& IID_IStoreQueueItemStatus = __uuidof(IStoreQueueItemStatus);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5147,7 +5030,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreRateAndReviewResult = _uuidof(IStoreRateAndReviewResult);
+                MIDL_CONST_ID IID& IID_IStoreRateAndReviewResult = __uuidof(IStoreRateAndReviewResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5186,7 +5069,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreRequestHelperStatics = _uuidof(IStoreRequestHelperStatics);
+                MIDL_CONST_ID IID& IID_IStoreRequestHelperStatics = __uuidof(IStoreRequestHelperStatics);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5225,7 +5108,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreSendRequestResult = _uuidof(IStoreSendRequestResult);
+                MIDL_CONST_ID IID& IID_IStoreSendRequestResult = __uuidof(IStoreSendRequestResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5261,7 +5144,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreSendRequestResult2 = _uuidof(IStoreSendRequestResult2);
+                MIDL_CONST_ID IID& IID_IStoreSendRequestResult2 = __uuidof(IStoreSendRequestResult2);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5352,7 +5235,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreSku = _uuidof(IStoreSku);
+                MIDL_CONST_ID IID& IID_IStoreSku = __uuidof(IStoreSku);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5400,7 +5283,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreSubscriptionInfo = _uuidof(IStoreSubscriptionInfo);
+                MIDL_CONST_ID IID& IID_IStoreSubscriptionInfo = __uuidof(IStoreSubscriptionInfo);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5439,7 +5322,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreUninstallStorePackageResult = _uuidof(IStoreUninstallStorePackageResult);
+                MIDL_CONST_ID IID& IID_IStoreUninstallStorePackageResult = __uuidof(IStoreUninstallStorePackageResult);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5490,7 +5373,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStoreVideo = _uuidof(IStoreVideo);
+                MIDL_CONST_ID IID& IID_IStoreVideo = __uuidof(IStoreVideo);
             } /* Store */
         } /* Services */
     } /* Windows */
@@ -5641,7 +5524,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Services.Store.IStoreContext2
  *    Windows.Services.Store.IStoreContext3
  *    Windows.Services.Store.IStoreContext4
- *    Windows.Services.Store.IStoreContext5
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5794,7 +5676,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePrice ** Default Interface **
- *    Windows.Services.Store.IStorePrice2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5923,8 +5804,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Services.Store.StoreContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *   Type can be activated via the Windows.Services.Store.IStorePurchasePropertiesFactory interface starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePurchaseProperties ** Default Interface **
@@ -6242,12 +6123,6 @@ typedef interface __x_ABI_CWindows_CServices_CStore_CIStoreContext4 __x_ABI_CWin
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext4_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-#define ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CServices_CStore_CIStoreContext5 __x_ABI_CWindows_CServices_CStore_CIStoreContext5;
-
-#endif // ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CStore_CIStoreContextStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CServices_CStore_CIStoreContextStatics __x_ABI_CWindows_CServices_CStore_CIStoreContextStatics;
@@ -6301,12 +6176,6 @@ typedef interface __x_ABI_CWindows_CServices_CStore_CIStorePackageUpdateResult2 
 typedef interface __x_ABI_CWindows_CServices_CStore_CIStorePrice __x_ABI_CWindows_CServices_CStore_CIStorePrice;
 
 #endif // ____x_ABI_CWindows_CServices_CStore_CIStorePrice_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CServices_CStore_CIStorePrice2 __x_ABI_CWindows_CServices_CStore_CIStorePrice2;
-
-#endif // ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CServices_CStore_CIStoreProduct_FWD_DEFINED__
 #define ____x_ABI_CWindows_CServices_CStore_CIStoreProduct_FWD_DEFINED__
@@ -12615,88 +12484,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext4;
 
 /*
  *
- * Interface Windows.Services.Store.IStoreContext5
- *
- * Introduced to Windows.Services.Store.StoreContract in version 4.0
- *
- * Interface is a part of the implementation of type Windows.Services.Store.StoreContext
- *
- */
-#if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-#if !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Services_Store_IStoreContext5[] = L"Windows.Services.Store.IStoreContext5";
-typedef struct __x_ABI_CWindows_CServices_CStore_CIStoreContext5Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetUserPurchaseHistoryAsync)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        __FIIterable_1_HSTRING* productKinds,
-        __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult** operation);
-    HRESULT (STDMETHODCALLTYPE* GetAssociatedStoreProductsByInAppOfferTokenAsync)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        __FIIterable_1_HSTRING* inAppOfferTokens,
-        __FIAsyncOperation_1_Windows__CServices__CStore__CStoreProductQueryResult** operation);
-    HRESULT (STDMETHODCALLTYPE* RequestPurchaseByInAppOfferTokenAsync)(__x_ABI_CWindows_CServices_CStore_CIStoreContext5* This,
-        HSTRING inAppOfferToken,
-        __FIAsyncOperation_1_Windows__CServices__CStore__CStorePurchaseResult** operation);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CServices_CStore_CIStoreContext5Vtbl;
-
-interface __x_ABI_CWindows_CServices_CStore_CIStoreContext5
-{
-    CONST_VTBL struct __x_ABI_CWindows_CServices_CStore_CIStoreContext5Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_GetUserPurchaseHistoryAsync(This, productKinds, operation) \
-    ((This)->lpVtbl->GetUserPurchaseHistoryAsync(This, productKinds, operation))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_GetAssociatedStoreProductsByInAppOfferTokenAsync(This, inAppOfferTokens, operation) \
-    ((This)->lpVtbl->GetAssociatedStoreProductsByInAppOfferTokenAsync(This, inAppOfferTokens, operation))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStoreContext5_RequestPurchaseByInAppOfferTokenAsync(This, inAppOfferToken, operation) \
-    ((This)->lpVtbl->RequestPurchaseByInAppOfferTokenAsync(This, inAppOfferToken, operation))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStoreContext5;
-#endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStoreContext5_INTERFACE_DEFINED__) */
-#endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-
-/*
- *
  * Interface Windows.Services.Store.IStoreContextStatics
  *
  * Introduced to Windows.Services.Store.StoreContract in version 1.0
@@ -13424,85 +13211,6 @@ interface __x_ABI_CWindows_CServices_CStore_CIStorePrice
 EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePrice;
 #endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.Services.Store.IStorePrice2
- *
- * Introduced to Windows.Services.Store.StoreContract in version 4.0
- *
- * Interface is a part of the implementation of type Windows.Services.Store.StorePrice
- *
- */
-#if WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
-#if !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Services_Store_IStorePrice2[] = L"Windows.Services.Store.IStorePrice2";
-typedef struct __x_ABI_CWindows_CServices_CStore_CIStorePrice2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_UnformattedBasePrice)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_UnformattedPrice)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_UnformattedRecurrencePrice)(__x_ABI_CWindows_CServices_CStore_CIStorePrice2* This,
-        HSTRING* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CServices_CStore_CIStorePrice2Vtbl;
-
-interface __x_ABI_CWindows_CServices_CStore_CIStorePrice2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CServices_CStore_CIStorePrice2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_get_UnformattedBasePrice(This, value) \
-    ((This)->lpVtbl->get_UnformattedBasePrice(This, value))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_get_UnformattedPrice(This, value) \
-    ((This)->lpVtbl->get_UnformattedPrice(This, value))
-
-#define __x_ABI_CWindows_CServices_CStore_CIStorePrice2_get_UnformattedRecurrencePrice(This, value) \
-    ((This)->lpVtbl->get_UnformattedRecurrencePrice(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CServices_CStore_CIStorePrice2;
-#endif /* !defined(____x_ABI_CWindows_CServices_CStore_CIStorePrice2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_SERVICES_STORE_STORECONTRACT_VERSION >= 0x40000
 
 /*
  *
@@ -15383,7 +15091,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Services.Store.IStoreContext2
  *    Windows.Services.Store.IStoreContext3
  *    Windows.Services.Store.IStoreContext4
- *    Windows.Services.Store.IStoreContext5
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15536,7 +15243,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePrice ** Default Interface **
- *    Windows.Services.Store.IStorePrice2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15665,8 +15371,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Services.Store.StoreContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *   Type can be activated via the Windows.Services.Store.IStorePurchasePropertiesFactory interface starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePurchaseProperties ** Default Interface **

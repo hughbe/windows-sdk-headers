@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,11 +10,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics::Printing
 {
@@ -511,10 +506,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails>
     {
@@ -523,10 +518,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails>
     {
@@ -535,10 +530,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails>
     {
@@ -547,10 +542,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails>
     {
@@ -559,10 +554,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails>
     {
@@ -571,9 +566,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ItemId() const;
-        WINRT_IMPL_AUTO(void) ItemDisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ItemDisplayName() const;
+        [[nodiscard]] auto ItemId() const;
+        auto ItemDisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto ItemDisplayName() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails>
     {
@@ -582,7 +577,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails
     {
-        WINRT_IMPL_AUTO(void) AddItem(param::hstring const& itemId, param::hstring const& displayName) const;
+        auto AddItem(param::hstring const& itemId, param::hstring const& displayName) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails>
     {
@@ -591,7 +586,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails2
     {
-        WINRT_IMPL_AUTO(void) AddItem(param::hstring const& itemId, param::hstring const& displayName, param::hstring const& description, winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType const& icon) const;
+        auto AddItem(param::hstring const& itemId, param::hstring const& displayName, param::hstring const& description, winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType const& icon) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2>
     {
@@ -600,10 +595,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3>
     {
@@ -612,8 +607,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomOptionDetails
     {
-        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        auto DisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto DisplayName() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>
     {
@@ -622,8 +617,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails
     {
-        WINRT_IMPL_AUTO(void) MaxCharacters(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxCharacters() const;
+        auto MaxCharacters(uint32_t value) const;
+        [[nodiscard]] auto MaxCharacters() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails>
     {
@@ -632,10 +627,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2>
     {
@@ -644,10 +639,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails>
     {
@@ -656,10 +651,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails>
     {
@@ -668,10 +663,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails>
     {
@@ -680,7 +675,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintItemListOptionDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>) Items() const;
+        [[nodiscard]] auto Items() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>
     {
@@ -689,10 +684,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails>
     {
@@ -701,10 +696,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails>
     {
@@ -713,8 +708,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintNumberOptionDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinValue() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxValue() const;
+        [[nodiscard]] auto MinValue() const;
+        [[nodiscard]] auto MaxValue() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>
     {
@@ -723,14 +718,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OptionId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionType) OptionType() const;
-        WINRT_IMPL_AUTO(void) ErrorText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ErrorText() const;
-        WINRT_IMPL_AUTO(void) State(winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates) State() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) Value() const;
-        WINRT_IMPL_AUTO(bool) TrySetValue(winrt::Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] auto OptionId() const;
+        [[nodiscard]] auto OptionType() const;
+        auto ErrorText(param::hstring const& value) const;
+        [[nodiscard]] auto ErrorText() const;
+        auto State(winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates const& value) const;
+        [[nodiscard]] auto State() const;
+        [[nodiscard]] auto Value() const;
+        auto TrySetValue(winrt::Windows::Foundation::IInspectable const& value) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>
     {
@@ -739,10 +734,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails>
     {
@@ -751,10 +746,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails>
     {
@@ -763,10 +758,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails>
     {
@@ -775,10 +770,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails
     {
-        WINRT_IMPL_AUTO(void) WarningText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) WarningText() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        auto WarningText(param::hstring const& value) const;
+        [[nodiscard]] auto WarningText() const;
+        auto Description(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails>
     {
@@ -787,7 +782,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionChangedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) OptionId() const;
+        [[nodiscard]] auto OptionId() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs>
     {
@@ -796,17 +791,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>) Options() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails) CreateItemListOption(param::hstring const& optionId, param::hstring const& displayName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails) CreateTextOption(param::hstring const& optionId, param::hstring const& displayName) const;
-        WINRT_IMPL_AUTO(winrt::event_token) OptionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> const& eventHandler) const;
+        [[nodiscard]] auto Options() const;
+        auto CreateItemListOption(param::hstring const& optionId, param::hstring const& displayName) const;
+        auto CreateTextOption(param::hstring const& optionId, param::hstring const& displayName) const;
+        auto OptionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> const& eventHandler) const;
         using OptionChanged_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails, &impl::abi_t<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails>::remove_OptionChanged>;
         [[nodiscard]] OptionChanged_revoker OptionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> const& eventHandler) const;
-        WINRT_IMPL_AUTO(void) OptionChanged(winrt::event_token const& eventCookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) BeginValidation(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
+        auto OptionChanged(winrt::event_token const& eventCookie) const noexcept;
+        auto BeginValidation(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
         using BeginValidation_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails, &impl::abi_t<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails>::remove_BeginValidation>;
         [[nodiscard]] BeginValidation_revoker BeginValidation(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Foundation::IInspectable> const& eventHandler) const;
-        WINRT_IMPL_AUTO(void) BeginValidation(winrt::event_token const& eventCookie) const noexcept;
+        auto BeginValidation(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails>
     {
@@ -815,7 +810,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails) CreateToggleOption(param::hstring const& optionId, param::hstring const& displayName) const;
+        auto CreateToggleOption(param::hstring const& optionId, param::hstring const& displayName) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2>
     {
@@ -824,7 +819,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetailsStatic
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails) GetFromPrintTaskOptions(winrt::Windows::Graphics::Printing::PrintTaskOptions const& printTaskOptions) const;
+        auto GetFromPrintTaskOptions(winrt::Windows::Graphics::Printing::PrintTaskOptions const& printTaskOptions) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic>
     {
@@ -833,7 +828,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_OptionDetails_IPrintTextOptionDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxCharacters() const;
+        [[nodiscard]] auto MaxCharacters() const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -69,8 +69,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_IPerceptionTimestamp
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) TargetTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) PredictionAmount() const;
+        [[nodiscard]] auto TargetTime() const;
+        [[nodiscard]] auto PredictionAmount() const;
     };
     template <> struct consume<winrt::Windows::Perception::IPerceptionTimestamp>
     {
@@ -79,7 +79,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_IPerceptionTimestamp2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) SystemRelativeTargetTime() const;
+        [[nodiscard]] auto SystemRelativeTargetTime() const;
     };
     template <> struct consume<winrt::Windows::Perception::IPerceptionTimestamp2>
     {
@@ -88,7 +88,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_IPerceptionTimestampHelperStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::PerceptionTimestamp) FromHistoricalTargetTime(winrt::Windows::Foundation::DateTime const& targetTime) const;
+        auto FromHistoricalTargetTime(winrt::Windows::Foundation::DateTime const& targetTime) const;
     };
     template <> struct consume<winrt::Windows::Perception::IPerceptionTimestampHelperStatics>
     {
@@ -97,7 +97,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Perception_IPerceptionTimestampHelperStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Perception::PerceptionTimestamp) FromSystemRelativeTargetTime(winrt::Windows::Foundation::TimeSpan const& targetTime) const;
+        auto FromSystemRelativeTargetTime(winrt::Windows::Foundation::TimeSpan const& targetTime) const;
     };
     template <> struct consume<winrt::Windows::Perception::IPerceptionTimestampHelperStatics2>
     {

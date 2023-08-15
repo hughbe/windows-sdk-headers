@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,17 +13,13 @@ WINRT_EXPORT namespace winrt::Windows::Data::Json
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct HResult;
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
-    struct AppDiagnosticInfo;
     enum class ProcessorArchitecture : int32_t;
     struct User;
 }
@@ -368,8 +364,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IDiagnosticActionResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) Results() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Results() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IDiagnosticActionResult>
     {
@@ -378,7 +374,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IDiagnosticInvoker
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::System::Diagnostics::DiagnosticActionResult, winrt::Windows::System::Diagnostics::DiagnosticActionState>) RunDiagnosticActionAsync(winrt::Windows::Data::Json::JsonObject const& context) const;
+        auto RunDiagnosticActionAsync(winrt::Windows::Data::Json::JsonObject const& context) const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IDiagnosticInvoker>
     {
@@ -387,7 +383,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IDiagnosticInvoker2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::System::Diagnostics::DiagnosticActionResult, winrt::Windows::System::Diagnostics::DiagnosticActionState>) RunDiagnosticActionFromStringAsync(param::hstring const& context) const;
+        auto RunDiagnosticActionFromStringAsync(param::hstring const& context) const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IDiagnosticInvoker2>
     {
@@ -396,9 +392,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IDiagnosticInvokerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::DiagnosticInvoker) GetDefault() const;
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::DiagnosticInvoker) GetForUser(winrt::Windows::System::User const& user) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
+        [[nodiscard]] auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IDiagnosticInvokerStatics>
     {
@@ -407,7 +403,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessCpuUsage
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessCpuUsageReport) GetReport() const;
+        auto GetReport() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessCpuUsage>
     {
@@ -416,8 +412,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessCpuUsageReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) KernelTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) UserTime() const;
+        [[nodiscard]] auto KernelTime() const;
+        [[nodiscard]] auto UserTime() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessCpuUsageReport>
     {
@@ -426,13 +422,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiagnosticInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ProcessId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExecutableFileName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo) Parent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) ProcessStartTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessDiskUsage) DiskUsage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessMemoryUsage) MemoryUsage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessCpuUsage) CpuUsage() const;
+        [[nodiscard]] auto ProcessId() const;
+        [[nodiscard]] auto ExecutableFileName() const;
+        [[nodiscard]] auto Parent() const;
+        [[nodiscard]] auto ProcessStartTime() const;
+        [[nodiscard]] auto DiskUsage() const;
+        [[nodiscard]] auto MemoryUsage() const;
+        [[nodiscard]] auto CpuUsage() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiagnosticInfo>
     {
@@ -441,8 +437,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiagnosticInfo2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::System::AppDiagnosticInfo>) GetAppDiagnosticInfos() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPackaged() const;
+        auto GetAppDiagnosticInfos() const;
+        [[nodiscard]] auto IsPackaged() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiagnosticInfo2>
     {
@@ -451,8 +447,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiagnosticInfoStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>) GetForProcesses() const;
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo) GetForCurrentProcess() const;
+        auto GetForProcesses() const;
+        auto GetForCurrentProcess() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiagnosticInfoStatics>
     {
@@ -461,7 +457,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiagnosticInfoStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo) TryGetForProcessId(uint32_t processId) const;
+        auto TryGetForProcessId(uint32_t processId) const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiagnosticInfoStatics2>
     {
@@ -470,7 +466,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiskUsage
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessDiskUsageReport) GetReport() const;
+        auto GetReport() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiskUsage>
     {
@@ -479,12 +475,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessDiskUsageReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) ReadOperationCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) WriteOperationCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) OtherOperationCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) BytesReadCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) BytesWrittenCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) OtherBytesCount() const;
+        [[nodiscard]] auto ReadOperationCount() const;
+        [[nodiscard]] auto WriteOperationCount() const;
+        [[nodiscard]] auto OtherOperationCount() const;
+        [[nodiscard]] auto BytesReadCount() const;
+        [[nodiscard]] auto BytesWrittenCount() const;
+        [[nodiscard]] auto OtherBytesCount() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessDiskUsageReport>
     {
@@ -493,7 +489,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessMemoryUsage
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport) GetReport() const;
+        auto GetReport() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessMemoryUsage>
     {
@@ -502,18 +498,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_IProcessMemoryUsageReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) NonPagedPoolSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) PageFaultCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PageFileSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PagedPoolSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PeakNonPagedPoolSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PeakPageFileSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PeakPagedPoolSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PeakVirtualMemorySizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PeakWorkingSetSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) PrivatePageCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) VirtualMemorySizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) WorkingSetSizeInBytes() const;
+        [[nodiscard]] auto NonPagedPoolSizeInBytes() const;
+        [[nodiscard]] auto PageFaultCount() const;
+        [[nodiscard]] auto PageFileSizeInBytes() const;
+        [[nodiscard]] auto PagedPoolSizeInBytes() const;
+        [[nodiscard]] auto PeakNonPagedPoolSizeInBytes() const;
+        [[nodiscard]] auto PeakPageFileSizeInBytes() const;
+        [[nodiscard]] auto PeakPagedPoolSizeInBytes() const;
+        [[nodiscard]] auto PeakVirtualMemorySizeInBytes() const;
+        [[nodiscard]] auto PeakWorkingSetSizeInBytes() const;
+        [[nodiscard]] auto PrivatePageCount() const;
+        [[nodiscard]] auto VirtualMemorySizeInBytes() const;
+        [[nodiscard]] auto WorkingSetSizeInBytes() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::IProcessMemoryUsageReport>
     {
@@ -522,7 +518,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemCpuUsage
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::SystemCpuUsageReport) GetReport() const;
+        auto GetReport() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemCpuUsage>
     {
@@ -531,9 +527,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemCpuUsageReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) KernelTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) UserTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) IdleTime() const;
+        [[nodiscard]] auto KernelTime() const;
+        [[nodiscard]] auto UserTime() const;
+        [[nodiscard]] auto IdleTime() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemCpuUsageReport>
     {
@@ -542,8 +538,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemDiagnosticInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::SystemMemoryUsage) MemoryUsage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::SystemCpuUsage) CpuUsage() const;
+        [[nodiscard]] auto MemoryUsage() const;
+        [[nodiscard]] auto CpuUsage() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemDiagnosticInfo>
     {
@@ -552,7 +548,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemDiagnosticInfoStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo) GetForCurrentSystem() const;
+        auto GetForCurrentSystem() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemDiagnosticInfoStatics>
     {
@@ -561,8 +557,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemDiagnosticInfoStatics2
     {
-        WINRT_IMPL_AUTO(bool) IsArchitectureSupported(winrt::Windows::System::ProcessorArchitecture const& type) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::ProcessorArchitecture) PreferredArchitecture() const;
+        auto IsArchitectureSupported(winrt::Windows::System::ProcessorArchitecture const& type) const;
+        [[nodiscard]] auto PreferredArchitecture() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemDiagnosticInfoStatics2>
     {
@@ -571,7 +567,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemMemoryUsage
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::Diagnostics::SystemMemoryUsageReport) GetReport() const;
+        auto GetReport() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemMemoryUsage>
     {
@@ -580,9 +576,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_ISystemMemoryUsageReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) TotalPhysicalSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) AvailableSizeInBytes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) CommittedSizeInBytes() const;
+        [[nodiscard]] auto TotalPhysicalSizeInBytes() const;
+        [[nodiscard]] auto AvailableSizeInBytes() const;
+        [[nodiscard]] auto CommittedSizeInBytes() const;
     };
     template <> struct consume<winrt::Windows::System::Diagnostics::ISystemMemoryUsageReport>
     {

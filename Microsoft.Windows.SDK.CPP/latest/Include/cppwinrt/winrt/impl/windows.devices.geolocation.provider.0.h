@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -52,13 +52,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOverridden() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus) SetOverridePosition(winrt::Windows::Devices::Geolocation::BasicGeoposition const& newPosition, winrt::Windows::Devices::Geolocation::PositionSource const& positionSource, double accuracyInMeters) const;
-        WINRT_IMPL_AUTO(void) ClearOverridePosition() const;
-        WINRT_IMPL_AUTO(winrt::event_token) IsOverriddenChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto IsOverridden() const;
+        auto SetOverridePosition(winrt::Windows::Devices::Geolocation::BasicGeoposition const& newPosition, winrt::Windows::Devices::Geolocation::PositionSource const& positionSource, double accuracyInMeters) const;
+        auto ClearOverridePosition() const;
+        auto IsOverriddenChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
         using IsOverriddenChanged_revoker = impl::event_revoker<winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider, &impl::abi_t<winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider>::remove_IsOverriddenChanged>;
         [[nodiscard]] IsOverriddenChanged_revoker IsOverriddenChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) IsOverriddenChanged(winrt::event_token const& token) const noexcept;
+        auto IsOverriddenChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider>
     {

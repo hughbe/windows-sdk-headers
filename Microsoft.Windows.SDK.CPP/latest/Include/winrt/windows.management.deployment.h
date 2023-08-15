@@ -2667,7 +2667,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAddPackageOptions = _uuidof(IAddPackageOptions);
+                MIDL_CONST_ID IID& IID_IAddPackageOptions = __uuidof(IAddPackageOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2709,7 +2709,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAddPackageOptions2 = _uuidof(IAddPackageOptions2);
+                MIDL_CONST_ID IID& IID_IAddPackageOptions2 = __uuidof(IAddPackageOptions2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2753,7 +2753,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppInstallerManager = _uuidof(IAppInstallerManager);
+                MIDL_CONST_ID IID& IID_IAppInstallerManager = __uuidof(IAppInstallerManager);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2792,7 +2792,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppInstallerManagerStatics = _uuidof(IAppInstallerManagerStatics);
+                MIDL_CONST_ID IID& IID_IAppInstallerManagerStatics = __uuidof(IAppInstallerManagerStatics);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2891,7 +2891,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAutoUpdateSettingsOptions = _uuidof(IAutoUpdateSettingsOptions);
+                MIDL_CONST_ID IID& IID_IAutoUpdateSettingsOptions = __uuidof(IAutoUpdateSettingsOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2928,7 +2928,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAutoUpdateSettingsOptionsStatics = _uuidof(IAutoUpdateSettingsOptionsStatics);
+                MIDL_CONST_ID IID& IID_IAutoUpdateSettingsOptionsStatics = __uuidof(IAutoUpdateSettingsOptionsStatics);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -2976,7 +2976,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateSharedPackageContainerOptions = _uuidof(ICreateSharedPackageContainerOptions);
+                MIDL_CONST_ID IID& IID_ICreateSharedPackageContainerOptions = __uuidof(ICreateSharedPackageContainerOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3018,7 +3018,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICreateSharedPackageContainerResult = _uuidof(ICreateSharedPackageContainerResult);
+                MIDL_CONST_ID IID& IID_ICreateSharedPackageContainerResult = __uuidof(ICreateSharedPackageContainerResult);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3063,7 +3063,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeleteSharedPackageContainerOptions = _uuidof(IDeleteSharedPackageContainerOptions);
+                MIDL_CONST_ID IID& IID_IDeleteSharedPackageContainerOptions = __uuidof(IDeleteSharedPackageContainerOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3102,7 +3102,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeleteSharedPackageContainerResult = _uuidof(IDeleteSharedPackageContainerResult);
+                MIDL_CONST_ID IID& IID_IDeleteSharedPackageContainerResult = __uuidof(IDeleteSharedPackageContainerResult);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3144,7 +3144,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeploymentResult = _uuidof(IDeploymentResult);
+                MIDL_CONST_ID IID& IID_IDeploymentResult = __uuidof(IDeploymentResult);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3180,7 +3180,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDeploymentResult2 = _uuidof(IDeploymentResult2);
+                MIDL_CONST_ID IID& IID_IDeploymentResult2 = __uuidof(IDeploymentResult2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3225,7 +3225,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFindSharedPackageContainerOptions = _uuidof(IFindSharedPackageContainerOptions);
+                MIDL_CONST_ID IID& IID_IFindSharedPackageContainerOptions = __uuidof(IFindSharedPackageContainerOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3264,7 +3264,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageAllUserProvisioningOptions = _uuidof(IPackageAllUserProvisioningOptions);
+                MIDL_CONST_ID IID& IID_IPackageAllUserProvisioningOptions = __uuidof(IPackageAllUserProvisioningOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3373,7 +3373,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager = _uuidof(IPackageManager);
+                MIDL_CONST_ID IID& IID_IPackageManager = __uuidof(IPackageManager);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3411,7 +3411,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager10 = _uuidof(IPackageManager10);
+                MIDL_CONST_ID IID& IID_IPackageManager10 = __uuidof(IPackageManager10);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3498,7 +3498,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager2 = _uuidof(IPackageManager2);
+                MIDL_CONST_ID IID& IID_IPackageManager2 = __uuidof(IPackageManager2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3600,7 +3600,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager3 = _uuidof(IPackageManager3);
+                MIDL_CONST_ID IID& IID_IPackageManager3 = __uuidof(IPackageManager3);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3636,7 +3636,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager4 = _uuidof(IPackageManager4);
+                MIDL_CONST_ID IID& IID_IPackageManager4 = __uuidof(IPackageManager4);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3698,7 +3698,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager5 = _uuidof(IPackageManager5);
+                MIDL_CONST_ID IID& IID_IPackageManager5 = __uuidof(IPackageManager5);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3776,7 +3776,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager6 = _uuidof(IPackageManager6);
+                MIDL_CONST_ID IID& IID_IPackageManager6 = __uuidof(IPackageManager6);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3819,7 +3819,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager7 = _uuidof(IPackageManager7);
+                MIDL_CONST_ID IID& IID_IPackageManager7 = __uuidof(IPackageManager7);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3856,7 +3856,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager8 = _uuidof(IPackageManager8);
+                MIDL_CONST_ID IID& IID_IPackageManager8 = __uuidof(IPackageManager8);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3920,7 +3920,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManager9 = _uuidof(IPackageManager9);
+                MIDL_CONST_ID IID& IID_IPackageManager9 = __uuidof(IPackageManager9);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -3966,7 +3966,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageManagerDebugSettings = _uuidof(IPackageManagerDebugSettings);
+                MIDL_CONST_ID IID& IID_IPackageManagerDebugSettings = __uuidof(IPackageManagerDebugSettings);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4005,7 +4005,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageUserInformation = _uuidof(IPackageUserInformation);
+                MIDL_CONST_ID IID& IID_IPackageUserInformation = __uuidof(IPackageUserInformation);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4125,7 +4125,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageVolume = _uuidof(IPackageVolume);
+                MIDL_CONST_ID IID& IID_IPackageVolume = __uuidof(IPackageVolume);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4167,7 +4167,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPackageVolume2 = _uuidof(IPackageVolume2);
+                MIDL_CONST_ID IID& IID_IPackageVolume2 = __uuidof(IPackageVolume2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4266,7 +4266,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRegisterPackageOptions = _uuidof(IRegisterPackageOptions);
+                MIDL_CONST_ID IID& IID_IRegisterPackageOptions = __uuidof(IRegisterPackageOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4302,7 +4302,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRegisterPackageOptions2 = _uuidof(IRegisterPackageOptions2);
+                MIDL_CONST_ID IID& IID_IRegisterPackageOptions2 = __uuidof(IRegisterPackageOptions2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4352,7 +4352,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedPackageContainer = _uuidof(ISharedPackageContainer);
+                MIDL_CONST_ID IID& IID_ISharedPackageContainer = __uuidof(ISharedPackageContainer);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4406,7 +4406,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedPackageContainerManager = _uuidof(ISharedPackageContainerManager);
+                MIDL_CONST_ID IID& IID_ISharedPackageContainerManager = __uuidof(ISharedPackageContainerManager);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4449,7 +4449,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedPackageContainerManagerStatics = _uuidof(ISharedPackageContainerManagerStatics);
+                MIDL_CONST_ID IID& IID_ISharedPackageContainerManagerStatics = __uuidof(ISharedPackageContainerManagerStatics);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4485,7 +4485,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedPackageContainerMember = _uuidof(ISharedPackageContainerMember);
+                MIDL_CONST_ID IID& IID_ISharedPackageContainerMember = __uuidof(ISharedPackageContainerMember);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4522,7 +4522,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISharedPackageContainerMemberFactory = _uuidof(ISharedPackageContainerMemberFactory);
+                MIDL_CONST_ID IID& IID_ISharedPackageContainerMemberFactory = __uuidof(ISharedPackageContainerMemberFactory);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4621,7 +4621,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStagePackageOptions = _uuidof(IStagePackageOptions);
+                MIDL_CONST_ID IID& IID_IStagePackageOptions = __uuidof(IStagePackageOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4657,7 +4657,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStagePackageOptions2 = _uuidof(IStagePackageOptions2);
+                MIDL_CONST_ID IID& IID_IStagePackageOptions2 = __uuidof(IStagePackageOptions2);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4702,7 +4702,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUpdateSharedPackageContainerOptions = _uuidof(IUpdateSharedPackageContainerOptions);
+                MIDL_CONST_ID IID& IID_IUpdateSharedPackageContainerOptions = __uuidof(IUpdateSharedPackageContainerOptions);
             } /* Deployment */
         } /* Management */
     } /* Windows */
@@ -4741,7 +4741,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IUpdateSharedPackageContainerResult = _uuidof(IUpdateSharedPackageContainerResult);
+                MIDL_CONST_ID IID& IID_IUpdateSharedPackageContainerResult = __uuidof(IUpdateSharedPackageContainerResult);
             } /* Deployment */
         } /* Management */
     } /* Windows */

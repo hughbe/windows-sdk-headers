@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -542,11 +542,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IAnnotationProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) AnnotationTypeId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AnnotationTypeName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Author() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DateTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) Target() const;
+        [[nodiscard]] auto AnnotationTypeId() const;
+        [[nodiscard]] auto AnnotationTypeName() const;
+        [[nodiscard]] auto Author() const;
+        [[nodiscard]] auto DateTime() const;
+        [[nodiscard]] auto Target() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>
     {
@@ -555,7 +555,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ICustomNavigationProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) NavigateCustom(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
+        auto NavigateCustom(winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>
     {
@@ -564,8 +564,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IDockProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::DockPosition) DockPosition() const;
-        WINRT_IMPL_AUTO(void) SetDockPosition(winrt::Windows::UI::Xaml::Automation::DockPosition const& dockPosition) const;
+        [[nodiscard]] auto DockPosition() const;
+        auto SetDockPosition(winrt::Windows::UI::Xaml::Automation::DockPosition const& dockPosition) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>
     {
@@ -574,10 +574,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IDragProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGrabbed() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DropEffect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(com_array<hstring>) DropEffects() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetGrabbedItems() const;
+        [[nodiscard]] auto IsGrabbed() const;
+        [[nodiscard]] auto DropEffect() const;
+        [[nodiscard]] auto DropEffects() const;
+        auto GetGrabbedItems() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>
     {
@@ -586,8 +586,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IDropTargetProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DropEffect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(com_array<hstring>) DropEffects() const;
+        [[nodiscard]] auto DropEffect() const;
+        [[nodiscard]] auto DropEffects() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>
     {
@@ -596,9 +596,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IExpandCollapseProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::ExpandCollapseState) ExpandCollapseState() const;
-        WINRT_IMPL_AUTO(void) Collapse() const;
-        WINRT_IMPL_AUTO(void) Expand() const;
+        [[nodiscard]] auto ExpandCollapseState() const;
+        auto Collapse() const;
+        auto Expand() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>
     {
@@ -607,11 +607,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IGridItemProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Column() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ColumnSpan() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) ContainingGrid() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Row() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RowSpan() const;
+        [[nodiscard]] auto Column() const;
+        [[nodiscard]] auto ColumnSpan() const;
+        [[nodiscard]] auto ContainingGrid() const;
+        [[nodiscard]] auto Row() const;
+        [[nodiscard]] auto RowSpan() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>
     {
@@ -620,9 +620,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IGridProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ColumnCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) RowCount() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) GetItem(int32_t row, int32_t column) const;
+        [[nodiscard]] auto ColumnCount() const;
+        [[nodiscard]] auto RowCount() const;
+        auto GetItem(int32_t row, int32_t column) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>
     {
@@ -639,7 +639,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IInvokeProvider
     {
-        WINRT_IMPL_AUTO(void) Invoke() const;
+        auto Invoke() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>
     {
@@ -648,7 +648,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IItemContainerProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) FindItemByProperty(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& startAfter, winrt::Windows::UI::Xaml::Automation::AutomationProperty const& automationProperty, winrt::Windows::Foundation::IInspectable const& value) const;
+        auto FindItemByProperty(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& startAfter, winrt::Windows::UI::Xaml::Automation::AutomationProperty const& automationProperty, winrt::Windows::Foundation::IInspectable const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>
     {
@@ -657,10 +657,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IMultipleViewProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) CurrentView() const;
-        WINRT_IMPL_AUTO(com_array<int32_t>) GetSupportedViews() const;
-        WINRT_IMPL_AUTO(hstring) GetViewName(int32_t viewId) const;
-        WINRT_IMPL_AUTO(void) SetCurrentView(int32_t viewId) const;
+        [[nodiscard]] auto CurrentView() const;
+        auto GetSupportedViews() const;
+        auto GetViewName(int32_t viewId) const;
+        auto SetCurrentView(int32_t viewId) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>
     {
@@ -669,7 +669,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IObjectModelProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetUnderlyingObjectModel() const;
+        auto GetUnderlyingObjectModel() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>
     {
@@ -678,13 +678,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IRangeValueProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReadOnly() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) LargeChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Maximum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Minimum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) SmallChange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) Value() const;
-        WINRT_IMPL_AUTO(void) SetValue(double value) const;
+        [[nodiscard]] auto IsReadOnly() const;
+        [[nodiscard]] auto LargeChange() const;
+        [[nodiscard]] auto Maximum() const;
+        [[nodiscard]] auto Minimum() const;
+        [[nodiscard]] auto SmallChange() const;
+        [[nodiscard]] auto Value() const;
+        auto SetValue(double value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>
     {
@@ -693,7 +693,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IScrollItemProvider
     {
-        WINRT_IMPL_AUTO(void) ScrollIntoView() const;
+        auto ScrollIntoView() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>
     {
@@ -702,14 +702,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IScrollProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HorizontallyScrollable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalScrollPercent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) HorizontalViewSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) VerticallyScrollable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalScrollPercent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) VerticalViewSize() const;
-        WINRT_IMPL_AUTO(void) Scroll(winrt::Windows::UI::Xaml::Automation::ScrollAmount const& horizontalAmount, winrt::Windows::UI::Xaml::Automation::ScrollAmount const& verticalAmount) const;
-        WINRT_IMPL_AUTO(void) SetScrollPercent(double horizontalPercent, double verticalPercent) const;
+        [[nodiscard]] auto HorizontallyScrollable() const;
+        [[nodiscard]] auto HorizontalScrollPercent() const;
+        [[nodiscard]] auto HorizontalViewSize() const;
+        [[nodiscard]] auto VerticallyScrollable() const;
+        [[nodiscard]] auto VerticalScrollPercent() const;
+        [[nodiscard]] auto VerticalViewSize() const;
+        auto Scroll(winrt::Windows::UI::Xaml::Automation::ScrollAmount const& horizontalAmount, winrt::Windows::UI::Xaml::Automation::ScrollAmount const& verticalAmount) const;
+        auto SetScrollPercent(double horizontalPercent, double verticalPercent) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>
     {
@@ -718,11 +718,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ISelectionItemProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSelected() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) SelectionContainer() const;
-        WINRT_IMPL_AUTO(void) AddToSelection() const;
-        WINRT_IMPL_AUTO(void) RemoveFromSelection() const;
-        WINRT_IMPL_AUTO(void) Select() const;
+        [[nodiscard]] auto IsSelected() const;
+        [[nodiscard]] auto SelectionContainer() const;
+        auto AddToSelection() const;
+        auto RemoveFromSelection() const;
+        auto Select() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>
     {
@@ -731,9 +731,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ISelectionProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanSelectMultiple() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSelectionRequired() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetSelection() const;
+        [[nodiscard]] auto CanSelectMultiple() const;
+        [[nodiscard]] auto IsSelectionRequired() const;
+        auto GetSelection() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>
     {
@@ -742,9 +742,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ISpreadsheetItemProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Formula() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetAnnotationObjects() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::AnnotationType>) GetAnnotationTypes() const;
+        [[nodiscard]] auto Formula() const;
+        auto GetAnnotationObjects() const;
+        auto GetAnnotationTypes() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>
     {
@@ -753,7 +753,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ISpreadsheetProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) GetItemByName(param::hstring const& name) const;
+        auto GetItemByName(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>
     {
@@ -762,13 +762,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IStylesProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) FillColor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) FillPatternColor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FillPatternStyle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Shape() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) StyleId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StyleName() const;
+        [[nodiscard]] auto ExtendedProperties() const;
+        [[nodiscard]] auto FillColor() const;
+        [[nodiscard]] auto FillPatternColor() const;
+        [[nodiscard]] auto FillPatternStyle() const;
+        [[nodiscard]] auto Shape() const;
+        [[nodiscard]] auto StyleId() const;
+        [[nodiscard]] auto StyleName() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>
     {
@@ -777,8 +777,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ISynchronizedInputProvider
     {
-        WINRT_IMPL_AUTO(void) Cancel() const;
-        WINRT_IMPL_AUTO(void) StartListening(winrt::Windows::UI::Xaml::Automation::SynchronizedInputType const& inputType) const;
+        auto Cancel() const;
+        auto StartListening(winrt::Windows::UI::Xaml::Automation::SynchronizedInputType const& inputType) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>
     {
@@ -787,8 +787,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITableItemProvider
     {
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetColumnHeaderItems() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetRowHeaderItems() const;
+        auto GetColumnHeaderItems() const;
+        auto GetRowHeaderItems() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>
     {
@@ -797,9 +797,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITableProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::RowOrColumnMajor) RowOrColumnMajor() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetColumnHeaders() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetRowHeaders() const;
+        [[nodiscard]] auto RowOrColumnMajor() const;
+        auto GetColumnHeaders() const;
+        auto GetRowHeaders() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>
     {
@@ -808,8 +808,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextChildProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) TextContainer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) TextRange() const;
+        [[nodiscard]] auto TextContainer() const;
+        [[nodiscard]] auto TextRange() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>
     {
@@ -818,8 +818,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextEditProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) GetActiveComposition() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) GetConversionTarget() const;
+        auto GetActiveComposition() const;
+        auto GetConversionTarget() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>
     {
@@ -828,12 +828,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) DocumentRange() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::SupportedTextSelection) SupportedTextSelection() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>) GetSelection() const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>) GetVisibleRanges() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) RangeFromChild(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& childElement) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) RangeFromPoint(winrt::Windows::Foundation::Point const& screenLocation) const;
+        [[nodiscard]] auto DocumentRange() const;
+        [[nodiscard]] auto SupportedTextSelection() const;
+        auto GetSelection() const;
+        auto GetVisibleRanges() const;
+        auto RangeFromChild(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& childElement) const;
+        auto RangeFromPoint(winrt::Windows::Foundation::Point const& screenLocation) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>
     {
@@ -842,8 +842,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextProvider2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) RangeFromAnnotation(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& annotationElement) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) GetCaretRange(bool& isActive) const;
+        auto RangeFromAnnotation(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple const& annotationElement) const;
+        auto GetCaretRange(bool& isActive) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>
     {
@@ -852,24 +852,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextRangeProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) Clone() const;
-        WINRT_IMPL_AUTO(bool) Compare(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider) const;
-        WINRT_IMPL_AUTO(int32_t) CompareEndpoints(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider, winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& targetEndpoint) const;
-        WINRT_IMPL_AUTO(void) ExpandToEnclosingUnit(winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) FindAttribute(int32_t attributeId, winrt::Windows::Foundation::IInspectable const& value, bool backward) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider) FindText(param::hstring const& text, bool backward, bool ignoreCase) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetAttributeValue(int32_t attributeId) const;
-        WINRT_IMPL_AUTO(void) GetBoundingRectangles(com_array<double>& returnValue) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple) GetEnclosingElement() const;
-        WINRT_IMPL_AUTO(hstring) GetText(int32_t maxLength) const;
-        WINRT_IMPL_AUTO(int32_t) Move(winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit, int32_t count) const;
-        WINRT_IMPL_AUTO(int32_t) MoveEndpointByUnit(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit, int32_t count) const;
-        WINRT_IMPL_AUTO(void) MoveEndpointByRange(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider, winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& targetEndpoint) const;
-        WINRT_IMPL_AUTO(void) Select() const;
-        WINRT_IMPL_AUTO(void) AddToSelection() const;
-        WINRT_IMPL_AUTO(void) RemoveFromSelection() const;
-        WINRT_IMPL_AUTO(void) ScrollIntoView(bool alignToTop) const;
-        WINRT_IMPL_AUTO(com_array<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>) GetChildren() const;
+        auto Clone() const;
+        auto Compare(winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider) const;
+        auto CompareEndpoints(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider, winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& targetEndpoint) const;
+        auto ExpandToEnclosingUnit(winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit) const;
+        auto FindAttribute(int32_t attributeId, winrt::Windows::Foundation::IInspectable const& value, bool backward) const;
+        auto FindText(param::hstring const& text, bool backward, bool ignoreCase) const;
+        auto GetAttributeValue(int32_t attributeId) const;
+        auto GetBoundingRectangles(com_array<double>& returnValue) const;
+        auto GetEnclosingElement() const;
+        auto GetText(int32_t maxLength) const;
+        auto Move(winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit, int32_t count) const;
+        auto MoveEndpointByUnit(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Text::TextUnit const& unit, int32_t count) const;
+        auto MoveEndpointByRange(winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& endpoint, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider const& textRangeProvider, winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint const& targetEndpoint) const;
+        auto Select() const;
+        auto AddToSelection() const;
+        auto RemoveFromSelection() const;
+        auto ScrollIntoView(bool alignToTop) const;
+        auto GetChildren() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>
     {
@@ -878,7 +878,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITextRangeProvider2
     {
-        WINRT_IMPL_AUTO(void) ShowContextMenu() const;
+        auto ShowContextMenu() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>
     {
@@ -887,8 +887,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IToggleProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::ToggleState) ToggleState() const;
-        WINRT_IMPL_AUTO(void) Toggle() const;
+        [[nodiscard]] auto ToggleState() const;
+        auto Toggle() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>
     {
@@ -897,12 +897,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITransformProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanMove() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanResize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanRotate() const;
-        WINRT_IMPL_AUTO(void) Move(double x, double y) const;
-        WINRT_IMPL_AUTO(void) Resize(double width, double height) const;
-        WINRT_IMPL_AUTO(void) Rotate(double degrees) const;
+        [[nodiscard]] auto CanMove() const;
+        [[nodiscard]] auto CanResize() const;
+        [[nodiscard]] auto CanRotate() const;
+        auto Move(double x, double y) const;
+        auto Resize(double width, double height) const;
+        auto Rotate(double degrees) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>
     {
@@ -911,12 +911,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_ITransformProvider2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanZoom() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ZoomLevel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxZoom() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MinZoom() const;
-        WINRT_IMPL_AUTO(void) Zoom(double zoom) const;
-        WINRT_IMPL_AUTO(void) ZoomByUnit(winrt::Windows::UI::Xaml::Automation::ZoomUnit const& zoomUnit) const;
+        [[nodiscard]] auto CanZoom() const;
+        [[nodiscard]] auto ZoomLevel() const;
+        [[nodiscard]] auto MaxZoom() const;
+        [[nodiscard]] auto MinZoom() const;
+        auto Zoom(double zoom) const;
+        auto ZoomByUnit(winrt::Windows::UI::Xaml::Automation::ZoomUnit const& zoomUnit) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>
     {
@@ -925,9 +925,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IValueProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReadOnly() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
-        WINRT_IMPL_AUTO(void) SetValue(param::hstring const& value) const;
+        [[nodiscard]] auto IsReadOnly() const;
+        [[nodiscard]] auto Value() const;
+        auto SetValue(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>
     {
@@ -936,7 +936,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IVirtualizedItemProvider
     {
-        WINRT_IMPL_AUTO(void) Realize() const;
+        auto Realize() const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>
     {
@@ -945,15 +945,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_Provider_IWindowProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsModal() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTopmost() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Maximizable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Minimizable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::WindowInteractionState) InteractionState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Automation::WindowVisualState) VisualState() const;
-        WINRT_IMPL_AUTO(void) Close() const;
-        WINRT_IMPL_AUTO(void) SetVisualState(winrt::Windows::UI::Xaml::Automation::WindowVisualState const& state) const;
-        WINRT_IMPL_AUTO(bool) WaitForInputIdle(int32_t milliseconds) const;
+        [[nodiscard]] auto IsModal() const;
+        [[nodiscard]] auto IsTopmost() const;
+        [[nodiscard]] auto Maximizable() const;
+        [[nodiscard]] auto Minimizable() const;
+        [[nodiscard]] auto InteractionState() const;
+        [[nodiscard]] auto VisualState() const;
+        auto Close() const;
+        auto SetVisualState(winrt::Windows::UI::Xaml::Automation::WindowVisualState const& state) const;
+        auto WaitForInputIdle(int32_t milliseconds) const;
     };
     template <> struct consume<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>
     {

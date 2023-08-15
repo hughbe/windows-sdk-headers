@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
@@ -54,10 +53,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Cryptography_DataProtection_IDataProtectionProvider
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) ProtectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) UnprotectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ProtectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& src, winrt::Windows::Storage::Streams::IOutputStream const& dest) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) UnprotectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& src, winrt::Windows::Storage::Streams::IOutputStream const& dest) const;
+        auto ProtectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
+        auto UnprotectAsync(winrt::Windows::Storage::Streams::IBuffer const& data) const;
+        auto ProtectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& src, winrt::Windows::Storage::Streams::IOutputStream const& dest) const;
+        auto UnprotectStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& src, winrt::Windows::Storage::Streams::IOutputStream const& dest) const;
     };
     template <> struct consume<winrt::Windows::Security::Cryptography::DataProtection::IDataProtectionProvider>
     {
@@ -66,7 +65,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Cryptography_DataProtection_IDataProtectionProviderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider) CreateOverloadExplicit(param::hstring const& protectionDescriptor) const;
+        auto CreateOverloadExplicit(param::hstring const& protectionDescriptor) const;
     };
     template <> struct consume<winrt::Windows::Security::Cryptography::DataProtection::IDataProtectionProviderFactory>
     {

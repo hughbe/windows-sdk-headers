@@ -354,7 +354,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompressor = _uuidof(ICompressor);
+                MIDL_CONST_ID IID& IID_ICompressor = __uuidof(ICompressor);
             } /* Compression */
         } /* Storage */
     } /* Windows */
@@ -397,7 +397,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ICompressorFactory = _uuidof(ICompressorFactory);
+                MIDL_CONST_ID IID& IID_ICompressorFactory = __uuidof(ICompressorFactory);
             } /* Compression */
         } /* Storage */
     } /* Windows */
@@ -437,7 +437,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDecompressor = _uuidof(IDecompressor);
+                MIDL_CONST_ID IID& IID_IDecompressor = __uuidof(IDecompressor);
             } /* Compression */
         } /* Storage */
     } /* Windows */
@@ -474,7 +474,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDecompressorFactory = _uuidof(IDecompressorFactory);
+                MIDL_CONST_ID IID& IID_IDecompressorFactory = __uuidof(IDecompressorFactory);
             } /* Compression */
         } /* Storage */
     } /* Windows */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -134,7 +134,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Imaging
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IXamlRenderingBackgroundTaskOverrides = winrt::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides;
-        WINRT_IMPL_AUTO(void) OnRun(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
+        auto OnRun(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
     };
 }
 #endif

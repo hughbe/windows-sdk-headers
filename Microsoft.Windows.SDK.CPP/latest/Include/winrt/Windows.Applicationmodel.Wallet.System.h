@@ -657,7 +657,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWalletItemSystemStore = _uuidof(IWalletItemSystemStore);
+                    MIDL_CONST_ID IID& IID_IWalletItemSystemStore = __uuidof(IWalletItemSystemStore);
                 } /* System */
             } /* Wallet */
         } /* ApplicationModel */
@@ -708,7 +708,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWalletItemSystemStore2 = _uuidof(IWalletItemSystemStore2);
+                    MIDL_CONST_ID IID& IID_IWalletItemSystemStore2 = __uuidof(IWalletItemSystemStore2);
                 } /* System */
             } /* Wallet */
         } /* ApplicationModel */
@@ -752,7 +752,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IWalletManagerSystemStatics = _uuidof(IWalletManagerSystemStatics);
+                    MIDL_CONST_ID IID& IID_IWalletManagerSystemStatics = __uuidof(IWalletManagerSystemStatics);
                 } /* System */
             } /* Wallet */
         } /* ApplicationModel */

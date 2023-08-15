@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -55,11 +55,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
-        WINRT_IMPL_AUTO(void) RegisterThread(uint32_t threadId) const;
-        WINRT_IMPL_AUTO(void) UnregisterThread(uint32_t threadId) const;
-        WINRT_IMPL_AUTO(void) ReportDataReceived(array_view<uint8_t const> pduData) const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto IsEnabled(bool value) const;
+        auto RegisterThread(uint32_t threadId) const;
+        auto UnregisterThread(uint32_t threadId) const;
+        auto ReportDataReceived(array_view<uint8_t const> pduData) const;
     };
     template <> struct consume<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection>
     {
@@ -68,7 +68,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnectionFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection) CreateInstance(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder) const;
+        auto CreateInstance(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder) const;
     };
     template <> struct consume<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory>
     {

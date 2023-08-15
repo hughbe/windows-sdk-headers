@@ -3174,7 +3174,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE FlushTransport(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IControlChannelTrigger = _uuidof(IControlChannelTrigger);
+                MIDL_CONST_ID IID& IID_IControlChannelTrigger = __uuidof(IControlChannelTrigger);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3210,7 +3210,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IControlChannelTrigger2 = _uuidof(IControlChannelTrigger2);
+                MIDL_CONST_ID IID& IID_IControlChannelTrigger2 = __uuidof(IControlChannelTrigger2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3244,7 +3244,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IControlChannelTriggerEventDetails = _uuidof(IControlChannelTriggerEventDetails);
+                MIDL_CONST_ID IID& IID_IControlChannelTriggerEventDetails = __uuidof(IControlChannelTriggerEventDetails);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3288,7 +3288,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IControlChannelTriggerFactory = _uuidof(IControlChannelTriggerFactory);
+                MIDL_CONST_ID IID& IID_IControlChannelTriggerFactory = __uuidof(IControlChannelTriggerFactory);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3328,7 +3328,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IControlChannelTriggerResetEventDetails = _uuidof(IControlChannelTriggerResetEventDetails);
+                MIDL_CONST_ID IID& IID_IControlChannelTriggerResetEventDetails = __uuidof(IControlChannelTriggerResetEventDetails);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3410,7 +3410,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocket = _uuidof(IDatagramSocket);
+                MIDL_CONST_ID IID& IID_IDatagramSocket = __uuidof(IDatagramSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3451,7 +3451,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocket2 = _uuidof(IDatagramSocket2);
+                MIDL_CONST_ID IID& IID_IDatagramSocket2 = __uuidof(IDatagramSocket2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3506,7 +3506,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocket3 = _uuidof(IDatagramSocket3);
+                MIDL_CONST_ID IID& IID_IDatagramSocket3 = __uuidof(IDatagramSocket3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3551,7 +3551,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketControl = _uuidof(IDatagramSocketControl);
+                MIDL_CONST_ID IID& IID_IDatagramSocketControl = __uuidof(IDatagramSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3596,7 +3596,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketControl2 = _uuidof(IDatagramSocketControl2);
+                MIDL_CONST_ID IID& IID_IDatagramSocketControl2 = __uuidof(IDatagramSocketControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3635,7 +3635,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketControl3 = _uuidof(IDatagramSocketControl3);
+                MIDL_CONST_ID IID& IID_IDatagramSocketControl3 = __uuidof(IDatagramSocketControl3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3680,7 +3680,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketInformation = _uuidof(IDatagramSocketInformation);
+                MIDL_CONST_ID IID& IID_IDatagramSocketInformation = __uuidof(IDatagramSocketInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3728,7 +3728,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketMessageReceivedEventArgs = _uuidof(IDatagramSocketMessageReceivedEventArgs);
+                MIDL_CONST_ID IID& IID_IDatagramSocketMessageReceivedEventArgs = __uuidof(IDatagramSocketMessageReceivedEventArgs);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3772,7 +3772,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IDatagramSocketStatics = _uuidof(IDatagramSocketStatics);
+                MIDL_CONST_ID IID& IID_IDatagramSocketStatics = __uuidof(IDatagramSocketStatics);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3822,7 +3822,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocket = _uuidof(IMessageWebSocket);
+                MIDL_CONST_ID IID& IID_IMessageWebSocket = __uuidof(IMessageWebSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3867,7 +3867,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocket2 = _uuidof(IMessageWebSocket2);
+                MIDL_CONST_ID IID& IID_IMessageWebSocket2 = __uuidof(IMessageWebSocket2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3908,7 +3908,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocket3 = _uuidof(IMessageWebSocket3);
+                MIDL_CONST_ID IID& IID_IMessageWebSocket3 = __uuidof(IMessageWebSocket3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -3956,7 +3956,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocketControl = _uuidof(IMessageWebSocketControl);
+                MIDL_CONST_ID IID& IID_IMessageWebSocketControl = __uuidof(IMessageWebSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4010,7 +4010,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocketControl2 = _uuidof(IMessageWebSocketControl2);
+                MIDL_CONST_ID IID& IID_IMessageWebSocketControl2 = __uuidof(IMessageWebSocketControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4052,7 +4052,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocketMessageReceivedEventArgs = _uuidof(IMessageWebSocketMessageReceivedEventArgs);
+                MIDL_CONST_ID IID& IID_IMessageWebSocketMessageReceivedEventArgs = __uuidof(IMessageWebSocketMessageReceivedEventArgs);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4091,7 +4091,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMessageWebSocketMessageReceivedEventArgs2 = _uuidof(IMessageWebSocketMessageReceivedEventArgs2);
+                MIDL_CONST_ID IID& IID_IMessageWebSocketMessageReceivedEventArgs2 = __uuidof(IMessageWebSocketMessageReceivedEventArgs2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4154,7 +4154,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IServerMessageWebSocket = _uuidof(IServerMessageWebSocket);
+                MIDL_CONST_ID IID& IID_IServerMessageWebSocket = __uuidof(IServerMessageWebSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4193,7 +4193,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IServerMessageWebSocketControl = _uuidof(IServerMessageWebSocketControl);
+                MIDL_CONST_ID IID& IID_IServerMessageWebSocketControl = __uuidof(IServerMessageWebSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4235,7 +4235,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IServerMessageWebSocketInformation = _uuidof(IServerMessageWebSocketInformation);
+                MIDL_CONST_ID IID& IID_IServerMessageWebSocketInformation = __uuidof(IServerMessageWebSocketInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4291,7 +4291,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IServerStreamWebSocket = _uuidof(IServerStreamWebSocket);
+                MIDL_CONST_ID IID& IID_IServerStreamWebSocket = __uuidof(IServerStreamWebSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4333,7 +4333,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IServerStreamWebSocketInformation = _uuidof(IServerStreamWebSocketInformation);
+                MIDL_CONST_ID IID& IID_IServerStreamWebSocketInformation = __uuidof(IServerStreamWebSocketInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4369,7 +4369,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityContext = _uuidof(ISocketActivityContext);
+                MIDL_CONST_ID IID& IID_ISocketActivityContext = __uuidof(ISocketActivityContext);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4406,7 +4406,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityContextFactory = _uuidof(ISocketActivityContextFactory);
+                MIDL_CONST_ID IID& IID_ISocketActivityContextFactory = __uuidof(ISocketActivityContextFactory);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4460,7 +4460,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityInformation = _uuidof(ISocketActivityInformation);
+                MIDL_CONST_ID IID& IID_ISocketActivityInformation = __uuidof(ISocketActivityInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4496,7 +4496,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityInformationStatics = _uuidof(ISocketActivityInformationStatics);
+                MIDL_CONST_ID IID& IID_ISocketActivityInformationStatics = __uuidof(ISocketActivityInformationStatics);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4535,7 +4535,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketActivityTriggerDetails = _uuidof(ISocketActivityTriggerDetails);
+                MIDL_CONST_ID IID& IID_ISocketActivityTriggerDetails = __uuidof(ISocketActivityTriggerDetails);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4572,7 +4572,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISocketErrorStatics = _uuidof(ISocketErrorStatics);
+                MIDL_CONST_ID IID& IID_ISocketErrorStatics = __uuidof(ISocketErrorStatics);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4645,7 +4645,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocket = _uuidof(IStreamSocket);
+                MIDL_CONST_ID IID& IID_IStreamSocket = __uuidof(IStreamSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4688,7 +4688,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocket2 = _uuidof(IStreamSocket2);
+                MIDL_CONST_ID IID& IID_IStreamSocket2 = __uuidof(IStreamSocket2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4743,7 +4743,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocket3 = _uuidof(IStreamSocket3);
+                MIDL_CONST_ID IID& IID_IStreamSocket3 = __uuidof(IStreamSocket3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4806,7 +4806,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketControl = _uuidof(IStreamSocketControl);
+                MIDL_CONST_ID IID& IID_IStreamSocketControl = __uuidof(IStreamSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4842,7 +4842,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketControl2 = _uuidof(IStreamSocketControl2);
+                MIDL_CONST_ID IID& IID_IStreamSocketControl2 = __uuidof(IStreamSocketControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4887,7 +4887,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketControl3 = _uuidof(IStreamSocketControl3);
+                MIDL_CONST_ID IID& IID_IStreamSocketControl3 = __uuidof(IStreamSocketControl3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4926,7 +4926,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketControl4 = _uuidof(IStreamSocketControl4);
+                MIDL_CONST_ID IID& IID_IStreamSocketControl4 = __uuidof(IStreamSocketControl4);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -4989,7 +4989,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketInformation = _uuidof(IStreamSocketInformation);
+                MIDL_CONST_ID IID& IID_IStreamSocketInformation = __uuidof(IStreamSocketInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5034,7 +5034,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketInformation2 = _uuidof(IStreamSocketInformation2);
+                MIDL_CONST_ID IID& IID_IStreamSocketInformation2 = __uuidof(IStreamSocketInformation2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5092,7 +5092,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListener = _uuidof(IStreamSocketListener);
+                MIDL_CONST_ID IID& IID_IStreamSocketListener = __uuidof(IStreamSocketListener);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5139,7 +5139,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListener2 = _uuidof(IStreamSocketListener2);
+                MIDL_CONST_ID IID& IID_IStreamSocketListener2 = __uuidof(IStreamSocketListener2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5189,7 +5189,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListener3 = _uuidof(IStreamSocketListener3);
+                MIDL_CONST_ID IID& IID_IStreamSocketListener3 = __uuidof(IStreamSocketListener3);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5225,7 +5225,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListenerConnectionReceivedEventArgs = _uuidof(IStreamSocketListenerConnectionReceivedEventArgs);
+                MIDL_CONST_ID IID& IID_IStreamSocketListenerConnectionReceivedEventArgs = __uuidof(IStreamSocketListenerConnectionReceivedEventArgs);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5264,7 +5264,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListenerControl = _uuidof(IStreamSocketListenerControl);
+                MIDL_CONST_ID IID& IID_IStreamSocketListenerControl = __uuidof(IStreamSocketListenerControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5321,7 +5321,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListenerControl2 = _uuidof(IStreamSocketListenerControl2);
+                MIDL_CONST_ID IID& IID_IStreamSocketListenerControl2 = __uuidof(IStreamSocketListenerControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5357,7 +5357,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketListenerInformation = _uuidof(IStreamSocketListenerInformation);
+                MIDL_CONST_ID IID& IID_IStreamSocketListenerInformation = __uuidof(IStreamSocketListenerInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5401,7 +5401,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamSocketStatics = _uuidof(IStreamSocketStatics);
+                MIDL_CONST_ID IID& IID_IStreamSocketStatics = __uuidof(IStreamSocketStatics);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5447,7 +5447,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamWebSocket = _uuidof(IStreamWebSocket);
+                MIDL_CONST_ID IID& IID_IStreamWebSocket = __uuidof(IStreamWebSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5492,7 +5492,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamWebSocket2 = _uuidof(IStreamWebSocket2);
+                MIDL_CONST_ID IID& IID_IStreamWebSocket2 = __uuidof(IStreamWebSocket2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5534,7 +5534,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamWebSocketControl = _uuidof(IStreamWebSocketControl);
+                MIDL_CONST_ID IID& IID_IStreamWebSocketControl = __uuidof(IStreamWebSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5582,7 +5582,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStreamWebSocketControl2 = _uuidof(IStreamWebSocketControl2);
+                MIDL_CONST_ID IID& IID_IStreamWebSocketControl2 = __uuidof(IStreamWebSocketControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5638,7 +5638,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocket = _uuidof(IWebSocket);
+                MIDL_CONST_ID IID& IID_IWebSocket = __uuidof(IWebSocket);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5677,7 +5677,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketClosedEventArgs = _uuidof(IWebSocketClosedEventArgs);
+                MIDL_CONST_ID IID& IID_IWebSocketClosedEventArgs = __uuidof(IWebSocketClosedEventArgs);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5729,7 +5729,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketControl = _uuidof(IWebSocketControl);
+                MIDL_CONST_ID IID& IID_IWebSocketControl = __uuidof(IWebSocketControl);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5766,7 +5766,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketControl2 = _uuidof(IWebSocketControl2);
+                MIDL_CONST_ID IID& IID_IWebSocketControl2 = __uuidof(IWebSocketControl2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5803,7 +5803,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketErrorStatics = _uuidof(IWebSocketErrorStatics);
+                MIDL_CONST_ID IID& IID_IWebSocketErrorStatics = __uuidof(IWebSocketErrorStatics);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5843,7 +5843,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketInformation = _uuidof(IWebSocketInformation);
+                MIDL_CONST_ID IID& IID_IWebSocketInformation = __uuidof(IWebSocketInformation);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5889,7 +5889,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketInformation2 = _uuidof(IWebSocketInformation2);
+                MIDL_CONST_ID IID& IID_IWebSocketInformation2 = __uuidof(IWebSocketInformation2);
             } /* Sockets */
         } /* Networking */
     } /* Windows */
@@ -5938,7 +5938,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IWebSocketServerCustomValidationRequestedEventArgs = _uuidof(IWebSocketServerCustomValidationRequestedEventArgs);
+                MIDL_CONST_ID IID& IID_IWebSocketServerCustomValidationRequestedEventArgs = __uuidof(IWebSocketServerCustomValidationRequestedEventArgs);
             } /* Sockets */
         } /* Networking */
     } /* Windows */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -46,9 +46,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Power_Diagnostics_IBackgroundEnergyDiagnosticsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DeviceSpecificConversionFactor() const;
-        WINRT_IMPL_AUTO(uint64_t) ComputeTotalEnergyUsage() const;
-        WINRT_IMPL_AUTO(void) ResetTotalEnergyUsage() const;
+        [[nodiscard]] auto DeviceSpecificConversionFactor() const;
+        auto ComputeTotalEnergyUsage() const;
+        auto ResetTotalEnergyUsage() const;
     };
     template <> struct consume<winrt::Windows::System::Power::Diagnostics::IBackgroundEnergyDiagnosticsStatics>
     {
@@ -57,9 +57,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Power_Diagnostics_IForegroundEnergyDiagnosticsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(double) DeviceSpecificConversionFactor() const;
-        WINRT_IMPL_AUTO(uint64_t) ComputeTotalEnergyUsage() const;
-        WINRT_IMPL_AUTO(void) ResetTotalEnergyUsage() const;
+        [[nodiscard]] auto DeviceSpecificConversionFactor() const;
+        auto ComputeTotalEnergyUsage() const;
+        auto ResetTotalEnergyUsage() const;
     };
     template <> struct consume<winrt::Windows::System::Power::Diagnostics::IForegroundEnergyDiagnosticsStatics>
     {

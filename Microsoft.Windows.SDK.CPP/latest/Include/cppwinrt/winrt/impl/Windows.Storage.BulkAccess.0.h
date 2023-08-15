@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,12 +9,7 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::FileProperties
 {
@@ -104,15 +99,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IFileInformationFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>>) GetItemsAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>>) GetItemsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::FileInformation>>) GetFilesAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::FileInformation>>) GetFilesAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::FolderInformation>>) GetFoldersAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::BulkAccess::FolderInformation>>) GetFoldersAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetVirtualizedItemsVector() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetVirtualizedFilesVector() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetVirtualizedFoldersVector() const;
+        auto GetItemsAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        auto GetItemsAsync() const;
+        auto GetFilesAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        auto GetFilesAsync() const;
+        auto GetFoldersAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        auto GetFoldersAsync() const;
+        auto GetVirtualizedItemsVector() const;
+        auto GetVirtualizedFilesVector() const;
+        auto GetVirtualizedFoldersVector() const;
     };
     template <> struct consume<winrt::Windows::Storage::BulkAccess::IFileInformationFactory>
     {
@@ -121,10 +116,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IFileInformationFactoryFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::BulkAccess::FileInformationFactory) CreateWithMode(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSize(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSizeAndOptions(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSizeAndOptionsAndFlags(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions, bool delayLoad) const;
+        auto CreateWithMode(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
+        auto CreateWithModeAndSize(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize) const;
+        auto CreateWithModeAndSizeAndOptions(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions) const;
+        auto CreateWithModeAndSizeAndOptionsAndFlags(winrt::Windows::Storage::Search::IStorageQueryResultBase const& queryResult, winrt::Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, winrt::Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions, bool delayLoad) const;
     };
     template <> struct consume<winrt::Windows::Storage::BulkAccess::IFileInformationFactoryFactory>
     {
@@ -133,20 +128,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IStorageItemInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::MusicProperties) MusicProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::VideoProperties) VideoProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::ImageProperties) ImageProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::DocumentProperties) DocumentProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::BasicProperties) BasicProperties() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::StorageItemThumbnail) Thumbnail() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ThumbnailUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
+        [[nodiscard]] auto MusicProperties() const;
+        [[nodiscard]] auto VideoProperties() const;
+        [[nodiscard]] auto ImageProperties() const;
+        [[nodiscard]] auto DocumentProperties() const;
+        [[nodiscard]] auto BasicProperties() const;
+        [[nodiscard]] auto Thumbnail() const;
+        auto ThumbnailUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
         using ThumbnailUpdated_revoker = impl::event_revoker<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, &impl::abi_t<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::remove_ThumbnailUpdated>;
         [[nodiscard]] ThumbnailUpdated_revoker ThumbnailUpdated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
-        WINRT_IMPL_AUTO(void) ThumbnailUpdated(winrt::event_token const& eventCookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) PropertiesUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
+        auto ThumbnailUpdated(winrt::event_token const& eventCookie) const noexcept;
+        auto PropertiesUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
         using PropertiesUpdated_revoker = impl::event_revoker<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, &impl::abi_t<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::remove_PropertiesUpdated>;
         [[nodiscard]] PropertiesUpdated_revoker PropertiesUpdated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::BulkAccess::IStorageItemInformation, winrt::Windows::Foundation::IInspectable> const& changedHandler) const;
-        WINRT_IMPL_AUTO(void) PropertiesUpdated(winrt::event_token const& eventCookie) const noexcept;
+        auto PropertiesUpdated(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
     {

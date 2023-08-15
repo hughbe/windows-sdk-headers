@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,13 +8,7 @@
 #define WINRT_Windows_Media_Ocr_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     struct Rect;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Globalization
 {
@@ -112,8 +106,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Ocr_IOcrEngine
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Ocr::OcrResult>) RecognizeAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Language) RecognizerLanguage() const;
+        auto RecognizeAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const;
+        [[nodiscard]] auto RecognizerLanguage() const;
     };
     template <> struct consume<winrt::Windows::Media::Ocr::IOcrEngine>
     {
@@ -122,11 +116,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Ocr_IOcrEngineStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxImageDimension() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Language>) AvailableRecognizerLanguages() const;
-        WINRT_IMPL_AUTO(bool) IsLanguageSupported(winrt::Windows::Globalization::Language const& language) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Ocr::OcrEngine) TryCreateFromLanguage(winrt::Windows::Globalization::Language const& language) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Media::Ocr::OcrEngine) TryCreateFromUserProfileLanguages() const;
+        [[nodiscard]] auto MaxImageDimension() const;
+        [[nodiscard]] auto AvailableRecognizerLanguages() const;
+        auto IsLanguageSupported(winrt::Windows::Globalization::Language const& language) const;
+        auto TryCreateFromLanguage(winrt::Windows::Globalization::Language const& language) const;
+        auto TryCreateFromUserProfileLanguages() const;
     };
     template <> struct consume<winrt::Windows::Media::Ocr::IOcrEngineStatics>
     {
@@ -135,8 +129,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Ocr_IOcrLine
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Ocr::OcrWord>) Words() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        [[nodiscard]] auto Words() const;
+        [[nodiscard]] auto Text() const;
     };
     template <> struct consume<winrt::Windows::Media::Ocr::IOcrLine>
     {
@@ -145,9 +139,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Ocr_IOcrResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Ocr::OcrLine>) Lines() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) TextAngle() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        [[nodiscard]] auto Lines() const;
+        [[nodiscard]] auto TextAngle() const;
+        [[nodiscard]] auto Text() const;
     };
     template <> struct consume<winrt::Windows::Media::Ocr::IOcrResult>
     {
@@ -156,8 +150,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Ocr_IOcrWord
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) BoundingRect() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        [[nodiscard]] auto BoundingRect() const;
+        [[nodiscard]] auto Text() const;
     };
     template <> struct consume<winrt::Windows::Media::Ocr::IOcrWord>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct HResult;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Point;
     struct Size;
@@ -36,7 +35,6 @@ WINRT_EXPORT namespace winrt::Windows::Graphics
 WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX
 {
     enum class DirectXAlphaMode : int32_t;
-    enum class DirectXColorSpace : int32_t;
     enum class DirectXPixelFormat : int32_t;
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics::Effects
@@ -297,8 +295,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     struct ICompositionSurfaceFacade;
     struct ICompositionTarget;
     struct ICompositionTargetFactory;
-    struct ICompositionTexture;
-    struct ICompositionTextureFactory;
     struct ICompositionTransform;
     struct ICompositionTransformFactory;
     struct ICompositionViewBox;
@@ -439,7 +435,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     struct CompositionStrokeDashArray;
     struct CompositionSurfaceBrush;
     struct CompositionTarget;
-    struct CompositionTexture;
     struct CompositionTransform;
     struct CompositionViewBox;
     struct CompositionVirtualDrawingSurface;
@@ -590,8 +585,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::Composition::ICompositionTarget>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::Composition::ICompositionTargetFactory>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::UI::Composition::ICompositionTexture>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::UI::Composition::ICompositionTextureFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::Composition::ICompositionTransform>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::Composition::ICompositionTransformFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::Composition::ICompositionViewBox>{ using type = interface_category; };
@@ -732,7 +725,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::UI::Composition::CompositionStrokeDashArray>{ using type = class_category; };
     template <> struct category<winrt::Windows::UI::Composition::CompositionSurfaceBrush>{ using type = class_category; };
     template <> struct category<winrt::Windows::UI::Composition::CompositionTarget>{ using type = class_category; };
-    template <> struct category<winrt::Windows::UI::Composition::CompositionTexture>{ using type = class_category; };
     template <> struct category<winrt::Windows::UI::Composition::CompositionTransform>{ using type = class_category; };
     template <> struct category<winrt::Windows::UI::Composition::CompositionViewBox>{ using type = class_category; };
     template <> struct category<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>{ using type = class_category; };
@@ -859,7 +851,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionStrokeDashArray> = L"Windows.UI.Composition.CompositionStrokeDashArray";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionSurfaceBrush> = L"Windows.UI.Composition.CompositionSurfaceBrush";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionTarget> = L"Windows.UI.Composition.CompositionTarget";
-    template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionTexture> = L"Windows.UI.Composition.CompositionTexture";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionTransform> = L"Windows.UI.Composition.CompositionTransform";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionViewBox> = L"Windows.UI.Composition.CompositionViewBox";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface> = L"Windows.UI.Composition.CompositionVirtualDrawingSurface";
@@ -1028,8 +1019,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionSurfaceFacade> = L"Windows.UI.Composition.ICompositionSurfaceFacade";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTarget> = L"Windows.UI.Composition.ICompositionTarget";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTargetFactory> = L"Windows.UI.Composition.ICompositionTargetFactory";
-    template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTexture> = L"Windows.UI.Composition.ICompositionTexture";
-    template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTextureFactory> = L"Windows.UI.Composition.ICompositionTextureFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTransform> = L"Windows.UI.Composition.ICompositionTransform";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionTransformFactory> = L"Windows.UI.Composition.ICompositionTransformFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::ICompositionViewBox> = L"Windows.UI.Composition.ICompositionViewBox";
@@ -1212,8 +1201,6 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>{ 0xE01622C8,0x2332,0x55C7,{ 0x88,0x68,0xA7,0x31,0x2C,0x5C,0x22,0x9D } }; // E01622C8-2332-55C7-8868-A7312C5C229D
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTarget>{ 0xA1BEA8BA,0xD726,0x4663,{ 0x81,0x29,0x6B,0x5E,0x79,0x27,0xFF,0xA6 } }; // A1BEA8BA-D726-4663-8129-6B5E7927FFA6
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTargetFactory>{ 0x93CD9D2B,0x8516,0x4B14,{ 0xA8,0xCE,0xF4,0x9E,0x21,0x19,0xEC,0x42 } }; // 93CD9D2B-8516-4B14-A8CE-F49E2119EC42
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTexture>{ 0x347D03A0,0x1C0A,0x4C0B,{ 0xB2,0x32,0x85,0x70,0xB2,0xB1,0xA4,0xEA } }; // 347D03A0-1C0A-4C0B-B232-8570B2B1A4EA
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTextureFactory>{ 0x09D9523D,0x471C,0x5AB5,{ 0xB0,0x53,0xB5,0x68,0xEE,0x46,0xEB,0xFB } }; // 09D9523D-471C-5AB5-B053-B568EE46EBFB
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTransform>{ 0x7CD54529,0xFBED,0x4112,{ 0xAB,0xC5,0x18,0x59,0x06,0xDD,0x92,0x7C } }; // 7CD54529-FBED-4112-ABC5-185906DD927C
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionTransformFactory>{ 0xAAAECA26,0xC149,0x517A,{ 0x8F,0x72,0x6B,0xFF,0x7A,0x65,0xCE,0x08 } }; // AAAECA26-C149-517A-8F72-6BFF7A65CE08
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::ICompositionViewBox>{ 0xB440BF07,0x068F,0x4537,{ 0x84,0xC6,0x4E,0xCB,0xE0,0x19,0xE1,0xF4 } }; // B440BF07-068F-4537-84C6-4ECBE019E1F4
@@ -1354,7 +1341,6 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionStrokeDashArray>{ using type = winrt::Windows::Foundation::Collections::IVector<float>; };
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionSurfaceBrush>{ using type = winrt::Windows::UI::Composition::ICompositionSurfaceBrush; };
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionTarget>{ using type = winrt::Windows::UI::Composition::ICompositionTarget; };
-    template <> struct default_interface<winrt::Windows::UI::Composition::CompositionTexture>{ using type = winrt::Windows::UI::Composition::ICompositionTexture; };
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionTransform>{ using type = winrt::Windows::UI::Composition::ICompositionTransform; };
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionViewBox>{ using type = winrt::Windows::UI::Composition::ICompositionViewBox; };
     template <> struct default_interface<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>{ using type = winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurface; };
@@ -2367,24 +2353,6 @@ namespace winrt::impl
         {
         };
     };
-    template <> struct abi<winrt::Windows::UI::Composition::ICompositionTexture>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-            virtual int32_t __stdcall get_SourceRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
-            virtual int32_t __stdcall put_SourceRect(struct struct_Windows_Graphics_RectInt32) noexcept = 0;
-            virtual int32_t __stdcall get_AlphaMode(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_AlphaMode(int32_t) noexcept = 0;
-            virtual int32_t __stdcall get_ColorSpace(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_ColorSpace(int32_t) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::Windows::UI::Composition::ICompositionTextureFactory>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-        };
-    };
     template <> struct abi<winrt::Windows::UI::Composition::ICompositionTransform>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -3231,8 +3199,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAmbientLight
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAmbientLight>
     {
@@ -3241,8 +3209,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAmbientLight2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Intensity() const;
-        WINRT_IMPL_AUTO(void) Intensity(float value) const;
+        [[nodiscard]] auto Intensity() const;
+        auto Intensity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAmbientLight2>
     {
@@ -3251,14 +3219,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAnimationController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) PlaybackRate() const;
-        WINRT_IMPL_AUTO(void) PlaybackRate(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Progress() const;
-        WINRT_IMPL_AUTO(void) Progress(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationControllerProgressBehavior) ProgressBehavior() const;
-        WINRT_IMPL_AUTO(void) ProgressBehavior(winrt::Windows::UI::Composition::AnimationControllerProgressBehavior const& value) const;
-        WINRT_IMPL_AUTO(void) Pause() const;
-        WINRT_IMPL_AUTO(void) Resume() const;
+        [[nodiscard]] auto PlaybackRate() const;
+        auto PlaybackRate(float value) const;
+        [[nodiscard]] auto Progress() const;
+        auto Progress(float value) const;
+        [[nodiscard]] auto ProgressBehavior() const;
+        auto ProgressBehavior(winrt::Windows::UI::Composition::AnimationControllerProgressBehavior const& value) const;
+        auto Pause() const;
+        auto Resume() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAnimationController>
     {
@@ -3267,8 +3235,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAnimationControllerStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxPlaybackRate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinPlaybackRate() const;
+        [[nodiscard]] auto MaxPlaybackRate() const;
+        [[nodiscard]] auto MinPlaybackRate() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAnimationControllerStatics>
     {
@@ -3277,7 +3245,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAnimationObject
     {
-        WINRT_IMPL_AUTO(void) PopulatePropertyInfo(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& propertyInfo) const;
+        auto PopulatePropertyInfo(param::hstring const& propertyName, winrt::Windows::UI::Composition::AnimationPropertyInfo const& propertyInfo) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAnimationObject>
     {
@@ -3286,8 +3254,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAnimationPropertyInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationPropertyAccessMode) AccessMode() const;
-        WINRT_IMPL_AUTO(void) AccessMode(winrt::Windows::UI::Composition::AnimationPropertyAccessMode const& value) const;
+        [[nodiscard]] auto AccessMode() const;
+        auto AccessMode(winrt::Windows::UI::Composition::AnimationPropertyAccessMode const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAnimationPropertyInfo>
     {
@@ -3296,8 +3264,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IAnimationPropertyInfo2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionObject) GetResolvedCompositionObject() const;
-        WINRT_IMPL_AUTO(hstring) GetResolvedCompositionObjectProperty() const;
+        auto GetResolvedCompositionObject() const;
+        auto GetResolvedCompositionObjectProperty() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IAnimationPropertyInfo2>
     {
@@ -3306,8 +3274,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBackEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Amplitude() const;
+        [[nodiscard]] auto Mode() const;
+        [[nodiscard]] auto Amplitude() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBackEasingFunction>
     {
@@ -3316,7 +3284,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBooleanKeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, bool value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBooleanKeyFrameAnimation>
     {
@@ -3325,9 +3293,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBounceEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Bounces() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Bounciness() const;
+        [[nodiscard]] auto Mode() const;
+        [[nodiscard]] auto Bounces() const;
+        [[nodiscard]] auto Bounciness() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBounceEasingFunction>
     {
@@ -3336,10 +3304,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBounceScalarNaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Acceleration() const;
-        WINRT_IMPL_AUTO(void) Acceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Restitution() const;
-        WINRT_IMPL_AUTO(void) Restitution(float value) const;
+        [[nodiscard]] auto Acceleration() const;
+        auto Acceleration(float value) const;
+        [[nodiscard]] auto Restitution() const;
+        auto Restitution(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBounceScalarNaturalMotionAnimation>
     {
@@ -3348,10 +3316,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBounceVector2NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Acceleration() const;
-        WINRT_IMPL_AUTO(void) Acceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Restitution() const;
-        WINRT_IMPL_AUTO(void) Restitution(float value) const;
+        [[nodiscard]] auto Acceleration() const;
+        auto Acceleration(float value) const;
+        [[nodiscard]] auto Restitution() const;
+        auto Restitution(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBounceVector2NaturalMotionAnimation>
     {
@@ -3360,10 +3328,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IBounceVector3NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Acceleration() const;
-        WINRT_IMPL_AUTO(void) Acceleration(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Restitution() const;
-        WINRT_IMPL_AUTO(void) Restitution(float value) const;
+        [[nodiscard]] auto Acceleration() const;
+        auto Acceleration(float value) const;
+        [[nodiscard]] auto Restitution() const;
+        auto Restitution(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IBounceVector3NaturalMotionAnimation>
     {
@@ -3372,7 +3340,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICircleEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
+        [[nodiscard]] auto Mode() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICircleEasingFunction>
     {
@@ -3381,10 +3349,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IColorKeyFrameAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorSpace) InterpolationColorSpace() const;
-        WINRT_IMPL_AUTO(void) InterpolationColorSpace(winrt::Windows::UI::Composition::CompositionColorSpace const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Color const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Color const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        [[nodiscard]] auto InterpolationColorSpace() const;
+        auto InterpolationColorSpace(winrt::Windows::UI::Composition::CompositionColorSpace const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Color const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Color const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IColorKeyFrameAnimation>
     {
@@ -3393,17 +3361,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionAnimation
     {
-        WINRT_IMPL_AUTO(void) ClearAllParameters() const;
-        WINRT_IMPL_AUTO(void) ClearParameter(param::hstring const& key) const;
-        WINRT_IMPL_AUTO(void) SetColorParameter(param::hstring const& key, winrt::Windows::UI::Color const& value) const;
-        WINRT_IMPL_AUTO(void) SetMatrix3x2Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
-        WINRT_IMPL_AUTO(void) SetMatrix4x4Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
-        WINRT_IMPL_AUTO(void) SetQuaternionParameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
-        WINRT_IMPL_AUTO(void) SetReferenceParameter(param::hstring const& key, winrt::Windows::UI::Composition::CompositionObject const& compositionObject) const;
-        WINRT_IMPL_AUTO(void) SetScalarParameter(param::hstring const& key, float value) const;
-        WINRT_IMPL_AUTO(void) SetVector2Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        WINRT_IMPL_AUTO(void) SetVector3Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        WINRT_IMPL_AUTO(void) SetVector4Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float4 const& value) const;
+        auto ClearAllParameters() const;
+        auto ClearParameter(param::hstring const& key) const;
+        auto SetColorParameter(param::hstring const& key, winrt::Windows::UI::Color const& value) const;
+        auto SetMatrix3x2Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        auto SetMatrix4x4Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
+        auto SetQuaternionParameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
+        auto SetReferenceParameter(param::hstring const& key, winrt::Windows::UI::Composition::CompositionObject const& compositionObject) const;
+        auto SetScalarParameter(param::hstring const& key, float value) const;
+        auto SetVector2Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        auto SetVector3Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        auto SetVector4Parameter(param::hstring const& key, winrt::Windows::Foundation::Numerics::float4 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionAnimation>
     {
@@ -3412,9 +3380,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionAnimation2
     {
-        WINRT_IMPL_AUTO(void) SetBooleanParameter(param::hstring const& key, bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Target() const;
-        WINRT_IMPL_AUTO(void) Target(param::hstring const& value) const;
+        auto SetBooleanParameter(param::hstring const& key, bool value) const;
+        [[nodiscard]] auto Target() const;
+        auto Target(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionAnimation2>
     {
@@ -3423,7 +3391,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionAnimation3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::InitialValueExpressionCollection) InitialValueExpressions() const;
+        [[nodiscard]] auto InitialValueExpressions() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionAnimation3>
     {
@@ -3432,7 +3400,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionAnimation4
     {
-        WINRT_IMPL_AUTO(void) SetExpressionReferenceParameter(param::hstring const& parameterName, winrt::Windows::UI::Composition::IAnimationObject const& source) const;
+        auto SetExpressionReferenceParameter(param::hstring const& parameterName, winrt::Windows::UI::Composition::IAnimationObject const& source) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionAnimation4>
     {
@@ -3457,10 +3425,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionAnimationGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) Add(winrt::Windows::UI::Composition::CompositionAnimation const& value) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::CompositionAnimation const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        [[nodiscard]] auto Count() const;
+        auto Add(winrt::Windows::UI::Composition::CompositionAnimation const& value) const;
+        auto Remove(winrt::Windows::UI::Composition::CompositionAnimation const& value) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionAnimationGroup>
     {
@@ -3501,12 +3469,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionCapabilities
     {
-        WINRT_IMPL_AUTO(bool) AreEffectsSupported() const;
-        WINRT_IMPL_AUTO(bool) AreEffectsFast() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionCapabilities, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto AreEffectsSupported() const;
+        auto AreEffectsFast() const;
+        auto Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionCapabilities, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::UI::Composition::ICompositionCapabilities, &impl::abi_t<winrt::Windows::UI::Composition::ICompositionCapabilities>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionCapabilities, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
+        auto Changed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionCapabilities>
     {
@@ -3515,7 +3483,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionCapabilitiesStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionCapabilities) GetForCurrentView() const;
+        auto GetForCurrentView() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionCapabilitiesStatics>
     {
@@ -3532,20 +3500,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionClip2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) AnchorPoint() const;
-        WINRT_IMPL_AUTO(void) AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) CenterPoint() const;
-        WINRT_IMPL_AUTO(void) CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Scale() const;
-        WINRT_IMPL_AUTO(void) Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3x2) TransformMatrix() const;
-        WINRT_IMPL_AUTO(void) TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        [[nodiscard]] auto AnchorPoint() const;
+        auto AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto CenterPoint() const;
+        auto CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(float value) const;
+        [[nodiscard]] auto RotationAngleInDegrees() const;
+        auto RotationAngleInDegrees(float value) const;
+        [[nodiscard]] auto Scale() const;
+        auto Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TransformMatrix() const;
+        auto TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionClip2>
     {
@@ -3562,8 +3530,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionColorBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionColorBrush>
     {
@@ -3572,10 +3540,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionColorGradientStop
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(float value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionColorGradientStop>
     {
@@ -3592,12 +3560,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionCommitBatch
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnded() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto IsEnded() const;
+        auto Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
         using Completed_revoker = impl::event_revoker<winrt::Windows::UI::Composition::ICompositionCommitBatch, &impl::abi_t<winrt::Windows::UI::Composition::ICompositionCommitBatch>::remove_Completed>;
         [[nodiscard]] Completed_revoker Completed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& token) const noexcept;
+        auto Completed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionCommitBatch>
     {
@@ -3606,7 +3574,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionContainerShape
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionShapeCollection) Shapes() const;
+        [[nodiscard]] auto Shapes() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionContainerShape>
     {
@@ -3615,9 +3583,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionDrawingSurface
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXAlphaMode) AlphaMode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) PixelFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Size) Size() const;
+        [[nodiscard]] auto AlphaMode() const;
+        [[nodiscard]] auto PixelFormat() const;
+        [[nodiscard]] auto Size() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionDrawingSurface>
     {
@@ -3626,12 +3594,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionDrawingSurface2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::SizeInt32) SizeInt32() const;
-        WINRT_IMPL_AUTO(void) Resize(winrt::Windows::Graphics::SizeInt32 const& sizePixels) const;
-        WINRT_IMPL_AUTO(void) Scroll(winrt::Windows::Graphics::PointInt32 const& offset) const;
-        WINRT_IMPL_AUTO(void) Scroll(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& scrollRect) const;
-        WINRT_IMPL_AUTO(void) ScrollWithClip(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& clipRect) const;
-        WINRT_IMPL_AUTO(void) ScrollWithClip(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& clipRect, winrt::Windows::Graphics::RectInt32 const& scrollRect) const;
+        [[nodiscard]] auto SizeInt32() const;
+        auto Resize(winrt::Windows::Graphics::SizeInt32 const& sizePixels) const;
+        auto Scroll(winrt::Windows::Graphics::PointInt32 const& offset) const;
+        auto Scroll(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& scrollRect) const;
+        auto ScrollWithClip(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& clipRect) const;
+        auto ScrollWithClip(winrt::Windows::Graphics::PointInt32 const& offset, winrt::Windows::Graphics::RectInt32 const& clipRect, winrt::Windows::Graphics::RectInt32 const& scrollRect) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionDrawingSurface2>
     {
@@ -3664,17 +3632,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEasingFunctionStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CubicBezierEasingFunction) CreateCubicBezierEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::Foundation::Numerics::float2 const& controlPoint1, winrt::Windows::Foundation::Numerics::float2 const& controlPoint2) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::LinearEasingFunction) CreateLinearEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::StepEasingFunction) CreateStepEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::StepEasingFunction) CreateStepEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, int32_t stepCount) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BackEasingFunction) CreateBackEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float amplitude) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BounceEasingFunction) CreateBounceEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, int32_t bounces, float bounciness) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CircleEasingFunction) CreateCircleEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ElasticEasingFunction) CreateElasticEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, int32_t oscillations, float springiness) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExponentialEasingFunction) CreateExponentialEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float exponent) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::PowerEasingFunction) CreatePowerEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float power) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SineEasingFunction) CreateSineEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode) const;
+        auto CreateCubicBezierEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::Foundation::Numerics::float2 const& controlPoint1, winrt::Windows::Foundation::Numerics::float2 const& controlPoint2) const;
+        auto CreateLinearEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner) const;
+        auto CreateStepEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner) const;
+        auto CreateStepEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, int32_t stepCount) const;
+        auto CreateBackEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float amplitude) const;
+        auto CreateBounceEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, int32_t bounces, float bounciness) const;
+        auto CreateCircleEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode) const;
+        auto CreateElasticEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, int32_t oscillations, float springiness) const;
+        auto CreateExponentialEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float exponent) const;
+        auto CreatePowerEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode, float power) const;
+        auto CreateSineEasingFunction(winrt::Windows::UI::Composition::Compositor const& owner, winrt::Windows::UI::Composition::CompositionEasingFunctionMode const& mode) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEasingFunctionStatics>
     {
@@ -3683,8 +3651,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEffectBrush
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) GetSourceParameter(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(void) SetSourceParameter(param::hstring const& name, winrt::Windows::UI::Composition::CompositionBrush const& source) const;
+        auto GetSourceParameter(param::hstring const& name) const;
+        auto SetSourceParameter(param::hstring const& name, winrt::Windows::UI::Composition::CompositionBrush const& source) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEffectBrush>
     {
@@ -3693,9 +3661,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEffectFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectBrush) CreateBrush() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectFactoryLoadStatus) LoadStatus() const;
+        auto CreateBrush() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto LoadStatus() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEffectFactory>
     {
@@ -3704,7 +3672,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEffectSourceParameter
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
+        [[nodiscard]] auto Name() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEffectSourceParameter>
     {
@@ -3713,7 +3681,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEffectSourceParameterFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectSourceParameter) Create(param::hstring const& name) const;
+        auto Create(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEffectSourceParameterFactory>
     {
@@ -3722,10 +3690,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionEllipseGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Center() const;
-        WINRT_IMPL_AUTO(void) Center(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Radius() const;
-        WINRT_IMPL_AUTO(void) Radius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Center() const;
+        auto Center(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Radius() const;
+        auto Radius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionEllipseGeometry>
     {
@@ -3734,10 +3702,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGeometricClip
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGeometry) Geometry() const;
-        WINRT_IMPL_AUTO(void) Geometry(winrt::Windows::UI::Composition::CompositionGeometry const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionViewBox) ViewBox() const;
-        WINRT_IMPL_AUTO(void) ViewBox(winrt::Windows::UI::Composition::CompositionViewBox const& value) const;
+        [[nodiscard]] auto Geometry() const;
+        auto Geometry(winrt::Windows::UI::Composition::CompositionGeometry const& value) const;
+        [[nodiscard]] auto ViewBox() const;
+        auto ViewBox(winrt::Windows::UI::Composition::CompositionViewBox const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGeometricClip>
     {
@@ -3746,12 +3714,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TrimEnd() const;
-        WINRT_IMPL_AUTO(void) TrimEnd(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TrimOffset() const;
-        WINRT_IMPL_AUTO(void) TrimOffset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TrimStart() const;
-        WINRT_IMPL_AUTO(void) TrimStart(float value) const;
+        [[nodiscard]] auto TrimEnd() const;
+        auto TrimEnd(float value) const;
+        [[nodiscard]] auto TrimOffset() const;
+        auto TrimOffset(float value) const;
+        [[nodiscard]] auto TrimStart() const;
+        auto TrimStart(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGeometry>
     {
@@ -3768,25 +3736,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGradientBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) AnchorPoint() const;
-        WINRT_IMPL_AUTO(void) AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) CenterPoint() const;
-        WINRT_IMPL_AUTO(void) CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorGradientStopCollection) ColorStops() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGradientExtendMode) ExtendMode() const;
-        WINRT_IMPL_AUTO(void) ExtendMode(winrt::Windows::UI::Composition::CompositionGradientExtendMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorSpace) InterpolationSpace() const;
-        WINRT_IMPL_AUTO(void) InterpolationSpace(winrt::Windows::UI::Composition::CompositionColorSpace const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Scale() const;
-        WINRT_IMPL_AUTO(void) Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3x2) TransformMatrix() const;
-        WINRT_IMPL_AUTO(void) TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        [[nodiscard]] auto AnchorPoint() const;
+        auto AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto CenterPoint() const;
+        auto CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto ColorStops() const;
+        [[nodiscard]] auto ExtendMode() const;
+        auto ExtendMode(winrt::Windows::UI::Composition::CompositionGradientExtendMode const& value) const;
+        [[nodiscard]] auto InterpolationSpace() const;
+        auto InterpolationSpace(winrt::Windows::UI::Composition::CompositionColorSpace const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(float value) const;
+        [[nodiscard]] auto RotationAngleInDegrees() const;
+        auto RotationAngleInDegrees(float value) const;
+        [[nodiscard]] auto Scale() const;
+        auto Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TransformMatrix() const;
+        auto TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGradientBrush>
     {
@@ -3795,8 +3763,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGradientBrush2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionMappingMode) MappingMode() const;
-        WINRT_IMPL_AUTO(void) MappingMode(winrt::Windows::UI::Composition::CompositionMappingMode const& value) const;
+        [[nodiscard]] auto MappingMode() const;
+        auto MappingMode(winrt::Windows::UI::Composition::CompositionMappingMode const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGradientBrush2>
     {
@@ -3813,11 +3781,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGraphicsDevice
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionDrawingSurface) CreateDrawingSurface(winrt::Windows::Foundation::Size const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
-        WINRT_IMPL_AUTO(winrt::event_token) RenderingDeviceReplaced(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionGraphicsDevice, winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs> const& handler) const;
+        auto CreateDrawingSurface(winrt::Windows::Foundation::Size const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
+        auto RenderingDeviceReplaced(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionGraphicsDevice, winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs> const& handler) const;
         using RenderingDeviceReplaced_revoker = impl::event_revoker<winrt::Windows::UI::Composition::ICompositionGraphicsDevice, &impl::abi_t<winrt::Windows::UI::Composition::ICompositionGraphicsDevice>::remove_RenderingDeviceReplaced>;
         [[nodiscard]] RenderingDeviceReplaced_revoker RenderingDeviceReplaced(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::CompositionGraphicsDevice, winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) RenderingDeviceReplaced(winrt::event_token const& token) const noexcept;
+        auto RenderingDeviceReplaced(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGraphicsDevice>
     {
@@ -3826,8 +3794,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGraphicsDevice2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionDrawingSurface) CreateDrawingSurface2(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface) CreateVirtualDrawingSurface(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
+        auto CreateDrawingSurface2(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
+        auto CreateVirtualDrawingSurface(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGraphicsDevice2>
     {
@@ -3836,8 +3804,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGraphicsDevice3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionMipmapSurface) CreateMipmapSurface(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
-        WINRT_IMPL_AUTO(void) Trim() const;
+        auto CreateMipmapSurface(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const;
+        auto Trim() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGraphicsDevice3>
     {
@@ -3846,7 +3814,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionGraphicsDevice4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Composition::ICompositionSurface>) CaptureAsync(winrt::Windows::UI::Composition::Visual const& captureVisual, winrt::Windows::Graphics::SizeInt32 const& size, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode, float sdrBoost) const;
+        auto CaptureAsync(winrt::Windows::UI::Composition::Visual const& captureVisual, winrt::Windows::Graphics::SizeInt32 const& size, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode, float sdrBoost) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionGraphicsDevice4>
     {
@@ -3855,7 +3823,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionLight
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::VisualUnorderedCollection) Targets() const;
+        [[nodiscard]] auto Targets() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionLight>
     {
@@ -3864,7 +3832,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionLight2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::VisualUnorderedCollection) ExclusionsFromTargets() const;
+        [[nodiscard]] auto ExclusionsFromTargets() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionLight2>
     {
@@ -3873,8 +3841,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionLight3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto IsEnabled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionLight3>
     {
@@ -3891,10 +3859,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionLineGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Start() const;
-        WINRT_IMPL_AUTO(void) Start(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) End() const;
-        WINRT_IMPL_AUTO(void) End(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Start() const;
+        auto Start(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto End() const;
+        auto End(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionLineGeometry>
     {
@@ -3903,10 +3871,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionLinearGradientBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) EndPoint() const;
-        WINRT_IMPL_AUTO(void) EndPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) StartPoint() const;
-        WINRT_IMPL_AUTO(void) StartPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto EndPoint() const;
+        auto EndPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto StartPoint() const;
+        auto StartPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionLinearGradientBrush>
     {
@@ -3915,10 +3883,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionMaskBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Mask() const;
-        WINRT_IMPL_AUTO(void) Mask(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Source() const;
-        WINRT_IMPL_AUTO(void) Source(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto Mask() const;
+        auto Mask(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto Source() const;
+        auto Source(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionMaskBrush>
     {
@@ -3927,11 +3895,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionMipmapSurface
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) LevelCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXAlphaMode) AlphaMode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXPixelFormat) PixelFormat() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::SizeInt32) SizeInt32() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionDrawingSurface) GetDrawingSurfaceForLevel(uint32_t level) const;
+        [[nodiscard]] auto LevelCount() const;
+        [[nodiscard]] auto AlphaMode() const;
+        [[nodiscard]] auto PixelFormat() const;
+        [[nodiscard]] auto SizeInt32() const;
+        auto GetDrawingSurfaceForLevel(uint32_t level) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionMipmapSurface>
     {
@@ -3940,30 +3908,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionNineGridBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) BottomInset() const;
-        WINRT_IMPL_AUTO(void) BottomInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) BottomInsetScale() const;
-        WINRT_IMPL_AUTO(void) BottomInsetScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCenterHollow() const;
-        WINRT_IMPL_AUTO(void) IsCenterHollow(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) LeftInset() const;
-        WINRT_IMPL_AUTO(void) LeftInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) LeftInsetScale() const;
-        WINRT_IMPL_AUTO(void) LeftInsetScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RightInset() const;
-        WINRT_IMPL_AUTO(void) RightInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RightInsetScale() const;
-        WINRT_IMPL_AUTO(void) RightInsetScale(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Source() const;
-        WINRT_IMPL_AUTO(void) Source(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TopInset() const;
-        WINRT_IMPL_AUTO(void) TopInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TopInsetScale() const;
-        WINRT_IMPL_AUTO(void) TopInsetScale(float value) const;
-        WINRT_IMPL_AUTO(void) SetInsets(float inset) const;
-        WINRT_IMPL_AUTO(void) SetInsets(float left, float top, float right, float bottom) const;
-        WINRT_IMPL_AUTO(void) SetInsetScales(float scale) const;
-        WINRT_IMPL_AUTO(void) SetInsetScales(float left, float top, float right, float bottom) const;
+        [[nodiscard]] auto BottomInset() const;
+        auto BottomInset(float value) const;
+        [[nodiscard]] auto BottomInsetScale() const;
+        auto BottomInsetScale(float value) const;
+        [[nodiscard]] auto IsCenterHollow() const;
+        auto IsCenterHollow(bool value) const;
+        [[nodiscard]] auto LeftInset() const;
+        auto LeftInset(float value) const;
+        [[nodiscard]] auto LeftInsetScale() const;
+        auto LeftInsetScale(float value) const;
+        [[nodiscard]] auto RightInset() const;
+        auto RightInset(float value) const;
+        [[nodiscard]] auto RightInsetScale() const;
+        auto RightInsetScale(float value) const;
+        [[nodiscard]] auto Source() const;
+        auto Source(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto TopInset() const;
+        auto TopInset(float value) const;
+        [[nodiscard]] auto TopInsetScale() const;
+        auto TopInsetScale(float value) const;
+        auto SetInsets(float inset) const;
+        auto SetInsets(float left, float top, float right, float bottom) const;
+        auto SetInsetScales(float scale) const;
+        auto SetInsetScales(float left, float top, float right, float bottom) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionNineGridBrush>
     {
@@ -3972,11 +3940,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObject
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Compositor) Compositor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Core::CoreDispatcher) Dispatcher() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPropertySet) Properties() const;
-        WINRT_IMPL_AUTO(void) StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
-        WINRT_IMPL_AUTO(void) StopAnimation(param::hstring const& propertyName) const;
+        [[nodiscard]] auto Compositor() const;
+        [[nodiscard]] auto Dispatcher() const;
+        [[nodiscard]] auto Properties() const;
+        auto StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
+        auto StopAnimation(param::hstring const& propertyName) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObject>
     {
@@ -3985,12 +3953,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObject2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Comment() const;
-        WINRT_IMPL_AUTO(void) Comment(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ImplicitAnimationCollection) ImplicitAnimations() const;
-        WINRT_IMPL_AUTO(void) ImplicitAnimations(winrt::Windows::UI::Composition::ImplicitAnimationCollection const& value) const;
-        WINRT_IMPL_AUTO(void) StartAnimationGroup(winrt::Windows::UI::Composition::ICompositionAnimationBase const& value) const;
-        WINRT_IMPL_AUTO(void) StopAnimationGroup(winrt::Windows::UI::Composition::ICompositionAnimationBase const& value) const;
+        [[nodiscard]] auto Comment() const;
+        auto Comment(param::hstring const& value) const;
+        [[nodiscard]] auto ImplicitAnimations() const;
+        auto ImplicitAnimations(winrt::Windows::UI::Composition::ImplicitAnimationCollection const& value) const;
+        auto StartAnimationGroup(winrt::Windows::UI::Composition::ICompositionAnimationBase const& value) const;
+        auto StopAnimationGroup(winrt::Windows::UI::Composition::ICompositionAnimationBase const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObject2>
     {
@@ -3999,7 +3967,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObject3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) DispatcherQueue() const;
+        [[nodiscard]] auto DispatcherQueue() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObject3>
     {
@@ -4008,7 +3976,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObject4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationController) TryGetAnimationController(param::hstring const& propertyName) const;
+        auto TryGetAnimationController(param::hstring const& propertyName) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObject4>
     {
@@ -4017,7 +3985,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObject5
     {
-        WINRT_IMPL_AUTO(void) StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::UI::Composition::AnimationController const& animationController) const;
+        auto StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::UI::Composition::AnimationController const& animationController) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObject5>
     {
@@ -4034,8 +4002,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionObjectStatics
     {
-        WINRT_IMPL_AUTO(void) StartAnimationWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
-        WINRT_IMPL_AUTO(void) StartAnimationGroupWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
+        auto StartAnimationWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation) const;
+        auto StartAnimationGroupWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionObjectStatics>
     {
@@ -4052,7 +4020,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionPathFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPath) Create(winrt::Windows::Graphics::IGeometrySource2D const& source) const;
+        auto Create(winrt::Windows::Graphics::IGeometrySource2D const& source) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionPathFactory>
     {
@@ -4061,8 +4029,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionPathGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPath) Path() const;
-        WINRT_IMPL_AUTO(void) Path(winrt::Windows::UI::Composition::CompositionPath const& value) const;
+        [[nodiscard]] auto Path() const;
+        auto Path(winrt::Windows::UI::Composition::CompositionPath const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionPathGeometry>
     {
@@ -4071,16 +4039,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadow
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) BlurRadiusMultiplier() const;
-        WINRT_IMPL_AUTO(void) BlurRadiusMultiplier(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection) Casters() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionLight) LightSource() const;
-        WINRT_IMPL_AUTO(void) LightSource(winrt::Windows::UI::Composition::CompositionLight const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxBlurRadius() const;
-        WINRT_IMPL_AUTO(void) MaxBlurRadius(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinBlurRadius() const;
-        WINRT_IMPL_AUTO(void) MinBlurRadius(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection) Receivers() const;
+        [[nodiscard]] auto BlurRadiusMultiplier() const;
+        auto BlurRadiusMultiplier(float value) const;
+        [[nodiscard]] auto Casters() const;
+        [[nodiscard]] auto LightSource() const;
+        auto LightSource(winrt::Windows::UI::Composition::CompositionLight const& value) const;
+        [[nodiscard]] auto MaxBlurRadius() const;
+        auto MaxBlurRadius(float value) const;
+        [[nodiscard]] auto MinBlurRadius() const;
+        auto MinBlurRadius(float value) const;
+        [[nodiscard]] auto Receivers() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadow>
     {
@@ -4089,10 +4057,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadowCaster
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Brush() const;
-        WINRT_IMPL_AUTO(void) Brush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) CastingVisual() const;
-        WINRT_IMPL_AUTO(void) CastingVisual(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Brush() const;
+        auto Brush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto CastingVisual() const;
+        auto CastingVisual(winrt::Windows::UI::Composition::Visual const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadowCaster>
     {
@@ -4101,13 +4069,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) InsertAbove(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
-        WINRT_IMPL_AUTO(void) InsertAtBottom(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
-        WINRT_IMPL_AUTO(void) InsertAtTop(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
-        WINRT_IMPL_AUTO(void) InsertBelow(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& caster) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        [[nodiscard]] auto Count() const;
+        auto InsertAbove(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
+        auto InsertAtBottom(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
+        auto InsertAtTop(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster) const;
+        auto InsertBelow(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& newCaster, winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& reference) const;
+        auto Remove(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster const& caster) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollection>
     {
@@ -4116,7 +4084,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadowCasterCollectionStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxRespectedCasters() const;
+        [[nodiscard]] auto MaxRespectedCasters() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics>
     {
@@ -4125,8 +4093,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadowReceiver
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) ReceivingVisual() const;
-        WINRT_IMPL_AUTO(void) ReceivingVisual(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto ReceivingVisual() const;
+        auto ReceivingVisual(winrt::Windows::UI::Composition::Visual const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiver>
     {
@@ -4135,10 +4103,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionProjectedShadowReceiverUnorderedCollection
     {
-        WINRT_IMPL_AUTO(void) Add(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        auto Add(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
+        [[nodiscard]] auto Count() const;
+        auto Remove(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver const& value) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection>
     {
@@ -4147,22 +4115,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionPropertySet
     {
-        WINRT_IMPL_AUTO(void) InsertColor(param::hstring const& propertyName, winrt::Windows::UI::Color const& value) const;
-        WINRT_IMPL_AUTO(void) InsertMatrix3x2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertMatrix4x4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertQuaternion(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
-        WINRT_IMPL_AUTO(void) InsertScalar(param::hstring const& propertyName, float value) const;
-        WINRT_IMPL_AUTO(void) InsertVector2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertVector3(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertVector4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4 const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetColor(param::hstring const& propertyName, winrt::Windows::UI::Color& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetMatrix3x2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3x2& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetMatrix4x4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4x4& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetQuaternion(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::quaternion& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetScalar(param::hstring const& propertyName, float& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetVector2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float2& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetVector3(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetVector4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4& value) const;
+        auto InsertColor(param::hstring const& propertyName, winrt::Windows::UI::Color const& value) const;
+        auto InsertMatrix3x2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        auto InsertMatrix4x4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
+        auto InsertQuaternion(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
+        auto InsertScalar(param::hstring const& propertyName, float value) const;
+        auto InsertVector2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        auto InsertVector3(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        auto InsertVector4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4 const& value) const;
+        auto TryGetColor(param::hstring const& propertyName, winrt::Windows::UI::Color& value) const;
+        auto TryGetMatrix3x2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3x2& value) const;
+        auto TryGetMatrix4x4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4x4& value) const;
+        auto TryGetQuaternion(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::quaternion& value) const;
+        auto TryGetScalar(param::hstring const& propertyName, float& value) const;
+        auto TryGetVector2(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float2& value) const;
+        auto TryGetVector3(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float3& value) const;
+        auto TryGetVector4(param::hstring const& propertyName, winrt::Windows::Foundation::Numerics::float4& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionPropertySet>
     {
@@ -4171,8 +4139,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionPropertySet2
     {
-        WINRT_IMPL_AUTO(void) InsertBoolean(param::hstring const& propertyName, bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGetValueStatus) TryGetBoolean(param::hstring const& propertyName, bool& value) const;
+        auto InsertBoolean(param::hstring const& propertyName, bool value) const;
+        auto TryGetBoolean(param::hstring const& propertyName, bool& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionPropertySet2>
     {
@@ -4181,12 +4149,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionRadialGradientBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) EllipseCenter() const;
-        WINRT_IMPL_AUTO(void) EllipseCenter(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) EllipseRadius() const;
-        WINRT_IMPL_AUTO(void) EllipseRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) GradientOriginOffset() const;
-        WINRT_IMPL_AUTO(void) GradientOriginOffset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto EllipseCenter() const;
+        auto EllipseCenter(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto EllipseRadius() const;
+        auto EllipseRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto GradientOriginOffset() const;
+        auto GradientOriginOffset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionRadialGradientBrush>
     {
@@ -4195,10 +4163,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionRectangleGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionRectangleGeometry>
     {
@@ -4207,12 +4175,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionRoundedRectangleGeometry
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) CornerRadius() const;
-        WINRT_IMPL_AUTO(void) CornerRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto CornerRadius() const;
+        auto CornerRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionRoundedRectangleGeometry>
     {
@@ -4221,15 +4189,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionScopedBatch
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnded() const;
-        WINRT_IMPL_AUTO(void) End() const;
-        WINRT_IMPL_AUTO(void) Resume() const;
-        WINRT_IMPL_AUTO(void) Suspend() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto IsEnded() const;
+        auto End() const;
+        auto Resume() const;
+        auto Suspend() const;
+        auto Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
         using Completed_revoker = impl::event_revoker<winrt::Windows::UI::Composition::ICompositionScopedBatch, &impl::abi_t<winrt::Windows::UI::Composition::ICompositionScopedBatch>::remove_Completed>;
         [[nodiscard]] Completed_revoker Completed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& token) const noexcept;
+        auto Completed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionScopedBatch>
     {
@@ -4254,18 +4222,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionShape
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) CenterPoint() const;
-        WINRT_IMPL_AUTO(void) CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Scale() const;
-        WINRT_IMPL_AUTO(void) Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3x2) TransformMatrix() const;
-        WINRT_IMPL_AUTO(void) TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        [[nodiscard]] auto CenterPoint() const;
+        auto CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(float value) const;
+        [[nodiscard]] auto RotationAngleInDegrees() const;
+        auto RotationAngleInDegrees(float value) const;
+        [[nodiscard]] auto Scale() const;
+        auto Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TransformMatrix() const;
+        auto TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionShape>
     {
@@ -4282,29 +4250,29 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSpriteShape
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) FillBrush() const;
-        WINRT_IMPL_AUTO(void) FillBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGeometry) Geometry() const;
-        WINRT_IMPL_AUTO(void) Geometry(winrt::Windows::UI::Composition::CompositionGeometry const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsStrokeNonScaling() const;
-        WINRT_IMPL_AUTO(void) IsStrokeNonScaling(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) StrokeBrush() const;
-        WINRT_IMPL_AUTO(void) StrokeBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStrokeDashArray) StrokeDashArray() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStrokeCap) StrokeDashCap() const;
-        WINRT_IMPL_AUTO(void) StrokeDashCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) StrokeDashOffset() const;
-        WINRT_IMPL_AUTO(void) StrokeDashOffset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStrokeCap) StrokeEndCap() const;
-        WINRT_IMPL_AUTO(void) StrokeEndCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStrokeLineJoin) StrokeLineJoin() const;
-        WINRT_IMPL_AUTO(void) StrokeLineJoin(winrt::Windows::UI::Composition::CompositionStrokeLineJoin const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) StrokeMiterLimit() const;
-        WINRT_IMPL_AUTO(void) StrokeMiterLimit(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStrokeCap) StrokeStartCap() const;
-        WINRT_IMPL_AUTO(void) StrokeStartCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) StrokeThickness() const;
-        WINRT_IMPL_AUTO(void) StrokeThickness(float value) const;
+        [[nodiscard]] auto FillBrush() const;
+        auto FillBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto Geometry() const;
+        auto Geometry(winrt::Windows::UI::Composition::CompositionGeometry const& value) const;
+        [[nodiscard]] auto IsStrokeNonScaling() const;
+        auto IsStrokeNonScaling(bool value) const;
+        [[nodiscard]] auto StrokeBrush() const;
+        auto StrokeBrush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto StrokeDashArray() const;
+        [[nodiscard]] auto StrokeDashCap() const;
+        auto StrokeDashCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
+        [[nodiscard]] auto StrokeDashOffset() const;
+        auto StrokeDashOffset(float value) const;
+        [[nodiscard]] auto StrokeEndCap() const;
+        auto StrokeEndCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
+        [[nodiscard]] auto StrokeLineJoin() const;
+        auto StrokeLineJoin(winrt::Windows::UI::Composition::CompositionStrokeLineJoin const& value) const;
+        [[nodiscard]] auto StrokeMiterLimit() const;
+        auto StrokeMiterLimit(float value) const;
+        [[nodiscard]] auto StrokeStartCap() const;
+        auto StrokeStartCap(winrt::Windows::UI::Composition::CompositionStrokeCap const& value) const;
+        [[nodiscard]] auto StrokeThickness() const;
+        auto StrokeThickness(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSpriteShape>
     {
@@ -4313,8 +4281,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSupportsSystemBackdrop
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) SystemBackdrop() const;
-        WINRT_IMPL_AUTO(void) SystemBackdrop(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto SystemBackdrop() const;
+        auto SystemBackdrop(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
     {
@@ -4331,16 +4299,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSurfaceBrush
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode) BitmapInterpolationMode() const;
-        WINRT_IMPL_AUTO(void) BitmapInterpolationMode(winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) HorizontalAlignmentRatio() const;
-        WINRT_IMPL_AUTO(void) HorizontalAlignmentRatio(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStretch) Stretch() const;
-        WINRT_IMPL_AUTO(void) Stretch(winrt::Windows::UI::Composition::CompositionStretch const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ICompositionSurface) Surface() const;
-        WINRT_IMPL_AUTO(void) Surface(winrt::Windows::UI::Composition::ICompositionSurface const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) VerticalAlignmentRatio() const;
-        WINRT_IMPL_AUTO(void) VerticalAlignmentRatio(float value) const;
+        [[nodiscard]] auto BitmapInterpolationMode() const;
+        auto BitmapInterpolationMode(winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode const& value) const;
+        [[nodiscard]] auto HorizontalAlignmentRatio() const;
+        auto HorizontalAlignmentRatio(float value) const;
+        [[nodiscard]] auto Stretch() const;
+        auto Stretch(winrt::Windows::UI::Composition::CompositionStretch const& value) const;
+        [[nodiscard]] auto Surface() const;
+        auto Surface(winrt::Windows::UI::Composition::ICompositionSurface const& value) const;
+        [[nodiscard]] auto VerticalAlignmentRatio() const;
+        auto VerticalAlignmentRatio(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSurfaceBrush>
     {
@@ -4349,20 +4317,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSurfaceBrush2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) AnchorPoint() const;
-        WINRT_IMPL_AUTO(void) AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) CenterPoint() const;
-        WINRT_IMPL_AUTO(void) CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Scale() const;
-        WINRT_IMPL_AUTO(void) Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3x2) TransformMatrix() const;
-        WINRT_IMPL_AUTO(void) TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
+        [[nodiscard]] auto AnchorPoint() const;
+        auto AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto CenterPoint() const;
+        auto CenterPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(float value) const;
+        [[nodiscard]] auto RotationAngleInDegrees() const;
+        auto RotationAngleInDegrees(float value) const;
+        [[nodiscard]] auto Scale() const;
+        auto Scale(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TransformMatrix() const;
+        auto TransformMatrix(winrt::Windows::Foundation::Numerics::float3x2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSurfaceBrush2>
     {
@@ -4371,8 +4339,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSurfaceBrush3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SnapToPixels() const;
-        WINRT_IMPL_AUTO(void) SnapToPixels(bool value) const;
+        [[nodiscard]] auto SnapToPixels() const;
+        auto SnapToPixels(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSurfaceBrush3>
     {
@@ -4381,7 +4349,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSurfaceFacade
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ICompositionSurface) GetRealSurface() const;
+        auto GetRealSurface() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>
     {
@@ -4390,8 +4358,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionTarget
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) Root() const;
-        WINRT_IMPL_AUTO(void) Root(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Root() const;
+        auto Root(winrt::Windows::UI::Composition::Visual const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionTarget>
     {
@@ -4404,28 +4372,6 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionTargetFactory>
     {
         template <typename D> using type = consume_Windows_UI_Composition_ICompositionTargetFactory<D>;
-    };
-    template <typename D>
-    struct consume_Windows_UI_Composition_ICompositionTexture
-    {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::RectInt32) SourceRect() const;
-        WINRT_IMPL_AUTO(void) SourceRect(winrt::Windows::Graphics::RectInt32 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXAlphaMode) AlphaMode() const;
-        WINRT_IMPL_AUTO(void) AlphaMode(winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::DirectXColorSpace) ColorSpace() const;
-        WINRT_IMPL_AUTO(void) ColorSpace(winrt::Windows::Graphics::DirectX::DirectXColorSpace const& value) const;
-    };
-    template <> struct consume<winrt::Windows::UI::Composition::ICompositionTexture>
-    {
-        template <typename D> using type = consume_Windows_UI_Composition_ICompositionTexture<D>;
-    };
-    template <typename D>
-    struct consume_Windows_UI_Composition_ICompositionTextureFactory
-    {
-    };
-    template <> struct consume<winrt::Windows::UI::Composition::ICompositionTextureFactory>
-    {
-        template <typename D> using type = consume_Windows_UI_Composition_ICompositionTextureFactory<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionTransform
@@ -4446,16 +4392,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionViewBox
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) HorizontalAlignmentRatio() const;
-        WINRT_IMPL_AUTO(void) HorizontalAlignmentRatio(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionStretch) Stretch() const;
-        WINRT_IMPL_AUTO(void) Stretch(winrt::Windows::UI::Composition::CompositionStretch const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) VerticalAlignmentRatio() const;
-        WINRT_IMPL_AUTO(void) VerticalAlignmentRatio(float value) const;
+        [[nodiscard]] auto HorizontalAlignmentRatio() const;
+        auto HorizontalAlignmentRatio(float value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Stretch() const;
+        auto Stretch(winrt::Windows::UI::Composition::CompositionStretch const& value) const;
+        [[nodiscard]] auto VerticalAlignmentRatio() const;
+        auto VerticalAlignmentRatio(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionViewBox>
     {
@@ -4464,7 +4410,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionVirtualDrawingSurface
     {
-        WINRT_IMPL_AUTO(void) Trim(array_view<winrt::Windows::Graphics::RectInt32 const> rects) const;
+        auto Trim(array_view<winrt::Windows::Graphics::RectInt32 const> rects) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionVirtualDrawingSurface>
     {
@@ -4481,12 +4427,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositionVisualSurface
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) SourceVisual() const;
-        WINRT_IMPL_AUTO(void) SourceVisual(winrt::Windows::UI::Composition::Visual const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) SourceOffset() const;
-        WINRT_IMPL_AUTO(void) SourceOffset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) SourceSize() const;
-        WINRT_IMPL_AUTO(void) SourceSize(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto SourceVisual() const;
+        auto SourceVisual(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto SourceOffset() const;
+        auto SourceOffset(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto SourceSize() const;
+        auto SourceSize(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositionVisualSurface>
     {
@@ -4495,30 +4441,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ColorKeyFrameAnimation) CreateColorKeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorBrush) CreateColorBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorBrush) CreateColorBrush(winrt::Windows::UI::Color const& color) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ContainerVisual) CreateContainerVisual() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CubicBezierEasingFunction) CreateCubicBezierEasingFunction(winrt::Windows::Foundation::Numerics::float2 const& controlPoint1, winrt::Windows::Foundation::Numerics::float2 const& controlPoint2) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectFactory) CreateEffectFactory(winrt::Windows::Graphics::Effects::IGraphicsEffect const& graphicsEffect) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectFactory) CreateEffectFactory(winrt::Windows::Graphics::Effects::IGraphicsEffect const& graphicsEffect, param::iterable<hstring> const& animatableProperties) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) CreateExpressionAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ExpressionAnimation) CreateExpressionAnimation(param::hstring const& expression) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::InsetClip) CreateInsetClip() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::InsetClip) CreateInsetClip(float leftInset, float topInset, float rightInset, float bottomInset) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::LinearEasingFunction) CreateLinearEasingFunction() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPropertySet) CreatePropertySet() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation) CreateQuaternionKeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ScalarKeyFrameAnimation) CreateScalarKeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionScopedBatch) CreateScopedBatch(winrt::Windows::UI::Composition::CompositionBatchTypes const& batchType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SpriteVisual) CreateSpriteVisual() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionSurfaceBrush) CreateSurfaceBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionSurfaceBrush) CreateSurfaceBrush(winrt::Windows::UI::Composition::ICompositionSurface const& surface) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionTarget) CreateTargetForCurrentView() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Vector2KeyFrameAnimation) CreateVector2KeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Vector3KeyFrameAnimation) CreateVector3KeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Vector4KeyFrameAnimation) CreateVector4KeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionCommitBatch) GetCommitBatch(winrt::Windows::UI::Composition::CompositionBatchTypes const& batchType) const;
+        auto CreateColorKeyFrameAnimation() const;
+        auto CreateColorBrush() const;
+        auto CreateColorBrush(winrt::Windows::UI::Color const& color) const;
+        auto CreateContainerVisual() const;
+        auto CreateCubicBezierEasingFunction(winrt::Windows::Foundation::Numerics::float2 const& controlPoint1, winrt::Windows::Foundation::Numerics::float2 const& controlPoint2) const;
+        auto CreateEffectFactory(winrt::Windows::Graphics::Effects::IGraphicsEffect const& graphicsEffect) const;
+        auto CreateEffectFactory(winrt::Windows::Graphics::Effects::IGraphicsEffect const& graphicsEffect, param::iterable<hstring> const& animatableProperties) const;
+        auto CreateExpressionAnimation() const;
+        auto CreateExpressionAnimation(param::hstring const& expression) const;
+        auto CreateInsetClip() const;
+        auto CreateInsetClip(float leftInset, float topInset, float rightInset, float bottomInset) const;
+        auto CreateLinearEasingFunction() const;
+        auto CreatePropertySet() const;
+        auto CreateQuaternionKeyFrameAnimation() const;
+        auto CreateScalarKeyFrameAnimation() const;
+        auto CreateScopedBatch(winrt::Windows::UI::Composition::CompositionBatchTypes const& batchType) const;
+        auto CreateSpriteVisual() const;
+        auto CreateSurfaceBrush() const;
+        auto CreateSurfaceBrush(winrt::Windows::UI::Composition::ICompositionSurface const& surface) const;
+        auto CreateTargetForCurrentView() const;
+        auto CreateVector2KeyFrameAnimation() const;
+        auto CreateVector3KeyFrameAnimation() const;
+        auto CreateVector4KeyFrameAnimation() const;
+        auto GetCommitBatch(winrt::Windows::UI::Composition::CompositionBatchTypes const& batchType) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor>
     {
@@ -4527,19 +4473,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AmbientLight) CreateAmbientLight() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionAnimationGroup) CreateAnimationGroup() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBackdropBrush) CreateBackdropBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::DistantLight) CreateDistantLight() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::DropShadow) CreateDropShadow() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ImplicitAnimationCollection) CreateImplicitAnimationCollection() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::LayerVisual) CreateLayerVisual() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionMaskBrush) CreateMaskBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionNineGridBrush) CreateNineGridBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::PointLight) CreatePointLight() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SpotLight) CreateSpotLight() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::StepEasingFunction) CreateStepEasingFunction() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::StepEasingFunction) CreateStepEasingFunction(int32_t stepCount) const;
+        auto CreateAmbientLight() const;
+        auto CreateAnimationGroup() const;
+        auto CreateBackdropBrush() const;
+        auto CreateDistantLight() const;
+        auto CreateDropShadow() const;
+        auto CreateImplicitAnimationCollection() const;
+        auto CreateLayerVisual() const;
+        auto CreateMaskBrush() const;
+        auto CreateNineGridBrush() const;
+        auto CreatePointLight() const;
+        auto CreateSpotLight() const;
+        auto CreateStepEasingFunction() const;
+        auto CreateStepEasingFunction(int32_t stepCount) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor2>
     {
@@ -4548,7 +4494,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBackdropBrush) CreateHostBackdropBrush() const;
+        auto CreateHostBackdropBrush() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor3>
     {
@@ -4557,12 +4503,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorGradientStop) CreateColorGradientStop() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionColorGradientStop) CreateColorGradientStop(float offset, winrt::Windows::UI::Color const& color) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionLinearGradientBrush) CreateLinearGradientBrush() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation) CreateSpringScalarAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation) CreateSpringVector2Animation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation) CreateSpringVector3Animation() const;
+        auto CreateColorGradientStop() const;
+        auto CreateColorGradientStop(float offset, winrt::Windows::UI::Color const& color) const;
+        auto CreateLinearGradientBrush() const;
+        auto CreateSpringScalarAnimation() const;
+        auto CreateSpringVector2Animation() const;
+        auto CreateSpringVector3Animation() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor4>
     {
@@ -4571,26 +4517,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor5
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Comment() const;
-        WINRT_IMPL_AUTO(void) Comment(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) GlobalPlaybackRate() const;
-        WINRT_IMPL_AUTO(void) GlobalPlaybackRate(float value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation) CreateBounceScalarAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation) CreateBounceVector2Animation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation) CreateBounceVector3Animation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionContainerShape) CreateContainerShape() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEllipseGeometry) CreateEllipseGeometry() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionLineGeometry) CreateLineGeometry() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPathGeometry) CreatePathGeometry() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPathGeometry) CreatePathGeometry(winrt::Windows::UI::Composition::CompositionPath const& path) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::PathKeyFrameAnimation) CreatePathKeyFrameAnimation() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionRectangleGeometry) CreateRectangleGeometry() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry) CreateRoundedRectangleGeometry() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ShapeVisual) CreateShapeVisual() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionSpriteShape) CreateSpriteShape() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionSpriteShape) CreateSpriteShape(winrt::Windows::UI::Composition::CompositionGeometry const& geometry) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionViewBox) CreateViewBox() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RequestCommitAsync() const;
+        [[nodiscard]] auto Comment() const;
+        auto Comment(param::hstring const& value) const;
+        [[nodiscard]] auto GlobalPlaybackRate() const;
+        auto GlobalPlaybackRate(float value) const;
+        auto CreateBounceScalarAnimation() const;
+        auto CreateBounceVector2Animation() const;
+        auto CreateBounceVector3Animation() const;
+        auto CreateContainerShape() const;
+        auto CreateEllipseGeometry() const;
+        auto CreateLineGeometry() const;
+        auto CreatePathGeometry() const;
+        auto CreatePathGeometry(winrt::Windows::UI::Composition::CompositionPath const& path) const;
+        auto CreatePathKeyFrameAnimation() const;
+        auto CreateRectangleGeometry() const;
+        auto CreateRoundedRectangleGeometry() const;
+        auto CreateShapeVisual() const;
+        auto CreateSpriteShape() const;
+        auto CreateSpriteShape(winrt::Windows::UI::Composition::CompositionGeometry const& geometry) const;
+        auto CreateViewBox() const;
+        auto RequestCommitAsync() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor5>
     {
@@ -4599,11 +4545,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor6
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGeometricClip) CreateGeometricClip() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGeometricClip) CreateGeometricClip(winrt::Windows::UI::Composition::CompositionGeometry const& geometry) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::RedirectVisual) CreateRedirectVisual() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::RedirectVisual) CreateRedirectVisual(winrt::Windows::UI::Composition::Visual const& source) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::BooleanKeyFrameAnimation) CreateBooleanKeyFrameAnimation() const;
+        auto CreateGeometricClip() const;
+        auto CreateGeometricClip(winrt::Windows::UI::Composition::CompositionGeometry const& geometry) const;
+        auto CreateRedirectVisual() const;
+        auto CreateRedirectVisual(winrt::Windows::UI::Composition::Visual const& source) const;
+        auto CreateBooleanKeyFrameAnimation() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor6>
     {
@@ -4612,11 +4558,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor7
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::DispatcherQueue) DispatcherQueue() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationPropertyInfo) CreateAnimationPropertyInfo() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::RectangleClip) CreateRectangleClip() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::RectangleClip) CreateRectangleClip(float left, float top, float right, float bottom) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::RectangleClip) CreateRectangleClip(float left, float top, float right, float bottom, winrt::Windows::Foundation::Numerics::float2 const& topLeftRadius, winrt::Windows::Foundation::Numerics::float2 const& topRightRadius, winrt::Windows::Foundation::Numerics::float2 const& bottomRightRadius, winrt::Windows::Foundation::Numerics::float2 const& bottomLeftRadius) const;
+        [[nodiscard]] auto DispatcherQueue() const;
+        auto CreateAnimationPropertyInfo() const;
+        auto CreateRectangleClip() const;
+        auto CreateRectangleClip(float left, float top, float right, float bottom) const;
+        auto CreateRectangleClip(float left, float top, float right, float bottom, winrt::Windows::Foundation::Numerics::float2 const& topLeftRadius, winrt::Windows::Foundation::Numerics::float2 const& topRightRadius, winrt::Windows::Foundation::Numerics::float2 const& bottomRightRadius, winrt::Windows::Foundation::Numerics::float2 const& bottomLeftRadius) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor7>
     {
@@ -4625,7 +4571,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositor8
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationController) CreateAnimationController() const;
+        auto CreateAnimationController() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositor8>
     {
@@ -4634,8 +4580,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxGlobalPlaybackRate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinGlobalPlaybackRate() const;
+        [[nodiscard]] auto MaxGlobalPlaybackRate() const;
+        [[nodiscard]] auto MinGlobalPlaybackRate() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositorStatics>
     {
@@ -4644,7 +4590,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBackdropBrush) TryCreateBlurredWallpaperBackdropBrush() const;
+        auto TryCreateBlurredWallpaperBackdropBrush() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>
     {
@@ -4653,9 +4599,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorWithProjectedShadow
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionProjectedShadowCaster) CreateProjectedShadowCaster() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionProjectedShadow) CreateProjectedShadow() const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver) CreateProjectedShadowReceiver() const;
+        auto CreateProjectedShadowCaster() const;
+        auto CreateProjectedShadow() const;
+        auto CreateProjectedShadowReceiver() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositorWithProjectedShadow>
     {
@@ -4664,7 +4610,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorWithRadialGradient
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionRadialGradientBrush) CreateRadialGradientBrush() const;
+        auto CreateRadialGradientBrush() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositorWithRadialGradient>
     {
@@ -4673,7 +4619,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorWithVisualSurface
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionVisualSurface) CreateVisualSurface() const;
+        auto CreateVisualSurface() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICompositorWithVisualSurface>
     {
@@ -4682,7 +4628,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IContainerVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::VisualCollection) Children() const;
+        [[nodiscard]] auto Children() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IContainerVisual>
     {
@@ -4699,8 +4645,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ICubicBezierEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) ControlPoint1() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) ControlPoint2() const;
+        [[nodiscard]] auto ControlPoint1() const;
+        [[nodiscard]] auto ControlPoint2() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ICubicBezierEasingFunction>
     {
@@ -4709,10 +4655,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDelegatedInkTrailVisual
     {
-        WINRT_IMPL_AUTO(uint32_t) AddTrailPoints(array_view<winrt::Windows::UI::Composition::InkTrailPoint const> inkPoints) const;
-        WINRT_IMPL_AUTO(uint32_t) AddTrailPointsWithPrediction(array_view<winrt::Windows::UI::Composition::InkTrailPoint const> inkPoints, array_view<winrt::Windows::UI::Composition::InkTrailPoint const> predictedInkPoints) const;
-        WINRT_IMPL_AUTO(void) RemoveTrailPoints(uint32_t generationId) const;
-        WINRT_IMPL_AUTO(void) StartNewTrail(winrt::Windows::UI::Color const& color) const;
+        auto AddTrailPoints(array_view<winrt::Windows::UI::Composition::InkTrailPoint const> inkPoints) const;
+        auto AddTrailPointsWithPrediction(array_view<winrt::Windows::UI::Composition::InkTrailPoint const> inkPoints, array_view<winrt::Windows::UI::Composition::InkTrailPoint const> predictedInkPoints) const;
+        auto RemoveTrailPoints(uint32_t generationId) const;
+        auto StartNewTrail(winrt::Windows::UI::Color const& color) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDelegatedInkTrailVisual>
     {
@@ -4721,8 +4667,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDelegatedInkTrailVisualStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::DelegatedInkTrailVisual) Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::DelegatedInkTrailVisual) CreateForSwapChain(winrt::Windows::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Composition::ICompositionSurface const& swapChain) const;
+        auto Create(winrt::Windows::UI::Composition::Compositor const& compositor) const;
+        auto CreateForSwapChain(winrt::Windows::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Composition::ICompositionSurface const& swapChain) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDelegatedInkTrailVisualStatics>
     {
@@ -4731,12 +4677,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDistantLight
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) CoordinateSpace() const;
-        WINRT_IMPL_AUTO(void) CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Direction() const;
-        WINRT_IMPL_AUTO(void) Direction(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto CoordinateSpace() const;
+        auto CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Direction() const;
+        auto Direction(winrt::Windows::Foundation::Numerics::float3 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDistantLight>
     {
@@ -4745,8 +4691,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDistantLight2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Intensity() const;
-        WINRT_IMPL_AUTO(void) Intensity(float value) const;
+        [[nodiscard]] auto Intensity() const;
+        auto Intensity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDistantLight2>
     {
@@ -4755,16 +4701,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDropShadow
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) BlurRadius() const;
-        WINRT_IMPL_AUTO(void) BlurRadius(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Mask() const;
-        WINRT_IMPL_AUTO(void) Mask(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Opacity() const;
-        WINRT_IMPL_AUTO(void) Opacity(float value) const;
+        [[nodiscard]] auto BlurRadius() const;
+        auto BlurRadius(float value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto Mask() const;
+        auto Mask(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Opacity() const;
+        auto Opacity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDropShadow>
     {
@@ -4773,8 +4719,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IDropShadow2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionDropShadowSourcePolicy) SourcePolicy() const;
-        WINRT_IMPL_AUTO(void) SourcePolicy(winrt::Windows::UI::Composition::CompositionDropShadowSourcePolicy const& value) const;
+        [[nodiscard]] auto SourcePolicy() const;
+        auto SourcePolicy(winrt::Windows::UI::Composition::CompositionDropShadowSourcePolicy const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IDropShadow2>
     {
@@ -4783,9 +4729,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IElasticEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Oscillations() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Springiness() const;
+        [[nodiscard]] auto Mode() const;
+        [[nodiscard]] auto Oscillations() const;
+        [[nodiscard]] auto Springiness() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IElasticEasingFunction>
     {
@@ -4794,8 +4740,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IExponentialEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Exponent() const;
+        [[nodiscard]] auto Mode() const;
+        [[nodiscard]] auto Exponent() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IExponentialEasingFunction>
     {
@@ -4804,8 +4750,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IExpressionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Expression() const;
-        WINRT_IMPL_AUTO(void) Expression(param::hstring const& value) const;
+        [[nodiscard]] auto Expression() const;
+        auto Expression(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IExpressionAnimation>
     {
@@ -4822,14 +4768,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IInsetClip
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) BottomInset() const;
-        WINRT_IMPL_AUTO(void) BottomInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) LeftInset() const;
-        WINRT_IMPL_AUTO(void) LeftInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RightInset() const;
-        WINRT_IMPL_AUTO(void) RightInset(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) TopInset() const;
-        WINRT_IMPL_AUTO(void) TopInset(float value) const;
+        [[nodiscard]] auto BottomInset() const;
+        auto BottomInset(float value) const;
+        [[nodiscard]] auto LeftInset() const;
+        auto LeftInset(float value) const;
+        [[nodiscard]] auto RightInset() const;
+        auto RightInset(float value) const;
+        [[nodiscard]] auto TopInset() const;
+        auto TopInset(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IInsetClip>
     {
@@ -4838,19 +4784,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IKeyFrameAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) DelayTime() const;
-        WINRT_IMPL_AUTO(void) DelayTime(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Duration() const;
-        WINRT_IMPL_AUTO(void) Duration(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationIterationBehavior) IterationBehavior() const;
-        WINRT_IMPL_AUTO(void) IterationBehavior(winrt::Windows::UI::Composition::AnimationIterationBehavior const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) IterationCount() const;
-        WINRT_IMPL_AUTO(void) IterationCount(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) KeyFrameCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationStopBehavior) StopBehavior() const;
-        WINRT_IMPL_AUTO(void) StopBehavior(winrt::Windows::UI::Composition::AnimationStopBehavior const& value) const;
-        WINRT_IMPL_AUTO(void) InsertExpressionKeyFrame(float normalizedProgressKey, param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) InsertExpressionKeyFrame(float normalizedProgressKey, param::hstring const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        [[nodiscard]] auto DelayTime() const;
+        auto DelayTime(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto Duration() const;
+        auto Duration(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto IterationBehavior() const;
+        auto IterationBehavior(winrt::Windows::UI::Composition::AnimationIterationBehavior const& value) const;
+        [[nodiscard]] auto IterationCount() const;
+        auto IterationCount(int32_t value) const;
+        [[nodiscard]] auto KeyFrameCount() const;
+        [[nodiscard]] auto StopBehavior() const;
+        auto StopBehavior(winrt::Windows::UI::Composition::AnimationStopBehavior const& value) const;
+        auto InsertExpressionKeyFrame(float normalizedProgressKey, param::hstring const& value) const;
+        auto InsertExpressionKeyFrame(float normalizedProgressKey, param::hstring const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IKeyFrameAnimation>
     {
@@ -4859,8 +4805,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IKeyFrameAnimation2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationDirection) Direction() const;
-        WINRT_IMPL_AUTO(void) Direction(winrt::Windows::UI::Composition::AnimationDirection const& value) const;
+        [[nodiscard]] auto Direction() const;
+        auto Direction(winrt::Windows::UI::Composition::AnimationDirection const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IKeyFrameAnimation2>
     {
@@ -4869,8 +4815,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IKeyFrameAnimation3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationDelayBehavior) DelayBehavior() const;
-        WINRT_IMPL_AUTO(void) DelayBehavior(winrt::Windows::UI::Composition::AnimationDelayBehavior const& value) const;
+        [[nodiscard]] auto DelayBehavior() const;
+        auto DelayBehavior(winrt::Windows::UI::Composition::AnimationDelayBehavior const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IKeyFrameAnimation3>
     {
@@ -4887,8 +4833,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ILayerVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEffectBrush) Effect() const;
-        WINRT_IMPL_AUTO(void) Effect(winrt::Windows::UI::Composition::CompositionEffectBrush const& value) const;
+        [[nodiscard]] auto Effect() const;
+        auto Effect(winrt::Windows::UI::Composition::CompositionEffectBrush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ILayerVisual>
     {
@@ -4897,8 +4843,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ILayerVisual2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionShadow) Shadow() const;
-        WINRT_IMPL_AUTO(void) Shadow(winrt::Windows::UI::Composition::CompositionShadow const& value) const;
+        [[nodiscard]] auto Shadow() const;
+        auto Shadow(winrt::Windows::UI::Composition::CompositionShadow const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ILayerVisual2>
     {
@@ -4915,12 +4861,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_INaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationDelayBehavior) DelayBehavior() const;
-        WINRT_IMPL_AUTO(void) DelayBehavior(winrt::Windows::UI::Composition::AnimationDelayBehavior const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) DelayTime() const;
-        WINRT_IMPL_AUTO(void) DelayTime(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationStopBehavior) StopBehavior() const;
-        WINRT_IMPL_AUTO(void) StopBehavior(winrt::Windows::UI::Composition::AnimationStopBehavior const& value) const;
+        [[nodiscard]] auto DelayBehavior() const;
+        auto DelayBehavior(winrt::Windows::UI::Composition::AnimationDelayBehavior const& value) const;
+        [[nodiscard]] auto DelayTime() const;
+        auto DelayTime(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto StopBehavior() const;
+        auto StopBehavior(winrt::Windows::UI::Composition::AnimationStopBehavior const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::INaturalMotionAnimation>
     {
@@ -4937,8 +4883,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IPathKeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Composition::CompositionPath const& path) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Composition::CompositionPath const& path, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Composition::CompositionPath const& path) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::UI::Composition::CompositionPath const& path, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IPathKeyFrameAnimation>
     {
@@ -4947,18 +4893,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IPointLight
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) Color() const;
-        WINRT_IMPL_AUTO(void) Color(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) ConstantAttenuation() const;
-        WINRT_IMPL_AUTO(void) ConstantAttenuation(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) CoordinateSpace() const;
-        WINRT_IMPL_AUTO(void) CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) LinearAttenuation() const;
-        WINRT_IMPL_AUTO(void) LinearAttenuation(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) QuadraticAttenuation() const;
-        WINRT_IMPL_AUTO(void) QuadraticAttenuation(float value) const;
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto ConstantAttenuation() const;
+        auto ConstantAttenuation(float value) const;
+        [[nodiscard]] auto CoordinateSpace() const;
+        auto CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto LinearAttenuation() const;
+        auto LinearAttenuation(float value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto QuadraticAttenuation() const;
+        auto QuadraticAttenuation(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IPointLight>
     {
@@ -4967,8 +4913,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IPointLight2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Intensity() const;
-        WINRT_IMPL_AUTO(void) Intensity(float value) const;
+        [[nodiscard]] auto Intensity() const;
+        auto Intensity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IPointLight2>
     {
@@ -4977,10 +4923,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IPointLight3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinAttenuationCutoff() const;
-        WINRT_IMPL_AUTO(void) MinAttenuationCutoff(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxAttenuationCutoff() const;
-        WINRT_IMPL_AUTO(void) MaxAttenuationCutoff(float value) const;
+        [[nodiscard]] auto MinAttenuationCutoff() const;
+        auto MinAttenuationCutoff(float value) const;
+        [[nodiscard]] auto MaxAttenuationCutoff() const;
+        auto MaxAttenuationCutoff(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IPointLight3>
     {
@@ -4989,8 +4935,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IPowerEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Power() const;
+        [[nodiscard]] auto Mode() const;
+        [[nodiscard]] auto Power() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IPowerEasingFunction>
     {
@@ -4999,8 +4945,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IQuaternionKeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::quaternion const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::quaternion const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::quaternion const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IQuaternionKeyFrameAnimation>
     {
@@ -5009,22 +4955,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IRectangleClip
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Bottom() const;
-        WINRT_IMPL_AUTO(void) Bottom(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) BottomLeftRadius() const;
-        WINRT_IMPL_AUTO(void) BottomLeftRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) BottomRightRadius() const;
-        WINRT_IMPL_AUTO(void) BottomRightRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Left() const;
-        WINRT_IMPL_AUTO(void) Left(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Right() const;
-        WINRT_IMPL_AUTO(void) Right(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Top() const;
-        WINRT_IMPL_AUTO(void) Top(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) TopLeftRadius() const;
-        WINRT_IMPL_AUTO(void) TopLeftRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) TopRightRadius() const;
-        WINRT_IMPL_AUTO(void) TopRightRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Bottom() const;
+        auto Bottom(float value) const;
+        [[nodiscard]] auto BottomLeftRadius() const;
+        auto BottomLeftRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto BottomRightRadius() const;
+        auto BottomRightRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto Left() const;
+        auto Left(float value) const;
+        [[nodiscard]] auto Right() const;
+        auto Right(float value) const;
+        [[nodiscard]] auto Top() const;
+        auto Top(float value) const;
+        [[nodiscard]] auto TopLeftRadius() const;
+        auto TopLeftRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TopRightRadius() const;
+        auto TopRightRadius(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IRectangleClip>
     {
@@ -5033,8 +4979,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IRedirectVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) Source() const;
-        WINRT_IMPL_AUTO(void) Source(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Source() const;
+        auto Source(winrt::Windows::UI::Composition::Visual const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IRedirectVisual>
     {
@@ -5043,7 +4989,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IRenderingDeviceReplacedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionGraphicsDevice) GraphicsDevice() const;
+        [[nodiscard]] auto GraphicsDevice() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IRenderingDeviceReplacedEventArgs>
     {
@@ -5052,8 +4998,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IScalarKeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, float value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, float value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, float value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, float value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IScalarKeyFrameAnimation>
     {
@@ -5062,12 +5008,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IScalarNaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) FinalValue() const;
-        WINRT_IMPL_AUTO(void) FinalValue(winrt::Windows::Foundation::IReference<float> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) InitialValue() const;
-        WINRT_IMPL_AUTO(void) InitialValue(winrt::Windows::Foundation::IReference<float> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InitialVelocity() const;
-        WINRT_IMPL_AUTO(void) InitialVelocity(float value) const;
+        [[nodiscard]] auto FinalValue() const;
+        auto FinalValue(winrt::Windows::Foundation::IReference<float> const& value) const;
+        [[nodiscard]] auto InitialValue() const;
+        auto InitialValue(winrt::Windows::Foundation::IReference<float> const& value) const;
+        [[nodiscard]] auto InitialVelocity() const;
+        auto InitialVelocity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IScalarNaturalMotionAnimation>
     {
@@ -5084,9 +5030,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IShapeVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionShapeCollection) Shapes() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionViewBox) ViewBox() const;
-        WINRT_IMPL_AUTO(void) ViewBox(winrt::Windows::UI::Composition::CompositionViewBox const& value) const;
+        [[nodiscard]] auto Shapes() const;
+        [[nodiscard]] auto ViewBox() const;
+        auto ViewBox(winrt::Windows::UI::Composition::CompositionViewBox const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IShapeVisual>
     {
@@ -5095,7 +5041,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISineEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionEasingFunctionMode) Mode() const;
+        [[nodiscard]] auto Mode() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISineEasingFunction>
     {
@@ -5104,30 +5050,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpotLight
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) ConstantAttenuation() const;
-        WINRT_IMPL_AUTO(void) ConstantAttenuation(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) CoordinateSpace() const;
-        WINRT_IMPL_AUTO(void) CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Direction() const;
-        WINRT_IMPL_AUTO(void) Direction(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InnerConeAngle() const;
-        WINRT_IMPL_AUTO(void) InnerConeAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InnerConeAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) InnerConeAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) InnerConeColor() const;
-        WINRT_IMPL_AUTO(void) InnerConeColor(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) LinearAttenuation() const;
-        WINRT_IMPL_AUTO(void) LinearAttenuation(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) OuterConeAngle() const;
-        WINRT_IMPL_AUTO(void) OuterConeAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) OuterConeAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) OuterConeAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Color) OuterConeColor() const;
-        WINRT_IMPL_AUTO(void) OuterConeColor(winrt::Windows::UI::Color const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) QuadraticAttenuation() const;
-        WINRT_IMPL_AUTO(void) QuadraticAttenuation(float value) const;
+        [[nodiscard]] auto ConstantAttenuation() const;
+        auto ConstantAttenuation(float value) const;
+        [[nodiscard]] auto CoordinateSpace() const;
+        auto CoordinateSpace(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Direction() const;
+        auto Direction(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto InnerConeAngle() const;
+        auto InnerConeAngle(float value) const;
+        [[nodiscard]] auto InnerConeAngleInDegrees() const;
+        auto InnerConeAngleInDegrees(float value) const;
+        [[nodiscard]] auto InnerConeColor() const;
+        auto InnerConeColor(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto LinearAttenuation() const;
+        auto LinearAttenuation(float value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto OuterConeAngle() const;
+        auto OuterConeAngle(float value) const;
+        [[nodiscard]] auto OuterConeAngleInDegrees() const;
+        auto OuterConeAngleInDegrees(float value) const;
+        [[nodiscard]] auto OuterConeColor() const;
+        auto OuterConeColor(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto QuadraticAttenuation() const;
+        auto QuadraticAttenuation(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpotLight>
     {
@@ -5136,10 +5082,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpotLight2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) InnerConeIntensity() const;
-        WINRT_IMPL_AUTO(void) InnerConeIntensity(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) OuterConeIntensity() const;
-        WINRT_IMPL_AUTO(void) OuterConeIntensity(float value) const;
+        [[nodiscard]] auto InnerConeIntensity() const;
+        auto InnerConeIntensity(float value) const;
+        [[nodiscard]] auto OuterConeIntensity() const;
+        auto OuterConeIntensity(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpotLight2>
     {
@@ -5148,10 +5094,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpotLight3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MinAttenuationCutoff() const;
-        WINRT_IMPL_AUTO(void) MinAttenuationCutoff(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) MaxAttenuationCutoff() const;
-        WINRT_IMPL_AUTO(void) MaxAttenuationCutoff(float value) const;
+        [[nodiscard]] auto MinAttenuationCutoff() const;
+        auto MinAttenuationCutoff(float value) const;
+        [[nodiscard]] auto MaxAttenuationCutoff() const;
+        auto MaxAttenuationCutoff(float value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpotLight3>
     {
@@ -5160,10 +5106,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpringScalarNaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DampingRatio() const;
-        WINRT_IMPL_AUTO(void) DampingRatio(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Period() const;
-        WINRT_IMPL_AUTO(void) Period(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto DampingRatio() const;
+        auto DampingRatio(float value) const;
+        [[nodiscard]] auto Period() const;
+        auto Period(winrt::Windows::Foundation::TimeSpan const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpringScalarNaturalMotionAnimation>
     {
@@ -5172,10 +5118,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpringVector2NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DampingRatio() const;
-        WINRT_IMPL_AUTO(void) DampingRatio(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Period() const;
-        WINRT_IMPL_AUTO(void) Period(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto DampingRatio() const;
+        auto DampingRatio(float value) const;
+        [[nodiscard]] auto Period() const;
+        auto Period(winrt::Windows::Foundation::TimeSpan const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpringVector2NaturalMotionAnimation>
     {
@@ -5184,10 +5130,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpringVector3NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(float) DampingRatio() const;
-        WINRT_IMPL_AUTO(void) DampingRatio(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Period() const;
-        WINRT_IMPL_AUTO(void) Period(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto DampingRatio() const;
+        auto DampingRatio(float value) const;
+        [[nodiscard]] auto Period() const;
+        auto Period(winrt::Windows::Foundation::TimeSpan const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpringVector3NaturalMotionAnimation>
     {
@@ -5196,8 +5142,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpriteVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBrush) Brush() const;
-        WINRT_IMPL_AUTO(void) Brush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
+        [[nodiscard]] auto Brush() const;
+        auto Brush(winrt::Windows::UI::Composition::CompositionBrush const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpriteVisual>
     {
@@ -5206,8 +5152,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_ISpriteVisual2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionShadow) Shadow() const;
-        WINRT_IMPL_AUTO(void) Shadow(winrt::Windows::UI::Composition::CompositionShadow const& value) const;
+        [[nodiscard]] auto Shadow() const;
+        auto Shadow(winrt::Windows::UI::Composition::CompositionShadow const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::ISpriteVisual2>
     {
@@ -5216,16 +5162,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IStepEasingFunction
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) FinalStep() const;
-        WINRT_IMPL_AUTO(void) FinalStep(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InitialStep() const;
-        WINRT_IMPL_AUTO(void) InitialStep(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsFinalStepSingleFrame() const;
-        WINRT_IMPL_AUTO(void) IsFinalStepSingleFrame(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInitialStepSingleFrame() const;
-        WINRT_IMPL_AUTO(void) IsInitialStepSingleFrame(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) StepCount() const;
-        WINRT_IMPL_AUTO(void) StepCount(int32_t value) const;
+        [[nodiscard]] auto FinalStep() const;
+        auto FinalStep(int32_t value) const;
+        [[nodiscard]] auto InitialStep() const;
+        auto InitialStep(int32_t value) const;
+        [[nodiscard]] auto IsFinalStepSingleFrame() const;
+        auto IsFinalStepSingleFrame(bool value) const;
+        [[nodiscard]] auto IsInitialStepSingleFrame() const;
+        auto IsInitialStepSingleFrame(bool value) const;
+        [[nodiscard]] auto StepCount() const;
+        auto StepCount(int32_t value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IStepEasingFunction>
     {
@@ -5234,8 +5180,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVector2KeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float2 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float2 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVector2KeyFrameAnimation>
     {
@@ -5244,12 +5190,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVector2NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>) FinalValue() const;
-        WINRT_IMPL_AUTO(void) FinalValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>) InitialValue() const;
-        WINRT_IMPL_AUTO(void) InitialValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) InitialVelocity() const;
-        WINRT_IMPL_AUTO(void) InitialVelocity(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto FinalValue() const;
+        auto FinalValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2> const& value) const;
+        [[nodiscard]] auto InitialValue() const;
+        auto InitialValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2> const& value) const;
+        [[nodiscard]] auto InitialVelocity() const;
+        auto InitialVelocity(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVector2NaturalMotionAnimation>
     {
@@ -5266,8 +5212,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVector3KeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float3 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVector3KeyFrameAnimation>
     {
@@ -5276,12 +5222,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVector3NaturalMotionAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>) FinalValue() const;
-        WINRT_IMPL_AUTO(void) FinalValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>) InitialValue() const;
-        WINRT_IMPL_AUTO(void) InitialValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) InitialVelocity() const;
-        WINRT_IMPL_AUTO(void) InitialVelocity(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto FinalValue() const;
+        auto FinalValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
+        [[nodiscard]] auto InitialValue() const;
+        auto InitialValue(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3> const& value) const;
+        [[nodiscard]] auto InitialVelocity() const;
+        auto InitialVelocity(winrt::Windows::Foundation::Numerics::float3 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVector3NaturalMotionAnimation>
     {
@@ -5298,8 +5244,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVector4KeyFrameAnimation
     {
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float4 const& value) const;
-        WINRT_IMPL_AUTO(void) InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float4 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float4 const& value) const;
+        auto InsertKeyFrame(float normalizedProgressKey, winrt::Windows::Foundation::Numerics::float4 const& value, winrt::Windows::UI::Composition::CompositionEasingFunction const& easingFunction) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVector4KeyFrameAnimation>
     {
@@ -5308,39 +5254,39 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisual
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) AnchorPoint() const;
-        WINRT_IMPL_AUTO(void) AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBackfaceVisibility) BackfaceVisibility() const;
-        WINRT_IMPL_AUTO(void) BackfaceVisibility(winrt::Windows::UI::Composition::CompositionBackfaceVisibility const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBorderMode) BorderMode() const;
-        WINRT_IMPL_AUTO(void) BorderMode(winrt::Windows::UI::Composition::CompositionBorderMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) CenterPoint() const;
-        WINRT_IMPL_AUTO(void) CenterPoint(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionClip) Clip() const;
-        WINRT_IMPL_AUTO(void) Clip(winrt::Windows::UI::Composition::CompositionClip const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionCompositeMode) CompositeMode() const;
-        WINRT_IMPL_AUTO(void) CompositeMode(winrt::Windows::UI::Composition::CompositionCompositeMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsVisible() const;
-        WINRT_IMPL_AUTO(void) IsVisible(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Offset() const;
-        WINRT_IMPL_AUTO(void) Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) Opacity() const;
-        WINRT_IMPL_AUTO(void) Opacity(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::quaternion) Orientation() const;
-        WINRT_IMPL_AUTO(void) Orientation(winrt::Windows::Foundation::Numerics::quaternion const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::ContainerVisual) Parent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngle() const;
-        WINRT_IMPL_AUTO(void) RotationAngle(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(float) RotationAngleInDegrees() const;
-        WINRT_IMPL_AUTO(void) RotationAngleInDegrees(float value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) RotationAxis() const;
-        WINRT_IMPL_AUTO(void) RotationAxis(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) Scale() const;
-        WINRT_IMPL_AUTO(void) Scale(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) Size() const;
-        WINRT_IMPL_AUTO(void) Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float4x4) TransformMatrix() const;
-        WINRT_IMPL_AUTO(void) TransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
+        [[nodiscard]] auto AnchorPoint() const;
+        auto AnchorPoint(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto BackfaceVisibility() const;
+        auto BackfaceVisibility(winrt::Windows::UI::Composition::CompositionBackfaceVisibility const& value) const;
+        [[nodiscard]] auto BorderMode() const;
+        auto BorderMode(winrt::Windows::UI::Composition::CompositionBorderMode const& value) const;
+        [[nodiscard]] auto CenterPoint() const;
+        auto CenterPoint(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Clip() const;
+        auto Clip(winrt::Windows::UI::Composition::CompositionClip const& value) const;
+        [[nodiscard]] auto CompositeMode() const;
+        auto CompositeMode(winrt::Windows::UI::Composition::CompositionCompositeMode const& value) const;
+        [[nodiscard]] auto IsVisible() const;
+        auto IsVisible(bool value) const;
+        [[nodiscard]] auto Offset() const;
+        auto Offset(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Opacity() const;
+        auto Opacity(float value) const;
+        [[nodiscard]] auto Orientation() const;
+        auto Orientation(winrt::Windows::Foundation::Numerics::quaternion const& value) const;
+        [[nodiscard]] auto Parent() const;
+        [[nodiscard]] auto RotationAngle() const;
+        auto RotationAngle(float value) const;
+        [[nodiscard]] auto RotationAngleInDegrees() const;
+        auto RotationAngleInDegrees(float value) const;
+        [[nodiscard]] auto RotationAxis() const;
+        auto RotationAxis(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Scale() const;
+        auto Scale(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto Size() const;
+        auto Size(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto TransformMatrix() const;
+        auto TransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisual>
     {
@@ -5349,12 +5295,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisual2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) ParentForTransform() const;
-        WINRT_IMPL_AUTO(void) ParentForTransform(winrt::Windows::UI::Composition::Visual const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float3) RelativeOffsetAdjustment() const;
-        WINRT_IMPL_AUTO(void) RelativeOffsetAdjustment(winrt::Windows::Foundation::Numerics::float3 const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) RelativeSizeAdjustment() const;
-        WINRT_IMPL_AUTO(void) RelativeSizeAdjustment(winrt::Windows::Foundation::Numerics::float2 const& value) const;
+        [[nodiscard]] auto ParentForTransform() const;
+        auto ParentForTransform(winrt::Windows::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto RelativeOffsetAdjustment() const;
+        auto RelativeOffsetAdjustment(winrt::Windows::Foundation::Numerics::float3 const& value) const;
+        [[nodiscard]] auto RelativeSizeAdjustment() const;
+        auto RelativeSizeAdjustment(winrt::Windows::Foundation::Numerics::float2 const& value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisual2>
     {
@@ -5363,8 +5309,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisual3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsHitTestVisible() const;
-        WINRT_IMPL_AUTO(void) IsHitTestVisible(bool value) const;
+        [[nodiscard]] auto IsHitTestVisible() const;
+        auto IsHitTestVisible(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisual3>
     {
@@ -5373,8 +5319,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisual4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPixelSnappingEnabled() const;
-        WINRT_IMPL_AUTO(void) IsPixelSnappingEnabled(bool value) const;
+        [[nodiscard]] auto IsPixelSnappingEnabled() const;
+        auto IsPixelSnappingEnabled(bool value) const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisual4>
     {
@@ -5383,13 +5329,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisualCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) InsertAbove(winrt::Windows::UI::Composition::Visual const& newChild, winrt::Windows::UI::Composition::Visual const& sibling) const;
-        WINRT_IMPL_AUTO(void) InsertAtBottom(winrt::Windows::UI::Composition::Visual const& newChild) const;
-        WINRT_IMPL_AUTO(void) InsertAtTop(winrt::Windows::UI::Composition::Visual const& newChild) const;
-        WINRT_IMPL_AUTO(void) InsertBelow(winrt::Windows::UI::Composition::Visual const& newChild, winrt::Windows::UI::Composition::Visual const& sibling) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::Visual const& child) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        [[nodiscard]] auto Count() const;
+        auto InsertAbove(winrt::Windows::UI::Composition::Visual const& newChild, winrt::Windows::UI::Composition::Visual const& sibling) const;
+        auto InsertAtBottom(winrt::Windows::UI::Composition::Visual const& newChild) const;
+        auto InsertAtTop(winrt::Windows::UI::Composition::Visual const& newChild) const;
+        auto InsertBelow(winrt::Windows::UI::Composition::Visual const& newChild, winrt::Windows::UI::Composition::Visual const& sibling) const;
+        auto Remove(winrt::Windows::UI::Composition::Visual const& child) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisualCollection>
     {
@@ -5406,7 +5352,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisualElement2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Visual) GetVisualInternal() const;
+        auto GetVisualInternal() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisualElement2>
     {
@@ -5423,10 +5369,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_IVisualUnorderedCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Count() const;
-        WINRT_IMPL_AUTO(void) Add(winrt::Windows::UI::Composition::Visual const& newVisual) const;
-        WINRT_IMPL_AUTO(void) Remove(winrt::Windows::UI::Composition::Visual const& visual) const;
-        WINRT_IMPL_AUTO(void) RemoveAll() const;
+        [[nodiscard]] auto Count() const;
+        auto Add(winrt::Windows::UI::Composition::Visual const& newVisual) const;
+        auto Remove(winrt::Windows::UI::Composition::Visual const& visual) const;
+        auto RemoveAll() const;
     };
     template <> struct consume<winrt::Windows::UI::Composition::IVisualUnorderedCollection>
     {

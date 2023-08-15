@@ -538,7 +538,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IContactPickerUI = _uuidof(IContactPickerUI);
+                    MIDL_CONST_ID IID& IID_IContactPickerUI = __uuidof(IContactPickerUI);
                 } /* Provider */
             } /* Contacts */
         } /* ApplicationModel */
@@ -580,7 +580,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IContactPickerUI2 = _uuidof(IContactPickerUI2);
+                    MIDL_CONST_ID IID& IID_IContactPickerUI2 = __uuidof(IContactPickerUI2);
                 } /* Provider */
             } /* Contacts */
         } /* ApplicationModel */
@@ -618,7 +618,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IContactRemovedEventArgs = _uuidof(IContactRemovedEventArgs);
+                    MIDL_CONST_ID IID& IID_IContactRemovedEventArgs = __uuidof(IContactRemovedEventArgs);
                 } /* Provider */
             } /* Contacts */
         } /* ApplicationModel */

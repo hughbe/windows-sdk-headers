@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,18 +14,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
@@ -649,9 +643,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation) CreateDownload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation) CreateDownload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile, winrt::Windows::Storage::IStorageFile const& requestBodyFile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>) CreateDownloadAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile, winrt::Windows::Storage::Streams::IInputStream const& requestBodyStream) const;
+        auto CreateDownload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile) const;
+        auto CreateDownload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile, winrt::Windows::Storage::IStorageFile const& requestBodyFile) const;
+        auto CreateDownloadAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& resultFile, winrt::Windows::Storage::Streams::IInputStream const& requestBodyStream) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader>
     {
@@ -660,16 +654,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) TransferGroup() const;
-        WINRT_IMPL_AUTO(void) TransferGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotification) SuccessToastNotification() const;
-        WINRT_IMPL_AUTO(void) SuccessToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotification) FailureToastNotification() const;
-        WINRT_IMPL_AUTO(void) FailureToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileNotification) SuccessTileNotification() const;
-        WINRT_IMPL_AUTO(void) SuccessTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileNotification) FailureTileNotification() const;
-        WINRT_IMPL_AUTO(void) FailureTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
+        [[nodiscard]] auto TransferGroup() const;
+        auto TransferGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const;
+        [[nodiscard]] auto SuccessToastNotification() const;
+        auto SuccessToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
+        [[nodiscard]] auto FailureToastNotification() const;
+        auto FailureToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
+        [[nodiscard]] auto SuccessTileNotification() const;
+        auto SuccessTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
+        [[nodiscard]] auto FailureTileNotification() const;
+        auto FailureTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader2>
     {
@@ -678,7 +672,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup) CompletionGroup() const;
+        [[nodiscard]] auto CompletionGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader3>
     {
@@ -687,7 +681,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader) CreateWithCompletionGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const;
+        auto CreateWithCompletionGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory>
     {
@@ -696,8 +690,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>) GetCurrentDownloadsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>) GetCurrentDownloadsAsync(param::hstring const& group) const;
+        auto GetCurrentDownloadsAsync() const;
+        auto GetCurrentDownloadsAsync(param::hstring const& group) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods>
     {
@@ -706,7 +700,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>) GetCurrentDownloadsForTransferGroupAsync(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const;
+        auto GetCurrentDownloadsForTransferGroupAsync(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2>
     {
@@ -715,7 +709,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderUserConsent
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>) RequestUnconstrainedDownloadsAsync(param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation> const& operations) const;
+        auto RequestUnconstrainedDownloadsAsync(param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation> const& operations) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent>
     {
@@ -724,17 +718,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase
     {
-        WINRT_IMPL_AUTO(void) SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) ServerCredential() const;
-        WINRT_IMPL_AUTO(void) ServerCredential(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) ProxyCredential() const;
-        WINRT_IMPL_AUTO(void) ProxyCredential(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Method() const;
-        WINRT_IMPL_AUTO(void) Method(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Group() const;
-        WINRT_IMPL_AUTO(void) Group(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy) CostPolicy() const;
-        WINRT_IMPL_AUTO(void) CostPolicy(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const;
+        auto SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
+        [[nodiscard]] auto ServerCredential() const;
+        auto ServerCredential(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
+        [[nodiscard]] auto ProxyCredential() const;
+        auto ProxyCredential(winrt::Windows::Security::Credentials::PasswordCredential const& credential) const;
+        [[nodiscard]] auto Method() const;
+        auto Method(param::hstring const& value) const;
+        [[nodiscard]] auto Group() const;
+        auto Group(param::hstring const& value) const;
+        [[nodiscard]] auto CostPolicy() const;
+        auto CostPolicy(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
     {
@@ -743,9 +737,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::IBackgroundTrigger) Trigger() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
-        WINRT_IMPL_AUTO(void) Enable() const;
+        [[nodiscard]] auto Trigger() const;
+        [[nodiscard]] auto IsEnabled() const;
+        auto Enable() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup>
     {
@@ -754,8 +748,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroupTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>) Downloads() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) Uploads() const;
+        [[nodiscard]] auto Downloads() const;
+        [[nodiscard]] auto Uploads() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails>
     {
@@ -764,9 +758,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart
     {
-        WINRT_IMPL_AUTO(void) SetHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
-        WINRT_IMPL_AUTO(void) SetText(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(void) SetFile(winrt::Windows::Storage::IStorageFile const& value) const;
+        auto SetHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
+        auto SetText(param::hstring const& value) const;
+        auto SetFile(winrt::Windows::Storage::IStorageFile const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart>
     {
@@ -775,8 +769,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPartFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart) CreateWithName(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart) CreateWithNameAndFileName(param::hstring const& name, param::hstring const& fileName) const;
+        auto CreateWithName(param::hstring const& name) const;
+        auto CreateWithNameAndFileName(param::hstring const& name, param::hstring const& fileName) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
     {
@@ -785,7 +779,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferErrorStaticMethods
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Web::WebErrorStatus) GetStatus(int32_t hresult) const;
+        auto GetStatus(int32_t hresult) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods>
     {
@@ -794,9 +788,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior) TransferBehavior() const;
-        WINRT_IMPL_AUTO(void) TransferBehavior(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior const& value) const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto TransferBehavior() const;
+        auto TransferBehavior(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup>
     {
@@ -805,7 +799,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroupStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) CreateGroup(param::hstring const& name) const;
+        auto CreateGroup(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics>
     {
@@ -814,14 +808,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Guid() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) RequestedUri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Method() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Group() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy) CostPolicy() const;
-        WINRT_IMPL_AUTO(void) CostPolicy(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IInputStream) GetResultStreamAt(uint64_t position) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::ResponseInformation) GetResponseInformation() const;
+        [[nodiscard]] auto Guid() const;
+        [[nodiscard]] auto RequestedUri() const;
+        [[nodiscard]] auto Method() const;
+        [[nodiscard]] auto Group() const;
+        [[nodiscard]] auto CostPolicy() const;
+        auto CostPolicy(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const;
+        auto GetResultStreamAt(uint64_t position) const;
+        auto GetResponseInformation() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
     {
@@ -830,8 +824,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperationPriority
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority) Priority() const;
-        WINRT_IMPL_AUTO(void) Priority(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority const& value) const;
+        [[nodiscard]] auto Priority() const;
+        auto Priority(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>
     {
@@ -840,9 +834,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) WasDownloadRestarted() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>) AddedRanges() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] auto WasDownloadRestarted() const;
+        [[nodiscard]] auto AddedRanges() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs>
     {
@@ -851,11 +845,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::UploadOperation) CreateUpload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& sourceFile) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) CreateUploadFromStreamAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IInputStream const& sourceStream) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType, param::hstring const& boundary) const;
+        auto CreateUpload(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::IStorageFile const& sourceFile) const;
+        auto CreateUploadFromStreamAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IInputStream const& sourceStream) const;
+        auto CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts) const;
+        auto CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType) const;
+        auto CreateUploadAsync(winrt::Windows::Foundation::Uri const& uri, param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType, param::hstring const& boundary) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader>
     {
@@ -864,16 +858,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) TransferGroup() const;
-        WINRT_IMPL_AUTO(void) TransferGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotification) SuccessToastNotification() const;
-        WINRT_IMPL_AUTO(void) SuccessToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotification) FailureToastNotification() const;
-        WINRT_IMPL_AUTO(void) FailureToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileNotification) SuccessTileNotification() const;
-        WINRT_IMPL_AUTO(void) SuccessTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::TileNotification) FailureTileNotification() const;
-        WINRT_IMPL_AUTO(void) FailureTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
+        [[nodiscard]] auto TransferGroup() const;
+        auto TransferGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const;
+        [[nodiscard]] auto SuccessToastNotification() const;
+        auto SuccessToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
+        [[nodiscard]] auto FailureToastNotification() const;
+        auto FailureToastNotification(winrt::Windows::UI::Notifications::ToastNotification const& value) const;
+        [[nodiscard]] auto SuccessTileNotification() const;
+        auto SuccessTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
+        [[nodiscard]] auto FailureTileNotification() const;
+        auto FailureTileNotification(winrt::Windows::UI::Notifications::TileNotification const& value) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader2>
     {
@@ -882,7 +876,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup) CompletionGroup() const;
+        [[nodiscard]] auto CompletionGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader3>
     {
@@ -891,7 +885,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader) CreateWithCompletionGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const;
+        auto CreateWithCompletionGroup(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory>
     {
@@ -900,8 +894,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>) GetCurrentUploadsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>) GetCurrentUploadsAsync(param::hstring const& group) const;
+        auto GetCurrentUploadsAsync() const;
+        auto GetCurrentUploadsAsync(param::hstring const& group) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods>
     {
@@ -910,7 +904,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>) GetCurrentUploadsForTransferGroupAsync(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const;
+        auto GetCurrentUploadsForTransferGroupAsync(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2>
     {
@@ -919,7 +913,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderUserConsent
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>) RequestUnconstrainedUploadsAsync(param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::UploadOperation> const& operations) const;
+        auto RequestUnconstrainedUploadsAsync(param::async_iterable<winrt::Windows::Networking::BackgroundTransfer::UploadOperation> const& operations) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent>
     {
@@ -928,9 +922,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::Uri>) ContentUris() const;
-        WINRT_IMPL_AUTO(void) IndirectContentUri(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) IndirectContentUri() const;
+        [[nodiscard]] auto ContentUris() const;
+        auto IndirectContentUri(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto IndirectContentUri() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcher>
     {
@@ -939,7 +933,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IContentPrefetcherTime
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) LastSuccessfulPrefetchTime() const;
+        [[nodiscard]] auto LastSuccessfulPrefetchTime() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcherTime>
     {
@@ -948,12 +942,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IDownloadOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::IStorageFile) ResultFile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress) Progress() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>) StartAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>) AttachAsync() const;
-        WINRT_IMPL_AUTO(void) Pause() const;
-        WINRT_IMPL_AUTO(void) Resume() const;
+        [[nodiscard]] auto ResultFile() const;
+        [[nodiscard]] auto Progress() const;
+        auto StartAsync() const;
+        auto AttachAsync() const;
+        auto Pause() const;
+        auto Resume() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation>
     {
@@ -962,7 +956,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IDownloadOperation2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) TransferGroup() const;
+        [[nodiscard]] auto TransferGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation2>
     {
@@ -971,17 +965,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRandomAccessRequired() const;
-        WINRT_IMPL_AUTO(void) IsRandomAccessRequired(bool value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) GetResultRandomAccessStreamReference() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>) GetDownloadedRanges() const;
-        WINRT_IMPL_AUTO(winrt::event_token) RangesDownloaded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> const& eventHandler) const;
+        [[nodiscard]] auto IsRandomAccessRequired() const;
+        auto IsRandomAccessRequired(bool value) const;
+        auto GetResultRandomAccessStreamReference() const;
+        auto GetDownloadedRanges() const;
+        auto RangesDownloaded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> const& eventHandler) const;
         using RangesDownloaded_revoker = impl::event_revoker<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3, &impl::abi_t<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3>::remove_RangesDownloaded>;
         [[nodiscard]] RangesDownloaded_revoker RangesDownloaded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> const& eventHandler) const;
-        WINRT_IMPL_AUTO(void) RangesDownloaded(winrt::event_token const& eventCookie) const noexcept;
-        WINRT_IMPL_AUTO(void) RequestedUri(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::WebErrorStatus>) RecoverableWebErrorStatuses() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Web::WebErrorStatus>) CurrentWebErrorStatus() const;
+        auto RangesDownloaded(winrt::event_token const& eventCookie) const noexcept;
+        auto RequestedUri(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto RecoverableWebErrorStatuses() const;
+        [[nodiscard]] auto CurrentWebErrorStatus() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3>
     {
@@ -990,7 +984,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IDownloadOperation4
     {
-        WINRT_IMPL_AUTO(void) MakeCurrentInTransferGroup() const;
+        auto MakeCurrentInTransferGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation4>
     {
@@ -999,8 +993,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IDownloadOperation5
     {
-        WINRT_IMPL_AUTO(void) SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
-        WINRT_IMPL_AUTO(void) RemoveRequestHeader(param::hstring const& headerName) const;
+        auto SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
+        auto RemoveRequestHeader(param::hstring const& headerName) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation5>
     {
@@ -1009,10 +1003,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IResponseInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsResumable() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) ActualUri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) StatusCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>) Headers() const;
+        [[nodiscard]] auto IsResumable() const;
+        [[nodiscard]] auto ActualUri() const;
+        [[nodiscard]] auto StatusCode() const;
+        [[nodiscard]] auto Headers() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IResponseInformation>
     {
@@ -1021,7 +1015,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IUnconstrainedTransferRequestResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUnconstrained() const;
+        [[nodiscard]] auto IsUnconstrained() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult>
     {
@@ -1030,10 +1024,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IUploadOperation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::IStorageFile) SourceFile() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress) Progress() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Networking::BackgroundTransfer::UploadOperation, winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) StartAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Networking::BackgroundTransfer::UploadOperation, winrt::Windows::Networking::BackgroundTransfer::UploadOperation>) AttachAsync() const;
+        [[nodiscard]] auto SourceFile() const;
+        [[nodiscard]] auto Progress() const;
+        auto StartAsync() const;
+        auto AttachAsync() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation>
     {
@@ -1042,7 +1036,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IUploadOperation2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) TransferGroup() const;
+        [[nodiscard]] auto TransferGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation2>
     {
@@ -1051,7 +1045,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IUploadOperation3
     {
-        WINRT_IMPL_AUTO(void) MakeCurrentInTransferGroup() const;
+        auto MakeCurrentInTransferGroup() const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation3>
     {
@@ -1060,8 +1054,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_BackgroundTransfer_IUploadOperation4
     {
-        WINRT_IMPL_AUTO(void) SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
-        WINRT_IMPL_AUTO(void) RemoveRequestHeader(param::hstring const& headerName) const;
+        auto SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const;
+        auto RemoveRequestHeader(param::hstring const& headerName) const;
     };
     template <> struct consume<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation4>
     {

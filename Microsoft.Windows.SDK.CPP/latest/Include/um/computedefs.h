@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) Microsoft Corporation.  All rights reserved.
+Copyright (c) Microsoft Corporation. All rights reserved.
 
 Module Name:
 
@@ -10,8 +10,11 @@ Abstract:
 
     Contains the public types and definitions used by the Host Compute APIs.
 
---*/
+Environment:
 
+    User mode.
+
+--*/
 #ifndef _HYPERV_COMPUTEDEFS_H_
 #define _HYPERV_COMPUTEDEFS_H_
 
@@ -50,7 +53,8 @@ typedef enum HCS_OPERATION_TYPE
     HcsOperationTypeGetProcessInfo = 12,
     HcsOperationTypeGetProcessProperties = 13,
     HcsOperationTypeModifyProcess = 14,
-    HcsOperationTypeCrash = 15
+    HcsOperationTypeCrash = 15,
+    HcsOperationTypeReserved1 = 16
 } HCS_OPERATION_TYPE;
 
 #define HCS_INVALID_OPERATION_ID (UINT64)(-1)
@@ -219,5 +223,4 @@ typedef struct
     HCS_EVENT_CALLBACK      Callback;
 } HCS_CREATE_OPTIONS_1;
 
-
-#endif // _HYPERV_COMPUTEDEFS_H_
+#endif

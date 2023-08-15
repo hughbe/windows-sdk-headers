@@ -1026,7 +1026,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFileInformationFactory = _uuidof(IFileInformationFactory);
+                MIDL_CONST_ID IID& IID_IFileInformationFactory = __uuidof(IFileInformationFactory);
             } /* BulkAccess */
         } /* Storage */
     } /* Windows */
@@ -1085,7 +1085,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFileInformationFactoryFactory = _uuidof(IFileInformationFactoryFactory);
+                MIDL_CONST_ID IID& IID_IFileInformationFactoryFactory = __uuidof(IFileInformationFactoryFactory);
             } /* BulkAccess */
         } /* Storage */
     } /* Windows */
@@ -1148,7 +1148,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStorageItemInformation = _uuidof(IStorageItemInformation);
+                MIDL_CONST_ID IID& IID_IStorageItemInformation = __uuidof(IStorageItemInformation);
             } /* BulkAccess */
         } /* Storage */
     } /* Windows */

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -60,8 +60,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Portable_IServiceDeviceStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(winrt::Windows::Devices::Portable::ServiceDeviceType const& serviceType) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorFromServiceId(winrt::guid const& serviceId) const;
+        auto GetDeviceSelector(winrt::Windows::Devices::Portable::ServiceDeviceType const& serviceType) const;
+        auto GetDeviceSelectorFromServiceId(winrt::guid const& serviceId) const;
     };
     template <> struct consume<winrt::Windows::Devices::Portable::IServiceDeviceStatics>
     {
@@ -70,8 +70,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Portable_IStorageDeviceStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Storage::StorageFolder) FromId(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        auto FromId(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
     };
     template <> struct consume<winrt::Windows::Devices::Portable::IStorageDeviceStatics>
     {

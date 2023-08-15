@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -42,7 +42,6 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Geolocation
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
 {
-    enum class ActivityType : int32_t;
     struct ISensorDataThreshold;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::SmartCards
@@ -56,16 +55,12 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sms
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::Networking
@@ -1679,10 +1674,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IActivitySensorTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::Sensors::ActivityType>) SubscribedActivities() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ReportInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sensors::ActivityType>) SupportedActivities() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinimumReportInterval() const;
+        [[nodiscard]] auto SubscribedActivities() const;
+        [[nodiscard]] auto ReportInterval() const;
+        [[nodiscard]] auto SupportedActivities() const;
+        [[nodiscard]] auto MinimumReportInterval() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IActivitySensorTrigger>
     {
@@ -1691,7 +1686,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IActivitySensorTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger) Create(uint32_t reportIntervalInMilliseconds) const;
+        auto Create(uint32_t reportIntervalInMilliseconds) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IActivitySensorTriggerFactory>
     {
@@ -1700,8 +1695,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IAlarmApplicationManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::AlarmAccessStatus>) RequestAccessAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::AlarmAccessStatus) GetAccessStatus() const;
+        auto RequestAccessAsync() const;
+        auto GetAccessStatus() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IAlarmApplicationManagerStatics>
     {
@@ -1710,8 +1705,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IAppBroadcastTrigger
     {
-        WINRT_IMPL_AUTO(void) ProviderInfo(winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo) ProviderInfo() const;
+        auto ProviderInfo(winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo const& value) const;
+        [[nodiscard]] auto ProviderInfo() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IAppBroadcastTrigger>
     {
@@ -1720,7 +1715,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IAppBroadcastTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger) CreateAppBroadcastTrigger(param::hstring const& providerKey) const;
+        auto CreateAppBroadcastTrigger(param::hstring const& providerKey) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IAppBroadcastTriggerFactory>
     {
@@ -1729,18 +1724,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IAppBroadcastTriggerProviderInfo
     {
-        WINRT_IMPL_AUTO(void) DisplayNameResource(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayNameResource() const;
-        WINRT_IMPL_AUTO(void) LogoResource(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LogoResource() const;
-        WINRT_IMPL_AUTO(void) VideoKeyFrameInterval(winrt::Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) VideoKeyFrameInterval() const;
-        WINRT_IMPL_AUTO(void) MaxVideoBitrate(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxVideoBitrate() const;
-        WINRT_IMPL_AUTO(void) MaxVideoWidth(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxVideoWidth() const;
-        WINRT_IMPL_AUTO(void) MaxVideoHeight(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxVideoHeight() const;
+        auto DisplayNameResource(param::hstring const& value) const;
+        [[nodiscard]] auto DisplayNameResource() const;
+        auto LogoResource(param::hstring const& value) const;
+        [[nodiscard]] auto LogoResource() const;
+        auto VideoKeyFrameInterval(winrt::Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] auto VideoKeyFrameInterval() const;
+        auto MaxVideoBitrate(uint32_t value) const;
+        [[nodiscard]] auto MaxVideoBitrate() const;
+        auto MaxVideoWidth(uint32_t value) const;
+        [[nodiscard]] auto MaxVideoWidth() const;
+        auto MaxVideoHeight(uint32_t value) const;
+        [[nodiscard]] auto MaxVideoHeight() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IAppBroadcastTriggerProviderInfo>
     {
@@ -1749,8 +1744,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IApplicationTrigger
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::ApplicationTriggerResult>) RequestAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::ApplicationTriggerResult>) RequestAsync(winrt::Windows::Foundation::Collections::ValueSet const& arguments) const;
+        auto RequestAsync() const;
+        auto RequestAsync(winrt::Windows::Foundation::Collections::ValueSet const& arguments) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IApplicationTrigger>
     {
@@ -1759,7 +1754,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IApplicationTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) Arguments() const;
+        [[nodiscard]] auto Arguments() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IApplicationTriggerDetails>
     {
@@ -1784,12 +1779,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundExecutionManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus>) RequestAccessAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus>) RequestAccessAsync(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(void) RemoveAccess() const;
-        WINRT_IMPL_AUTO(void) RemoveAccess(param::hstring const& applicationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus) GetAccessStatus() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus) GetAccessStatus(param::hstring const& applicationId) const;
+        auto RequestAccessAsync() const;
+        auto RequestAccessAsync(param::hstring const& applicationId) const;
+        auto RemoveAccess() const;
+        auto RemoveAccess(param::hstring const& applicationId) const;
+        auto GetAccessStatus() const;
+        auto GetAccessStatus(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics>
     {
@@ -1798,7 +1793,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundExecutionManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestAccessKindAsync(winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason) const;
+        auto RequestAccessKindAsync(winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics2>
     {
@@ -1807,9 +1802,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundExecutionManagerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestAccessKindForModernStandbyAsync(winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus) GetAccessStatusForModernStandby() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus) GetAccessStatusForModernStandby(param::hstring const& applicationId) const;
+        auto RequestAccessKindForModernStandbyAsync(winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason) const;
+        auto GetAccessStatusForModernStandby() const;
+        auto GetAccessStatusForModernStandby(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics3>
     {
@@ -1818,7 +1813,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTask
     {
-        WINRT_IMPL_AUTO(void) Run(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
+        auto Run(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTask>
     {
@@ -1827,13 +1822,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskBuilder
     {
-        WINRT_IMPL_AUTO(void) TaskEntryPoint(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TaskEntryPoint() const;
-        WINRT_IMPL_AUTO(void) SetTrigger(winrt::Windows::ApplicationModel::Background::IBackgroundTrigger const& trigger) const;
-        WINRT_IMPL_AUTO(void) AddCondition(winrt::Windows::ApplicationModel::Background::IBackgroundCondition const& condition) const;
-        WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration) Register() const;
+        auto TaskEntryPoint(param::hstring const& value) const;
+        [[nodiscard]] auto TaskEntryPoint() const;
+        auto SetTrigger(winrt::Windows::ApplicationModel::Background::IBackgroundTrigger const& trigger) const;
+        auto AddCondition(winrt::Windows::ApplicationModel::Background::IBackgroundCondition const& condition) const;
+        auto Name(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        auto Register() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder>
     {
@@ -1842,8 +1837,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskBuilder2
     {
-        WINRT_IMPL_AUTO(void) CancelOnConditionLoss(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CancelOnConditionLoss() const;
+        auto CancelOnConditionLoss(bool value) const;
+        [[nodiscard]] auto CancelOnConditionLoss() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder2>
     {
@@ -1852,8 +1847,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskBuilder3
     {
-        WINRT_IMPL_AUTO(void) IsNetworkRequested(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsNetworkRequested() const;
+        auto IsNetworkRequested(bool value) const;
+        [[nodiscard]] auto IsNetworkRequested() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder3>
     {
@@ -1862,8 +1857,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskBuilder4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup) TaskGroup() const;
-        WINRT_IMPL_AUTO(void) TaskGroup(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup const& value) const;
+        [[nodiscard]] auto TaskGroup() const;
+        auto TaskGroup(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder4>
     {
@@ -1872,7 +1867,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskBuilder5
     {
-        WINRT_IMPL_AUTO(void) SetTaskEntryPointClsid(winrt::guid const& TaskEntryPoint) const;
+        auto SetTaskEntryPointClsid(winrt::guid const& TaskEntryPoint) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder5>
     {
@@ -1881,8 +1876,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) InstanceId() const;
-        WINRT_IMPL_AUTO(void) CheckResult() const;
+        [[nodiscard]] auto InstanceId() const;
+        auto CheckResult() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskCompletedEventArgs>
     {
@@ -1891,7 +1886,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskDeferral
     {
-        WINRT_IMPL_AUTO(void) Complete() const;
+        auto Complete() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskDeferral>
     {
@@ -1900,17 +1895,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskInstance
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) InstanceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration) Task() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Progress() const;
-        WINRT_IMPL_AUTO(void) Progress(uint32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) TriggerDetails() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Canceled(winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler const& cancelHandler) const;
+        [[nodiscard]] auto InstanceId() const;
+        [[nodiscard]] auto Task() const;
+        [[nodiscard]] auto Progress() const;
+        auto Progress(uint32_t value) const;
+        [[nodiscard]] auto TriggerDetails() const;
+        auto Canceled(winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler const& cancelHandler) const;
         using Canceled_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance, &impl::abi_t<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::remove_Canceled>;
         [[nodiscard]] Canceled_revoker Canceled(auto_revoke_t, winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler const& cancelHandler) const;
-        WINRT_IMPL_AUTO(void) Canceled(winrt::event_token const& cookie) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) SuspendedCount() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral) GetDeferral() const;
+        auto Canceled(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] auto SuspendedCount() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>
     {
@@ -1919,7 +1914,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskInstance2
     {
-        WINRT_IMPL_AUTO(uint32_t) GetThrottleCount(winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter const& counter) const;
+        auto GetThrottleCount(winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter const& counter) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>
     {
@@ -1928,7 +1923,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskInstance4
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>
     {
@@ -1937,8 +1932,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskProgressEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) InstanceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Progress() const;
+        [[nodiscard]] auto InstanceId() const;
+        [[nodiscard]] auto Progress() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskProgressEventArgs>
     {
@@ -1947,17 +1942,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistration
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) TaskId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Progress(winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler const& handler) const;
+        [[nodiscard]] auto TaskId() const;
+        [[nodiscard]] auto Name() const;
+        auto Progress(winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler const& handler) const;
         using Progress_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration, &impl::abi_t<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::remove_Progress>;
         [[nodiscard]] Progress_revoker Progress(auto_revoke_t, winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Progress(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Completed(winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler const& handler) const;
+        auto Progress(winrt::event_token const& cookie) const noexcept;
+        auto Completed(winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler const& handler) const;
         using Completed_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration, &impl::abi_t<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::remove_Completed>;
         [[nodiscard]] Completed_revoker Completed(auto_revoke_t, winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler const& handler) const;
-        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(void) Unregister(bool cancelTask) const;
+        auto Completed(winrt::event_token const& cookie) const noexcept;
+        auto Unregister(bool cancelTask) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>
     {
@@ -1966,7 +1961,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistration2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::IBackgroundTrigger) Trigger() const;
+        [[nodiscard]] auto Trigger() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>
     {
@@ -1975,7 +1970,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistration3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup) TaskGroup() const;
+        [[nodiscard]] auto TaskGroup() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>
     {
@@ -1984,13 +1979,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistrationGroup
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(winrt::event_token) BackgroundActivated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup, winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Name() const;
+        auto BackgroundActivated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup, winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler) const;
         using BackgroundActivated_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup, &impl::abi_t<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup>::remove_BackgroundActivated>;
         [[nodiscard]] BackgroundActivated_revoker BackgroundActivated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup, winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) BackgroundActivated(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>) AllTasks() const;
+        auto BackgroundActivated(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto AllTasks() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup>
     {
@@ -1999,8 +1994,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistrationGroupFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup) Create(param::hstring const& id) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup) CreateWithName(param::hstring const& id, param::hstring const& name) const;
+        auto Create(param::hstring const& id) const;
+        auto CreateWithName(param::hstring const& id, param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroupFactory>
     {
@@ -2009,7 +2004,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistrationStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<winrt::guid, winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>) AllTasks() const;
+        [[nodiscard]] auto AllTasks() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationStatics>
     {
@@ -2018,8 +2013,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundTaskRegistrationStatics2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>) AllTaskGroups() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup) GetTaskGroup(param::hstring const& groupId) const;
+        [[nodiscard]] auto AllTaskGroups() const;
+        auto GetTaskGroup(param::hstring const& groupId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistrationStatics2>
     {
@@ -2036,7 +2031,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBackgroundWorkCostStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::BackgroundWorkCostValue) CurrentBackgroundWorkCost() const;
+        [[nodiscard]] auto CurrentBackgroundWorkCost() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBackgroundWorkCostStatics>
     {
@@ -2045,7 +2040,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBluetoothLEAdvertisementPublisherTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement) Advertisement() const;
+        [[nodiscard]] auto Advertisement() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger>
     {
@@ -2054,14 +2049,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBluetoothLEAdvertisementPublisherTrigger2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int16_t>) PreferredTransmitPowerLevelInDBm() const;
-        WINRT_IMPL_AUTO(void) PreferredTransmitPowerLevelInDBm(winrt::Windows::Foundation::IReference<int16_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) UseExtendedFormat() const;
-        WINRT_IMPL_AUTO(void) UseExtendedFormat(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAnonymous() const;
-        WINRT_IMPL_AUTO(void) IsAnonymous(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeTransmitPowerLevel() const;
-        WINRT_IMPL_AUTO(void) IncludeTransmitPowerLevel(bool value) const;
+        [[nodiscard]] auto PreferredTransmitPowerLevelInDBm() const;
+        auto PreferredTransmitPowerLevelInDBm(winrt::Windows::Foundation::IReference<int16_t> const& value) const;
+        [[nodiscard]] auto UseExtendedFormat() const;
+        auto UseExtendedFormat(bool value) const;
+        [[nodiscard]] auto IsAnonymous() const;
+        auto IsAnonymous(bool value) const;
+        [[nodiscard]] auto IncludeTransmitPowerLevel() const;
+        auto IncludeTransmitPowerLevel(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>
     {
@@ -2070,14 +2065,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBluetoothLEAdvertisementWatcherTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) MinSamplingInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) MaxSamplingInterval() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) MinOutOfRangeTimeout() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) MaxOutOfRangeTimeout() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter) SignalStrengthFilter() const;
-        WINRT_IMPL_AUTO(void) SignalStrengthFilter(winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter) AdvertisementFilter() const;
-        WINRT_IMPL_AUTO(void) AdvertisementFilter(winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter const& value) const;
+        [[nodiscard]] auto MinSamplingInterval() const;
+        [[nodiscard]] auto MaxSamplingInterval() const;
+        [[nodiscard]] auto MinOutOfRangeTimeout() const;
+        [[nodiscard]] auto MaxOutOfRangeTimeout() const;
+        [[nodiscard]] auto SignalStrengthFilter() const;
+        auto SignalStrengthFilter(winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter const& value) const;
+        [[nodiscard]] auto AdvertisementFilter() const;
+        auto AdvertisementFilter(winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger>
     {
@@ -2086,8 +2081,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IBluetoothLEAdvertisementWatcherTrigger2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowExtendedAdvertisements() const;
-        WINRT_IMPL_AUTO(void) AllowExtendedAdvertisements(bool value) const;
+        [[nodiscard]] auto AllowExtendedAdvertisements() const;
+        auto AllowExtendedAdvertisements(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger2>
     {
@@ -2104,9 +2099,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ICachedFileUpdaterTriggerDetails
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::CachedFileTarget) UpdateTarget() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Provider::FileUpdateRequest) UpdateRequest() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanRequestUserInput() const;
+        [[nodiscard]] auto UpdateTarget() const;
+        [[nodiscard]] auto UpdateRequest() const;
+        [[nodiscard]] auto CanRequestUserInput() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ICachedFileUpdaterTriggerDetails>
     {
@@ -2147,7 +2142,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IContentPrefetchTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) WaitInterval() const;
+        [[nodiscard]] auto WaitInterval() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IContentPrefetchTrigger>
     {
@@ -2156,7 +2151,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IContentPrefetchTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger) Create(winrt::Windows::Foundation::TimeSpan const& waitInterval) const;
+        auto Create(winrt::Windows::Foundation::TimeSpan const& waitInterval) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IContentPrefetchTriggerFactory>
     {
@@ -2165,8 +2160,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ICustomSystemEventTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TriggerId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence) Recurrence() const;
+        [[nodiscard]] auto TriggerId() const;
+        [[nodiscard]] auto Recurrence() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ICustomSystemEventTrigger>
     {
@@ -2175,7 +2170,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ICustomSystemEventTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger) Create(param::hstring const& triggerId, winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence const& recurrence) const;
+        auto Create(param::hstring const& triggerId, winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence const& recurrence) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ICustomSystemEventTriggerFactory>
     {
@@ -2184,10 +2179,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceConnectionChangeTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanMaintainConnection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) MaintainConnection() const;
-        WINRT_IMPL_AUTO(void) MaintainConnection(bool value) const;
+        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] auto CanMaintainConnection() const;
+        [[nodiscard]] auto MaintainConnection() const;
+        auto MaintainConnection(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceConnectionChangeTrigger>
     {
@@ -2196,7 +2191,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceConnectionChangeTriggerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>) FromIdAsync(param::hstring const& deviceId) const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceConnectionChangeTriggerStatics>
     {
@@ -2205,8 +2200,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceManufacturerNotificationTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TriggerQualifier() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OneShot() const;
+        [[nodiscard]] auto TriggerQualifier() const;
+        [[nodiscard]] auto OneShot() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTrigger>
     {
@@ -2215,7 +2210,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceManufacturerNotificationTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger) Create(param::hstring const& triggerQualifier, bool oneShot) const;
+        auto Create(param::hstring const& triggerQualifier, bool oneShot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTriggerFactory>
     {
@@ -2224,8 +2219,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceServicingTrigger
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>) RequestAsync(param::hstring const& deviceId, winrt::Windows::Foundation::TimeSpan const& expectedDuration) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>) RequestAsync(param::hstring const& deviceId, winrt::Windows::Foundation::TimeSpan const& expectedDuration, param::hstring const& arguments) const;
+        auto RequestAsync(param::hstring const& deviceId, winrt::Windows::Foundation::TimeSpan const& expectedDuration) const;
+        auto RequestAsync(param::hstring const& deviceId, winrt::Windows::Foundation::TimeSpan const& expectedDuration, param::hstring const& arguments) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceServicingTrigger>
     {
@@ -2234,8 +2229,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IDeviceUseTrigger
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>) RequestAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>) RequestAsync(param::hstring const& deviceId, param::hstring const& arguments) const;
+        auto RequestAsync(param::hstring const& deviceId) const;
+        auto RequestAsync(param::hstring const& deviceId, param::hstring const& arguments) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IDeviceUseTrigger>
     {
@@ -2260,7 +2255,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattCharacteristicNotificationTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic) Characteristic() const;
+        [[nodiscard]] auto Characteristic() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger>
     {
@@ -2269,7 +2264,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattCharacteristicNotificationTrigger2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode) EventTriggeringMode() const;
+        [[nodiscard]] auto EventTriggeringMode() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger2>
     {
@@ -2278,7 +2273,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattCharacteristicNotificationTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger) Create(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic) const;
+        auto Create(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTriggerFactory>
     {
@@ -2287,7 +2282,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattCharacteristicNotificationTriggerFactory2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger) Create(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic, winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode const& eventTriggeringMode) const;
+        auto Create(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic, winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode const& eventTriggeringMode) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTriggerFactory2>
     {
@@ -2296,10 +2291,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattServiceProviderTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TriggerId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService) Service() const;
-        WINRT_IMPL_AUTO(void) AdvertisingParameters(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters) AdvertisingParameters() const;
+        [[nodiscard]] auto TriggerId() const;
+        [[nodiscard]] auto Service() const;
+        auto AdvertisingParameters(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters const& value) const;
+        [[nodiscard]] auto AdvertisingParameters() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattServiceProviderTrigger>
     {
@@ -2308,8 +2303,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattServiceProviderTriggerResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger) Trigger() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::BluetoothError) Error() const;
+        [[nodiscard]] auto Trigger() const;
+        [[nodiscard]] auto Error() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattServiceProviderTriggerResult>
     {
@@ -2318,7 +2313,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGattServiceProviderTriggerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>) CreateAsync(param::hstring const& triggerId, winrt::guid const& serviceUuid) const;
+        auto CreateAsync(param::hstring const& triggerId, winrt::guid const& serviceUuid) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGattServiceProviderTriggerStatics>
     {
@@ -2327,8 +2322,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IGeovisitTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Geolocation::VisitMonitoringScope) MonitoringScope() const;
-        WINRT_IMPL_AUTO(void) MonitoringScope(winrt::Windows::Devices::Geolocation::VisitMonitoringScope const& value) const;
+        [[nodiscard]] auto MonitoringScope() const;
+        auto MonitoringScope(winrt::Windows::Devices::Geolocation::VisitMonitoringScope const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IGeovisitTrigger>
     {
@@ -2337,7 +2332,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ILocationTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::LocationTriggerType) TriggerType() const;
+        [[nodiscard]] auto TriggerType() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ILocationTrigger>
     {
@@ -2346,7 +2341,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ILocationTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::LocationTrigger) Create(winrt::Windows::ApplicationModel::Background::LocationTriggerType const& triggerType) const;
+        auto Create(winrt::Windows::ApplicationModel::Background::LocationTriggerType const& triggerType) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ILocationTriggerFactory>
     {
@@ -2355,8 +2350,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IMaintenanceTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) FreshnessTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OneShot() const;
+        [[nodiscard]] auto FreshnessTime() const;
+        [[nodiscard]] auto OneShot() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IMaintenanceTrigger>
     {
@@ -2365,7 +2360,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IMaintenanceTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::MaintenanceTrigger) Create(uint32_t freshnessTime, bool oneShot) const;
+        auto Create(uint32_t freshnessTime, bool oneShot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IMaintenanceTriggerFactory>
     {
@@ -2374,8 +2369,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IMediaProcessingTrigger
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>) RequestAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>) RequestAsync(winrt::Windows::Foundation::Collections::ValueSet const& arguments) const;
+        auto RequestAsync() const;
+        auto RequestAsync(winrt::Windows::Foundation::Collections::ValueSet const& arguments) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IMediaProcessingTrigger>
     {
@@ -2392,7 +2387,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_INetworkOperatorNotificationTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NetworkAccountId() const;
+        [[nodiscard]] auto NetworkAccountId() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::INetworkOperatorNotificationTrigger>
     {
@@ -2401,7 +2396,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_INetworkOperatorNotificationTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger) Create(param::hstring const& networkAccountId) const;
+        auto Create(param::hstring const& networkAccountId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::INetworkOperatorNotificationTriggerFactory>
     {
@@ -2410,8 +2405,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IPhoneTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OneShot() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType) TriggerType() const;
+        [[nodiscard]] auto OneShot() const;
+        [[nodiscard]] auto TriggerType() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IPhoneTrigger>
     {
@@ -2420,7 +2415,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IPhoneTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::PhoneTrigger) Create(winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType const& type, bool oneShot) const;
+        auto Create(winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType const& type, bool oneShot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IPhoneTriggerFactory>
     {
@@ -2429,7 +2424,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IPushNotificationTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::PushNotificationTrigger) Create(param::hstring const& applicationId) const;
+        auto Create(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IPushNotificationTriggerFactory>
     {
@@ -2446,14 +2441,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IRfcommConnectionTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation) InboundConnection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation) OutboundConnection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowMultipleConnections() const;
-        WINRT_IMPL_AUTO(void) AllowMultipleConnections(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Sockets::SocketProtectionLevel) ProtectionLevel() const;
-        WINRT_IMPL_AUTO(void) ProtectionLevel(winrt::Windows::Networking::Sockets::SocketProtectionLevel const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) RemoteHostName() const;
-        WINRT_IMPL_AUTO(void) RemoteHostName(winrt::Windows::Networking::HostName const& value) const;
+        [[nodiscard]] auto InboundConnection() const;
+        [[nodiscard]] auto OutboundConnection() const;
+        [[nodiscard]] auto AllowMultipleConnections() const;
+        auto AllowMultipleConnections(bool value) const;
+        [[nodiscard]] auto ProtectionLevel() const;
+        auto ProtectionLevel(winrt::Windows::Networking::Sockets::SocketProtectionLevel const& value) const;
+        [[nodiscard]] auto RemoteHostName() const;
+        auto RemoteHostName(winrt::Windows::Networking::HostName const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IRfcommConnectionTrigger>
     {
@@ -2478,7 +2473,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISensorDataThresholdTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger) Create(winrt::Windows::Devices::Sensors::ISensorDataThreshold const& threshold) const;
+        auto Create(winrt::Windows::Devices::Sensors::ISensorDataThreshold const& threshold) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISensorDataThresholdTriggerFactory>
     {
@@ -2487,7 +2482,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISmartCardTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::SmartCards::SmartCardTriggerType) TriggerType() const;
+        [[nodiscard]] auto TriggerType() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISmartCardTrigger>
     {
@@ -2496,7 +2491,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISmartCardTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SmartCardTrigger) Create(winrt::Windows::Devices::SmartCards::SmartCardTriggerType const& triggerType) const;
+        auto Create(winrt::Windows::Devices::SmartCards::SmartCardTriggerType const& triggerType) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISmartCardTriggerFactory>
     {
@@ -2505,7 +2500,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISmsMessageReceivedTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger) Create(winrt::Windows::Devices::Sms::SmsFilterRules const& filterRules) const;
+        auto Create(winrt::Windows::Devices::Sms::SmsFilterRules const& filterRules) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISmsMessageReceivedTriggerFactory>
     {
@@ -2514,7 +2509,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISocketActivityTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWakeFromLowPowerSupported() const;
+        [[nodiscard]] auto IsWakeFromLowPowerSupported() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISocketActivityTrigger>
     {
@@ -2523,7 +2518,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IStorageLibraryChangeTrackerTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger) Create(winrt::Windows::Storage::StorageLibraryChangeTracker const& tracker) const;
+        auto Create(winrt::Windows::Storage::StorageLibraryChangeTracker const& tracker) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IStorageLibraryChangeTrackerTriggerFactory>
     {
@@ -2540,8 +2535,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IStorageLibraryContentChangedTriggerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger) Create(winrt::Windows::Storage::StorageLibrary const& storageLibrary) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger) CreateFromLibraries(param::iterable<winrt::Windows::Storage::StorageLibrary> const& storageLibraries) const;
+        auto Create(winrt::Windows::Storage::StorageLibrary const& storageLibrary) const;
+        auto CreateFromLibraries(param::iterable<winrt::Windows::Storage::StorageLibrary> const& storageLibraries) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IStorageLibraryContentChangedTriggerStatics>
     {
@@ -2550,7 +2545,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISystemCondition
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SystemConditionType) ConditionType() const;
+        [[nodiscard]] auto ConditionType() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISystemCondition>
     {
@@ -2559,7 +2554,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISystemConditionFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SystemCondition) Create(winrt::Windows::ApplicationModel::Background::SystemConditionType const& conditionType) const;
+        auto Create(winrt::Windows::ApplicationModel::Background::SystemConditionType const& conditionType) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISystemConditionFactory>
     {
@@ -2568,8 +2563,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISystemTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OneShot() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SystemTriggerType) TriggerType() const;
+        [[nodiscard]] auto OneShot() const;
+        [[nodiscard]] auto TriggerType() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISystemTrigger>
     {
@@ -2578,7 +2573,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ISystemTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::SystemTrigger) Create(winrt::Windows::ApplicationModel::Background::SystemTriggerType const& triggerType, bool oneShot) const;
+        auto Create(winrt::Windows::ApplicationModel::Background::SystemTriggerType const& triggerType, bool oneShot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ISystemTriggerFactory>
     {
@@ -2587,8 +2582,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ITimeTrigger
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) FreshnessTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) OneShot() const;
+        [[nodiscard]] auto FreshnessTime() const;
+        [[nodiscard]] auto OneShot() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ITimeTrigger>
     {
@@ -2597,7 +2592,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_ITimeTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::TimeTrigger) Create(uint32_t freshnessTime, bool oneShot) const;
+        auto Create(uint32_t freshnessTime, bool oneShot) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::ITimeTriggerFactory>
     {
@@ -2606,7 +2601,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IToastNotificationActionTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger) Create(param::hstring const& applicationId) const;
+        auto Create(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IToastNotificationActionTriggerFactory>
     {
@@ -2615,7 +2610,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IToastNotificationHistoryChangedTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger) Create(param::hstring const& applicationId) const;
+        auto Create(param::hstring const& applicationId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IToastNotificationHistoryChangedTriggerFactory>
     {
@@ -2624,7 +2619,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Background_IUserNotificationChangedTriggerFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger) Create(winrt::Windows::UI::Notifications::NotificationKinds const& notificationKinds) const;
+        auto Create(winrt::Windows::UI::Notifications::NotificationKinds const& notificationKinds) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Background::IUserNotificationChangedTriggerFactory>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -48,7 +48,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Preview_InkWorkspace_IInkWorkspaceHostedAppManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetThumbnailAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const;
+        auto SetThumbnailAsync(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManager>
     {
@@ -57,7 +57,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Preview_InkWorkspace_IInkWorkspaceHostedAppManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager) GetForCurrentApp() const;
+        auto GetForCurrentApp() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManagerStatics>
     {

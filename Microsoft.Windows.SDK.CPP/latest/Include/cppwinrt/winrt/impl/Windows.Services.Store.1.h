@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -87,13 +87,6 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
         IStoreContext4(std::nullptr_t = nullptr) noexcept {}
         IStoreContext4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IStoreContext5 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IStoreContext5>
-    {
-        IStoreContext5(std::nullptr_t = nullptr) noexcept {}
-        IStoreContext5(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IStoreContextStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IStoreContextStatics>
@@ -157,13 +150,6 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
     {
         IStorePrice(std::nullptr_t = nullptr) noexcept {}
         IStorePrice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IStorePrice2 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IStorePrice2>
-    {
-        IStorePrice2(std::nullptr_t = nullptr) noexcept {}
-        IStorePrice2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IStoreProduct :
         winrt::Windows::Foundation::IInspectable,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,15 +7,15 @@
 #ifndef WINRT_Windows_UI_Composition_Desktop_H
 #define WINRT_Windows_UI_Composition_Desktop_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.UI.Composition.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Windows.UI.Composition.Desktop.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Composition_Desktop_IDesktopWindowTarget<D>::IsTopmost() const
+    template <typename D> auto consume_Windows_UI_Composition_Desktop_IDesktopWindowTarget<D>::IsTopmost() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Desktop::IDesktopWindowTarget)->get_IsTopmost(&value));

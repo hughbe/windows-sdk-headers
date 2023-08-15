@@ -152,10 +152,6 @@ extern "C" {
 
 #define FILE_FLAG_OPEN_REQUIRING_OPLOCK 0x00040000
 
-#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
-#define FILE_FLAG_IGNORE_IMPERSONATED_DEVICEMAP 0x00020000
-#endif
-
 #endif
 
 #if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
@@ -3053,6 +3049,7 @@ BackupWrite(
     _Inout_ LPVOID *lpContext
     );
 
+
 //
 //  Stream id structure
 //
@@ -3897,18 +3894,6 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 #define PROCESS_CREATION_MITIGATION_POLICY2_RESTRICT_CORE_SHARING_ALWAYS_ON                (0x00000001ui64 << 52)
 #define PROCESS_CREATION_MITIGATION_POLICY2_RESTRICT_CORE_SHARING_ALWAYS_OFF               (0x00000002ui64 << 52)
 #define PROCESS_CREATION_MITIGATION_POLICY2_RESTRICT_CORE_SHARING_RESERVED                 (0x00000003ui64 << 52)
-
-//
-// Define FSCTL system call disable options.  FSCTL system call disable
-// prevents a process from making NtFsControlFile calls.
-//
-
-#define PROCESS_CREATION_MITIGATION_POLICY2_FSCTL_SYSTEM_CALL_DISABLE_MASK                 (0x00000003ui64 << 56)
-#define PROCESS_CREATION_MITIGATION_POLICY2_FSCTL_SYSTEM_CALL_DISABLE_DEFER                (0x00000000ui64 << 56)
-#define PROCESS_CREATION_MITIGATION_POLICY2_FSCTL_SYSTEM_CALL_DISABLE_ALWAYS_ON            (0x00000001ui64 << 56)
-#define PROCESS_CREATION_MITIGATION_POLICY2_FSCTL_SYSTEM_CALL_DISABLE_ALWAYS_OFF           (0x00000002ui64 << 56)
-#define PROCESS_CREATION_MITIGATION_POLICY2_FSCTL_SYSTEM_CALL_DISABLE_RESERVED             (0x00000003ui64 << 56)
-
 
 #endif // _WIN32_WINNT_WINTHRESHOLD
 #endif // _WIN32_WINNT_WINBLUE
@@ -8087,21 +8072,21 @@ SetSystemPowerState(
 // Power Management APIs
 //
 
-#define AC_LINE_OFFLINE                 0x00
-#define AC_LINE_ONLINE                  0x01
-#define AC_LINE_BACKUP_POWER            0x02
-#define AC_LINE_UNKNOWN                 0xFF
+#define AC_LINE_OFFLINE             0x00
+#define AC_LINE_ONLINE              0x01
+#define AC_LINE_BACKUP_POWER        0x02    // Deprecated value; Not used on any NT based version of Windows
+#define AC_LINE_UNKNOWN             0xFF
 
-#define BATTERY_FLAG_HIGH               0x01
-#define BATTERY_FLAG_LOW                0x02
-#define BATTERY_FLAG_CRITICAL           0x04
-#define BATTERY_FLAG_CHARGING           0x08
-#define BATTERY_FLAG_NO_BATTERY         0x80
-#define BATTERY_FLAG_UNKNOWN            0xFF
+#define BATTERY_FLAG_HIGH           0x01
+#define BATTERY_FLAG_LOW            0x02
+#define BATTERY_FLAG_CRITICAL       0x04
+#define BATTERY_FLAG_CHARGING       0x08
+#define BATTERY_FLAG_NO_BATTERY     0x80
+#define BATTERY_FLAG_UNKNOWN        0xFF
 
-#define BATTERY_PERCENTAGE_UNKNOWN      0xFF
+#define BATTERY_PERCENTAGE_UNKNOWN  0xFF
 
-#define SYSTEM_STATUS_FLAG_POWER_SAVING_ON      0x01
+#define SYSTEM_STATUS_FLAG_POWER_SAVING_ON  0x01
 
 #define BATTERY_LIFE_UNKNOWN        0xFFFFFFFF
 
@@ -9259,6 +9244,19 @@ GetFileInformationByHandleEx(
     _Out_writes_bytes_(dwBufferSize) LPVOID lpFileInformation,
     _In_  DWORD dwBufferSize
 );
+
+#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+BOOL
+WINAPI
+GetFileInformationByName(
+    _In_ PCWSTR FileName,
+    _In_ FILE_INFO_BY_NAME_CLASS FileInformationClass,
+    _Out_writes_bytes_(FileInfoBufferSize) PVOID FileInfoBuffer,
+    _In_ ULONG FileInfoBufferSize
+    );
+
+#endif // defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion

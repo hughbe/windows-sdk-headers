@@ -2883,6 +2883,7 @@ BOOL APIENTRY DrvUnloadFontFile(
     ULONG_PTR   iFile
     );
 
+_Success_(return != DDI_ERROR)
 LONG APIENTRY DrvQueryTrueTypeTable(
     ULONG_PTR   iFile,
     ULONG      ulFont,
@@ -3211,6 +3212,7 @@ ULONG APIENTRY DrvGetGlyphMode(
     _In_                FONTOBJ *
     );
 
+_Success_(return == 1)
 ULONG APIENTRY DrvFontManagement(
     _In_                SURFOBJ *pso,
     _In_opt_            FONTOBJ *pfo,
@@ -4823,6 +4825,7 @@ EngQuerySystemAttribute(
 #define ENG_FNT_CACHE_READ_FAULT    0x1
 #define ENG_FNT_CACHE_WRITE_FAULT   0x2
 
+_Success_(return != nullptr)
 ENGAPI
 _Post_writable_byte_size_(*pulSize)
 PVOID APIENTRY  EngFntCacheLookUp(

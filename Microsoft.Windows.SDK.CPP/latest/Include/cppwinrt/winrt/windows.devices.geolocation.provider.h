@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,31 +7,31 @@
 #ifndef WINRT_Windows_Devices_Geolocation_Provider_H
 #define WINRT_Windows_Devices_Geolocation_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Devices.Geolocation.h"
 #include "winrt/impl/Windows.Devices.Geolocation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Devices.Geolocation.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverridden() const
+    template <typename D> auto consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverridden() const
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider)->get_IsOverridden(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus) consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::SetOverridePosition(winrt::Windows::Devices::Geolocation::BasicGeoposition const& newPosition, winrt::Windows::Devices::Geolocation::PositionSource const& positionSource, double accuracyInMeters) const
+    template <typename D> auto consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::SetOverridePosition(winrt::Windows::Devices::Geolocation::BasicGeoposition const& newPosition, winrt::Windows::Devices::Geolocation::PositionSource const& positionSource, double accuracyInMeters) const
     {
         winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider)->SetOverridePosition(impl::bind_in(newPosition), static_cast<int32_t>(positionSource), accuracyInMeters, reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::ClearOverridePosition() const
+    template <typename D> auto consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::ClearOverridePosition() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider)->ClearOverridePosition());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverriddenChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverriddenChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider)->add_IsOverriddenChanged(*(void**)(&handler), put_abi(token)));
@@ -41,7 +41,7 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsOverriddenChanged_revoker>(this, IsOverriddenChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverriddenChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Devices_Geolocation_Provider_IGeolocationProvider<D>::IsOverriddenChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Devices::Geolocation::Provider::IGeolocationProvider)->remove_IsOverriddenChanged(impl::bind_in(token));
     }

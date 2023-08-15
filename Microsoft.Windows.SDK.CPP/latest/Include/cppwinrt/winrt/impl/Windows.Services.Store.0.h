@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,17 +15,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct HResult;
     struct IAsyncAction;
-    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
-    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -139,7 +134,6 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
     struct IStoreContext2;
     struct IStoreContext3;
     struct IStoreContext4;
-    struct IStoreContext5;
     struct IStoreContextStatics;
     struct IStoreImage;
     struct IStoreLicense;
@@ -149,7 +143,6 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
     struct IStorePackageUpdateResult;
     struct IStorePackageUpdateResult2;
     struct IStorePrice;
-    struct IStorePrice2;
     struct IStoreProduct;
     struct IStoreProductOptions;
     struct IStoreProductPagedQueryResult;
@@ -216,7 +209,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Services::Store::IStoreContext2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreContext3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreContext4>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::Services::Store::IStoreContext5>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreContextStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreImage>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreLicense>{ using type = interface_category; };
@@ -226,7 +218,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Services::Store::IStorePackageUpdateResult>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStorePackageUpdateResult2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStorePrice>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::Services::Store::IStorePrice2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreProduct>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreProductOptions>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Services::Store::IStoreProductPagedQueryResult>{ using type = interface_category; };
@@ -342,7 +333,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreContext2> = L"Windows.Services.Store.IStoreContext2";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreContext3> = L"Windows.Services.Store.IStoreContext3";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreContext4> = L"Windows.Services.Store.IStoreContext4";
-    template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreContext5> = L"Windows.Services.Store.IStoreContext5";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreContextStatics> = L"Windows.Services.Store.IStoreContextStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreImage> = L"Windows.Services.Store.IStoreImage";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreLicense> = L"Windows.Services.Store.IStoreLicense";
@@ -352,7 +342,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStorePackageUpdateResult> = L"Windows.Services.Store.IStorePackageUpdateResult";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStorePackageUpdateResult2> = L"Windows.Services.Store.IStorePackageUpdateResult2";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStorePrice> = L"Windows.Services.Store.IStorePrice";
-    template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStorePrice2> = L"Windows.Services.Store.IStorePrice2";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreProduct> = L"Windows.Services.Store.IStoreProduct";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreProductOptions> = L"Windows.Services.Store.IStoreProductOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::Services::Store::IStoreProductPagedQueryResult> = L"Windows.Services.Store.IStoreProductPagedQueryResult";
@@ -384,7 +373,6 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreContext2>{ 0x18BC54DA,0x7BD9,0x452C,{ 0x91,0x16,0x3B,0xBD,0x06,0xFF,0xC6,0x3A } }; // 18BC54DA-7BD9-452C-9116-3BBD06FFC63A
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreContext3>{ 0xE26226CA,0x1A01,0x4730,{ 0x85,0xA6,0xEC,0xC8,0x96,0xE4,0xAE,0x38 } }; // E26226CA-1A01-4730-85A6-ECC896E4AE38
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreContext4>{ 0xAF9C6F69,0xBEA1,0x4BF4,{ 0x8E,0x74,0xAE,0x03,0xE2,0x06,0xC6,0xB0 } }; // AF9C6F69-BEA1-4BF4-8E74-AE03E206C6B0
-    template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreContext5>{ 0x6DE6C52B,0xC43A,0x5953,{ 0xB3,0x9A,0x71,0x64,0x3C,0x57,0xD9,0x6E } }; // 6DE6C52B-C43A-5953-B39A-71643C57D96E
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreContextStatics>{ 0x9C06EE5F,0x15C0,0x4E72,{ 0x93,0x30,0xD6,0x19,0x1C,0xEB,0xD1,0x9C } }; // 9C06EE5F-15C0-4E72-9330-D6191CEBD19C
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreImage>{ 0x081FD248,0xADB4,0x4B64,{ 0xA9,0x93,0x78,0x47,0x89,0x92,0x6E,0xD5 } }; // 081FD248-ADB4-4B64-A993-784789926ED5
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreLicense>{ 0x26DC9579,0x4C4F,0x4F30,{ 0xBC,0x89,0x64,0x9F,0x60,0xE3,0x60,0x55 } }; // 26DC9579-4C4F-4F30-BC89-649F60E36055
@@ -394,7 +382,6 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStorePackageUpdateResult>{ 0xE79142ED,0x61F9,0x4893,{ 0xB4,0xFE,0xCF,0x19,0x16,0x03,0xAF,0x7B } }; // E79142ED-61F9-4893-B4FE-CF191603AF7B
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStorePackageUpdateResult2>{ 0x071D012E,0xBC62,0x4F2E,{ 0x87,0xEA,0x99,0xD8,0x01,0xAE,0xAF,0x98 } }; // 071D012E-BC62-4F2E-87EA-99D801AEAF98
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStorePrice>{ 0x55BA94C4,0x15F1,0x407C,{ 0x8F,0x06,0x00,0x63,0x80,0xF4,0xDF,0x0B } }; // 55BA94C4-15F1-407C-8F06-006380F4DF0B
-    template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStorePrice2>{ 0xF711573C,0x40E6,0x5641,{ 0xB0,0x63,0xF1,0xDF,0x42,0xB2,0xB1,0x2A } }; // F711573C-40E6-5641-B063-F1DF42B2B12A
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreProduct>{ 0x320E2C52,0xD760,0x450A,{ 0xA4,0x2B,0x67,0xD1,0xE9,0x01,0xAC,0x90 } }; // 320E2C52-D760-450A-A42B-67D1E901AC90
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreProductOptions>{ 0x5B34A0F9,0xA113,0x4811,{ 0x83,0x26,0x16,0x19,0x9C,0x92,0x7F,0x31 } }; // 5B34A0F9-A113-4811-8326-16199C927F31
     template <> inline constexpr guid guid_v<winrt::Windows::Services::Store::IStoreProductPagedQueryResult>{ 0xC92718C5,0x4DD5,0x4869,{ 0xA4,0x62,0xEC,0xC6,0x87,0x2E,0x43,0xC5 } }; // C92718C5-4DD5-4869-A462-ECC6872E43C5
@@ -582,15 +569,6 @@ namespace winrt::impl
             virtual int32_t __stdcall SetInstallOrderForAssociatedStoreQueueItemsAsync(void*, void**) noexcept = 0;
         };
     };
-    template <> struct abi<winrt::Windows::Services::Store::IStoreContext5>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-            virtual int32_t __stdcall GetUserPurchaseHistoryAsync(void*, void**) noexcept = 0;
-            virtual int32_t __stdcall GetAssociatedStoreProductsByInAppOfferTokenAsync(void*, void**) noexcept = 0;
-            virtual int32_t __stdcall RequestPurchaseByInAppOfferTokenAsync(void*, void**) noexcept = 0;
-        };
-    };
     template <> struct abi<winrt::Windows::Services::Store::IStoreContextStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -673,15 +651,6 @@ namespace winrt::impl
             virtual int32_t __stdcall get_SaleEndDate(int64_t*) noexcept = 0;
             virtual int32_t __stdcall get_CurrencyCode(void**) noexcept = 0;
             virtual int32_t __stdcall get_FormattedRecurrencePrice(void**) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::Windows::Services::Store::IStorePrice2>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-            virtual int32_t __stdcall get_UnformattedBasePrice(void**) noexcept = 0;
-            virtual int32_t __stdcall get_UnformattedPrice(void**) noexcept = 0;
-            virtual int32_t __stdcall get_UnformattedRecurrencePrice(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Services::Store::IStoreProduct>
@@ -897,8 +866,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreAcquireLicenseResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePackageLicense) StorePackageLicense() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto StorePackageLicense() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreAcquireLicenseResult>
     {
@@ -907,15 +876,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreAppLicense
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SkuStoreId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTrial() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) ExpirationDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::Store::StoreLicense>) AddOnLicenses() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) TrialTimeRemaining() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTrialOwnedByThisUser() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TrialUniqueId() const;
+        [[nodiscard]] auto SkuStoreId() const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto IsTrial() const;
+        [[nodiscard]] auto ExpirationDate() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        [[nodiscard]] auto AddOnLicenses() const;
+        [[nodiscard]] auto TrialTimeRemaining() const;
+        [[nodiscard]] auto IsTrialOwnedByThisUser() const;
+        [[nodiscard]] auto TrialUniqueId() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreAppLicense>
     {
@@ -924,7 +893,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreAppLicense2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDiscLicense() const;
+        [[nodiscard]] auto IsDiscLicense() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreAppLicense2>
     {
@@ -933,12 +902,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreAvailability
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StoreId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) EndDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePrice) Price() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
+        [[nodiscard]] auto StoreId() const;
+        [[nodiscard]] auto EndDate() const;
+        [[nodiscard]] auto Price() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        auto RequestPurchaseAsync() const;
+        auto RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreAvailability>
     {
@@ -947,9 +916,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreCanAcquireLicenseResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LicensableSku() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreCanLicenseStatus) Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto LicensableSku() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreCanAcquireLicenseResult>
     {
@@ -958,14 +927,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreCollectionData
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTrial() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CampaignId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeveloperOfferId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) AcquiredDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) StartDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) EndDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) TrialTimeRemaining() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
+        [[nodiscard]] auto IsTrial() const;
+        [[nodiscard]] auto CampaignId() const;
+        [[nodiscard]] auto DeveloperOfferId() const;
+        [[nodiscard]] auto AcquiredDate() const;
+        [[nodiscard]] auto StartDate() const;
+        [[nodiscard]] auto EndDate() const;
+        [[nodiscard]] auto TrialTimeRemaining() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreCollectionData>
     {
@@ -974,10 +943,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreConsumableResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreConsumableStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) TrackingId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) BalanceRemaining() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto TrackingId() const;
+        [[nodiscard]] auto BalanceRemaining() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreConsumableResult>
     {
@@ -986,29 +955,29 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreContext
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
-        WINRT_IMPL_AUTO(winrt::event_token) OfflineLicensesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto User() const;
+        auto OfflineLicensesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using OfflineLicensesChanged_revoker = impl::event_revoker<winrt::Windows::Services::Store::IStoreContext, &impl::abi_t<winrt::Windows::Services::Store::IStoreContext>::remove_OfflineLicensesChanged>;
         [[nodiscard]] OfflineLicensesChanged_revoker OfflineLicensesChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) OfflineLicensesChanged(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) GetCustomerPurchaseIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) GetCustomerCollectionsIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreAppLicense>) GetAppLicenseAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductResult>) GetStoreProductForCurrentAppAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetStoreProductsAsync(param::async_iterable<hstring> const& productKinds, param::async_iterable<hstring> const& storeIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetAssociatedStoreProductsAsync(param::async_iterable<hstring> const& productKinds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductPagedQueryResult>) GetAssociatedStoreProductsWithPagingAsync(param::async_iterable<hstring> const& productKinds, uint32_t maxItemsToRetrievePerPage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetUserCollectionAsync(param::async_iterable<hstring> const& productKinds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductPagedQueryResult>) GetUserCollectionWithPagingAsync(param::async_iterable<hstring> const& productKinds, uint32_t maxItemsToRetrievePerPage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreConsumableResult>) ReportConsumableFulfillmentAsync(param::hstring const& productStoreId, uint32_t quantity, winrt::guid const& trackingId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreConsumableResult>) GetConsumableBalanceRemainingAsync(param::hstring const& productStoreId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreAcquireLicenseResult>) AcquireStoreLicenseForOptionalPackageAsync(winrt::Windows::ApplicationModel::Package const& optionalPackage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync(param::hstring const& storeId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync(param::hstring const& storeId, winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StorePackageUpdate>>) GetAppAndOptionalStorePackageUpdatesAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) RequestDownloadStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) RequestDownloadAndInstallStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) RequestDownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds) const;
+        auto OfflineLicensesChanged(winrt::event_token const& token) const noexcept;
+        auto GetCustomerPurchaseIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId) const;
+        auto GetCustomerCollectionsIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId) const;
+        auto GetAppLicenseAsync() const;
+        auto GetStoreProductForCurrentAppAsync() const;
+        auto GetStoreProductsAsync(param::async_iterable<hstring> const& productKinds, param::async_iterable<hstring> const& storeIds) const;
+        auto GetAssociatedStoreProductsAsync(param::async_iterable<hstring> const& productKinds) const;
+        auto GetAssociatedStoreProductsWithPagingAsync(param::async_iterable<hstring> const& productKinds, uint32_t maxItemsToRetrievePerPage) const;
+        auto GetUserCollectionAsync(param::async_iterable<hstring> const& productKinds) const;
+        auto GetUserCollectionWithPagingAsync(param::async_iterable<hstring> const& productKinds, uint32_t maxItemsToRetrievePerPage) const;
+        auto ReportConsumableFulfillmentAsync(param::hstring const& productStoreId, uint32_t quantity, winrt::guid const& trackingId) const;
+        auto GetConsumableBalanceRemainingAsync(param::hstring const& productStoreId) const;
+        auto AcquireStoreLicenseForOptionalPackageAsync(winrt::Windows::ApplicationModel::Package const& optionalPackage) const;
+        auto RequestPurchaseAsync(param::hstring const& storeId) const;
+        auto RequestPurchaseAsync(param::hstring const& storeId, winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
+        auto GetAppAndOptionalStorePackageUpdatesAsync() const;
+        auto RequestDownloadStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
+        auto RequestDownloadAndInstallStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
+        auto RequestDownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreContext>
     {
@@ -1017,7 +986,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreContext2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductResult>) FindStoreProductForPackageAsync(param::async_iterable<hstring> const& productKinds, winrt::Windows::ApplicationModel::Package const& package) const;
+        auto FindStoreProductForPackageAsync(param::async_iterable<hstring> const& productKinds, winrt::Windows::ApplicationModel::Package const& package) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreContext2>
     {
@@ -1026,20 +995,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreContext3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanSilentlyDownloadStorePackageUpdates() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) TrySilentDownloadStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) TrySilentDownloadAndInstallStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>) CanAcquireStoreLicenseForOptionalPackageAsync(winrt::Windows::ApplicationModel::Package const& optionalPackage) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>) CanAcquireStoreLicenseAsync(param::hstring const& productStoreId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetStoreProductsAsync(param::async_iterable<hstring> const& productKinds, param::async_iterable<hstring> const& storeIds, winrt::Windows::Services::Store::StoreProductOptions const& storeProductOptions) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreQueueItem>>) GetAssociatedStoreQueueItemsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreQueueItem>>) GetStoreQueueItemsAsync(param::async_iterable<hstring> const& storeIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) RequestDownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds, winrt::Windows::Services::Store::StorePackageInstallOptions const& storePackageInstallOptions) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Services::Store::StorePackageUpdateResult, winrt::Windows::Services::Store::StorePackageUpdateStatus>) DownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>) RequestUninstallStorePackageAsync(winrt::Windows::ApplicationModel::Package const& package) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>) RequestUninstallStorePackageByStoreIdAsync(param::hstring const& storeId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>) UninstallStorePackageAsync(winrt::Windows::ApplicationModel::Package const& package) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>) UninstallStorePackageByStoreIdAsync(param::hstring const& storeId) const;
+        [[nodiscard]] auto CanSilentlyDownloadStorePackageUpdates() const;
+        auto TrySilentDownloadStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
+        auto TrySilentDownloadAndInstallStorePackageUpdatesAsync(param::async_iterable<winrt::Windows::Services::Store::StorePackageUpdate> const& storePackageUpdates) const;
+        auto CanAcquireStoreLicenseForOptionalPackageAsync(winrt::Windows::ApplicationModel::Package const& optionalPackage) const;
+        auto CanAcquireStoreLicenseAsync(param::hstring const& productStoreId) const;
+        auto GetStoreProductsAsync(param::async_iterable<hstring> const& productKinds, param::async_iterable<hstring> const& storeIds, winrt::Windows::Services::Store::StoreProductOptions const& storeProductOptions) const;
+        auto GetAssociatedStoreQueueItemsAsync() const;
+        auto GetStoreQueueItemsAsync(param::async_iterable<hstring> const& storeIds) const;
+        auto RequestDownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds, winrt::Windows::Services::Store::StorePackageInstallOptions const& storePackageInstallOptions) const;
+        auto DownloadAndInstallStorePackagesAsync(param::async_iterable<hstring> const& storeIds) const;
+        auto RequestUninstallStorePackageAsync(winrt::Windows::ApplicationModel::Package const& package) const;
+        auto RequestUninstallStorePackageByStoreIdAsync(param::hstring const& storeId) const;
+        auto UninstallStorePackageAsync(winrt::Windows::ApplicationModel::Package const& package) const;
+        auto UninstallStorePackageByStoreIdAsync(param::hstring const& storeId) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreContext3>
     {
@@ -1048,29 +1017,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreContext4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreRateAndReviewResult>) RequestRateAndReviewAppAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreQueueItem>>) SetInstallOrderForAssociatedStoreQueueItemsAsync(param::async_iterable<winrt::Windows::Services::Store::StoreQueueItem> const& items) const;
+        auto RequestRateAndReviewAppAsync() const;
+        auto SetInstallOrderForAssociatedStoreQueueItemsAsync(param::async_iterable<winrt::Windows::Services::Store::StoreQueueItem> const& items) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreContext4>
     {
         template <typename D> using type = consume_Windows_Services_Store_IStoreContext4<D>;
     };
     template <typename D>
-    struct consume_Windows_Services_Store_IStoreContext5
-    {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetUserPurchaseHistoryAsync(param::async_iterable<hstring> const& productKinds) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductQueryResult>) GetAssociatedStoreProductsByInAppOfferTokenAsync(param::async_iterable<hstring> const& inAppOfferTokens) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseByInAppOfferTokenAsync(param::hstring const& inAppOfferToken) const;
-    };
-    template <> struct consume<winrt::Windows::Services::Store::IStoreContext5>
-    {
-        template <typename D> using type = consume_Windows_Services_Store_IStoreContext5<D>;
-    };
-    template <typename D>
     struct consume_Windows_Services_Store_IStoreContextStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreContext) GetDefault() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreContext) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreContextStatics>
     {
@@ -1079,11 +1037,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreImage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ImagePurposeTag() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Width() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Height() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Caption() const;
+        [[nodiscard]] auto Uri() const;
+        [[nodiscard]] auto ImagePurposeTag() const;
+        [[nodiscard]] auto Width() const;
+        [[nodiscard]] auto Height() const;
+        [[nodiscard]] auto Caption() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreImage>
     {
@@ -1092,11 +1050,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreLicense
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SkuStoreId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) ExpirationDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InAppOfferToken() const;
+        [[nodiscard]] auto SkuStoreId() const;
+        [[nodiscard]] auto IsActive() const;
+        [[nodiscard]] auto ExpirationDate() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        [[nodiscard]] auto InAppOfferToken() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreLicense>
     {
@@ -1105,8 +1063,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePackageInstallOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowForcedAppRestart() const;
-        WINRT_IMPL_AUTO(void) AllowForcedAppRestart(bool value) const;
+        [[nodiscard]] auto AllowForcedAppRestart() const;
+        auto AllowForcedAppRestart(bool value) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePackageInstallOptions>
     {
@@ -1115,13 +1073,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePackageLicense
     {
-        WINRT_IMPL_AUTO(winrt::event_token) LicenseLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StorePackageLicense, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto LicenseLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StorePackageLicense, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using LicenseLost_revoker = impl::event_revoker<winrt::Windows::Services::Store::IStorePackageLicense, &impl::abi_t<winrt::Windows::Services::Store::IStorePackageLicense>::remove_LicenseLost>;
         [[nodiscard]] LicenseLost_revoker LicenseLost(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StorePackageLicense, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) LicenseLost(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Package) Package() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsValid() const;
-        WINRT_IMPL_AUTO(void) ReleaseLicense() const;
+        auto LicenseLost(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto Package() const;
+        [[nodiscard]] auto IsValid() const;
+        auto ReleaseLicense() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePackageLicense>
     {
@@ -1130,8 +1088,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePackageUpdate
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Package) Package() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Mandatory() const;
+        [[nodiscard]] auto Package() const;
+        [[nodiscard]] auto Mandatory() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePackageUpdate>
     {
@@ -1140,8 +1098,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePackageUpdateResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePackageUpdateState) OverallState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StorePackageUpdateStatus>) StorePackageUpdateStatuses() const;
+        [[nodiscard]] auto OverallState() const;
+        [[nodiscard]] auto StorePackageUpdateStatuses() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePackageUpdateResult>
     {
@@ -1150,7 +1108,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePackageUpdateResult2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreQueueItem>) StoreQueueItems() const;
+        [[nodiscard]] auto StoreQueueItems() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePackageUpdateResult2>
     {
@@ -1159,49 +1117,38 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePrice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FormattedBasePrice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FormattedPrice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOnSale() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) SaleEndDate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CurrencyCode() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FormattedRecurrencePrice() const;
+        [[nodiscard]] auto FormattedBasePrice() const;
+        [[nodiscard]] auto FormattedPrice() const;
+        [[nodiscard]] auto IsOnSale() const;
+        [[nodiscard]] auto SaleEndDate() const;
+        [[nodiscard]] auto CurrencyCode() const;
+        [[nodiscard]] auto FormattedRecurrencePrice() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePrice>
     {
         template <typename D> using type = consume_Windows_Services_Store_IStorePrice<D>;
     };
     template <typename D>
-    struct consume_Windows_Services_Store_IStorePrice2
-    {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UnformattedBasePrice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UnformattedPrice() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UnformattedRecurrencePrice() const;
-    };
-    template <> struct consume<winrt::Windows::Services::Store::IStorePrice2>
-    {
-        template <typename D> using type = consume_Windows_Services_Store_IStorePrice2<D>;
-    };
-    template <typename D>
     struct consume_Windows_Services_Store_IStoreProduct
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StoreId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProductKind() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasDigitalDownload() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) Keywords() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreImage>) Images() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreVideo>) Videos() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreSku>) Skus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInUserCollection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePrice) Price() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) LinkUri() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) GetIsAnySkuInstalledAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InAppOfferToken() const;
+        [[nodiscard]] auto StoreId() const;
+        [[nodiscard]] auto Language() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Description() const;
+        [[nodiscard]] auto ProductKind() const;
+        [[nodiscard]] auto HasDigitalDownload() const;
+        [[nodiscard]] auto Keywords() const;
+        [[nodiscard]] auto Images() const;
+        [[nodiscard]] auto Videos() const;
+        [[nodiscard]] auto Skus() const;
+        [[nodiscard]] auto IsInUserCollection() const;
+        [[nodiscard]] auto Price() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        [[nodiscard]] auto LinkUri() const;
+        auto GetIsAnySkuInstalledAsync() const;
+        auto RequestPurchaseAsync() const;
+        auto RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
+        [[nodiscard]] auto InAppOfferToken() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreProduct>
     {
@@ -1210,7 +1157,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreProductOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ActionFilters() const;
+        [[nodiscard]] auto ActionFilters() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreProductOptions>
     {
@@ -1219,10 +1166,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreProductPagedQueryResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::Store::StoreProduct>) Products() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasMoreResults() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreProductPagedQueryResult>) GetNextAsync() const;
+        [[nodiscard]] auto Products() const;
+        [[nodiscard]] auto HasMoreResults() const;
+        [[nodiscard]] auto ExtendedError() const;
+        auto GetNextAsync() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreProductPagedQueryResult>
     {
@@ -1231,8 +1178,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreProductQueryResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::Store::StoreProduct>) Products() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Products() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreProductQueryResult>
     {
@@ -1241,8 +1188,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreProductResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreProduct) Product() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Product() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreProductResult>
     {
@@ -1251,10 +1198,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePurchaseProperties
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        WINRT_IMPL_AUTO(void) ExtendedJsonData(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        auto Name(param::hstring const& value) const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        auto ExtendedJsonData(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePurchaseProperties>
     {
@@ -1263,7 +1210,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePurchasePropertiesFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePurchaseProperties) Create(param::hstring const& name) const;
+        auto Create(param::hstring const& name) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePurchasePropertiesFactory>
     {
@@ -1272,8 +1219,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStorePurchaseResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePurchaseStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStorePurchaseResult>
     {
@@ -1282,18 +1229,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreQueueItem
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProductId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PackageFamilyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreQueueItemKind) InstallKind() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreQueueItemStatus) GetCurrentStatus() const;
-        WINRT_IMPL_AUTO(winrt::event_token) Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs> const& handler) const;
+        [[nodiscard]] auto ProductId() const;
+        [[nodiscard]] auto PackageFamilyName() const;
+        [[nodiscard]] auto InstallKind() const;
+        auto GetCurrentStatus() const;
+        auto Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs> const& handler) const;
         using Completed_revoker = impl::event_revoker<winrt::Windows::Services::Store::IStoreQueueItem, &impl::abi_t<winrt::Windows::Services::Store::IStoreQueueItem>::remove_Completed>;
         [[nodiscard]] Completed_revoker Completed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto Completed(winrt::event_token const& token) const noexcept;
+        auto StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using StatusChanged_revoker = impl::event_revoker<winrt::Windows::Services::Store::IStoreQueueItem, &impl::abi_t<winrt::Windows::Services::Store::IStoreQueueItem>::remove_StatusChanged>;
         [[nodiscard]] StatusChanged_revoker StatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) StatusChanged(winrt::event_token const& token) const noexcept;
+        auto StatusChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreQueueItem>
     {
@@ -1302,9 +1249,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreQueueItem2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) CancelInstallAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) PauseInstallAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) ResumeInstallAsync() const;
+        auto CancelInstallAsync() const;
+        auto PauseInstallAsync() const;
+        auto ResumeInstallAsync() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreQueueItem2>
     {
@@ -1313,7 +1260,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreQueueItemCompletedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreQueueItemStatus) Status() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreQueueItemCompletedEventArgs>
     {
@@ -1322,10 +1269,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreQueueItemStatus
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreQueueItemState) PackageInstallState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreQueueItemExtendedState) PackageInstallExtendedState() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePackageUpdateStatus) UpdateStatus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto PackageInstallState() const;
+        [[nodiscard]] auto PackageInstallExtendedState() const;
+        [[nodiscard]] auto UpdateStatus() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreQueueItemStatus>
     {
@@ -1334,10 +1281,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreRateAndReviewResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) WasUpdated() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreRateAndReviewStatus) Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        [[nodiscard]] auto WasUpdated() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreRateAndReviewResult>
     {
@@ -1346,7 +1293,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreRequestHelperStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StoreSendRequestResult>) SendRequestAsync(winrt::Windows::Services::Store::StoreContext const& context, uint32_t requestKind, param::hstring const& parametersAsJson) const;
+        auto SendRequestAsync(winrt::Windows::Services::Store::StoreContext const& context, uint32_t requestKind, param::hstring const& parametersAsJson) const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreRequestHelperStatics>
     {
@@ -1355,8 +1302,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreSendRequestResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Response() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] auto Response() const;
+        [[nodiscard]] auto ExtendedError() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreSendRequestResult>
     {
@@ -1365,7 +1312,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreSendRequestResult2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Web::Http::HttpStatusCode) HttpStatusCode() const;
+        [[nodiscard]] auto HttpStatusCode() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreSendRequestResult2>
     {
@@ -1374,25 +1321,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreSku
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StoreId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTrial() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CustomDeveloperData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreImage>) Images() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreVideo>) Videos() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::Store::StoreAvailability>) Availabilities() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StorePrice) Price() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExtendedJsonData() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInUserCollection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) BundledSkus() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreCollectionData) CollectionData() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) GetIsInstalledAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::Store::StorePurchaseResult>) RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSubscription() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreSubscriptionInfo) SubscriptionInfo() const;
+        [[nodiscard]] auto StoreId() const;
+        [[nodiscard]] auto Language() const;
+        [[nodiscard]] auto Title() const;
+        [[nodiscard]] auto Description() const;
+        [[nodiscard]] auto IsTrial() const;
+        [[nodiscard]] auto CustomDeveloperData() const;
+        [[nodiscard]] auto Images() const;
+        [[nodiscard]] auto Videos() const;
+        [[nodiscard]] auto Availabilities() const;
+        [[nodiscard]] auto Price() const;
+        [[nodiscard]] auto ExtendedJsonData() const;
+        [[nodiscard]] auto IsInUserCollection() const;
+        [[nodiscard]] auto BundledSkus() const;
+        [[nodiscard]] auto CollectionData() const;
+        auto GetIsInstalledAsync() const;
+        auto RequestPurchaseAsync() const;
+        auto RequestPurchaseAsync(winrt::Windows::Services::Store::StorePurchaseProperties const& storePurchaseProperties) const;
+        [[nodiscard]] auto IsSubscription() const;
+        [[nodiscard]] auto SubscriptionInfo() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreSku>
     {
@@ -1401,11 +1348,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreSubscriptionInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) BillingPeriod() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreDurationUnit) BillingPeriodUnit() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasTrialPeriod() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TrialPeriod() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreDurationUnit) TrialPeriodUnit() const;
+        [[nodiscard]] auto BillingPeriod() const;
+        [[nodiscard]] auto BillingPeriodUnit() const;
+        [[nodiscard]] auto HasTrialPeriod() const;
+        [[nodiscard]] auto TrialPeriod() const;
+        [[nodiscard]] auto TrialPeriodUnit() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreSubscriptionInfo>
     {
@@ -1414,8 +1361,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreUninstallStorePackageResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreUninstallStorePackageStatus) Status() const;
+        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreUninstallStorePackageResult>
     {
@@ -1424,12 +1371,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Store_IStoreVideo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) VideoPurposeTag() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Width() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Height() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Caption() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Services::Store::StoreImage) PreviewImage() const;
+        [[nodiscard]] auto Uri() const;
+        [[nodiscard]] auto VideoPurposeTag() const;
+        [[nodiscard]] auto Width() const;
+        [[nodiscard]] auto Height() const;
+        [[nodiscard]] auto Caption() const;
+        [[nodiscard]] auto PreviewImage() const;
     };
     template <> struct consume<winrt::Windows::Services::Store::IStoreVideo>
     {

@@ -319,7 +319,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_INamedPolicyData = _uuidof(INamedPolicyData);
+                MIDL_CONST_ID IID& IID_INamedPolicyData = __uuidof(INamedPolicyData);
             } /* Policies */
         } /* Management */
     } /* Windows */
@@ -363,7 +363,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_INamedPolicyStatics = _uuidof(INamedPolicyStatics);
+                MIDL_CONST_ID IID& IID_INamedPolicyStatics = __uuidof(INamedPolicyStatics);
             } /* Policies */
         } /* Management */
     } /* Windows */

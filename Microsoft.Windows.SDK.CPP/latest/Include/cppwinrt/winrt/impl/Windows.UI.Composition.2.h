@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -562,15 +562,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
         CompositionTarget(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Composition::ICompositionTarget(ptr, take_ownership_from_abi) {}
         using impl::consume_t<CompositionTarget, winrt::Windows::UI::Composition::ICompositionObject>::StartAnimation;
         using impl::consume_t<CompositionTarget, winrt::Windows::UI::Composition::ICompositionObject5>::StartAnimation;
-    };
-    struct __declspec(empty_bases) CompositionTexture : winrt::Windows::UI::Composition::ICompositionTexture,
-        impl::base<CompositionTexture, winrt::Windows::UI::Composition::CompositionObject>,
-        impl::require<CompositionTexture, winrt::Windows::UI::Composition::ICompositionSurface, winrt::Windows::UI::Composition::ICompositionObject, winrt::Windows::UI::Composition::ICompositionObject2, winrt::Windows::UI::Composition::ICompositionObject3, winrt::Windows::UI::Composition::ICompositionObject4, winrt::Windows::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Windows::UI::Composition::IAnimationObject>
-    {
-        CompositionTexture(std::nullptr_t) noexcept {}
-        CompositionTexture(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Composition::ICompositionTexture(ptr, take_ownership_from_abi) {}
-        using impl::consume_t<CompositionTexture, winrt::Windows::UI::Composition::ICompositionObject>::StartAnimation;
-        using impl::consume_t<CompositionTexture, winrt::Windows::UI::Composition::ICompositionObject5>::StartAnimation;
     };
     struct __declspec(empty_bases) CompositionTransform : winrt::Windows::UI::Composition::ICompositionTransform,
         impl::base<CompositionTransform, winrt::Windows::UI::Composition::CompositionObject>,

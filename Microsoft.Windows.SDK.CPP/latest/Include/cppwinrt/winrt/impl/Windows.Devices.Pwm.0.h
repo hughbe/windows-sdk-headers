@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,14 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Devices::Pwm::Provider
 {
     struct IPwmProvider;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Pwm
 {
@@ -110,12 +102,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_IPwmController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PinCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) ActualFrequency() const;
-        WINRT_IMPL_AUTO(double) SetDesiredFrequency(double desiredFrequency) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MinFrequency() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxFrequency() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::Pwm::PwmPin) OpenPin(int32_t pinNumber) const;
+        [[nodiscard]] auto PinCount() const;
+        [[nodiscard]] auto ActualFrequency() const;
+        auto SetDesiredFrequency(double desiredFrequency) const;
+        [[nodiscard]] auto MinFrequency() const;
+        [[nodiscard]] auto MaxFrequency() const;
+        auto OpenPin(int32_t pinNumber) const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::IPwmController>
     {
@@ -124,7 +116,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_IPwmControllerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Pwm::PwmController>>) GetControllersAsync(winrt::Windows::Devices::Pwm::Provider::IPwmProvider const& provider) const;
+        auto GetControllersAsync(winrt::Windows::Devices::Pwm::Provider::IPwmProvider const& provider) const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::IPwmControllerStatics>
     {
@@ -133,7 +125,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_IPwmControllerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Pwm::PwmController>) GetDefaultAsync() const;
+        auto GetDefaultAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::IPwmControllerStatics2>
     {
@@ -142,9 +134,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_IPwmControllerStatics3
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(param::hstring const& friendlyName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Pwm::PwmController>) FromIdAsync(param::hstring const& deviceId) const;
+        auto GetDeviceSelector() const;
+        auto GetDeviceSelector(param::hstring const& friendlyName) const;
+        auto FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::IPwmControllerStatics3>
     {
@@ -153,14 +145,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_IPwmPin
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Pwm::PwmController) Controller() const;
-        WINRT_IMPL_AUTO(double) GetActiveDutyCyclePercentage() const;
-        WINRT_IMPL_AUTO(void) SetActiveDutyCyclePercentage(double dutyCyclePercentage) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Pwm::PwmPulsePolarity) Polarity() const;
-        WINRT_IMPL_AUTO(void) Polarity(winrt::Windows::Devices::Pwm::PwmPulsePolarity const& value) const;
-        WINRT_IMPL_AUTO(void) Start() const;
-        WINRT_IMPL_AUTO(void) Stop() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsStarted() const;
+        [[nodiscard]] auto Controller() const;
+        auto GetActiveDutyCyclePercentage() const;
+        auto SetActiveDutyCyclePercentage(double dutyCyclePercentage) const;
+        [[nodiscard]] auto Polarity() const;
+        auto Polarity(winrt::Windows::Devices::Pwm::PwmPulsePolarity const& value) const;
+        auto Start() const;
+        auto Stop() const;
+        [[nodiscard]] auto IsStarted() const;
     };
     template <> struct consume<winrt::Windows::Devices::Pwm::IPwmPin>
     {

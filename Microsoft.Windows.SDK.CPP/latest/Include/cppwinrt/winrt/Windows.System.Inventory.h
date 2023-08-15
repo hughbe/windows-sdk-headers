@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,39 +7,39 @@
 #ifndef WINRT_Windows_System_Inventory_H
 #define WINRT_Windows_System_Inventory_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.Inventory.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Inventory_IInstalledDesktopApp<D>::Id() const
+    template <typename D> auto consume_Windows_System_Inventory_IInstalledDesktopApp<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Inventory::IInstalledDesktopApp)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Inventory_IInstalledDesktopApp<D>::DisplayName() const
+    template <typename D> auto consume_Windows_System_Inventory_IInstalledDesktopApp<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Inventory::IInstalledDesktopApp)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Inventory_IInstalledDesktopApp<D>::Publisher() const
+    template <typename D> auto consume_Windows_System_Inventory_IInstalledDesktopApp<D>::Publisher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Inventory::IInstalledDesktopApp)->get_Publisher(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Inventory_IInstalledDesktopApp<D>::DisplayVersion() const
+    template <typename D> auto consume_Windows_System_Inventory_IInstalledDesktopApp<D>::DisplayVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Inventory::IInstalledDesktopApp)->get_DisplayVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::Inventory::InstalledDesktopApp>>) consume_Windows_System_Inventory_IInstalledDesktopAppStatics<D>::GetInventoryAsync() const
+    template <typename D> auto consume_Windows_System_Inventory_IInstalledDesktopAppStatics<D>::GetInventoryAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Inventory::IInstalledDesktopAppStatics)->GetInventoryAsync(&operation));

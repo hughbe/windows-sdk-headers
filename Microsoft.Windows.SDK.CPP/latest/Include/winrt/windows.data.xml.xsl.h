@@ -248,7 +248,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IXsltProcessor = _uuidof(IXsltProcessor);
+                    MIDL_CONST_ID IID& IID_IXsltProcessor = __uuidof(IXsltProcessor);
                 } /* Xsl */
             } /* Xml */
         } /* Data */
@@ -287,7 +287,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IXsltProcessor2 = _uuidof(IXsltProcessor2);
+                    MIDL_CONST_ID IID& IID_IXsltProcessor2 = __uuidof(IXsltProcessor2);
                 } /* Xsl */
             } /* Xml */
         } /* Data */
@@ -326,7 +326,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IXsltProcessorFactory = _uuidof(IXsltProcessorFactory);
+                    MIDL_CONST_ID IID& IID_IXsltProcessorFactory = __uuidof(IXsltProcessorFactory);
                 } /* Xsl */
             } /* Xml */
         } /* Data */

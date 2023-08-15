@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,14 +9,6 @@
 WINRT_EXPORT namespace winrt::Windows::Devices::I2c::Provider
 {
     struct II2cProvider;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation
-{
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::I2c
 {
@@ -146,12 +138,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cConnectionSettings
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SlaveAddress() const;
-        WINRT_IMPL_AUTO(void) SlaveAddress(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cBusSpeed) BusSpeed() const;
-        WINRT_IMPL_AUTO(void) BusSpeed(winrt::Windows::Devices::I2c::I2cBusSpeed const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cSharingMode) SharingMode() const;
-        WINRT_IMPL_AUTO(void) SharingMode(winrt::Windows::Devices::I2c::I2cSharingMode const& value) const;
+        [[nodiscard]] auto SlaveAddress() const;
+        auto SlaveAddress(int32_t value) const;
+        [[nodiscard]] auto BusSpeed() const;
+        auto BusSpeed(winrt::Windows::Devices::I2c::I2cBusSpeed const& value) const;
+        [[nodiscard]] auto SharingMode() const;
+        auto SharingMode(winrt::Windows::Devices::I2c::I2cSharingMode const& value) const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cConnectionSettings>
     {
@@ -160,7 +152,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cConnectionSettingsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cConnectionSettings) Create(int32_t slaveAddress) const;
+        auto Create(int32_t slaveAddress) const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cConnectionSettingsFactory>
     {
@@ -169,7 +161,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cController
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cDevice) GetDevice(winrt::Windows::Devices::I2c::I2cConnectionSettings const& settings) const;
+        auto GetDevice(winrt::Windows::Devices::I2c::I2cConnectionSettings const& settings) const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cController>
     {
@@ -178,8 +170,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cControllerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::I2c::I2cController>>) GetControllersAsync(winrt::Windows::Devices::I2c::Provider::II2cProvider const& provider) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::I2c::I2cController>) GetDefaultAsync() const;
+        auto GetControllersAsync(winrt::Windows::Devices::I2c::Provider::II2cProvider const& provider) const;
+        auto GetDefaultAsync() const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cControllerStatics>
     {
@@ -188,14 +180,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cDevice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cConnectionSettings) ConnectionSettings() const;
-        WINRT_IMPL_AUTO(void) Write(array_view<uint8_t const> buffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cTransferResult) WritePartial(array_view<uint8_t const> buffer) const;
-        WINRT_IMPL_AUTO(void) Read(array_view<uint8_t> buffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cTransferResult) ReadPartial(array_view<uint8_t> buffer) const;
-        WINRT_IMPL_AUTO(void) WriteRead(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::I2c::I2cTransferResult) WriteReadPartial(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const;
+        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] auto ConnectionSettings() const;
+        auto Write(array_view<uint8_t const> buffer) const;
+        auto WritePartial(array_view<uint8_t const> buffer) const;
+        auto Read(array_view<uint8_t> buffer) const;
+        auto ReadPartial(array_view<uint8_t> buffer) const;
+        auto WriteRead(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const;
+        auto WriteReadPartial(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cDevice>
     {
@@ -204,9 +196,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_I2c_II2cDeviceStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(param::hstring const& friendlyName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::I2c::I2cDevice>) FromIdAsync(param::hstring const& deviceId, winrt::Windows::Devices::I2c::I2cConnectionSettings const& settings) const;
+        auto GetDeviceSelector() const;
+        auto GetDeviceSelector(param::hstring const& friendlyName) const;
+        auto FromIdAsync(param::hstring const& deviceId, winrt::Windows::Devices::I2c::I2cConnectionSettings const& settings) const;
     };
     template <> struct consume<winrt::Windows::Devices::I2c::II2cDeviceStatics>
     {

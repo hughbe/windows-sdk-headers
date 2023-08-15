@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,16 +6,11 @@
 #pragma once
 #ifndef WINRT_Windows_ApplicationModel_Contacts_0_H
 #define WINRT_Windows_ApplicationModel_Contacts_0_H
-WINRT_EXPORT namespace winrt::Windows::Data::Text
-{
-    struct TextSegment;
-}
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename T> struct __declspec(empty_bases) IReference;
     struct Rect;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
@@ -25,15 +20,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
     struct IPropertySet;
-    template <typename T> struct __declspec(empty_bases) IVectorView;
-    template <typename T> struct __declspec(empty_bases) IVector;
     struct ValueSet;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStreamReference;
-    struct IRandomAccessStreamWithContentType;
-    struct RandomAccessStreamReference;
 }
 WINRT_EXPORT namespace winrt::Windows::System
 {
@@ -1651,10 +1642,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IAggregateContactManager
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::Contact>>) FindRawContactsAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) TryLinkContactsAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& primaryContact, winrt::Windows::ApplicationModel::Contacts::Contact const& secondaryContact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) UnlinkRawContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TrySetPreferredSourceForPictureAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& aggregateContact, winrt::Windows::ApplicationModel::Contacts::Contact const& rawContact) const;
+        auto FindRawContactsAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto TryLinkContactsAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& primaryContact, winrt::Windows::ApplicationModel::Contacts::Contact const& secondaryContact) const;
+        auto UnlinkRawContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto TrySetPreferredSourceForPictureAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& aggregateContact, winrt::Windows::ApplicationModel::Contacts::Contact const& rawContact) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IAggregateContactManager>
     {
@@ -1663,7 +1654,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IAggregateContactManager2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SetRemoteIdentificationInformationAsync(param::hstring const& contactListId, param::hstring const& remoteSourceId, param::hstring const& accountId) const;
+        auto SetRemoteIdentificationInformationAsync(param::hstring const& contactListId, param::hstring const& remoteSourceId, param::hstring const& accountId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IAggregateContactManager2>
     {
@@ -1672,11 +1663,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContact
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) Thumbnail() const;
-        WINRT_IMPL_AUTO(void) Thumbnail(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::IContactField>) Fields() const;
+        [[nodiscard]] auto Name() const;
+        auto Name(param::hstring const& value) const;
+        [[nodiscard]] auto Thumbnail() const;
+        auto Thumbnail(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto Fields() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContact>
     {
@@ -1685,20 +1676,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContact2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        WINRT_IMPL_AUTO(void) Id(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Notes() const;
-        WINRT_IMPL_AUTO(void) Notes(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactPhone>) Phones() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactEmail>) Emails() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactAddress>) Addresses() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>) ConnectedServiceAccounts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactDate>) ImportantDates() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) DataSuppliers() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>) JobInfo() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>) SignificantOthers() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>) Websites() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) ProviderProperties() const;
+        [[nodiscard]] auto Id() const;
+        auto Id(param::hstring const& value) const;
+        [[nodiscard]] auto Notes() const;
+        auto Notes(param::hstring const& value) const;
+        [[nodiscard]] auto Phones() const;
+        [[nodiscard]] auto Emails() const;
+        [[nodiscard]] auto Addresses() const;
+        [[nodiscard]] auto ConnectedServiceAccounts() const;
+        [[nodiscard]] auto ImportantDates() const;
+        [[nodiscard]] auto DataSuppliers() const;
+        [[nodiscard]] auto JobInfo() const;
+        [[nodiscard]] auto SignificantOthers() const;
+        [[nodiscard]] auto Websites() const;
+        [[nodiscard]] auto ProviderProperties() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContact2>
     {
@@ -1707,29 +1698,29 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContact3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) DisplayPictureUserUpdateTime() const;
-        WINRT_IMPL_AUTO(void) DisplayPictureUserUpdateTime(winrt::Windows::Foundation::DateTime const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMe() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AggregateId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
-        WINRT_IMPL_AUTO(void) RemoteId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RingToneToken() const;
-        WINRT_IMPL_AUTO(void) RingToneToken(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisplayPictureManuallySet() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) LargeDisplayPicture() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) SmallDisplayPicture() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) SourceDisplayPicture() const;
-        WINRT_IMPL_AUTO(void) SourceDisplayPicture(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TextToneToken() const;
-        WINRT_IMPL_AUTO(void) TextToneToken(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAggregate() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FullName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayNameOverride() const;
-        WINRT_IMPL_AUTO(void) DisplayNameOverride(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Nickname() const;
-        WINRT_IMPL_AUTO(void) Nickname(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SortName() const;
+        [[nodiscard]] auto ContactListId() const;
+        [[nodiscard]] auto DisplayPictureUserUpdateTime() const;
+        auto DisplayPictureUserUpdateTime(winrt::Windows::Foundation::DateTime const& value) const;
+        [[nodiscard]] auto IsMe() const;
+        [[nodiscard]] auto AggregateId() const;
+        [[nodiscard]] auto RemoteId() const;
+        auto RemoteId(param::hstring const& value) const;
+        [[nodiscard]] auto RingToneToken() const;
+        auto RingToneToken(param::hstring const& value) const;
+        [[nodiscard]] auto IsDisplayPictureManuallySet() const;
+        [[nodiscard]] auto LargeDisplayPicture() const;
+        [[nodiscard]] auto SmallDisplayPicture() const;
+        [[nodiscard]] auto SourceDisplayPicture() const;
+        auto SourceDisplayPicture(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] auto TextToneToken() const;
+        auto TextToneToken(param::hstring const& value) const;
+        [[nodiscard]] auto IsAggregate() const;
+        [[nodiscard]] auto FullName() const;
+        [[nodiscard]] auto DisplayNameOverride() const;
+        auto DisplayNameOverride(param::hstring const& value) const;
+        [[nodiscard]] auto Nickname() const;
+        auto Nickname(param::hstring const& value) const;
+        [[nodiscard]] auto SortName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContact3>
     {
@@ -1738,20 +1729,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAddress
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StreetAddress() const;
-        WINRT_IMPL_AUTO(void) StreetAddress(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Locality() const;
-        WINRT_IMPL_AUTO(void) Locality(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Region() const;
-        WINRT_IMPL_AUTO(void) Region(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Country() const;
-        WINRT_IMPL_AUTO(void) Country(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PostalCode() const;
-        WINRT_IMPL_AUTO(void) PostalCode(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactAddressKind) Kind() const;
-        WINRT_IMPL_AUTO(void) Kind(winrt::Windows::ApplicationModel::Contacts::ContactAddressKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto StreetAddress() const;
+        auto StreetAddress(param::hstring const& value) const;
+        [[nodiscard]] auto Locality() const;
+        auto Locality(param::hstring const& value) const;
+        [[nodiscard]] auto Region() const;
+        auto Region(param::hstring const& value) const;
+        [[nodiscard]] auto Country() const;
+        auto Country(param::hstring const& value) const;
+        [[nodiscard]] auto PostalCode() const;
+        auto PostalCode(param::hstring const& value) const;
+        [[nodiscard]] auto Kind() const;
+        auto Kind(winrt::Windows::ApplicationModel::Contacts::ContactAddressKind const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAddress>
     {
@@ -1760,16 +1751,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAnnotation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AnnotationListId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactId() const;
-        WINRT_IMPL_AUTO(void) ContactId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RemoteId() const;
-        WINRT_IMPL_AUTO(void) RemoteId(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations) SupportedOperations() const;
-        WINRT_IMPL_AUTO(void) SupportedOperations(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisabled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) ProviderProperties() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto AnnotationListId() const;
+        [[nodiscard]] auto ContactId() const;
+        auto ContactId(param::hstring const& value) const;
+        [[nodiscard]] auto RemoteId() const;
+        auto RemoteId(param::hstring const& value) const;
+        [[nodiscard]] auto SupportedOperations() const;
+        auto SupportedOperations(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations const& value) const;
+        [[nodiscard]] auto IsDisabled() const;
+        [[nodiscard]] auto ProviderProperties() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAnnotation>
     {
@@ -1778,8 +1769,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAnnotation2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
-        WINRT_IMPL_AUTO(void) ContactListId(param::hstring const& value) const;
+        [[nodiscard]] auto ContactListId() const;
+        auto ContactListId(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAnnotation2>
     {
@@ -1788,15 +1779,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAnnotationList
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderPackageFamilyName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TrySaveAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>) GetAnnotationAsync(param::hstring const& annotationId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>>) FindAnnotationsByRemoteIdAsync(param::hstring const& remoteId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>>) FindAnnotationsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto ProviderPackageFamilyName() const;
+        [[nodiscard]] auto UserDataAccountId() const;
+        auto DeleteAsync() const;
+        auto TrySaveAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
+        auto GetAnnotationAsync(param::hstring const& annotationId) const;
+        auto FindAnnotationsByRemoteIdAsync(param::hstring const& remoteId) const;
+        auto FindAnnotationsAsync() const;
+        auto DeleteAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAnnotationList>
     {
@@ -1805,14 +1796,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAnnotationStore
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>) FindContactIdsByEmailAsync(param::hstring const& emailAddress) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>) FindContactIdsByPhoneNumberAsync(param::hstring const& phoneNumber) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>>) FindAnnotationsForContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DisableAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>) CreateAnnotationListAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>) CreateAnnotationListAsync(param::hstring const& userDataAccountId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>) GetAnnotationListAsync(param::hstring const& annotationListId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>>) FindAnnotationListsAsync() const;
+        auto FindContactIdsByEmailAsync(param::hstring const& emailAddress) const;
+        auto FindContactIdsByPhoneNumberAsync(param::hstring const& phoneNumber) const;
+        auto FindAnnotationsForContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto DisableAnnotationAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotation const& annotation) const;
+        auto CreateAnnotationListAsync() const;
+        auto CreateAnnotationListAsync(param::hstring const& userDataAccountId) const;
+        auto GetAnnotationListAsync(param::hstring const& annotationListId) const;
+        auto FindAnnotationListsAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAnnotationStore>
     {
@@ -1821,7 +1812,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactAnnotationStore2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>>) FindAnnotationsForContactListAsync(param::hstring const& contactListId) const;
+        auto FindAnnotationsForContactListAsync(param::hstring const& contactListId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactAnnotationStore2>
     {
@@ -1830,8 +1821,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactBatch
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::Contact>) Contacts() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactBatchStatus) Status() const;
+        [[nodiscard]] auto Contacts() const;
+        [[nodiscard]] auto Status() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactBatch>
     {
@@ -1840,7 +1831,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactCardDelayedDataLoader
     {
-        WINRT_IMPL_AUTO(void) SetData(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto SetData(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactCardDelayedDataLoader>
     {
@@ -1849,10 +1840,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactCardOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactCardHeaderKind) HeaderKind() const;
-        WINRT_IMPL_AUTO(void) HeaderKind(winrt::Windows::ApplicationModel::Contacts::ContactCardHeaderKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactCardTabKind) InitialTabKind() const;
-        WINRT_IMPL_AUTO(void) InitialTabKind(winrt::Windows::ApplicationModel::Contacts::ContactCardTabKind const& value) const;
+        [[nodiscard]] auto HeaderKind() const;
+        auto HeaderKind(winrt::Windows::ApplicationModel::Contacts::ContactCardHeaderKind const& value) const;
+        [[nodiscard]] auto InitialTabKind() const;
+        auto InitialTabKind(winrt::Windows::ApplicationModel::Contacts::ContactCardTabKind const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactCardOptions>
     {
@@ -1861,7 +1852,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactCardOptions2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ServerSearchContactListIds() const;
+        [[nodiscard]] auto ServerSearchContactListIds() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactCardOptions2>
     {
@@ -1870,8 +1861,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChange
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeType) ChangeType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        [[nodiscard]] auto ChangeType() const;
+        [[nodiscard]] auto Contact() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChange>
     {
@@ -1880,9 +1871,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChangeReader
     {
-        WINRT_IMPL_AUTO(void) AcceptChanges() const;
-        WINRT_IMPL_AUTO(void) AcceptChangesThrough(winrt::Windows::ApplicationModel::Contacts::ContactChange const& lastChangeToAccept) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactChange>>) ReadBatchAsync() const;
+        auto AcceptChanges() const;
+        auto AcceptChangesThrough(winrt::Windows::ApplicationModel::Contacts::ContactChange const& lastChangeToAccept) const;
+        auto ReadBatchAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChangeReader>
     {
@@ -1891,9 +1882,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChangeTracker
     {
-        WINRT_IMPL_AUTO(void) Enable() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeReader) GetChangeReader() const;
-        WINRT_IMPL_AUTO(void) Reset() const;
+        auto Enable() const;
+        auto GetChangeReader() const;
+        auto Reset() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChangeTracker>
     {
@@ -1902,7 +1893,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChangeTracker2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTracking() const;
+        [[nodiscard]] auto IsTracking() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChangeTracker2>
     {
@@ -1911,7 +1902,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChangedDeferral
     {
-        WINRT_IMPL_AUTO(void) Complete() const;
+        auto Complete() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChangedDeferral>
     {
@@ -1920,7 +1911,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactChangedEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral) GetDeferral() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactChangedEventArgs>
     {
@@ -1929,10 +1920,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactConnectedServiceAccount
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        WINRT_IMPL_AUTO(void) Id(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ServiceName() const;
-        WINRT_IMPL_AUTO(void) ServiceName(param::hstring const& value) const;
+        [[nodiscard]] auto Id() const;
+        auto Id(param::hstring const& value) const;
+        [[nodiscard]] auto ServiceName() const;
+        auto ServiceName(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactConnectedServiceAccount>
     {
@@ -1941,16 +1932,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactDate
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) Day() const;
-        WINRT_IMPL_AUTO(void) Day(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) Month() const;
-        WINRT_IMPL_AUTO(void) Month(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) Year() const;
-        WINRT_IMPL_AUTO(void) Year(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactDateKind) Kind() const;
-        WINRT_IMPL_AUTO(void) Kind(winrt::Windows::ApplicationModel::Contacts::ContactDateKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto Day() const;
+        auto Day(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] auto Month() const;
+        auto Month(winrt::Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] auto Year() const;
+        auto Year(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto Kind() const;
+        auto Kind(winrt::Windows::ApplicationModel::Contacts::ContactDateKind const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactDate>
     {
@@ -1959,12 +1950,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactEmail
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Address() const;
-        WINRT_IMPL_AUTO(void) Address(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactEmailKind) Kind() const;
-        WINRT_IMPL_AUTO(void) Kind(winrt::Windows::ApplicationModel::Contacts::ContactEmailKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto Address() const;
+        auto Address(param::hstring const& value) const;
+        [[nodiscard]] auto Kind() const;
+        auto Kind(winrt::Windows::ApplicationModel::Contacts::ContactEmailKind const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactEmail>
     {
@@ -1973,10 +1964,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactField
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactFieldType) Type() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory) Category() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Value() const;
+        [[nodiscard]] auto Type() const;
+        [[nodiscard]] auto Category() const;
+        [[nodiscard]] auto Name() const;
+        [[nodiscard]] auto Value() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactField>
     {
@@ -1985,9 +1976,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactFieldFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactField) CreateField(param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactField) CreateField(param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactField) CreateField(param::hstring const& name, param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
+        auto CreateField(param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type) const;
+        auto CreateField(param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
+        auto CreateField(param::hstring const& name, param::hstring const& value, winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
     {
@@ -2004,14 +1995,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactInformation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>) GetThumbnailAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactField>) Emails() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactField>) PhoneNumbers() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>) Locations() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>) InstantMessages() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactField>) CustomFields() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactField>) QueryCustomFields(param::hstring const& customName) const;
+        [[nodiscard]] auto Name() const;
+        auto GetThumbnailAsync() const;
+        [[nodiscard]] auto Emails() const;
+        [[nodiscard]] auto PhoneNumbers() const;
+        [[nodiscard]] auto Locations() const;
+        [[nodiscard]] auto InstantMessages() const;
+        [[nodiscard]] auto CustomFields() const;
+        auto QueryCustomFields(param::hstring const& customName) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactInformation>
     {
@@ -2020,10 +2011,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactInstantMessageField
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Service() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayText() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) LaunchUri() const;
+        [[nodiscard]] auto UserName() const;
+        [[nodiscard]] auto Service() const;
+        [[nodiscard]] auto DisplayText() const;
+        [[nodiscard]] auto LaunchUri() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageField>
     {
@@ -2032,9 +2023,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactInstantMessageFieldFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField) CreateInstantMessage(param::hstring const& userName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField) CreateInstantMessage(param::hstring const& userName, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField) CreateInstantMessage(param::hstring const& userName, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& service, param::hstring const& displayText, winrt::Windows::Foundation::Uri const& verb) const;
+        auto CreateInstantMessage(param::hstring const& userName) const;
+        auto CreateInstantMessage(param::hstring const& userName, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
+        auto CreateInstantMessage(param::hstring const& userName, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& service, param::hstring const& displayText, winrt::Windows::Foundation::Uri const& verb) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
     {
@@ -2043,22 +2034,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactJobInfo
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CompanyName() const;
-        WINRT_IMPL_AUTO(void) CompanyName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CompanyYomiName() const;
-        WINRT_IMPL_AUTO(void) CompanyYomiName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Department() const;
-        WINRT_IMPL_AUTO(void) Department(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
-        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Manager() const;
-        WINRT_IMPL_AUTO(void) Manager(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Office() const;
-        WINRT_IMPL_AUTO(void) Office(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CompanyAddress() const;
-        WINRT_IMPL_AUTO(void) CompanyAddress(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto CompanyName() const;
+        auto CompanyName(param::hstring const& value) const;
+        [[nodiscard]] auto CompanyYomiName() const;
+        auto CompanyYomiName(param::hstring const& value) const;
+        [[nodiscard]] auto Department() const;
+        auto Department(param::hstring const& value) const;
+        [[nodiscard]] auto Title() const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto Manager() const;
+        auto Manager(param::hstring const& value) const;
+        [[nodiscard]] auto Office() const;
+        auto Office(param::hstring const& value) const;
+        [[nodiscard]] auto CompanyAddress() const;
+        auto CompanyAddress(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactJobInfo>
     {
@@ -2067,11 +2058,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactLaunchActionVerbsStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Call() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Message() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Map() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Post() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) VideoCall() const;
+        [[nodiscard]] auto Call() const;
+        [[nodiscard]] auto Message() const;
+        [[nodiscard]] auto Map() const;
+        [[nodiscard]] auto Post() const;
+        [[nodiscard]] auto VideoCall() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactLaunchActionVerbsStatics>
     {
@@ -2080,33 +2071,33 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactList
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourceDisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsHidden() const;
-        WINRT_IMPL_AUTO(void) IsHidden(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess) OtherAppReadAccess() const;
-        WINRT_IMPL_AUTO(void) OtherAppReadAccess(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppWriteAccess) OtherAppWriteAccess() const;
-        WINRT_IMPL_AUTO(void) OtherAppWriteAccess(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppWriteAccess const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker) ChangeTracker() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager) SyncManager() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) SupportsServerSearch() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ContactChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactList, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto DisplayName() const;
+        auto DisplayName(param::hstring const& value) const;
+        [[nodiscard]] auto SourceDisplayName() const;
+        [[nodiscard]] auto IsHidden() const;
+        auto IsHidden(bool value) const;
+        [[nodiscard]] auto OtherAppReadAccess() const;
+        auto OtherAppReadAccess(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess const& value) const;
+        [[nodiscard]] auto OtherAppWriteAccess() const;
+        auto OtherAppWriteAccess(winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppWriteAccess const& value) const;
+        [[nodiscard]] auto ChangeTracker() const;
+        [[nodiscard]] auto SyncManager() const;
+        [[nodiscard]] auto SupportsServerSearch() const;
+        [[nodiscard]] auto UserDataAccountId() const;
+        auto ContactChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactList, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
         using ContactChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Contacts::IContactList, &impl::abi_t<winrt::Windows::ApplicationModel::Contacts::IContactList>::remove_ContactChanged>;
         [[nodiscard]] ContactChanged_revoker ContactChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactList, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
-        WINRT_IMPL_AUTO(void) ContactChanged(winrt::event_token const& value) const noexcept;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) GetContactFromRemoteIdAsync(param::hstring const& remoteId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) GetMeContactAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactReader) GetContactReader() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactReader) GetContactReader(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) GetContactAsync(param::hstring const& contactId) const;
+        auto ContactChanged(winrt::event_token const& value) const noexcept;
+        auto SaveAsync() const;
+        auto DeleteAsync() const;
+        auto GetContactFromRemoteIdAsync(param::hstring const& remoteId) const;
+        auto GetMeContactAsync() const;
+        auto GetContactReader() const;
+        auto GetContactReader(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions const& options) const;
+        auto SaveContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto DeleteContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto GetContactAsync(param::hstring const& contactId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactList>
     {
@@ -2115,9 +2106,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactList2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) RegisterSyncManagerAsync() const;
-        WINRT_IMPL_AUTO(void) SupportsServerSearch(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints) SyncConstraints() const;
+        auto RegisterSyncManagerAsync() const;
+        auto SupportsServerSearch(bool value) const;
+        [[nodiscard]] auto SyncConstraints() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactList2>
     {
@@ -2126,8 +2117,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactList3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations) LimitedWriteOperations() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker) GetChangeTracker(param::hstring const& identity) const;
+        [[nodiscard]] auto LimitedWriteOperations() const;
+        auto GetChangeTracker(param::hstring const& identity) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactList3>
     {
@@ -2136,8 +2127,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactListLimitedWriteOperations
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryCreateOrUpdateContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) TryDeleteContactAsync(param::hstring const& contactId) const;
+        auto TryCreateOrUpdateContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto TryDeleteContactAsync(param::hstring const& contactId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactListLimitedWriteOperations>
     {
@@ -2146,62 +2137,62 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactListSyncConstraints
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanSyncDescriptions() const;
-        WINRT_IMPL_AUTO(void) CanSyncDescriptions(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxHomePhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxHomePhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxMobilePhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxMobilePhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxWorkPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxWorkPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxOtherPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxOtherPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxPagerPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxPagerPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxBusinessFaxPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxBusinessFaxPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxHomeFaxPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxHomeFaxPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxCompanyPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxCompanyPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxAssistantPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxAssistantPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxRadioPhoneNumbers() const;
-        WINRT_IMPL_AUTO(void) MaxRadioPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxPersonalEmailAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxPersonalEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxWorkEmailAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxWorkEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxOtherEmailAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxOtherEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxHomeAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxHomeAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxWorkAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxWorkAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxOtherAddresses() const;
-        WINRT_IMPL_AUTO(void) MaxOtherAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxBirthdayDates() const;
-        WINRT_IMPL_AUTO(void) MaxBirthdayDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxAnniversaryDates() const;
-        WINRT_IMPL_AUTO(void) MaxAnniversaryDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxOtherDates() const;
-        WINRT_IMPL_AUTO(void) MaxOtherDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxOtherRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxOtherRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxSpouseRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxSpouseRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxPartnerRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxPartnerRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxSiblingRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxSiblingRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxParentRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxParentRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxChildRelationships() const;
-        WINRT_IMPL_AUTO(void) MaxChildRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxJobInfo() const;
-        WINRT_IMPL_AUTO(void) MaxJobInfo(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) MaxWebsites() const;
-        WINRT_IMPL_AUTO(void) MaxWebsites(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto CanSyncDescriptions() const;
+        auto CanSyncDescriptions(bool value) const;
+        [[nodiscard]] auto MaxHomePhoneNumbers() const;
+        auto MaxHomePhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxMobilePhoneNumbers() const;
+        auto MaxMobilePhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxWorkPhoneNumbers() const;
+        auto MaxWorkPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxOtherPhoneNumbers() const;
+        auto MaxOtherPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxPagerPhoneNumbers() const;
+        auto MaxPagerPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxBusinessFaxPhoneNumbers() const;
+        auto MaxBusinessFaxPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxHomeFaxPhoneNumbers() const;
+        auto MaxHomeFaxPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxCompanyPhoneNumbers() const;
+        auto MaxCompanyPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxAssistantPhoneNumbers() const;
+        auto MaxAssistantPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxRadioPhoneNumbers() const;
+        auto MaxRadioPhoneNumbers(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxPersonalEmailAddresses() const;
+        auto MaxPersonalEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxWorkEmailAddresses() const;
+        auto MaxWorkEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxOtherEmailAddresses() const;
+        auto MaxOtherEmailAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxHomeAddresses() const;
+        auto MaxHomeAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxWorkAddresses() const;
+        auto MaxWorkAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxOtherAddresses() const;
+        auto MaxOtherAddresses(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxBirthdayDates() const;
+        auto MaxBirthdayDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxAnniversaryDates() const;
+        auto MaxAnniversaryDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxOtherDates() const;
+        auto MaxOtherDates(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxOtherRelationships() const;
+        auto MaxOtherRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxSpouseRelationships() const;
+        auto MaxSpouseRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxPartnerRelationships() const;
+        auto MaxPartnerRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxSiblingRelationships() const;
+        auto MaxSiblingRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxParentRelationships() const;
+        auto MaxParentRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxChildRelationships() const;
+        auto MaxChildRelationships(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxJobInfo() const;
+        auto MaxJobInfo(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto MaxWebsites() const;
+        auto MaxWebsites(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactListSyncConstraints>
     {
@@ -2210,14 +2201,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactListSyncManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus) Status() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) LastSuccessfulSyncTime() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) LastAttemptedSyncTime() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) SyncAsync() const;
-        WINRT_IMPL_AUTO(winrt::event_token) SyncStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] auto Status() const;
+        [[nodiscard]] auto LastSuccessfulSyncTime() const;
+        [[nodiscard]] auto LastAttemptedSyncTime() const;
+        auto SyncAsync() const;
+        auto SyncStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
         using SyncStatusChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager, &impl::abi_t<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager>::remove_SyncStatusChanged>;
         [[nodiscard]] SyncStatusChanged_revoker SyncStatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        WINRT_IMPL_AUTO(void) SyncStatusChanged(winrt::event_token const& token) const noexcept;
+        auto SyncStatusChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager>
     {
@@ -2226,9 +2217,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactListSyncManager2
     {
-        WINRT_IMPL_AUTO(void) Status(winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus const& value) const;
-        WINRT_IMPL_AUTO(void) LastSuccessfulSyncTime(winrt::Windows::Foundation::DateTime const& value) const;
-        WINRT_IMPL_AUTO(void) LastAttemptedSyncTime(winrt::Windows::Foundation::DateTime const& value) const;
+        auto Status(winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus const& value) const;
+        auto LastSuccessfulSyncTime(winrt::Windows::Foundation::DateTime const& value) const;
+        auto LastAttemptedSyncTime(winrt::Windows::Foundation::DateTime const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager2>
     {
@@ -2237,12 +2228,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactLocationField
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UnstructuredAddress() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Street() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) City() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Region() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Country() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PostalCode() const;
+        [[nodiscard]] auto UnstructuredAddress() const;
+        [[nodiscard]] auto Street() const;
+        [[nodiscard]] auto City() const;
+        [[nodiscard]] auto Region() const;
+        [[nodiscard]] auto Country() const;
+        [[nodiscard]] auto PostalCode() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactLocationField>
     {
@@ -2251,9 +2242,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactLocationFieldFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactLocationField) CreateLocation(param::hstring const& unstructuredAddress) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactLocationField) CreateLocation(param::hstring const& unstructuredAddress, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactLocationField) CreateLocation(param::hstring const& unstructuredAddress, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& street, param::hstring const& city, param::hstring const& region, param::hstring const& country, param::hstring const& postalCode) const;
+        auto CreateLocation(param::hstring const& unstructuredAddress) const;
+        auto CreateLocation(param::hstring const& unstructuredAddress, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category) const;
+        auto CreateLocation(param::hstring const& unstructuredAddress, winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& street, param::hstring const& city, param::hstring const& region, param::hstring const& country, param::hstring const& postalCode) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
     {
@@ -2262,16 +2253,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerForUser
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::RandomAccessStreamReference>) ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::RandomAccessStreamReference>) ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, uint32_t maxBytes) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) ConvertVCardToContactAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& vCard) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactStore>) RequestStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType const& accessType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>) RequestAnnotationStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType const& accessType) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder) SystemDisplayNameOrder() const;
-        WINRT_IMPL_AUTO(void) SystemDisplayNameOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder) SystemSortOrder() const;
-        WINRT_IMPL_AUTO(void) SystemSortOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        auto ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, uint32_t maxBytes) const;
+        auto ConvertVCardToContactAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& vCard) const;
+        auto RequestStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType const& accessType) const;
+        auto RequestAnnotationStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType const& accessType) const;
+        [[nodiscard]] auto SystemDisplayNameOrder() const;
+        auto SystemDisplayNameOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
+        [[nodiscard]] auto SystemSortOrder() const;
+        auto SystemSortOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerForUser>
     {
@@ -2280,7 +2271,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerForUser2
     {
-        WINRT_IMPL_AUTO(void) ShowFullContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions const& fullContactCardOptions) const;
+        auto ShowFullContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions const& fullContactCardOptions) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerForUser2>
     {
@@ -2289,9 +2280,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerStatics
     {
-        WINRT_IMPL_AUTO(void) ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection) const;
-        WINRT_IMPL_AUTO(void) ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader) ShowDelayLoadedContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement) const;
+        auto ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection) const;
+        auto ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement) const;
+        auto ShowDelayLoadedContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerStatics>
     {
@@ -2300,7 +2291,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerStatics2
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactStore>) RequestStoreAsync() const;
+        auto RequestStoreAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerStatics2>
     {
@@ -2309,20 +2300,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerStatics3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::RandomAccessStreamReference>) ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::RandomAccessStreamReference>) ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, uint32_t maxBytes) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) ConvertVCardToContactAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& vCard) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactStore>) RequestStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType const& accessType) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>) RequestAnnotationStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType const& accessType) const;
-        WINRT_IMPL_AUTO(bool) IsShowContactCardSupported() const;
-        WINRT_IMPL_AUTO(void) ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::ApplicationModel::Contacts::ContactCardOptions const& contactCardOptions) const;
-        WINRT_IMPL_AUTO(bool) IsShowDelayLoadedContactCardSupported() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader) ShowDelayLoadedContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::ApplicationModel::Contacts::ContactCardOptions const& contactCardOptions) const;
-        WINRT_IMPL_AUTO(void) ShowFullContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions const& fullContactCardOptions) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder) SystemDisplayNameOrder() const;
-        WINRT_IMPL_AUTO(void) SystemDisplayNameOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder) SystemSortOrder() const;
-        WINRT_IMPL_AUTO(void) SystemSortOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
+        auto ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto ConvertContactToVCardAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, uint32_t maxBytes) const;
+        auto ConvertVCardToContactAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& vCard) const;
+        auto RequestStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType const& accessType) const;
+        auto RequestAnnotationStoreAsync(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType const& accessType) const;
+        auto IsShowContactCardSupported() const;
+        auto ShowContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::ApplicationModel::Contacts::ContactCardOptions const& contactCardOptions) const;
+        auto IsShowDelayLoadedContactCardSupported() const;
+        auto ShowDelayLoadedContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::ApplicationModel::Contacts::ContactCardOptions const& contactCardOptions) const;
+        auto ShowFullContactCard(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions const& fullContactCardOptions) const;
+        [[nodiscard]] auto SystemDisplayNameOrder() const;
+        auto SystemDisplayNameOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
+        [[nodiscard]] auto SystemSortOrder() const;
+        auto SystemSortOrder(winrt::Windows::ApplicationModel::Contacts::ContactNameOrder const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerStatics3>
     {
@@ -2331,7 +2322,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerStatics4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser) GetForUser(winrt::Windows::System::User const& user) const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerStatics4>
     {
@@ -2340,9 +2331,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactManagerStatics5
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsShowFullContactCardSupportedAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeMiddleNameInSystemDisplayAndSort() const;
-        WINRT_IMPL_AUTO(void) IncludeMiddleNameInSystemDisplayAndSort(bool value) const;
+        auto IsShowFullContactCardSupportedAsync() const;
+        [[nodiscard]] auto IncludeMiddleNameInSystemDisplayAndSort() const;
+        auto IncludeMiddleNameInSystemDisplayAndSort(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactManagerStatics5>
     {
@@ -2351,9 +2342,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactMatchReason
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactMatchReasonKind) Field() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Data::Text::TextSegment>) Segments() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        [[nodiscard]] auto Field() const;
+        [[nodiscard]] auto Segments() const;
+        [[nodiscard]] auto Text() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactMatchReason>
     {
@@ -2362,22 +2353,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactName
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FirstName() const;
-        WINRT_IMPL_AUTO(void) FirstName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) LastName() const;
-        WINRT_IMPL_AUTO(void) LastName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MiddleName() const;
-        WINRT_IMPL_AUTO(void) MiddleName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) YomiGivenName() const;
-        WINRT_IMPL_AUTO(void) YomiGivenName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) YomiFamilyName() const;
-        WINRT_IMPL_AUTO(void) YomiFamilyName(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HonorificNameSuffix() const;
-        WINRT_IMPL_AUTO(void) HonorificNameSuffix(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HonorificNamePrefix() const;
-        WINRT_IMPL_AUTO(void) HonorificNamePrefix(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) YomiDisplayName() const;
+        [[nodiscard]] auto FirstName() const;
+        auto FirstName(param::hstring const& value) const;
+        [[nodiscard]] auto LastName() const;
+        auto LastName(param::hstring const& value) const;
+        [[nodiscard]] auto MiddleName() const;
+        auto MiddleName(param::hstring const& value) const;
+        [[nodiscard]] auto YomiGivenName() const;
+        auto YomiGivenName(param::hstring const& value) const;
+        [[nodiscard]] auto YomiFamilyName() const;
+        auto YomiFamilyName(param::hstring const& value) const;
+        [[nodiscard]] auto HonorificNameSuffix() const;
+        auto HonorificNameSuffix(param::hstring const& value) const;
+        [[nodiscard]] auto HonorificNamePrefix() const;
+        auto HonorificNamePrefix(param::hstring const& value) const;
+        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] auto YomiDisplayName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactName>
     {
@@ -2386,17 +2377,17 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPanel
     {
-        WINRT_IMPL_AUTO(void) ClosePanel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>) HeaderColor() const;
-        WINRT_IMPL_AUTO(void) HeaderColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) LaunchFullAppRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs> const& handler) const;
+        auto ClosePanel() const;
+        [[nodiscard]] auto HeaderColor() const;
+        auto HeaderColor(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color> const& value) const;
+        auto LaunchFullAppRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs> const& handler) const;
         using LaunchFullAppRequested_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Contacts::IContactPanel, &impl::abi_t<winrt::Windows::ApplicationModel::Contacts::IContactPanel>::remove_LaunchFullAppRequested>;
         [[nodiscard]] LaunchFullAppRequested_revoker LaunchFullAppRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) LaunchFullAppRequested(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) Closing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs> const& handler) const;
+        auto LaunchFullAppRequested(winrt::event_token const& token) const noexcept;
+        auto Closing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs> const& handler) const;
         using Closing_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Contacts::IContactPanel, &impl::abi_t<winrt::Windows::ApplicationModel::Contacts::IContactPanel>::remove_Closing>;
         [[nodiscard]] Closing_revoker Closing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs> const& handler) const;
-        WINRT_IMPL_AUTO(void) Closing(winrt::event_token const& token) const noexcept;
+        auto Closing(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPanel>
     {
@@ -2405,7 +2396,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPanelClosingEventArgs
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
+        auto GetDeferral() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPanelClosingEventArgs>
     {
@@ -2414,8 +2405,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPanelLaunchFullAppRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
-        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPanelLaunchFullAppRequestedEventArgs>
     {
@@ -2424,12 +2415,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPhone
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Number() const;
-        WINRT_IMPL_AUTO(void) Number(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind) Kind() const;
-        WINRT_IMPL_AUTO(void) Kind(winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto Number() const;
+        auto Number(param::hstring const& value) const;
+        [[nodiscard]] auto Kind() const;
+        auto Kind(winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPhone>
     {
@@ -2438,13 +2429,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPicker
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CommitButtonText() const;
-        WINRT_IMPL_AUTO(void) CommitButtonText(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactSelectionMode) SelectionMode() const;
-        WINRT_IMPL_AUTO(void) SelectionMode(winrt::Windows::ApplicationModel::Contacts::ContactSelectionMode const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) DesiredFields() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactInformation>) PickSingleContactAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactInformation>>) PickMultipleContactsAsync() const;
+        [[nodiscard]] auto CommitButtonText() const;
+        auto CommitButtonText(param::hstring const& value) const;
+        [[nodiscard]] auto SelectionMode() const;
+        auto SelectionMode(winrt::Windows::ApplicationModel::Contacts::ContactSelectionMode const& value) const;
+        [[nodiscard]] auto DesiredFields() const;
+        auto PickSingleContactAsync() const;
+        auto PickMultipleContactsAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPicker>
     {
@@ -2453,9 +2444,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPicker2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>) DesiredFieldsWithContactFieldType() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) PickContactAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Contacts::Contact>>) PickContactsAsync() const;
+        [[nodiscard]] auto DesiredFieldsWithContactFieldType() const;
+        auto PickContactAsync() const;
+        auto PickContactsAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPicker2>
     {
@@ -2464,7 +2455,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPicker3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
+        [[nodiscard]] auto User() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPicker3>
     {
@@ -2473,8 +2464,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactPickerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactPicker) CreateForUser(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) IsSupportedAsync() const;
+        auto CreateForUser(winrt::Windows::System::User const& user) const;
+        auto IsSupportedAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactPickerStatics>
     {
@@ -2483,15 +2474,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactQueryOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch) TextSearch() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ContactListIds() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IncludeContactsFromHiddenLists() const;
-        WINRT_IMPL_AUTO(void) IncludeContactsFromHiddenLists(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields) DesiredFields() const;
-        WINRT_IMPL_AUTO(void) DesiredFields(winrt::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations) DesiredOperations() const;
-        WINRT_IMPL_AUTO(void) DesiredOperations(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) AnnotationListIds() const;
+        [[nodiscard]] auto TextSearch() const;
+        [[nodiscard]] auto ContactListIds() const;
+        [[nodiscard]] auto IncludeContactsFromHiddenLists() const;
+        auto IncludeContactsFromHiddenLists(bool value) const;
+        [[nodiscard]] auto DesiredFields() const;
+        auto DesiredFields(winrt::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields const& value) const;
+        [[nodiscard]] auto DesiredOperations() const;
+        auto DesiredOperations(winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations const& value) const;
+        [[nodiscard]] auto AnnotationListIds() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactQueryOptions>
     {
@@ -2500,8 +2491,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactQueryOptionsFactory
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions) CreateWithText(param::hstring const& text) const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions) CreateWithTextAndFields(param::hstring const& text, winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields const& fields) const;
+        auto CreateWithText(param::hstring const& text) const;
+        auto CreateWithTextAndFields(param::hstring const& text, winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields const& fields) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactQueryOptionsFactory>
     {
@@ -2510,12 +2501,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactQueryTextSearch
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields) Fields() const;
-        WINRT_IMPL_AUTO(void) Fields(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchScope) SearchScope() const;
-        WINRT_IMPL_AUTO(void) SearchScope(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchScope const& value) const;
+        [[nodiscard]] auto Fields() const;
+        auto Fields(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields const& value) const;
+        [[nodiscard]] auto Text() const;
+        auto Text(param::hstring const& value) const;
+        [[nodiscard]] auto SearchScope() const;
+        auto SearchScope(winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchScope const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactQueryTextSearch>
     {
@@ -2524,8 +2515,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactReader
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactBatch>) ReadBatchAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>) GetMatchingPropertiesWithMatchReason(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto ReadBatchAsync() const;
+        auto GetMatchingPropertiesWithMatchReason(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactReader>
     {
@@ -2534,10 +2525,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactSignificantOther
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
-        WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto Name() const;
+        auto Name(param::hstring const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactSignificantOther>
     {
@@ -2546,8 +2537,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactSignificantOther2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactRelationship) Relationship() const;
-        WINRT_IMPL_AUTO(void) Relationship(winrt::Windows::ApplicationModel::Contacts::ContactRelationship const& value) const;
+        [[nodiscard]] auto Relationship() const;
+        auto Relationship(winrt::Windows::ApplicationModel::Contacts::ContactRelationship const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactSignificantOther2>
     {
@@ -2556,9 +2547,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactStore
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::Contact>>) FindContactsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::Contact>>) FindContactsAsync(param::hstring const& searchText) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) GetContactAsync(param::hstring const& contactId) const;
+        auto FindContactsAsync() const;
+        auto FindContactsAsync(param::hstring const& searchText) const;
+        auto GetContactAsync(param::hstring const& contactId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactStore>
     {
@@ -2567,19 +2558,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactStore2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker) ChangeTracker() const;
-        WINRT_IMPL_AUTO(winrt::event_token) ContactChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactStore, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
+        [[nodiscard]] auto ChangeTracker() const;
+        auto ContactChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactStore, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
         using ContactChanged_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::Contacts::IContactStore2, &impl::abi_t<winrt::Windows::ApplicationModel::Contacts::IContactStore2>::remove_ContactChanged>;
         [[nodiscard]] ContactChanged_revoker ContactChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactStore, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs> const& value) const;
-        WINRT_IMPL_AUTO(void) ContactChanged(winrt::event_token const& value) const noexcept;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::AggregateContactManager) AggregateContactManager() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactList>>) FindContactListsAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactList>) GetContactListAsync(param::hstring const& contactListId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactList>) CreateContactListAsync(param::hstring const& displayName) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::Contact>) GetMeContactAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactReader) GetContactReader() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactReader) GetContactReader(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions const& options) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::ContactList>) CreateContactListAsync(param::hstring const& displayName, param::hstring const& userDataAccountId) const;
+        auto ContactChanged(winrt::event_token const& value) const noexcept;
+        [[nodiscard]] auto AggregateContactManager() const;
+        auto FindContactListsAsync() const;
+        auto GetContactListAsync(param::hstring const& contactListId) const;
+        auto CreateContactListAsync(param::hstring const& displayName) const;
+        auto GetMeContactAsync() const;
+        auto GetContactReader() const;
+        auto GetContactReader(winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions const& options) const;
+        auto CreateContactListAsync(param::hstring const& displayName, param::hstring const& userDataAccountId) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactStore2>
     {
@@ -2588,7 +2579,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactStore3
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker) GetChangeTracker(param::hstring const& identity) const;
+        auto GetChangeTracker(param::hstring const& identity) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactStore3>
     {
@@ -2605,10 +2596,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactWebsite
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) Uri() const;
-        WINRT_IMPL_AUTO(void) Uri(winrt::Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
-        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] auto Uri() const;
+        auto Uri(winrt::Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] auto Description() const;
+        auto Description(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactWebsite>
     {
@@ -2617,8 +2608,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IContactWebsite2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RawValue() const;
-        WINRT_IMPL_AUTO(void) RawValue(param::hstring const& value) const;
+        [[nodiscard]] auto RawValue() const;
+        auto RawValue(param::hstring const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IContactWebsite2>
     {
@@ -2627,8 +2618,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IFullContactCardOptions
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ViewSizePreference) DesiredRemainingView() const;
-        WINRT_IMPL_AUTO(void) DesiredRemainingView(winrt::Windows::UI::ViewManagement::ViewSizePreference const& value) const;
+        [[nodiscard]] auto DesiredRemainingView() const;
+        auto DesiredRemainingView(winrt::Windows::UI::ViewManagement::ViewSizePreference const& value) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IFullContactCardOptions>
     {
@@ -2637,12 +2628,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IKnownContactFieldStatics
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Email() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Location() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InstantMessage() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::ContactFieldType) ConvertNameToType(param::hstring const& name) const;
-        WINRT_IMPL_AUTO(hstring) ConvertTypeToName(winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type) const;
+        [[nodiscard]] auto Email() const;
+        [[nodiscard]] auto PhoneNumber() const;
+        [[nodiscard]] auto Location() const;
+        [[nodiscard]] auto InstantMessage() const;
+        auto ConvertNameToType(param::hstring const& name) const;
+        auto ConvertTypeToName(winrt::Windows::ApplicationModel::Contacts::ContactFieldType const& type) const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IKnownContactFieldStatics>
     {
@@ -2651,7 +2642,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IPinnedContactIdsQueryResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) ContactIds() const;
+        [[nodiscard]] auto ContactIds() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IPinnedContactIdsQueryResult>
     {
@@ -2660,14 +2651,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IPinnedContactManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::System::User) User() const;
-        WINRT_IMPL_AUTO(bool) IsPinSurfaceSupported(winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
-        WINRT_IMPL_AUTO(bool) IsContactPinned(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestPinContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestPinContactsAsync(param::async_iterable<winrt::Windows::ApplicationModel::Contacts::Contact> const& contacts, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) RequestUnpinContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
-        WINRT_IMPL_AUTO(void) SignalContactActivity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>) GetPinnedContactIdsAsync() const;
+        [[nodiscard]] auto User() const;
+        auto IsPinSurfaceSupported(winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
+        auto IsContactPinned(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
+        auto RequestPinContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
+        auto RequestPinContactsAsync(param::async_iterable<winrt::Windows::ApplicationModel::Contacts::Contact> const& contacts, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
+        auto RequestUnpinContactAsync(winrt::Windows::ApplicationModel::Contacts::Contact const& contact, winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface const& surface) const;
+        auto SignalContactActivity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        auto GetPinnedContactIdsAsync() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IPinnedContactManager>
     {
@@ -2676,9 +2667,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_IPinnedContactManagerStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::PinnedContactManager) GetDefault() const;
-        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::PinnedContactManager) GetForUser(winrt::Windows::System::User const& user) const;
-        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        auto GetDefault() const;
+        auto GetForUser(winrt::Windows::System::User const& user) const;
+        auto IsSupported() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::Contacts::IPinnedContactManagerStatics>
     {

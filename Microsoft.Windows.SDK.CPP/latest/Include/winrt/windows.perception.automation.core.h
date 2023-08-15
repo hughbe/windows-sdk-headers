@@ -171,7 +171,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICorePerceptionAutomationStatics = _uuidof(ICorePerceptionAutomationStatics);
+                    MIDL_CONST_ID IID& IID_ICorePerceptionAutomationStatics = __uuidof(ICorePerceptionAutomationStatics);
                 } /* Core */
             } /* Automation */
         } /* Perception */

@@ -658,7 +658,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IContentRestrictionsBrowsePolicy = _uuidof(IContentRestrictionsBrowsePolicy);
+                MIDL_CONST_ID IID& IID_IContentRestrictionsBrowsePolicy = __uuidof(IContentRestrictionsBrowsePolicy);
             } /* ContentRestrictions */
         } /* Media */
     } /* Windows */
@@ -721,7 +721,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRatedContentDescription = _uuidof(IRatedContentDescription);
+                MIDL_CONST_ID IID& IID_IRatedContentDescription = __uuidof(IRatedContentDescription);
             } /* ContentRestrictions */
         } /* Media */
     } /* Windows */
@@ -760,7 +760,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRatedContentDescriptionFactory = _uuidof(IRatedContentDescriptionFactory);
+                MIDL_CONST_ID IID& IID_IRatedContentDescriptionFactory = __uuidof(IRatedContentDescriptionFactory);
             } /* ContentRestrictions */
         } /* Media */
     } /* Windows */
@@ -811,7 +811,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRatedContentRestrictions = _uuidof(IRatedContentRestrictions);
+                MIDL_CONST_ID IID& IID_IRatedContentRestrictions = __uuidof(IRatedContentRestrictions);
             } /* ContentRestrictions */
         } /* Media */
     } /* Windows */
@@ -848,7 +848,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IRatedContentRestrictionsFactory = _uuidof(IRatedContentRestrictionsFactory);
+                MIDL_CONST_ID IID& IID_IRatedContentRestrictionsFactory = __uuidof(IRatedContentRestrictionsFactory);
             } /* ContentRestrictions */
         } /* Media */
     } /* Windows */

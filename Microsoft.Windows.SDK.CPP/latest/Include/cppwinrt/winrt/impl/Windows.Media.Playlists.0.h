@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,18 +9,12 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct IAsyncAction;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
     struct IStorageFile;
     struct IStorageFolder;
     enum class NameCollisionOption : int32_t;
-    struct StorageFile;
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Playlists
 {
@@ -67,10 +61,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Playlists_IPlaylist
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::StorageFile>) Files() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) SaveAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) SaveAsAsync(winrt::Windows::Storage::IStorageFolder const& saveLocation, param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>) SaveAsAsync(winrt::Windows::Storage::IStorageFolder const& saveLocation, param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option, winrt::Windows::Media::Playlists::PlaylistFormat const& playlistFormat) const;
+        [[nodiscard]] auto Files() const;
+        auto SaveAsync() const;
+        auto SaveAsAsync(winrt::Windows::Storage::IStorageFolder const& saveLocation, param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option) const;
+        auto SaveAsAsync(winrt::Windows::Storage::IStorageFolder const& saveLocation, param::hstring const& desiredName, winrt::Windows::Storage::NameCollisionOption const& option, winrt::Windows::Media::Playlists::PlaylistFormat const& playlistFormat) const;
     };
     template <> struct consume<winrt::Windows::Media::Playlists::IPlaylist>
     {
@@ -79,7 +73,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Playlists_IPlaylistStatics
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Playlists::Playlist>) LoadAsync(winrt::Windows::Storage::IStorageFile const& file) const;
+        auto LoadAsync(winrt::Windows::Storage::IStorageFile const& file) const;
     };
     template <> struct consume<winrt::Windows::Media::Playlists::IPlaylistStatics>
     {

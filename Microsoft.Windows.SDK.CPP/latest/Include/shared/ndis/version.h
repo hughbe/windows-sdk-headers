@@ -2,6 +2,12 @@
 
 #pragma once
 
+#if defined(UM_NDIS688) || defined(NDIS_WRAPPER) || \
+    (defined(NDIS_PLATFORM) && (defined(NDIS688) || defined(NDIS688_MINIPORT))) || \
+    (NDIS_MINIPORT_MAJOR_VERSION == 6 && NDIS_MINIPORT_MINOR_VERSION == 88)
+#define NDIS_SUPPORT_NDIS688 1
+#endif
+
 #if defined(UM_NDIS687) || defined(NDIS_WRAPPER) || \
     (defined(NDIS_PLATFORM) && (defined(NDIS687) || defined(NDIS687_MINIPORT))) || \
     (NDIS_MINIPORT_MAJOR_VERSION == 6 && NDIS_MINIPORT_MINOR_VERSION == 87)
@@ -104,6 +110,12 @@
 #define NDIS_SUPPORT_NDIS6 1
 #endif
 
+
+#ifdef NDIS_SUPPORT_NDIS688
+#define NDIS_SUPPORT_NDIS687 1
+#else
+#define NDIS_SUPPORT_NDIS688 0
+#endif
 
 #ifdef NDIS_SUPPORT_NDIS687
 #define NDIS_SUPPORT_NDIS686 1

@@ -2378,7 +2378,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppAttributeError = _uuidof(IIppAttributeError);
+                MIDL_CONST_ID IID& IID_IIppAttributeError = __uuidof(IIppAttributeError);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2468,7 +2468,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppAttributeValue = _uuidof(IIppAttributeValue);
+                MIDL_CONST_ID IID& IID_IIppAttributeValue = __uuidof(IIppAttributeValue);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2654,7 +2654,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppAttributeValueStatics = _uuidof(IIppAttributeValueStatics);
+                MIDL_CONST_ID IID& IID_IIppAttributeValueStatics = __uuidof(IIppAttributeValueStatics);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2693,7 +2693,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppIntegerRange = _uuidof(IIppIntegerRange);
+                MIDL_CONST_ID IID& IID_IIppIntegerRange = __uuidof(IIppIntegerRange);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2731,7 +2731,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppIntegerRangeFactory = _uuidof(IIppIntegerRangeFactory);
+                MIDL_CONST_ID IID& IID_IIppIntegerRangeFactory = __uuidof(IIppIntegerRangeFactory);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2786,7 +2786,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppPrintDevice = _uuidof(IIppPrintDevice);
+                MIDL_CONST_ID IID& IID_IIppPrintDevice = __uuidof(IIppPrintDevice);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2832,7 +2832,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppPrintDevice2 = _uuidof(IIppPrintDevice2);
+                MIDL_CONST_ID IID& IID_IIppPrintDevice2 = __uuidof(IIppPrintDevice2);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2880,7 +2880,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppPrintDeviceStatics = _uuidof(IIppPrintDeviceStatics);
+                MIDL_CONST_ID IID& IID_IIppPrintDeviceStatics = __uuidof(IIppPrintDeviceStatics);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2922,7 +2922,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppResolution = _uuidof(IIppResolution);
+                MIDL_CONST_ID IID& IID_IIppResolution = __uuidof(IIppResolution);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -2961,7 +2961,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppResolutionFactory = _uuidof(IIppResolutionFactory);
+                MIDL_CONST_ID IID& IID_IIppResolutionFactory = __uuidof(IIppResolutionFactory);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3000,7 +3000,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppSetAttributesResult = _uuidof(IIppSetAttributesResult);
+                MIDL_CONST_ID IID& IID_IIppSetAttributesResult = __uuidof(IIppSetAttributesResult);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3039,7 +3039,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppTextWithLanguage = _uuidof(IIppTextWithLanguage);
+                MIDL_CONST_ID IID& IID_IIppTextWithLanguage = __uuidof(IIppTextWithLanguage);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3077,7 +3077,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IIppTextWithLanguageFactory = _uuidof(IIppTextWithLanguageFactory);
+                MIDL_CONST_ID IID& IID_IIppTextWithLanguageFactory = __uuidof(IIppTextWithLanguageFactory);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3122,7 +3122,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPageConfigurationSettings = _uuidof(IPageConfigurationSettings);
+                MIDL_CONST_ID IID& IID_IPageConfigurationSettings = __uuidof(IPageConfigurationSettings);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3172,7 +3172,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdlPassthroughProvider = _uuidof(IPdlPassthroughProvider);
+                MIDL_CONST_ID IID& IID_IPdlPassthroughProvider = __uuidof(IPdlPassthroughProvider);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3212,7 +3212,7 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE Submit(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPdlPassthroughTarget = _uuidof(IPdlPassthroughTarget);
+                MIDL_CONST_ID IID& IID_IPdlPassthroughTarget = __uuidof(IPdlPassthroughTarget);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3248,7 +3248,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrint3DDevice = _uuidof(IPrint3DDevice);
+                MIDL_CONST_ID IID& IID_IPrint3DDevice = __uuidof(IPrint3DDevice);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3288,7 +3288,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrint3DDeviceStatics = _uuidof(IPrint3DDeviceStatics);
+                MIDL_CONST_ID IID& IID_IPrint3DDeviceStatics = __uuidof(IPrint3DDeviceStatics);
             } /* Printers */
         } /* Devices */
     } /* Windows */
@@ -3332,7 +3332,7 @@ namespace ABI {
                         ) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintSchema = _uuidof(IPrintSchema);
+                MIDL_CONST_ID IID& IID_IPrintSchema = __uuidof(IPrintSchema);
             } /* Printers */
         } /* Devices */
     } /* Windows */

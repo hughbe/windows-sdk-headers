@@ -2167,7 +2167,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowBackgroundSession = _uuidof(IPrintWorkflowBackgroundSession);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowBackgroundSession = __uuidof(IPrintWorkflowBackgroundSession);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2212,7 +2212,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowBackgroundSetupRequestedEventArgs = _uuidof(IPrintWorkflowBackgroundSetupRequestedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowBackgroundSetupRequestedEventArgs = __uuidof(IPrintWorkflowBackgroundSetupRequestedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2256,7 +2256,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowConfiguration = _uuidof(IPrintWorkflowConfiguration);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowConfiguration = __uuidof(IPrintWorkflowConfiguration);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2294,7 +2294,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowConfiguration2 = _uuidof(IPrintWorkflowConfiguration2);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowConfiguration2 = __uuidof(IPrintWorkflowConfiguration2);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2347,7 +2347,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowForegroundSession = _uuidof(IPrintWorkflowForegroundSession);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowForegroundSession = __uuidof(IPrintWorkflowForegroundSession);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2391,7 +2391,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowForegroundSetupRequestedEventArgs = _uuidof(IPrintWorkflowForegroundSetupRequestedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowForegroundSetupRequestedEventArgs = __uuidof(IPrintWorkflowForegroundSetupRequestedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2429,7 +2429,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobActivatedEventArgs = _uuidof(IPrintWorkflowJobActivatedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobActivatedEventArgs = __uuidof(IPrintWorkflowJobActivatedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2482,7 +2482,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobBackgroundSession = _uuidof(IPrintWorkflowJobBackgroundSession);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobBackgroundSession = __uuidof(IPrintWorkflowJobBackgroundSession);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2526,7 +2526,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobNotificationEventArgs = _uuidof(IPrintWorkflowJobNotificationEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobNotificationEventArgs = __uuidof(IPrintWorkflowJobNotificationEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2571,7 +2571,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobStartingEventArgs = _uuidof(IPrintWorkflowJobStartingEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobStartingEventArgs = __uuidof(IPrintWorkflowJobStartingEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2609,7 +2609,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobTriggerDetails = _uuidof(IPrintWorkflowJobTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobTriggerDetails = __uuidof(IPrintWorkflowJobTriggerDetails);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2662,7 +2662,7 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowJobUISession = _uuidof(IPrintWorkflowJobUISession);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowJobUISession = __uuidof(IPrintWorkflowJobUISession);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2697,7 +2697,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelSourceFileContent = _uuidof(IPrintWorkflowObjectModelSourceFileContent);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelSourceFileContent = __uuidof(IPrintWorkflowObjectModelSourceFileContent);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2736,7 +2736,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelSourceFileContentFactory = _uuidof(IPrintWorkflowObjectModelSourceFileContentFactory);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelSourceFileContentFactory = __uuidof(IPrintWorkflowObjectModelSourceFileContentFactory);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2771,7 +2771,7 @@ namespace ABI {
                     public:
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelTargetPackage = _uuidof(IPrintWorkflowObjectModelTargetPackage);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowObjectModelTargetPackage = __uuidof(IPrintWorkflowObjectModelTargetPackage);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2812,7 +2812,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlConverter = _uuidof(IPrintWorkflowPdlConverter);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlConverter = __uuidof(IPrintWorkflowPdlConverter);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2854,7 +2854,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlConverter2 = _uuidof(IPrintWorkflowPdlConverter2);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlConverter2 = __uuidof(IPrintWorkflowPdlConverter2);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2901,7 +2901,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlDataAvailableEventArgs = _uuidof(IPrintWorkflowPdlDataAvailableEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlDataAvailableEventArgs = __uuidof(IPrintWorkflowPdlDataAvailableEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -2969,7 +2969,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlModificationRequestedEventArgs = _uuidof(IPrintWorkflowPdlModificationRequestedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlModificationRequestedEventArgs = __uuidof(IPrintWorkflowPdlModificationRequestedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3020,7 +3020,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlModificationRequestedEventArgs2 = _uuidof(IPrintWorkflowPdlModificationRequestedEventArgs2);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlModificationRequestedEventArgs2 = __uuidof(IPrintWorkflowPdlModificationRequestedEventArgs2);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3064,7 +3064,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlSourceContent = _uuidof(IPrintWorkflowPdlSourceContent);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlSourceContent = __uuidof(IPrintWorkflowPdlSourceContent);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3105,7 +3105,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPdlTargetStream = _uuidof(IPrintWorkflowPdlTargetStream);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPdlTargetStream = __uuidof(IPrintWorkflowPdlTargetStream);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3168,7 +3168,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowPrinterJob = _uuidof(IPrintWorkflowPrinterJob);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowPrinterJob = __uuidof(IPrintWorkflowPrinterJob);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3212,7 +3212,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowSourceContent = _uuidof(IPrintWorkflowSourceContent);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowSourceContent = __uuidof(IPrintWorkflowSourceContent);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3250,7 +3250,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowSpoolStreamContent = _uuidof(IPrintWorkflowSpoolStreamContent);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowSpoolStreamContent = __uuidof(IPrintWorkflowSpoolStreamContent);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3288,7 +3288,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowStreamTarget = _uuidof(IPrintWorkflowStreamTarget);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowStreamTarget = __uuidof(IPrintWorkflowStreamTarget);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3333,7 +3333,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowSubmittedEventArgs = _uuidof(IPrintWorkflowSubmittedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowSubmittedEventArgs = __uuidof(IPrintWorkflowSubmittedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3377,7 +3377,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowSubmittedOperation = _uuidof(IPrintWorkflowSubmittedOperation);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowSubmittedOperation = __uuidof(IPrintWorkflowSubmittedOperation);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3418,7 +3418,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowTarget = _uuidof(IPrintWorkflowTarget);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowTarget = __uuidof(IPrintWorkflowTarget);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3456,7 +3456,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowTriggerDetails = _uuidof(IPrintWorkflowTriggerDetails);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowTriggerDetails = __uuidof(IPrintWorkflowTriggerDetails);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3498,7 +3498,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowUIActivatedEventArgs = _uuidof(IPrintWorkflowUIActivatedEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowUIActivatedEventArgs = __uuidof(IPrintWorkflowUIActivatedEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3539,7 +3539,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowUILauncher = _uuidof(IPrintWorkflowUILauncher);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowUILauncher = __uuidof(IPrintWorkflowUILauncher);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */
@@ -3580,7 +3580,7 @@ namespace ABI {
                             ) = 0;
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintWorkflowXpsDataAvailableEventArgs = _uuidof(IPrintWorkflowXpsDataAvailableEventArgs);
+                    MIDL_CONST_ID IID& IID_IPrintWorkflowXpsDataAvailableEventArgs = __uuidof(IPrintWorkflowXpsDataAvailableEventArgs);
                 } /* Workflow */
             } /* Printing */
         } /* Graphics */

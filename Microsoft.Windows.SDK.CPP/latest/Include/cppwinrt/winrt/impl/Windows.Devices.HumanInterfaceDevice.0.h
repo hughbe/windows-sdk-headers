@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,12 +9,7 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
-}
-WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
-{
-    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
@@ -300,12 +295,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidBooleanControl
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
-        WINRT_IMPL_AUTO(void) IsActive(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription) ControlDescription() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
+        [[nodiscard]] auto IsActive() const;
+        auto IsActive(bool value) const;
+        [[nodiscard]] auto ControlDescription() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidBooleanControl>
     {
@@ -314,12 +309,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidBooleanControlDescription
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ReportId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType) ReportType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>) ParentCollections() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto ReportId() const;
+        [[nodiscard]] auto ReportType() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
+        [[nodiscard]] auto ParentCollections() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription>
     {
@@ -328,7 +323,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidBooleanControlDescription2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAbsolute() const;
+        [[nodiscard]] auto IsAbsolute() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidBooleanControlDescription2>
     {
@@ -337,10 +332,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidCollection
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidCollectionType) Type() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) UsageId() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Type() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidCollection>
     {
@@ -349,27 +344,27 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidDevice
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) VendorId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ProductId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Version() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>) GetInputReportAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>) GetInputReportAsync(uint16_t reportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>) GetFeatureReportAsync() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>) GetFeatureReportAsync(uint16_t reportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport) CreateOutputReport() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport) CreateOutputReport(uint16_t reportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport) CreateFeatureReport() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport) CreateFeatureReport(uint16_t reportId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<uint32_t>) SendOutputReportAsync(winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport const& outputReport) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<uint32_t>) SendFeatureReportAsync(winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport const& featureReport) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>) GetBooleanControlDescriptions(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType const& reportType, uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>) GetNumericControlDescriptions(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType const& reportType, uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::event_token) InputReportReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice, winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs> const& reportHandler) const;
+        [[nodiscard]] auto VendorId() const;
+        [[nodiscard]] auto ProductId() const;
+        [[nodiscard]] auto Version() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
+        auto GetInputReportAsync() const;
+        auto GetInputReportAsync(uint16_t reportId) const;
+        auto GetFeatureReportAsync() const;
+        auto GetFeatureReportAsync(uint16_t reportId) const;
+        auto CreateOutputReport() const;
+        auto CreateOutputReport(uint16_t reportId) const;
+        auto CreateFeatureReport() const;
+        auto CreateFeatureReport(uint16_t reportId) const;
+        auto SendOutputReportAsync(winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport const& outputReport) const;
+        auto SendFeatureReportAsync(winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport const& featureReport) const;
+        auto GetBooleanControlDescriptions(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType const& reportType, uint16_t usagePage, uint16_t usageId) const;
+        auto GetNumericControlDescriptions(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType const& reportType, uint16_t usagePage, uint16_t usageId) const;
+        auto InputReportReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice, winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs> const& reportHandler) const;
         using InputReportReceived_revoker = impl::event_revoker<winrt::Windows::Devices::HumanInterfaceDevice::IHidDevice, &impl::abi_t<winrt::Windows::Devices::HumanInterfaceDevice::IHidDevice>::remove_InputReportReceived>;
         [[nodiscard]] InputReportReceived_revoker InputReportReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice, winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs> const& reportHandler) const;
-        WINRT_IMPL_AUTO(void) InputReportReceived(winrt::event_token const& token) const noexcept;
+        auto InputReportReceived(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidDevice>
     {
@@ -378,9 +373,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidDeviceStatics
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(uint16_t usagePage, uint16_t usageId, uint16_t vendorId, uint16_t productId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>) FromIdAsync(param::hstring const& deviceId, winrt::Windows::Storage::FileAccessMode const& accessMode) const;
+        auto GetDeviceSelector(uint16_t usagePage, uint16_t usageId) const;
+        auto GetDeviceSelector(uint16_t usagePage, uint16_t usageId, uint16_t vendorId, uint16_t productId) const;
+        auto FromIdAsync(param::hstring const& deviceId, winrt::Windows::Storage::FileAccessMode const& accessMode) const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidDeviceStatics>
     {
@@ -389,13 +384,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidFeatureReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Data() const;
-        WINRT_IMPL_AUTO(void) Data(winrt::Windows::Storage::Streams::IBuffer const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Data() const;
+        auto Data(winrt::Windows::Storage::Streams::IBuffer const& value) const;
+        auto GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
+        auto GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidFeatureReport>
     {
@@ -404,14 +399,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidInputReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Data() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>) ActivatedBooleanControls() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>) TransitionedBooleanControls() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Data() const;
+        [[nodiscard]] auto ActivatedBooleanControls() const;
+        [[nodiscard]] auto TransitionedBooleanControls() const;
+        auto GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
+        auto GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidInputReport>
     {
@@ -420,7 +415,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidInputReportReceivedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport) Report() const;
+        [[nodiscard]] auto Report() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidInputReportReceivedEventArgs>
     {
@@ -429,15 +424,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidNumericControl
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGrouped() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) Value() const;
-        WINRT_IMPL_AUTO(void) Value(int64_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) ScaledValue() const;
-        WINRT_IMPL_AUTO(void) ScaledValue(int64_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription) ControlDescription() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto IsGrouped() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
+        [[nodiscard]] auto Value() const;
+        auto Value(int64_t value) const;
+        [[nodiscard]] auto ScaledValue() const;
+        auto ScaledValue(int64_t value) const;
+        [[nodiscard]] auto ControlDescription() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidNumericControl>
     {
@@ -446,22 +441,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidNumericControlDescription
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ReportId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidReportType) ReportType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ReportSize() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ReportCount() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsagePage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) UsageId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) LogicalMinimum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) LogicalMaximum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PhysicalMinimum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PhysicalMaximum() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) UnitExponent() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Unit() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAbsolute() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasNull() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>) ParentCollections() const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto ReportId() const;
+        [[nodiscard]] auto ReportType() const;
+        [[nodiscard]] auto ReportSize() const;
+        [[nodiscard]] auto ReportCount() const;
+        [[nodiscard]] auto UsagePage() const;
+        [[nodiscard]] auto UsageId() const;
+        [[nodiscard]] auto LogicalMinimum() const;
+        [[nodiscard]] auto LogicalMaximum() const;
+        [[nodiscard]] auto PhysicalMinimum() const;
+        [[nodiscard]] auto PhysicalMaximum() const;
+        [[nodiscard]] auto UnitExponent() const;
+        [[nodiscard]] auto Unit() const;
+        [[nodiscard]] auto IsAbsolute() const;
+        [[nodiscard]] auto HasNull() const;
+        [[nodiscard]] auto ParentCollections() const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidNumericControlDescription>
     {
@@ -470,13 +465,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_HumanInterfaceDevice_IHidOutputReport
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Id() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) Data() const;
-        WINRT_IMPL_AUTO(void) Data(winrt::Windows::Storage::Streams::IBuffer const& value) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl) GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl) GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
+        [[nodiscard]] auto Id() const;
+        [[nodiscard]] auto Data() const;
+        auto Data(winrt::Windows::Storage::Streams::IBuffer const& value) const;
+        auto GetBooleanControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetBooleanControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription const& controlDescription) const;
+        auto GetNumericControl(uint16_t usagePage, uint16_t usageId) const;
+        auto GetNumericControlByDescription(winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription const& controlDescription) const;
     };
     template <> struct consume<winrt::Windows::Devices::HumanInterfaceDevice::IHidOutputReport>
     {

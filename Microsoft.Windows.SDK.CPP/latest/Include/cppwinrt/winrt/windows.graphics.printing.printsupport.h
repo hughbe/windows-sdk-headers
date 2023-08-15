@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220110.5
+// C++/WinRT v2.0.220418.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Graphics_Printing_PrintSupport_H
 #define WINRT_Windows_Graphics_Printing_PrintSupport_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220110.5"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220418.1"
 #include "winrt/Windows.Graphics.Printing.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -21,13 +21,13 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatche
 #include "winrt/impl/Windows.Graphics.Printing.PrintSupport.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::IppPrintDevice) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Printer() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Printer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->get_Printer(&value));
         return winrt::Windows::Devices::Printers::IppPrintDevice{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintTicketValidationRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintTicketValidationRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->add_PrintTicketValidationRequested(*(void**)(&handler), put_abi(token)));
@@ -37,11 +37,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrintTicketValidationRequested_revoker>(this, PrintTicketValidationRequested(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintTicketValidationRequested(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintTicketValidationRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->remove_PrintTicketValidationRequested(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintDeviceCapabilitiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintDeviceCapabilitiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->add_PrintDeviceCapabilitiesChanged(*(void**)(&handler), put_abi(token)));
@@ -51,15 +51,15 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrintDeviceCapabilitiesChanged_revoker>(this, PrintDeviceCapabilitiesChanged(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintDeviceCapabilitiesChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::PrintDeviceCapabilitiesChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->remove_PrintDeviceCapabilitiesChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Start() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession)->Start());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession2<D>::PrinterSelected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession2<D>::PrinterSelected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs> const& handler) const
     {
         winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2)->add_PrinterSelected(*(void**)(&handler), put_abi(token)));
@@ -69,191 +69,191 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrinterSelected_revoker>(this, PrinterSelected(handler));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession2<D>::PrinterSelected(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession2<D>::PrinterSelected(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2)->remove_PrinterSelected(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionTriggerDetails<D>::Session() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionTriggerDetails<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails)->get_Session(&value));
         return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::GetCurrentPrintDeviceCapabilities() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::GetCurrentPrintDeviceCapabilities() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs)->GetCurrentPrintDeviceCapabilities(&result));
         return winrt::Windows::Data::Xml::Dom::XmlDocument{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::UpdatePrintDeviceCapabilities(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdc) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::UpdatePrintDeviceCapabilities(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdc) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs)->UpdatePrintDeviceCapabilities(*(void**)(&updatedPdc)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::SetSupportedPdlPassthroughContentTypes(param::iterable<hstring> const& supportedPdlContentTypes) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::SetSupportedPdlPassthroughContentTypes(param::iterable<hstring> const& supportedPdlContentTypes) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->SetSupportedPdlPassthroughContentTypes(*(void**)(&supportedPdlContentTypes)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::ResourceLanguage() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::ResourceLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->get_ResourceLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::GetCurrentPrintDeviceResources() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::GetCurrentPrintDeviceResources() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->GetCurrentPrintDeviceResources(&result));
         return winrt::Windows::Data::Xml::Dom::XmlDocument{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::UpdatePrintDeviceResources(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdr) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::UpdatePrintDeviceResources(winrt::Windows::Data::Xml::Dom::XmlDocument const& updatedPdr) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->UpdatePrintDeviceResources(*(void**)(&updatedPdr)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::SetPrintDeviceCapabilitiesUpdatePolicy(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const& updatePolicy) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::SetPrintDeviceCapabilitiesUpdatePolicy(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const& updatePolicy) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->SetPrintDeviceCapabilitiesUpdatePolicy(*(void**)(&updatePolicy)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics<D>::CreatePeriodicRefresh(winrt::Windows::Foundation::TimeSpan const& updatePeriod) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics<D>::CreatePeriodicRefresh(winrt::Windows::Foundation::TimeSpan const& updatePeriod) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics)->CreatePeriodicRefresh(impl::bind_in(updatePeriod), &result));
         return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics<D>::CreatePrintJobRefresh(uint32_t numberOfJobs) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics<D>::CreatePrintJobRefresh(uint32_t numberOfJobs) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics)->CreatePrintJobRefresh(numberOfJobs, &result));
         return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::LocalName() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::LocalName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement)->get_LocalName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::LocalName(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::LocalName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement)->put_LocalName(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::NamespaceUri() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::NamespaceUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement)->get_NamespaceUri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::NamespaceUri(param::hstring const& value) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketElement<D>::NamespaceUri(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement)->put_NamespaceUri(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::PrintTicket() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::PrintTicket() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketValidationRequestedEventArgs)->get_PrintTicket(&value));
         return winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::SetPrintTicketValidationStatus(winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus const& status) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::SetPrintTicketValidationStatus(winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus const& status) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketValidationRequestedEventArgs)->SetPrintTicketValidationStatus(static_cast<int32_t>(status)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintTicketValidationRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketValidationRequestedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SourceAppInfo() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SourceAppInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->get_SourceAppInfo(&value));
         return winrt::Windows::ApplicationModel::AppInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::PrintTicket() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::PrintTicket() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->get_PrintTicket(&value));
         return winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::PrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& value) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::PrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->put_PrintTicket(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdditionalFeatures(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& features) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdditionalFeatures(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& features) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->SetAdditionalFeatures(*(void**)(&features)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdditionalParameters(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& parameters) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdditionalParameters(param::iterable<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> const& parameters) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->SetAdditionalParameters(*(void**)(&parameters)));
     }
-    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::AllowedAdditionalFeaturesAndParametersCount() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::AllowedAdditionalFeaturesAndParametersCount() const
     {
         uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->get_AllowedAdditionalFeaturesAndParametersCount(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdaptiveCard(winrt::Windows::UI::Shell::IAdaptiveCard const& adaptiveCard) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::SetAdaptiveCard(winrt::Windows::UI::Shell::IAdaptiveCard const& adaptiveCard) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->SetAdaptiveCard(*(void**)(&adaptiveCard)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrinterSelectedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrinterSelectedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::AppInfo) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSessionInfo<D>::SourceAppInfo() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSessionInfo<D>::SourceAppInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSessionInfo)->get_SourceAppInfo(&value));
         return winrt::Windows::ApplicationModel::AppInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Printers::IppPrintDevice) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSessionInfo<D>::Printer() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSessionInfo<D>::Printer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSessionInfo)->get_Printer(&value));
         return winrt::Windows::Devices::Printers::IppPrintDevice{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsActivatedEventArgs<D>::Session() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsActivatedEventArgs<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsActivatedEventArgs)->get_Session(&value));
         return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsActivatedEventArgs<D>::GetDeferral() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsActivatedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsActivatedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::SessionPrintTicket() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::SessionPrintTicket() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession)->get_SessionPrintTicket(&value));
         return winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::DocumentTitle() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::DocumentTitle() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession)->get_DocumentTitle(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::LaunchKind() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::LaunchKind() const
     {
         winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession)->get_LaunchKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::UpdatePrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& printTicket) const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::UpdatePrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& printTicket) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession)->UpdatePrintTicket(*(void**)(&printTicket)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo) consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::SessionInfo() const
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportSettingsUISession<D>::SessionInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession)->get_SessionInfo(&value));
