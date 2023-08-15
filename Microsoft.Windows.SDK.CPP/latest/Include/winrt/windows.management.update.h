@@ -95,6 +95,10 @@
 #define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xf0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
+#if !defined(WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION)
+#define WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION)
+
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
 
@@ -472,7 +476,7 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
 #define DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
@@ -497,9 +501,9 @@ typedef IIterator<ABI::Windows::Management::Update::WindowsUpdateItem*> __FIIter
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
 #define DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
@@ -524,9 +528,9 @@ typedef IIterable<ABI::Windows::Management::Update::WindowsUpdateItem*> __FIIter
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
 #define DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
@@ -551,9 +555,9 @@ typedef IVectorView<ABI::Windows::Management::Update::WindowsUpdateItem*> __FIVe
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
 #define DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
@@ -578,9 +582,9 @@ typedef IAsyncOperation<__FIVectorView_1_Windows__CManagement__CUpdate__CWindows
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
 #define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE
@@ -605,7 +609,7 @@ typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CManagement__C
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -617,7 +621,7 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
 #define DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
@@ -642,9 +646,9 @@ typedef IIterator<ABI::Windows::Management::Update::WindowsUpdate*> __FIIterator
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
 #define DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
@@ -669,9 +673,9 @@ typedef IIterable<ABI::Windows::Management::Update::WindowsUpdate*> __FIIterable
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
 #define DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE
@@ -696,7 +700,7 @@ typedef IVectorView<ABI::Windows::Management::Update::WindowsUpdate*> __FIVector
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 
 #ifndef DEF___FIReference_1_boolean_USE
@@ -793,7 +797,7 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_USE
 #define DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_USE
@@ -818,7 +822,7 @@ typedef ITypedEventHandler<ABI::Windows::Management::Update::WindowsUpdateManage
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -830,8 +834,8 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_USE
 #define DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_USE
@@ -856,8 +860,8 @@ typedef ITypedEventHandler<ABI::Windows::Management::Update::WindowsUpdateManage
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -869,8 +873,8 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_USE
 #define DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_USE
@@ -895,8 +899,8 @@ typedef ITypedEventHandler<ABI::Windows::Management::Update::WindowsUpdateManage
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -908,8 +912,8 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_USE
 #define DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_USE
@@ -934,8 +938,8 @@ typedef ITypedEventHandler<ABI::Windows::Management::Update::WindowsUpdateManage
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -947,8 +951,8 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_USE
 #define DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_USE
@@ -973,8 +977,8 @@ typedef ITypedEventHandler<ABI::Windows::Management::Update::WindowsUpdateManage
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
@@ -1159,10 +1163,10 @@ namespace ABI {
  *
  * Struct Windows.Management.Update.WindowsUpdateAdministratorOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Management {
@@ -1180,16 +1184,16 @@ namespace ABI {
         } /* Management */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Struct Windows.Management.Update.WindowsUpdateAdministratorStatus
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Management {
@@ -1205,16 +1209,16 @@ namespace ABI {
         } /* Management */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Struct Windows.Management.Update.WindowsUpdateAttentionRequiredReason
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Management {
@@ -1259,7 +1263,7 @@ namespace ABI {
         } /* Management */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
@@ -1385,12 +1389,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIPreviewBuildsState
  *
  * Interface Windows.Management.Update.IWindowsUpdate
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdate
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdate[] = L"Windows.Management.Update.IWindowsUpdate";
@@ -1483,18 +1487,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionCompletedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs";
@@ -1528,18 +1532,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionProgress
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionProgress
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionProgress[] = L"Windows.Management.Update.IWindowsUpdateActionProgress";
@@ -1567,18 +1571,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionResult
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionResult[] = L"Windows.Management.Update.IWindowsUpdateActionResult";
@@ -1612,18 +1616,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAdministrator
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAdministrator
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAdministrator[] = L"Windows.Management.Update.IWindowsUpdateAdministrator";
@@ -1664,18 +1668,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAdministratorStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAdministrator
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAdministratorStatics[] = L"Windows.Management.Update.IWindowsUpdateAdministratorStatics";
@@ -1720,18 +1724,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateApprovalData
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateApprovalData
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateApprovalData[] = L"Windows.Management.Update.IWindowsUpdateApprovalData";
@@ -1783,18 +1787,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAttentionRequiredInfo
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo[] = L"Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo";
@@ -1822,18 +1826,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs";
@@ -1861,18 +1865,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateGetAdministratorResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateGetAdministratorResult
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateGetAdministratorResult[] = L"Windows.Management.Update.IWindowsUpdateGetAdministratorResult";
@@ -1900,18 +1904,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateItem
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateItem
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateItem[] = L"Windows.Management.Update.IWindowsUpdateItem";
@@ -1957,18 +1961,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateManager
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateManager
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateManager[] = L"Windows.Management.Update.IWindowsUpdateManager";
@@ -2055,18 +2059,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateManagerFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateManager
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateManagerFactory[] = L"Windows.Management.Update.IWindowsUpdateManagerFactory";
@@ -2092,18 +2096,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateProgressChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs";
@@ -2131,18 +2135,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateRestartRequestOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateRestartRequestOptions[] = L"Windows.Management.Update.IWindowsUpdateRestartRequestOptions";
@@ -2206,18 +2210,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateRestartRequestOptionsFactory[] = L"Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory";
@@ -2247,18 +2251,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateScanCompletedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs";
@@ -2292,7 +2296,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
@@ -2343,7 +2347,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Management.Update.WindowsUpdate
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdate ** Default Interface **
@@ -2351,18 +2355,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdate_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdate_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdate[] = L"Windows.Management.Update.WindowsUpdate";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs ** Default Interface **
@@ -2370,18 +2374,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs[] = L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionProgress
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionProgress ** Default Interface **
@@ -2389,18 +2393,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionProgress_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionProgress_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionProgress[] = L"Windows.Management.Update.WindowsUpdateActionProgress";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionResult ** Default Interface **
@@ -2408,21 +2412,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionResult_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionResult[] = L"Windows.Management.Update.WindowsUpdateActionResult";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAdministrator
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Management.Update.IWindowsUpdateAdministratorStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Management.Update.IWindowsUpdateAdministratorStatics interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAdministrator ** Default Interface **
@@ -2432,21 +2436,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAdministrator_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAdministrator_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAdministrator[] = L"Windows.Management.Update.WindowsUpdateAdministrator";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateApprovalData
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateApprovalData ** Default Interface **
@@ -2456,18 +2460,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateApprovalData_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateApprovalData_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateApprovalData[] = L"Windows.Management.Update.WindowsUpdateApprovalData";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAttentionRequiredInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo ** Default Interface **
@@ -2475,18 +2479,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo[] = L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs ** Default Interface **
@@ -2494,18 +2498,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs[] = L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateGetAdministratorResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateGetAdministratorResult ** Default Interface **
@@ -2513,18 +2517,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateGetAdministratorResult_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateGetAdministratorResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateGetAdministratorResult[] = L"Windows.Management.Update.WindowsUpdateGetAdministratorResult";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateItem
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateItem ** Default Interface **
@@ -2532,21 +2536,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateItem_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateItem[] = L"Windows.Management.Update.WindowsUpdateItem";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateManager
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Management.Update.IWindowsUpdateManagerFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Management.Update.IWindowsUpdateManagerFactory interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateManager ** Default Interface **
@@ -2556,18 +2560,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateManager_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateManager[] = L"Windows.Management.Update.WindowsUpdateManager";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateProgressChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs ** Default Interface **
@@ -2575,22 +2579,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs[] = L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateRestartRequestOptions ** Default Interface **
@@ -2600,18 +2604,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateRestartRequestOptions_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateRestartRequestOptions_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateRestartRequestOptions[] = L"Windows.Management.Update.WindowsUpdateRestartRequestOptions";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateScanCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs ** Default Interface **
@@ -2619,12 +2623,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs[] = L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2873,7 +2877,7 @@ interface __FIAsyncOperationCompletedHandler_1_boolean
 
 #endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
 
@@ -2952,9 +2956,9 @@ interface __FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem
 #endif /* COBJMACROS */
 
 #endif // ____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
 
@@ -3016,9 +3020,9 @@ interface __FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem
 #endif /* COBJMACROS */
 
 #endif // ____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
 
@@ -3101,11 +3105,11 @@ interface __FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem
 #endif /* COBJMACROS */
 
 #endif // ____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem;
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
 
@@ -3177,9 +3181,9 @@ interface __FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__C
 #endif /* COBJMACROS */
 
 #endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
 
@@ -3226,9 +3230,9 @@ interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManage
 #endif /* COBJMACROS */
 
 #endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdateItem_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
 
@@ -3307,9 +3311,9 @@ interface __FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate
 #endif /* COBJMACROS */
 
 #endif // ____FIIterator_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__)
 #define ____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
 
@@ -3371,9 +3375,9 @@ interface __FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate
 #endif /* COBJMACROS */
 
 #endif // ____FIIterable_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
 
@@ -3456,7 +3460,7 @@ interface __FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate
 #endif /* COBJMACROS */
 
 #endif // ____FIVectorView_1_Windows__CManagement__CUpdate__CWindowsUpdate_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #if !defined(____FIReference_1_boolean_INTERFACE_DEFINED__)
 #define ____FIReference_1_boolean_INTERFACE_DEFINED__
@@ -3648,7 +3652,7 @@ interface __FIReference_1_Windows__CFoundation__CDateTime
 #endif // ____FIReference_1_Windows__CFoundation__CDateTime_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_INTERFACE_DEFINED__
 
@@ -3695,10 +3699,10 @@ interface __FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateM
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_IInspectable_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__
 
@@ -3745,11 +3749,11 @@ interface __FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateM
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__
 
@@ -3796,11 +3800,11 @@ interface __FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateM
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__
 
@@ -3847,11 +3851,11 @@ interface __FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateM
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__
 
@@ -3898,8 +3902,8 @@ interface __FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateM
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CManagement__CUpdate__CWindowsUpdateManager_Windows__CManagement__CUpdate__CWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3929,10 +3933,10 @@ typedef enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAttentionRequire
  *
  * Struct Windows.Management.Update.WindowsUpdateAdministratorOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorOptions
 {
     WindowsUpdateAdministratorOptions_None = 0,
@@ -3940,16 +3944,16 @@ enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorOptions
     WindowsUpdateAdministratorOptions_RequireAdministratorApprovalForUpdates = 0x2,
     WindowsUpdateAdministratorOptions_RequireAdministratorApprovalForActions = 0x4,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Struct Windows.Management.Update.WindowsUpdateAdministratorStatus
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorStatus
 {
     WindowsUpdateAdministratorStatus_Succeeded = 0,
@@ -3957,16 +3961,16 @@ enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorStatus
     WindowsUpdateAdministratorStatus_NoAdministratorRegistered = 2,
     WindowsUpdateAdministratorStatus_OtherAdministratorIsRegistered = 3,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Struct Windows.Management.Update.WindowsUpdateAttentionRequiredReason
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAttentionRequiredReason
 {
     WindowsUpdateAttentionRequiredReason_None = 0,
@@ -4003,7 +4007,7 @@ enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAttentionRequiredReason
     WindowsUpdateAttentionRequiredReason_DeferredDuringOobe = 31,
     WindowsUpdateAttentionRequiredReason_DeferredForSustainableTime = 32,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
@@ -4236,12 +4240,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIPreviewBuildsState
  *
  * Interface Windows.Management.Update.IWindowsUpdate
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdate
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdate[] = L"Windows.Management.Update.IWindowsUpdate";
@@ -4414,18 +4418,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionCompletedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionCompletedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs";
@@ -4498,18 +4502,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEve
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionCompletedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionProgress
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionProgress
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionProgress[] = L"Windows.Management.Update.IWindowsUpdateActionProgress";
@@ -4572,18 +4576,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateActionResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateActionResult
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateActionResult[] = L"Windows.Management.Update.IWindowsUpdateActionResult";
@@ -4656,18 +4660,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionResult_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAdministrator
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAdministrator
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAdministrator[] = L"Windows.Management.Update.IWindowsUpdateAdministrator";
@@ -4752,18 +4756,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministrator_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAdministratorStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAdministrator
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAdministratorStatics[] = L"Windows.Management.Update.IWindowsUpdateAdministratorStatics";
@@ -4851,18 +4855,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStati
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAdministratorStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateApprovalData
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateApprovalData
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateApprovalData[] = L"Windows.Management.Update.IWindowsUpdateApprovalData";
@@ -4965,18 +4969,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateApprovalData_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAttentionRequiredInfo
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAttentionRequiredInfo[] = L"Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo";
@@ -5039,18 +5043,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredI
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredInfo_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateAttentionRequiredReasonChangedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs";
@@ -5113,18 +5117,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredR
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateAttentionRequiredReasonChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateGetAdministratorResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateGetAdministratorResult
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateGetAdministratorResult[] = L"Windows.Management.Update.IWindowsUpdateGetAdministratorResult";
@@ -5187,18 +5191,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorRe
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateGetAdministratorResult_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateItem
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateItem
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateItem[] = L"Windows.Management.Update.IWindowsUpdateItem";
@@ -5291,18 +5295,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateItem_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateManager
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateManager
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateManager[] = L"Windows.Management.Update.IWindowsUpdateManager";
@@ -5458,18 +5462,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManager_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateManagerFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateManager
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateManagerFactory[] = L"Windows.Management.Update.IWindowsUpdateManagerFactory";
@@ -5528,18 +5532,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateManagerFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateProgressChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateProgressChangedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs";
@@ -5602,18 +5606,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEve
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateProgressChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateRestartRequestOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateRestartRequestOptions[] = L"Windows.Management.Update.IWindowsUpdateRestartRequestOptions";
@@ -5736,18 +5740,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOpti
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateRestartRequestOptionsFactory[] = L"Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory";
@@ -5810,18 +5814,18 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOpti
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateRestartRequestOptionsFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Interface Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Interface is a part of the implementation of type Windows.Management.Update.WindowsUpdateScanCompletedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Update_IWindowsUpdateScanCompletedEventArgs[] = L"Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs";
@@ -5894,7 +5898,7 @@ interface __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEvent
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateScanCompletedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
@@ -5945,7 +5949,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Management.Update.WindowsUpdate
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdate ** Default Interface **
@@ -5953,18 +5957,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdate_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdate_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdate[] = L"Windows.Management.Update.WindowsUpdate";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs ** Default Interface **
@@ -5972,18 +5976,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionCompletedEventArgs[] = L"Windows.Management.Update.WindowsUpdateActionCompletedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionProgress
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionProgress ** Default Interface **
@@ -5991,18 +5995,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionProgress_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionProgress_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionProgress[] = L"Windows.Management.Update.WindowsUpdateActionProgress";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateActionResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateActionResult ** Default Interface **
@@ -6010,21 +6014,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionResult_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateActionResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateActionResult[] = L"Windows.Management.Update.WindowsUpdateActionResult";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAdministrator
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Management.Update.IWindowsUpdateAdministratorStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Management.Update.IWindowsUpdateAdministratorStatics interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAdministrator ** Default Interface **
@@ -6034,21 +6038,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAdministrator_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAdministrator_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAdministrator[] = L"Windows.Management.Update.WindowsUpdateAdministrator";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateApprovalData
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateApprovalData ** Default Interface **
@@ -6058,18 +6062,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateApprovalData_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateApprovalData_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateApprovalData[] = L"Windows.Management.Update.WindowsUpdateApprovalData";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAttentionRequiredInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo ** Default Interface **
@@ -6077,18 +6081,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAttentionRequiredInfo[] = L"Windows.Management.Update.WindowsUpdateAttentionRequiredInfo";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs ** Default Interface **
@@ -6096,18 +6100,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateAttentionRequiredReasonChangedEventArgs[] = L"Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateGetAdministratorResult
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateGetAdministratorResult ** Default Interface **
@@ -6115,18 +6119,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateGetAdministratorResult_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateGetAdministratorResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateGetAdministratorResult[] = L"Windows.Management.Update.WindowsUpdateGetAdministratorResult";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateItem
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateItem ** Default Interface **
@@ -6134,21 +6138,21 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateItem_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateItem[] = L"Windows.Management.Update.WindowsUpdateItem";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateManager
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Management.Update.IWindowsUpdateManagerFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Management.Update.IWindowsUpdateManagerFactory interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateManager ** Default Interface **
@@ -6158,18 +6162,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateManager_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateManager[] = L"Windows.Management.Update.WindowsUpdateManager";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateProgressChangedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs ** Default Interface **
@@ -6177,22 +6181,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateProgressChangedEventArgs[] = L"Windows.Management.Update.WindowsUpdateProgressChangedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateRestartRequestOptions
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Type can be activated via RoActivateInstance starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory interface starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Management.Update.WindowsUpdateContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateRestartRequestOptions ** Default Interface **
@@ -6202,18 +6206,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateRestartRequestOptions_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateRestartRequestOptions_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateRestartRequestOptions[] = L"Windows.Management.Update.WindowsUpdateRestartRequestOptions";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 /*
  *
  * Class Windows.Management.Update.WindowsUpdateScanCompletedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Management.Update.WindowsUpdateContract in version 1.0
  *
  * Class implements the following interfaces:
  *    Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs ** Default Interface **
@@ -6221,12 +6225,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Update_WindowsUpdateScanCompletedEventArgs[] = L"Windows.Management.Update.WindowsUpdateScanCompletedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

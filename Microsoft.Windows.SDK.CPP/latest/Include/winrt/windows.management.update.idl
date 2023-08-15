@@ -41,6 +41,8 @@ namespace Windows
     {
         namespace Update
         {
+            apicontract WindowsUpdateContract;
+
             typedef enum WindowsUpdateAdministratorOptions WindowsUpdateAdministratorOptions;
 
             typedef enum WindowsUpdateAdministratorStatus WindowsUpdateAdministratorStatus;
@@ -166,7 +168,12 @@ namespace Windows
     {
         namespace Update
         {
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contractversion(1.0)]
+            apicontract WindowsUpdateContract
+            {
+            }
+
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [flags]
             enum WindowsUpdateAdministratorOptions
             {
@@ -176,7 +183,7 @@ namespace Windows
                 RequireAdministratorApprovalForActions = 0x4
             };
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             enum WindowsUpdateAdministratorStatus
             {
                 Succeeded                       = 0,
@@ -185,7 +192,7 @@ namespace Windows
                 OtherAdministratorIsRegistered  = 3
             };
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             enum WindowsUpdateAttentionRequiredReason
             {
                 None                               = 0,
@@ -251,7 +258,7 @@ namespace Windows
                 [propget] HRESULT Properties([out] [retval] Windows.Foundation.Collections.ValueSet** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdate)]
             [uuid(195CB269-D194-59DE-8304-41CD8670711D)]
             interface IWindowsUpdate : IInspectable
@@ -282,7 +289,7 @@ namespace Windows
                 HRESULT AcceptEula();
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateActionCompletedEventArgs)]
             [uuid(2C44B950-A655-5321-AEC1-AEE762922131)]
             interface IWindowsUpdateActionCompletedEventArgs : IInspectable
@@ -293,7 +300,7 @@ namespace Windows
                 [propget] HRESULT ExtendedError([out] [retval] HRESULT* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateActionProgress)]
             [uuid(83B22D8A-4BB0-549F-BA39-59724882D137)]
             interface IWindowsUpdateActionProgress : IInspectable
@@ -302,7 +309,7 @@ namespace Windows
                 [propget] HRESULT Progress([out] [retval] DOUBLE* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateActionResult)]
             [uuid(E6692C62-F697-51B7-AB7F-E73E5E688F12)]
             interface IWindowsUpdateActionResult : IInspectable
@@ -313,7 +320,7 @@ namespace Windows
                 [propget] HRESULT Action([out] [retval] HSTRING* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateAdministrator)]
             [uuid(7A60181C-BA1E-5CF9-AA65-304120B73D72)]
             interface IWindowsUpdateAdministrator : IInspectable
@@ -326,7 +333,7 @@ namespace Windows
                 HRESULT GetUpdates([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate*>** result);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateAdministrator)]
             [uuid(013E6D36-EF69-53BC-8DB8-C403BCA550ED)]
             interface IWindowsUpdateAdministratorStatics : IInspectable
@@ -339,7 +346,7 @@ namespace Windows
                 HRESULT CancelRestartRequest([in] HSTRING requestRestartToken);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateApprovalData)]
             [uuid(AADF5BFD-84DB-59BC-85E2-AD4FC1F62F7C)]
             interface IWindowsUpdateApprovalData : IInspectable
@@ -356,7 +363,7 @@ namespace Windows
                 [propput] HRESULT OptOutOfAutoReboot([in] Windows.Foundation.IReference<boolean>* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateAttentionRequiredInfo)]
             [uuid(44DF2579-74D3-5FFA-B6CE-09E187E1E0ED)]
             interface IWindowsUpdateAttentionRequiredInfo : IInspectable
@@ -365,7 +372,7 @@ namespace Windows
                 [propget] HRESULT Timestamp([out] [retval] Windows.Foundation.IReference<Windows.Foundation.DateTime>** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs)]
             [uuid(0627ABCA-DBB8-524A-B1D2-D9DF004EEB31)]
             interface IWindowsUpdateAttentionRequiredReasonChangedEventArgs : IInspectable
@@ -374,7 +381,7 @@ namespace Windows
                 [propget] HRESULT Reason([out] [retval] Windows.Management.Update.WindowsUpdateAttentionRequiredReason* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateGetAdministratorResult)]
             [uuid(BB39FFC4-2C42-5B1C-8995-343341C92C50)]
             interface IWindowsUpdateGetAdministratorResult : IInspectable
@@ -383,7 +390,7 @@ namespace Windows
                 [propget] HRESULT Status([out] [retval] Windows.Management.Update.WindowsUpdateAdministratorStatus* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateItem)]
             [uuid(B222E44A-49B6-59BF-A033-EF617CD73A98)]
             interface IWindowsUpdateItem : IInspectable
@@ -398,7 +405,7 @@ namespace Windows
                 [propget] HRESULT Operation([out] [retval] HSTRING* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateManager)]
             [uuid(5DD966C0-A71A-5602-BBD0-09A70E4573FA)]
             interface IWindowsUpdateManager : IInspectable
@@ -424,7 +431,7 @@ namespace Windows
                 HRESULT StartScan([in] boolean userInitiated);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateManager)]
             [uuid(1B394DF8-DECB-5F44-B47C-6CCF3BCFDB37)]
             interface IWindowsUpdateManagerFactory : IInspectable
@@ -432,7 +439,7 @@ namespace Windows
                 HRESULT CreateInstance([in] HSTRING clientId, [out] [retval] Windows.Management.Update.WindowsUpdateManager** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateProgressChangedEventArgs)]
             [uuid(BBFBDEEB-94C8-5AA7-B0FB-66C67C233B0A)]
             interface IWindowsUpdateProgressChangedEventArgs : IInspectable
@@ -441,7 +448,7 @@ namespace Windows
                 [propget] HRESULT ActionProgress([out] [retval] Windows.Management.Update.WindowsUpdateActionProgress** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateRestartRequestOptions)]
             [uuid(38CFB7D3-4188-5222-905C-6C4443C951EE)]
             interface IWindowsUpdateRestartRequestOptions : IInspectable
@@ -462,7 +469,7 @@ namespace Windows
                 [propput] HRESULT OptOutOfAutoReboot([in] boolean value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateRestartRequestOptions)]
             [uuid(75F41D04-0E17-50D0-8C15-6B9D0539B3A9)]
             interface IWindowsUpdateRestartRequestOptionsFactory : IInspectable
@@ -470,7 +477,7 @@ namespace Windows
                 HRESULT CreateInstance([in] HSTRING title, [in] HSTRING description, [in] Windows.Foundation.Uri* moreInfoUrl, [in] INT32 complianceDeadlineInDays, [in] INT32 complianceGracePeriodInDays, [out] [retval] Windows.Management.Update.WindowsUpdateRestartRequestOptions** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdateScanCompletedEventArgs)]
             [uuid(95B6953E-BA5C-5FE8-B115-12DE184A6BB0)]
             interface IWindowsUpdateScanCompletedEventArgs : IInspectable
@@ -498,45 +505,45 @@ namespace Windows
                 [default] interface Windows.Management.Update.IPreviewBuildsState;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdate
             {
                 [default] interface Windows.Management.Update.IWindowsUpdate;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateActionCompletedEventArgs
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateActionProgress
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateActionProgress;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateActionResult
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateActionResult;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
-            [static(Windows.Management.Update.IWindowsUpdateAdministratorStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [static(Windows.Management.Update.IWindowsUpdateAdministratorStatics, Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [threading(both)]
             runtimeclass WindowsUpdateAdministrator
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateAdministrator;
             }
 
-            [activatable(Windows.Foundation.UniversalApiContract, 15.0)]
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [activatable(Windows.Management.Update.WindowsUpdateContract, 1.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass WindowsUpdateApprovalData
@@ -544,36 +551,36 @@ namespace Windows
                 [default] interface Windows.Management.Update.IWindowsUpdateApprovalData;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateAttentionRequiredInfo
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateAttentionRequiredReasonChangedEventArgs
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateGetAdministratorResult
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateGetAdministratorResult;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateItem
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateItem;
             }
 
-            [activatable(Windows.Management.Update.IWindowsUpdateManagerFactory, Windows.Foundation.UniversalApiContract, 15.0)]
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [activatable(Windows.Management.Update.IWindowsUpdateManagerFactory, Windows.Management.Update.WindowsUpdateContract, 1.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass WindowsUpdateManager
@@ -581,16 +588,16 @@ namespace Windows
                 [default] interface Windows.Management.Update.IWindowsUpdateManager;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateProgressChangedEventArgs
             {
                 [default] interface Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs;
             }
 
-            [activatable(Windows.Foundation.UniversalApiContract, 15.0)]
-            [activatable(Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory, Windows.Foundation.UniversalApiContract, 15.0)]
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [activatable(Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory, Windows.Management.Update.WindowsUpdateContract, 1.0)]
+            [activatable(Windows.Management.Update.WindowsUpdateContract, 1.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass WindowsUpdateRestartRequestOptions
@@ -598,7 +605,7 @@ namespace Windows
                 [default] interface Windows.Management.Update.IWindowsUpdateRestartRequestOptions;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass WindowsUpdateScanCompletedEventArgs
             {

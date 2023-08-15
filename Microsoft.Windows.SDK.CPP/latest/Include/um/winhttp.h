@@ -2273,17 +2273,21 @@ typedef struct _WINHTTP_PROXY_SETTINGS_EX
     PCWSTR pcwszConnectionName;
 } WINHTTP_PROXY_SETTINGS_EX, *PWINHTTP_PROXY_SETTINGS_EX;
 
+typedef struct _WINHTTP_PROXY_SETTINGS_PARAM
+{
+    ULONGLONG ullFlags;
+
+    PCWSTR pcwszConnectionName;
+    PCWSTR pcwszProbeHost;
+} WINHTTP_PROXY_SETTINGS_PARAM, *PWINHTTP_PROXY_SETTINGS_PARAM;
+
 WINHTTPAPI
 DWORD
 WINAPI
 WinHttpGetProxySettingsEx(
     _In_ HINTERNET hResolver,
     _In_ WINHTTP_PROXY_SETTINGS_TYPE ProxySettingsType,
-    _In_ ULONGLONG ullFlags,
-    _In_opt_ PCWSTR pcwszConnectionName,
-    _In_opt_ PCWSTR pcwszProbeHost,
-    _In_opt_ PVOID pvReserved,
-    _In_ DWORD cbReserved,
+    _In_opt_ PWINHTTP_PROXY_SETTINGS_PARAM pProxySettingsParam,
     _In_opt_ DWORD_PTR pContext
 );
 

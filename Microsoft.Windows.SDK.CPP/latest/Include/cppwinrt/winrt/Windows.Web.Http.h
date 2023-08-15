@@ -158,6 +158,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpClient2)->TrySendRequestAsync2(*(void**)(&request), static_cast<int32_t>(completionOption), &operation));
         return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Web::Http::HttpRequestResult, winrt::Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpClient3<D>::DefaultPrivacyAnnotation() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpClient3)->get_DefaultPrivacyAnnotation(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpClient3<D>::DefaultPrivacyAnnotation(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpClient3)->put_DefaultPrivacyAnnotation(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Web::Http::HttpClient) consume_Windows_Web_Http_IHttpClientFactory<D>::Create(winrt::Windows::Web::Http::Filters::IHttpFilter const& filter) const
     {
         void* value{};
@@ -524,6 +534,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpRequestMessage)->get_TransportInformation(&value));
         return winrt::Windows::Web::Http::HttpTransportInformation{ value, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpRequestMessage2<D>::PrivacyAnnotation() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpRequestMessage2)->get_PrivacyAnnotation(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpRequestMessage2<D>::PrivacyAnnotation(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Web::Http::IHttpRequestMessage2)->put_PrivacyAnnotation(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpRequestMessageFactory<D>::Create(winrt::Windows::Web::Http::HttpMethod const& method, winrt::Windows::Foundation::Uri const& uri) const
     {
         void* value{};
@@ -883,6 +903,27 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Web::Http::HttpRequestResult, winrt::Windows::Web::Http::HttpProgress>>(this->shim().TrySendRequestAsync(*reinterpret_cast<winrt::Windows::Web::Http::HttpRequestMessage const*>(&request), *reinterpret_cast<winrt::Windows::Web::Http::HttpCompletionOption const*>(&completionOption)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Web::Http::IHttpClient3> : produce_base<D, winrt::Windows::Web::Http::IHttpClient3>
+    {
+        int32_t __stdcall get_DefaultPrivacyAnnotation(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DefaultPrivacyAnnotation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DefaultPrivacyAnnotation(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DefaultPrivacyAnnotation(*reinterpret_cast<hstring const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1490,6 +1531,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Web::Http::IHttpRequestMessage2> : produce_base<D, winrt::Windows::Web::Http::IHttpRequestMessage2>
+    {
+        int32_t __stdcall get_PrivacyAnnotation(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().PrivacyAnnotation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PrivacyAnnotation(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PrivacyAnnotation(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Web::Http::IHttpRequestMessageFactory> : produce_base<D, winrt::Windows::Web::Http::IHttpRequestMessageFactory>
     {
         int32_t __stdcall Create(void* method, void* uri, void** value) noexcept final try
@@ -1868,6 +1930,7 @@ namespace std
     template<> struct hash<winrt::Windows::Web::Http::IHttpBufferContentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpClient> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpClient2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpClient3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpClientFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpContent> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpCookie> : winrt::impl::hash_base {};
@@ -1885,6 +1948,7 @@ namespace std
     template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContent> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessage2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessageFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpRequestResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::IHttpResponseMessage> : winrt::impl::hash_base {};
