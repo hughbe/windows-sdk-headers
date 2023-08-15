@@ -628,7 +628,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("28349c88-66fd-5c51-9ad9-7b52347edad4"))
+struct __declspec(uuid("b3c6c75d-acc8-5450-b138-7d0e4780e1a5"))
 IIterator<ABI::Windows::Management::Update::WindowsUpdate*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Management::Update::WindowsUpdate*, ABI::Windows::Management::Update::IWindowsUpdate*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -655,7 +655,7 @@ typedef IIterator<ABI::Windows::Management::Update::WindowsUpdate*> __FIIterator
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("b44d311b-1319-529b-b791-aa88295023ed"))
+struct __declspec(uuid("7adc510b-32d8-5b1d-908a-27ca443a880c"))
 IIterable<ABI::Windows::Management::Update::WindowsUpdate*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Management::Update::WindowsUpdate*, ABI::Windows::Management::Update::IWindowsUpdate*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -682,7 +682,7 @@ typedef IIterable<ABI::Windows::Management::Update::WindowsUpdate*> __FIIterable
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("018064e5-81a1-5bcc-8bc0-ab58103a8675"))
+struct __declspec(uuid("1eef9339-6038-5751-b5ae-bd89c17a8741"))
 IVectorView<ABI::Windows::Management::Update::WindowsUpdate*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Management::Update::WindowsUpdate*, ABI::Windows::Management::Update::IWindowsUpdate*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -1201,9 +1201,8 @@ namespace ABI {
                 enum WindowsUpdateAdministratorStatus : int
                 {
                     WindowsUpdateAdministratorStatus_Succeeded = 0,
-                    WindowsUpdateAdministratorStatus_AdministratorPrivilegesRequired = 1,
-                    WindowsUpdateAdministratorStatus_NoAdministratorRegistered = 2,
-                    WindowsUpdateAdministratorStatus_OtherAdministratorIsRegistered = 3,
+                    WindowsUpdateAdministratorStatus_NoAdministratorRegistered = 1,
+                    WindowsUpdateAdministratorStatus_OtherAdministratorIsRegistered = 2,
                 };
             } /* Update */
         } /* Management */
@@ -1402,7 +1401,7 @@ namespace ABI {
     namespace Windows {
         namespace Management {
             namespace Update {
-                MIDL_INTERFACE("195cb269-d194-59de-8304-41cd8670711d")
+                MIDL_INTERFACE("c3c88dd7-0ef3-52b2-a9ad-66bfc6bd9582")
                 IWindowsUpdate : public IInspectable
                 {
                 public:
@@ -1474,7 +1473,7 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetPropertyValue(
                         HSTRING propertyName,
-                        ABI::Windows::Foundation::IPropertyValue** result
+                        IInspectable** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AcceptEula(void) = 0;
                 };
@@ -3957,9 +3956,8 @@ enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorOptions
 enum __x_ABI_CWindows_CManagement_CUpdate_CWindowsUpdateAdministratorStatus
 {
     WindowsUpdateAdministratorStatus_Succeeded = 0,
-    WindowsUpdateAdministratorStatus_AdministratorPrivilegesRequired = 1,
-    WindowsUpdateAdministratorStatus_NoAdministratorRegistered = 2,
-    WindowsUpdateAdministratorStatus_OtherAdministratorIsRegistered = 3,
+    WindowsUpdateAdministratorStatus_NoAdministratorRegistered = 1,
+    WindowsUpdateAdministratorStatus_OtherAdministratorIsRegistered = 2,
 };
 #endif // WINDOWS_MANAGEMENT_UPDATE_WINDOWSUPDATECONTRACT_VERSION >= 0x10000
 
@@ -4311,7 +4309,7 @@ typedef struct __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateVtbl
         __x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdateActionProgress** value);
     HRESULT (STDMETHODCALLTYPE* GetPropertyValue)(__x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate* This,
         HSTRING propertyName,
-        __x_ABI_CWindows_CFoundation_CIPropertyValue** result);
+        IInspectable** result);
     HRESULT (STDMETHODCALLTYPE* AcceptEula)(__x_ABI_CWindows_CManagement_CUpdate_CIWindowsUpdate* This);
 
     END_INTERFACE

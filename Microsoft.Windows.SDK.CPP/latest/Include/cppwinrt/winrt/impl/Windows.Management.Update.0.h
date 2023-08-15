@@ -11,7 +11,6 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct HResult;
     template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
-    struct IPropertyValue;
     template <typename T> struct __declspec(empty_bases) IReference;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
@@ -33,9 +32,8 @@ WINRT_EXPORT namespace winrt::Windows::Management::Update
     enum class WindowsUpdateAdministratorStatus : int32_t
     {
         Succeeded = 0,
-        AdministratorPrivilegesRequired = 1,
-        NoAdministratorRegistered = 2,
-        OtherAdministratorIsRegistered = 3,
+        NoAdministratorRegistered = 1,
+        OtherAdministratorIsRegistered = 2,
     };
     enum class WindowsUpdateAttentionRequiredReason : int32_t
     {
@@ -193,7 +191,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IPreviewBuildsManager>{ 0xFA07DD61,0x7E4F,0x59F7,{ 0x7C,0x9F,0xDE,0xF9,0x05,0x1C,0x5F,0x62 } }; // FA07DD61-7E4F-59F7-7C9F-DEF9051C5F62
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IPreviewBuildsManagerStatics>{ 0x3E422887,0xB112,0x5A70,{ 0x7D,0xA1,0x97,0xD7,0x8D,0x32,0xAA,0x29 } }; // 3E422887-B112-5A70-7DA1-97D78D32AA29
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IPreviewBuildsState>{ 0xA2F2903E,0xB223,0x5F63,{ 0x75,0x46,0x3E,0x8E,0xAC,0x07,0x0A,0x2E } }; // A2F2903E-B223-5F63-7546-3E8EAC070A2E
-    template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IWindowsUpdate>{ 0x195CB269,0xD194,0x59DE,{ 0x83,0x04,0x41,0xCD,0x86,0x70,0x71,0x1D } }; // 195CB269-D194-59DE-8304-41CD8670711D
+    template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IWindowsUpdate>{ 0xC3C88DD7,0x0EF3,0x52B2,{ 0xA9,0xAD,0x66,0xBF,0xC6,0xBD,0x95,0x82 } }; // C3C88DD7-0EF3-52B2-A9AD-66BFC6BD9582
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IWindowsUpdateActionCompletedEventArgs>{ 0x2C44B950,0xA655,0x5321,{ 0xAE,0xC1,0xAE,0xE7,0x62,0x92,0x21,0x31 } }; // 2C44B950-A655-5321-AEC1-AEE762922131
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IWindowsUpdateActionProgress>{ 0x83B22D8A,0x4BB0,0x549F,{ 0xBA,0x39,0x59,0x72,0x48,0x82,0xD1,0x37 } }; // 83B22D8A-4BB0-549F-BA39-59724882D137
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Update::IWindowsUpdateActionResult>{ 0xE6692C62,0xF697,0x51B7,{ 0xAB,0x7F,0xE7,0x3E,0x5E,0x68,0x8F,0x12 } }; // E6692C62-F697-51B7-AB7F-E73E5E688F12
@@ -520,7 +518,7 @@ namespace winrt::impl
         [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionResult) ActionResult() const;
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) CurrentAction() const;
         [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Management::Update::WindowsUpdateActionProgress) ActionProgress() const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IPropertyValue) GetPropertyValue(param::hstring const& propertyName) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) GetPropertyValue(param::hstring const& propertyName) const;
         WINRT_IMPL_AUTO(void) AcceptEula() const;
     };
     template <> struct consume<winrt::Windows::Management::Update::IWindowsUpdate>

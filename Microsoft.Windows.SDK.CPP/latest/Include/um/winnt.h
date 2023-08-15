@@ -11398,10 +11398,10 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_DEVELOPMENT_MODE_NETWORK_CAPABILITY L"developmentModeNetwork"
 #define SE_LEARNING_MODE_LOGGING_CAPABILITY L"learningModeLogging"
 #define SE_PERMISSIVE_LEARNING_MODE_CAPABILITY L"permissiveLearningMode"
-#define SE_APP_SILO_VOLUME_ROOT_MINIMAL_CAPABILITY L"isolatedWin32:volumeRootMinimal"
-#define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32:profilesRootMinimal"
-#define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32:userProfileMinimal"
-#define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32:print"
+#define SE_APP_SILO_VOLUME_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-volumeRootMinimal"
+#define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-profilesRootMinimal"
+#define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32-userProfileMinimal"
+#define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32-print"
 
 // end_ntosifs
 
@@ -12721,7 +12721,14 @@ typedef struct _PROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY {
 
             DWORD SpeculativeStoreBypassDisable : 1;
 
-            DWORD ReservedFlags : 28;
+            //
+            // Prevent this process' threads from being scheduled on the same
+            // core as threads outside its security domain.
+            //
+
+            DWORD RestrictCoreSharing : 1;
+
+            DWORD ReservedFlags : 27;
 
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
@@ -21619,21 +21626,23 @@ memcpy_inline (
 
 #if !defined(MIDL_PASS)
 
+_Check_return_
 FORCEINLINE
 int
 RtlConstantTimeEqualMemory(
-    const void* v1,
-    const void* v2,
+    _In_reads_bytes_(len) const void* v1,
+    _In_reads_bytes_(len) const void* v2,
     unsigned long len
     )
 {
     char x = 0;
+    unsigned long i = 0;
 
     // Use volatile to prevent compiler from optimizing read
     volatile const char* p1 = (volatile const char*) v1;
     volatile const char* p2 = (volatile const char*) v2;
 
-    for (unsigned long i = 0; i < len; i += 1) {
+    for (; i < len; i += 1) {
 
 #if !defined(_M_CEE) && (defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC))
 

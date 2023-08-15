@@ -187,11 +187,11 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->get_ActionProgress(&value));
         return winrt::Windows::Management::Update::WindowsUpdateActionProgress{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IPropertyValue) consume_Windows_Management_Update_IWindowsUpdate<D>::GetPropertyValue(param::hstring const& propertyName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Management_Update_IWindowsUpdate<D>::GetPropertyValue(param::hstring const& propertyName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Update::IWindowsUpdate)->GetPropertyValue(*(void**)(&propertyName), &result));
-        return winrt::Windows::Foundation::IPropertyValue{ result, take_ownership_from_abi };
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Update_IWindowsUpdate<D>::AcceptEula() const
     {
@@ -938,7 +938,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::Foundation::IPropertyValue>(this->shim().GetPropertyValue(*reinterpret_cast<hstring const*>(&propertyName)));
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().GetPropertyValue(*reinterpret_cast<hstring const*>(&propertyName)));
             return 0;
         }
         catch (...) { return to_hresult(); }

@@ -57694,6 +57694,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define ERROR_SPACES_CACHE_FULL          _HRESULT_TYPEDEF_(0x80E70026L)
 
 //
+// MessageId: ERROR_SPACES_REPAIR_IN_PROGRESS
+//
+// MessageText:
+//
+// Repair is in progress.
+//
+#define ERROR_SPACES_REPAIR_IN_PROGRESS  _HRESULT_TYPEDEF_(0x80E70027L)
+
+//
 // Volsnap errors
 //
 // Success

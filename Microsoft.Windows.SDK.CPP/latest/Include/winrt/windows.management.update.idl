@@ -28,8 +28,6 @@ namespace Windows
     {
         typedef struct DateTime DateTime;
 
-        interface IPropertyValue;
-
         apicontract UniversalApiContract;
 
         runtimeclass Uri;
@@ -186,10 +184,9 @@ namespace Windows
             [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             enum WindowsUpdateAdministratorStatus
             {
-                Succeeded                       = 0,
-                AdministratorPrivilegesRequired = 1,
-                NoAdministratorRegistered       = 2,
-                OtherAdministratorIsRegistered  = 3
+                Succeeded                      = 0,
+                NoAdministratorRegistered      = 1,
+                OtherAdministratorIsRegistered = 2
             };
 
             [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
@@ -260,7 +257,7 @@ namespace Windows
 
             [contract(Windows.Management.Update.WindowsUpdateContract, 1.0)]
             [exclusiveto(Windows.Management.Update.WindowsUpdate)]
-            [uuid(195CB269-D194-59DE-8304-41CD8670711D)]
+            [uuid(C3C88DD7-0EF3-52B2-A9AD-66BFC6BD9582)]
             interface IWindowsUpdate : IInspectable
             {
                 [propget] HRESULT ProviderId([out] [retval] HSTRING* value);
@@ -285,7 +282,7 @@ namespace Windows
                 [propget] HRESULT ActionResult([out] [retval] Windows.Management.Update.WindowsUpdateActionResult** value);
                 [propget] HRESULT CurrentAction([out] [retval] HSTRING* value);
                 [propget] HRESULT ActionProgress([out] [retval] Windows.Management.Update.WindowsUpdateActionProgress** value);
-                HRESULT GetPropertyValue([in] HSTRING propertyName, [out] [retval] Windows.Foundation.IPropertyValue** result);
+                HRESULT GetPropertyValue([in] HSTRING propertyName, [out] [retval] IInspectable** result);
                 HRESULT AcceptEula();
             }
 

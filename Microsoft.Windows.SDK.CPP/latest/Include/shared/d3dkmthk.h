@@ -524,6 +524,9 @@ typedef struct _D3DKMT_FLIPMANAGER_AUXILIARYPRESENTINFO
 
     // out: Whether or not the present was canceled in the scheduler
     BOOL WasCanceled;
+
+    // out: An IFlip submitted token was subsequently cancelled and should be resubmitted as non-IFlip token.
+    BOOL ConvertedToNonIFlip;
 } D3DKMT_FLIPMANAGER_AUXILIARYPRESENTINFO;
 
 typedef struct _D3DKMT_GDIMODEL_PRESENTHISTORYTOKEN

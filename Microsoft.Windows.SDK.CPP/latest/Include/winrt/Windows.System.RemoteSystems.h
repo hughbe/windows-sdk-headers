@@ -6189,8 +6189,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest ** Default Interface **
@@ -15621,8 +15621,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteSystems.IRemoteSystemConnectionRequest ** Default Interface **

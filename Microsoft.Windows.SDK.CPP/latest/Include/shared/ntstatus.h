@@ -25828,6 +25828,15 @@ Notes:
 #define STATUS_SPACES_CACHE_FULL         ((NTSTATUS)0xC0E70026L)
 
 //
+// MessageId: STATUS_SPACES_REPAIR_IN_PROGRESS
+//
+// MessageText:
+//
+// Repair is in progress.
+//
+#define STATUS_SPACES_REPAIR_IN_PROGRESS ((NTSTATUS)0xC0E70027L)
+
+//
 // Volsnap status codes (volsnap.sys)
 //
 //
