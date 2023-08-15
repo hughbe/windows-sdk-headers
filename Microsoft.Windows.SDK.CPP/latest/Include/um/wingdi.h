@@ -3043,6 +3043,7 @@ typedef enum
       DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL             = 11,
       DISPLAYCONFIG_DEVICE_INFO_GET_MONITOR_SPECIALIZATION      = 12,
       DISPLAYCONFIG_DEVICE_INFO_SET_MONITOR_SPECIALIZATION      = 13,
+      DISPLAYCONFIG_DEVICE_INFO_SET_MUX_TARGET                  = 14,
       DISPLAYCONFIG_DEVICE_INFO_FORCE_UINT32                = 0xFFFFFFFF
 } DISPLAYCONFIG_DEVICE_INFO_TYPE;
 
@@ -3240,6 +3241,17 @@ typedef struct _DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION
 
     WCHAR specializationApplicationName[128];
 } DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION;
+
+// Defines the adapter and VidPn target id that a mux can connect to
+typedef struct DISPLAYCONFIG_MUX_TARGET {
+    LUID adapterLuid;
+    UINT targetId;
+} DISPLAYCONFIG_MUX_TARGET;
+
+typedef struct _DISPLAYCONFIG_SWITCH_MUX {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;                //in
+    UINT                             errorStage;            //out
+} DISPLAYCONFIG_SET_MUX_TARGET;
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

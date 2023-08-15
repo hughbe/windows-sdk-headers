@@ -70,6 +70,14 @@ DEFINE_GUID(GUID_DISPLAY_DEVICE_ARRIVAL, 0x1CA05180, 0xA699, 0x450A, 0x9A, 0x0C,
 
 DEFINE_GUID(GUID_DEVINTERFACE_VIDEO_OUTPUT_ARRIVAL, 0x1AD9E4F0, 0xF88D, 0x4360, 0xBA, 0xB9, 0x4C, 0x2D, 0x55, 0xE5, 0x64, 0xCD);
 
+//
+// Display Mux device interface
+// Interface used by anyone listening for arrival of a display mux device
+// {93c33929-3180-46d3-8aab-008c84ad1e6e}
+//
+
+DEFINE_GUID(GUID_DEVINTERFACE_DISPLAYMUX, 0x93c33929, 0x3180, 0x46d3, 0x8a, 0xab, 0x00, 0x8c, 0x84, 0xad, 0x1e, 0x6e);
+
 #ifdef DEFINE_DEVPROPKEY
 
 //
@@ -91,6 +99,17 @@ struct INDIRECT_DISPLAY_INFO
 };
 
 #define INDIRECT_DISPLAY_INFO_FLAGS_CREATED_IDDCX_ADAPTER 0x1  // This indirect display device crated a IddCx adapter
+
+//
+// Display Mux property keys GUID base
+// {fefa7434-e0fd-4b2a-905a-7d0127a9f01c}
+//
+
+DEFINE_DEVPROPKEY(DEVPKEY_DisplayMux_InitStatus, 0xfefa7434, 0xe0fd, 0x4b2a, 0x90, 0x5a, 0x7d, 0x01, 0x27, 0xa9, 0xf0, 0x1c, 1); //
+DEFINE_DEVPROPKEY(DEVPKEY_DisplayMux_SupportLevel , 0xfefa7434, 0xe0fd, 0x4b2a, 0x90, 0x5a, 0x7d, 0x01, 0x27, 0xa9, 0xf0, 0x1c, 2); // DEVPROP_TYPE_UINT32
+DEFINE_DEVPROPKEY(DEVPKEY_DisplayMux_MuxTarget1, 0xfefa7434, 0xe0fd, 0x4b2a, 0x90, 0x5a, 0x7d, 0x01, 0x27, 0xa9, 0xf0, 0x1c, 3); // DEVPROP_TYPE_BINARY
+DEFINE_DEVPROPKEY(DEVPKEY_DisplayMux_MuxTarget2, 0xfefa7434, 0xe0fd, 0x4b2a, 0x90, 0x5a, 0x7d, 0x01, 0x27, 0xa9, 0xf0, 0x1c, 4); // DEVPROP_TYPE_BINARY
+DEFINE_DEVPROPKEY(DEVPKEY_DisplayMux_CurrentTarget, 0xfefa7434, 0xe0fd, 0x4b2a, 0x90, 0x5a, 0x7d, 0x01, 0x27, 0xa9, 0xf0, 0x1c, 5); // DEVPROP_TYPE_BINARY
 
 #endif
 
@@ -2130,7 +2149,7 @@ typedef struct _PANEL_SET_BRIGHTNESS{
 } PANEL_SET_BRIGHTNESS, *PPANEL_SET_BRIGHTNESS;
 
 //
-// IOCTL_PANEL_SET_BRIGHTNESS_STATE 
+// IOCTL_PANEL_SET_BRIGHTNESS_STATE
 //
 
 typedef struct _PANEL_SET_BRIGHTNESS_STATE{
@@ -2147,7 +2166,7 @@ typedef struct _PANEL_SET_BRIGHTNESS_STATE{
 } PANEL_SET_BRIGHTNESS_STATE, *PPANEL_SET_BRIGHTNESS_STATE;
 
 //
-// IOCTL_PANEL_SET_BACKLIGHT_OPTIMIZATION 
+// IOCTL_PANEL_SET_BACKLIGHT_OPTIMIZATION
 //
 
 typedef enum _BACKLIGHT_OPTIMIZATION_LEVEL

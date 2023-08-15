@@ -3227,6 +3227,7 @@ Return Value:
 #define DNS_DOT_SERVER_SETTINGS_ENABLE_DDR        0x0010
 
 #define DNS_DDR_ADAPTER_ENABLE_DOH                0x0001
+#define DNS_DDR_ADAPTER_ENABLE                    DNS_DDR_ADAPTER_ENABLE_DOH
 #define DNS_DDR_ADAPTER_ENABLE_UDP_FALLBACK       0x0002
 
 typedef struct _DNS_SETTINGS

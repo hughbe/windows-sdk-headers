@@ -1402,6 +1402,13 @@ typedef struct {
     // USHORT HookIds[]; // Count indicated by HookIdCount
 } ETW_PMC_SESSION_INFO;
 
+typedef enum ETW_CONTEXT_REGISTER_TYPES {
+    EtwContextRegisterTypeNone = 0,
+    EtwContextRegisterTypeControl = 0x1,
+    EtwContextRegisterTypeInteger = 0x2
+} ETW_CONTEXT_REGISTER_TYPES;
+DEFINE_ENUM_FLAG_OPERATORS(ETW_CONTEXT_REGISTER_TYPES)
+
 //
 // An EVENT_TRACE consists of a fixed header (EVENT_TRACE_HEADER) and
 // optionally a variable portion pointed to by MofData. The datablock
@@ -2355,6 +2362,17 @@ typedef enum _TRACE_QUERY_INFO_CLASS {
     //
     TracePmcSessionInformation = 27,
 
+    //
+    // TraceContextRegisterInfo:
+    // - TraceSetInformation.
+    //      Turns on context register tracing for the specified System Trace Provider events for the specified logger.
+    //      It also turns off context register tracing for all kernel events not on this list, regardless of prior status.
+    //
+    //      Input Format: A TRACE_CONTEXT_REGISTER_INFO structure, followed by an array of up to 
+    //                    ETW_MAX_CONTEXT_REGISTER_EVENTS number of CLASSIC_EVENT_ID structures.
+    //
+    TraceContextRegisterInfo = 28,
+
     MaxTraceSetInfoClass
 } TRACE_QUERY_INFO_CLASS, TRACE_INFO_CLASS;
 
@@ -2409,6 +2427,11 @@ typedef struct _TRACE_PERIODIC_CAPTURE_STATE_INFO {
     USHORT ProviderCount;
     USHORT Reserved;
 } TRACE_PERIODIC_CAPTURE_STATE_INFO, *PTRACE_PERIODIC_CAPTURE_STATE_INFO;
+
+typedef struct TRACE_CONTEXT_REGISTER_INFO {
+    ETW_CONTEXT_REGISTER_TYPES RegisterTypes;
+    ULONG Reserved;
+} TRACE_CONTEXT_REGISTER_INFO;
 
 #ifndef _APISET_EVENTING
 

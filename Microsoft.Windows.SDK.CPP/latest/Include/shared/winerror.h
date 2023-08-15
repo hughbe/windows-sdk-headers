@@ -12741,6 +12741,15 @@
 //
 #define ERROR_NETWORK_AUTHENTICATION_PROMPT_CANCELED 3024L
 
+//
+// MessageId: ERROR_REMOTE_MAILSLOTS_DEPRECATED
+//
+// MessageText:
+//
+// The requested operation failed. Remote mailslots have been deprecated.
+//
+#define ERROR_REMOTE_MAILSLOTS_DEPRECATED 3025L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -50457,6 +50466,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // BitLocker Drive Encryption no longer supports discovery volumes.
 //
 #define FVE_E_DISCOVERY_VOLUME_NOT_SUPPORTED _HRESULT_TYPEDEF_(0x803100EDL)
+
+//
+// MessageId: FVE_E_EXCEED_LIMIT_RP
+//
+// MessageText:
+//
+// BitLocker Drive Encryption cannot add another recovery password because the maximum number of recovery passwords for this volume has been reached. Consider removing unnecessary recovery passwords for this volume.
+//
+#define FVE_E_EXCEED_LIMIT_RP            _HRESULT_TYPEDEF_(0x803100EEL)
 
 //
 // =======================================================

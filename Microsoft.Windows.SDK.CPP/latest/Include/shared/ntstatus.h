@@ -26206,6 +26206,15 @@ Notes:
 #define STATUS_NETWORK_AUTHENTICATION_PROMPT_CANCELED ((NTSTATUS)0xC05D0004L)
 
 //
+// MessageId: STATUS_REMOTE_MAILSLOTS_DEPRECATED
+//
+// MessageText:
+//
+// The requested operation failed. Remote mailslots have been deprecated.
+//
+#define STATUS_REMOTE_MAILSLOTS_DEPRECATED ((NTSTATUS)0xC05D0005L)
+
+//
 // Embedded Security Core
 //
 // Reserved id values 0x0001 - 0x00FF

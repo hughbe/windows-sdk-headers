@@ -2781,6 +2781,13 @@ typedef struct _SCSI_EXTENDED_MESSAGE {
 
 typedef USHORT VERSION_DESCRIPTOR, *PVERSION_DESCRIPTOR;
 
+#define HOT_PLUGGABLE_NO_INFORMATION_PROVIDED      0x0
+#define HOT_PLUGGABLE_REMOVE_AS_SINGLE_OBJECT      0x1 
+#define HOT_PLUGGABLE_NOT_REMOVE_FROM_SCSI_DOMAIN  0x2
+#define HOT_PLUGGABLE_RESERVED                     0x3
+
+#define HOT_PLUGGABLE_FIELD_SHIFT  0x4
+
 #if (NTDDI_VERSION < NTDDI_WINXP)
 typedef struct _INQUIRYDATA {
     UCHAR DeviceType : 5;
@@ -2816,8 +2823,18 @@ typedef struct _INQUIRYDATA {
 typedef struct _INQUIRYDATA {
     UCHAR DeviceType : 5;
     UCHAR DeviceTypeQualifier : 3;
-    UCHAR DeviceTypeModifier : 7;
-    UCHAR RemovableMedia : 1;
+    union {
+        struct {
+            UCHAR DeviceTypeModifier : 7;
+            UCHAR ReservedField1 : 1;
+        };
+        struct {
+            UCHAR ReservedField2 : 4;
+            UCHAR HotPluggable : 2;
+            UCHAR LU_CONG: 1;
+            UCHAR RemovableMedia : 1;
+        };
+    };
     union {
         UCHAR Versions;
         struct {

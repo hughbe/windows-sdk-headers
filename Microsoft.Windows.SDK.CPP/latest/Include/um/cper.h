@@ -2271,6 +2271,9 @@ typedef enum _WHEA_PCI_RECOVERY_STATUS {
     WheaPciRecoveryStatusRpBusyTimeout,
     WheaPciRecoveryStatusComplexTree,
     WheaPciRecoveryStatusBusNotFound,
+    WheaPciRecoveryStatusDeviceNotFound,
+    WheaPciRecoveryStatusDdaAerNotRecoverable,
+    WheaPciRecoveryStatusFailedRecovery,
 }WHEA_PCI_RECOVERY_STATUS,  *PWHEA_PCI_RECOVERY_STATUS;
 
 typedef struct _WHEA_PCI_RECOVERY_SECTION {

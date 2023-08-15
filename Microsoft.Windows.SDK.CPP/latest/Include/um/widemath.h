@@ -71,13 +71,41 @@ int64_t WIDEMATHAPI SDIV128(int64_t DividendHi, int64_t DividendLo, int64_t Divi
 
 uint64_t WIDEMATHAPI UDIV128(uint64_t DividendHi, uint64_t DividendLo, uint64_t Divisor, uint64_t *Remainder);
 
-uint64_t WIDEMATHAPI PADC64(uint64_t X, uint64_t Y, uint64_t C, uint64_t Mask);
-
 uint64_t WIDEMATHAPI PABS64(uint64_t Y, uint64_t Mask, unsigned DataWidth);
+
+#if 0
+
+uint64_t WIDEMATHAPI PADC64(uint64_t X, uint64_t Y, uint64_t C, uint64_t Mask);
 
 uint64_t WIDEMATHAPI PADD64(uint64_t X, uint64_t Y, uint64_t Mask);
 
 uint64_t WIDEMATHAPI PSUB64(uint64_t X, uint64_t Y, uint64_t Mask);
+
+#else
+
+__forceinline
+uint64_t WIDEMATHAPI PADC64(uint64_t X, uint64_t Y, uint64_t C, uint64_t Mask)
+{
+    const uint64_t HighBitMask = _rotr64(Mask, 1);          // 80...80...
+    const uint64_t HighSum = (X ^ Y) & HighBitMask;
+    const uint64_t LowSum = (X & ~HighBitMask) + (Y & ~HighBitMask) + C;
+
+    return HighSum ^ LowSum;
+}
+
+__forceinline
+uint64_t WIDEMATHAPI PADD64(uint64_t X, uint64_t Y, uint64_t Mask)
+{
+    return PADC64(X, Y, 0ull, Mask);
+}
+
+__forceinline
+uint64_t WIDEMATHAPI PSUB64(uint64_t X, uint64_t Y, uint64_t Mask)
+{
+    return PADC64(X, ~Y, Mask, Mask);
+}
+
+#endif
 
 uint64_t WIDEMATHAPI PADDSI64(uint64_t X, uint64_t Y, uint64_t Mask, unsigned DataWidth);
 
@@ -182,12 +210,41 @@ uint128_t WIDEMATHAPI PACKUSDW128(uint128_t X, uint128_t Y, uint64_t Mask, unsig
 
 uint128_t WIDEMATHAPI PABS128(uint128_t Y, uint64_t Mask, unsigned DataWidth);
 
-uint128_t WIDEMATHAPI PADD128(uint128_t X, uint128_t Y, uint64_t Mask);
+__forceinline
+uint128_t WIDEMATHAPI PADD128(uint128_t X, uint128_t Y, uint64_t Mask)
+{
+    uint128_t Result;
+
+    Result.Q[0] = PADD64(X.Q[0], Y.Q[0], Mask);
+    Result.Q[1] = PADD64(X.Q[1], Y.Q[1], Mask);
+
+    return Result;
+}
+
 uint128_t WIDEMATHAPI PADDSI128(uint128_t X, uint128_t Y, uint64_t Mask, unsigned DataWidth);
 uint128_t WIDEMATHAPI PADDSU128(uint128_t X, uint128_t Y, uint64_t Mask, unsigned DataWidth);
 
-uint128_t WIDEMATHAPI PAND128(uint128_t X, uint128_t Y);
-uint128_t WIDEMATHAPI PANDN128(uint128_t X, uint128_t Y);
+__forceinline
+uint128_t WIDEMATHAPI PAND128(uint128_t X, uint128_t Y)
+{
+    uint128_t Result;
+
+    Result.Q[0] = PAND64(X.Q[0], Y.Q[0]);
+    Result.Q[1] = PAND64(X.Q[1], Y.Q[1]);
+
+    return Result;
+}
+
+__forceinline
+uint128_t WIDEMATHAPI PANDN128(uint128_t X, uint128_t Y)
+{
+    uint128_t Result;
+
+    Result.Q[0] = PANDN64(X.Q[0], Y.Q[0]);
+    Result.Q[1] = PANDN64(X.Q[1], Y.Q[1]);
+
+    return Result;
+}
 
 uint128_t WIDEMATHAPI PALIGNR128(uint128_t X, uint128_t Y, uint64_t ShiftCount);
 
@@ -281,7 +338,21 @@ uint128_t WIDEMATHAPI PSUBSI128(uint128_t X, uint128_t Y, uint64_t Mask, unsigne
 uint128_t WIDEMATHAPI PSUBSU128(uint128_t X, uint128_t Y, uint64_t Mask, unsigned DataWidth);
 
 uint128_t WIDEMATHAPI PSHUFB128(uint128_t X, uint128_t Y);
-uint128_t WIDEMATHAPI PSHUFD128(uint128_t Y, int Imm);
+
+__forceinline
+uint128_t WIDEMATHAPI PSHUFD128(uint128_t Y, int Imm)
+{
+    uint64_t InputLo = Y.Q[0];
+    uint64_t InputHi = Y.Q[1];
+    uint128_t OutputVector;
+
+    OutputVector.Q[0] = (uint32_t)((((Imm & 0x02) ? InputHi : InputLo) >> ((Imm & 0x01) << 5)))
+                      | ((((Imm & 0x08) ? InputHi : InputLo) >> ((Imm & 0x04) << 3)) << 32);
+    OutputVector.Q[1] = (uint32_t)((((Imm & 0x20) ? InputHi : InputLo) >> ((Imm & 0x10) << 1)))
+                      | ((((Imm & 0x80) ? InputHi : InputLo) >> ((Imm & 0x40) >> 1)) << 32);
+
+    return OutputVector;
+}
 
 uint32_t WIDEMATHAPI PTESTC128(uint128_t X, uint128_t Y);
 uint32_t WIDEMATHAPI PTESTZ128(uint128_t X, uint128_t Y);
@@ -297,7 +368,16 @@ uint128_t WIDEMATHAPI PUNPCKLDQ128(uint128_t X, uint128_t Y);
 uint128_t WIDEMATHAPI PUNPCKQ128(uint128_t X, uint128_t Y);
 uint128_t WIDEMATHAPI PUNPCKHQ128(uint128_t X, uint128_t Y);
 
-uint128_t WIDEMATHAPI PXOR128(uint128_t X, uint128_t Y);
+__forceinline
+uint128_t WIDEMATHAPI PXOR128(uint128_t X, uint128_t Y)
+{
+    uint128_t Result;
+
+    Result.Q[0] = PXOR64(X.Q[0], Y.Q[0]);
+    Result.Q[1] = PXOR64(X.Q[1], Y.Q[1]);
+
+    return Result;
+}
 
 //
 //  SSE floating point related operations

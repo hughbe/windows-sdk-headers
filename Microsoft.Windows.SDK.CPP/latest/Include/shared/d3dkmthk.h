@@ -869,6 +869,17 @@ typedef struct _D3DKMT_NOTIFY_WORK_SUBMISSION
 }D3DKMT_NOTIFY_WORK_SUBMISSION;
 #endif
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+
+typedef struct _D3DKMT_ISFEATUREENABLED
+{
+    D3DKMT_HANDLE hAdapter;
+    DXGK_FEATURE_ID FeatureId;
+    BOOLEAN Enabled;
+} D3DKMT_ISFEATUREENABLED;
+
+#endif
+
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_4)
 
 typedef struct _D3DKMT_SUBMITPRESENTBLTTOHWQUEUE
@@ -2453,7 +2464,8 @@ typedef union _D3DKMT_ENUMADAPTERS_FILTER
     {
         ULONGLONG IncludeComputeOnly            : 1;
         ULONGLONG IncludeDisplayOnly            : 1;
-        ULONGLONG Reserved                      : 62;
+        ULONGLONG IncludeVirtualGpuOnly         : 1;
+        ULONGLONG Reserved                      : 61;
     };
     D3DKMT_ALIGN64 ULONGLONG Value;
 } D3DKMT_ENUMADAPTERS_FILTER;
@@ -4020,6 +4032,8 @@ typedef struct _D3DKMT_PRESENT_STATS_DWM2
     UINT                         CustomPresentDuration;
     UINT                         VirtualSyncRefreshCount;
     D3DKMT_ALIGN64 LARGE_INTEGER VirtualSyncQPCTime;
+    D3DKMT_ALIGN64 LARGE_INTEGER VSyncDurationQPCTime;
+    UINT                         VSyncMultiplier;
 } D3DKMT_PRESENT_STATS_DWM2;
 
 
@@ -5731,6 +5745,12 @@ typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_NOTIFYWORKSUBMISSION)(_In_ 
 
 #endif
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+
+typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_ISFEATUREENABLED)(_Inout_ D3DKMT_ISFEATUREENABLED*);
+
+#endif
+
 #if !defined(D3DKMDT_SPECIAL_MULTIPLATFORM_TOOL)
 
 #ifdef __cplusplus
@@ -6013,6 +6033,11 @@ EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTConnectDoorbell(_In_ D3DKMT_CONN
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTDestroyDoorbell(_In_ D3DKMT_DESTROY_DOORBELL*);
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTNotifyWorkSubmission(_In_ D3DKMT_NOTIFY_WORK_SUBMISSION*);
 #endif
+
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTIsFeatureEnabled(_Inout_ D3DKMT_ISFEATUREENABLED*);
+#endif
+
 //
 // Interface used for shared power component management
 // {ea5c6870-e93c-4588-bef1-fec42fc9429a}

@@ -117,12 +117,20 @@ __m128d __MD128(const uint128_t U)
 
 __forceinline uint128_t __MAKEU8_U128(const uint8_t A, const uint8_t B, const uint8_t C, const uint8_t D, const uint8_t E, const uint8_t F, const uint8_t G, const uint8_t H, const uint8_t I, const uint8_t J, const uint8_t K, const uint8_t L, const uint8_t M, const uint8_t N, const uint8_t O, const uint8_t P)
 { uint128_t T; T.B[0] = A; T.B[1] = B; T.B[2] = C; T.B[3] = D; T.B[4] = E; T.B[5] = F; T.B[6] = G; T.B[7] = H; T.B[8] = I; T.B[9] = J; T.B[10] = K; T.B[11] = L; T.B[12] = M; T.B[13] = N; T.B[14] = O; T.B[15] = P; return T; }
+__forceinline uint128_t __MAKEU8X16_U128(const uint8_t A)
+{ uint128_t T; T.B[0] = A; T.B[1] = A; T.B[2] = A; T.B[3] = A; T.B[4] = A; T.B[5] = A; T.B[6] = A; T.B[7] = A; T.B[8] = A; T.B[9] = A; T.B[10] = A; T.B[11] = A; T.B[12] = A; T.B[13] = A; T.B[14] = A; T.B[15] = A; return T; }
 __forceinline uint128_t __MAKEU16_U128(const uint16_t A, const uint16_t B, const uint16_t C, const uint16_t D, const uint16_t E, const uint16_t F, const uint16_t G, const uint16_t H)
 { uint128_t T; T.W[0] = A; T.W[1] = B; T.W[2] = C; T.W[3] = D; T.W[4] = E; T.W[5] = F; T.W[6] = G; T.W[7] = H; return T; }
+__forceinline uint128_t __MAKEU16X8_U128(const uint16_t A)
+{ uint128_t T; T.W[0] = A; T.W[1] = A; T.W[2] = A; T.W[3] = A; T.W[4] = A; T.W[5] = A; T.W[6] = A; T.W[7] = A; return T; }
 __forceinline uint128_t __MAKEU32_U128(const uint32_t A, const uint32_t B, const uint32_t C, const uint32_t D)
-{ uint128_t T; T.D[0] = A; T.D[1] = B; T.D[2] = C; T.D[3] = D; return T; }
+{ uint128_t T; T.Q[0] = A | ((uint64_t)B << 32); T.Q[1] = C | ((uint64_t)D << 32); return T; }
+__forceinline uint128_t __MAKEU32X4_U128(const uint32_t A)
+{ return __MAKEU32_U128(A, A, A, A); }
 __forceinline uint128_t __MAKEU64_U128(const uint64_t A, const uint64_t B)
 { uint128_t T; T.Q[0] = A; T.Q[1] = B; return T; }
+__forceinline uint128_t __MAKEU64X2_U128(const uint64_t A)
+{ uint128_t T; T.Q[0] = A; T.Q[1] = A; return T; }
 __forceinline uint128_t __MAKEF32_U128(const float A, const float B, const float C, const float D)
 { uint128_t T; T.D[0] = *(uint32_t *)&A; T.D[1] = *(uint32_t *)&B; T.D[2] = *(uint32_t *)&C; T.D[3] = *(uint32_t *)&D ; return T; }
 __forceinline uint128_t __MAKEF64_U128(const double A, const double B)
@@ -945,10 +953,10 @@ __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1))) ? 1
 #define _mm_set_sd(a)                   __MD128(__MAKEF64_U128((a),0))
 #define _mm_set_ss(a)                   __MM128(__MAKEF32_U128((a),0,0,0))
 
-#define _mm_set1_epi8(a)                __MI128(BROADCAST128((uint8_t)(a), _BITS_PER_BYTE))
-#define _mm_set1_epi16(a)               __MI128(BROADCAST128((uint16_t)(a), _BITS_PER_WORD))
-#define _mm_set1_epi32(a)               __MI128(BROADCAST128((uint32_t)(a), _BITS_PER_LONG))
-#define _mm_set1_epi64x(a)              __MI128(BROADCAST128((uint64_t)(a), _BITS_PER_QUAD))
+#define _mm_set1_epi8(a)                __MI128(__MAKEU8X16_U128((uint8_t)(a)))
+#define _mm_set1_epi16(a)               __MI128(__MAKEU16X8_U128((uint16_t)(a)))
+#define _mm_set1_epi32(a)               __MI128(__MAKEU32X4_U128((uint32_t)(a)))
+#define _mm_set1_epi64x(a)              __MI128(__MAKEU64X2_U128((uint64_t)(a)))
 
 #if !defined(_mm_set1_pd)
 #define _mm_set1_pd(a)                  __MD128(__MAKEF64_U128((a),(a)))

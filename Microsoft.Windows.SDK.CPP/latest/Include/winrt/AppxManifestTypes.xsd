@@ -1686,5 +1686,14 @@
     <xs:union memberTypes="xs:unsignedLong ST_HexInt64"/>
   </xs:simpleType>
 
+  <xs:simpleType name="ST_RuntimeBehavior_2022">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="windowsApp"/>
+      <xs:enumeration value="packagedClassicApp"/>
+      <xs:enumeration value="win32App"/>
+      <xs:enumeration value="appSilo"/>
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
 
