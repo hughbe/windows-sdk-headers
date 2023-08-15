@@ -490,27 +490,6 @@ HcsModifyServiceSettings(
     _Outptr_opt_ PWSTR* result
     );
 
-/// Initiate live migration on source host
-
-HRESULT
-WINAPI
-HcsInitiateSourceComputeSystemMigration(
-    _In_ HCS_SYSTEM computeSystem,
-    _In_ HCS_OPERATION operation,
-    _In_opt_ PCWSTR options
-    );
-
-/// Finalize live migration process. This API call is expected to be invoked on
-/// both source and destination
-
-HRESULT
-WINAPI
-HcsFinalizeComputeSystemMigration(
-    _In_ HCS_SYSTEM computeSystem,
-    _In_ HCS_OPERATION operation,
-    _In_opt_ PCWSTR options
-    );
-
 /// Submits a WER report
 
 HRESULT
@@ -874,18 +853,6 @@ IsHcsGetServicePropertiesPresent(
 BOOLEAN
 __stdcall
 IsHcsModifyServiceSettingsPresent(
-    VOID
-    );
-
-BOOLEAN
-__stdcall
-IsHcsInitiateSourceComputeSystemMigrationPresent(
-    VOID
-    );
-
-BOOLEAN
-__stdcall
-IsHcsFinalizeComputeSystemMigrationPresent(
     VOID
     );
 

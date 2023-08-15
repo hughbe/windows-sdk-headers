@@ -461,6 +461,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice2)->GetPdlPassthroughProvider(&result));
         return winrt::Windows::Devices::Printers::PdlPassthroughProvider{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice3<D>::IsIppFaxOutPrinter() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice3)->get_IsIppFaxOutPrinter(&value));
+        return value;
+    }
     template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDeviceStatics<D>::GetDeviceSelector() const
     {
         void* result{};
@@ -1259,6 +1265,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Printers::IIppPrintDevice3> : produce_base<D, winrt::Windows::Devices::Printers::IIppPrintDevice3>
+    {
+        int32_t __stdcall get_IsIppFaxOutPrinter(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsIppFaxOutPrinter());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Printers::IIppPrintDeviceStatics> : produce_base<D, winrt::Windows::Devices::Printers::IIppPrintDeviceStatics>
     {
         int32_t __stdcall GetDeviceSelector(void** result) noexcept final try
@@ -1760,6 +1779,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Printers::IIppIntegerRangeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDeviceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppResolution> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppResolutionFactory> : winrt::impl::hash_base {};

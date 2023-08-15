@@ -25570,6 +25570,15 @@ Notes:
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE ((NTSTATUS)0xC0E9000DL)
 
 //
+// MessageId: STATUS_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  File did not pass WHQL-only requirements.
+//
+#define STATUS_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED ((NTSTATUS)0xC0E9000EL)
+
+//
 // Clip modern app and windows licensing error messages.
 //
 //

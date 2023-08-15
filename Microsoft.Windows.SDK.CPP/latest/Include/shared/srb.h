@@ -36,7 +36,7 @@ Revision History:
 #define DebugPrint(x)
 #endif
 
-// begin_storport begin_storportp
+// begin_storport begin_privstorport
 
 //
 // Define SCSI maximum configuration parameters.
@@ -70,7 +70,7 @@ Revision History:
 #define SCSI_MAXIMUM_TARGETS 8
 #define SCSI_MAXIMUM_LOGICAL_UNITS 8
 
-//end_storport end_storportp
+//end_storport end_privstorport
 
 typedef PHYSICAL_ADDRESS SCSI_PHYSICAL_ADDRESS, *PSCSI_PHYSICAL_ADDRESS;
 
@@ -447,7 +447,7 @@ typedef struct _SCSI_SUPPORTED_CONTROL_TYPE_LIST {
 } SCSI_SUPPORTED_CONTROL_TYPE_LIST, *PSCSI_SUPPORTED_CONTROL_TYPE_LIST;
 #pragma warning(default:4200)
 
-// begin_storport begin_storportp
+// begin_storport begin_privstorport
 
 //
 // Uninitialized flag value.
@@ -1294,7 +1294,7 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
 
 // end_ntminitape
 
-// end_storport end_storportp
+// end_storport end_privstorport
 
 //
 // SCSI Adapter Dependent Routines

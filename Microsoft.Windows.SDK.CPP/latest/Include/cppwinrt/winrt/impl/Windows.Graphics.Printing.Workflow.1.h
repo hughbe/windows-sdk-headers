@@ -66,6 +66,20 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         IPrintWorkflowJobBackgroundSession(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowJobBackgroundSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IPrintWorkflowJobBackgroundSession2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobBackgroundSession2>
+    {
+        IPrintWorkflowJobBackgroundSession2(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobBackgroundSession2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobIssueDetectedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobIssueDetectedEventArgs>
+    {
+        IPrintWorkflowJobIssueDetectedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobIssueDetectedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IPrintWorkflowJobNotificationEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPrintWorkflowJobNotificationEventArgs>
@@ -79,6 +93,13 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
     {
         IPrintWorkflowJobStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowJobStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobStartingEventArgs2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobStartingEventArgs2>
+    {
+        IPrintWorkflowJobStartingEventArgs2(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobStartingEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IPrintWorkflowJobTriggerDetails :
         winrt::Windows::Foundation::IInspectable,

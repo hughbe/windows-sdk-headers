@@ -59,6 +59,7 @@ FORCEINLINE bool IS_DO_TRANSIENT_ERROR(HRESULT hr)
 #define DO_E_FILE_ENCRYPTION_EXPECTED               _HRESULT_TYPEDEF_(0x80D0201BL) // Decryption key was provided but file on CDN does not appear to be encrypted
 #define DO_E_FILE_SIZE_UNKNOWN_HTTP_206             _HRESULT_TYPEDEF_(0x80D0201CL) // Unable to determine file size from HTTP 206 status code
 #define DO_E_FILE_SIZE_UNKNOWN_HTTP_2XX             _HRESULT_TYPEDEF_(0x80D0201DL) // Unable to determine file size from an unexpected HTTP 2xx status code
+#define DO_E_NETWORK_ACCESS_CONSENT_NEEDED          _HRESULT_TYPEDEF_(0x80D0201EL) // User consent to access the network is required to proceed
 
 // IDODownload interface
 

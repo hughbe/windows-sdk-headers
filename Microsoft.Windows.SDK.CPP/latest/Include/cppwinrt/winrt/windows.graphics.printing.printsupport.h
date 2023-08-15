@@ -21,6 +21,30 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatche
 #include "winrt/impl/Windows.Graphics.Printing.PrintSupport.2.h"
 namespace winrt::impl
 {
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs<D>::ErrorKind() const
+    {
+        winrt::Windows::Graphics::Printing::PrintSupport::IppCommunicationErrorKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs)->get_ErrorKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs<D>::ExtendedError() const
+    {
+        winrt::hresult value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs)->get_ExtendedError(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs<D>::CommunicationConfiguration() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs)->get_CommunicationConfiguration(&value));
+        return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession<D>::Printer() const
     {
         void* value{};
@@ -73,11 +97,79 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2)->remove_PrinterSelected(impl::bind_in(token));
     }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3<D>::CommunicationErrorDetected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3)->add_CommunicationErrorDetected(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3<D>::CommunicationErrorDetected_revoker consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3<D>::CommunicationErrorDetected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, CommunicationErrorDetected_revoker>(this, CommunicationErrorDetected(handler));
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3<D>::CommunicationErrorDetected(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3)->remove_CommunicationErrorDetected(impl::bind_in(token));
+    }
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionTriggerDetails<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails)->get_Session(&value));
         return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration<D>::CommunicationKind() const
+    {
+        winrt::Windows::Graphics::Printing::PrintSupport::IppPrinterCommunicationKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration)->get_CommunicationKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration<D>::CanModifyTimeouts() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration)->get_CanModifyTimeouts(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration<D>::IppAttributeTimeouts() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration)->get_IppAttributeTimeouts(&value));
+        return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration<D>::IppJobTimeouts() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration)->get_IppJobTimeouts(&value));
+        return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::ConnectTimeout() const
+    {
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->get_ConnectTimeout(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::ConnectTimeout(winrt::Windows::Foundation::TimeSpan const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->put_ConnectTimeout(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::SendTimeout() const
+    {
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->get_SendTimeout(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::SendTimeout(winrt::Windows::Foundation::TimeSpan const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->put_SendTimeout(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::ReceiveTimeout() const
+    {
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->get_ReceiveTimeout(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts<D>::ReceiveTimeout(winrt::Windows::Foundation::TimeSpan const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts)->put_ReceiveTimeout(impl::bind_in(value)));
     }
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs<D>::GetCurrentPrintDeviceCapabilities() const
     {
@@ -118,6 +210,12 @@ namespace winrt::impl
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2<D>::SetPrintDeviceCapabilitiesUpdatePolicy(winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const& updatePolicy) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2)->SetPrintDeviceCapabilitiesUpdatePolicy(*(void**)(&updatePolicy)));
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3<D>::CommunicationConfiguration() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3)->get_CommunicationConfiguration(&value));
+        return winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics<D>::CreatePeriodicRefresh(winrt::Windows::Foundation::TimeSpan const& updatePeriod) const
     {
@@ -261,6 +359,43 @@ namespace winrt::impl
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs>
+    {
+        int32_t __stdcall get_ErrorKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::IppCommunicationErrorKind>(this->shim().ErrorKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
+        {
+            zero_abi<winrt::hresult>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::hresult>(this->shim().ExtendedError());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CommunicationConfiguration(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>(this->shim().CommunicationConfiguration());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession>
     {
         int32_t __stdcall get_Printer(void** value) noexcept final try
@@ -330,6 +465,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3>
+    {
+        int32_t __stdcall add_CommunicationErrorDetected(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().CommunicationErrorDetected(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_CommunicationErrorDetected(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CommunicationErrorDetected(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails>
     {
         int32_t __stdcall get_Session(void** value) noexcept final try
@@ -337,6 +492,93 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>(this->shim().Session());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration>
+    {
+        int32_t __stdcall get_CommunicationKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::IppPrinterCommunicationKind>(this->shim().CommunicationKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CanModifyTimeouts(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().CanModifyTimeouts());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IppAttributeTimeouts(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>(this->shim().IppAttributeTimeouts());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IppJobTimeouts(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>(this->shim().IppJobTimeouts());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts>
+    {
+        int32_t __stdcall get_ConnectTimeout(int64_t* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().ConnectTimeout());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ConnectTimeout(int64_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ConnectTimeout(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SendTimeout(int64_t* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().SendTimeout());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SendTimeout(int64_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SendTimeout(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ReceiveTimeout(int64_t* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().ReceiveTimeout());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ReceiveTimeout(int64_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ReceiveTimeout(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -409,6 +651,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().SetPrintDeviceCapabilitiesUpdatePolicy(*reinterpret_cast<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy const*>(&updatePolicy));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3> : produce_base<D, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3>
+    {
+        int32_t __stdcall get_CommunicationConfiguration(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>(this->shim().CommunicationConfiguration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -679,11 +935,16 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesUpdatePolicy> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintTicketElement> : winrt::impl::hash_base {};
@@ -692,8 +953,11 @@ namespace std
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSessionInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportSettingsUISession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement> : winrt::impl::hash_base {};

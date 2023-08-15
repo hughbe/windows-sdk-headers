@@ -5062,6 +5062,8 @@ BarrierAfterRead (
 // ARM doesn't have.
 //
 
+// end_ntoshvp
+
 DWORD64
 ReadTimeStampCounter(
     VOID
@@ -5078,6 +5080,8 @@ ReadPMC (
     _DataSynchronizationBarrier();
     return (DWORD64)_MoveFromCoprocessor(CP15_PMXEVCNTR);
 }
+
+// begin_ntoshvp
 
 #ifdef __cplusplus
 }
@@ -6132,6 +6136,9 @@ DECLSPEC_GUARDNOCF
 
 #endif // defined(_M_HYBRID_X86_ARM64)
 
+//
+// hextract end_ntoshvp
+
 FORCEINLINE
 DWORD64
 ReadTimeStampCounter(
@@ -6198,6 +6205,9 @@ ReadPMC (
     default: return 0;
     }
 }
+
+// hextract begin_ntoshvp
+//
 
 //
 // Define functions to capture the high 64-bits of a 128-bit multiply.
@@ -14782,6 +14792,17 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            )
 
 //
+// Macro to determine whether a reparse point tag corresponds to a reserved
+// tag owned by Microsoft.  Note that reserved tags with non-zero reserved
+// bits (bits 16..27) are invalid on disk, but can be used for special
+// purposes within the OS.
+//
+
+#define IsReparseTagReserved(_tag) (               \
+                           ((_tag) & 0x40000000)   \
+                           )
+
+//
 // Macro to determine whether a reparse point tag is a name surrogate
 //
 
@@ -14798,6 +14819,7 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            ((_tag) & 0x10000000)   \
                            )
 
+#define IO_REPARSE_TAG_RESERVED_INVALID         (0xCFFF0000L)       
 #define IO_REPARSE_TAG_MOUNT_POINT              (0xA0000003L)       
 #define IO_REPARSE_TAG_HSM                      (0xC0000004L)       
 #define IO_REPARSE_TAG_HSM2                     (0x80000006L)       

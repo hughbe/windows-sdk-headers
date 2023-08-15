@@ -83,6 +83,8 @@ namespace Windows
 
             interface IIppPrintDevice2;
 
+            interface IIppPrintDevice3;
+
             interface IIppPrintDeviceStatics;
 
             interface IIppResolution;
@@ -394,6 +396,14 @@ namespace Windows
                 HRESULT GetPdlPassthroughProvider([out] [retval] Windows.Devices.Printers.PdlPassthroughProvider** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [exclusiveto(Windows.Devices.Printers.IppPrintDevice)]
+            [uuid(B6258F6D-A46D-5E37-80CE-5F69D5544712)]
+            interface IIppPrintDevice3 : IInspectable
+            {
+                [propget] HRESULT IsIppFaxOutPrinter([out] [retval] boolean* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Devices.Printers.IppPrintDevice)]
             [uuid(7DC19F08-7F20-52AB-94A7-894B83B2A17E)]
@@ -540,6 +550,7 @@ namespace Windows
             {
                 [default] interface Windows.Devices.Printers.IIppPrintDevice;
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.Devices.Printers.IIppPrintDevice2;
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)] interface Windows.Devices.Printers.IIppPrintDevice3;
             }
 
             [activatable(Windows.Devices.Printers.IIppResolutionFactory, Windows.Foundation.UniversalApiContract, 13.0)]

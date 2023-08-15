@@ -16,6 +16,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
+    struct HResult;
     struct IAsyncAction;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
@@ -56,11 +57,26 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         JobFailed = 0,
         UserCanceled = 1,
     };
+    enum class PrintWorkflowJobIssueKind : int32_t
+    {
+        Other = 0,
+        AttentionRequired = 1,
+        DoorOpen = 2,
+        MarkerSupplyLow = 3,
+        MarkerSupplyEmpty = 4,
+        MediaJam = 5,
+        MediaEmpty = 6,
+        MediaLow = 7,
+        OutputAreaAlmostFull = 8,
+        OutputAreaFull = 9,
+        JobPrintingError = 10,
+    };
     enum class PrintWorkflowPdlConversionType : int32_t
     {
         XpsToPdf = 0,
         XpsToPwgr = 1,
         XpsToPclm = 2,
+        XpsToTiff = 3,
     };
     enum class PrintWorkflowPrinterJobStatus : int32_t
     {
@@ -98,8 +114,11 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
     struct IPrintWorkflowForegroundSetupRequestedEventArgs;
     struct IPrintWorkflowJobActivatedEventArgs;
     struct IPrintWorkflowJobBackgroundSession;
+    struct IPrintWorkflowJobBackgroundSession2;
+    struct IPrintWorkflowJobIssueDetectedEventArgs;
     struct IPrintWorkflowJobNotificationEventArgs;
     struct IPrintWorkflowJobStartingEventArgs;
+    struct IPrintWorkflowJobStartingEventArgs2;
     struct IPrintWorkflowJobTriggerDetails;
     struct IPrintWorkflowJobUISession;
     struct IPrintWorkflowObjectModelSourceFileContent;
@@ -130,6 +149,7 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
     struct PrintWorkflowForegroundSetupRequestedEventArgs;
     struct PrintWorkflowJobActivatedEventArgs;
     struct PrintWorkflowJobBackgroundSession;
+    struct PrintWorkflowJobIssueDetectedEventArgs;
     struct PrintWorkflowJobNotificationEventArgs;
     struct PrintWorkflowJobStartingEventArgs;
     struct PrintWorkflowJobTriggerDetails;
@@ -163,8 +183,11 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent>{ using type = interface_category; };
@@ -195,6 +218,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>{ using type = class_category; };
@@ -220,6 +244,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueKind>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus>{ using type = enum_category; };
@@ -232,6 +257,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails";
@@ -257,6 +283,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations> = L"Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobAbortReason";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueKind> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueKind";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConversionType";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus> = L"Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus";
@@ -270,8 +297,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSetupRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobActivatedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobIssueDetectedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobNotificationEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobTriggerDetails";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent> = L"Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelSourceFileContent";
@@ -303,8 +333,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs>{ 0xBBE38247,0x9C1B,0x4DD3,{ 0x9B,0x2B,0xC8,0x04,0x68,0xD9,0x41,0xB3 } }; // BBE38247-9C1B-4DD3-9B2B-C80468D941B3
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs>{ 0xD4BD5E6D,0x034E,0x5E00,{ 0xA6,0x16,0xF9,0x61,0xA0,0x33,0xDC,0xC8 } }; // D4BD5E6D-034E-5E00-A616-F961A033DCC8
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession>{ 0xC5EC6AD8,0x20C9,0x5D51,{ 0x85,0x07,0x27,0x34,0xB4,0x6F,0x96,0xC5 } }; // C5EC6AD8-20C9-5D51-8507-2734B46F96C5
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>{ 0x592AADAF,0xEF26,0x5A55,{ 0xAD,0x21,0x5F,0x63,0xFF,0xCF,0x83,0x66 } }; // 592AADAF-EF26-5A55-AD21-5F63FFCF8366
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>{ 0x55E6C2F1,0x86A0,0x526A,{ 0xAF,0x72,0xA9,0x21,0x08,0xB3,0x9E,0xE3 } }; // 55E6C2F1-86A0-526A-AF72-A92108B39EE3
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs>{ 0x0AE16FBA,0x5398,0x5EBA,{ 0xB4,0x72,0x97,0x86,0x50,0x18,0x6A,0x9A } }; // 0AE16FBA-5398-5EBA-B472-978650186A9A
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs>{ 0xE3D99BA8,0x31AD,0x5E09,{ 0xB0,0xD7,0x60,0x1B,0x97,0xF1,0x61,0xAD } }; // E3D99BA8-31AD-5E09-B0D7-601B97F161AD
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>{ 0x58975F3C,0x7CA7,0x59BD,{ 0x98,0x26,0xC8,0xB9,0xB2,0xDE,0xE0,0x52 } }; // 58975F3C-7CA7-59BD-9826-C8B9B2DEE052
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails>{ 0xFF296129,0x60E2,0x51DB,{ 0xBA,0x8C,0xE2,0xCC,0xDD,0xB5,0x16,0xB9 } }; // FF296129-60E2-51DB-BA8C-E2CCDDB516B9
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession>{ 0x00C8736B,0x7637,0x5687,{ 0xA3,0x02,0x0F,0x66,0x4D,0x2A,0xAC,0x65 } }; // 00C8736B-7637-5687-A302-0F664D2AAC65
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent>{ 0xC36C8A6A,0x8A2A,0x419A,{ 0xB3,0xC3,0x20,0x90,0xE6,0xBF,0xAB,0x2F } }; // C36C8A6A-8A2A-419A-B3C3-2090E6BFAB2F
@@ -335,6 +368,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs; };
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs; };
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession; };
+    template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs; };
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs; };
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs; };
     template <> struct default_interface<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>{ using type = winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails; };
@@ -435,6 +469,27 @@ namespace winrt::impl
             virtual int32_t __stdcall Start() noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_JobIssueDetected(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_JobIssueDetected(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_JobIssueKind(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ExtendedError(winrt::hresult*) noexcept = 0;
+            virtual int32_t __stdcall JobIssueHandled() noexcept = 0;
+            virtual int32_t __stdcall get_PrinterJob(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Configuration(void**) noexcept = 0;
+            virtual int32_t __stdcall get_UILauncher(void**) noexcept = 0;
+            virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -452,6 +507,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Printer(void**) noexcept = 0;
             virtual int32_t __stdcall SetSkipSystemRendering() noexcept = 0;
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsIppCompressionEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall DisableIppCompressionForJob() noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails>
@@ -756,6 +819,33 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobBackgroundSession<D>;
     };
     template <typename D>
+    struct consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobBackgroundSession2
+    {
+        auto JobIssueDetected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs> const& handler) const;
+        using JobIssueDetected_revoker = impl::event_revoker<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2, &impl::abi_t<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>::remove_JobIssueDetected>;
+        [[nodiscard]] JobIssueDetected_revoker JobIssueDetected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs> const& handler) const;
+        auto JobIssueDetected(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobBackgroundSession2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs
+    {
+        [[nodiscard]] auto JobIssueKind() const;
+        [[nodiscard]] auto ExtendedError() const;
+        auto JobIssueHandled() const;
+        [[nodiscard]] auto PrinterJob() const;
+        [[nodiscard]] auto Configuration() const;
+        [[nodiscard]] auto UILauncher() const;
+        auto GetDeferral() const;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobNotificationEventArgs
     {
         [[nodiscard]] auto Configuration() const;
@@ -777,6 +867,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs>
     {
         template <typename D> using type = consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs2
+    {
+        [[nodiscard]] auto IsIppCompressionEnabled() const;
+        auto DisableIppCompressionForJob() const;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs2<D>;
     };
     template <typename D>
     struct consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobTriggerDetails

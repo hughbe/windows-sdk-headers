@@ -48,12 +48,14 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
         Unknown = 0,
         Engaged = 1,
         Unengaged = 2,
+        Unsupported = 3,
     };
     enum class HumanPresence : int32_t
     {
         Unknown = 0,
         Present = 1,
         NotPresent = 2,
+        Unsupported = 3,
     };
     enum class MagnetometerAccuracy : int32_t
     {
@@ -168,10 +170,12 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct IHingeAngleSensorStatics;
     struct IHumanPresenceFeatures;
     struct IHumanPresenceSensor;
+    struct IHumanPresenceSensor2;
     struct IHumanPresenceSensorReading;
     struct IHumanPresenceSensorReadingChangedEventArgs;
     struct IHumanPresenceSensorStatics;
     struct IHumanPresenceSettings;
+    struct IHumanPresenceSettings2;
     struct IHumanPresenceSettingsStatics;
     struct IInclinometer;
     struct IInclinometer2;
@@ -372,10 +376,12 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensor>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer2>{ using type = interface_category; };
@@ -657,10 +663,12 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics> = L"Windows.Devices.Sensors.IHingeAngleSensorStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures> = L"Windows.Devices.Sensors.IHumanPresenceFeatures";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor> = L"Windows.Devices.Sensors.IHumanPresenceSensor";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2> = L"Windows.Devices.Sensors.IHumanPresenceSensor2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading> = L"Windows.Devices.Sensors.IHumanPresenceSensorReading";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs> = L"Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics> = L"Windows.Devices.Sensors.IHumanPresenceSensorStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> = L"Windows.Devices.Sensors.IHumanPresenceSettings";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> = L"Windows.Devices.Sensors.IHumanPresenceSettings2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics> = L"Windows.Devices.Sensors.IHumanPresenceSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer> = L"Windows.Devices.Sensors.IInclinometer";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer2> = L"Windows.Devices.Sensors.IInclinometer2";
@@ -796,10 +804,12 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics>{ 0xB7B63910,0xFBB1,0x4123,{ 0x89,0xCE,0x4E,0xA3,0x4E,0xB0,0xDF,0xCA } }; // B7B63910-FBB1-4123-89CE-4EA34EB0DFCA
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures>{ 0xBDB09FDA,0x3244,0x557A,{ 0xBD,0x29,0x8B,0x00,0x4F,0x59,0xF2,0xCC } }; // BDB09FDA-3244-557A-BD29-8B004F59F2CC
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor>{ 0x2116788B,0xE389,0x5CC3,{ 0x9A,0x97,0xCB,0x17,0xBE,0x10,0x08,0xBD } }; // 2116788B-E389-5CC3-9A97-CB17BE1008BD
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>{ 0xD4C021C6,0x8247,0x5B9B,{ 0x8E,0xF8,0x5F,0x52,0x43,0x58,0x18,0xFD } }; // D4C021C6-8247-5B9B-8EF8-5F52435818FD
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading>{ 0x83533BF5,0xA85A,0x5D50,{ 0x8B,0xE4,0x60,0x72,0xD7,0x45,0xA3,0xBB } }; // 83533BF5-A85A-5D50-8BE4-6072D745A3BB
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs>{ 0xA9DC4583,0xFD69,0x5C5E,{ 0xAB,0x1F,0x94,0x22,0x04,0xEA,0xE2,0xDB } }; // A9DC4583-FD69-5C5E-AB1F-942204EAE2DB
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics>{ 0x2AE89842,0xDBA9,0x56B2,{ 0x9F,0x27,0xEA,0xC6,0x9D,0x62,0x10,0x04 } }; // 2AE89842-DBA9-56B2-9F27-EAC69D621004
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ 0xEF4DAF5B,0x07B7,0x5EB6,{ 0x86,0xBB,0xB7,0xFF,0x49,0xCE,0x44,0xFB } }; // EF4DAF5B-07B7-5EB6-86BB-B7FF49CE44FB
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ 0xE6782A4D,0x5ED2,0x5F20,{ 0x83,0x26,0xA7,0x8F,0xA9,0x87,0xF3,0x9A } }; // E6782A4D-5ED2-5F20-8326-A78FA987F39A
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ 0x7F343202,0xE010,0x52C4,{ 0xAF,0x0C,0x04,0xA8,0xF1,0xE0,0x33,0xDA } }; // 7F343202-E010-52C4-AF0C-04A8F1E033DA
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer>{ 0x2648CA6F,0x2286,0x406F,{ 0x91,0x61,0xF0,0xC4,0xBD,0x80,0x6E,0xBF } }; // 2648CA6F-2286-406F-9161-F0C4BD806EBF
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer2>{ 0x029F3393,0x28B2,0x45F8,{ 0xBB,0x16,0x61,0xE8,0x6A,0x7F,0xAE,0x6E } }; // 029F3393-28B2-45F8-BB16-61E86A7FAE6E
@@ -1487,6 +1497,14 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_ReadingChanged(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsHumanPresenceCapable(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_IsHumanEngagementCapable(bool*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1531,6 +1549,20 @@ namespace winrt::impl
             virtual int32_t __stdcall put_LockOnLeaveTimeout(int64_t) noexcept = 0;
             virtual int32_t __stdcall get_IsAttentionAwareDimmingEnabled(bool*) noexcept = 0;
             virtual int32_t __stdcall put_IsAttentionAwareDimmingEnabled(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_AllowWakeOnApproachWhenExternalDisplayConnected(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowWakeOnApproachWhenExternalDisplayConnected(bool) noexcept = 0;
+            virtual int32_t __stdcall get_AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool) noexcept = 0;
+            virtual int32_t __stdcall get_AllowLockOnLeaveWhenExternalDisplayConnected(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowLockOnLeaveWhenExternalDisplayConnected(bool) noexcept = 0;
+            virtual int32_t __stdcall get_AllowWakeOnApproachWhenBatterySaverActive(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowWakeOnApproachWhenBatterySaverActive(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>
@@ -2843,6 +2875,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSensor<D>;
     };
     template <typename D>
+    struct consume_Windows_Devices_Sensors_IHumanPresenceSensor2
+    {
+        [[nodiscard]] auto IsHumanPresenceCapable() const;
+        [[nodiscard]] auto IsHumanEngagementCapable() const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSensor2<D>;
+    };
+    template <typename D>
     struct consume_Windows_Devices_Sensors_IHumanPresenceSensorReading
     {
         [[nodiscard]] auto Timestamp() const;
@@ -2895,6 +2937,22 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Sensors_IHumanPresenceSettings2
+    {
+        [[nodiscard]] auto AllowWakeOnApproachWhenExternalDisplayConnected() const;
+        auto AllowWakeOnApproachWhenExternalDisplayConnected(bool value) const;
+        [[nodiscard]] auto AllowAttentionAwareDimmingWhenExternalDisplayConnected() const;
+        auto AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool value) const;
+        [[nodiscard]] auto AllowLockOnLeaveWhenExternalDisplayConnected() const;
+        auto AllowLockOnLeaveWhenExternalDisplayConnected(bool value) const;
+        [[nodiscard]] auto AllowWakeOnApproachWhenBatterySaverActive() const;
+        auto AllowWakeOnApproachWhenBatterySaverActive(bool value) const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_IHumanPresenceSettingsStatics

@@ -109,13 +109,13 @@ SetServiceAsTrustedW(
     _In_     LPCWSTR   szServiceName
 );
 
-DWORD
+LOADPERF_FUNCTION
 BackupPerfRegistryToFileW(
     _In_     LPCWSTR   szFileName,
     _In_opt_ LPCWSTR   szCommentString
 );
 
-DWORD
+LOADPERF_FUNCTION
 RestorePerfRegistryFromFileW(
     _In_opt_ LPCWSTR   szFileName,
     _In_opt_ LPCWSTR   szLangId

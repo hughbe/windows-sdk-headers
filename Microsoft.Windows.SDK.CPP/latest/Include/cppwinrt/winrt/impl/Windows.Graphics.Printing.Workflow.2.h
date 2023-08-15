@@ -43,17 +43,24 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         PrintWorkflowJobActivatedEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowJobActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PrintWorkflowJobBackgroundSession : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession
+    struct __declspec(empty_bases) PrintWorkflowJobBackgroundSession : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession,
+        impl::require<PrintWorkflowJobBackgroundSession, winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>
     {
         PrintWorkflowJobBackgroundSession(std::nullptr_t) noexcept {}
         PrintWorkflowJobBackgroundSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobIssueDetectedEventArgs : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs
+    {
+        PrintWorkflowJobIssueDetectedEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowJobIssueDetectedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) PrintWorkflowJobNotificationEventArgs : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs
     {
         PrintWorkflowJobNotificationEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowJobNotificationEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PrintWorkflowJobStartingEventArgs : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs
+    struct __declspec(empty_bases) PrintWorkflowJobStartingEventArgs : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs,
+        impl::require<PrintWorkflowJobStartingEventArgs, winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>
     {
         PrintWorkflowJobStartingEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowJobStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs(ptr, take_ownership_from_abi) {}

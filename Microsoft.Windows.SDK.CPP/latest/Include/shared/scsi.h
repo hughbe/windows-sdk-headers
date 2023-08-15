@@ -62,7 +62,7 @@ Revision History:
 
 // begin_ntminitape
 
-// begin_storport begin_storportp
+// begin_storport begin_privstorport
 
 //
 // Calculate the byte offset of a field in a structure of type type.
@@ -7306,7 +7306,7 @@ Returns:
 // [END] Collections of SCSI utiltiy functions
 //
 
-// end_storport end_storportp
+// end_storport end_privstorport
 
 // end_ntminitape
 

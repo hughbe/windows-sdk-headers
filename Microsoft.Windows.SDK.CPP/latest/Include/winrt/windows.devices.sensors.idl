@@ -194,6 +194,8 @@ namespace Windows
 
             interface IHumanPresenceSensor;
 
+            interface IHumanPresenceSensor2;
+
             interface IHumanPresenceSensorReading;
 
             interface IHumanPresenceSensorReadingChangedEventArgs;
@@ -201,6 +203,8 @@ namespace Windows
             interface IHumanPresenceSensorStatics;
 
             interface IHumanPresenceSettings;
+
+            interface IHumanPresenceSettings2;
 
             interface IHumanPresenceSettingsStatics;
 
@@ -632,17 +636,23 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             enum HumanEngagement
             {
-                Unknown   = 0,
-                Engaged   = 1,
-                Unengaged = 2
+                Unknown     = 0,
+                Engaged     = 1,
+                Unengaged   = 2,
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [experimental]
+                Unsupported = 3
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             enum HumanPresence
             {
-                Unknown    = 0,
-                Present    = 1,
-                NotPresent = 2
+                Unknown     = 0,
+                Present     = 1,
+                NotPresent  = 2,
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [experimental]
+                Unsupported = 3
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1324,6 +1334,16 @@ namespace Windows
                 [eventremove] HRESULT ReadingChanged([in] EventRegistrationToken token);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensor)]
+            [experimental]
+            [uuid(D4C021C6-8247-5B9B-8EF8-5F52435818FD)]
+            interface IHumanPresenceSensor2 : IInspectable
+            {
+                [propget] HRESULT IsHumanPresenceCapable([out] [retval] boolean* value);
+                [propget] HRESULT IsHumanEngagementCapable([out] [retval] boolean* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReading)]
             [uuid(83533BF5-A85A-5D50-8BE4-6072D745A3BB)]
@@ -1372,6 +1392,22 @@ namespace Windows
                 [propput] HRESULT LockOnLeaveTimeout([in] Windows.Foundation.TimeSpan value);
                 [propget] HRESULT IsAttentionAwareDimmingEnabled([out] [retval] boolean* value);
                 [propput] HRESULT IsAttentionAwareDimmingEnabled([in] boolean value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSettings)]
+            [experimental]
+            [uuid(E6782A4D-5ED2-5F20-8326-A78FA987F39A)]
+            interface IHumanPresenceSettings2 : IInspectable
+            {
+                [propget] HRESULT AllowWakeOnApproachWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowWakeOnApproachWhenExternalDisplayConnected([in] boolean value);
+                [propget] HRESULT AllowAttentionAwareDimmingWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowAttentionAwareDimmingWhenExternalDisplayConnected([in] boolean value);
+                [propget] HRESULT AllowLockOnLeaveWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowLockOnLeaveWhenExternalDisplayConnected([in] boolean value);
+                [propget] HRESULT AllowWakeOnApproachWhenBatterySaverActive([out] [retval] boolean* value);
+                [propput] HRESULT AllowWakeOnApproachWhenBatterySaverActive([in] boolean value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -2319,6 +2355,7 @@ namespace Windows
             runtimeclass HumanPresenceSensor
             {
                 [default] interface Windows.Devices.Sensors.IHumanPresenceSensor;
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)] [experimental] interface Windows.Devices.Sensors.IHumanPresenceSensor2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -2342,6 +2379,7 @@ namespace Windows
             runtimeclass HumanPresenceSettings
             {
                 [default] interface Windows.Devices.Sensors.IHumanPresenceSettings;
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)] [experimental] interface Windows.Devices.Sensors.IHumanPresenceSettings2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

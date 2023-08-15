@@ -11,8 +11,13 @@
 #include "winrt/impl/Windows.Graphics.Printing.PrintSupport.1.h"
 WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
 {
+    struct __declspec(empty_bases) PrintSupportCommunicationErrorDetectedEventArgs : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs
+    {
+        PrintSupportCommunicationErrorDetectedEventArgs(std::nullptr_t) noexcept {}
+        PrintSupportCommunicationErrorDetectedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportCommunicationErrorDetectedEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) PrintSupportExtensionSession : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession,
-        impl::require<PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2>
+        impl::require<PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession2, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession3>
     {
         PrintSupportExtensionSession(std::nullptr_t) noexcept {}
         PrintSupportExtensionSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionSession(ptr, take_ownership_from_abi) {}
@@ -22,8 +27,18 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
         PrintSupportExtensionTriggerDetails(std::nullptr_t) noexcept {}
         PrintSupportExtensionTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportExtensionTriggerDetails(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) PrintSupportIppCommunicationConfiguration : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration
+    {
+        PrintSupportIppCommunicationConfiguration(std::nullptr_t) noexcept {}
+        PrintSupportIppCommunicationConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationConfiguration(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintSupportIppCommunicationTimeouts : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts
+    {
+        PrintSupportIppCommunicationTimeouts(std::nullptr_t) noexcept {}
+        PrintSupportIppCommunicationTimeouts(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportIppCommunicationTimeouts(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) PrintSupportPrintDeviceCapabilitiesChangedEventArgs : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs,
-        impl::require<PrintSupportPrintDeviceCapabilitiesChangedEventArgs, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2>
+        impl::require<PrintSupportPrintDeviceCapabilitiesChangedEventArgs, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2, winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3>
     {
         PrintSupportPrintDeviceCapabilitiesChangedEventArgs(std::nullptr_t) noexcept {}
         PrintSupportPrintDeviceCapabilitiesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Printing::PrintSupport::IPrintSupportPrintDeviceCapabilitiesChangedEventArgs(ptr, take_ownership_from_abi) {}

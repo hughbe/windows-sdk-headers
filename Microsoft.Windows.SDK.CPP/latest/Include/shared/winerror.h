@@ -14633,6 +14633,15 @@
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE 4582L
 
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  File did not pass WHQL-only requirements.
+//
+#define ERROR_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED 4583L
+
 ///////////////////////////////////////////////////
 //                                               //
 //                  Available                    //
